@@ -1,0 +1,171 @@
+// start .sCards
+.sCards {
+	--sPT: 18px;
+	--sPB: 26px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+		--sPB: 26px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 60px;
+		--sPB: 26px;
+	}
+
+	.inp-str{
+		margin-bottom: 18px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 60px;
+		}
+	}
+
+	&__row{
+		@extend .row-default;
+	}
+	&__item{
+		height: 100%;
+		position: relative;
+		z-index: 1;
+		border-radius: 15px;
+		overflow: hidden;
+
+		padding: 45px 48px 48px 48px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	//bg
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		background: $gray-100;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__ball{
+		opacity: 0.5;
+		position: absolute;
+
+		&--1{
+			width: 249px;
+			height: 248px;
+			left: 202px;
+			top: -103px;
+
+			background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+		}
+		&--2{
+			width: 330px;
+			height: 331px;
+			left: 305px;
+			top: 43px;
+
+			background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+		}
+	}
+	&__title{
+		//line-height: (28/24);
+		margin-bottom: 22px;
+	}
+	&__descr{
+		line-height: $line-height-lg;
+
+		margin-bottom: 25px;
+		min-height: 84px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 34px;
+			min-height: 0;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 26px;
+		}
+	}
+	&__btn{
+		@extend .btn-default-outline;
+		margin-top: auto;
+
+		min-width: 170px;
+
+		padding: 15px 20px;
+	}
+	//
+	&__{}
+	&__{}
+} // end.sCards
+
+.inp-str{
+	.form-wrap{
+		form{
+			display: flex;
+			//align-items: stretch;
+			align-items: flex-start;
+		}
+
+		&__select{
+			min-width: 165px;
+			@include media-breakpoint-up(md){
+				min-width: 194px;
+			}
+
+			select{
+				border-radius: 5px 0 0 5px;
+				position: relative;
+
+				padding: 19px 45px 19px 18px;
+				@include media-breakpoint-up(md){
+					padding: 19px 45px 19px 24px;
+				}
+
+				&:focus{
+					z-index: 1;
+				}
+			}
+		}
+		&__input-wrap{
+			flex-grow: 1;
+			margin-left: -1px;
+		}
+		&__input{
+			border-radius: 0;
+
+			padding: 19px 18px;
+			@include media-breakpoint-up(md){
+				padding: 19px 24px;
+			}
+
+			position: relative;
+
+			&:focus{
+				z-index: 1;
+			}
+		}
+		&__btn{
+			@extend .btn-default;
+			border-radius: 0 5px 5px 0;
+			font-weight: 600;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+
+			@include media-breakpoint-down(md){
+				padding: 0;
+				width: 60px;
+				height: 60px;
+			}
+			width: 170px;
+
+			.icon{
+				font-size: 20px;
+			}
+		}
+
+		//
+		&__{}
+		&__{}
+		&__{}
+	}
+}

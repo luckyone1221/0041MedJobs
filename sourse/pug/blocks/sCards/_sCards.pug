@@ -1,0 +1,38 @@
+mixin sCards(data)
+	// start sCards
+	+b.sCards.section#sCards&attributes(attributes)
+		.container
+			+inpStrip('Организации', 'Введите название организации')
+			+e.row.row
+				+sCardsItem('Я работодатель')
+					| Зарегистрируйтесь, расскажите о своей организации, разместите вакансии и ждите отклики от соискателей
+				+sCardsItem('Я профессионал')
+					| Зарегистрируйтесь, заполните подробно свой профиль
+					| и тогда работодатели вас заметят, либо откликайтесь
+					| на вакансии
+	// end sCards
+
+mixin sCardsItem(title)
+	.col-12.col-md-6
+		+e.item
+			+e.bg
+				+e.ball--1
+				+e.ball--2
+			+e.H4.title=title
+			+e.descr
+				block
+			+e.btn(href='#') Перейти
+
+mixin inpStrip(selectPh, inpPh)
+	+b.inp-str
+		+form-wrap
+			+e.select
+				select.form-control.form-select
+					option(selected muted class="d-none")=selectPh
+					option option 1
+					option option 2
+					option option 3
+			+input(inpPh, 'text', undefined, 'search')
+			+e.btn(type='submit')
+				span.d-none.d-md-block Найти
+				+icon('zoom', 'd-md-none')

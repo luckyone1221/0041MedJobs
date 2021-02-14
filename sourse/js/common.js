@@ -62,51 +62,6 @@ const JSCCommon = {
 		}
 		if (linkModal) addData();
 	},
-	// /modalCall
-	toggleMenu() {
-		if (this.btnToggleMenuMobile) {
-			this.btnToggleMenuMobile.forEach(element => {
-				element.addEventListener('click', () => {
-					this.btnToggleMenuMobile.forEach(element => element.classList.toggle("on"));
-					this.menuMobile.classList.toggle("active");
-					document.body.classList.toggle("fixed");
-					document.querySelector('html').classList.toggle("fixed");
-					return false;
-				});
-			});
-		}
-	},
-
-	closeMenu() {
-		if (this.menuMobile) {
-			this.btnToggleMenuMobile.forEach(element => {
-				element.classList.remove("on");
-			});
-			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
-			document.querySelector('html').classList.remove("fixed");
-		}
-
-	},
-	mobileMenu() {
-		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', (event) => {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
-				if (!container) {
-					this.closeMenu();
-				}
-			}, { passive: true });
-
-			window.addEventListener('resize', () => {
-				if (window.matchMedia("(min-width: 992px)").matches) {
-					JSCCommon.closeMenu();
-				}
-			}, { passive: true });
-		}
-	},
-	// /mobileMenu
-
 	// tabs  .
 	tabscostume(tab) {
 
@@ -212,7 +167,7 @@ const JSCCommon = {
 	},
 	animateScroll() {
 
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
+		$(document).on('click', ".scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
@@ -233,7 +188,6 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -242,32 +196,28 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '02-576.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
 
-
-	function whenResize() {
-		const topH = document.querySelector("header ").offsetHeight;
+	let topH = document.querySelector(".top-nav");
+	function scrollHandler() {
 		if (topH) {
-
-			if ($(window).scrollTop() > topH) {
-				document.querySelector('.top-nav  ').classList.add('fixed');
+			if ($(window).scrollTop() > topH.offsetHeight) {
+				topH.classList.add('fixed');
 			} else {
-				document.querySelector('.top-nav  ').classList.remove('fixed');
+				topH.classList.remove('fixed');
 			}
 		}
 		
 	}
 
-	window.addEventListener('resize', () => {
-		whenResize();
-
+	window.addEventListener('scroll', () => {
+		scrollHandler();
 	}, { passive: true });
-
-	whenResize();
+	scrollHandler();
 
 
 	let defaultSl = {
@@ -305,17 +255,52 @@ function eventHandler() {
 	});
 	// modal window
 
+	//luckyone js
+
+	$('.burger-js').click(function (){
+		$('.burger-js, .mm--js').toggleClass('active');
+		$('body').toggleClass('fixed2');
+	});
+	window.addEventListener('resize', function (){
+		if(window.matchMedia("(min-width: 1200px)").matches){
+			//menu
+			$('.burger-js, .mm--js').removeClass('active');
+			$('body').removeClass('fixed2');
+
+			//filter remove
+			// $('.f-btn-js').removeClass('active');
+			// $('.filter--js').slideUp(function (){
+			// 	$(this).removeClass('active');
+			// });
+		}
+	}, {passive: true})
+	//accordion
+	$('.dd-head-js').click(function (){
+		$(this.parentElement).toggleClass('active');
+		$(this.parentElement).find('.dd-content-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
+
+	//filter dd
+	$('.f-btn-js').click(function (){
+		$(this).toggleClass('active');
+		$('.filter--js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
+
+	document.body.addEventListener('click', function (){
+		//write filter missclick
+	});
+
+
+
+	//end luckyone js
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }

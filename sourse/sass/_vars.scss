@@ -15,15 +15,17 @@ $rfs-breakpoint: 1200px !default;
 // Color system
 
 $white: #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #EFF2F6 !default;
+$gary-110: #E5E6E9;
+$gray-120: #D8D8D8;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #888C94 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #252728 !default;
 $black: #000 !default;
 
 // fusv-disable
@@ -43,11 +45,11 @@ $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
 $red: #dc3545 !default;
-$orange: #fd7e14 !default;
+$orange: #F15A22 !default;
 $yellow: #ffc107 !default;
-$green: #198754 !default;
+$green: #2AED80 !default;
 $teal: #20c997 !default;
-$cyan: #0dcaf0 !default;
+$cyan: #10B7F5 !default;
 
 // scss-docs-start colors-map
 $colors: ("blue": $blue,
@@ -65,11 +67,11 @@ $colors: ("blue": $blue,
   "gray-dark": $gray-800) !default;
 // scss-docs-end colors-map
 
-$primary: $blue !default;
+$primary: $cyan !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
-$warning: $yellow !default;
+$warning: $orange !default;
 $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
@@ -263,7 +265,7 @@ $position-values: (0: 0,
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-color: #252728 !default;
 $body-text-align: null !default;
 
 
@@ -293,7 +295,8 @@ $paragraph-margin-bottom: 1rem !default;
 // adapting to different screen sizes, for use in media queries.
 
 // scss-docs-start grid-breakpoints
-$grid-breakpoints: (xs: 0,
+$grid-breakpoints: (
+  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -310,11 +313,11 @@ $grid-breakpoints: (xs: 0,
 // Define the maximum width of `.container` for different screen sizes.
 
 // scss-docs-start container-max-widths
-$container-max-widths: (sm: 540px,
-  md: 720px,
+$container-max-widths: (
+  sm: 570px,
+  md: 750px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1320px) !default;
+  xl: 1170px) !default;
 // scss-docs-end container-max-widths
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -325,14 +328,14 @@ $container-max-widths: (sm: 540px,
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: 1.5rem !default;
+$grid-gutter-width: 30px !default;
 $grid-row-columns: 6 !default;
 
 $gutters: $spacers !default;
 
 // Container padding
 
-$container-padding-x: $grid-gutter-width / 2 !default;
+$container-padding-x: 15px !default;
 
 
 // Components
@@ -424,14 +427,14 @@ $font-weight-bolder: bolder !default;
 
 $font-weight-base: $font-weight-normal !default;
 
-$line-height-base: 1.5 !default;
+$line-height-base: 1.25 !default;
 $line-height-sm: 1.25 !default;
-$line-height-lg: 2 !default;
+$line-height-lg: 1.75 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
+$h1-font-size: 48px !default;
+$h2-font-size: rem(36) !default;
 $h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: rem(24) !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
@@ -447,9 +450,9 @@ $font-sizes: (1: $h1-font-size,
 $headings-margin-bottom: $spacer / 2 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
-$headings-font-weight: 500 !default;
-$headings-line-height: 1.2 !default;
-$headings-color: null !default;
+$headings-font-weight: 600 !default;
+$headings-line-height: 1.25 !default;
+$headings-color: #262728 !default;
 
 // scss-docs-start display-headings
 $display-font-sizes: (1: 5rem,
@@ -582,8 +585,8 @@ $input-btn-border-width: $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y: $input-btn-padding-y !default;
-$btn-padding-x: $input-btn-padding-x !default;
+$btn-padding-y: rem(20) !default;
+$btn-padding-x: rem(24) !default;
 $btn-font-family: $input-btn-font-family !default;
 $btn-font-size: $input-btn-font-size !default;
 $btn-line-height: $input-btn-line-height !default;
@@ -612,7 +615,7 @@ $btn-link-hover-color: $link-hover-color !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: $border-radius !default;
+$btn-border-radius: 5px !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 
@@ -636,8 +639,8 @@ $form-label-font-style: null !default;
 $form-label-font-weight: null !default;
 $form-label-color: null !default;
 
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: rem(19) !default;
+$input-padding-x: rem(24) !default;
 $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
 $input-font-weight: $font-weight-base !default;
@@ -668,7 +671,7 @@ $input-focus-bg: $input-bg !default;
 $input-focus-border-color: tint-color($component-active-bg, 50%) !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
-$input-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow: none !default;
 
 $input-placeholder-color: $gray-600 !default;
 $input-plaintext-color: $body-color !default;
@@ -772,7 +775,7 @@ $form-select-box-shadow: $box-shadow-inset !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;
 $form-select-focus-width: $input-focus-width !default;
-$form-select-focus-box-shadow: 0 0 0 $form-select-focus-width $input-btn-focus-color !default;
+$form-select-focus-box-shadow: none !default;
 
 $form-select-padding-y-sm: $input-padding-y-sm !default;
 $form-select-padding-x-sm: $input-padding-x-sm !default;

@@ -1,55 +1,178 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
+  --sPB: 0;
 
-	h1 {
-		margin-bottom: 1px;
-	}
+  --sPT: 46px;
+  --sTPB: 21px;
+  @include media-breakpoint-up(md){
+    --sPT: 47px;
+    --sTPB: 24px;
+  }
+  @include media-breakpoint-up(xl){
+    --sPT: 40px;
+    --sTPB: 40px;
+  }
 
-	h2 {
-		margin-bottom: 1px;
-	}
+  position: relative;
+  z-index: 1;
+  &__bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $light;
+  }
 
-	@include media-breakpoint-up(xl) {}
+  &__ball{
+    opacity: 0.5;
 
-	@include media-breakpoint-up(lg) {}
+    &--1{
+      position: absolute;
+      width: 872px;
+      height: 878px;
+      left: -689px;
+      top: -389px;
 
-	@include media-breakpoint-up(md) {}
+      background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+    }
+    &--2{
+      position: absolute;
+      width: 658px;
+      height: 658px;
+      left: -31px;
+      top: 400px;
 
-	@include media-breakpoint-up(sm) {}
+      background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+    }
+    &--3{
+      position: absolute;
+      width: 658px;
+      height: 658px;
 
-	@include media-breakpoint-up(xs) {}
+      left: 3px;
+      top: -212px;
+      @include media-breakpoint-up(md){
+        left: 82px;
+        top: -160px;
+      }
+      @include media-breakpoint-up(lg){
+        right: 307px;
+        left: unset;
+        top: -203px;
+      }
 
-	//
-	@include media-breakpoint-between(md, xl) {}
+      background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+    }
+    &--4{
+      position: absolute;
+      width: 872px;
+      height: 878px;
 
+      left: 276px;
+      top: 174px;
+      @include media-breakpoint-up(md){
+        left: 355px;
+        top: 226px;
+      }
+      @include media-breakpoint-up(lg){
+        right: -180px;
+        left: unset;
+        top: 183px;
+      }
 
-	//
-	@include media-breakpoint-only(xs) {}
+      background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+      opacity: 0.5;
+    }
+  }
 
-	@include media-breakpoint-only(sm) {}
+  &__row{
 
-	@include media-breakpoint-only(md) {}
+  }
+  .section-title{
+    @include media-breakpoint-up(lg){
+      padding-top: 50px;
+    }
 
-	@include media-breakpoint-only(lg) {}
+    h1{
+      margin-bottom: 32px;
+      @include media-breakpoint-up(md){
+        margin-bottom: 45px;
+      }
+      @include media-breakpoint-up(lg){
+        margin-bottom: 43px;
+      }
+    }
+    ul{
+      @include media-breakpoint-down(md){
+        min-width: 300px;
+        width: 63%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include media-breakpoint-between(md, xl){
+        display: flex;
+        flex-wrap: wrap;
+        //justify-content: space-between;
+        margin-right: -22px;
+      }
 
-	@include media-breakpoint-only(xl) {}
+      list-style: none;
+      padding: 0;
+      margin: 0 0 rem(20);
 
-	//
-	@include media-breakpoint-down(xl) {}
+      li{
+        @include media-breakpoint-between(md, xl){
+          width: 33.33%;
+        }
 
-	@include media-breakpoint-down(lg) {}
+        padding: 0 0 15px 18px;
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          left: 2px;
+          top: 7px;
 
-	@include media-breakpoint-down(md) {}
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
+        }
+      }
+    }
+  }
+  &__img-col{
+    display: flex;
+    flex-direction: column;
+  }
+  &__img{
+    max-width: 100%;
 
-	@include media-breakpoint-down(sm) {}
+    width: 444px;
+    margin: auto auto 0;
+    @include media-breakpoint-up(lg){
+      margin: auto 0 0;
+      width: auto;
+    }
+    @include media-breakpoint-up(xl){
+      margin-left: -5px;
+    }
 
-	@include media-breakpoint-down(xs) {}
-
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
 }
 
 // end.headerBlock

@@ -9,7 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	//opacity: 0.7;
 } 
 
 body,
@@ -82,6 +82,15 @@ body {
 			opacity: 0.76;
 		}
 	}
+
+	&.fixed2{
+		overflow: hidden;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 999;
+	}
 }
 
 // .main-wrapper { 
@@ -116,6 +125,10 @@ body {
 
 .section-title {
 	padding-bottom: var(--sTPB);
+
+	& > *:last-child{
+		margin-bottom: 0;
+	}
 }
 
 
@@ -457,5 +470,160 @@ iframe {
 
 	&::-webkit-scrollbar-button {
 		display: none
+	}
+}
+
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 36px;
+}
+h4{
+	font-size: 24px;
+}
+//
+.btn{
+	box-shadow: 2px 2px 8px -2px rgba($black, 0)!important;
+	&:hover{
+		box-shadow: 2px 2px 8px -2px rgba($black, .3)!important;
+	}
+}
+
+.btn-default{
+	@extend .btn;
+	@extend .btn-primary;
+	border: none!important;
+	background: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
+	font-weight: 600;
+}
+
+.btn-default-outline{
+	@extend .btn;
+	@extend .btn-primary;
+	background: transparent !important;
+	border: none!important;
+	overflow: hidden;
+	font-weight: 600;
+
+	position: relative;
+	z-index: 1;
+	&:before,
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:before{
+		z-index: -1;
+		border: 2px solid $primary;
+		border-image: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
+		border-image-slice: 1;
+	}
+	&:after{
+		border: 2px solid rgba($cyan, .5);
+		border-radius: 5px;
+		z-index: -2;
+	}
+
+}
+
+.form-select{
+	cursor: pointer;
+	background-image: url(../img/svg/chevron-down.svg);
+	background-size: 10px;
+}
+
+
+
+//
+.row-default{
+	@include roww(18px);
+
+	& > *{
+		margin-bottom: 18px;
+	}
+
+	margin-bottom: -18px;
+
+	@include media-breakpoint-up(md){
+		@include roww(24px);
+
+		& > *{
+			margin-bottom: 24px;
+		}
+
+		margin-bottom: -24px;
+	}
+}
+.row-default-sm{
+	@include roww(12px);
+
+	& > *{
+		margin-bottom: 18px;
+	}
+
+	margin-bottom: -18px;
+
+	@include media-breakpoint-up(md){
+		@include roww(24px);
+
+		& > *{
+			margin-bottom: 24px;
+		}
+
+		margin-bottom: -24px;
+	}
+}
+
+//breadcrumbs
+.breadcrumb{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+
+	padding: 0;
+
+	margin: 0 0 8px;
+
+	&-item{
+		display: flex;
+		align-items: center;
+
+		&:after{
+			content: '';
+			margin: 0 8px;
+			display: block;
+			background-repeat: no-repeat;
+			background-image: url(../img/svg/chevron-right.svg);
+			width: 6.17px;
+			height: 10px;
+		}
+
+		&:last-child:after{
+			content: none;
+		}
+		&:first-child a{
+			color: $secondary;
+			&:hover{
+				color: $primary;
+			}
+		}
+
+		a{
+			color: $body-color;
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+	&-par{
+
 	}
 }

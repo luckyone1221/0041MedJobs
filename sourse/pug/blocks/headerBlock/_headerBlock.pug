@@ -1,10 +1,32 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.bg
+			+e.ball--1.d-none.d-lg-block
+			+e.ball--2.d-none.d-lg-block
+			+e.ball--3
+			+e.ball--4
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.row.row
+				+b.section-title.col-12.col-xl-5
+					h1.text-center.text-xl-start
+						| Поиск компаний
+						|
+						br.d-none.d-md-block.d-xl-none
+						| и&#160;людей в сфере медицины
+					ul
+						li
+							| 576 медицинских
+							|
+							br.d-none.d-md-block.d-xl-none
+							| организаций
+						li
+							| 4 531 профилей
+							|
+							br.d-none.d-md-block.d-xl-none
+							| медицинских работников
+						li 1 068 открытых вакансий
+				+e.img-col.col-12.col-xl-7
+					+e.img
+						img(loading="lazy" src="img/@2x/headerBl-img.png" alt="")
 	// end headerBlock

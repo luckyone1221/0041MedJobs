@@ -1,43 +1,158 @@
 .footer {
-		
-	margin-top: auto;
+	padding: 63px 0;
+	@include media-breakpoint-up(md){
+		padding: 63px 0;
+	}
+	@include media-breakpoint-up(xl){
+		padding: 60px 0;
+	}
+	background-color: $light;
 
-// 
-@include media-breakpoint-up(xl) {}
+	&__menu-col{
+		@include media-breakpoint-between(md, xl){
+			padding-top: 35px;
+		}
+	}
+	&__gray-col{
+		margin-bottom: 25px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+	}
+	&__menu-row{
+		width: 100%;
+		@include media-breakpoint-down(md){
+			justify-content: center;
+			padding-left: 76px;
+			margin-bottom: 23px;
+		}
+		& > *{
+			@include media-breakpoint-down(md){
+				width: 175px!important;
+			}
+		}
+	}
 
-@include media-breakpoint-up(lg) {}
+	&__row{
+		& > *{
+			@include media-breakpoint-down(md){
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+	&__logo{
+		display: block;
+		width: 218px;
 
-@include media-breakpoint-up(md) {}
+		@include media-breakpoint-between(md, xl){
+			margin-bottom: 41px;
+		}
+		margin-bottom: 38px;
 
-@include media-breakpoint-up(sm) {}
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+	&__l-txt{
+		font-size: 16px;
+		line-height: 1.5;
 
-@include media-breakpoint-up(xs) {}
+		color: $secondary;
 
+		padding-bottom: 42px;
+		@include media-breakpoint-up(xl){
+			padding-bottom: 40px;
+		}
+	}
+	//
+	.navMenu{
+		display: block;
 
-// 
-@include media-breakpoint-between(md, xl) {}
+		--link-col: #{$body-color};
+		&.gray{
+			--link-col: #{$secondary};
+		}
 
+		&__item{
+			padding: 0;
+			margin: 0 0 15px;
+		}
+		&__link{
+			padding: 0;
+			margin: 0;
+			text-align: inherit;
 
-// 
-@include media-breakpoint-only(xs) {}
+			color: var(--link-col);
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+	//
+	.social{
+		margin-bottom: 44px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 56px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 0;
+		}
+	}
 
-@include media-breakpoint-only(sm) {}
+	//
+	&__all-rights{
+		margin-bottom: 46px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 11px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 0;
+		}
+	}
+	&__likes{
+		display: inline-flex;
+		align-items: center;
 
-@include media-breakpoint-only(md) {}
+		.icon{
+			color: $warning;
+			font-size: 24px;
+			margin-right: 7px;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+}
 
-@include media-breakpoint-only(lg) {}
+.social{
+	&__row{
+		@include roww(10px);
 
-@include media-breakpoint-only(xl) {}
+		& > *{
+			margin-bottom: 10px;
+		}
 
+		margin-bottom: -10px;
+	}
 
-// 
-@include media-breakpoint-down(xl) {}
+	&__item{
+		@include mt();
+		display: block;
+		width: 30px;
+		height: 30px;
 
-@include media-breakpoint-down(lg) {}
+		&:hover{
+			opacity: .95;
+			transform: scale(1.05);
+		}
 
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
 }

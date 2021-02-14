@@ -1,30 +1,30 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
-		+e.inner
-		
+	+b.mm--js.d-xl-none
+		.container
 			+mnu()
-			.text-right
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col
+		+e.container.container
+			+e.row.row
+				.col.col-xl-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col.d-none.d-xl-block
 					+mnu()
-					
+				.col-auto
+					+e.location(href='#')
+						+icon('location')
+						+e.loc-txt Санкт-Петербург
+				.col-auto.d-none.d-lg-block
+					+e.p-cab
+						+e.pc-img
+							img(loading="lazy" src="img/svg/user-stab.svg" alt="")
+						+e.pc-txt Личный кабинет
+						+icon('chevron-down')
+				.col-auto.d-xl-none
+					+e.burger.burger-js
+						span
 	// end top-nav

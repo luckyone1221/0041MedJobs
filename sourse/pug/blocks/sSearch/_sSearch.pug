@@ -1,0 +1,147 @@
+mixin sSearch(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h1 Организации
+			+e.row.row
+				+e.filter-col.col-xl-3
+					+e.filter-cont
+						//-f-btn
+						+e.f-btn.f-btn-js.d-xl-none
+							+e.f-img
+								img(loading="lazy" src="img/svg/filter-bar.svg" alt="")
+								img(loading="lazy" src="img/svg/filter-cross.svg" alt="")
+							+e.f-btn-txt
+								span Фильтр
+								span Закрыть
+						+filter()
+				.col-xl-9
+					.row.row-default-sm.mb-0
+						+sortSelItem('по алфавиту', 'col-12')
+						+organizations()
+						//+pugin()
+						//-
+							+sortSelItem('по соответствию', 'col-6')
+							+sortSelItem('весь период', 'col-6')
+	// end sSearch
+
+mixin sortSelItem(chosenItem, bootClasses)
+	.col-md-4(classes="bootClasses")
+		+e.sort-select
+			select.form-control.form-select
+				option=chosenItem
+				option option 2
+				option option 3
+
+mixin filter()
+	+b.filter--js
+		+filterItem('Регион:', 'active', 'pt-sm')
+			+e.select
+				select.form-select.form-control
+					option Ленинградская область
+					option Ленинградская область2
+					option Ленинградская область3
+		+filterItem('Город', 'active', 'pt-sm')
+			+e.select
+				select.form-select.form-control
+					option Санкт-Петербург
+					option Львов
+					option Киев
+		+filterItem('Профобласть')
+			+customChbGroup(['Работодатель', 'Профорганизация', 'Сообщество', 'Университет'])
+		+filterItem('Уровень организации')
+			+customChbGroup(['Региональный', 'Федеральный', 'Международный'])
+		+filterItem('Уровень организации медицинской помощи')
+			+customChbGroup(['Первичный медико-профилактический', 'Стационарный', 'Неотложная', 'Скорая', 'Санаторий'])
+		+filterItem('Тип медицинской службы')
+			+customChbGroup(['Педиатрическая', 'Взрослая', 'Смешанная'])
+		+filterItem('Форма собственности')
+			+customChbGroup(['Частная', 'Государтсвенная'])
+
+mixin filterItem(title, activeClass="active", addContentCl='')
+	+e.item(class=activeClass)
+		+e.head.dd-head-js=title
+		+e.content.dd-content-js(class=`${activeClass} ${addContentCl}`)
+			block
+
+mixin customChbGroup(arr)
+	+e.checkboxes
+		- for (var i = 0; i < arr.length; i++)
+			if i === 0
+				+customChb(arr[i])(checked)
+			else
+				+customChb(arr[i])
+
+mixin customChb(txt)
+	+b.LABEL.custom-chb
+		input(type="checkbox" class="d-none" name="")&attributes(attributes)
+		.square
+		.txt=txt
+
+mixin organizations()
+	+b.organ
+		//- &ndash;
+		+organizationsItem({logo: true, vacancy: true})
+			| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+		+organizationsItem({})
+			| Всероссийский центр экстренной и радиационной медицины им. А. М.
+			br.d-none.d-md-block
+			| Никифорова МЧС России
+		+organizationsItem({logo: true, vacancy: true})
+			| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+		+organizationsItem({})
+			| Всероссийский центр экстренной и радиационной медицины им. А. М.
+			br.d-none.d-md-block
+			| Никифорова МЧС России
+		+organizationsItem({logo: true, vacancy: true})
+			| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+		+organizationsItem({})
+			| Всероссийский центр экстренной и радиационной медицины им. А. М.
+			br.d-none.d-md-block
+			| Никифорова МЧС России
+		+organizationsItem({logo: true, vacancy: true})
+			| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+		+organizationsItem({})
+			| Всероссийский центр экстренной и радиационной медицины им. А. М.
+			br.d-none.d-md-block
+			| Никифорова МЧС России
+		+organizationsItem({logo: true, vacancy: true})(class="d-none d-xl-flex")
+			| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+		+organizationsItem({})(class="d-none d-xl-flex")
+			| Всероссийский центр экстренной и радиационной медицины им. А. М.
+			br.d-none.d-md-block
+			| Никифорова МЧС России
+		+organizationsItem({logo: true, vacancy: true})(class="d-none d-xl-flex")
+			| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+		+organizationsItem({})(class="d-none d-xl-flex")
+			| Всероссийский центр экстренной и радиационной медицины им. А. М.
+			br.d-none.d-md-block
+			| Никифорова МЧС России
+
+mixin organizationsItem(data)
+	+e.item&attributes(attributes)
+		+e.row.row
+			.col
+				+e.title(href="#")
+					block
+				+e.descr г. Санкт-Петербург, пр. Мечникова, д.27
+			if data.logo
+				.col-auto
+					+e.company-logo(href='#')
+						img(loading="lazy" src="img/@2x/company-logo.png" alt="")
+		+e.lower-row.row.align-items-center
+			.col
+				+e.data-row.row.align-items-center
+					.col-auto
+						+e.workers-amount Более 100 сотрудников
+					.col-auto
+						if data.vacancy
+							+e.vac-link(href="#") 7 вакансий
+						else
+							+e.vac-empty Нет вакансий
+			.col-auto
+				//-have css class "active"
+				+e.like-btn
+					+icon('like')

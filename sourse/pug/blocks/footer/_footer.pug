@@ -1,2 +1,45 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer
+    .container
+      +e.row.row
+        .col-12.col-md-7.col-xl-3
+          +e.logo(href="#")
+            img(loading="lazy" src="img/svg/logo.svg" alt="")
+          +e.l-txt
+            | Поиск компаний и людей
+            |
+            br.d-none.d-xl-block
+            | в сфере медицины.
+          +socItems('justify-content-center justify-content-md-start d-xl-none')
+        +e.menu-col.col-12.col-md-5.col-xl-4
+          +e.menu-row.row
+            .col-6
+              +mnu()
+            .col-6
+              +mnu2()
+        +e.gray-col.col-12.col-md-5.col-xl-3.order-1.order-xl-0
+          +mnu3()(class="gray text-center text-md-start")
+        .col-xl-2.d-none.d-xl-block
+          +socItems('justify-content-end')
+        .col-xl-12.col-md-7.order-2.order-md-0
+          .row.text-center.text-md-start
+            .col-12.col-xl
+              +e.all-rights © 2021 Все права защищены Medicjobs.ru.
+            .col-12.col-xl-auto
+              +e.likes
+                +icon('like')
+                span 244
+
+
+mixin socItems(addClasses)
+  +b.social&attributes(attributes)
+    +e.row.row(class=addClasses)
+      +socItem('fb')
+      +socItem('vk')
+      +socItem('in')
+      +socItem('tg')
+
+mixin socItem(imgName)
+  .col-auto
+    +e.item(href="#")
+      img(loading="lazy" src=`img/svg/${imgName}.svg` alt="")

@@ -67,60 +67,6 @@ var JSCCommon = {
 
 		if (linkModal) addData();
 	},
-	// /modalCall
-	toggleMenu: function toggleMenu() {
-		var _this = this;
-
-		if (this.btnToggleMenuMobile) {
-			this.btnToggleMenuMobile.forEach(function (element) {
-				element.addEventListener('click', function () {
-					_this.btnToggleMenuMobile.forEach(function (element) {
-						return element.classList.toggle("on");
-					});
-
-					_this.menuMobile.classList.toggle("active");
-
-					document.body.classList.toggle("fixed");
-					document.querySelector('html').classList.toggle("fixed");
-					return false;
-				});
-			});
-		}
-	},
-	closeMenu: function closeMenu() {
-		if (this.menuMobile) {
-			this.btnToggleMenuMobile.forEach(function (element) {
-				element.classList.remove("on");
-			});
-			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
-			document.querySelector('html').classList.remove("fixed");
-		}
-	},
-	mobileMenu: function mobileMenu() {
-		var _this2 = this;
-
-		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
-
-				if (!container) {
-					_this2.closeMenu();
-				}
-			}, {
-				passive: true
-			});
-			window.addEventListener('resize', function () {
-				if (window.matchMedia("(min-width: 992px)").matches) {
-					JSCCommon.closeMenu();
-				}
-			}, {
-				passive: true
-			});
-		}
-	},
-	// /mobileMenu
 	// tabs  .
 	tabscostume: function tabscostume(tab) {
 		var tabs = {
@@ -222,7 +168,7 @@ var JSCCommon = {
 		});
 	},
 	animateScroll: function animateScroll() {
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
+		$(document).on('click', ".scroll-link", function () {
 			var elementClick = $(this).attr("href");
 			var destination = $(elementClick).offset().top;
 			$('html, body').animate({
@@ -245,7 +191,6 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -253,30 +198,30 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '02-576.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
 	}
 
-	function whenResize() {
-		var topH = document.querySelector("header ").offsetHeight;
+	var topH = document.querySelector(".top-nav");
 
+	function scrollHandler() {
 		if (topH) {
-			if ($(window).scrollTop() > topH) {
-				document.querySelector('.top-nav  ').classList.add('fixed');
+			if ($(window).scrollTop() > topH.offsetHeight) {
+				topH.classList.add('fixed');
 			} else {
-				document.querySelector('.top-nav  ').classList.remove('fixed');
+				topH.classList.remove('fixed');
 			}
 		}
 	}
 
-	window.addEventListener('resize', function () {
-		whenResize();
+	window.addEventListener('scroll', function () {
+		scrollHandler();
 	}, {
 		passive: true
 	});
-	whenResize();
+	scrollHandler();
 	var defaultSl = (_defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -302,6 +247,41 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyone js
+
+	$('.burger-js').click(function () {
+		$('.burger-js, .mm--js').toggleClass('active');
+		$('body').toggleClass('fixed2');
+	});
+	window.addEventListener('resize', function () {
+		if (window.matchMedia("(min-width: 1200px)").matches) {
+			//menu
+			$('.burger-js, .mm--js').removeClass('active');
+			$('body').removeClass('fixed2'); //filter remove
+			// $('.f-btn-js').removeClass('active');
+			// $('.filter--js').slideUp(function (){
+			// 	$(this).removeClass('active');
+			// });
+		}
+	}, {
+		passive: true
+	}); //accordion
+
+	$('.dd-head-js').click(function () {
+		$(this.parentElement).toggleClass('active');
+		$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //filter dd
+
+	$('.f-btn-js').click(function () {
+		$(this).toggleClass('active');
+		$('.filter--js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	document.body.addEventListener('click', function () {//write filter missclick
+	}); //end luckyone js
 }
 
 ;
@@ -310,10 +290,4 @@ if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
-} // window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+}
