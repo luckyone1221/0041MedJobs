@@ -20,15 +20,66 @@ mixin sSearch(data)
 				.col-xl-9
 					.row.row-default-sm.mb-0
 						+sortSelItem('по алфавиту', 'col-12')
-						+organizations()
-						//+pugin()
-						//-
-							+sortSelItem('по соответствию', 'col-6')
-							+sortSelItem('весь период', 'col-6')
+					+organizations()
+					+puginRow()
+	// end sSearch
+mixin sSearchVacancy(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h1 Вакансии
+			+e.row.row
+				+e.filter-col.col-xl-3
+					+e.filter-cont
+						//-f-btn
+						+e.f-btn.f-btn-js.d-xl-none
+							+e.f-img
+								img(loading="lazy" src="img/svg/filter-bar.svg" alt="")
+								img(loading="lazy" src="img/svg/filter-cross.svg" alt="")
+							+e.f-btn-txt
+								span Фильтр
+								span Закрыть
+						+filterVacancy()
+				.col-xl-9
+					.row.row-default-sm.mb-0
+						+sortSelItem('по соответствию', 'col-6')
+						+sortSelItem('весь период', 'col-6')
+					+Vacancies()
+					+puginRow()
+	// end sSearch
+
+
+mixin sSearchProfesionals(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h1 Профессионалы
+			+e.row.row
+				+e.filter-col.col-xl-3
+					+e.filter-cont
+						//-f-btn
+						+e.f-btn.f-btn-js.d-xl-none
+							+e.f-img
+								img(loading="lazy" src="img/svg/filter-bar.svg" alt="")
+								img(loading="lazy" src="img/svg/filter-cross.svg" alt="")
+							+e.f-btn-txt
+								span Фильтр
+								span Закрыть
+						+filterVacancy()
+				.col-xl-9
+					.row.row-default-sm.mb-0
+						+sortSelItem('по соответствию', 'col-6')
+						+sortSelItem('весь период', 'col-6')
+					+Vacancies()
+					+puginRow()
 	// end sSearch
 
 mixin sortSelItem(chosenItem, bootClasses)
-	.col-md-4(classes="bootClasses")
+	.col-md-4(class=bootClasses)
 		+e.sort-select
 			select.form-control.form-select
 				option=chosenItem
@@ -59,9 +110,56 @@ mixin filter()
 			+customChbGroup(['Педиатрическая', 'Взрослая', 'Смешанная'])
 		+filterItem('Форма собственности')
 			+customChbGroup(['Частная', 'Государтсвенная'])
+		+e.BUTTON.show-btn(type="submit")
+			span
+				| Показать
+				|
+			span.text-primary 938
+
+mixin filterVacancy()
+	+b.filter--js
+		+filterItem('Регион:')
+			+e.select
+				select.form-select.form-control
+					option Ленинградская область
+					option Ленинградская область2
+					option Ленинградская область3
+		+filterItem('Город')
+			+e.select
+				select.form-select.form-control
+					option Санкт-Петербург
+					option Львов
+					option Киев
+		//-new
+		+filterItem('Уровень дохода, ₽')
+			+b.two-inps
+				+input('25 000', 'number', undefined, 'salary_from')
+				+input('100 000', 'number', undefined, 'salary_to')
+			+customChb('Не показывать без зарплаты')(checked)
+		+filterItem('Тип занятости')
+			+customChbGroup(['Полная', 'Неполная', 'Сменная', 'Вахтовая', 'Удаленная работа'])
+		+filterItem('Уровень организации медицинской помощи')
+			+customChbGroup(['Первичный медико-профилактический', 'Стационарный', 'Неотложная', 'Скорая', 'Санаторий'])
+		+filterItem('Тип медицинской службы')
+			+customChbGroup(['Педиатрическая', 'Взрослая', 'Смешанная'])
+		+filterItem('График работы')
+			+customChbGroup(['График работы', 'Сменный график', 'Гибкий график'])
+			+e.show-more.active.show-more-js Показать еще 2
+			+e.shm-content.shm-cont-js
+				+customChb('откриваюсь на клик')
+				+customChb('по серой кнопке')
+		+filterItem('Опыт работы')
+			+customChbGroup(['от 1 года до 3 лет', 'от 3 до 6 лет', 'более 6 лет', 'без опыта'])
+		+filterItem('Навыки:')
+			+customChbGroup(['Пользование ПК', 'Умный', 'Усидчевый', 'Терпеливый', 'Спортивный'])
+		+e.BUTTON.show-btn(type="submit")
+			span
+				| Показать
+				|
+			span.text-primary 938
 
 mixin filterItem(title, activeClass="active", addContentCl='')
-	+e.item(class=activeClass)
+	+e.item.f-item-js(class=activeClass)
 		+e.head.dd-head-js=title
 		+e.content.dd-content-js(class=`${activeClass} ${addContentCl}`)
 			block
@@ -73,6 +171,7 @@ mixin customChbGroup(arr)
 				+customChb(arr[i])(checked)
 			else
 				+customChb(arr[i])
+			block
 
 mixin customChb(txt)
 	+b.LABEL.custom-chb
@@ -145,3 +244,136 @@ mixin organizationsItem(data)
 				//-have css class "active"
 				+e.like-btn
 					+icon('like')
+
+
+mixin Vacancies()
+	+b.organ--vac
+		+vacancyItem({
+			dataFancy: 'jobGalery1',
+			imgsNumArr: [3,1,4],
+			logo: true,
+			update: true,
+			prof: 'Врач-терапевт стационар',
+			orgName: 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург',
+			city: 'г. Санкт-Петербург',
+			descr: 'Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.',
+			salary: '30 000-35 000 ₽',
+		})
+		+vacancyItem({
+			dataFancy: 'jobGalery2',
+			imgsNumArr: [3, 1, 2, 4, 3],
+			prof: 'Врач-терапевт',
+			orgName: 'ООО УК Медгард',
+			city: 'г. Санкт-Петербург',
+			descr: 'Приём амбулаторных пациентов. Ведение пациентов в стационаре. Разработка индивидуального плана лечения и диагностики. Проведение экспертизы нетрудоспособности. Осуществление контроля за работой...',
+			salary: 'от 15 000 ₽',
+		})
+		+vacancyItem({
+			dataFancy: 'jobGalery1',
+			imgsNumArr: [3, 1, 4],
+			logo: true,
+			update: true,
+			prof: 'Врач-терапевт стационар',
+			orgName: 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург',
+			city: 'г. Санкт-Петербург',
+			descr: 'Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.',
+			salary: '30 000-35 000 ₽',
+		})
+		+vacancyItem({
+			dataFancy: 'jobGalery2',
+			imgsNumArr: [3, 1, 2, 4, 3],
+			prof: 'Врач-терапевт',
+			orgName: 'ООО УК Медгард',
+			city: 'г. Санкт-Петербург',
+			descr: 'Приём амбулаторных пациентов. Ведение пациентов в стационаре. Разработка индивидуального плана лечения и диагностики. Проведение экспертизы нетрудоспособности. Осуществление контроля за работой...',
+			salary: 'от 15 000 ₽',
+		})
+		//-hidden mob
+		+vacancyItem({
+			dataFancy: 'jobGalery1',
+			imgsNumArr: [3, 1, 4],
+			logo: true,
+			update: true,
+			prof: 'Врач-терапевт стационар',
+			orgName: 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург',
+			city: 'г. Санкт-Петербург',
+			descr: 'Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.',
+			salary: '30 000-35 000 ₽',
+		})(class="d-none d-xl-flex")
+		+vacancyItem({
+			dataFancy: 'jobGalery2',
+			imgsNumArr: [3, 1, 2, 4, 3],
+			prof: 'Врач-терапевт',
+			orgName: 'ООО УК Медгард',
+			city: 'г. Санкт-Петербург',
+			descr: 'Приём амбулаторных пациентов. Ведение пациентов в стационаре. Разработка индивидуального плана лечения и диагностики. Проведение экспертизы нетрудоспособности. Осуществление контроля за работой...',
+			salary: 'от 15 000 ₽',
+		})(class="d-none d-xl-flex")
+
+mixin vacancyItem(data)
+	+e.item--vac&attributes(attributes)
+		+e.row--vac.row
+			.col
+				+e.title(href="#")=data.prof
+				+e.org-name(href="#")=data.orgName
+				+e.city=data.city
+			if data.logo
+				.col-auto
+					+e.company-logo(href='#')
+						img(loading="lazy" src="img/@2x/company-logo.png" alt="")
+		+e.description=data.descr
+		+e.salary=data.salary
+		+e.galary
+			+e.g-row.row
+				- for (var i = 0; i < data.imgsNumArr.length; i++)
+					+galaryItem(data.imgsNumArr[i], data.dataFancy)
+		+e.lower-row.row.align-items-md-center
+			.col
+				+e.btns-row.row.align-items-md-center
+					.col-auto
+						+e.respond-btn(href="#") Откликнуться
+					.col-auto
+						+e.show-btn(href="#") Показать контакты
+					.col-auto
+						+e.placement
+							span.d-md-block.d-xl-inline
+								| Размещено:
+								|
+							span 04.02.2021
+					if data.update
+						.col-auto
+							+e.placement
+								span.d-md-block.d-xl-inline
+									| Обновлено:
+									|
+								span 04.02.2021
+			.col-auto
+				//-have css class "active"
+				+e.like-btn
+					+icon('like')
+
+mixin galaryItem(imgNum,dataFancy)
+	.col.col-part-5
+		+e.g-img(href=`img/@2x/stab-${imgNum}.jpg` data-fancybox=dataFancy)
+			img(loading="lazy" src=`img/@2x/stab-${imgNum}.jpg` alt="")
+
+mixin puginRow()
+	+b.pugin-row.row
+		.col
+			+b.pugination
+				+e.item--controll(href='#')
+					+icon('chevron-left')
+				+e.item.current(href='#') 1
+				+e.item(href='#') 2
+				+e.item(href='#') 3
+				+e.item(href='#') ...
+				+e.item(href='#') 5
+				+e.item--controll(href='#')
+					+icon('chevron-right')
+		.col-auto
+			+e.select-cont
+				+e.sel-title Показать по:
+				+e.SELECT.select.form-control.form-select
+					option 12
+					option 24
+					option 36

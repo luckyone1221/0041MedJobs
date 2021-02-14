@@ -11,14 +11,14 @@ include ../blocks/sDescr/_sDescr.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '02-search'
+	- let  title= '04-vacancy'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-	+sSearch()
-		+inpStrip('Организации', 'Введите название организации')
-		+breadcrumb('Главная', 'Организации')
+	+sSearchVacancy()
+		+inpStrip('Вакансии', 'Введите название вакансии')
+		+breadcrumb('Главная', 'Вакансии')
 	+sDescr()
 	+footer()

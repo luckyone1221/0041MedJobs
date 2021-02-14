@@ -198,7 +198,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '02-576.png';
+	screenName = '04-576.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -281,6 +281,13 @@ function eventHandler() {
 		});
 	});
 	document.body.addEventListener('click', function () {//write filter missclick
+	}); //show more
+
+	$('.show-more-js').click(function () {
+		$(this).removeClass('active');
+		$(this).closest('.f-item-js').find('.shm-cont-js').fadeIn(function () {
+			$(this).addClass('active');
+		});
 	}); //end luckyone js
 }
 

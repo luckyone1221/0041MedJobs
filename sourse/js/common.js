@@ -196,7 +196,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '02-576.png';
+	screenName = '04-576.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -293,6 +293,15 @@ function eventHandler() {
 	document.body.addEventListener('click', function (){
 		//write filter missclick
 	});
+
+	//show more
+	$('.show-more-js').click(function (){
+		$(this).removeClass('active');
+
+		$(this).closest('.f-item-js').find('.shm-cont-js').fadeIn(function (){
+			$(this).addClass('active');
+		})
+	})
 
 
 

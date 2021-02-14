@@ -1,0 +1,23 @@
+// start .sDescr
+.sDescr {
+	--sPB: 52px;
+	--sPT: 26px;
+	--sTPB: 30px;
+
+	.section-title{
+		h2{
+			margin-bottom: 30px;
+		}
+		p{
+			line-height: 1.75;
+			margin-bottom: 29px;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sDescr
