@@ -1,0 +1,90 @@
+mixin profesionals(data)
+	// start profesionals
+	+b.profesionals#profesionals&attributes(attributes)
+		+profesionalItem({
+			status: 'warning',
+			portrait: true,
+			onLine: 'success',
+		})
+		+profesionalItem({
+			status: 'success',
+			onLine: 'secondary',
+		})
+		+profesionalItem({
+			status: 'secondary',
+			onLine: 'secondary',
+		})
+		+profesionalItem({
+			status: 'warning',
+			portrait: true,
+			onLine: 'success',
+		})
+		+profesionalItem({
+			status: 'success',
+			onLine: 'secondary',
+		})(class="d-none d-xl-flex")
+		+profesionalItem({
+			status: 'secondary',
+			onLine: 'secondary',
+		})(class="d-none d-xl-flex")
+		+profesionalItem({
+			status: 'warning',
+			portrait: true,
+			onLine: 'success',
+		})(class="d-none d-xl-flex")
+		+profesionalItem({
+			status: 'success',
+			onLine: 'secondary',
+		})(class="d-none d-xl-flex")
+		+profesionalItem({
+			status: 'secondary',
+			onLine: 'secondary',
+		})(class="d-none d-xl-flex")
+	// end profesionals
+
+mixin profesionalItem(data)
+	+e.item&attributes(attributes)
+		+e.top-row.row
+			.col
+				+e.status-row.row
+					.col-auto
+						+e.proffesion Врач стоматолог
+					.col-auto
+						if data.status === "warning"
+							+e.status--warning В поиске работы
+						if data.status === "success"
+							+e.status--success
+						if data.status === "secondary"
+							+e.status--secondary Не рассматривает
+				+e.data-block
+					+e.d-gray Константинопольская Елена Васильевна
+					+e.d-black 24 года
+				+e.data-block
+					+e.d-gray Опыт работы:
+					+e.d-black 5 лет 6 месяцев
+			if data.portrait
+				.col-auto
+					+e.portrait
+						img(loading="lazy" src="img/@2x/portrait.jpg" alt="")
+		+e.data-block
+			+e.d-gray Последнее место работы:
+			+e.d-black Врач стоматолог
+			+e.add-data
+				strong Сызранская стоматологическая поликлиника
+				span , сентябрь 2008 — по настоящее время
+		.organ__salary 60 000 ₽
+		+e.bot-row.row
+			.col
+				.organ__btns-row.row.align-items-md-center
+					.col-auto
+						.organ__respond-btn(href="#") Предложить работу
+					.col-auto
+						.organ__show-btn(href="#") Показать контакты
+					.col-auto
+						if data.onLine === 'success'
+							+e.netw-status--on В сети
+						if data.onLine === 'secondary'
+							+e.netw-status--off Был(-а) в сети: 44 минуты назад
+			.col-auto
+				.organ__like-btn
+					+icon('like')

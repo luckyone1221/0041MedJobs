@@ -500,14 +500,14 @@
 		min-width: 160px;
 		@extend .btn-default-outline;
 
-		padding: 12px 15px;
+		padding: 12px 10px;
 		font-size: 14px;
 	}
 	&__show-btn{
 		min-width: 160px;
 		font-size: 14px;
 
-		padding: 12px 15px;
+		padding: 12px 10px;
 		@extend .btn;
 		@extend .btn-outline-light;
 

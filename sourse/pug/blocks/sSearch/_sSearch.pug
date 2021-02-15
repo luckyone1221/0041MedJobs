@@ -69,12 +69,12 @@ mixin sSearchProfesionals(data)
 							+e.f-btn-txt
 								span Фильтр
 								span Закрыть
-						+filterVacancy()
+						+filterProf()
 				.col-xl-9
 					.row.row-default-sm.mb-0
 						+sortSelItem('по соответствию', 'col-6')
 						+sortSelItem('весь период', 'col-6')
-					+Vacancies()
+					+profesionals()
 					+puginRow()
 	// end sSearch
 
@@ -115,7 +115,6 @@ mixin filter()
 				| Показать
 				|
 			span.text-primary 938
-
 mixin filterVacancy()
 	+b.filter--js
 		+filterItem('Регион:')
@@ -152,6 +151,75 @@ mixin filterVacancy()
 			+customChbGroup(['от 1 года до 3 лет', 'от 3 до 6 лет', 'более 6 лет', 'без опыта'])
 		+filterItem('Навыки:')
 			+customChbGroup(['Пользование ПК', 'Умный', 'Усидчевый', 'Терпеливый', 'Спортивный'])
+		+e.BUTTON.show-btn(type="submit")
+			span
+				| Показать
+				|
+			span.text-primary 938
+
+mixin filterProf()
+	+b.filter--js
+		+filterItem('Регион:', 'active', 'pt-sm')
+			+e.select
+				select.form-select.form-control
+					option Ленинградская область
+					option Ленинградская область2
+					option Ленинградская область3
+		+filterItem('Город', 'active', 'pt-sm')
+			+e.select
+				select.form-select.form-control
+					option Санкт-Петербург
+					option Львов
+					option Киев
+		+filterItem('Опыт работы')
+			+customChbGroup(['от 1 года до 3 лет', 'от 3 до 6 лет', 'более 6 лет', 'без опыта'])
+		+filterItem('Возраст, лет')
+			+b.two-inps
+				+input('18', 'number', undefined, 'salary_from')
+				+input('75', 'number', undefined, 'salary_to')
+		+filterItem('Уровень дохода, ₽')
+			+b.two-inps
+				+input('25 000', 'number', undefined, 'salary_from')
+				+input('100 000', 'number', undefined, 'salary_to')
+			+customChb('Не показывать без зарплаты')(checked)
+		+filterItem('Пол')
+			+customChbGroup(['Мужской', 'Женский'])
+		+filterItem('Переезд/командировки')
+			+customChbGroup(['Готов к переезду', 'Готов к командировкам'])
+		+filterItem('Тип занятости')
+			+customChbGroup(['Полная занятость', 'Частичная занятость', 'Проектная работа'])
+			+e.show-more.active.show-more-js Показать еще 2
+			+e.shm-content.shm-cont-js
+				+customChb('откриваюсь на клик')
+				+customChb('по серой кнопке')
+		+filterItem('Фотография')
+			+customChbGroup(['Только с фото', 'Можно без фото'])
+		+filterItem('Ключевые навыки')
+			+customChbGroup(['Пользователь ПК', 'Работа в команде', 'Организаторские навыки', 'Медицинская документация'])
+			+e.show-more.active.show-more-js Показать еще 37
+			+e.shm-content.shm-cont-js
+				+customChb('откриваюсь на клик')
+				+customChb('по серой кнопке')
+		+filterItem('Язык')
+			+customChbGroup(['Русский', 'Английский', 'Немецкий'])
+			+e.show-more.active.show-more-js Показать еще 37
+			+e.shm-content.shm-cont-js
+				+customChb('откриваюсь на клик')
+				+customChb('по серой кнопке')
+		+filterItem('Категория прав')
+			+customChbGroup(['B', 'C', 'A'])
+			+e.show-more.active.show-more-js Показать еще 37
+			+e.shm-content.shm-cont-js
+				+customChb('откриваюсь на клик')
+				+customChb('по серой кнопке')
+		+filterItem('График работы')
+			+customChbGroup(['Полный день', 'Сменный график', 'Гибкий график'])
+			+e.show-more.active.show-more-js Показать еще 2
+			+e.shm-content.shm-cont-js
+				+customChb('откриваюсь на клик')
+				+customChb('по серой кнопке')
+		+filterItem('Статус')
+			+customChbGroup(['В поиске работы', 'Рассмотрю варианты', 'Не рассматриваю'])
 		+e.BUTTON.show-btn(type="submit")
 			span
 				| Показать

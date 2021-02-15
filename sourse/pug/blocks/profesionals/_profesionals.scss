@@ -1,0 +1,128 @@
+// start .profesionals
+.profesionals {
+  padding-bottom: 24px;
+  @include media-breakpoint-up(md){
+    padding-bottom: 31px;
+  }
+  @include media-breakpoint-up(xl){
+    margin-top: -2px;
+  }
+  &__item{
+    @include mt();
+    background-color: $white;
+    border: 1px solid $gary-110;
+    border-radius: 5px;
+
+    padding: 25px 23px 22px 20px;
+    @include media-breakpoint-up(md){
+      padding: 23px 23px 23px 20px;
+    }
+    margin-bottom: 18px;
+    @include media-breakpoint-up(xl){
+      padding: 25px 25px 21.5px 18px;
+      margin-bottom: 12px;
+    }
+
+    --like-btn-col: #{$gray-120};
+    --title-col: #{$body-color};
+    box-shadow: 0px 5px 10px rgba(38, 39, 40, 0);
+    &:hover{
+      --like-btn-col: #{$warning};
+      --title-col: #{$primary};
+      box-shadow: 0px 5px 10px rgba(38, 39, 40, 0.15);
+    }
+
+
+    display: flex;
+    flex-direction: column;
+  }
+  &__top-row{
+    @include roww(10px);
+  }
+  &__status-row{
+    @include roww(12px);
+
+    padding-bottom: 10px;
+    @include media-breakpoint-up(md){
+      padding-bottom: 11px;
+    }
+  }
+  &__proffesion{
+    font-weight: 600;
+  }
+  &__status{
+    padding: 3px 8px;
+    border-radius: 5px;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    &--warning{
+      background-color: rgba($warning, .1);
+      color: $warning;
+    }
+    &--success{
+      background-color: rgba($warning, .1);
+      color: $success;
+    }
+    &--secondary{
+      background-color: rgba($warning, .1);
+      color: $secondary;
+    }
+  }
+  &__data-block{
+    margin-bottom: 16.5px;
+    font-size: 14px;
+
+    & > *{
+      margin-bottom: 5px;
+    }
+    & > *:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__d-gray{
+    color: $secondary;
+  }
+  &__portrait{
+    width: 76px;
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__bot-row{
+
+  }
+  &__netw-status{
+    font-size: 14px;
+    &--on{
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      color: $success;
+
+      &:before{
+        content: '';
+        width: 5px;
+        height: 5px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: currentColor;
+      }
+    }
+    &--off{
+      color: $secondary;
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+} // end.profesionals
