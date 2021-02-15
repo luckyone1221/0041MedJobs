@@ -600,7 +600,7 @@
 
 	&__like-btn{
 		cursor: pointer;
-		color: var(--like-btn-col);
+		color: var(--like-btn-col, #{$gray-120});
 
 		&.active{
 			color: $warning;
@@ -614,6 +614,7 @@
 		}
 
 		&:hover{
+			color: var(--like-btn-col, #{$warning});
 			.icon{
 				filter: drop-shadow(0 0 2.5px rgba($warning,0.4));
 			}

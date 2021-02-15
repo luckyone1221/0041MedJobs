@@ -77,7 +77,9 @@ $light: $gray-100 !default;
 $dark: $gray-900 !default;
 
 // scss-docs-start theme-colors-map
-$theme-colors: ("primary": $primary,
+$theme-colors: (
+  "white" : $white,
+  "primary": $primary,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
@@ -247,6 +249,13 @@ $spacers: (0: 0,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  25: 25px,
+  36: 36px,
+  41: 41px,
+  43: 43px,
+  48: 43px,
+  50: 50px,
+  55: 55px
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;

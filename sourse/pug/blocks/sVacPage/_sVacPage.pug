@@ -1,0 +1,134 @@
+mixin sVacPage(data)
+	// start sVacPage
+	+b.SECTION.sVacPage.section#sVacPage&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h1 Врач стоматолог-терапевт
+				+e.salary з/п: 30 000-35 000 ₽
+			+e.row.row
+				.col-12.col-xl-9
+					//-
+					+e.header-row.row
+						+e.btn-col.col-auto
+							+e.callback-btn(href='#') Откликнуться
+						.col-auto
+							+e.contact-btn(href="#") Показать контакты
+						.col-auto.ms-auto.ms-md-0
+							a.organ__like-btn(href='#')
+								+icon('like')
+						.col-auto
+							.organ__placement.p-0
+								span.d-md-block.d-xl-inline
+									| Размещено:
+									|
+								span 04.02.2021
+						.col-auto
+							.organ__placement.p-0
+								span.d-md-block.d-xl-inline
+									| Обновлено:
+									|
+								span 04.02.2021
+					//-
+					+shortData('d-xl-none mb-50')
+					+e.UL.striped-ul
+						li
+							strong Опыт работы:&nbsp;
+							span от 1 до 3 лет
+						li
+							strong Тип занятости:&nbsp;
+							span Полная
+						li
+							strong График:&nbsp;
+							span Полный день
+						li
+							strong Уровень организации медицинской помощи:&nbsp;
+							span Стационарный
+						li
+							strong Тип медицинской службы:&nbsp;
+							span Педиатрическая
+					+e.sub-title Обязанности:
+					+e.UL.dot-ul
+						li Терапевтический приём пациентов отделения стоматологии;
+						li Оказание квалифицированной медицинской помощи пациентам, используя современные методы профилактики, диагностики, лечения;
+						li Ведение установленной медицинской документации;
+						li Проведение санитарно-просветительской работы среди больных по укреплению здоровья и профилактике заболеваний, пропаганде здорового образа жизни;
+						li Обеспечение соблюдения требований охраны труда, техники безопасности, гигиены труда, противопожарной безопасности при эксплуатации помещений, оборудования и аппаратуры, используемой в стоматологической практике.
+					+e.sub-title Требования:
+					+e.UL.dot-ul
+						li Высшее медицинское образование;
+						li Наличие действующего сертификата "Стоматология терапевтическая";
+						li Ведение установленной медицинской документации;
+						li Опыт работы по специальности;
+						li Все виды терапевтического лечения;
+					+e.sub-title Условия:
+					+e.UL.dot-ul
+						li Официальное оформление по ТК РФ;
+						li Полный соц.пакет;
+						li Получение медицинских услуг в клиниках на льготных условиях.
+					+e.sub-title.mb-41.mb-xl-43 Навыки:
+					+e.skill-row.row
+						.col-auto
+							+e.btn(href='#') Умный
+						.col-auto
+							+e.btn(href='#') Усидчевый
+					+e.sub-title.mb-41.mb-xl-43 Фотографии
+					+galeryRow()
+				.col-xl-3.d-none.d-xl-block
+					+shortData()
+			+e.small-title Похожие вакансии:
+			.row
+				.col-xl-9
+					+b.organ--vac
+						+vacancyItem({
+							dataFancy: 'jobGalery1',
+							imgsNumArr: [3, 1, 4],
+							logo: true,
+							update: true,
+							prof: 'Врач-терапевт стационар',
+							orgName: 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург',
+							city: 'г. Санкт-Петербург',
+							descr: 'Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.',
+							salary: '30 000-35 000 ₽',
+						})
+						+vacancyItem({
+							dataFancy: 'jobGalery1',
+							imgsNumArr: [3, 1, 4],
+							logo: true,
+							update: true,
+							prof: 'Врач-терапевт стационар',
+							orgName: 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург',
+							city: 'г. Санкт-Петербург',
+							descr: 'Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.',
+							salary: '30 000-35 000 ₽',
+						})
+	// end sVacPage
+mixin shortData(addClasses='')
+	+e.short-data(class=addClasses)
+		.row.text-xl-center
+			+e.sl-col.col-auto.col-md-4.col-xl-12
+				+e.s-logo(href='#')
+					img(loading="lazy" src="img/@2x/company-logo-2.png" alt="")
+			+e.sr-col.col-12.col-md-8.col-xl-12
+				+e.s-name(href='#') ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+				+e.s-loc г. Санкт-Петербург, пр. Мечникова, д.27
+				+e.ss-row.row
+					.col-auto.col-xl-12
+						+e.s-employers Более 100 сотрудников
+					.col-auto.col-xl-12
+						+e.s-other(href="#") 7 вакансий
+
+mixin galeryRow()
+	+b.galery-row.row
+		+galeryItem(1)
+		+galeryItem(2)
+		+galeryItem(3)
+		+galeryItem(3)
+		+galeryItem(4)
+		+galeryItem(1)
+
+mixin galeryItem(imgNum)
+	.col-6.col-md-4
+		+e.g-item(href=`img/@2x/stab-${imgNum}.jpg` data-fancybox='jobGalery')
+			img(loading="lazy" src=`img/@2x/stab-${imgNum}.jpg` alt="")
+
