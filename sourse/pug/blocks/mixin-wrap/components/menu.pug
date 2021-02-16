@@ -6,9 +6,9 @@ mixin mnu()
 			"Вакансии":"#",
 			"Профессионалы":"#",
 			}
-	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+	+b.UL.navMenu
 		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+			+e.LI.item: +e.A.link(href=linkPatch )= linkName
 //- /menu
 
 mixin mnu2()
@@ -18,9 +18,9 @@ mixin mnu2()
 			"Помощь":"#",
 			"Контакты":"#",
 		}
-	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+	+b.UL.navMenu
 		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+			+e.LI.item: +e.A.link(href=linkPatch)= linkName
 
 mixin mnu3()
 	-
@@ -30,4 +30,4 @@ mixin mnu3()
 		}
 	+b.UL.navMenu&attributes(attributes)
 		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+			+e.LI.item: +e.A.link(href=linkPatch)= linkName

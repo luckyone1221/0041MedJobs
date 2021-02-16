@@ -329,6 +329,7 @@
 	}
 
 	.square{
+		display: block;
 		flex-shrink: 0;
 		width: 24px;
 		height: 24px;
@@ -358,6 +359,7 @@
 		}
 	}
 	.txt{
+		display: block;
 		margin-top: 2px;
 		font-size: 14px;
 		line-height: 1.5;

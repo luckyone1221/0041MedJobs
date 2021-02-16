@@ -13,12 +13,12 @@
 		<div class="main-wrapper">
 			<div class="mm mm--js d-xl-none">
 				<div class="container">
-					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Организации</a>
+					<ul class="navMenu">
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Профессионалы</a>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
 						</li>
 					</ul>
 				</div>
@@ -33,12 +33,12 @@
 							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
 							<div class="col d-none d-xl-block">
-								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Организации</a>
+								<ul class="navMenu">
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Профессионалы</a>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
 									</li>
 								</ul>
 							</div>
@@ -76,7 +76,7 @@
 							<form>
 								<div class="form-wrap__select">
 									<select class="form-control form-select">
-										<option class="d-none" selected="selected" muted="muted">Организации</option>
+										<option class="d-none" selected="selected" disabled="disabled">Организации</option>
 										<option>option 1</option>
 										<option>option 2</option>
 										<option>option 3</option>
@@ -95,8 +95,8 @@
 					</div>
 					<nav class="breadcrumb-par">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="/" itemprop="item"><span>Главная</span></a></li>
-							<li class="breadcrumb-item active"><a href="#" itemprop="item"><span>Организации</span></a></li>
+							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+							<li class="breadcrumb-item active"><a href="#"><span>Организации</span></a></li>
 						</ol>
 					</nav>
 					<div class="section-title">
@@ -144,24 +144,16 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Работодатель</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Работодатель</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Профорганизация</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Профорганизация</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Сообщество</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Сообщество</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Университет</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Университет</span>
 												</label>
 											</div>
 										</div>
@@ -172,19 +164,13 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Региональный</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Региональный</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Федеральный</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Федеральный</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Международный</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Международный</span>
 												</label>
 											</div>
 										</div>
@@ -195,29 +181,19 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Первичный медико-профилактический</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Первичный медико-профилактический</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Стационарный</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стационарный</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Неотложная</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Неотложная</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Скорая</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Скорая</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Санаторий</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Санаторий</span>
 												</label>
 											</div>
 										</div>
@@ -228,19 +204,13 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Педиатрическая</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Педиатрическая</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Взрослая</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Взрослая</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Смешанная</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Смешанная</span>
 												</label>
 											</div>
 										</div>
@@ -251,14 +221,10 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Частная</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Частная</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Государтсвенная</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государтсвенная</span>
 												</label>
 											</div>
 										</div>
@@ -674,22 +640,22 @@
 						<div class="footer__menu-col col-12 col-md-5 col-xl-4">
 							<div class="footer__menu-row row">
 								<div class="col-6">
-									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Организации</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Профессионалы</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
 										</li>
 									</ul>
 								</div>
 								<div class="col-6">
-									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О проекте</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">О проекте</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Помощь</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
 										</li>
 									</ul>
 								</div>
@@ -697,9 +663,9 @@
 						</div>
 						<div class="footer__gray-col col-12 col-md-5 col-xl-3 order-1 order-xl-0">
 							<ul class="navMenu gray text-center text-md-start">
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Публичная оферта</a>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Публичная оферта</a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Правила пользования</a>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Правила пользования</a>
 								</li>
 							</ul>
 						</div>

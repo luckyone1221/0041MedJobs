@@ -243,9 +243,9 @@ mixin customChbGroup(arr)
 
 mixin customChb(txt)
 	+b.LABEL.custom-chb
-		input(type="checkbox" class="d-none" name="")&attributes(attributes)
-		.square
-		.txt=txt
+		input(type="checkbox" class="d-none" name="name")&attributes(attributes)
+		span.square
+		span.txt=txt
 
 mixin organizations()
 	+b.organ

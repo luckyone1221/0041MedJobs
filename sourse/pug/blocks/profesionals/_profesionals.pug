@@ -77,14 +77,14 @@ mixin profesionalItem(data)
 			.col
 				.organ__btns-row.row.align-items-md-center
 					.col-auto
-						.organ__respond-btn(href="#") Предложить работу
+						a.organ__respond-btn(href="#") Предложить работу
 					.col-auto
-						.organ__show-btn(href="#") Показать контакты
+						a.organ__show-btn(href="#") Показать контакты
 					.col-auto
 						if data.onLine === 'success'
 							+e.netw-status--on В сети
 						if data.onLine === 'secondary'
 							+e.netw-status--off Был(-а) в сети: 44 минуты назад
 			.col-auto
-				.organ__like-btn(href='#')
+				a.organ__like-btn(href='#')
 					+icon('like')

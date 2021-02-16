@@ -13,12 +13,12 @@
 		<div class="main-wrapper">
 			<div class="mm mm--js d-xl-none">
 				<div class="container">
-					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Организации</a>
+					<ul class="navMenu">
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Профессионалы</a>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
 						</li>
 					</ul>
 				</div>
@@ -33,12 +33,12 @@
 							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
 							<div class="col d-none d-xl-block">
-								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Организации</a>
+								<ul class="navMenu">
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Профессионалы</a>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
 									</li>
 								</ul>
 							</div>
@@ -76,7 +76,7 @@
 							<form>
 								<div class="form-wrap__select">
 									<select class="form-control form-select">
-										<option class="d-none" selected="selected" muted="muted">Профессионалы</option>
+										<option class="d-none" selected="selected" disabled="disabled">Профессионалы</option>
 										<option>option 1</option>
 										<option>option 2</option>
 										<option>option 3</option>
@@ -95,8 +95,8 @@
 					</div>
 					<nav class="breadcrumb-par">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="/" itemprop="item"><span>Главная</span></a></li>
-							<li class="breadcrumb-item active"><a href="#" itemprop="item"><span>Профессионалы</span></a></li>
+							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+							<li class="breadcrumb-item active"><a href="#"><span>Профессионалы</span></a></li>
 						</ol>
 					</nav>
 					<div class="section-title">
@@ -144,24 +144,16 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">от 1 года до 3 лет</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">от 1 года до 3 лет</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">от 3 до 6 лет</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">от 3 до 6 лет</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">более 6 лет</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">более 6 лет</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">без опыта</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">без опыта</span>
 												</label>
 											</div>
 										</div>
@@ -193,9 +185,7 @@
 												<!-- +e.input-wrap-->
 											</div>
 											<label class="custom-chb">
-												<input class="d-none" type="checkbox" name="" checked="checked"/>
-												<div class="square"></div>
-												<div class="txt">Не показывать без зарплаты</div>
+												<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Не показывать без зарплаты</span>
 											</label>
 										</div>
 									</div>
@@ -205,14 +195,10 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Мужской</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Мужской</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Женский</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Женский</span>
 												</label>
 											</div>
 										</div>
@@ -223,14 +209,10 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Готов к переезду</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Готов к переезду</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Готов к командировкам</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Готов к командировкам</span>
 												</label>
 											</div>
 										</div>
@@ -241,33 +223,23 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Полная занятость</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Полная занятость</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Частичная занятость</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Частичная занятость</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Проектная работа</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Проектная работа</span>
 												</label>
 											</div>
 											<div class="filter__show-more active show-more-js">Показать еще 2
 											</div>
 											<div class="filter__shm-content shm-cont-js">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">откриваюсь на клик</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">откриваюсь на клик</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">по серой кнопке</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">по серой кнопке</span>
 												</label>
 											</div>
 										</div>
@@ -278,14 +250,10 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Только с фото</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Только с фото</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Можно без фото</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Можно без фото</span>
 												</label>
 											</div>
 										</div>
@@ -296,38 +264,26 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Пользователь ПК</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Пользователь ПК</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Работа в команде</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Работа в команде</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Организаторские навыки</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Организаторские навыки</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Медицинская документация</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Медицинская документация</span>
 												</label>
 											</div>
 											<div class="filter__show-more active show-more-js">Показать еще 37
 											</div>
 											<div class="filter__shm-content shm-cont-js">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">откриваюсь на клик</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">откриваюсь на клик</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">по серой кнопке</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">по серой кнопке</span>
 												</label>
 											</div>
 										</div>
@@ -338,33 +294,23 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Русский</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Русский</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Английский</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Английский</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Немецкий</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Немецкий</span>
 												</label>
 											</div>
 											<div class="filter__show-more active show-more-js">Показать еще 37
 											</div>
 											<div class="filter__shm-content shm-cont-js">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">откриваюсь на клик</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">откриваюсь на клик</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">по серой кнопке</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">по серой кнопке</span>
 												</label>
 											</div>
 										</div>
@@ -375,33 +321,23 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">B</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">B</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">C</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">C</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">A</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">A</span>
 												</label>
 											</div>
 											<div class="filter__show-more active show-more-js">Показать еще 37
 											</div>
 											<div class="filter__shm-content shm-cont-js">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">откриваюсь на клик</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">откриваюсь на клик</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">по серой кнопке</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">по серой кнопке</span>
 												</label>
 											</div>
 										</div>
@@ -412,33 +348,23 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">Полный день</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Полный день</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Сменный график</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Сменный график</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Гибкий график</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Гибкий график</span>
 												</label>
 											</div>
 											<div class="filter__show-more active show-more-js">Показать еще 2
 											</div>
 											<div class="filter__shm-content shm-cont-js">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">откриваюсь на клик</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">откриваюсь на клик</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">по серой кнопке</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">по серой кнопке</span>
 												</label>
 											</div>
 										</div>
@@ -449,19 +375,13 @@
 										<div class="filter__content dd-content-js active">
 											<div class="filter__checkboxes">
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="" checked="checked"/>
-													<div class="square"></div>
-													<div class="txt">В поиске работы</div>
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">В поиске работы</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Рассмотрю варианты</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Рассмотрю варианты</span>
 												</label>
 												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name=""/>
-													<div class="square"></div>
-													<div class="txt">Не рассматриваю</div>
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Не рассматриваю</span>
 												</label>
 											</div>
 										</div>
@@ -539,25 +459,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--on">В сети
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item">
@@ -599,25 +512,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--off">Был(-а) в сети: 44 минуты назад
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item">
@@ -659,25 +565,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--off">Был(-а) в сети: 44 минуты назад
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item">
@@ -723,25 +622,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--on">В сети
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item d-none d-xl-flex">
@@ -783,25 +675,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--off">Был(-а) в сети: 44 минуты назад
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item d-none d-xl-flex">
@@ -843,25 +728,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--off">Был(-а) в сети: 44 минуты назад
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item d-none d-xl-flex">
@@ -907,25 +785,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--on">В сети
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item d-none d-xl-flex">
@@ -967,25 +838,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--off">Был(-а) в сети: 44 минуты назад
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 								<div class="profesionals__item d-none d-xl-flex">
@@ -1027,25 +891,18 @@
 									<div class="profesionals__bot-row row">
 										<div class="col">
 											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto">
-													<div class="organ__respond-btn" href="#">Предложить работу</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__show-btn" href="#">Показать контакты</div>
-												</div>
+												<div class="col-auto"><a class="organ__respond-btn" href="#">Предложить работу</a></div>
+												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a></div>
 												<div class="col-auto">
 													<div class="profesionals__netw-status profesionals__netw-status--off">Был(-а) в сети: 44 минуты назад
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-auto">
-											<div class="organ__like-btn" href="#">
+										<div class="col-auto"><a class="organ__like-btn" href="#">
 												<svg class="icon icon-like ">
 													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg>
-											</div>
-										</div>
+												</svg></a></div>
 									</div>
 								</div>
 							</div>
@@ -1116,22 +973,22 @@
 						<div class="footer__menu-col col-12 col-md-5 col-xl-4">
 							<div class="footer__menu-row row">
 								<div class="col-6">
-									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Организации</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вакансии</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Профессионалы</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
 										</li>
 									</ul>
 								</div>
 								<div class="col-6">
-									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О проекте</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">О проекте</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Помощь</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
 										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
 										</li>
 									</ul>
 								</div>
@@ -1139,9 +996,9 @@
 						</div>
 						<div class="footer__gray-col col-12 col-md-5 col-xl-3 order-1 order-xl-0">
 							<ul class="navMenu gray text-center text-md-start">
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Публичная оферта</a>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Публичная оферта</a>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Правила пользования</a>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Правила пользования</a>
 								</li>
 							</ul>
 						</div>
