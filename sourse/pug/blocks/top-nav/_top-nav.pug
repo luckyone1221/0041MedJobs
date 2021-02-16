@@ -1,7 +1,13 @@
 mixin mob-mnu()
 	+b.mm--js.d-xl-none
 		.container
-			+mnu()
+			+b.UL.navMenu
+				+e.LI.item: +e.A.link.active(href="#") Организации
+				+e.LI.item: +e.A.link(href="#") Вакансии
+				+e.LI.item: +e.A.link(href="#") Профессионалы
+				+e.LI.item: +e.A.link.fw-400(href="#") Личный кабинет
+				+e.LI.item: +e.A.link.fw-400(href="#") Уведомления
+				+e.LI.item: +e.A.link.fw-400.text-warning(href="#") Выйти
 	//  мобильное меню
 
 mixin top-nav() 
@@ -13,7 +19,10 @@ mixin top-nav()
 					+e.logo(href='#')
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				.col.d-none.d-xl-block
-					+mnu()
+					+b.UL.navMenu
+						+e.LI.item: +e.A.link.active(href="#") Организации
+						+e.LI.item: +e.A.link(href="#") Вакансии
+						+e.LI.item: +e.A.link(href="#") Профессионалы
 				.col-auto
 					+e.location(href='#')
 						+icon('location')

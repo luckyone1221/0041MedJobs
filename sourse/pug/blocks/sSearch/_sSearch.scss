@@ -165,7 +165,7 @@
 	padding: 19px 24px 24px 24px;
 
 	&__item{
-		margin-bottom: 17px;
+		padding-bottom: 17px;
 
 		--chevron-filter: grayscale(1);
 		&.active{
@@ -201,8 +201,11 @@
 		&:hover:after{
 			filter: grayscale(0);
 		}
+
+		//margin-bottom: 21px;
 	}
 	&__content{
+		//transition: padding-bottom .3s ease-in-out;
 		padding-top: 21px;
 
 		display: none;
@@ -212,6 +215,11 @@
 
 		&.pt-sm{
 			padding-top: 7px;
+		}
+	}
+	&__checkboxes{
+		& > *:last-child{
+			margin-bottom: 0;
 		}
 	}
 	//

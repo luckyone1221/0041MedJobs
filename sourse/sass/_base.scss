@@ -25,7 +25,7 @@ html{
 }
 
 body {
-	// min-width: 320px; 
+	min-width: 576px;
 	-webkit-font-smoothing: antialiased;
 	position: relative;
 	overflow-x: hidden; 
@@ -697,4 +697,8 @@ h4{
 			background: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
 		}
 	}
+}
+
+.fw-400{
+	font-weight: 400!important;
 }

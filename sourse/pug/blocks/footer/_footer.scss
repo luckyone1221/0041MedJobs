@@ -146,8 +146,9 @@
 		height: 30px;
 
 		&:hover{
-			opacity: .95;
-			transform: scale(1.05);
+			//opacity: .95;
+			filter: brightness(1.07);
+			//transform: scale(1.05);
 		}
 
 		img{
