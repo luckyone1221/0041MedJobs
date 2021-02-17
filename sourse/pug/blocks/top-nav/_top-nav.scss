@@ -1,8 +1,5 @@
 .top-nav {
 	border: 1px solid $gary-110;
-	@include media-breakpoint-up(xl){
-		padding-top: 3px;
-	}
 
 	background-color: $body-bg;
 	position: fixed;
@@ -58,14 +55,14 @@
 			}
 		}
 		&__link{
-			height: calc(var(--header-h) - 8px);
-			line-height: calc(var(--header-h) - 8px);
+			height: calc(var(--header-h) - 0px);
+			line-height: calc(var(--header-h) - 0px);
 			&.active{
 				position: relative;
 				&:before{
 					content: '';
 					position: absolute;
-					bottom: 0;
+					bottom: 1px;
 					left: 0;
 					width: 100%;
 					height: 2px;
@@ -89,7 +86,7 @@
 		align-items: center;
 
 		.icon{
-			color: $danger;
+			color: $warning;
 			font-size: 24px;
 			margin-right: 5px;
 		}
@@ -135,6 +132,7 @@
 	}
 
 	&__burger{
+		cursor: pointer;
 		width: 40px;
 		height: 40px;
 		position: relative;
@@ -232,7 +230,8 @@
 
 			color: $body-color;
 			&:hover{
-				color: $primary;
+				color: $body-color;
+				//color: $primary;
 			}
 		}
 	}

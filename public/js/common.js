@@ -269,14 +269,14 @@ function eventHandler() {
 
 	$('.dd-head-js').click(function () {
 		$(this.parentElement).toggleClass('active');
-		$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+		$(this.parentElement).find('.dd-content-js').slideToggle(250, function () {
 			$(this).toggleClass('active');
 		});
 	}); //filter dd
 
 	$('.f-btn-js').click(function () {
 		$(this).toggleClass('active');
-		$('.filter--js').slideToggle(function () {
+		$('.filter--js').slideToggle(250, function () {
 			$(this).toggleClass('active');
 		});
 	});

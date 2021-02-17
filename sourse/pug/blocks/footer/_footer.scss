@@ -88,7 +88,8 @@
 
 			color: var(--link-col);
 			&:hover{
-				color: $primary;
+				color: var(--link-col);
+				//color: $primary;
 			}
 		}
 	}

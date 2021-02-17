@@ -48,12 +48,12 @@ mixin profesionalItem(data)
 			.col
 				+e.status-row.row
 					.col-auto
-						+e.proffesion Врач стоматолог
+						+e.proffesion(href="#") Врач стоматолог
 					.col-auto
 						if data.status === "warning"
 							+e.status--warning В поиске работы
 						if data.status === "success"
-							+e.status--success
+							+e.status--success Рассмотрю варианты
 						if data.status === "secondary"
 							+e.status--secondary Не рассматривает
 				+e.data-block

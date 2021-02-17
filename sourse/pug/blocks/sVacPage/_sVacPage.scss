@@ -152,6 +152,7 @@
 		@extend .btn-light;
 		border: none!important;
 		padding: 4px 12px;
+		pointer-events: none;
 	}
 	//galery-row
 	.galery-row {

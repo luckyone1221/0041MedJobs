@@ -290,10 +290,12 @@
 		&:first-child{
 			--inp-bord-rad: 5px 0 0 5px;
 			--before-c: 'от';
+			margin-right: -0.5px;
 		}
 		&:last-child{
 			--inp-bord-rad: 0 5px 5px 0;
 			--before-c: 'до';
+			margin-left: -0.5px;
 		}
 
 		position: relative;
@@ -327,10 +329,9 @@
 	margin-bottom: 12px;
 	cursor: pointer;
 
-
 	--sq-border: #{1px solid $gary-110};
 	&:hover{
-		--sq-border: #{1px solid $primary};
+		//--sq-border: #{1px solid $primary};
 	}
 
 	input:checked + .square:after{
@@ -413,8 +414,8 @@
 		--title-col: #{$body-color};
 		box-shadow: 0px 5px 10px rgba(38, 39, 40, 0);
 		&:hover{
-			--like-btn-col: #{$warning};
-			--title-col: #{$primary};
+			//--like-btn-col: #{$warning};
+			//--title-col: #{$primary};
 			box-shadow: 0px 5px 10px rgba(38, 39, 40, 0.15);
 		}
 
@@ -627,7 +628,7 @@
 		&:hover{
 			color: var(--like-btn-col, #{$warning});
 			.icon{
-				filter: drop-shadow(0 0 2.5px rgba($warning,0.4));
+				//filter: drop-shadow(0 0 2.5px rgba($warning,0.4));
 			}
 		}
 	}
@@ -644,7 +645,8 @@
 	width: auto;
 
 	&__item{
-		@include mt();
+		//@include mt();
+		transition: all .2s;
 
 		width: 34px;
 		height: 44px;
@@ -704,7 +706,7 @@
 
 			&:hover{
 				.icon{
-					color: $primary;
+					//color: $primary;
 				}
 			}
 
