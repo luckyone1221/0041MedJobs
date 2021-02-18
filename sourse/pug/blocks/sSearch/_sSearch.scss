@@ -644,49 +644,65 @@
 	display: inline-flex;
 	width: auto;
 
-	&__item{
-		//@include mt();
-		transition: all .2s;
+	.pagination{
+		background: $white;
+		list-style: none;
+		padding: 0;
+		margin: 0;
 
-		width: 34px;
-		height: 44px;
-		font-size: 14px;
-		@include media-breakpoint-up(ss){
-			font-size: 16px;
-			width: 48px;
-			height: 48px;
+		display: inline-flex;
+		width: auto;
+
+		li{
+			padding: 0;
+			margin: 0;
+			display: block;
+
+			&:last-child a{
+				border-right: 1px solid $gray-300 !important;
+				border-radius: 0 5px 5px 0;
+			}
+			&:first-child a{
+				border-radius: 5px 0 0 5px;
+			}
+			&:last-child a{
+				border-right: none;
+			}
 		}
 
+		a{
+			//@include mt();
+			transition: all .2s;
 
-		display: flex;
-		align-items: center;
-		justify-content: center;
+			width: 34px;
+			height: 44px;
+			font-size: 14px;
+			@include media-breakpoint-up(ss){
+				font-size: 16px;
+				width: 48px;
+				height: 48px;
+			}
 
-		border-top: 1px solid $gray-300;
-		border-right: none;
-		border-bottom: 1px solid $gray-300;
-		border-left: 1px solid $gray-300;
-		&:last-child{
-			border-right: 1px solid $gray-300 !important;
-			border-radius: 0 5px 5px 0;
-		}
-		&:first-child{
-			border-radius: 5px 0 0 5px;
-		}
-		&:last-child{
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			border-top: 1px solid $gray-300;
 			border-right: none;
-		}
+			border-bottom: 1px solid $gray-300;
+			border-left: 1px solid $gray-300;
 
-		color: $body-color;
-		&:hover{
 			color: $body-color;
-			background-color: $gray-200;
+			&:hover{
+				color: $body-color;
+				background-color: $gray-200;
+			}
+
 		}
 
-		&.current{
-			//border-bottom: 1px solid $primary;
-			//border-image: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
-
+		//
+		li.active a{
 			position: relative;
 			&:after{
 				content: '';
@@ -701,8 +717,7 @@
 
 			box-shadow: inset 0 -2px 0 -1px $primary;
 		}
-
-		&--controll{
+		li.prev a, li.next a{
 
 			&:hover{
 				.icon{
@@ -716,6 +731,8 @@
 				color: $warning;
 			}
 		}
+	}
+	&__item{
 
 	}
 	&__{}

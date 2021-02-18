@@ -88,13 +88,13 @@ mixin sortSelItem(chosenItem, bootClasses)
 
 mixin filter()
 	+b.filter--js
-		+filterItem('Регион:', 'active', 'pt-sm')
+		+filterItem('Регион:', 'active')
 			+e.select
 				select.form-select.form-control
 					option Ленинградская область
 					option Ленинградская область2
 					option Ленинградская область3
-		+filterItem('Город', 'active', 'pt-sm')
+		+filterItem('Город', 'active')
 			+e.select
 				select.form-select.form-control
 					option Санкт-Петербург
@@ -159,13 +159,13 @@ mixin filterVacancy()
 
 mixin filterProf()
 	+b.filter--js
-		+filterItem('Регион:', 'active', 'pt-sm')
+		+filterItem('Регион:', 'active')
 			+e.select
 				select.form-select.form-control
 					option Ленинградская область
 					option Ленинградская область2
 					option Ленинградская область3
-		+filterItem('Город', 'active', 'pt-sm')
+		+filterItem('Город', 'active')
 			+e.select
 				select.form-select.form-control
 					option Санкт-Петербург
@@ -429,15 +429,17 @@ mixin puginRow()
 	+b.pugin-row.row
 		.col
 			+b.pugination
-				+e.item--controll(href='#')
-					+icon('chevron-left')
-				+e.item.current(href='#') 1
-				+e.item(href='#') 2
-				+e.item(href='#') 3
-				+e.item(href='#') ...
-				+e.item(href='#') 5
-				+e.item--controll(href='#')
-					+icon('chevron-right')
+				//-new
+				ul.pagination
+					li.prev.disabled: a(href="#")
+							+icon('chevron-left')
+					li.active: a(href="#") 1
+					li: a(href="#") 2
+					li: a(href="#") 3
+					li: a(href="#") ...
+					li: a(href="#") 5
+					li.next.disabled: a(href="#")
+						+icon('chevron-right')
 		.col-auto
 			+e.select-cont
 				+e.sel-title Показать по:

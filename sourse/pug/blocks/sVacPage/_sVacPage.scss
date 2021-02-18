@@ -1,8 +1,8 @@
 // start .sVacPage
 .sVacPage {
-	--sPT: 19px;
+	--sPT: 18px;
 	@include media-breakpoint-up(md){
-		--sPT: 26px;
+		--sPT: 24px;
 	}
 	--sPB: 57px;
 	--sTPB: 42px;
