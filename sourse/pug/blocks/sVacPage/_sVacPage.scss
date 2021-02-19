@@ -123,12 +123,12 @@
 			line-height: 2.25;
 		}
 	}
-	&__sub-title{
+	h5{
 		font-weight: 600;
 		font-size: 20px;
 		margin-bottom: 35px;
 	}
-	&__dot-ul{
+	ul{
 		@extend .dot-ul;
 		margin-bottom: 48px;
 
