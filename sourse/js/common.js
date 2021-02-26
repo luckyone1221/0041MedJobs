@@ -196,7 +196,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '03-576.png';
+	screenName = '010-1.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -302,8 +302,20 @@ function eventHandler() {
 			$(this).addClass('active');
 		})
 	})
+	//
+	$('.toggle-pass-inp-js').click(function () {
+		let inp = this.parentElement.querySelector('input');
+		if (!inp) return
 
+		if (this.classList.contains('pass-visiable')){
+			inp.setAttribute('type', 'password');
+		}
+		else{
+			inp.setAttribute('type', 'text');
+		}
 
+		this.classList.toggle('pass-visiable');
+	});
 
 	//end luckyone js
 

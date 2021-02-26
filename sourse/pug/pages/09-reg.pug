@@ -1,0 +1,66 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/logPage/_logPage.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '09-reg'
+	title= title
+block pagecontent
+	+logPage()
+		+b.reg-form
+			+form-wrap
+				h1 Регистрация
+				+e.input-wrap
+					+e.SPAN.input-title.reuire Тип пользователя:
+					+e.SELECT.select.form-control.form-select
+						option Профессионал
+						option option 1
+						option option 2
+				+e.input-wrap.form-group
+					label
+						+e.SPAN.input-title.reuire E-mail:
+						+e.INPUT.input.form-control(type="email" required name="email")
+				+e.input-wrap.form-group.mb-36
+					label
+						+e.SPAN.input-title.reuire Пароль:
+						+e.inp-cont
+							+e.INPUT.input.form-control(type="password" required name="pass")
+							+e.show-hide-btn.toggle-pass-inp-js
+								+icon('pass-eye')
+				+e.input-wrap.form-group.mb-30
+					label
+						+e.SPAN.input-title.reuire Повторите пароль:
+						+e.inp-cont
+							+e.INPUT.input.form-control(type="password" required name="pass-repeat")
+							+e.show-hide-btn.toggle-pass-inp-js
+								+icon('pass-eye')
+				+e.policy.row.pb-30.align-items-center
+					.col-auto
+						+b.LABEL.custom-chb
+							input(type="checkbox" class="d-none" name="name" checked)
+							span.square.m-0
+					.col
+						+e.p-txt
+							| Я принимаю условия
+							|
+							a(href='#') Пользовательского соглашения
+							|
+							| и даю свое согласие на обработку моей персональной информации на условиях, определенных
+							|
+							a(href='#') Политикой конфиденциальности.
+				//-
+				+e.fc-row.row.align-items-center
+					.col-auto
+						+e.BUTTON.login-btn--200(type="submit") Зарегистрироваться
+					.col-auto
+						+e.forget-link(href="#") Уже зарегистрированы?

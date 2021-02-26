@@ -1,0 +1,238 @@
+// start .logPage
+.logPage {
+  padding: 0;
+  &__row{
+    @include roww(0px);
+    padding: 0!important;
+    margin: 0!important;
+  }
+
+  &__bg-col{
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    min-height: 100%;
+  }
+  &__bg{
+    overflow: hidden;
+    background-color: $light;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 50px 30px 0 30px;
+    @include media-breakpoint-up(xxl){
+      padding: 76px 76px 0 76px;
+    }
+  }
+  &__ball{
+    opacity: 0.5;
+    position: absolute;
+    z-index: -2;
+    &--1{
+      width: 1101px;
+      height: 1101px;
+      left: -45px;
+      top: -528px;
+
+      background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+      opacity: 0.5;
+    }
+    &--2{
+      width: 1106px;
+      height: 1113px;
+      left: 336px;
+      top: 387px;
+
+      background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+      opacity: 0.5;
+    }
+  }
+  &__img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  &__container{
+    min-height: 100vh;
+
+    padding: 60px 15px 120px;
+    @include media-breakpoint-up(xl){
+      padding: 60px 24px 120px;
+      max-width: 509px!important;
+      margin: 0 0 0 85px;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+  &__header-row{
+    @extend .row-default;
+    min-height: 60px; //36 + 24px
+    padding-bottom: 24px;
+  }
+  &__logo{
+    width: 218px;
+    display: block;
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__back-btn{
+    @extend .btn;
+    @extend .btn-light;
+
+    display: flex;
+    align-items: center;
+    color: $headings-color;
+    padding: 7.5px 11px;
+
+    .icon{
+      color: $warning;
+      margin-right: 10px;
+      font-size: 10px;
+    }
+  }
+  &__content{
+    //margin-top: 163px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__{}
+  &__{}
+} // end.logPage
+
+.reg-form{
+
+  .form-wrap{
+
+    h1{
+      margin-bottom: 45px;
+    }
+    &__input-wrap{
+      margin-bottom: 22px;
+    }
+    &__input-title{
+      display: block;
+      font-weight: 600;
+      color: $headings-color;
+
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 9px;
+
+      &.reuire{
+        &:after{
+          content: '*';
+          font-size: 18px;
+          color: $red2;
+          margin-left: 5px;
+        }
+      }
+    }
+    &__inp-cont{
+      position: relative;
+    }
+    &__show-hide-btn{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 46px;
+      cursor: pointer;
+      height: 100%;
+
+      .icon{
+        @include mt();
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 20px;
+        transform: translateY(-50%) translateX(-50%);
+        color: $dim;
+      }
+
+      &.pass-visiable{
+        .icon{
+          color: $warning;
+        }
+      }
+    }
+    &__input{
+      padding: 12.5px 60px 12.5px 20px;
+    }
+    &__fc-row{
+      @extend .row-default;
+
+      @include media-breakpoint-up(xxl){
+        padding-top: 2px;
+      }
+    }
+    &__login-btn{
+      @extend .btn-default;
+      min-width: 170px;
+      padding: 14px 20px;
+    }
+    &__muted-btn{
+      @extend .btn;
+      @extend .btn-light;
+
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.25;
+      min-width: 170px;
+      padding: 14px 20px;
+      color: $secondary;
+    }
+    &__forget-link{
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    //reg
+    &__select{
+      padding: 13px 40px 13px 12px;
+    }
+    &__policy{
+      @include roww(12px);
+    }
+    &__p-txt{
+      font-size: 12px;
+      line-height: 1.75;
+      color: $headings-color;
+    }
+    //code
+    &__code-txt{
+      line-height: 1.75;
+      a{
+        white-space: nowrap;
+      }
+    }
+    &__{}
+  }
+
+  &__reg-btn-cont{
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid $gary-110;
+  }
+  &__reg-btn{
+    @extend .btn-default-outline;
+    width: 100%;
+    min-height: 0;
+    padding: 14px 20px;
+  }
+
+  &__{}
+  &__{}
+}

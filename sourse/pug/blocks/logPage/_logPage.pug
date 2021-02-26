@@ -1,0 +1,45 @@
+mixin logPage(data)
+	// start logPage
+	+b.SECTION.logPage.section#logPage&attributes(attributes)
+		+e.row.row
+			+e.bg-col.col-xl-6.d-none.d-xl-block
+				+e.bg
+					+e.ball--1
+					+e.ball--2
+					img(loading="lazy" src="img/@2x/reg-img.png" alt="")
+			.col-12.col-xl-6
+				+e.container.container
+					+e.header-row.row.align-items-center
+						.col
+							+e.logo(href='#')
+								img(loading="lazy" src="img/svg/logo.svg" alt="")
+						.col-auto
+							+e.back-btn(href="#")
+								+icon('chevron-left')
+								span Назад
+					+e.content
+						if block
+							block
+						else
+							+b.reg-form
+								+form-wrap
+									h1 Авторизация
+									+e.input-wrap.form-group
+										label
+											+e.SPAN.input-title.reuire E-mail:
+											+e.INPUT.input.form-control(type="email" required name="pass")
+									+e.input-wrap.form-group
+										label
+											+e.SPAN.input-title.reuire Пароль:
+											+e.inp-cont
+												+e.INPUT.input.form-control(type="password" required name="pass")
+												+e.show-hide-btn.toggle-pass-inp-js
+													+icon('pass-eye')
+									+e.fc-row.row.align-items-center
+										.col-auto
+											+e.BUTTON.login-btn(type="submit") Войти
+										.col-auto
+											+e.forget-link(href="#") Забыли пароль?
+								+e.reg-btn-cont
+									+e.reg-btn(href='#') Зарегистрироваться
+	// end logPage

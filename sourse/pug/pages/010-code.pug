@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/logPage/_logPage.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '010-restore'
+	title= title
+block pagecontent
+	+logPage()
+		+b.reg-form
+			+form-wrap
+				h1.mb-27 Введите код
+				+e.code-txt.mb-36
+					span.d-xl-block
+						| Мы отправили код на указанный e-mail.
+						|
+					a(href="#") Изменить e-mail
+				+e.input-wrap.form-group
+					label
+						+e.SPAN.input-title.reuire Код:
+						+e.INPUT.input.form-control(type="text" required name="code")
+				+e.fc-row.row.align-items-center.pb-0
+					.col-auto
+						+e.BUTTON.muted-btn(type="submit") Войти
+					.col-auto
+						+e.forget-link(href="#") Отправить код повторно

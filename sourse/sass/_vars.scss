@@ -15,6 +15,7 @@ $rfs-breakpoint: 1200px !default;
 // Color system
 
 $white: #fff !default;
+$dim: #C4C4C4;
 $gray-100: #EFF2F6 !default;
 $gary-110: #E5E6E9;
 $gray-120: #D8D8D8;
@@ -45,6 +46,8 @@ $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
 $red: #dc3545 !default;
+$red2: #df061c;
+
 $orange: #F15A22 !default;
 $yellow: #ffc107 !default;
 $green: #2AED80 !default;
@@ -250,6 +253,8 @@ $spacers: (0: 0,
   4: $spacer * 1.5,
   5: $spacer * 3,
   25: 25px,
+  27: 27px,
+  30: 30px,
   36: 36px,
   41: 41px,
   43: 43px,
