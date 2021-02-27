@@ -10,8 +10,8 @@
   &__bg-col{
     position: relative;
     z-index: 1;
-    height: 100vh;
-    min-height: 100%;
+    height: auto;
+    min-height: 100vh;
   }
   &__bg{
     overflow: hidden;
@@ -30,6 +30,13 @@
     padding: 50px 30px 0 30px;
     @include media-breakpoint-up(xxl){
       padding: 76px 76px 0 76px;
+    }
+
+    img{
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
   &__ball{
@@ -54,12 +61,6 @@
       background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
       opacity: 0.5;
     }
-  }
-  &__img{
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
   }
   &__container{
     min-height: 100vh;
