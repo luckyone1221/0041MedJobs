@@ -303,17 +303,21 @@ function eventHandler() {
 	$('.soc-select2-js').select2({
 		minimumResultsForSearch: Infinity,
 		dropdownCssClass: "soc-select2",
-		templateResult: formatState
+		templateResult: formatState,
+		templateSelection: formatState
 	});
 
 	function formatState(state) {
 		if (!state.id) {
 			return state.text;
-		}
+		} // let host = window.location.host;
+		// if (host.includes("localhost:30")){
+		// 	host = '';
+		// }
 
-		var baseUrl = "/img/svg/";
-		console.log(state.element.value.toLowerCase());
-		var $state = $('<span class="select2-results__img">' + '<img src="' + baseUrl + state.element.value.toLowerCase() + '.svg" alt="' + state.text + '"/>' + '</span>');
+
+		var baseUrl = "img/svg/";
+		var $state = $('<span class="select2-results__img">' + '<img src="' + baseUrl + state.element.getAttribute('data-icon') + '.svg" alt="' + state.text + '"/>' + '</span>');
 		return $state;
 	} //multiple select2
 

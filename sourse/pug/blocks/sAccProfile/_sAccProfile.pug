@@ -154,7 +154,7 @@ mixin sAccProfileCompany(data)
 													+socSelect2('soc-select')
 						+e.content.active
 							+form-wrap
-								+e.headline Контактная информация
+								+e.headline Информация о компании
 								+e.pd-row.row
 									+e.inp-col.col-xl-auto
 										+input('Введите описание компании до 1000 символов.', 'textarea', 'Описание компании:')
@@ -207,14 +207,15 @@ mixin socInpItem(val='', btnClasses)
 		+e.BUTTON.btn.ms-12(type="button" class=btnClasses)
 			+icon('plus')
 
-mixin socSelect2(selectName, optionsArr=['ok', 'tg', 'tw', 'fb', 'vk', 'in'], keyClass='soc-select2-js')
+mixin socSelect2(selectName, optionsArr=['tg', 'tw', 'fb', 'vk', 'in'], keyClass='soc-select2-js')
 	+b.soc-select
 		select(name=selectName class=keyClass)
 			if block
 				block
 			else
+				option(value='ok' data-icon='ok' selected) ok
 				- for (let item of optionsArr)
-					option(value=item)=item
+					option(value=item data-icon=item)=item
 
 mixin sAccProfileVacancy(data)
 	// start sAccProfile

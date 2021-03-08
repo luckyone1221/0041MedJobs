@@ -345,7 +345,7 @@
 		height: 24px;
 		margin-right: 8px;
 
-		@include mt();
+		@include mt(.05);
 
 		background: $white;
 		border: var(--sq-border);
@@ -354,7 +354,7 @@
 		position: relative;
 		&:after{
 			opacity: 0;
-			@include mt();
+			@include mt(.05);
 			content: '';
 			position: absolute;
 			width: 100%;

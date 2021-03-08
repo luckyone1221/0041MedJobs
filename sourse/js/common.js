@@ -317,16 +317,21 @@ function eventHandler() {
 		minimumResultsForSearch: Infinity,
 		dropdownCssClass: "soc-select2",
 		templateResult: formatState,
+		templateSelection: formatState,
 	});
 	function formatState(state){
 		if (!state.id) {
 			return state.text;
 		}
-		let baseUrl = "/img/svg/";
-		console.log(state.element.value.toLowerCase());
+		// let host = window.location.host;
+		// if (host.includes("localhost:30")){
+		// 	host = '';
+		// }
+		let baseUrl = "img/svg/";
+
 		let $state = $(
 			'<span class="select2-results__img">' +
-				'<img src="' + baseUrl + state.element.value.toLowerCase() + '.svg" alt="'+ state.text + '"/>' +
+				'<img src="' + baseUrl + state.element.getAttribute('data-icon') + '.svg" alt="'+ state.text + '"/>' +
 			'</span>'
 		);
 		return $state;

@@ -316,7 +316,10 @@
 			margin-bottom: 15px;
 			color: $secondary;
 		}
+		color: $secondary;
+
 		&.active{
+			color: $headings-color;
 			.icon{
 				color: $success;
 			}
@@ -449,7 +452,9 @@
 				background: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
 			}
 
+			color: $secondary;
 			&.active{
+				color: $headings-color;
 				&:after{
 					opacity: 1;
 				}
@@ -517,7 +522,7 @@
 		flex-grow: 1;
 		input{
 			position: relative;
-			margin-left: -1px;
+			margin-left: -1.5px;
 			width: 100%;
 			padding: 15px 10px;
 			font-size: 14px;
@@ -625,9 +630,9 @@
 		line-height: 1.4!important;
 		background-color: transparent!important;
 		display: flex!important;
+		align-items: center;
 		width: 100%!important;
 		height: 100% !important;
-		align-items: center;
 
 		padding: 5px 10px!important;
 
@@ -635,29 +640,19 @@
 		//color: $body-color!important;
 		color: transparent!important;
 
-		background-size: 24px;
-		background-position-x: 10px;
-		background-position-y: center;
-		background-repeat: no-repeat;
+		.select2-results__img{
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			overflow: hidden;
 
-		&[title="ok"]{
-			background-image: url(../img/svg/ok.svg) !important;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
-		&[title="tg"]{
-			background-image: url(../img/svg/tg.svg) !important;
-		}
-		&[title="tw"]{
-			background-image: url(../img/svg/tw.svg) !important;
-		}
-		&[title="fb"]{
-			background-image: url(../img/svg/fb.svg) !important;
-		}
-		&[title="vk"]{
-			background-image: url(../img/svg/vk.svg) !important;
-		}
-		&[title="in"]{
-			background-image: url(../img/svg/in.svg) !important;
-		}
+
 	}
 
 	//placeholder
@@ -690,12 +685,19 @@
 				height: 48px;
 				border-bottom: none!important;
 
-				&--highlighted{
+				&[aria-selected="true"]{
 					background: $gray-100!important;
 				}
 
-				&[aria-selected="true"]{
-					background: $gray-300!important;
+				&--selected{
+					background: $gray-100!important;
+				}
+				&--highlighted{
+					&[aria-selected="true"]{
+						background: $primary!important;
+					}
+					//background: $gray-100!important;
+					background: $primary!important;
 				}
 
 			}
