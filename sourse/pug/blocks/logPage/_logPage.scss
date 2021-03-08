@@ -142,32 +142,10 @@
       }
     }
     &__inp-cont{
-      position: relative;
+      @extend .inp-cont;
     }
     &__show-hide-btn{
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 46px;
-      cursor: pointer;
-      height: 100%;
-
-      .icon{
-        @include mt();
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        font-size: 20px;
-        transform: translateY(-50%) translateX(-50%);
-        color: $dim;
-      }
-
-      &.pass-visiable{
-        .icon{
-          color: $warning;
-        }
-      }
+      @extend .show-hide-btn;
     }
     &__input{
       padding: 12.5px 60px 12.5px 20px;
@@ -236,4 +214,34 @@
 
   &__{}
   &__{}
+}
+
+//duplicate
+.inp-cont{
+  position: relative;
+}
+.show-hide-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 46px;
+  cursor: pointer;
+  height: 100%;
+
+  .icon{
+    @include mt();
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    transform: translateY(-50%) translateX(-50%);
+    color: $dim;
+  }
+
+  &.pass-visiable{
+    .icon{
+      color: $warning;
+    }
+  }
 }

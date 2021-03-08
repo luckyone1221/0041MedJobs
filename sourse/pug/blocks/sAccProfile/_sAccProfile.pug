@@ -1,0 +1,760 @@
+mixin sAccProfile(data)
+	// start sAccProfile
+	+b.sAccProfile#sAccProfile&attributes(attributes)
+		+topLinks()
+		.container
+			+whiteBox('Мой профиль')
+				+b.tabs
+					+e.caption.row
+						+whiteBoxTabBtn('Персональные данные', 'tab-big')
+						+whiteBoxTabBtn('Безопасность', 'tab-big active')
+					+e.wrap
+						+e.content
+							+form-wrap
+								+e.headline Персональные данные
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+input('', 'email', 'E-mail:')
+										+input('', 'text', 'ФИО:')(value="Иванов Иван Иванович")
+										+input('Введите должность', 'text', 'Должность:')
+										+input('+7 (___) ___-__-__', 'tel', 'Телефон:')
+									.col-xl-auto
+										+e.foto
+											+e.f-img
+												img(loading="lazy" src="img/svg/photo-stab-big.svg" alt="")
+											+e.f-btn(href="#")
+												+icon('plus')
+												span Загрузить
+						+e.content.active
+							+form-wrap
+								+e.headline Безопасность
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title Новый пароль:
+												.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Введите новый пароль")
+													.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title Повторите пароль:
+												.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Повторите новый пароль")
+													.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										+e.save-btn-cont
+											+e.save-btn(type="submit") Сохранить
+	// end sAccProfile
+mixin topLinks()
+	+b.top-links
+		.container
+			+e.row.row
+				if block
+					block
+				else
+					+topLink('Мой профиль', '1','active')
+					.col-auto
+						+e.link(href='#')
+							+icon(`top-link-2`, 'd-xl-none')
+							+e.txt
+								span.d-none.d-xl-block Профиль компании
+								span.d-xl-none Компания
+					+topLink('Вакансии', '3')
+					+topLink('Отклики', '4')
+					+topLink('Избранное', '5')
+					+topLink('Уведомления', '6')
+					+topLink('Настройки', '7')
+mixin topLink(txt, iconNum, classes='')
+	.col-auto
+		+e.link(href='#' class=classes)
+			+icon(`top-link-${iconNum}`, 'd-xl-none')
+			+e.txt
+				span=txt
+				block
+
+mixin whiteBox(title, link, createVac)
+	+b.white-box
+		+e.title
+			.row.align-items-center
+				+e.title-col.col=title
+				if link
+					.col-auto
+						+e.t-link(href="#")=link
+				if createVac
+					.col-auto
+						+e.create-btn(href='#')
+							+icon('plus')
+							span Создать вакансию
+		+e.content
+			block
+
+mixin whiteBoxTabBtn(txt, classes)
+	+e.btn.col-auto(class=classes)=txt
+
+mixin sAccProfileCompany(data)
+	// start sAccProfile
+	+b.sAccProfile#sAccProfile&attributes(attributes)
+		+topLinks()
+			+topLink('Мой профиль', '1')
+			.col-auto
+				+e.link.active(href='#')
+					+icon(`top-link-2`, 'd-xl-none')
+					+e.txt
+						span.d-none.d-xl-block Профиль компании
+						span.d-xl-none Компания
+			+topLink('Вакансии', '3')
+			+topLink('Отклики', '4')
+			+topLink('Избранное', '5')
+			+topLink('Уведомления', '6')
+			+topLink('Настройки', '7')
+		.container
+			+whiteBox('Мой профиль', 'Как выглядит профиль')
+				+b.tabs
+					+e.caption.row
+						+whiteBoxTabBtn('Реквизиты', 'col-4 col-xl-auto tab-reg')
+						+whiteBoxTabBtn('Контакты', 'col-4 col-xl-auto tab-reg')
+						+whiteBoxTabBtn('О компании', 'col-4 col-xl-auto  tab-reg active')
+					+e.wrap
+						+e.content
+							+form-wrap
+								+e.headline Реквизиты компании
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+input('', 'number', 'ИНН:')(value="7814652255")
+										+input('', 'text', 'Наименование:')(value="ООО Клиника Концептуальной Стоматологии")
+										+input('', 'text', 'Юридический адрес:')(value="г. Санкт-Петербург, ул. Иванова, д. 57, офис 5")
+										+input('', 'number', 'Расчетный счет:')(value="40702810055000031738")
+										+input('', 'number', 'БИК банка:')(value="044030653")
+										+input('', 'number', 'Корреспондентский счет:')(value="40702810055000031738")
+						+e.content
+							+form-wrap
+								+e.headline Контактная информация
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										//-select
+										+e.input-wrap
+											label
+												+e.SPAN.input-title Город:
+												+e.SELECT.select.form-control.form-select
+													option Санкт-Петербург
+													option option 1
+													option option 2
+										+input('', 'text', 'Адрес:')(value="435345, г. Санкт-Петербург, ул. Иванова, д 7")
+										+input('', 'tel', 'Телефон:')(value="+74995465567")
+										+input('', 'email', 'E-mail:')(value="info@iceberg.dental")
+										+input('', 'text', 'Сайт:')(value="www.iceberg.dental")
+										+e.input-wrap--soc-bl
+											+e.input-title Социальные сети:
+											+b.soc-inps
+												+socInpItem('name_in_telegram', 'btn-remove')
+													+socSelect2('soc-select')
+												+socInpItem('', 'btn-add')
+													+socSelect2('soc-select')
+						+e.content.active
+							+form-wrap
+								+e.headline Контактная информация
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+input('Введите описание компании до 1000 символов.', 'textarea', 'Описание компании:')
+										//-select
+										+e.input-wrap
+											label
+												+e.SPAN.input-title Количество сотрудников:
+												+e.SELECT.select.form-control.form-select
+													option(selected class="d-none") Выберите количество сотрудников
+													option 10
+													option 20
+													option 30
+										//-foto
+										+e.input-wrap--soc-bl
+											+e.input-title Фотографии:
+											+fotoesInp()
+									.col-xl-auto
+										+e.foto
+											+e.f-img
+												img(loading="lazy" src="img/svg/company-stab.svg" alt="")
+											+e.f-btn(href="#")
+												+icon('plus')
+												span Загрузить
+	// end sAccProfile
+mixin fotoesInp()
+	+b.fotoes-inp
+		+e.row.row
+			+fotoesInpItem(3)
+			+fotoesInpItem(1)
+			+fotoesInpItem(2)
+			.col-12
+				+e.BUTTON.add-btn(type="button")
+					+icon('plus')
+					span Добавить
+			block
+
+mixin fotoesInpItem(imgNum)
+	.col-4
+		+e.item
+			img(loading="lazy" src=`img/@2x/stab-${imgNum}.jpg` alt="")
+			+e.BUTTON.del-btn(type="button")
+				+icon('cross')
+
+mixin socInpItem(val='', btnClasses)
+	+e.item
+		+e.select2-cont
+			block
+		+e.input
+			input.form-control(type="text" value=val)
+		+e.BUTTON.btn.ms-12(type="button" class=btnClasses)
+			+icon('plus')
+
+mixin socSelect2(selectName, optionsArr=['ok', 'tg', 'tw', 'fb', 'vk', 'in'], keyClass='soc-select2-js')
+	+b.soc-select
+		select(name=selectName class=keyClass)
+			if block
+				block
+			else
+				- for (let item of optionsArr)
+					option(value=item)=item
+
+mixin sAccProfileVacancy(data)
+	// start sAccProfile
+	+b.sAccProfile#sAccProfile&attributes(attributes)
+		+topLinks()
+			+topLink('Мой профиль', '1')
+			.col-auto
+				+e.link(href='#')
+					+icon(`top-link-2`, 'd-xl-none')
+					+e.txt
+						span.d-none.d-xl-block Профиль компании
+						span.d-xl-none Компания
+			+topLink('Вакансии', '3', 'active')
+				+e.ball 3
+			+topLink('Отклики', '4')
+			+topLink('Избранное', '5')
+			+topLink('Уведомления', '6')
+			+topLink('Настройки', '7')
+		.container
+			+whiteBox('Вакансии', false, true)
+				+b.tabs
+					+e.caption.row
+						+whiteBoxTabBtn('Опубликованные', 'col-auto col-md-4 col-xl-auto tab-short-sm active')
+						+whiteBoxTabBtn('Неопубликованные', 'col-auto col-md-4 col-xl-auto tab-short-sm')
+						+whiteBoxTabBtn('Архив', 'col-auto col-md-4 col-xl-auto tab-short-sm')
+					+e.wrap
+						+e.content.active
+							+vacCard('', true, true)
+							+vacCard('', true)
+							+vacCard('')
+							.pt-24.pt-xl-36
+								+puginRow()
+						+e.content
+						+e.content
+	// end sAccProfile
+
+mixin vacCard(addClasses='', hasBtn, hasBall)
+	+b.vacCard(class=addClasses)
+		+e.title Врач-терапевт стационар
+		+e.gray-txt ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+		+e.gray-txt.mb-15 г. Санкт-Петербург
+		+e.salary 30 000-35 000 ₽
+		+e.dates-row.row
+			.col-auto
+				+e.date-txt Размещено: 04.02.2021
+			.col-auto
+				+e.date-txt Обновлено: 04.02.2021
+		+e.info-row.row
+			+vacCardInfoItem('eye', 'Просмотров: 43')
+			+vacCardInfoItem('user', 'Отклики: 8')
+			+vacCardInfoItem('messages', 'Запросы контактов: 78')
+		+e.controll-row.row.align-items-center
+			if hasBtn
+				.col-lg-auto.pb-12.pb-lg-0
+					+e.watch-btn(href='#')
+						span Смотреть отклики
+						if hasBall
+							+e.ball 3
+			.col-auto
+				+e.c-btn(href="#")
+					+e.c-ball
+						+icon('edit')
+					+e.c-txt Редактировать вакансию
+			.col-auto
+				+e.c-btn(href="#")
+					+e.c-ball
+						+icon('cross')
+					+e.c-txt Закрыть вакансию
+
+mixin vacCardInfoItem(icon, txt)
+	.col-md-auto
+		+e.i-item
+			+icon(icon)
+			+e.i-txt=txt
+
+mixin sAccVacancyCreate(data)
+	// start sAccProfile
+	+b.sAccProfile#sAccProfile&attributes(attributes)
+		+topLinks()
+			+topLink('Мой профиль', '1')
+			.col-auto
+				+e.link(href='#')
+					+icon(`top-link-2`, 'd-xl-none')
+					+e.txt
+						span.d-none.d-xl-block Профиль компании
+						span.d-xl-none Компания
+			+topLink('Вакансии', '3', 'active')
+				+e.ball 3
+			+topLink('Отклики', '4')
+			+topLink('Избранное', '5')
+			+topLink('Уведомления', '6')
+			+topLink('Настройки', '7')
+		.container
+			+b.white-box
+				+e.title
+					.row.align-items-center
+						+e.title-col.col Создание вакансии
+				+e.content--border-bot
+					+form-wrap()(class="vac-creation")
+						+e.headline Реквизиты компании
+						+e.pd-row.row
+							+e.inp-col.col-xl-auto
+								+input('Введите должность', 'text', 'Должность:')(value="")
+								+accSelect('Город:', 'Санкт-Петербург')
+									+e.add-chb
+										+customChb('Использовать из карточки компании')(checked)
+								+e.input-wrap
+									label
+										+e.SPAN.input-title Адрес:
+										+e.INPUT.input.form-control(type="text" value="г. Санкт-Петербург, пр. Мечникова, д.27")
+									+e.add-chb
+										+customChb('Использовать из карточки компании')(checked)
+								+accSelect('Опыт работы:','option','Выберите из списка')
+								+accSelect('Тип занятости:','option','Выберите из списка')
+								+accSelect('График:','option','Выберите из списка')
+								+e.input-wrap
+									label
+										+e.SPAN.input-title
+											| Уровень организации
+											|
+											br.d-none.d-xl-block
+											| медицинской помощи:
+										+e.SELECT.select.form-control.form-select
+											option(selected class="d-none") Выберите из списка
+											option option
+											option option 1
+											option option 2
+								+accSelect('Тип медицинской службы:','option','Выберите из списка')
+								+e.input-wrap--soc-bl
+									+e.input-title Заработная плата:
+									+e.two-inps-cont
+										+b.two-inps.mb-12
+											+input('25 000', 'number', undefined, 'salary_from')
+											+input('100 000', 'number', undefined, 'salary_to')
+										+customChb('Не указывать')
+				+e.content--border-bot
+					+form-wrap()(class="vac-creation")
+						+e.headline Описание вакансии
+						+e.pd-row.row
+							+e.inp-col.col-xl-auto
+								//-big-ta
+								+input('','textarea','Основная информация:')(class="big-ta")
+								+e.input-wrap--soc-bl
+									+e.input-title Ключевые навыки:
+									+e.skill-sel-cont
+										+skillSelect2()
+								+e.input-wrap--soc-bl
+									+e.input-title Фотографии:
+									+fotoesInp()
+										.col-12
+											+customChb('Использовать из карточки компании')(checked)
+				+e.content.p-48
+					+e.bot-row.row
+						.col-6.col-md-auto
+							+e.bot-btn--public(href="#") Опубликовать
+						.col-6.col-md-auto
+							+e.bot-btn--cancel(href="#") Отменить
+
+mixin accSelect(title='Город:', firstOption="option", placeholder)
+	+e.input-wrap
+		label
+			+e.SPAN.input-title=title
+			+e.SELECT.select.form-control.form-select
+				if placeholder
+					option(selected class="d-none")=placeholder
+				option=firstOption
+				option option 1
+				option option 2
+		block
+
+mixin skillSelect2(selectName, optionsArr=['Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста', 'качество 1', 'качество 2', 'качество 3', 'качество 4', 'качество 5'], keyClass='skill-slect2-js')
+	+b.skill-select
+		select(name=selectName class=keyClass multiple='multiple')
+			option(selected) Умный
+			option(selected) Усидчевый
+			if block
+				block
+			else
+			- for (let item of optionsArr)
+					option(value=item)=item
+
+mixin sAccProfileEmployer(data)
+	// start sAccProfile
+	+b.sAccProfile#sAccProfile&attributes(attributes)
+		+topLinks()
+			+topLink('Мой профиль', '1')
+			.col-auto
+				+e.link(href='#')
+					+icon(`top-link-2`, 'd-xl-none')
+					+e.txt
+						span.d-none.d-xl-block Профиль компании
+						span.d-xl-none Компания
+			+topLink('Вакансии', '3')
+				+e.ball 3
+			+topLink('Отклики', '4')
+			+topLink('Избранное', '5', 'active')
+			+topLink('Уведомления', '6')
+			+topLink('Настройки', '7')
+		.container
+			+whiteBox('Избранное')
+				+b.tabs
+					+e.caption.row
+						+whiteBoxTabBtn('Организации', 'col-4 col-xl-auto tab-short-sm active')
+						+whiteBoxTabBtn('Вакансии', 'col-4 col-xl-auto tab-short-sm')
+						+whiteBoxTabBtn('Профессионалы', 'col-4 col-xl-auto tab-short-sm')
+					+e.wrap
+						+e.content.active
+							+b.organ
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+							+puginRow()
+						+e.content
+							+b.organ--vac
+								+vacancyItem({
+                  dataFancy: 'jobGalery2',
+                  imgsNumArr: [3, 1, 2, 4, 3],
+                  prof: 'Врач-терапевт',
+                  orgName: 'ООО УК Медгард',
+                  city: 'г. Санкт-Петербург',
+                  descr: 'Приём амбулаторных пациентов. Ведение пациентов в стационаре. Разработка индивидуального плана лечения и диагностики. Проведение экспертизы нетрудоспособности. Осуществление контроля за работой...',
+                  salary: 'от 15 000 ₽',
+                })
+								+vacancyItem({
+                  dataFancy: 'jobGalery2',
+                  imgsNumArr: [3, 1, 2, 4, 3],
+                  prof: 'Врач-терапевт',
+                  orgName: 'ООО УК Медгард',
+                  city: 'г. Санкт-Петербург',
+                  descr: 'Приём амбулаторных пациентов. Ведение пациентов в стационаре. Разработка индивидуального плана лечения и диагностики. Проведение экспертизы нетрудоспособности. Осуществление контроля за работой...',
+                  salary: 'от 15 000 ₽',
+                })
+							+puginRow()
+						+e.content
+							+b.profesionals#profesionals&attributes(attributes)
+								+profesionalItem({
+                  status: 'success',
+                  portrait: true,
+                  onLine: 'secondary',
+                })
+								+profesionalItem({
+                  status: 'secondary',
+                  portrait: true,
+                  onLine: 'secondary',
+                })
+							+puginRow()
+mixin sAccProffesional(data)
+	// start sAccProfile
+	+b.sAccProfile#sAccProfile&attributes(attributes)
+		+topLinks()
+			+topLink('Мой профиль', '1', 'active')
+			+topLink('Отклики', '4')
+			+topLink('Избранное', '5', 'active')
+			+topLink('Уведомления', '6')
+			+topLink('Настройки', '7')
+		.container
+			+whiteBox('Мой профиль', 'Как выглядит профиль')
+				+b.tabs
+					+e.caption.row.flex-md-nowrap
+						+whiteBoxTabBtn('Персональные данные',       'col-4 col-md col-xl-auto tab-long active')
+						+whiteBoxTabBtn('Основная информация',       'col-4 col-md col-xl-auto tab-long')
+						+whiteBoxTabBtn('Дополнительная информация', 'col-4 col-md col-xl tab-long')
+						+whiteBoxTabBtn('Прогресс',                  'col-6 col-md col-xl-auto tab-long')
+						+whiteBoxTabBtn('Безопасность',              'col-6 col-md col-xl-auto tab-long')
+					+e.wrap
+						+e.content.active
+							+form-wrap
+								+e.headline Персональные данные
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+input('', 'email', 'E-mail:')(value="mymail@mail.ru")
+										+input('', 'text', 'ФИО:')(value="Иванов Иван Иванович")
+										//-select
+										+e.input-wrap
+											label
+												+e.SPAN.input-title Пол:
+												+e.SELECT.select.form-control.form-select
+													option Мужской
+													option option 2
+										//-date
+										+e.input-wrap
+											label
+												+e.SPAN.input-title Дата рождения:
+												+e.INPUT.input.form-control(type="date")
+										//-select
+										+e.input-wrap
+											label
+												+e.SPAN.input-title Гражданство:
+												+e.SELECT.select.form-control.form-select
+													option Российская Федерация
+													option option 2
+										//-select
+										+e.input-wrap
+											label
+												+e.SPAN.input-title Страна:
+												+e.SELECT.select.form-control.form-select
+													option Россия
+													option option 2
+										//-select
+										+e.input-wrap
+											label
+												+e.SPAN.input-title Город:
+												+e.SELECT.select.form-control.form-select
+													option Санкт-Петербург
+													option option 2
+									.col-xl-auto
+										+e.foto
+											+e.f-img
+												img(loading="lazy" src="img/svg/photo-stab-big.svg" alt="")
+											+e.f-btn(href="#")
+												+icon('plus')
+												span Загрузить
+						+e.content
+							+form-wrap
+								+e.headline Основная информация
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+input('Информация обо мне', 'textarea', 'Обо мне:')
+										+repetative()
+											//-select
+											+e.input-wrap
+												+e.SELECT.select.form-control.form-select
+													option(selected class="d-none") Уровень образования
+													option option
+													option option 2
+											+input('Название или аббривиатура', 'text')
+											+input('Год и месяц окончания обучения', 'text')
+											+input('Город учебного заведения', 'text')
+											+input('Описание процесса обучения', 'text')
+						+e.content
+							+form-wrap
+								+e.headline Дополнительная информация
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+e.input-wrap--soc-bl
+											+e.input-title Ключевые навыки:
+											+e.skill-sel-cont
+												+skillSelect2()
+										//-
+										+repetative('Знание языков:', false)(class="pt-12")
+											+e.input-wrap
+												+e.SELECT.select.form-control.form-select
+													option Английский язык
+													option option
+											+e.input-wrap
+												+e.SELECT.select.form-control.form-select
+													option Родной язык
+													option option
+											+repDel()
+											+e.input-wrap
+												+e.SELECT.select.form-control.form-select
+													option(selected class="d-none") Выберите язык
+													option option
+											+e.input-wrap
+												+e.SELECT.select.form-control.form-select
+													option(selected class="d-none") Уровень знания языка
+													option option
+											+repDel()
+											+repAdd()
+										//-
+										+repetative('Знание языков:', false)(class="pt-36")
+											+e.input-wrap
+												+e.SELECT.select.form-control.form-select
+													option Звание
+													option option
+											+e.input-wrap
+												+e.INPUT.input.form-control(type="text" value="Заслуженный врач Российской Федерации 2014" placeholder="Описание достижения")
+											+repDel()
+											+e.input-wrap
+												+e.SELECT.select.form-control.form-select
+													option(selected class="d-none") Выберите тип достижения
+													option option
+											+e.input-wrap
+												+e.INPUT.input.form-control(type="text" value="Заслуженный врач Российской Федерации 2014" placeholder="Описание достижения")
+											+repDel()
+											+repAdd()
+										//-
+										+repetative('Мои статьи:', false)(class="pt-36")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="“Лечение гайморита на ранних этапах”" placeholder="Введите название статьи")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="Иванов И. И., Антонов А.А." placeholder="Введите всех авторов статьи")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="2016" placeholder="Год релиза статьи")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="Докторская правда" placeholder="Наименование журнала")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="43543" placeholder="Номер журнала")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="33-41" placeholder="Номера страниц")
+											+repDel()
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Введите название статьи")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Введите всех авторов статьи")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Год релиза статьи")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Наименование журнала")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Номер журнала")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Номера страниц")
+											+repDel()
+											+repAdd()
+										//-foto
+										+e.input-wrap--soc-bl
+											+e.input-title Фотографии:
+											+fotoesInp()
+						+e.content
+							+form-wrap
+								+e.headline Прогресс
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										//-
+										+repetative('Дополнительное образование и стажировки:', false)(class="pt-12")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="Повышение квалификации в Израиле" placeholder="Наименование и описание")
+											+e.input-wrap: +e.INPUT.input.form-control(type="number" value="2016" placeholder="Год")
+											+repDel()
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Наименование и описание")
+											+e.input-wrap: +e.INPUT.input.form-control(type="number" value="" placeholder="Год")
+											+repDel()
+											+repAdd()
+										+repetative('Мероприятия:', false)(class="pt-12")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="Слет хирургов-терапевт в Раменском" placeholder="Наименование и описание")
+											+e.input-wrap: +e.INPUT.input.form-control(type="number" value="2016" placeholder="Год")
+											+repDel()
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Наименование и описание")
+											+e.input-wrap: +e.INPUT.input.form-control(type="number" value="" placeholder="Год")
+											+repDel()
+											+repAdd()
+										+repetative('Профессиональные сообщества:', false)(class="pt-12")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="Сообщество хирургов" placeholder="Наименование и описание")
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="2016 - настоящее время" placeholder="Год или промежуток годов")
+											+repDel()
+											+e.input-wrap: +e.INPUT.input.form-control(type="text" value="" placeholder="Наименование и описание")
+											+e.input-wrap: +e.INPUT.input.form-control(type="number" value="" placeholder="Год или промежуток годов")
+											+repDel()
+											+repAdd()
+										//-
+						+e.content
+							+form-wrap
+								+e.headline Безопасность
+								+e.pd-row.row
+									+e.inp-col.col-xl-auto
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title Новый пароль:
+												.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Введите новый пароль")
+													.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title Повторите пароль:
+												.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Повторите новый пароль")
+													.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										+e.save-btn-cont
+											+e.save-btn(type="submit") Сохранить
+
+mixin repetative(title='Образование:', theSame=true)
+	+e.input-wrap--soc-bl&attributes(attributes)
+		+e.input-title=title
+		+e.repeat-cont
+			if theSame
+				block
+				+repDel()
+				block
+				+repDel()
+				+repAdd()
+			else
+				block
+
+
+mixin repDel()
+	+e.r-btn--del
+		+e.r-ball--del
+			+icon('cross')
+		+e.r-btn-txt Удалить
+
+mixin repAdd()
+	+e.r-btn--add
+		+e.r-ball--add
+			+icon('plus')
+		+e.r-btn-txt Удалить
+
+mixin sAccProfileEmployee(data)
+	// start sAccProfile
+	+b.sAccProfile#sAccProfile&attributes(attributes)
+		+topLinks()
+			+topLink('Мой профиль', '1', 'active')
+			+topLink('Отклики', '4')
+			+topLink('Избранное', '5', 'active')
+			+topLink('Уведомления', '6')
+			+topLink('Настройки', '7')
+		.container
+			+whiteBox('Избранное')
+				+b.tabs
+					+e.caption.row
+						+whiteBoxTabBtn('Организации', 'col-4 col-xl-auto tab-short-sm active')
+						+whiteBoxTabBtn('Вакансии', 'col-4 col-xl-auto tab-short-sm')
+						+whiteBoxTabBtn('Профессионалы', 'col-4 col-xl-auto tab-short-sm')
+					+e.wrap
+						+e.content.active
+							+b.organ
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+								+organizationsItem({logo: true, vacancy: true})
+									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+							+puginRow()
+						+e.content
+							+b.organ--vac
+								+vacancyItem({
+                  dataFancy: 'jobGalery2',
+                  imgsNumArr: [3, 1, 2, 4, 3],
+                  prof: 'Врач-терапевт',
+                  orgName: 'ООО УК Медгард',
+                  city: 'г. Санкт-Петербург',
+                  descr: 'Приём амбулаторных пациентов. Ведение пациентов в стационаре. Разработка индивидуального плана лечения и диагностики. Проведение экспертизы нетрудоспособности. Осуществление контроля за работой...',
+                  salary: 'от 15 000 ₽',
+                })
+								+vacancyItem({
+                  dataFancy: 'jobGalery2',
+                  imgsNumArr: [3, 1, 2, 4, 3],
+                  prof: 'Врач-терапевт',
+                  orgName: 'ООО УК Медгард',
+                  city: 'г. Санкт-Петербург',
+                  descr: 'Приём амбулаторных пациентов. Ведение пациентов в стационаре. Разработка индивидуального плана лечения и диагностики. Проведение экспертизы нетрудоспособности. Осуществление контроля за работой...',
+                  salary: 'от 15 000 ₽',
+                })
+							+puginRow()
+						+e.content
+							+b.profesionals#profesionals&attributes(attributes)
+								+profesionalItem({
+                  status: 'success',
+                  portrait: true,
+                  onLine: 'secondary',
+                })
+								+profesionalItem({
+                  status: 'secondary',
+                  portrait: true,
+                  onLine: 'secondary',
+                })
+							+puginRow()

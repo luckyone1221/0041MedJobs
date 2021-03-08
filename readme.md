@@ -9,5 +9,10 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/09-reg.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/010-restore.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/010-code.html>
-
-
+1. <https://luckyone1221.github.io/0041MedJobs/public/011-profile.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/012-company-profile.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/013-vacancy.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/013-1-vac-create.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/014-employer.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/016-proffesional.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/018-employee.html>

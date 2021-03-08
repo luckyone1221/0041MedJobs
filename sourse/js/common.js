@@ -64,32 +64,27 @@ const JSCCommon = {
 	},
 	// tabs  .
 	tabscostume(tab) {
-
 		let tabs = {
-			Btn: [].slice.call(document.querySelectorAll(`.tabs__btn`)),
-			BtnParent: [].slice.call(document.querySelectorAll(`.tabs__caption`)),
-			Content: [].slice.call(document.querySelectorAll(`.tabs__content`)),
+			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
+			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
+			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
 		}
 		tabs.Btn.forEach((element, index) => {
 			element.addEventListener('click', () => {
 				if (!element.classList.contains('active')) {
-					let siblings = element.parentNode.querySelector(`.tabs__btn.active`);
-					let siblingsContent = tabs.Content[index].parentNode.querySelector(`.tabs__content.active`);
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active')
+					//turn off old
+					let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
+					let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
+
+					oldActiveEl.classList.remove('active');
+					oldActiveContent.classList.remove('active')
+
+					//turn on new(cklicked el)
 					element.classList.add('active');
 					tabs.Content[index].classList.add('active');
 				}
 			})
 		})
-		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-
-		// });
-
 	},
 	// /tabs
 
@@ -187,7 +182,7 @@ const $ = jQuery;
 function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('.tabs--js');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -196,7 +191,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '010-1.png';
+	screenName = '011-2.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -317,6 +312,33 @@ function eventHandler() {
 		this.classList.toggle('pass-visiable');
 	});
 
+	//select2
+	$('.soc-select2-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "soc-select2",
+		templateResult: formatState,
+	});
+	function formatState(state){
+		if (!state.id) {
+			return state.text;
+		}
+		let baseUrl = "/img/svg/";
+		console.log(state.element.value.toLowerCase());
+		let $state = $(
+			'<span class="select2-results__img">' +
+				'<img src="' + baseUrl + state.element.value.toLowerCase() + '.svg" alt="'+ state.text + '"/>' +
+			'</span>'
+		);
+		return $state;
+	}
+	//multiple select2
+	$('.skill-slect2-js').select2({
+		maximumSelectionLength: 30,
+		dropdownCssClass: "soc-select2",
+	});
+
+	// todo
+	// rework img select
 	//end luckyone js
 
 };
