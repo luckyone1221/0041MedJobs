@@ -1,0 +1,134 @@
+// start .sEntry
+.sEntry {
+  --sPB: #{rem(0)};
+  --sPT: #{rem(0)};
+
+  --sTPB: #{rem(65)};
+  @include media-breakpoint-up(xxl){
+    --sTPB: #{rem(86)};
+  }
+  &__container{
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 45px;
+    @include media-breakpoint-up(xxl){
+      padding-top: 60px;
+    }
+  }
+
+  position: relative;
+  z-index: 1;
+  &__bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $gray-100;
+  }
+  &__ball{
+    opacity: .5;
+    position: absolute;
+
+    &--1{
+      width: 1173px;
+      height: 1181px;
+      left: -933px;
+      top: -752px;
+
+      background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+      opacity: 0.5;
+    }
+    &--2{
+      width: 885px;
+      height: 885px;
+      left: 1041px;
+      top: -421px;
+
+      background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+      opacity: 0.5;
+    }
+    &--3{
+      width: 1173px;
+      height: 1181px;
+      left: 1408px;
+      top: 98px;
+
+      background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+      opacity: 0.5;
+    }
+    &--4{
+      width: 885px;
+      height: 885px;
+      left: -285px;
+      top: 390px;
+
+      background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+      opacity: 0.5;
+    }
+  }
+  &__logo{
+    width: 240px;
+
+    margin: 0 auto 40px auto;
+    @include media-breakpoint-up(xl){
+      margin: 0 auto 50px auto;
+    }
+    @include media-breakpoint-up(xxl){
+      margin: 0 auto 87px auto;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .section-title{
+    h1{
+      line-height: 1.25;
+      margin-bottom: 20px;
+      @include media-breakpoint-up(xxl){
+        margin-bottom: 30px;
+      }
+    }
+    p{
+      line-height: 1.75;
+      color: $headings-color;
+
+      margin-bottom: 30px;
+      @include media-breakpoint-up(xxl){
+        margin-bottom: 45px;
+      }
+    }
+    &__btn{
+      @extend .btn-default;
+      padding: 20px 24px;
+      line-height: 1.25;
+    }
+  }
+
+  &__img{
+    flex-grow: 1;
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 100%;
+    height: auto;
+    img{
+      width: auto;
+      height: auto;
+      max-width: calc(100% - 30px);
+    }
+  }
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+} // end.sEntry

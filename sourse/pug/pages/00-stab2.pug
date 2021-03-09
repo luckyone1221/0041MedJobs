@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/logPage/_logPage.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '00-stab2'
+	title= title
+block pagecontent
+	+logPage()
+		+b.reg-form
+			+form-wrap
+				h1.mb-27
+					| Авторизация для
+					| разработчиков
+				+e.input-wrap.form-group.mb-36
+					label
+						+e.SPAN.input-title.reuire Пароль:
+						+e.inp-cont
+							+e.INPUT.input.form-control(type="password" required name="pass")
+							+e.show-hide-btn.toggle-pass-inp-js
+								+icon('pass-eye')
+				+e.fc-row.row.align-items-center.pb-0
+					.col-auto
+						+e.BUTTON.login-btn(type="submit") Войти

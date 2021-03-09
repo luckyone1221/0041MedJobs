@@ -1,0 +1,20 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/logPage/_logPage.pug
+include ../blocks/sEntry/_sEntry.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '00-stab1'
+	title= title
+block pagecontent
+	+sEntry()

@@ -1,0 +1,21 @@
+mixin sEntry(data)
+	// start sEntry
+	+b.SECTION.sEntry.section#sEntry&attributes(attributes)
+		+e.bg
+			+e.ball--1
+			+e.ball--2
+			+e.ball--3
+			+e.ball--4
+		+e.container.container
+			+e.logo
+				img(loading="lazy" src="img/svg/logo.svg" alt="")
+			+b.section-title.text-center
+				h1
+					| Поиск компаний
+					br
+					| и людей в сфере медицины
+				p Приветствуем Вас на сайте Medicjobs.ru. На данный момент сайт находится в разработке.
+				+e.btn Вход для разработчиков
+			+e.img
+				img(loading="lazy" src="img/@2x/stab-img.png" alt="")
+	// end sEntry

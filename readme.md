@@ -1,4 +1,6 @@
 <!-- https://github.com/luckyone1221/0041MedJobs -->
+1. <https://luckyone1221.github.io/0041MedJobs/public/00-stab1.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/00-stab2.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/index.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/02-search.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/03-profile.html>
