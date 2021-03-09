@@ -4,12 +4,12 @@ mixin sAccProfile(data)
 		+topLinks()
 		.container
 			+whiteBox('Мой профиль')
-				+b.tabs
-					+e.caption.row
+				+b.tabs.resp-tabs-js
+					+e.caption.row.resp-tabs-list.d-flex
 						+whiteBoxTabBtn('Персональные данные', 'tab-big')
-						+whiteBoxTabBtn('Безопасность', 'tab-big active')
-					+e.wrap
-						+e.content
+						+whiteBoxTabBtn('Безопасность', 'tab-big')
+					+e.wrap.resp-tabs-container
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Персональные данные
 								+e.pd-row.row
@@ -25,7 +25,7 @@ mixin sAccProfile(data)
 											+e.f-btn(href="#")
 												+icon('plus')
 												span Загрузить
-						+e.content.active
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Безопасность
 								+e.pd-row.row
@@ -33,16 +33,16 @@ mixin sAccProfile(data)
 										+e.input-wrap.form-group
 											label
 												+e.SPAN.input-title Новый пароль:
-												.inp-cont
+												span.inp-cont.d-block
 													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Введите новый пароль")
-													.show-hide-btn.toggle-pass-inp-js
+													span.show-hide-btn.toggle-pass-inp-js
 														+icon('pass-eye')
 										+e.input-wrap.form-group
 											label
 												+e.SPAN.input-title Повторите пароль:
-												.inp-cont
+												span.inp-cont.d-block
 													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Повторите новый пароль")
-													.show-hide-btn.toggle-pass-inp-js
+													span.show-hide-btn.toggle-pass-inp-js
 														+icon('pass-eye')
 										+e.save-btn-cont
 											+e.save-btn(type="submit") Сохранить
@@ -91,7 +91,7 @@ mixin whiteBox(title, link, createVac)
 			block
 
 mixin whiteBoxTabBtn(txt, classes)
-	+e.btn.col-auto(class=classes)=txt
+	+e.btn.col-auto.resp-tab-btn(class=classes)=txt
 
 mixin sAccProfileCompany(data)
 	// start sAccProfile
@@ -111,13 +111,13 @@ mixin sAccProfileCompany(data)
 			+topLink('Настройки', '7')
 		.container
 			+whiteBox('Мой профиль', 'Как выглядит профиль')
-				+b.tabs
-					+e.caption.row
+				+b.tabs.resp-tabs-js
+					+e.caption.row.resp-tabs-list.d-flex
 						+whiteBoxTabBtn('Реквизиты', 'col-4 col-xl-auto tab-reg')
 						+whiteBoxTabBtn('Контакты', 'col-4 col-xl-auto tab-reg')
-						+whiteBoxTabBtn('О компании', 'col-4 col-xl-auto  tab-reg active')
-					+e.wrap
-						+e.content
+						+whiteBoxTabBtn('О компании', 'col-4 col-xl-auto  tab-reg')
+					+e.wrap.resp-tabs-container
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Реквизиты компании
 								+e.pd-row.row
@@ -128,7 +128,7 @@ mixin sAccProfileCompany(data)
 										+input('', 'number', 'Расчетный счет:')(value="40702810055000031738")
 										+input('', 'number', 'БИК банка:')(value="044030653")
 										+input('', 'number', 'Корреспондентский счет:')(value="40702810055000031738")
-						+e.content
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Контактная информация
 								+e.pd-row.row
@@ -152,7 +152,7 @@ mixin sAccProfileCompany(data)
 													+socSelect2('soc-select')
 												+socInpItem('', 'btn-add')
 													+socSelect2('soc-select')
-						+e.content.active
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Информация о компании
 								+e.pd-row.row
@@ -236,20 +236,20 @@ mixin sAccProfileVacancy(data)
 			+topLink('Настройки', '7')
 		.container
 			+whiteBox('Вакансии', false, true)
-				+b.tabs
-					+e.caption.row
-						+whiteBoxTabBtn('Опубликованные', 'col-auto col-md-4 col-xl-auto tab-short-sm active')
+				+b.tabs.resp-tabs-js
+					+e.caption.row.resp-tabs-list.d-flex
+						+whiteBoxTabBtn('Опубликованные', 'col-auto col-md-4 col-xl-auto tab-short-sm')
 						+whiteBoxTabBtn('Неопубликованные', 'col-auto col-md-4 col-xl-auto tab-short-sm')
 						+whiteBoxTabBtn('Архив', 'col-auto col-md-4 col-xl-auto tab-short-sm')
-					+e.wrap
-						+e.content.active
+					+e.wrap.resp-tabs-container
+						+e.content.resp-tabs-content
 							+vacCard('', true, true)
 							+vacCard('', true)
 							+vacCard('')
 							.pt-24.pt-xl-36
 								+puginRow()
-						+e.content
-						+e.content
+						+e.content.resp-tabs-content
+						+e.content.resp-tabs-content
 	// end sAccProfile
 
 mixin vacCard(addClasses='', hasBtn, hasBall)
@@ -416,13 +416,13 @@ mixin sAccProfileEmployer(data)
 			+topLink('Настройки', '7')
 		.container
 			+whiteBox('Избранное')
-				+b.tabs
-					+e.caption.row
+				+b.tabs.resp-tabs-js
+					+e.caption.row.resp-tabs-list.d-flex
 						+whiteBoxTabBtn('Организации', 'col-4 col-xl-auto tab-short-sm active')
 						+whiteBoxTabBtn('Вакансии', 'col-4 col-xl-auto tab-short-sm')
 						+whiteBoxTabBtn('Профессионалы', 'col-4 col-xl-auto tab-short-sm')
-					+e.wrap
-						+e.content.active
+					+e.wrap.resp-tabs-container
+						+e.content.resp-tabs-content
 							+b.organ
 								+organizationsItem({logo: true, vacancy: true})
 									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
@@ -433,7 +433,7 @@ mixin sAccProfileEmployer(data)
 								+organizationsItem({logo: true, vacancy: true})
 									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
 							+puginRow()
-						+e.content
+						+e.content.resp-tabs-content
 							+b.organ--vac
 								+vacancyItem({
                   dataFancy: 'jobGalery2',
@@ -454,7 +454,7 @@ mixin sAccProfileEmployer(data)
                   salary: 'от 15 000 ₽',
                 })
 							+puginRow()
-						+e.content
+						+e.content.resp-tabs-content
 							+b.profesionals#profesionals&attributes(attributes)
 								+profesionalItem({
                   status: 'success',
@@ -471,22 +471,22 @@ mixin sAccProffesional(data)
 	// start sAccProfile
 	+b.sAccProfile#sAccProfile&attributes(attributes)
 		+topLinks()
-			+topLink('Мой профиль', '1', 'active')
+			+topLink('Мой профиль', '1')
 			+topLink('Отклики', '4')
 			+topLink('Избранное', '5', 'active')
 			+topLink('Уведомления', '6')
 			+topLink('Настройки', '7')
 		.container
 			+whiteBox('Мой профиль', 'Как выглядит профиль')
-				+b.tabs
-					+e.caption.row.flex-md-nowrap
+				+b.tabs.resp-tabs-js
+					+e.caption.row.resp-tabs-list.d-flex.flex-md-nowrap
 						+whiteBoxTabBtn('Персональные данные',       'col-4 col-md col-xl-auto tab-long active')
 						+whiteBoxTabBtn('Основная информация',       'col-4 col-md col-xl-auto tab-long')
 						+whiteBoxTabBtn('Дополнительная информация', 'col-4 col-md col-xl tab-long')
 						+whiteBoxTabBtn('Прогресс',                  'col-6 col-md col-xl-auto tab-long')
 						+whiteBoxTabBtn('Безопасность',              'col-6 col-md col-xl-auto tab-long')
-					+e.wrap
-						+e.content.active
+					+e.wrap.resp-tabs-container
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Персональные данные
 								+e.pd-row.row
@@ -533,7 +533,7 @@ mixin sAccProffesional(data)
 											+e.f-btn(href="#")
 												+icon('plus')
 												span Загрузить
-						+e.content
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Основная информация
 								+e.pd-row.row
@@ -550,7 +550,7 @@ mixin sAccProffesional(data)
 											+input('Год и месяц окончания обучения', 'text')
 											+input('Город учебного заведения', 'text')
 											+input('Описание процесса обучения', 'text')
-						+e.content
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Дополнительная информация
 								+e.pd-row.row
@@ -618,7 +618,7 @@ mixin sAccProffesional(data)
 										+e.input-wrap--soc-bl
 											+e.input-title Фотографии:
 											+fotoesInp()
-						+e.content
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Прогресс
 								+e.pd-row.row
@@ -649,7 +649,7 @@ mixin sAccProffesional(data)
 											+repDel()
 											+repAdd()
 										//-
-						+e.content
+						+e.content.resp-tabs-content
 							+form-wrap
 								+e.headline Безопасность
 								+e.pd-row.row
@@ -657,16 +657,16 @@ mixin sAccProffesional(data)
 										+e.input-wrap.form-group
 											label
 												+e.SPAN.input-title Новый пароль:
-												.inp-cont
+												span.inp-cont.d-block
 													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Введите новый пароль")
-													.show-hide-btn.toggle-pass-inp-js
+													span.show-hide-btn.toggle-pass-inp-js
 														+icon('pass-eye')
 										+e.input-wrap.form-group
 											label
 												+e.SPAN.input-title Повторите пароль:
-												.inp-cont
+												span.inp-cont.d-block
 													+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Повторите новый пароль")
-													.show-hide-btn.toggle-pass-inp-js
+													span.show-hide-btn.toggle-pass-inp-js
 														+icon('pass-eye')
 										+e.save-btn-cont
 											+e.save-btn(type="submit") Сохранить
@@ -708,13 +708,13 @@ mixin sAccProfileEmployee(data)
 			+topLink('Настройки', '7')
 		.container
 			+whiteBox('Избранное')
-				+b.tabs
-					+e.caption.row
+				+b.tabs.resp-tabs-js
+					+e.caption.row.resp-tabs-list.d-flex
 						+whiteBoxTabBtn('Организации', 'col-4 col-xl-auto tab-short-sm active')
 						+whiteBoxTabBtn('Вакансии', 'col-4 col-xl-auto tab-short-sm')
 						+whiteBoxTabBtn('Профессионалы', 'col-4 col-xl-auto tab-short-sm')
-					+e.wrap
-						+e.content.active
+					+e.wrap.resp-tabs-container
+						+e.content.resp-tabs-content
 							+b.organ
 								+organizationsItem({logo: true, vacancy: true})
 									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
@@ -725,7 +725,7 @@ mixin sAccProfileEmployee(data)
 								+organizationsItem({logo: true, vacancy: true})
 									| ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
 							+puginRow()
-						+e.content
+						+e.content.resp-tabs-content
 							+b.organ--vac
 								+vacancyItem({
                   dataFancy: 'jobGalery2',
@@ -746,7 +746,7 @@ mixin sAccProfileEmployee(data)
                   salary: 'от 15 000 ₽',
                 })
 							+puginRow()
-						+e.content
+						+e.content.resp-tabs-content
 							+b.profesionals#profesionals&attributes(attributes)
 								+profesionalItem({
                   status: 'success',

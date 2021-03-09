@@ -63,29 +63,29 @@ const JSCCommon = {
 		if (linkModal) addData();
 	},
 	// tabs  .
-	tabscostume(tab) {
-		let tabs = {
-			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
-			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
-			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
-		}
-		tabs.Btn.forEach((element, index) => {
-			element.addEventListener('click', () => {
-				if (!element.classList.contains('active')) {
-					//turn off old
-					let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
-					let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
-
-					oldActiveEl.classList.remove('active');
-					oldActiveContent.classList.remove('active')
-
-					//turn on new(cklicked el)
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				}
-			})
-		})
-	},
+	// tabscostume(tab) {
+	// 	let tabs = {
+	// 		Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
+	// 		BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
+	// 		Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
+	// 	}
+	// 	tabs.Btn.forEach((element, index) => {
+	// 		element.addEventListener('click', () => {
+	// 			if (!element.classList.contains('active')) {
+	// 				//turn off old
+	// 				let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
+	// 				let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
+	//
+	// 				oldActiveEl.classList.remove('active');
+	// 				oldActiveContent.classList.remove('active')
+	//
+	// 				//turn on new(cklicked el)
+	// 				element.classList.add('active');
+	// 				tabs.Content[index].classList.add('active');
+	// 			}
+	// 		})
+	// 	})
+	// },
 	// /tabs
 
 	inputMask() {
@@ -182,7 +182,7 @@ const $ = jQuery;
 function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
+	//JSCCommon.tabscostume('tabs');
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -341,9 +341,13 @@ function eventHandler() {
 		maximumSelectionLength: 30,
 		dropdownCssClass: "soc-select2",
 	});
+	//
+	$('.resp-tabs-js').easyResponsiveTabs({
+		activate: function () {}
+	});
+	// easy-tabs
 
 	// todo
-	// rework img select
 	//end luckyone js
 
 };

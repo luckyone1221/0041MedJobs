@@ -8,6 +8,7 @@
 		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
@@ -127,17 +128,17 @@
 							</div>
 						</div>
 						<div class="white-box__content">
-							<div class="tabs">
-								<div class="tabs__caption row">
-									<div class="tabs__btn col-auto col-4 col-xl-auto tab-short-sm active">Организации
+							<div class="tabs resp-tabs-js">
+								<div class="tabs__caption row resp-tabs-list d-flex">
+									<div class="tabs__btn col-auto resp-tab-btn col-4 col-xl-auto tab-short-sm active">Организации
 									</div>
-									<div class="tabs__btn col-auto col-4 col-xl-auto tab-short-sm">Вакансии
+									<div class="tabs__btn col-auto resp-tab-btn col-4 col-xl-auto tab-short-sm">Вакансии
 									</div>
-									<div class="tabs__btn col-auto col-4 col-xl-auto tab-short-sm">Профессионалы
+									<div class="tabs__btn col-auto resp-tab-btn col-4 col-xl-auto tab-short-sm">Профессионалы
 									</div>
 								</div>
-								<div class="tabs__wrap">
-									<div class="tabs__content active">
+								<div class="tabs__wrap resp-tabs-container">
+									<div class="tabs__content resp-tabs-content">
 										<div class="organ">
 											<div class="organ__item">
 												<div class="organ__row row">
@@ -281,7 +282,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="tabs__content">
+									<div class="tabs__content resp-tabs-content">
 										<div class="organ organ--vac">
 											<div class="organ__item organ__item--vac">
 												<div class="organ__row organ__row--vac row">
@@ -411,7 +412,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="tabs__content">
+									<div class="tabs__content resp-tabs-content">
 										<div class="profesionals" id="profesionals">
 											<div class="profesionals__item">
 												<div class="profesionals__top-row row">
@@ -686,6 +687,8 @@
 		<!-- /slider libs-->
 		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
+		<!---->
+		<script src="js/easy-responsive-tabs.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

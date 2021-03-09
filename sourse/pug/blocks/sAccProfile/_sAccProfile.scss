@@ -392,7 +392,43 @@
 			}
 
 			margin-bottom: -28px;
+
+			display: none!important;
+			@include media-breakpoint-up(xl){
+				display: flex!important;
+			}
 		}
+		&__itemMob{
+			padding: 10px 0!important;
+
+			display: flex!important;
+			flex-direction: row-reverse;
+			align-items: center;
+			@include media-breakpoint-up(xl){
+				display: none!important;
+			}
+
+			&.resp-tab-active{
+				color: $body-color;
+			}
+			color: $secondary;
+
+			.resp-arrow{
+				float: none!important;
+				margin-left: auto;
+				width: 16px;
+				height: 16px;
+				border: none!important;
+
+				background-image: url(../img/svg/chevron-down-green.svg);
+				background-size: 16px;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+		}
+
+
 		&__btn{
 			&.tab-big{
 				min-width: 215px;
@@ -453,7 +489,7 @@
 			}
 
 			color: $secondary;
-			&.active{
+			&.resp-tab-active{
 				color: $headings-color;
 				&:after{
 					opacity: 1;
@@ -465,6 +501,10 @@
 		}
 		&__content{
 			padding-top: 45px;
+			padding-bottom: 30px;
+			@include media-breakpoint-up(xl){
+				padding-bottom: 0;
+			}
 		}
 	}
 

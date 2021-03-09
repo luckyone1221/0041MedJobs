@@ -8,6 +8,7 @@
 		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
@@ -80,7 +81,7 @@
 				<div class="top-links">
 					<div class="container">
 						<div class="top-links__row row">
-							<div class="col-auto"><a class="top-links__link active" href="#">
+							<div class="col-auto"><a class="top-links__link" href="#">
 								<svg class="icon icon-top-link-1 d-xl-none">
 									<use xlink:href="img/svg/sprite.svg#top-link-1"></use>
 								</svg><span class="top-links__txt"><span>Мой профиль</span></span></a>
@@ -119,21 +120,21 @@
 							</div>
 						</div>
 						<div class="white-box__content">
-							<div class="tabs">
-								<div class="tabs__caption row flex-md-nowrap">
-									<div class="tabs__btn col-auto col-4 col-md col-xl-auto tab-long active">Персональные данные
+							<div class="tabs resp-tabs-js">
+								<div class="tabs__caption row resp-tabs-list d-flex flex-md-nowrap">
+									<div class="tabs__btn col-auto resp-tab-btn col-4 col-md col-xl-auto tab-long active">Персональные данные
 									</div>
-									<div class="tabs__btn col-auto col-4 col-md col-xl-auto tab-long">Основная информация
+									<div class="tabs__btn col-auto resp-tab-btn col-4 col-md col-xl-auto tab-long">Основная информация
 									</div>
-									<div class="tabs__btn col-auto col-4 col-md col-xl tab-long">Дополнительная информация
+									<div class="tabs__btn col-auto resp-tab-btn col-4 col-md col-xl tab-long">Дополнительная информация
 									</div>
-									<div class="tabs__btn col-auto col-6 col-md col-xl-auto tab-long">Прогресс
+									<div class="tabs__btn col-auto resp-tab-btn col-6 col-md col-xl-auto tab-long">Прогресс
 									</div>
-									<div class="tabs__btn col-auto col-6 col-md col-xl-auto tab-long">Безопасность
+									<div class="tabs__btn col-auto resp-tab-btn col-6 col-md col-xl-auto tab-long">Безопасность
 									</div>
 								</div>
-								<div class="tabs__wrap">
-									<div class="tabs__content active">
+								<div class="tabs__wrap resp-tabs-container">
+									<div class="tabs__content resp-tabs-content">
 										<div class="form-wrap">
 											<form>
 												<div class="form-wrap__headline">Персональные данные
@@ -200,7 +201,7 @@
 											</form>
 										</div>
 									</div>
-									<div class="tabs__content">
+									<div class="tabs__content resp-tabs-content">
 										<div class="form-wrap">
 											<form>
 												<div class="form-wrap__headline">Основная информация
@@ -288,7 +289,7 @@
 											</form>
 										</div>
 									</div>
-									<div class="tabs__content">
+									<div class="tabs__content resp-tabs-content">
 										<div class="form-wrap">
 											<form>
 												<div class="form-wrap__headline">Дополнительная информация
@@ -523,7 +524,7 @@
 											</form>
 										</div>
 									</div>
-									<div class="tabs__content">
+									<div class="tabs__content resp-tabs-content">
 										<div class="form-wrap">
 											<form>
 												<div class="form-wrap__headline">Прогресс
@@ -658,7 +659,7 @@
 											</form>
 										</div>
 									</div>
-									<div class="tabs__content">
+									<div class="tabs__content resp-tabs-content">
 										<div class="form-wrap">
 											<form>
 												<div class="form-wrap__headline">Безопасность
@@ -666,25 +667,17 @@
 												<div class="form-wrap__pd-row row">
 													<div class="form-wrap__inp-col col-xl-auto">
 														<div class="form-wrap__input-wrap form-group">
-															<label><span class="form-wrap__input-title">Новый пароль:</span>
-																<div class="inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass" placeholder="Введите новый пароль"/>
-																	<div class="show-hide-btn toggle-pass-inp-js">
+															<label><span class="form-wrap__input-title">Новый пароль:</span><span class="inp-cont d-block"><input class="form-wrap__input form-control" type="password" required="required" name="pass" placeholder="Введите новый пароль"/><span class="show-hide-btn toggle-pass-inp-js">
 																		<svg class="icon icon-pass-eye ">
 																			<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
-																		</svg>
-																	</div>
-																</div>
+																		</svg></span></span>
 															</label>
 														</div>
 														<div class="form-wrap__input-wrap form-group">
-															<label><span class="form-wrap__input-title">Повторите пароль:</span>
-																<div class="inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass" placeholder="Повторите новый пароль"/>
-																	<div class="show-hide-btn toggle-pass-inp-js">
+															<label><span class="form-wrap__input-title">Повторите пароль:</span><span class="inp-cont d-block"><input class="form-wrap__input form-control" type="password" required="required" name="pass" placeholder="Повторите новый пароль"/><span class="show-hide-btn toggle-pass-inp-js">
 																		<svg class="icon icon-pass-eye ">
 																			<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
-																		</svg>
-																	</div>
-																</div>
+																		</svg></span></span>
 															</label>
 														</div>
 														<div class="form-wrap__save-btn-cont">
@@ -825,6 +818,8 @@
 		<!-- /slider libs-->
 		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
+		<!---->
+		<script src="js/easy-responsive-tabs.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
