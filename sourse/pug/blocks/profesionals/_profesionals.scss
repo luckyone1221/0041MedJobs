@@ -41,6 +41,10 @@
   }
   &__status-row{
     @include roww(12px);
+    & > *{
+      margin-bottom: 8px;
+    }
+    margin-bottom: -8px;
 
     padding-bottom: 10px;
     @include media-breakpoint-up(md){

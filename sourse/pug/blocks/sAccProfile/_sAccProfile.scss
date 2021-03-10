@@ -203,6 +203,13 @@
 		&__two-inps-cont{
 			flex-grow: 1;
 		}
+		.two-inps{
+			input{
+				&:focus{
+					box-shadow: 0px 3px 10px rgba(38, 39, 40, 0.15);
+				}
+			}
+		}
 
 		&__skill-sel-cont{
 			flex-grow: 1;
@@ -344,9 +351,9 @@
 }
 //
 .white-box{
-	margin-left: 6px;
+	//margin-left: 6px;
 	@include media-breakpoint-up(md){
-		margin-left: 0;
+		//margin-left: 0;
 	}
 
 	background: $white;
@@ -399,6 +406,7 @@
 			}
 		}
 		&__itemMob{
+			cursor: pointer;
 			padding: 10px 0!important;
 
 			display: flex!important;
@@ -409,9 +417,9 @@
 			}
 
 			&.resp-tab-active{
-				color: $body-color;
+				color: $secondary;
 			}
-			color: $secondary;
+			color: $body-color;
 
 			.resp-arrow{
 				float: none!important;
@@ -420,7 +428,7 @@
 				height: 16px;
 				border: none!important;
 
-				background-image: url(../img/svg/chevron-down-green.svg);
+				background-image: url(../img/svg/chevron-down.svg);
 				background-size: 16px;
 				background-position: center;
 				background-repeat: no-repeat;
@@ -630,7 +638,8 @@
 		border-radius: 5px 0 0 5px;
 		@include mt();
 		width: 100%!important;
-		height: 100%!important;
+		//height: 100%!important;
+		height: 48px!important;
 
 		background: rgba(255, 255, 255, 1)!important;
 		border: 1px solid $input-border-color!important;
@@ -934,6 +943,11 @@
 }
 
 .vacCard{
+	@include mt();
+	&:hover{
+		box-shadow: 0px 5px 10px rgba(38, 39, 40, 0.15);
+	}
+
 	background: $white;
 	border: 1px solid $gary-110;
 	border-radius: 5px;
@@ -945,6 +959,13 @@
 	}
 
 	&__title{
+		display: block;
+
+		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
+
 		font-weight: 600;
 		color: $headings-color;
 		margin-bottom: 10px;
