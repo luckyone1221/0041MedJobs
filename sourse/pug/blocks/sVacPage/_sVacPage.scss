@@ -119,6 +119,10 @@
 		}
 
 		li{
+			&:before{
+				content: none!important;
+				padding: 0;
+			}
 			font-size: 16px;
 			line-height: 2.25;
 		}

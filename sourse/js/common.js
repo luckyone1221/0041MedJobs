@@ -345,9 +345,12 @@ function eventHandler() {
 	$('.resp-tabs-js').easyResponsiveTabs({
 		activate: function () {}
 	});
-	// easy-tabs
+	//scroll top js
+	$('.scroll-top-js').click(function (){
+		window.scrollTo(0,0);
+	});
 
-	// todo
+
 	//end luckyone js
 
 };

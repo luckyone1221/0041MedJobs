@@ -1,0 +1,183 @@
+mixin sProf(data)
+	// start sProf
+	+b.SECTION.sProf.section#sProf&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				+e.bg
+					+e.ball--1
+					+e.ball--2
+					+e.ball--3
+					+e.ball--4
+				+e.row.row.align-items-center
+					.col-auto
+						+e.portrait(href='#')
+							img(loading="lazy" src="img/@2x/proffesional-1.jpg" alt="")
+					.col-12.col-xl
+						h1 Константинопольский Константин Константинович
+						+e.info-row.row.align-items-center
+							.col-auto
+								+e.recomended-by
+									+rbItem(1)
+									+rbItem(2)
+									+rbItem(2)
+									+rbItem(2)
+									+rbItem(2)
+							.col-auto
+								+e.r-amount
+									span 981 рекомендаций
+							.col-auto
+								+e.r-btn(href="#") Рекомендовать
+				+e.like-btn(href='#')
+					+icon('like')
+			+e.row.row
+				.col-md
+					+e.UL.striped-ul
+						li
+							strong Статус:&nbsp;
+							span Был(-а) в сети: 44 минуты назад
+						li
+							strong На сайте:&nbsp;
+							span с 27 февраля 2021
+						li
+							strong Город:&nbsp;
+							span Санкт-Петербург
+						li
+							strong Возраст:&nbsp;
+							span 24 года
+						li
+							strong Опыт работы:&nbsp;
+							span 7 лет
+						li
+							strong Гражданство:&nbsp;
+							span Российская Федерация
+				.col-md-auto
+					+e.box
+						+e.b-row.row
+							.col-6.col-md-12
+								+e.contact-btn(href="#") Показать контакты
+							.col-6.col-md-12
+								+e.job-btn(href="#") Предложить работу
+							.col-12
+								+e.social-row.row.justify-content-center
+									+contactSoc('tg')
+									+contactSoc('tw')
+									+contactSoc('fb')
+									+contactSoc('vk')
+									+contactSoc('ok')
+			+e.content
+				+e.big-title Основная информация
+				+e.info-box
+					+e.sub-title Обо мне
+					+e.i-txt Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния.
+				+e.info-box
+					+e.sub-title Образование
+					+e.pr-items
+						+profInfoItem('Ноябрь 2015')
+							+e.ir-top-bl
+								+e.ir-bold 2010-2016 "Неврологический Институт им. Иванова
+								+e.ir-sm Высшее образование
+								+e.ir-place г. Москва
+							+e.ir-md Факультет хирургии
+							+e.ir-txt Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.
+						+profInfoItem('Ноябрь 2015')
+							+e.ir-top-bl
+								+e.ir-bold 2010-2016 "Неврологический Институт им. Иванова
+								+e.ir-sm Высшее образование
+								+e.ir-place г. Москва
+							+e.ir-md Факультет хирургии
+							+e.ir-txt Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.
+				+e.info-box
+					+e.sub-title Опыт работы
+					+e.pr-items
+						+profInfoItem('Октябрь 2010 — Ноябрь 2015', '5 лет, 1 месяц')
+							+e.ir-top-bl
+								+e.ir-bold 2010-2016 "Неврологический Институт им. Иванова
+								+e.ir-place г. Москва
+							+e.ir-md Пластическая хирургия
+							+e.ir-txt Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.
+				+e.big-title Дополнительная информация
+				+e.info-box
+					+e.sub-title Навыки
+					+e.skill-row.row
+						.col-auto
+							+e.sk-btn Умный
+						.col-auto
+							+e.sk-btn Усидчевый
+				+e.info-box
+					+e.sub-title Знание языков
+					+e.chars
+						+profCharItem('Русский язык', 'Родной язык')
+						+profCharItem('Английский язык', 'Читаю профессиональную литературу')
+				+e.info-box
+					+e.sub-title Мои достижения
+					+e.chars
+						+profCharItem('Заслуженный врач Российской Федерации 2014', 'Звание')
+						+profCharItem('Лучший хирург Москвы 2016', 'Грамота')
+						+profCharItem('За доблестную службу Российской Федерации в медицине 2017', 'Медаль')
+				+e.info-box
+					+e.sub-title Мои статьи
+					+e.articles
+						+articleItem()
+						+articleItem()
+				+e.info-box
+					+e.sub-title Портфолио
+					+galeryRow()
+				//-
+				+e.big-title Прогресс
+				+e.info-box
+					+e.sub-title Дополнительное образование и стажировки
+					+e.chars
+						+profCharItem('Повышение квалификации в Израиле', '2016')
+						+profCharItem('Повышение квалификации в Германии', '2017')
+						+profCharItem('Профессиональная переподготовка', '2018')
+				+e.info-box
+					+e.sub-title Мероприятия
+					+e.chars
+						+profCharItem('Слет хирургов-терапевт в Раменском', '2017')
+						+profCharItem('Слет хирургов-терапевт в Раменском', '2018')
+				+e.info-box
+					+e.sub-title Профессиональные сообщества
+					+e.chars
+						+profCharItem('Сообщество хирургов', '2017 - 2019')
+						+profCharItem('Форум врачей Москвы и Санкт-Петербурга', '2018 - настоящее время')
+				+e.top-btn-cont
+					+e.BUTTON.top-btn.scroll-top-js(type="button") Наверх
+	// end sProf
+mixin articleItem()
+	+e.article
+		+e.a-title “Лечение гайморита на ранних этапах”
+		+e.UL.article-list
+			li
+				span Авторы:
+				span Иванов И. И., Антонов А.А.
+			li
+				span Год:
+				span 2016
+			li
+				span Название журнала:
+				span Докторская правда
+			li
+				span Номер журнала:
+				span 4353
+			li
+				span Страницы:
+				span 35-41
+
+mixin profCharItem(char, lvl)
+	+e.char-box
+		+e.char=char
+		+e.char-lvl=lvl
+
+mixin rbItem(imgNum)
+	+e.rb-item(href='#')
+		img(loading="lazy" src=`img/@2x/proffesional-${imgNum}.jpg` alt="")
+
+mixin profInfoItem(title, gray)
+	+e.info-row.row
+		+e.ir-title-col.col-auto
+			+e.ir-title=title
+			if gray
+				+e.ir-gray=gray
+		+e.pr-content.col
+			block

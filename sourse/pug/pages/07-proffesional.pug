@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/sVacPage/_sVacPage.pug
+include ../blocks/sProfile/_sProfile.pug
+include ../blocks/sProf/_sProf.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '07-proffesional'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+sProf()
+		+inpStrip('Профессионалы', 'Начните поиск по профессионалам')
+		+breadcrumb('Главная', 'Профессионалы', 'Константинопольский Константин Константинович')
+	+footer()
