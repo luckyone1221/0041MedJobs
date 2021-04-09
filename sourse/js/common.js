@@ -190,7 +190,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '020-576.png';
+	screenName = '021-768.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -317,6 +317,8 @@ function eventHandler() {
 		templateResult: formatState,
 		templateSelection: formatState,
 	});
+
+
 	function formatState(state){
 		if (!state.id) {
 			return state.text;
@@ -347,11 +349,25 @@ function eventHandler() {
 	$('.scroll-top-js').click(function (){
 		window.scrollTo(0,0);
 	});
+
 	//020 page +
+	//020 page +
+	//020 page +
+
 	$('.mvp-burger-js').click(function (){
+		document.body.removeEventListener('click', nMenuMissClick);
 		$(this).toggleClass('active');
+		event.stopPropagation();
 		$('.mvp-menu--js').toggleClass('active');
+		document.body.addEventListener('click', nMenuMissClick);
 	});
+
+	function nMenuMissClick(){
+		if (!event.target.closest('.mvp-menu--js')){
+			document.body.removeEventListener('click', nMenuMissClick);
+			$('.mvp-menu--js').removeClass('active');
+		}
+	}
 
 	//
 	let sidebarSlider = new Swiper('.sidebar-slider-js', {
@@ -362,15 +378,41 @@ function eventHandler() {
 		freeMode: true,
 		//freeModeMomentum: true,
 	});
+	//headerAlt
+	$('.search-inp-js').focus(function (){
+		$(this.parentElement).find('.search-btn-js').addClass('active');
+	}).blur(function (){
+		$(this.parentElement).find('.search-btn-js').removeClass('active');
+	});
 
-	//sidebar item js
-	//.sidebar-item-js
+	//new footem items
+	$('.fl-icon-js').click(function (){
+		$(this).toggleClass('active');
+	})
+
+	$('.bell-js').click(function (){
+		document.body.removeEventListener('click', bellPPMissClick);
+		$('.bell-dd--js').toggleClass('active');
+		event.stopPropagation();
+		document.body.addEventListener('click', bellPPMissClick);
+	})
+	function bellPPMissClick(){
+		if (!event.target.closest('.bell-dd--js')){
+			document.body.removeEventListener('click', nMenuMissClick);
+			$('.bell-dd--js').removeClass('active');
+		}
+	}
+	//
+	$('.default-select-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select2",
+	});
 
 	//end luckyone js
 
 	//todo New
-	//1 mob menu missclick
 	//2 kill ui kit
+
 
 
 };

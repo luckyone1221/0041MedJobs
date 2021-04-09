@@ -96,6 +96,7 @@
 		align-items: center;
 	}
 	&__l-icon{
+		cursor: pointer;
 		width: 24px;
 		height: 24px;
 		margin-right: 6px;
@@ -104,9 +105,32 @@
 		align-items: center;
 		justify-content: center;
 
+		position: relative;
 		.icon{
+			@include mt($sharp);
 			font-size: 24px;
 			color: $warning;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+
+		.icon-like{
+			opacity: 1;
+		}
+		.icon-like-fill{
+			opacity: 0;
+		}
+
+		&.active{
+			.icon-like{
+				opacity: 0;
+			}
+			.icon-like-fill{
+				opacity: 1;
+			}
 		}
 	}
 	&__l-txt{
@@ -169,6 +193,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include mt($smooth);
+
+		&:hover{
+			transform: scale(1.1);
+		}
 
 		img{
 			width: auto;
@@ -202,15 +231,22 @@
 		cursor: pointer;
 		display: flex;
 		align-items: center;
+
+		--ball-bg: #{$light};
+		&:hover{
+			--ball-bg: #{$white};
+		}
 	}
 	&__st-txt{
 		margin-right: 12px;
 	}
 	&__st-ball{
+		@include mt($smooth);
 		width: 40px;
 		height: 40px;
 		border-radius: 50%;
-		background: $light;
+		background: var(--ball-bg, #{$light});
+		border: 1px solid $light;
 
 		display: flex;
 		align-items: center;

@@ -69,20 +69,52 @@
 		line-height: (18/15);
 
 		.icon{
+			@include mt($smooth);
 			font-size: 18px;
 			color: $secondary;
+		}
+		&.active{
+			.icon{
+				color: $warning;
+			}
 		}
 	}
 	&__bell{
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: relative;
+		cursor: pointer;
+
+		&:after{
+			opacity: 0;
+			@include mt($sharp);
+			content: '';
+			position: absolute;
+			z-index: 1;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: $warning;
+			top: 0;
+			right: 0;
+		}
 
 		width: 24px;
 		height: 24px;
 		.icon{
+			@include mt($sharp);
 			font-size: 24px;
 			color: $gray-550;
+		}
+
+		&.active{
+			&:after{
+				opacity: 1;
+			}
+			.icon{
+				color: $warning;
+			}
 		}
 	}
 	&__lc-cont{
@@ -264,5 +296,74 @@
 				line-height: 1.5;
 			}
 		}
+	}
+}
+
+//
+.bell-dd{
+	@include mt($sharp);
+	transform-origin: top center;
+
+	--bell-scale: scaleY(0);
+	&.active{
+		--bell-scale: scaleY(1);
+	}
+
+	position: absolute;
+	top: 100%;
+	z-index: 99;
+
+	transform: var(--bell-scale);
+	left: 50%;
+	transform: translateX(-50%) var(--bell-scale);
+	padding-top: 28px;
+
+	&__box{
+		width: 390px;
+		height: auto;
+		max-height: 320px;
+		overflow-y: auto;
+
+		background: $white;
+		border: 1px solid $gray-210;
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+		border-radius: 5px;
+	}
+	&__message{
+		@include mt($sharp);
+		border-bottom: 1px solid $gray-100;
+
+		padding: 12px 12px 12px 23px;
+		display: block;
+		background-color: $white;
+		&:hover{
+			background-color: $light;
+		}
+
+		position: relative;
+		&:before{
+			flex-shrink: 0;
+			content: '';
+			position: absolute;
+			left: 12px;
+			top: 16px;
+
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: $warning;
+			margin-right: 6px;
+		}
+	}
+	&__title{
+		display: block;
+		margin-bottom: 6px;
+		color: $headings-color;
+	}
+	&__date{
+		display: block;
+		font-size: 13px;
+		line-height: (16/13);
+		color: $secondary;
 	}
 }

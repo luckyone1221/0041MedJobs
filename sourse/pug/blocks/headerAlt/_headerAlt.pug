@@ -8,12 +8,13 @@ mixin headerAlt(data)
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				+e.search-col.col-md.order-last.order-md-0
 					+e.search
-						+e.INPUT.s-input.form-control(type="text" placeholder="Поиск по вакансиям")
-						+e.search-btn(type='button')
+						+e.INPUT.s-input.form-control.search-inp-js(type="text" placeholder="Поиск по вакансиям")
+						+e.search-btn.search-btn-js(type='button')
 							+icon('zoom-2')
 				.col-auto
-					+e.bell(href='#')
+					+e.bell.bell-js.active
 						+icon('bell')
+						+bellDD()
 				.col-auto
 					+e.lc-cont.lc-cont-js
 						+e.lc-row.row.align-items-center.lc-dd-btn-js
@@ -30,6 +31,22 @@ mixin headerAlt(data)
 						span
 		+mvpMmenu()
 	// end headerAlt
+
+mixin bellDD()
+	+b.bell-dd--js
+		+e.box
+			-for (var i = 0; i < 2; i++)
+				+bellDDMessage('У вас новое сообщение', 'Сегодня, 15:38')
+				+bellDDMessage('У вас новый отклик на резюме', 'Вчера, 10:09')
+				+bellDDMessage('У вас новый взаимный отклик', '22 марта 2021')
+				+bellDDMessage('У вас новое сообщение', 'Вчера, 10:09')
+				+bellDDMessage('У вас новый взаимный отклик', '22 марта 2021')
+
+mixin bellDDMessage(title, date)
+	+e.message(href='#')
+		+e.title=title
+		+e.date=date
+
 
 mixin lcDD()
 	+b.lc-dd

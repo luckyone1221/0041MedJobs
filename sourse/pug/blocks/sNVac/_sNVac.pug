@@ -24,7 +24,17 @@ mixin sNVac(data)
 				vacName: 'Врач хирург-терапевт',
 				salary: 'з/п не указана'
 			})
+		+puginationN()
 	// end sNVac
+
+mixin sNVacEmpty(data)
+	// start sNVac
+	+b.sNVac#sNVac&attributes(attributes)
+		+e.empty
+			+e.e-img
+				img(loading="lazy" src="img/@2x/empty-vac.png" alt="")
+			+e.e-txt У вас нет избранных вакансий.
+			+e.e-btn(href='#') К списку вакансий
 
 mixin snVacItem(data)
 	+e.item
@@ -41,12 +51,12 @@ mixin snVacItem(data)
 						+e.vac-name(href='#')=data.vacName
 						+e.salary=data.salary
 						+e.loc-row.row.row--mb.align-items-center
-							.col-auto
+							.col-auto.col-12.col-xl-auto
 								+e.company(href='#') ООО УК Медгард
-							.col-auto
+							.col-auto.col-12.col-xl-auto
 								+e.city г. Санкт-Петербург
 			.col-md-auto
-				+e.sub-row.row.row--mb.align-items-center
+				+e.sub-row.row.row--mb.align-items-center.justify-content-end
 					.col-auto
 						+e.time=data.time
 					.col-auto
@@ -54,3 +64,19 @@ mixin snVacItem(data)
 					.col-auto
 						+e.like-btn(href="#")
 							+icon('like-fill')
+
+mixin puginationN()
+	+b.pugination-n.row
+		.col-auto
+			ul.pagination
+				li.prev.disabled: a(href="#")
+					+icon('chevron-left')
+					span Назад
+				li: a(href="#") 1
+				li: a(href="#") 2
+				li: a(href="#") 3
+				li: a(href="#") ...
+				li: a(href="#") 5
+				li.next: a(href="#")
+					span Вперед
+					+icon('chevron-right')

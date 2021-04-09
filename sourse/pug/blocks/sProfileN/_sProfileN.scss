@@ -567,3 +567,67 @@
 	&__{}
 	&__{}
 }
+
+.custom-select{
+	font-family: $mono!important;
+	*{
+		font-family: $mono!important;
+	}
+	.select2.select2-container.select2-container--default{
+		width: 100% !important;
+		height: 40px!important;
+	}
+	.select2-selection{
+		height: 40px!important;
+		border-color: $input-border-color!important;
+		border-radius: $input-border-radius!important;
+	}
+	.select2-selection__rendered{
+		height: 40px!important;
+		padding: 10px 30px 10px 10px!important;
+
+		line-height: (18/15) !important;
+		font-size: 15px!important;
+	}
+	.select2-selection__arrow{
+		height: 40px!important;
+		width: 30px!important;
+		*{
+			display: none!important;
+		}
+
+		background-image: url(../img/svg/chevron-bot.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.default-select-js{
+		height: 40px;
+	}
+
+}
+
+.default-select2{
+	font-family: $mono!important;
+	*{
+		font-family: $mono!important;
+	}
+
+	margin-top: 10px!important;
+	border: 1px solid $input-border-color!important;
+	border-radius: 5px!important;
+	overflow: hidden!important;
+
+	.select2-results__options{
+		.select2-results__option{
+			color: $headings-color!important;
+			&--selectable{
+				background-color: $white!important;
+			}
+			&--selected{}
+			&--highlighted{
+				background-color: rgba($light, .5)!important;
+			}
+		}
+	}
+}

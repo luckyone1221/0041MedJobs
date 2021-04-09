@@ -3,11 +3,12 @@
 	&__items{
 		padding-bottom: 24px;
 		@include media-breakpoint-up(xl){
-			padding-bottom: 36px;
+			padding-bottom: 22px;
 		}
 	}
 	&__item{
 		@include mt($smooth);
+
 		margin-bottom: 12px;
 		&:last-child{
 			margin-bottom: 0;
@@ -18,7 +19,7 @@
 			padding: 24px;
 		}
 		@include media-breakpoint-up(xl){
-			padding: 24px 24px 22px 24px;
+			padding: 24px 24px 20px;
 		}
 
 		background: $white;
@@ -36,6 +37,8 @@
 	}
 	&__data-row{
 		@include roww(24px);
+
+		flex-wrap: nowrap;
 	}
 	&__img{
 		width: 90px;
@@ -56,6 +59,7 @@
 		}
 	}
 	&__vac-name{
+		display: block;
 		font-weight: 500;
 		line-height: 1.5;
 
@@ -110,4 +114,151 @@
 		}
 	}
 	&__{}
+	&__empty{
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: 5px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		min-height: 470px;
+
+		padding: 87px 24px;
+	}
+	&__e-img{
+		width: 170px;
+		height: 170px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		margin-bottom: 36px;
+
+		animation: top-bot 2s linear infinite;
+	}
+	&__e-txt{
+		font-size: 15px;
+		line-height: 1.5;
+		margin-bottom: 24px;
+	}
+	&__e-btn{
+		@extend .btn-light-default;
+	}
 } // end.sNVac
+
+@keyframes top-bot {
+	from{
+		transform: translateY(0px);
+	}
+	25%{
+		transform: translateY(-7px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	75%{
+		transform: translateY(7px);
+	}
+	to{
+		transform: translateY(0px);
+	}
+}
+
+.pugination-n{
+	.pagination{
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: 5px;
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+
+		li{
+			border-right: 1px solid $gray-210;
+
+			a{
+				@include mt($sharp);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 8px;
+				min-width: 39px;
+				min-height: 40px;
+				color: $headings-color;
+
+				background-color: transparent;
+				&:hover{
+					background-color: rgba($light, .5);
+					&:before{
+						opacity: 1;
+					}
+				}
+
+				position: relative;
+				z-index: 1;
+				&:before{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					opacity: 0;
+					@include mt($sharp);
+					width: 100%;
+					height: 2px;
+					left: 0;
+					bottom: 0;
+					background: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
+				}
+			}
+
+			&.prev,
+			&.next{
+				a{
+					padding: 8px 12px;
+					min-width: 89px;
+				}
+
+				.icon{
+					font-size: 10px;
+					color: $warning;
+				}
+			}
+
+			&.prev{
+				a{
+					.icon{
+						margin-right: 6px;
+					}
+				}
+			}
+			&.next{
+				a{
+					.icon{
+						margin-left: 6px;
+					}
+				}
+			}
+			&.disabled{
+				pointer-events: none;
+				a{
+					color: $secondary;
+				}
+				.icon{
+					color: $secondary;
+				}
+			}
+
+
+		}
+	}
+}

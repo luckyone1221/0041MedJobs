@@ -197,7 +197,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '020-576.png';
+	screenName = '021-768.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -336,20 +336,59 @@ function eventHandler() {
 	$('.scroll-top-js').click(function () {
 		window.scrollTo(0, 0);
 	}); //020 page +
+	//020 page +
+	//020 page +
 
 	$('.mvp-burger-js').click(function () {
+		document.body.removeEventListener('click', nMenuMissClick);
 		$(this).toggleClass('active');
+		event.stopPropagation();
 		$('.mvp-menu--js').toggleClass('active');
-	}); //
+		document.body.addEventListener('click', nMenuMissClick);
+	});
+
+	function nMenuMissClick() {
+		if (!event.target.closest('.mvp-menu--js')) {
+			document.body.removeEventListener('click', nMenuMissClick);
+			$('.mvp-menu--js').removeClass('active');
+		}
+	} //
+
 
 	var sidebarSlider = new Swiper('.sidebar-slider-js', (_Swiper = {
 		slidesPerView: 'auto',
 		spaceBetween: 12
-	}, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "freeMode", true), _Swiper)); //sidebar item js
-	//.sidebar-item-js
-	//end luckyone js
+	}, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "freeMode", true), _Swiper)); //headerAlt
+
+	$('.search-inp-js').focus(function () {
+		$(this.parentElement).find('.search-btn-js').addClass('active');
+	}).blur(function () {
+		$(this.parentElement).find('.search-btn-js').removeClass('active');
+	}); //new footem items
+
+	$('.fl-icon-js').click(function () {
+		$(this).toggleClass('active');
+	});
+	$('.bell-js').click(function () {
+		document.body.removeEventListener('click', bellPPMissClick);
+		$('.bell-dd--js').toggleClass('active');
+		event.stopPropagation();
+		document.body.addEventListener('click', bellPPMissClick);
+	});
+
+	function bellPPMissClick() {
+		if (!event.target.closest('.bell-dd--js')) {
+			document.body.removeEventListener('click', nMenuMissClick);
+			$('.bell-dd--js').removeClass('active');
+		}
+	} //
+
+
+	$('.default-select-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select2"
+	}); //end luckyone js
 	//todo New
-	//1 mob menu missclick
 	//2 kill ui kit
 }
 

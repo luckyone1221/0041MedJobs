@@ -40,12 +40,9 @@ mixin sProfileN(data)
 											.col-auto
 												+e.INPUT.input.day-inp.form-control(type="number" value='22' min='1' max='31')
 											.col
-												+e.SELECT.select.form-control.form-select
-													option Января
-													option option 1
-													option option 2
+												+customSlect('month', ['Января','Февраля','Марта'])
 											.col
-												+e.SELECT.select.form-control.form-select
+												+customSlect('year')
 													option 1997
 													- for (var i=1998; i <= new Date().getFullYear(); i++)
 														option=i
@@ -53,7 +50,9 @@ mixin sProfileN(data)
 										+e.input-title Город проживания
 										+e.inps-row.row
 											.col-12
-												+e.SELECT.select.form-control.form-select
+												+customSlect('city', ['Самара','Самара2','Самара2'])
+												//+customSlect('city', ['','',''])
+												//-+e.SELECT.select.form-control.form-select
 													option Самара
 													option Самара 2
 													option Самара 3
@@ -139,6 +138,14 @@ mixin sProfileN(data)
 				.col-xl-auto.d-none.d-xxl-block
 					+asideMenu()
 	// end sProfileN
+mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], keyClass='default-select-js')
+	+b.custom-select
+		select(name=selectName class=keyClass)
+			if block
+				block
+			else
+				- for (let item of optionsArr)
+					option(value=item)=item
 
 mixin asideMenu()
 	+e.aside-menu
@@ -176,11 +183,14 @@ mixin lSidebarN()
 		+e.slider-wrap
 			.swiper-container.sidebar-slider-js
 				.swiper-wrapper
-					+lSidebarSlide(1,'Мой кабинет')
-					+lSidebarSlide(2,'Мое резюме')
-					+lSidebarSlide(3,'Настройки профиля')(class='active')
-					+lSidebarSlide(4,'Избранные вакансии')
-					+lSidebarSlide(5,'Подборки вакансий')
+					if block
+						block
+					else
+						+lSidebarSlide(1,'Мой кабинет')
+						+lSidebarSlide(2,'Мое резюме')
+						+lSidebarSlide(3,'Настройки профиля')(class='active')
+						+lSidebarSlide(4,'Избранные вакансии')
+						+lSidebarSlide(5,'Подборки вакансий')
 
 mixin lSidebarSlide(imgNum, txt)
 	.swiper-slide
@@ -198,11 +208,14 @@ mixin sProfileNEmpty(data)
 			+e.row.row.row--mb
 				.col-xl-auto
 					+lSidebarN()
+						+lSidebarSlide(1,'Мой кабинет')
+						+lSidebarSlide(2,'Мое резюме')
+						+lSidebarSlide(3,'Настройки профиля')
+						+lSidebarSlide(4,'Избранные вакансии')(class='active')
+						+lSidebarSlide(5,'Подборки вакансий')
 				+e.content-col.col-xl
 					+e.title-row.row.row--mb.align-items-center
 						.col
 							+e.H1.title=data.title
-						.col-auto
-							+e.look(href='#') Как выглядит мой профиль
 						.col-12
 							block
