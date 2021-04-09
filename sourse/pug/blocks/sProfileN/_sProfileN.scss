@@ -524,6 +524,7 @@
 			border: 1px solid $gray-210;
 			--icon-col: #{$warning};
 			--ball-opacity: 0.25;
+			//0.25
 		}
 
 	}
@@ -554,17 +555,27 @@
 		opacity: var(--ball-opacity, 0);
 
 		&--1{
-			right: -27px;
-			bottom: -42px;
+			left: 100%;
+			top: 100%;
 			background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+			transform: translateX(-40%) translateY(-40%);
 		}
 		&--2{
-			right: 19px;
-			bottom: -1px;
+			z-index: -2;
+			left: 100%;
+			top: 100%;
 			background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+			transform: translateX(-60%) translateY(-60%);
 		}
 	}
-	&__{}
+	&__tracker{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
 	&__{}
 }
 

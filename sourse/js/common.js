@@ -408,6 +408,18 @@ function eventHandler() {
 		dropdownCssClass: "default-select2",
 	});
 
+	//from jetbrains animation
+	$('.sidebar-trakcer-js').mousemove(function (){
+		if (!this.parentElement.classList.contains('active')) return;
+		// let top = event.offsetY;
+		// let left = event.offsetX;
+
+		let balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
+		for (let ball of balls){
+			ball.setAttribute("style", `top: ${event.offsetY}px; left: ${event.offsetX}px;`);
+		}
+	})
+
 	//end luckyone js
 
 	//todo New
