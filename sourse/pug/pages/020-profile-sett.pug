@@ -1,0 +1,24 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/logPage/_logPage.pug
+include ../blocks/sAccProfile/_sAccProfile.pug
+include ../blocks/headerAlt/_headerAlt.pug
+include ../blocks/sProfileN/_sProfileN.pug
+include ../blocks/footerN/_footerN.pug
+
+block variables
+	- let  mainPage= 'bg-gray-120 mvp-page'
+block title
+	- let  title= '020-profile-sett'
+	title= title
+block pagecontent
+	+headerAlt()
+	+sProfileN()
+	+footerN()

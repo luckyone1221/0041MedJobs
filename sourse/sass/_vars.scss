@@ -5,7 +5,9 @@ $path2: '@2x/';
 $path1: '@1x/';
 $rfs-breakpoint: 1200px !default;
 
-
+//for @include mt($smoth/$sharp);
+$smooth: .2;
+$sharp: .05;
 
 // Variables
 //
@@ -18,11 +20,14 @@ $white: #fff !default;
 $dim: #C4C4C4;
 $gray-100: #EFF2F6 !default;
 $gary-110: #E5E6E9;
+$gray-115: #E5E5E5;
 $gray-120: #D8D8D8;
 $gray-200: #e9ecef !default;
+$gray-210: #E4E7EC;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
+$gray-550: #A8B1BC !default;
 $gray-600: #888C94 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
@@ -318,7 +323,8 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px) !default;
+  xxl: 1400px,
+  base: 1800px,) !default;
 // scss-docs-end grid-breakpoints
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");

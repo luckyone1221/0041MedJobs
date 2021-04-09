@@ -1,0 +1,49 @@
+mixin headerAlt(data)
+	// start headerAlt
+	+b.HEADER.headerAlt#headerAlt&attributes(attributes)
+		+e.container.container-fluid
+			+e.row.row--mb.align-items-center
+				.col.col-md-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				+e.search-col.col-md.order-last.order-md-0
+					+e.search
+						+e.INPUT.s-input.form-control(type="text" placeholder="Поиск по вакансиям")
+						+e.search-btn(type='button')
+							+icon('zoom-2')
+				.col-auto
+					+e.bell(href='#')
+						+icon('bell')
+				.col-auto
+					+e.lc-cont.lc-cont-js
+						+e.lc-row.row.align-items-center.lc-dd-btn-js
+							.col-auto
+								+e.lc-txt Мой кабинет
+							.col-auto
+								+e.lc-img
+									img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
+							+e.lc-icon.col-auto
+								+icon('chevron-down')
+							+lcDD()
+				.col-auto.d-md-none
+					+e.burger.mvp-burger-js
+						span
+		+mvpMmenu()
+	// end headerAlt
+
+mixin lcDD()
+	+b.lc-dd
+		+e.box
+			+e.name Константинопольский К. К.
+			ul
+				li: a(href="#") Мое резюме
+				li: a(href="#") Настройки профиля
+				li: a(href="#") Подборки вакансий
+				li: a.muted(href="#") Выйти из профиля
+
+mixin mvpMmenu()
+	+b.mvp-menu--js
+		ul
+			li: a(href='#') О компании
+			li: a(href='#') Контакты
+			li: a(href='#') Помощь

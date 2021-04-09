@@ -1,0 +1,59 @@
+mixin footerN(data)
+	// start footerN
+	+b.FOOTER.footerN#footerN&attributes(attributes)
+		+e.ball--1
+		+e.ball--2
+		+e.container.container
+			+e.row.row.row--mb
+				.col-xl-auto
+					+e.logo.mx-auto.mx-xl-0(href="/")
+						img(loading="lazy" src='img/svg/logo.svg' alt="")
+					+e.gray-txt.text-center.text-xl-start
+						| Поиск компаний, вакансий
+						|
+						br.d-none.d-xl-block
+						| и резюме в сфере медицины
+					+e.like.d-none.d-xl-flex
+						+e.l-icon
+							+icon('like')
+						+e.l-txt 244
+				+e.menu-col.col-xl.d-none.d-xl-block
+					+e.menu-row.row
+						+fNMenu('MedicJobs', 'О компании', 'Контакты', 'Помощь')
+						+fNMenu('Соискателю', 'Добавить резюме', 'Поиск вакансий')
+						+fNMenu('Работодателю', 'Разместить вакансию')
+				.col-xl-auto
+					+e.soc-items.row.row--mb.justify-content-center.justify-content-xl-end
+						+fNSocItem('vk')
+						+fNSocItem('inst')
+						+fNSocItem('tg')
+					+e.all-rights.mb-27.d-xl-none © 2021 Все права защищены Medicjobs.ru.
+					+e.policy-links.text-center.text-xl-end.pb-12.pb-xl-0
+						+e.p-link(href='#') Пользовательское соглашение
+						+e.p-link(href='#') Политика конфиденциальности
+				.col-12.mb-0
+				.col-xl.align-self-xl-center.d-xl-block.d-none
+					+e.all-rights © 2021 Все права защищены Medicjobs.ru.
+				.col-xl-auto.align-self-xl-center
+					+e.scroll-top.scroll-top-js.justify-content-center
+						+e.st-txt Наверх
+						+e.st-ball
+							+icon('chevron-top')
+				.col-12.d-xl-none.text-center
+					+e.like.d-inline-flex
+						+e.l-icon
+							+icon('like')
+						+e.l-txt 244
+	// end footerN
+
+mixin fNMenu(title, ...items)
+	.col
+		+e.m-title=title
+		+e.UL.m-list
+			- for(let item of items)
+				li: a(href="#")=item
+
+mixin fNSocItem(imgNum)
+	.col-auto
+		+e.s-item(href='#')
+			img(loading="lazy" src=`img/svg/soc-fn-${imgNum}.svg` alt="")

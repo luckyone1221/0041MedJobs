@@ -1,18 +1,29 @@
 :root {
 	--animate-delay: 1.2s;
 	--fontSizeBase: #{$em-base};
+
+	--sPT: #{rem(40)};
+	--sPB: #{rem(45)};
+	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(80)};
 		--sPB: #{rem(90)};
 		--sTPB: #{rem(40)};
 	}
 
-	--sPT: #{rem(80 / 2)};
-	--sPB: #{rem(90 / 2)};
-	--sTPB: #{rem(40 / 2)};
-
 	--header-h: 76px;
 
+	--mvp-cont-padd-x: 18px;
+	@include media-breakpoint-up(md){
+		--mvp-cont-padd-x: 24px;
+	}
+	@include media-breakpoint-up(xl){
+		--mvp-cont-padd-x: 48px;
+	}
+
+	--cont-mw-xl: 1140px;
+
+	//
 	--swiperArrowSize: #{rem(68)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
 	--swiperBorderColorDef: var(--bs-primary);
@@ -22,5 +33,4 @@
 	--swiperBorderColorDefHover: var(--bs-primary);
 	--swiperColorDefHover: var(--bs-primary);
 	--swiperBgDefHover: #ffffff;
-
 }

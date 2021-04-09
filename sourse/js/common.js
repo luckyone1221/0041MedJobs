@@ -1,4 +1,3 @@
-
 const JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -191,7 +190,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '00.png';
+	screenName = '020-576.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -246,7 +245,6 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
-
 	});
 	// modal window
 
@@ -349,9 +347,31 @@ function eventHandler() {
 	$('.scroll-top-js').click(function (){
 		window.scrollTo(0,0);
 	});
+	//020 page +
+	$('.mvp-burger-js').click(function (){
+		$(this).toggleClass('active');
+		$('.mvp-menu--js').toggleClass('active');
+	});
 
+	//
+	let sidebarSlider = new Swiper('.sidebar-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 12,
+
+		slidesPerView: 'auto',
+		freeMode: true,
+		//freeModeMomentum: true,
+	});
+
+	//sidebar item js
+	//.sidebar-item-js
 
 	//end luckyone js
+
+	//todo New
+	//1 mob menu missclick
+	//2 kill ui kit
+
 
 };
 if (document.readyState !== 'loading') {
@@ -359,3 +379,4 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+

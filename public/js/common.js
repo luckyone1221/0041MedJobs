@@ -185,7 +185,7 @@ var JSCCommon = {
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
+	var _defaultSl, _Swiper;
 
 	JSCCommon.ifie();
 	JSCCommon.modalCall(); //JSCCommon.tabscostume('tabs');
@@ -197,7 +197,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '00.png';
+	screenName = '020-576.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -335,7 +335,22 @@ function eventHandler() {
 
 	$('.scroll-top-js').click(function () {
 		window.scrollTo(0, 0);
-	}); //end luckyone js
+	}); //020 page +
+
+	$('.mvp-burger-js').click(function () {
+		$(this).toggleClass('active');
+		$('.mvp-menu--js').toggleClass('active');
+	}); //
+
+	var sidebarSlider = new Swiper('.sidebar-slider-js', (_Swiper = {
+		slidesPerView: 'auto',
+		spaceBetween: 12
+	}, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "freeMode", true), _Swiper)); //sidebar item js
+	//.sidebar-item-js
+	//end luckyone js
+	//todo New
+	//1 mob menu missclick
+	//2 kill ui kit
 }
 
 ;

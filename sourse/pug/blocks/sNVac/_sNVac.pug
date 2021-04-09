@@ -1,0 +1,56 @@
+mixin sNVac(data)
+	// start sNVac
+	+b.sNVac#sNVac&attributes(attributes)
+		+e.items
+			+snVacItem({
+				time: 'Вчера, 17:53',
+				vacName: 'Врач хирург-терапевт',
+				salary: '330 000 ₽'
+			})
+			+snVacItem({
+				time: '24 февраля 2021',
+				imgName: '1',
+				vacName: 'Врач педиатр',
+				salary: '70 000 ₽'
+			})
+			+snVacItem({
+				time: '24 февраля 2021',
+				imgName: '2',
+				vacName: 'Гинеколог',
+				salary: '200 000 ₽ – 250 000 ₽'
+			})
+			+snVacItem({
+				time: 'Вчера, 17:53',
+				vacName: 'Врач хирург-терапевт',
+				salary: 'з/п не указана'
+			})
+	// end sNVac
+
+mixin snVacItem(data)
+	+e.item
+		+e.main-row.row.row--mb.align-items-center
+			.col-md
+				+e.data-row.row.align-items-center
+					.col-auto
+						+e.img(href='#')
+							if data.imgName
+								img(loading="lazy" src=`img/@2x/n-chosen-${data.imgName}.png` alt="")
+							else
+								img(loading="lazy" src=`img/svg/sqsuare-users-stab.svg` alt="")
+					.col-auto
+						+e.vac-name(href='#')=data.vacName
+						+e.salary=data.salary
+						+e.loc-row.row.row--mb.align-items-center
+							.col-auto
+								+e.company(href='#') ООО УК Медгард
+							.col-auto
+								+e.city г. Санкт-Петербург
+			.col-md-auto
+				+e.sub-row.row.row--mb.align-items-center
+					.col-auto
+						+e.time=data.time
+					.col-auto
+						+e.detail-btn(href="#") Подробнее
+					.col-auto
+						+e.like-btn(href="#")
+							+icon('like-fill')
