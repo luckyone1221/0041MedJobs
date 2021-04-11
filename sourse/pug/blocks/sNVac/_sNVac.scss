@@ -96,7 +96,16 @@
 		color: $gray-600;
 	}
 	&__detail-btn{
-		@extend .btn-outline-light-default;
+		@extend .btn;
+		@extend .btn-outline-light;
+
+		border-radius: 50px;
+		font-size: 15px;
+		line-height: (18/15);
+		padding: 10px 24px;
+		color: $headings-color;
+
+		box-shadow: none!important;
 	}
 	&__like-btn{
 		display: flex;

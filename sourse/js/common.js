@@ -411,14 +411,18 @@ function eventHandler() {
 	//from jetbrains animation
 	$('.sidebar-trakcer-js').mousemove(function (){
 		if (!this.parentElement.classList.contains('active')) return;
-		// let top = event.offsetY;
-		// let left = event.offsetX;
 
 		let balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
 		for (let ball of balls){
 			ball.setAttribute("style", `top: ${event.offsetY}px; left: ${event.offsetX}px;`);
 		}
-	})
+	}).mouseenter(function (){
+		let balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
+		$(balls).addClass('has-transition');
+		window.setTimeout(function (){
+			$(balls).removeClass('has-transition');
+		}, 300)
+	});
 
 	//end luckyone js
 

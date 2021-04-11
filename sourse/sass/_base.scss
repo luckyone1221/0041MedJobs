@@ -492,7 +492,7 @@ h5{
 
 	&:before{
 		opacity: 1;
-		@include mt();
+		@include mt($smooth);
 		content: '';
 		position: absolute;
 		z-index: -1;
@@ -504,7 +504,7 @@ h5{
 	}
 	&:after{
 		opacity: 0;
-		@include mt();
+		@include mt($smooth);
 		content: '';
 		position: absolute;
 		z-index: -1;

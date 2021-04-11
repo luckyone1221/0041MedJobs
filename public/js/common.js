@@ -396,9 +396,7 @@ function eventHandler() {
 	}); //from jetbrains animation
 
 	$('.sidebar-trakcer-js').mousemove(function () {
-		if (!this.parentElement.classList.contains('active')) return; // let top = event.offsetY;
-		// let left = event.offsetX;
-
+		if (!this.parentElement.classList.contains('active')) return;
 		var balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
 
 		var _iterator = _createForOfIteratorHelper(balls),
@@ -414,6 +412,12 @@ function eventHandler() {
 		} finally {
 			_iterator.f();
 		}
+	}).mouseenter(function () {
+		var balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
+		$(balls).addClass('has-transition');
+		window.setTimeout(function () {
+			$(balls).removeClass('has-transition');
+		}, 300);
 	}); //end luckyone js
 	//todo New
 	//2 kill ui kit

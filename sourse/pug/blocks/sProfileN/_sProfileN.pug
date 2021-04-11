@@ -75,7 +75,7 @@ mixin sProfileN(data)
 									+e.input-wrap.form-group
 										label
 											+e.SPAN.input-title.reuire Текущий пароль
-											+e.inp-cont
+											+e.SPAN.inp-cont
 												+e.INPUT.input.form-control(type="password" required name="current-pass" placeholder="Введите текущий пароль")
 												+e.show-hide-btn.toggle-pass-inp-js
 													+icon('pass-eye')
@@ -83,7 +83,7 @@ mixin sProfileN(data)
 									+e.input-wrap.form-group
 										label
 											+e.SPAN.input-title.reuire Новый пароль
-											+e.inp-cont
+											+e.SPAN.inp-cont
 												+e.INPUT.input.form-control(type="password" required name="new-pass" placeholder="Введите новый пароль")
 												+e.show-hide-btn.toggle-pass-inp-js
 													+icon('pass-eye')
@@ -91,7 +91,7 @@ mixin sProfileN(data)
 									+e.input-wrap.form-group
 										label
 											+e.SPAN.input-title.reuire Новый пароль
-											+e.inp-cont
+											+e.SPAN.inp-cont
 												+e.INPUT.input.form-control(type="password" required name="new-pass-repeat" placeholder="Повторите новый пароль")
 												+e.show-hide-btn.toggle-pass-inp-js
 													+icon('pass-eye')
@@ -107,13 +107,13 @@ mixin sProfileN(data)
 								//-+input('', '', '', '')(value="")
 						.col-12
 							+profileNBox('Социальные профили', 'box-3')(class="row--mb soc-row")
-								+socProfieItem('mut-fb')
-								+socProfieItem('vk', 'has-dell-link', true)
-								+socProfieItem('mut-inst')
-								+socProfieItem('mut-tg')
-								+socProfieItem('mut-ok')
-								+socProfieItem('mut-tw')
-								+socProfieItem('mut-gpl')
+								+socProfieItem('fb')
+								+socProfieItem('vk', 'has-dell-link', true)(style="background-color: #2787F5;")
+								+socProfieItem('inst')
+								+socProfieItem('tg')
+								+socProfieItem('ok')
+								+socProfieItem('tw')
+								+socProfieItem('gpl')
 						.col-12
 							+profileNBox('Настройка уведомлений', 'box-4')
 								.col-12
@@ -158,8 +158,8 @@ mixin asideMenu()
 mixin socProfieItem(iconName, addClasses='', del=false)
 	.col-auto
 		+e.soc-item(class=addClasses)
-			+e.s-icon(href="#")
-				img(loading="lazy" src=`img/svg/soc-sq-${iconName}.svg` alt="")
+			+e.s-icon(href="#")&attributes(attributes)
+				+icon(`soc-${iconName}`)
 			if del
 				+e.s-link(href="#") Удалить
 			else
@@ -168,8 +168,8 @@ mixin socProfieItem(iconName, addClasses='', del=false)
 mixin customRadio(txt, name, val)
 	+b.LABEL.custom-radio
 		input(type="radio" class="invisible" name=name value=val)&attributes(attributes)
-		.circle
-		.txt=txt
+		span.circle
+		span.txt=txt
 
 mixin profileNBox(title, boxId, titleClasses)
 	+e.box(id=boxId)
