@@ -148,7 +148,7 @@ mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очен
 					option(value=item)=item
 
 mixin asideMenu()
-	+e.aside-menu
+	+e.aside-menu.aside-menu-js
 		ul
 			li: a.active(href='#box-1') Личные данные
 			li: a(href='#box-2') Безопасность
@@ -172,7 +172,7 @@ mixin customRadio(txt, name, val)
 		span.txt=txt
 
 mixin profileNBox(title, boxId, titleClasses)
-	+e.box(id=boxId)
+	+e.box.sidebar-box-js(id=boxId)
 		+form-wrap
 			+e.b-title(class=titleClasses)=title
 			+e.b-row.row&attributes(attributes)

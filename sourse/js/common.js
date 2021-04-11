@@ -423,6 +423,40 @@ function eventHandler() {
 			$(balls).removeClass('has-transition');
 		}, 300)
 	});
+	//aside menu js
+	let sidebarItems = document.querySelectorAll('.sidebar-box-js');
+	let sidebarLinks = document.querySelectorAll('.aside-menu-js > ul > li > a');
+	let sideBarItemsTop = [];
+
+	function setSBItemTop(){
+		for(let [index, item] of Object.entries(sidebarItems)){
+			sideBarItemsTop.push(item.getBoundingClientRect().top + item.offsetHeight);
+		}
+	}
+	if (sidebarLinks.length > 0 && sidebarItems.length > 0){
+		setSBItemTop();
+		window.addEventListener('resize', function (){
+			setSBItemTop();
+		}, {passive: true});
+	}
+
+	document.addEventListener('scroll', function (){
+		let scrollTop = window.scrollY;
+		for(let [index, boxAbsoluteBottom] of Object.entries(sideBarItemsTop)){
+			let prev;
+			if (index == 0){
+				prev = 0;
+			}
+			else{
+				prev = sideBarItemsTop[index-1];
+			}
+
+			if (scrollTop < boxAbsoluteBottom && scrollTop > prev){
+				$(sidebarLinks).removeClass('active');
+				sidebarLinks[index].classList.add('active');
+			}
+		}
+	}, {passive: true});
 
 	//end luckyone js
 

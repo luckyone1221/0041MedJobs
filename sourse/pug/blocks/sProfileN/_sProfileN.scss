@@ -48,6 +48,10 @@
 
 	//
 	&__aside-menu{
+		position: sticky;
+		z-index: 1;
+		top: 0;
+
 		padding-top: 52px;
 		width: var(--aside-r-w, 240px);
 
@@ -296,7 +300,8 @@
 				line-height: (18/15);
 
 				&.muted{
-					pointer-events: none;
+					cursor: not-allowed!important;
+					//pointer-events: none;
 					background: $light;
 					color: $secondary!important;
 					&:before,
