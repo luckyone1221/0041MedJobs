@@ -398,7 +398,7 @@ function eventHandler() {
 	})
 	function bellPPMissClick(){
 		if (!event.target.closest('.bell-dd--js')){
-			document.body.removeEventListener('click', bellPPMissClick);
+			document.body.removeEventListener('click', nMenuMissClick);
 			$('.bell-dd--js').removeClass('active');
 		}
 	}
@@ -457,20 +457,6 @@ function eventHandler() {
 			}
 		}
 	}, {passive: true});
-
-	//.lc-cont-js
-	$('.lc-cont-js').click(function (){
-		document.body.removeEventListener('click', lcPPMissClick);
-		$('.lc-dd--js').toggleClass('active');
-		event.stopPropagation();
-		document.body.addEventListener('click', lcPPMissClick);
-	});
-	function lcPPMissClick(){
-		if (!event.target.closest('.bell-dd--js')){
-			document.body.removeEventListener('click', lcPPMissClick);
-			$('.lc-dd--js').removeClass('active');
-		}
-	}
 
 	//end luckyone js
 
