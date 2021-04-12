@@ -9,6 +9,8 @@
 	--sPB: 60px;
 	@include media-breakpoint-up(xl){
 		--sPB: 60px;
+		// position: static;
+	overflow: visible;
 	}
 
 	@include media-breakpoint-up(xl){
