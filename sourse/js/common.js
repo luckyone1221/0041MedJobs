@@ -353,23 +353,6 @@ function eventHandler() {
 	//020 page +
 	//020 page +
 	//020 page +
-
-	$('.mvp-burger-js').click(function (){
-		document.body.removeEventListener('click', nMenuMissClick);
-		$(this).toggleClass('active');
-		event.stopPropagation();
-		$('.mvp-menu--js').toggleClass('active');
-		document.body.addEventListener('click', nMenuMissClick);
-	});
-
-	function nMenuMissClick(){
-		if (!event.target.closest('.mvp-menu--js')){
-			document.body.removeEventListener('click', nMenuMissClick);
-			$('.mvp-menu--js').removeClass('active');
-		}
-	}
-
-	//
 	let sidebarSlider = new Swiper('.sidebar-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 12,
@@ -390,18 +373,8 @@ function eventHandler() {
 		$(this).toggleClass('active');
 	})
 
-	$('.bell-js').click(function (){
-		document.body.removeEventListener('click', bellPPMissClick);
-		$('.bell-dd--js').toggleClass('active');
-		event.stopPropagation();
-		document.body.addEventListener('click', bellPPMissClick);
-	})
-	function bellPPMissClick(){
-		if (!event.target.closest('.bell-dd--js')){
-			document.body.removeEventListener('click', bellPPMissClick);
-			$('.bell-dd--js').removeClass('active');
-		}
-	}
+	//
+
 	//
 	$('.default-select-js').select2({
 		minimumResultsForSearch: Infinity,
@@ -462,14 +435,55 @@ function eventHandler() {
 	$('.lc-cont-js').click(function (){
 		document.body.removeEventListener('click', lcPPMissClick);
 		$('.lc-dd--js').toggleClass('active');
-		event.stopPropagation();
-		document.body.addEventListener('click', lcPPMissClick);
+		window.setTimeout(function (){
+			document.body.addEventListener('click', lcPPMissClick);
+		}, 10);
 	});
 	function lcPPMissClick(){
-		if (!event.target.closest('.bell-dd--js')){
+		if (!event.target.closest('.lc-dd--js')){
 			document.body.removeEventListener('click', lcPPMissClick);
 			$('.lc-dd--js').removeClass('active');
 		}
+	}
+	//dd js
+	$('.bell-js').click(function (){
+		document.body.removeEventListener('click', bellPPMissClick);
+		$('.bell-dd--js').toggleClass('active');
+		window.setTimeout(function (){
+			document.body.addEventListener('click', bellPPMissClick);
+		}, 10);
+	})
+	function bellPPMissClick(){
+		if (!event.target.closest('.bell-dd--js')){
+			document.body.removeEventListener('click', bellPPMissClick);
+			$('.bell-dd--js').removeClass('active');
+		}
+	}
+	//020 menu
+	$('.mvp-burger-js').click(function (){
+		document.body.removeEventListener('click', nMenuMissClick);
+		$(this).toggleClass('active');
+		$('.mvp-menu--js').toggleClass('active');
+		window.setTimeout(function (){
+			document.body.addEventListener('click', nMenuMissClick);
+		}, 10);
+	});
+
+	function nMenuMissClick(){
+		if (!event.target.closest('.mvp-menu--js')){
+			document.body.removeEventListener('click', nMenuMissClick);
+			$('.mvp-menu--js, .mvp-burger-js').removeClass('active');
+		}
+	}
+	//css vars
+	let header = document.querySelector("#headerAlt");
+	function calcCssVars() {
+		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+	}
+	if (header){
+		window.addEventListener('resize', calcCssVars, { passive: true });
+		window.addEventListener('scroll', calcCssVars, { passive: true });
+		calcCssVars();
 	}
 
 	//end luckyone js
