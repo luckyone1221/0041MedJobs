@@ -58,7 +58,7 @@
 	&__aside-menu{
 		position: sticky;
 		z-index: 1;
-		top: 0;
+		top: calc(var(--header-h) + 0px);
 
 		padding-top: 57px;
 		width: var(--aside-r-w, 240px);
@@ -500,9 +500,9 @@
 
 .l-side-menu{
 	position: sticky;
-	top: rem(40);
+	//top: rem(40);
+	top: calc(var(--header-h) + 20px);
 	max-width: 100%;
-	// overflow: hidden;
 	@include media-breakpoint-up(xl){
 		width: var(--aside-l-w, 240px);
 	}
