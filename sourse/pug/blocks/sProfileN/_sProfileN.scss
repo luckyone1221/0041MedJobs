@@ -1,5 +1,7 @@
 // start .sProfileN
 .sProfileN {
+	position: relative;
+	overflow: hidden;
 	--sPT: 18px;
 	@include media-breakpoint-up(md){
 		--sPT: 24px;
@@ -25,10 +27,14 @@
 			--col-mb: 24px;
 		}
 	}
-	&__content-col{
-		@include media-breakpoint-up(xxl){
-			max-width: calc(1140px + var(--mvp-cont-padd-x, 24px));
-		}
+	&__content-col{ 
+			@media (min-width: 1920px){
+			max-width: calc(100% -340px -340px);
+	 
+	}
+		// @include media-breakpoint-up(xxl){
+		// 	max-width: calc(1140px + var(--mvp-cont-padd-x, 24px));
+		// }
 	}
 
 	//
@@ -491,6 +497,10 @@
 }
 
 .l-side-menu{
+	position: sticky;
+	top: rem(40);
+	max-width: 100%;
+	// overflow: hidden;
 	@include media-breakpoint-up(xl){
 		width: var(--aside-l-w, 240px);
 	}

@@ -122,15 +122,20 @@
 	}
 	&__lc-row{
 		@include roww(12px);
+		cursor: pointer;
 
 		--chevron-tf: rotateX(0deg);
 		--dd-scale: 0;
+		
+		position: relative;
+	}
+	&__lc-cont{
+		position: relative;
 		&:hover{
 			--chevron-tf: rotateX(180deg);
 			--dd-scale: 1;
 		}
-
-		position: relative;
+		
 	}
 	&__lc-txt{
 

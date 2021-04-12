@@ -935,3 +935,12 @@ h5{
 		background-color: $primary;
 	}
 }
+
+.center-block{
+	@media (min-width: 1920px) {
+		// margin-left: 0;
+		margin-left: auto;
+	}
+	margin-right: auto;
+	max-width: 1140px;
+}

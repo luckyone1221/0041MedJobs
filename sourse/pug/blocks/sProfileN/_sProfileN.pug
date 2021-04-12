@@ -6,135 +6,136 @@ mixin sProfileN(data)
 				.col-xl-auto
 					+lSidebarN()
 				.col-xl
-					+e.title-row.row.row--mb.align-items-center
-						.col
-							+e.H1.title Настройки профиля
-						.col-auto
-							+e.look(href='#') Как выглядит мой профиль
-						.col-12
-							+profileNBox('Личные данные', 'box-1')
-								+e.b-col-pd.col-xl-auto
-									+input('', 'text', 'Фамилия', 'surname')(value="Ишметов")
-									+input('', 'text', 'Имя', 'name')(value="Михаил")
-									+input('', 'text', 'Отчество', 'father-name')(value="Сергеевич")
-								+e.port-col.col-auto.ms-auto
-									+e.b-portrait(href='#')
-										img(loading="lazy" src="img/svg/company-stab.svg" alt="")
-									+e.b-change(href='#')
-										+e.b-change-img
-											img(loading="lazy" src="img/svg/cloud.svg" alt="")
-										span Заменить
-								+e.b-col-pd--base.col-xl-auto
-									//-radio
-									+e.input-wrap--no-lab
-										+e.input-title Пол
-										+e.inps-row.row.radio-row
-											.col-auto
-												+customRadio('Мужской','male','man')(checked)
-											.col-auto
-												+customRadio('Женский','male','woman')
-									//-birth
-									+e.input-wrap--no-lab
-										+e.input-title Дата рождения
-										+e.inps-row.row
-											.col-auto
-												+e.INPUT.input.day-inp.form-control(type="number" value='22' min='1' max='31')
-											.col
-												+customSlect('month', ['Января','Февраля','Марта'])
-											.col
-												+customSlect('year')
-													option 1997
-													- for (var i=1998; i <= new Date().getFullYear(); i++)
-														option=i
-									+e.input-wrap--no-lab
-										+e.input-title Город проживания
-										+e.inps-row.row
-											.col-12
-												+customSlect('city', ['Самара','Самара2','Самара2'])
-												//+customSlect('city', ['','',''])
-												//-+e.SELECT.select.form-control.form-select
-													option Самара
-													option Самара 2
-													option Самара 3
-									+input('', 'email', 'Email')(value="arts.man@mail.ru")
-									+input('', 'tel', 'Телефон')(value="+79198112848")
-									//-radio
-									+e.input-wrap--no-lab
-										+e.input-title Статус на сайте
-										+e.inps-row.row.radio-row
-											.col-auto
-												+customRadio('Ищу работу','work-looking-status','Ищу работу')(checked)
-											.col-auto
-												+customRadio('Не рассматриваю','work-looking-status','Не рассматриваю')
-								+e.btn-col.col-12
-									+e.save-btn(type="submit") Сохранить изменения
-						.col-12
-							+profileNBox('Безопасность', 'box-2', 'pt-12 pt-md-0')
-								+e.pass-col.col-base
-									//-1
-									+e.input-wrap.form-group
-										label
-											+e.SPAN.input-title.reuire Текущий пароль
-											+e.SPAN.inp-cont
-												+e.INPUT.input.form-control(type="password" required name="current-pass" placeholder="Введите текущий пароль")
-												+e.show-hide-btn.toggle-pass-inp-js
-													+icon('pass-eye')
-									//-2
-									+e.input-wrap.form-group
-										label
-											+e.SPAN.input-title.reuire Новый пароль
-											+e.SPAN.inp-cont
-												+e.INPUT.input.form-control(type="password" required name="new-pass" placeholder="Введите новый пароль")
-												+e.show-hide-btn.toggle-pass-inp-js
-													+icon('pass-eye')
-									//-3
-									+e.input-wrap.form-group
-										label
-											+e.SPAN.input-title.reuire Новый пароль
-											+e.SPAN.inp-cont
-												+e.INPUT.input.form-control(type="password" required name="new-pass-repeat" placeholder="Повторите новый пароль")
-												+e.show-hide-btn.toggle-pass-inp-js
-													+icon('pass-eye')
-								+e.hint-col.col-base-auto
-									+e.h-title Пароль должен содержать:
-									+e.UL.h-list
-										li хотя бы одну цифру (0-9)
-										li хотя бы одну латинскую строчную букву (a-z)
-										li хотя бы одну латинскую прописную букву (A-Z)
-										li 6 знаков и более
-								+e.btn-col--security.col-12
-									+e.save-btn.muted(type="submit") Сохранить изменения
-								//-+input('', '', '', '')(value="")
-						.col-12
-							+profileNBox('Социальные профили', 'box-3')(class="row--mb soc-row")
-								+socProfieItem('fb')
-								+socProfieItem('vk', 'has-dell-link', true)(style="background-color: #2787F5;")
-								+socProfieItem('inst')
-								+socProfieItem('tg')
-								+socProfieItem('ok')
-								+socProfieItem('tw')
-								+socProfieItem('gpl')
-						.col-12
-							+profileNBox('Настройка уведомлений', 'box-4')
-								.col-12
-									+e.chb-title СМС-Уведомления
-									+customChbGroup(['Уведомления о приглашениях на вакансии','Напоминание о собеседовании'])
-									+e.chb-title PUSH-уведомления
-									+customChbGroup(['Просмотры','Вакансии','Приглашения','Рекомендации'])
-									+e.chb-title Почтовые рассылки
-									+customChbGroup([
-										'Советы по эффективному поиску работы',
-										'Акции сайта для соискателей',
-										'Анонсы мероприятий для соискателей',
-										'Предложения наших партнеров для соискателей',
-										'Уведомления от работодателей',
-										'Вакансии, которые могут быть вам интересны',
-										'Полезные новости и опросы для соискателей',
-										'Вакансии по вашей подписке',
-										'Напоминание о собеседовании'
-									])
-								+e.btn-col.pt-md-15.pt-xl-25.col-12
-									+e.save-btn(type="submit") Сохранить изменения
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title Настройки профиля
+							.col-auto
+								+e.look(href='#') Как выглядит мой профиль
+							.col-12
+								+profileNBox('Личные данные', 'box-1')
+									+e.b-col-pd.col-xl-auto
+										+input('', 'text', 'Фамилия', 'surname')(value="Ишметов")
+										+input('', 'text', 'Имя', 'name')(value="Михаил")
+										+input('', 'text', 'Отчество', 'father-name')(value="Сергеевич")
+									+e.port-col.col-auto.ms-auto
+										+e.b-portrait(href='#')
+											img(loading="lazy" src="img/svg/company-stab.svg" alt="")
+										+e.b-change(href='#')
+											+e.b-change-img
+												img(loading="lazy" src="img/svg/cloud.svg" alt="")
+											span Заменить
+									+e.b-col-pd--base.col-xl-auto
+										//-radio
+										+e.input-wrap--no-lab
+											+e.input-title Пол
+											+e.inps-row.row.radio-row
+												.col-auto
+													+customRadio('Мужской','male','man')(checked)
+												.col-auto
+													+customRadio('Женский','male','woman')
+										//-birth
+										+e.input-wrap--no-lab
+											+e.input-title Дата рождения
+											+e.inps-row.row
+												.col-auto
+													+e.INPUT.input.day-inp.form-control(type="number" value='22' min='1' max='31')
+												.col
+													+customSlect('month', ['Января','Февраля','Марта'])
+												.col
+													+customSlect('year')
+														option 1997
+														- for (var i=1998; i <= new Date().getFullYear(); i++)
+															option=i
+										+e.input-wrap--no-lab
+											+e.input-title Город проживания
+											+e.inps-row.row
+												.col-12
+													+customSlect('city', ['Самара','Самара2','Самара2'])
+													//+customSlect('city', ['','',''])
+													//-+e.SELECT.select.form-control.form-select
+														option Самара
+														option Самара 2
+														option Самара 3
+										+input('', 'email', 'Email')(value="arts.man@mail.ru")
+										+input('', 'tel', 'Телефон')(value="+79198112848")
+										//-radio
+										+e.input-wrap--no-lab
+											+e.input-title Статус на сайте
+											+e.inps-row.row.radio-row
+												.col-auto
+													+customRadio('Ищу работу','work-looking-status','Ищу работу')(checked)
+												.col-auto
+													+customRadio('Не рассматриваю','work-looking-status','Не рассматриваю')
+									+e.btn-col.col-12
+										+e.save-btn(type="submit") Сохранить изменения
+							.col-12
+								+profileNBox('Безопасность', 'box-2', 'pt-12 pt-md-0')
+									+e.pass-col.col-base
+										//-1
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title.reuire Текущий пароль
+												+e.SPAN.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="current-pass" placeholder="Введите текущий пароль")
+													+e.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										//-2
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title.reuire Новый пароль
+												+e.SPAN.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="new-pass" placeholder="Введите новый пароль")
+													+e.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										//-3
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title.reuire Новый пароль
+												+e.SPAN.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="new-pass-repeat" placeholder="Повторите новый пароль")
+													+e.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+									+e.hint-col.col-base-auto
+										+e.h-title Пароль должен содержать:
+										+e.UL.h-list
+											li хотя бы одну цифру (0-9)
+											li хотя бы одну латинскую строчную букву (a-z)
+											li хотя бы одну латинскую прописную букву (A-Z)
+											li 6 знаков и более
+									+e.btn-col--security.col-12
+										+e.save-btn.muted(type="submit") Сохранить изменения
+									//-+input('', '', '', '')(value="")
+							.col-12
+								+profileNBox('Социальные профили', 'box-3')(class="row--mb soc-row")
+									+socProfieItem('fb')
+									+socProfieItem('vk', 'has-dell-link', true)(style="background-color: #2787F5;")
+									+socProfieItem('inst')
+									+socProfieItem('tg')
+									+socProfieItem('ok')
+									+socProfieItem('tw')
+									+socProfieItem('gpl')
+							.col-12
+								+profileNBox('Настройка уведомлений', 'box-4')
+									.col-12
+										+e.chb-title СМС-Уведомления
+										+customChbGroup(['Уведомления о приглашениях на вакансии','Напоминание о собеседовании'])
+										+e.chb-title PUSH-уведомления
+										+customChbGroup(['Просмотры','Вакансии','Приглашения','Рекомендации'])
+										+e.chb-title Почтовые рассылки
+										+customChbGroup([
+											'Советы по эффективному поиску работы',
+											'Акции сайта для соискателей',
+											'Анонсы мероприятий для соискателей',
+											'Предложения наших партнеров для соискателей',
+											'Уведомления от работодателей',
+											'Вакансии, которые могут быть вам интересны',
+											'Полезные новости и опросы для соискателей',
+											'Вакансии по вашей подписке',
+											'Напоминание о собеседовании'
+										])
+									+e.btn-col.pt-md-15.pt-xl-25.col-12
+										+e.save-btn(type="submit") Сохранить изменения
 				.col-xl-auto.d-none.d-xxl-block
 					+asideMenu()
 	// end sProfileN
@@ -215,8 +216,9 @@ mixin sProfileNEmpty(data)
 						+lSidebarSlide(4,'Избранные вакансии')(class='active')
 						+lSidebarSlide(5,'Подборки вакансий')
 				+e.content-col.col-xl
-					+e.title-row.row.row--mb.align-items-center
-						.col
-							+e.H1.title=data.title
-						.col-12
-							block
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title=data.title
+							.col-12
+								block
