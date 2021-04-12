@@ -10,8 +10,8 @@ mixin sProfileN(data)
 						+e.title-row.row.row--mb.align-items-center
 							.col
 								+e.H1.title Настройки профиля
-							.col-auto
-								//- +e.look(href='#') Как выглядит мой профиль
+							.col-12
+								+e.look(href='#') Как выглядит мой профиль
 							.col-12
 								+profileNBox('Личные данные', 'box-1')
 									+e.b-col-pd.col-xl-auto
@@ -20,7 +20,7 @@ mixin sProfileN(data)
 										+input('', 'text', 'Отчество', 'father-name')(value="Сергеевич")
 									+e.port-col.col-auto.ms-auto
 										+e.b-portrait(href='#')
-											img(loading="lazy" src="img/svg/company-stab.svg" alt="")
+											img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
 										+e.b-change(href='#')
 											+e.b-change-img
 												img(loading="lazy" src="img/svg/cloud.svg" alt="")
@@ -187,11 +187,11 @@ mixin lSidebarN()
 					if block
 						block
 					else
-						+lSidebarSlide(1,'Мой кабинет')
+						+lSidebarSlide(1,'Подборки вакансий')
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')(class='active')
 						+lSidebarSlide(4,'Избранные вакансии')
-						+lSidebarSlide(5,'Подборки вакансий')
+						//-+lSidebarSlide(5,'Подборки вакансий')
 
 mixin lSidebarSlide(imgNum, txt)
 	.swiper-slide

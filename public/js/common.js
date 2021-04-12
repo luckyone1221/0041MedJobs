@@ -392,7 +392,7 @@ function eventHandler() {
 
 	function bellPPMissClick() {
 		if (!event.target.closest('.bell-dd--js')) {
-			document.body.removeEventListener('click', nMenuMissClick);
+			document.body.removeEventListener('click', bellPPMissClick);
 			$('.bell-dd--js').removeClass('active');
 		}
 	} //
@@ -474,9 +474,24 @@ function eventHandler() {
 		}
 	}, {
 		passive: true
-	}); //end luckyone js
+	}); //.lc-cont-js
+
+	$('.lc-cont-js').click(function () {
+		document.body.removeEventListener('click', lcPPMissClick);
+		$('.lc-dd--js').toggleClass('active');
+		event.stopPropagation();
+		document.body.addEventListener('click', lcPPMissClick);
+	});
+
+	function lcPPMissClick() {
+		if (!event.target.closest('.bell-dd--js')) {
+			document.body.removeEventListener('click', lcPPMissClick);
+			$('.lc-dd--js').removeClass('active');
+		}
+	} //end luckyone js
 	//todo New
 	//2 kill ui kit
+
 }
 
 ;

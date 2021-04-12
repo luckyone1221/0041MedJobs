@@ -133,7 +133,7 @@
 		position: relative;
 		&:hover{
 			--chevron-tf: rotateX(180deg);
-			--dd-scale: 1;
+			//--dd-scale: 1;
 		}
 		
 	}
@@ -218,7 +218,10 @@
 	position: absolute;
 	transform-origin: top left;
 
-	transform: scaleY(var(--dd-scale, 0));
+	transform: scaleY(0);
+	&.active{
+		transform: scaleY(1);
+	}
 	top: 100%;
 	right: 0;
 	max-width: 80vw;
