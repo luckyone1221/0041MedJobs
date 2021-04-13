@@ -160,12 +160,17 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-
-		$(document).on('click', ".scroll-link", function () {
+		let header = document.querySelector("#headerAlt");
+		$(document).on('click', '.scroll-link, .aside-menu-js > ul > li > a', function () {
+			event.preventDefault();
 			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
+			const destination = $(elementClick).offset().top - header.offsetHeight - 20;
 
-			$('html, body').animate({ scrollTop: destination }, 1100);
+			//$('html, body').animate({ scrollTop: destination }, 1100);
+			window.scrollTo({
+				top: destination,
+				behavior: "smooth"
+			});
 
 			return false;
 		});
@@ -399,36 +404,43 @@ function eventHandler() {
 	//aside menu js
 	let sidebarItems = document.querySelectorAll('.sidebar-box-js');
 	let sidebarLinks = document.querySelectorAll('.aside-menu-js > ul > li > a');
-	let sideBarItemsTop = [];
+	let sideBarItemsMiddle = [];
 
-	function setSBItemTop(){
-		for(let [index, item] of Object.entries(sidebarItems)){
-			sideBarItemsTop.push(item.getBoundingClientRect().top + item.offsetHeight);
+	function setSBItemMiddle(){
+		for(let item of sidebarItems){
+			sideBarItemsMiddle.push(item.getBoundingClientRect().top + item.offsetHeight / 2);
 		}
 	}
+
 	if (sidebarLinks.length > 0 && sidebarItems.length > 0){
-		setSBItemTop();
 		window.addEventListener('resize', function (){
-			setSBItemTop();
+			setSBItemMiddle();
 		}, {passive: true});
+
+		setSBItemMiddle();
+		console.log(sideBarItemsMiddle);
 	}
 
 	document.addEventListener('scroll', function (){
 		let scrollTop = window.scrollY;
-		for(let [index, boxAbsoluteBottom] of Object.entries(sideBarItemsTop)){
+		for(let [index, middle] of Object.entries(sideBarItemsMiddle)){
 			let prev;
 			if (index == 0){
 				prev = 0;
 			}
 			else{
-				prev = sideBarItemsTop[index-1];
+				prev = sideBarItemsMiddle[index - 1];
 			}
+			//console.log(scrollTop, middle, prev, index);
 
-			if (scrollTop < boxAbsoluteBottom && scrollTop > prev){
+			if (scrollTop < middle && scrollTop > prev){
 				$(sidebarLinks).removeClass('active');
 				sidebarLinks[index].classList.add('active');
 			}
+			console.log('end cycle');
 		}
+
+		console.log('end listener');
 	}, {passive: true});
 
 	//.lc-cont-js

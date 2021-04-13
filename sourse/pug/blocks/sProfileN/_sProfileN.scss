@@ -58,11 +58,14 @@
 	&__aside-menu{
 		position: sticky;
 		z-index: 1;
-		top: calc(var(--header-h) - 30px);
-		//top: 0;
-
+		//top: calc(var(--header-h) - 30px);
+		top: calc(var(--header-h) + var(--sPT) - 57px);
 		padding-top: 57px;
 		width: var(--aside-r-w, 240px);
+		@media (min-width: 1920px) {
+			display: flex;
+			justify-content: flex-end;
+		}
 
 		& > ul{
 			list-style: none;
@@ -502,7 +505,9 @@
 .l-side-menu{
 	position: sticky;
 	//top: rem(40);
-	top: calc(var(--header-h) + 20px);
+	//top: calc(var(--header-h) + 20px);
+	top: calc(var(--header-h) + var(--sPT));
+
 	max-width: 100%;
 	@include media-breakpoint-up(xl){
 		width: var(--aside-l-w, 240px);

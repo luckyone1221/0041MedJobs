@@ -10,8 +10,8 @@ mixin sProfileN(data)
 						+e.title-row.row.row--mb.align-items-center
 							.col
 								+e.H1.title Настройки профиля
-							//- .col-12
-							//- 	+e.look(href='#') Как выглядит мой профиль
+							//-.col-12
+							//-	+e.look(href='#') Как выглядит мой профиль
 							.col-12
 								+profileNBox('Личные данные', 'box-1')
 									+e.b-col-pd.col-xl-auto
@@ -52,11 +52,6 @@ mixin sProfileN(data)
 											+e.inps-row.row
 												.col-12
 													+customSlect('city', ['Самара','Самара2','Самара2'])
-													//+customSlect('city', ['','',''])
-													//-+e.SELECT.select.form-control.form-select
-														option Самара
-														option Самара 2
-														option Самара 3
 										+input('', 'email', 'Email')(value="arts.man@mail.ru")
 										+input('', 'tel', 'Телефон')(value="+79198112848")
 										//-radio
@@ -105,7 +100,6 @@ mixin sProfileN(data)
 											li 6 знаков и более
 									+e.btn-col--security.col-12
 										+e.save-btn.muted(type="submit") Сохранить изменения
-									//-+input('', '', '', '')(value="")
 							.col-12
 								+profileNBox('Социальные профили', 'box-3')(class="row--mb soc-row")
 									+socProfieItem('fb')
@@ -191,7 +185,6 @@ mixin lSidebarN()
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')(class='active')
 						+lSidebarSlide(4,'Избранные вакансии')
-						//-+lSidebarSlide(5,'Подборки вакансий')
 
 mixin lSidebarSlide(imgNum, txt)
 	.swiper-slide
@@ -214,7 +207,7 @@ mixin sProfileNEmpty(data)
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')
 						+lSidebarSlide(4,'Избранные вакансии')(class='active')
-						+lSidebarSlide(5,'Подборки вакансий')
+						//-+lSidebarSlide(5,'Подборки вакансий')
 				+e.content-col.col-xl
 					.center-block
 						+e.title-row.row.row--mb.align-items-center

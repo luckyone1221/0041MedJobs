@@ -181,12 +181,16 @@ var JSCCommon = {
 		});
 	},
 	animateScroll: function animateScroll() {
-		$(document).on('click', ".scroll-link", function () {
+		var header = document.querySelector("#headerAlt");
+		$(document).on('click', '.scroll-link, .aside-menu-js > ul > li > a', function () {
+			event.preventDefault();
 			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top;
-			$('html, body').animate({
-				scrollTop: destination
-			}, 1100);
+			var destination = $(elementClick).offset().top - header.offsetHeight - 20; //$('html, body').animate({ scrollTop: destination }, 1100);
+
+			window.scrollTo({
+				top: destination,
+				behavior: "smooth"
+			});
 			return false;
 		});
 	},
@@ -401,48 +405,60 @@ function eventHandler() {
 
 	var sidebarItems = document.querySelectorAll('.sidebar-box-js');
 	var sidebarLinks = document.querySelectorAll('.aside-menu-js > ul > li > a');
-	var sideBarItemsTop = [];
+	var sideBarItemsMiddle = [];
 
-	function setSBItemTop() {
-		for (var _i = 0, _Object$entries = Object.entries(sidebarItems); _i < _Object$entries.length; _i++) {
-			var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
-					index = _Object$entries$_i[0],
-					item = _Object$entries$_i[1];
+	function setSBItemMiddle() {
+		var _iterator2 = _createForOfIteratorHelper(sidebarItems),
+				_step2;
 
-			sideBarItemsTop.push(item.getBoundingClientRect().top + item.offsetHeight);
+		try {
+			for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+				var item = _step2.value;
+				sideBarItemsMiddle.push(item.getBoundingClientRect().top + item.offsetHeight / 2);
+			}
+		} catch (err) {
+			_iterator2.e(err);
+		} finally {
+			_iterator2.f();
 		}
 	}
 
 	if (sidebarLinks.length > 0 && sidebarItems.length > 0) {
-		setSBItemTop();
 		window.addEventListener('resize', function () {
-			setSBItemTop();
+			setSBItemMiddle();
 		}, {
 			passive: true
 		});
+		setSBItemMiddle();
+		console.log(sideBarItemsMiddle);
 	}
 
 	document.addEventListener('scroll', function () {
 		var scrollTop = window.scrollY;
 
-		for (var _i2 = 0, _Object$entries2 = Object.entries(sideBarItemsTop); _i2 < _Object$entries2.length; _i2++) {
-			var _Object$entries2$_i = _slicedToArray(_Object$entries2[_i2], 2),
-					index = _Object$entries2$_i[0],
-					boxAbsoluteBottom = _Object$entries2$_i[1];
+		for (var _i = 0, _Object$entries = Object.entries(sideBarItemsMiddle); _i < _Object$entries.length; _i++) {
+			var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+					index = _Object$entries$_i[0],
+					middle = _Object$entries$_i[1];
 
 			var prev = void 0;
 
 			if (index == 0) {
 				prev = 0;
 			} else {
-				prev = sideBarItemsTop[index - 1];
-			}
+				prev = sideBarItemsMiddle[index - 1];
+			} //console.log(scrollTop, middle, prev, index);
 
-			if (scrollTop < boxAbsoluteBottom && scrollTop > prev) {
+
+			if (scrollTop < middle && scrollTop > prev) {
 				$(sidebarLinks).removeClass('active');
 				sidebarLinks[index].classList.add('active');
 			}
+
+			console.log('end cycle');
 		}
+
+		console.log('end listener');
 	}, {
 		passive: true
 	}); //.lc-cont-js
