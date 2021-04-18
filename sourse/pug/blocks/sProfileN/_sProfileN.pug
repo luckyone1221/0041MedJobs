@@ -215,3 +215,60 @@ mixin sProfileNEmpty(data)
 								+e.H1.title=data.title
 							.col-12
 								block
+
+mixin sProfileNCv(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xl-auto
+					+lSidebarN()
+						+lSidebarSlide(1,'Мой кабинет')
+						+lSidebarSlide(2,'Мое резюме')
+						+lSidebarSlide(3,'Настройки профиля')
+						+lSidebarSlide(4,'Избранные вакансии')(class='active')
+						//-+lSidebarSlide(5,'Подборки вакансий')
+				+e.content-col.col-xl
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title=data.title
+							.col-12
+								block
+				.col-xl-auto.d-none.d-xxl-block
+					+asideMenuCv()
+						+b.hint-row.row.mb-12
+							+e.title.col-auto Заполненность резюме
+							.col
+								+e.quest-sign
+									+icon('q-sign')
+									+e.hint-cont
+										+e.hint Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
+						+completeStrip('10%')(class="mb-24")
+
+mixin asideMenuCv()
+	+e.aside-menu--static.aside-menu-js
+		.d-block
+			block
+			ul
+				+asideMenuCvItem('Основная информация')
+				+asideMenuCvItem('Условия работы')
+				+asideMenuCvItem('Опыт работы')
+				+asideMenuCvItem('Образование')
+				+asideMenuCvItem('Обо мне')
+				+asideMenuCvItem('Семья')
+				+asideMenuCvItem('Место жительства')
+				+asideMenuCvItem('Профессиональные навыки')
+				+asideMenuCvItem('Общие навыки')
+				+asideMenuCvItem('Достижения и награды')
+				+asideMenuCvItem('Знание языков')
+				+asideMenuCvItem('Научная степень')
+				+asideMenuCvItem('Повышение квалификации')
+				+asideMenuCvItem('Предпочтения по работодателю')
+				+asideMenuCvItem('Предпочтения по вакансии')
+				+asideMenuCvItem('Статьи')
+				+asideMenuCvItem('Профессиональные сообщества')
+				+asideMenuCvItem('Автомобиль')
+
+mixin asideMenuCvItem(txt)
+	li: a(href='#')=txt

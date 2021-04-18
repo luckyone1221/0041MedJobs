@@ -195,7 +195,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '021-768.png';
+	screenName = '023-576.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -418,7 +418,6 @@ function eventHandler() {
 		}, {passive: true});
 
 		setSBItemMiddle();
-		console.log(sideBarItemsMiddle);
 	}
 
 	document.addEventListener('scroll', function (){
@@ -431,16 +430,12 @@ function eventHandler() {
 			else{
 				prev = sideBarItemsMiddle[index - 1];
 			}
-			//console.log(scrollTop, middle, prev, index);
 
 			if (scrollTop < middle && scrollTop > prev){
 				$(sidebarLinks).removeClass('active');
 				sidebarLinks[index].classList.add('active');
 			}
-			console.log('end cycle');
 		}
-
-		console.log('end listener');
 	}, {passive: true});
 
 	//.lc-cont-js

@@ -215,7 +215,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '021-768.png';
+	screenName = '023-576.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -430,7 +430,6 @@ function eventHandler() {
 			passive: true
 		});
 		setSBItemMiddle();
-		console.log(sideBarItemsMiddle);
 	}
 
 	document.addEventListener('scroll', function () {
@@ -447,18 +446,13 @@ function eventHandler() {
 				prev = 0;
 			} else {
 				prev = sideBarItemsMiddle[index - 1];
-			} //console.log(scrollTop, middle, prev, index);
-
+			}
 
 			if (scrollTop < middle && scrollTop > prev) {
 				$(sidebarLinks).removeClass('active');
 				sidebarLinks[index].classList.add('active');
 			}
-
-			console.log('end cycle');
 		}
-
-		console.log('end listener');
 	}, {
 		passive: true
 	}); //.lc-cont-js

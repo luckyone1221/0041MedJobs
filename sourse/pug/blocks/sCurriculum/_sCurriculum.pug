@@ -1,0 +1,107 @@
+mixin sCurriculum(data)
+	// start sCurriculum
+	+b.sCurriculum#sCurriculum&attributes(attributes)
+		+dataBox({
+			imgPass: 'svg/sm-portrait-stab.svg',
+			dataItems: [
+				{
+					key: 'Возраст',
+				},{
+					key: 'Город проживания',
+				},{
+					key: 'Email',
+					val: 'arts.man@mail.ru',
+				},{
+					key: 'Телефон',
+				}
+			],
+			soc: false,
+		})
+		+completeBox()
+		+addBox()
+
+	// end sCurriculum
+
+mixin dataBox(data)
+	+b.data-box.sCurriculum__box
+		+e.row.row
+			+e.img-col.col-xxl-auto
+				+e.sub-row.row.align-items-center
+					.col-auto
+						+e.img
+							img(loading="lazy" src=`img/${data.imgPass}` alt="")
+					.col
+						+e.name-box
+							+e.name.mb-12.mb-md-0.d-xl-none Контстантинопольский Контстантин Александрович
+							+e.edit-btn(href='#')
+								+icon('pencil')
+								span Редактировать
+			.col-xl
+				+e.name.d-none.d-xl-block.mb-24 Ишметов Михаил Сергеевич
+				+e.data-items
+					- for (let item of data.dataItems)
+						+nDataItem(item.key, item.val)
+					//- soc
+					+e.data-item.row
+						+e.key-col.col-auto Социальные профили
+						if data.soc
+							+e.val-col.col Place soc here
+						else
+							+e.val-col.col Не указаны
+
+mixin nDataItem(key='keyIsMissing', val)
+	+e.data-item.row
+		+e.key-col.col-auto=key
+		if val
+			+e.val-col.col=val
+		else
+			+e.val-col.col Не указан
+
+
+mixin addBox(data)
+	+b.add-box.sCurriculum__box
+		+e.title Добавить информацию в мое резюме
+		+e.descr Укажите дополнительную информацию в своем резюме, чтобы интеллектуальная подборка могла подобрать для вас наиболее подходящие вакансии.
+		+e.row.row
+			if block
+				block
+			else
+				+addBoxItem(1, 'Условия работы', '+17%')
+				+addBoxItem(2, 'Опыт работы', '+12%')
+				+addBoxItem(3, 'Образование', '+18%')
+				+addBoxItem(4, 'Обо мне', '+13%')
+				+addBoxItem(5, 'Семья', '+6%')
+				+addBoxItem(6, 'Место жительства', '+6%')
+				+addBoxItem(7, 'Профессиональные навыки', '+15%')
+				+addBoxItem(8, 'Общие навыки', '+15%')
+				+addBoxItem(9, 'Достижения и награды', '+7%')
+				+addBoxItem(10, 'Знание языков', '+15%')
+				+addBoxItem(11, 'Научная степень', '+5%')
+				+addBoxItem(12, 'Повышение квалификации', '+5%')
+				+addBoxItem(13, 'Предпочтения по работодателю', '+5%')
+				+addBoxItem(14, 'Предпочтения по вакансии', '+5%')
+				+addBoxItem(15, 'Статьи', '+5%')
+				+addBoxItem(16, 'Профессиональные сообщества', '+5%')
+				+addBoxItem(17, 'Автомобиль', '+5%')
+			//-+addBoxItem()
+
+mixin addBoxItem(imgNum, black, blue)
+	+e.col.col-6.col-md-auto
+		+e.item(href='#')
+			+e.img
+				img(loading="lazy" src=`img/@2x/add-box-item-${imgNum}.png` alt="")
+			+e.txt
+				span.black=black
+				span.blue=blue
+
+mixin completeBox()
+	+b.complete-box.sCurriculum__box.d-xxl-none
+		+e.title Заполненность резюме
+		+e.descr Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
+		+completeStrip('67%')
+
+mixin completeStrip(percentage)
+	+b.complete-strip&attributes(attributes)
+		+e.line-cont
+			+e.line(style=`width: ${percentage};`)
+		+e.number=percentage

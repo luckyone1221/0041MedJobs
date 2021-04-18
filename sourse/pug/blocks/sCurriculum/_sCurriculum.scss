@@ -1,0 +1,395 @@
+// start .sCurriculum
+.sCurriculum {
+
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	//
+	&__box{
+		position: relative;
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: 5px;
+		margin-bottom: 24px;
+
+		padding: 33px;
+		@include media-breakpoint-up(md){
+			padding: 37px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 47px;
+		}
+	}
+} // end.sCurriculum
+
+.data-box{
+	//margin-top: -6px;
+	@include media-breakpoint-up(md){
+		//margin-top: 0;
+	}
+
+	&__edit-btn{
+		@include media-breakpoint-up(md){
+			position: absolute;
+			top: 37px;
+			right: 38px;
+		}
+		@include media-breakpoint-up(xl){
+			top: 47px;
+			right: 49px;
+		}
+
+		display: flex;
+		align-items: center;
+
+		font-weight: 500;
+		font-size: 15px;
+
+		color: $secondary;
+		&:hover{
+			color: $primary;
+		}
+
+		.icon{
+			font-size: 24px;
+			margin-right: 12px;
+			color: currentColor;
+		}
+		span{
+			color: currentColor;
+		}
+	}
+	&__row{
+		@include roww(0);
+		@include media-breakpoint-up(xl){
+			@include roww(24px);
+		}
+		@include media-breakpoint-up(xxl){
+			@include roww(48px);
+		}
+		@include media-breakpoint-up(base){
+			@include roww(96px);
+		}
+	}
+	&__img-col{
+		margin-bottom: 38px;
+		padding-bottom: 38px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 24px;
+			padding-bottom: 23px;
+		}
+		border-bottom: 1px solid $gray-210;
+		@include media-breakpoint-up(xxl){
+			border-bottom: none;
+			border-right: 1px solid $gray-210;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		display: flex;
+		align-items: center;
+	}
+	&__sub-row{
+		@include roww(34px);
+		@include media-breakpoint-up(md){
+			@include roww(24px);
+		}
+		@include media-breakpoint-up(xl){
+			@include roww(0);
+		}
+	}
+	&__img{
+		width: 104px;
+		height: 104px;
+		@include media-breakpoint-up(md){
+			width: 124px;
+			height: 124px;
+		}
+		@include media-breakpoint-up(xl){
+			width: 150px;
+			height: 150px;
+		}
+		@include media-breakpoint-up(base){
+			width: 243px;
+			height: 243px;
+
+			//margin-top: -20px;
+		}
+		border-radius: 50%;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+
+		@include media-breakpoint-up(md){
+			max-width: calc(100% - 140px);
+		}
+		@include media-breakpoint-up(xl){
+			max-width: calc(100% - 155px);
+		}
+	}
+	&__data-items{
+
+	}
+	//data-item
+	&__data-item{
+		padding-bottom: 18px;
+		@include media-breakpoint-up(md){
+			padding-bottom: 24px;
+		}
+
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+	&__key-col{
+		width: 48%;
+		@include media-breakpoint-up(md){
+			width: 50%;
+		}
+		@include media-breakpoint-up(xxl){
+			width: 218px;
+		}
+
+		font-weight: 500;
+		color: $secondary;
+	}
+	&__val-col{
+
+	}
+	&__{}
+	&__{}
+}
+
+.add-box{
+
+	&__title{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+
+		margin-bottom: 15px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 24px;
+		}
+	}
+	&__descr{
+		font-size: 15px;
+		line-height: 1.6;
+
+		margin-bottom: 34px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 38px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 46px;
+		}
+	}
+	&__row{
+		@include roww(12px);
+		--bs-gutter-y: 12px;
+	}
+	&__col{
+
+	}
+	&__item{
+		@include mt();
+		min-height: 100%;
+		background: $white;
+
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.1);
+		&:hover{
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.2);
+		}
+
+		display: block;
+		text-align: center;
+		padding: 29px 17px;
+		@include media-breakpoint-up(md){
+			display: flex;
+			align-items: center;
+			border-radius: 60px;
+			text-align: left;
+			padding: 12px 24px;
+		}
+	}
+	&__img{
+		width: 34px;
+		height: 34px;
+		margin: 0 auto 18px auto;
+		@include media-breakpoint-up(md){
+			width: 24px;
+			height: 24px;
+			margin: 0 12px 0 0;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt{
+		font-weight: 500;
+		line-height: 1.5;
+
+		.black{
+			color: $headings-color;
+		}
+		.blue{
+			margin-left: 4px;
+			color: $primary;
+		}
+	}
+	&__{}
+	&__{}
+}
+
+.complete-box{
+	@include media-breakpoint-down(md){
+		//padding-top: 30px;
+	}
+	&__title{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+		margin-bottom: 16px;
+	}
+	&__descr{
+		line-height: 1.55;
+		margin-bottom: 18px;
+		@include media-breakpoint-up(md){
+			line-height: 1.5;
+			margin-bottom: 24px;
+		}
+	}
+
+	.complete-strip{
+		margin-bottom: 2px;
+	}
+}
+
+.complete-strip{
+	position: relative;
+	background: $white;
+	border: 1px solid $gray-210;
+	border-radius: 60px;
+	height: 40px;
+	padding: 3px;
+
+	&__line-cont{
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		border-radius: 60px;
+	}
+	&__line{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(86.99deg, $green 0.21%, $cyan 99.92%), $white;
+	}
+	&__number{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		font-weight: 500;
+	}
+}
+
+//
+.hint-row{
+	@include roww(5px);
+	position: relative;
+	z-index: 20;
+
+	&__title{
+		font-weight: 500;
+	}
+	&__quest-sign{
+		@include mt();
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background: $gray-210;
+		--hint-scale: 0;
+		&:hover{
+			background: $primary;
+			--hint-scale: 1;
+			.icon{
+				color: $white;
+			}
+		}
+		.icon{
+			@include mt();
+			font-size: 10px;
+			color: $gray-550;
+		}
+	}
+	&__hint-cont{
+		position: absolute;
+		@include mt();
+		transform: scaleY(var(--hint-scale));
+		transform-origin: top left;
+		z-index: 99;
+		left: 0;
+		top: 100%;
+		padding-top: 12px;
+	}
+	&__hint{
+		position: relative;
+		z-index: 1;
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: 5px;
+
+		padding: 12px;
+
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: calc(100% - 0px);
+			transform: translateX(-50%);
+
+			width: 0;
+			height: 0;
+			left: var(--hint-left,79%);
+			border-style: solid;
+		}
+		&:before{
+			z-index: 1;
+			border-width: 0 7.5px 9px 7.5px;
+			border-color: transparent transparent $gray-210 transparent;
+		}
+		&:after{
+			z-index: 2;
+			border-width: 0 6.5px 8px 6.5px;
+			border-color: transparent transparent $white transparent;
+		}
+	}
+	&__{}
+}

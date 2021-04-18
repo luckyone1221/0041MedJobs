@@ -56,6 +56,11 @@
 
 	//
 	&__aside-menu{
+		&--static{
+			position: static;
+			top: unset;
+		}
+
 		position: sticky;
 		z-index: 1;
 		//top: calc(var(--header-h) - 30px);
@@ -67,7 +72,7 @@
 			justify-content: flex-end;
 		}
 
-		& > ul{
+		ul{
 			list-style: none;
 			padding: 0;
 			margin: 0;
