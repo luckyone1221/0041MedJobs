@@ -1,7 +1,5 @@
-
-mixin modal() 
+mixin modal()
 	//  start modals
-
 	+b.modal-win(id="modal-call" class=" " style="display: none" )
 		+form-wrap
 			.text-center
@@ -11,6 +9,86 @@ mixin modal()
 			+input("Ваше Имя")(required)  
 			+e.BUTTON.btn.btn(type="submit"  ) 
 			+polite()
+	+customModal()
+		//-1
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Желаемая должность
+			+e.INPUT.input.form-control(type="text" placeholder="" name="")
+			+customChbDuplicate('Рассмотрю повышение')
+		//-2
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Желаемая заработная плата
+				+e.secondary Будет видна работодателю
+			+e.inp-row.row
+				.col
+					+e.INPUT.input.form-control(type="text" placeholder="" name="")
+				.col-auto
+					+customSlectDuplicate('currency', ['₽', 'A', 'B'])
+		//-3
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Приемлемая (минимальная) заработная плата
+				+e.secondary Задается для интеллектуального поиска
+			+e.inp-row.row
+				.col
+					+e.INPUT.input.form-control(type="text" placeholder="" name="")
+				.col-auto
+					+customSlectDuplicate('currency', ['₽', 'A', 'B'])
+		//-4
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Профобласть
+				+e.secondary Выберите одну или несколько областей
+			+multipleSelect2('prof-sphere', undefined, undefined, 'Выберите одну или несколько областей')
+			//-+customSlectDuplicate('prof-sphere', ['Врач-хирург', 'Врач-хирург2', 'Врач-хирург3'], undefined, 'Выберите одну или несколько областей')
+				option(value="" label='#')
+				option(value="Врач-хирург") Врач-хирург
+				option(value="Врач-хирург2") Врач-хирург2
+				option(value="Врач-хирург3") Врач-хирург3
+
 	// #modal-call
 	
 	// end modals
+
+mixin customModal()
+	+b.custom-modal--js
+		+e.content
+			+e.cross-btn.close-cm-js
+				img(loading="lazy" src='img/svg/custom-modal-close.svg' alt="")
+			+form-wrap()
+				+e.main-title Условия работы
+				block
+				+e.foot-row.row
+					.col-6.col-sm-auto
+						+e.cancel-btn.close-cm-js Отменить
+					.col-6.col-sm-auto
+						+e.save-btn(type="submit") Сохранить изменения
+
+mixin customChbDuplicate(txt)
+	+b.LABEL.custom-chb
+		input(type="checkbox" class="d-none" name="name")&attributes(attributes)
+		span.square
+		span.txt=txt
+
+mixin customSlectDuplicate(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], keyClass='default-select-js', dataPlaceholder='')
+	+b.custom-select&attributes(attributes)
+		select(name=selectName class=keyClass data-placeholder=dataPlaceholder)
+			if block
+				block
+			else
+				- for (let item of optionsArr)
+					option(value=item)=item
+
+mixin multipleSelect2(selectName, optionsArr=['Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста', 'качество 1', 'качество 2', 'качество 3', 'качество 4', 'качество 5'], keyClass='prof-slect2-js', dataPlaceholder)
+	+b.skill-select
+		select(name=selectName class=keyClass multiple='multiple' data-placeholder=dataPlaceholder)
+			option(value="" label='#')
+			//-option(selected) Умный
+			//-option(selected) Усидчевый
+			if block
+				block
+			else
+			- for (let item of optionsArr)
+				option(value=item)=item

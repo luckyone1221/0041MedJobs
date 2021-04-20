@@ -1,0 +1,171 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/logPage/_logPage.pug
+include ../blocks/sAccProfile/_sAccProfile.pug
+include ../blocks/headerAlt/_headerAlt.pug
+include ../blocks/sProfileN/_sProfileN.pug
+include ../blocks/footerN/_footerN.pug
+include ../blocks/sNVac/_sNVac.pug
+include ../blocks/sCurriculum/_sCurriculum.pug
+
+block variables
+	- let  mainPage= 'bg-gray-120 mvp-page'
+block title
+	- let  title= '024-my-cv-fill'
+	title= title
+block pagecontent
+	.headerAlt-cont
+		+headerAlt()
+	+sProfileNCv({
+		title: 'Мое резюме'
+	})
+		+dataBox({
+			imgPass: '@2x/proffesional-1.jpg',
+			dataItems: [
+				{
+					key: 'Возраст',
+					val: '24 года',
+				}, {
+					key: 'Город проживания',
+					val: 'Самара',
+				}, {
+					key: 'Email',
+					val: 'arts.man@mail.ru',
+				}, {
+					key: 'Телефон',
+					val: '+7 (919) 811-28-48',
+				}
+			],
+			soc: true,
+		})
+		+completeBox()
+		+addBox()
+			+addBoxItem(1, 'Условия работы', '+17%')
+			+addBoxItem(1, 'Опыт работы', '+12%')
+			+addBoxItem(1, 'Семья', '+6%')
+			+addBoxItem(1, 'Образование', '+18%')
+			+addBoxItem(1, 'Обо мне', '+13%')
+			+addBoxItem(1, 'Профессиональные навыки', '+15%')
+			+addBoxItem(1, 'Общие навыки', '+15%')
+			+addBoxItem(1, 'Знание языков', '+15%')
+			+addBoxItem(1, 'Автомобиль', '+5%')
+			+addBoxItem(1, 'Достижения и награды', '+7%')
+			+addBoxItem(1, 'Статьи', '+5%')
+			+addBoxItem(1, 'Научная степень', '+5%')
+			+addBoxItem(1, 'Повышение квалификации', '+5%')
+			+addBoxItem(1, 'Профессиональные сообщества', '+5%')
+		+tableBox({
+			imgNum: 1,
+			title: 'Условия работы',
+			addHRowClasses: 'pb-30',
+		})
+		+tableBox({
+			imgNum: 2,
+			title: 'Опыт работы',
+		})
+			+tableBoxExpItem()
+			+tableBoxExpItem()
+		+tableBox({
+			imgNum: 5,
+			title: 'Семья',
+		})
+			+tableBoxItem('В браке','Да')
+			+tableBoxItem('Дети','Нет')
+		+tableBox({
+			imgNum: 3,
+			title: 'Образование',
+		})
+			+tableBoxEducationItem()
+			+tableBoxEducationItem()
+		+tableBox({
+			imgNum: 4,
+			title: 'Обо мне',
+		})
+			+e.about-txt
+				| Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."
+				br
+				br
+				| Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.
+				br
+				br
+				| За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+		+tableBox({
+			imgNum: 7,
+			title: 'Профессиональные навыки',
+		})
+			+b.cv-skills.gy-1
+				+e.row.row
+					+cvSkill('Умный')
+					+cvSkill('Усидчевый')
+					+cvSkill('Умный')
+					+cvSkill('Усидчевый')
+					+cvSkill('Усидчевый')
+		+tableBox({
+			imgNum: 8,
+			title: 'Общие навыки',
+		})
+			+b.cv-skills.gy-1
+				+e.row.row
+					+cvSkill('Умный')
+					+cvSkill('Усидчевый')
+					+cvSkill('Умный')
+					+cvSkill('Усидчевый')
+					+cvSkill('Усидчевый')
+		+tableBox({
+			imgNum: 10,
+			title: 'Знание языков',
+		})
+			+tableBoxItem('Родной язык','Русский')
+			+tableBoxItem('Инностранный язык')
+				.col-auto
+					+e.plate Английский
+				.col-auto
+					+e.txt-val A1 - Начальный
+			+tableBoxItem('Инностранный язык')
+				.col-auto
+					+e.plate Испанский
+				.col-auto
+					+e.txt-val A1 - Начальный
+		+tableBox({
+			imgNum: 17,
+			title: 'Автомобиль',
+		})
+			+tableBoxItem('Категория прав')
+				.col-auto
+					+e.ball A
+				.col-auto
+					+e.ball B
+			+tableBoxItem('Инностранный язык', 'Есть личный автомобиль')
+		+tableBox({
+			imgNum: 9,
+			title: 'Достижения',
+		})
+			+tableBoxAchivementItem()
+			+tableBoxAchivementItem()
+		+tableBox({
+			imgNum: 15,
+			title: 'Статьи',
+		})
+			+tableBoxArticleItem()
+			+tableBoxArticleItem()
+		+tableBox({
+			imgNum: 18,
+			title: 'Мероприятия',
+		})
+			+tableBoxEventsItem()
+			+tableBoxEventsItem()
+		+tableBox({
+			imgNum: 16,
+			title: 'Профессиональные сообщества',
+		})
+			+tableBoxUnionsItem()
+			+tableBoxUnionsItem()
+	//-proffesional-1
+	+footerN()

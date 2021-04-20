@@ -215,7 +215,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '023-576.png';
+	screenName = '00-c2-2.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -376,6 +376,11 @@ function eventHandler() {
 	$('.default-select-js').select2({
 		minimumResultsForSearch: Infinity,
 		dropdownCssClass: "default-select2"
+	}); //
+
+	$('.prof-slect2-js').select2({
+		maximumSelectionLength: 30,
+		dropdownCssClass: "default-select2"
 	}); //from jetbrains animation
 
 	$('.sidebar-trakcer-js').mousemove(function () {
@@ -520,7 +525,8 @@ function eventHandler() {
 			passive: true
 		});
 		calcCssVars();
-	} //end luckyone js
+	} //custom modal
+	//end luckyone js
 	//todo New
 	//2 kill ui kit
 

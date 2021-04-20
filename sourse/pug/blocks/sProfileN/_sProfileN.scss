@@ -678,7 +678,9 @@
 			&--selectable{
 				background-color: $white!important;
 			}
-			&--selected{}
+			&--selected{
+				background-color: rgba($light, 1)!important;
+			}
 			&--highlighted{
 				background-color: rgba($light, .5)!important;
 			}

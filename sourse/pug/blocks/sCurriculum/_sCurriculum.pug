@@ -1,24 +1,7 @@
 mixin sCurriculum(data)
 	// start sCurriculum
 	+b.sCurriculum#sCurriculum&attributes(attributes)
-		+dataBox({
-			imgPass: 'svg/sm-portrait-stab.svg',
-			dataItems: [
-				{
-					key: 'Возраст',
-				},{
-					key: 'Город проживания',
-				},{
-					key: 'Email',
-					val: 'arts.man@mail.ru',
-				},{
-					key: 'Телефон',
-				}
-			],
-			soc: false,
-		})
-		+completeBox()
-		+addBox()
+		block
 
 	// end sCurriculum
 
@@ -33,7 +16,7 @@ mixin dataBox(data)
 					.col
 						+e.name-box
 							+e.name.mb-12.mb-md-0.d-xl-none Контстантинопольский Контстантин Александрович
-							+e.edit-btn(href='#')
+							+b.edit-btn(href='#')
 								+icon('pencil')
 								span Редактировать
 			.col-xl
@@ -45,9 +28,23 @@ mixin dataBox(data)
 					+e.data-item.row
 						+e.key-col.col-auto Социальные профили
 						if data.soc
-							+e.val-col.col Place soc here
+							+e.val-col.col
+								+b.cv-soc
+									+e.row.row.gy-1
+										+cvSocCol('vk')
+										+cvSocCol('fb')
+										+cvSocCol('in')
+										+cvSocCol('tg')
+										+cvSocCol('ok')
+										+cvSocCol('tw')
+										+cvSocCol('gpls')
 						else
 							+e.val-col.col Не указаны
+
+mixin cvSocCol(imgNum)
+	.col-auto
+		+e.item(href='#')
+			img(loading="lazy" src=`img/svg/cv-soc-${imgNum}.svg` alt="")
 
 mixin nDataItem(key='keyIsMissing', val)
 	+e.data-item.row
@@ -105,3 +102,122 @@ mixin completeStrip(percentage)
 		+e.line-cont
 			+e.line(style=`width: ${percentage};`)
 		+e.number=percentage
+
+mixin tableBox(data)
+	+b.table-box.sCurriculum__box
+		+e.header-row.row.align-items-center(class=data.addHRowClasses)
+			.col
+				+e.title-row.row.align-items-center
+					.col-auto
+						+e.img
+							img(loading="lazy" src=`img/@2x/add-box-item-${data.imgNum}.png` alt="")
+					.col
+						+e.h-title=data.title
+			.col-auto
+				+b.edit-btn(href='#')
+					+icon('pencil')
+					span Редактировать
+		+e.table
+			if block
+				block
+			else
+				+tableBoxItem('Желаемая должность','Врач-хирург')
+				+tableBoxItem('Желаемая заработная плата','150 000 ₽')
+				+tableBoxItem('Профобласть')
+					.col-auto
+						+e.plate Хирургия
+					.col-auto
+						+e.plate Хирургическая терапия
+				+tableBoxItem('Готовность к командировкам','Нет')
+				+tableBoxItem('Готовность к переезду')
+					.col-auto
+						+e.plate Москва
+				+tableBoxItem('Занятость')
+					.col-auto
+						+e.plate Полная занятость
+					.col-auto
+						+e.plate Частичная занятость
+				+tableBoxItem('График работы')
+					.col-auto
+						+e.plate Полный день
+					.col-auto
+						+e.plate Сменный график
+
+mixin tableBoxItem(title, txtVal)
+	+e.t-row.row.gy-2.align-items-center
+		.col-md-6.col-xxl-5.col-base-6
+			+e.title=title
+		.col-md-6.col-xxl-7.col-base-6
+			+e.sub-row.row.align-items-center.gy-1
+				if block
+					block
+				else
+					.col-auto
+						+e.txt-val=txtVal
+
+mixin tableBoxExpItem()
+	+b.exp-item
+		+e.row.row.align-items-center
+			.col-auto
+				+e.plate Врач-хирург
+			.col
+				+e.place УК Медгард
+			.col-12
+				+e.secondary 3 года, 6 месяцев
+			.col-12
+				+e.regular Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
+
+mixin tableBoxEducationItem()
+	+b.exp-item
+		+e.row.row.align-items-center
+			.col-auto
+				+e.plate Высшее образование
+			.col-12
+				+e.regular Московский Государственный Университет
+			.col-12
+				+e.secondary Факультет хирургии
+			.col-12
+				+e.regular Специализация хирургия
+			.col-12
+				+e.secondary 2020
+
+mixin cvSkill(txt)
+	.col-auto
+		+e.cv-skill=txt
+
+
+mixin tableBoxAchivementItem()
+	+b.exp-item
+		+e.row.row.align-items-center
+			.col-auto
+				+e.plate Звание
+			.col-12
+				+e.regular Заслуженный врач Российской Федерации 2014
+
+mixin tableBoxArticleItem()
+	+b.exp-item
+		+e.row.row.align-items-center
+			.col-12
+				+e.regular Название статьи, год релиза
+			.col-12
+				+e.secondary Наименование журнала
+			.col-12
+				+e.regular Номер журнала
+			.col-12
+				+e.secondary Номера страниц
+
+mixin tableBoxEventsItem()
+	+b.exp-item
+		+e.row.row.align-items-center
+			.col-auto
+				+e.secondary Наименование мероприятия
+			.col-12
+				+e.regular Год проведения
+
+mixin tableBoxUnionsItem()
+	+b.exp-item
+		+e.row.row.align-items-center
+			.col-auto
+				+e.secondary Наименование мероприятия
+			.col-12
+				+e.regular Год проведения

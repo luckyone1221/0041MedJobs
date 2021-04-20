@@ -195,7 +195,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '023-576.png';
+	screenName = '00-c2-2.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -385,6 +385,11 @@ function eventHandler() {
 		minimumResultsForSearch: Infinity,
 		dropdownCssClass: "default-select2",
 	});
+	//
+	$('.prof-slect2-js').select2({
+		maximumSelectionLength: 30,
+		dropdownCssClass: "default-select2",
+	});
 
 	//from jetbrains animation
 	$('.sidebar-trakcer-js').mousemove(function (){
@@ -492,6 +497,7 @@ function eventHandler() {
 		window.addEventListener('scroll', calcCssVars, { passive: true });
 		calcCssVars();
 	}
+	//custom modal
 
 	//end luckyone js
 

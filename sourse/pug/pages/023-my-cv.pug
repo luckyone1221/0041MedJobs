@@ -26,5 +26,23 @@ block pagecontent
 	+sProfileNCv({
 		title: 'Мое резюме'
 	})
-		+sCurriculum()
+		+dataBox({
+			imgPass: 'svg/sm-portrait-stab.svg',
+			dataItems: [
+				{
+					key: 'Возраст',
+				}, {
+					key: 'Город проживания',
+				}, {
+					key: 'Email',
+					val: 'arts.man@mail.ru',
+				}, {
+					key: 'Телефон',
+				}
+			],
+			soc: false,
+		})
+		+completeBox()
+		+addBox()
+	//-proffesional-1
 	+footerN()

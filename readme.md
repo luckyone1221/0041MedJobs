@@ -24,3 +24,4 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/021-chosen-vacancy.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/022-ch-v-empty.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/023-my-cv.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/024-my-cv-fill.html>

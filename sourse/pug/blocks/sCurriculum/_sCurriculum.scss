@@ -31,7 +31,7 @@
 		//margin-top: 0;
 	}
 
-	&__edit-btn{
+	.edit-btn{
 		@include media-breakpoint-up(md){
 			position: absolute;
 			top: 37px;
@@ -42,25 +42,7 @@
 			right: 49px;
 		}
 
-		display: flex;
-		align-items: center;
-
-		font-weight: 500;
-		font-size: 15px;
-
-		color: $secondary;
-		&:hover{
-			color: $primary;
-		}
-
-		.icon{
-			font-size: 24px;
-			margin-right: 12px;
-			color: currentColor;
-		}
-		span{
-			color: currentColor;
-		}
+		@extend .edit-btn-frame;
 	}
 	&__row{
 		@include roww(0);
@@ -378,6 +360,9 @@
 			width: 0;
 			height: 0;
 			left: var(--hint-left,79%);
+			@media (min-width: 1920px) {
+				left: var(--hint-left,66%);
+			}
 			border-style: solid;
 		}
 		&:before{
@@ -392,4 +377,201 @@
 		}
 	}
 	&__{}
+}
+
+.cv-soc{
+
+	&__row{
+		@include roww(6px);
+	}
+	&__item{
+		@include mt();
+		width: 24px;
+		height: 24px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+		}
+
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+
+	&__{}
+}
+
+.edit-btn-frame{
+	display: flex;
+	align-items: center;
+
+	font-weight: 500;
+	font-size: 15px;
+
+	color: $secondary;
+	&:hover{
+		color: $primary;
+	}
+
+	.icon{
+		font-size: 24px;
+		margin-right: 12px;
+		color: currentColor;
+	}
+	span{
+		color: currentColor;
+	}
+}
+
+//
+.table-box{
+	&__header-row{
+		padding-bottom: 48px;
+	}
+	&__title-row{
+		@include roww(12px);
+	}
+	&__img{
+		width: 30px;
+		height: 30px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	&__h-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+	}
+	//.edit-btn
+	.edit-btn{
+		@extend .edit-btn-frame;
+	}
+	&__table{
+
+	}
+	&__t-row{
+		@include roww(0);
+		min-height: 63px;
+		padding: 16px 0;
+		border-bottom: 1px solid $gray-100;
+
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	&__title{
+		font-weight: 500;
+		color: $secondary;
+	}
+	&__sub-row{
+		@include roww(6px);
+	}
+	&__txt-val{
+
+	}
+	//
+	&__plate{
+		@extend .btn;
+		@extend .btn-light;
+		border-radius: 60px;
+		padding: 5px 11px;
+
+		font-size: 15px;
+		line-height: (18/15);
+		color: $headings-color;
+		font-family: $mono;
+	}
+	&__about-txt{
+    line-height: 1.5;
+	}
+	&__ball{
+		@extend .btn;
+		@extend .btn-light;
+		border-radius: 60px;
+		min-width: 30px;
+		min-height: 30px;
+		padding: 3px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: 15px;
+		line-height: (18/15);
+		color: $headings-color;
+		font-family: $mono;
+	}
+
+}
+
+//
+.exp-item{
+	padding-bottom: 24px;
+	border-bottom: 1px solid $light;
+	margin-bottom: 24px;
+	&:last-child{
+		padding-bottom: 0;
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	&__row{
+		--bs-gutter-y: 12px;
+		@include roww(12px);
+	}
+	&__plate{
+		@extend .btn;
+		@extend .btn-light;
+		border-radius: 60px;
+		padding: 5px 11px;
+
+		font-size: 15px;
+		line-height: (18/15);
+		color: $headings-color;
+		font-family: $mono;
+	}
+	&__place{
+		font-weight: 500;
+		color: $secondary;
+	}
+	&__secondary{
+		color: $secondary;
+	}
+	&__regular{
+		line-height: 1.5;
+	}
+
+	//
+	&__{}
+	&__{}
+}
+
+.cv-skills{
+	&__row{
+		@include roww(6px);
+	}
+	&__cv-skill{
+		@extend .btn;
+		@extend .btn-light;
+		padding: 5px 11px;
+
+		font-size: 15px;
+		line-height: (18/15);
+		color: $headings-color;
+		font-family: $mono;
+	}
 }
