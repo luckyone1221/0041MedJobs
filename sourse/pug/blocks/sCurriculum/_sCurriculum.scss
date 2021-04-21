@@ -207,8 +207,10 @@
 		}
 	}
 	&__img{
-		width: 34px;
-		height: 34px;
+		//width: 34px;
+		//height: 34px;
+		width: 24px;
+		height: 24px;
 		margin: 0 auto 18px auto;
 		@include media-breakpoint-up(md){
 			width: 24px;
@@ -329,6 +331,9 @@
 			@include mt();
 			font-size: 10px;
 			color: $gray-550;
+
+			position: relative;
+			left: 0px;
 		}
 	}
 	&__hint-cont{
@@ -359,10 +364,11 @@
 
 			width: 0;
 			height: 0;
-			left: var(--hint-left,79%);
-			@media (min-width: 1920px) {
-				left: var(--hint-left,66%);
-			}
+			//left: var(--hint-left,79%);
+			//@media (min-width: 1920px) {
+			//	left: var(--hint-left,66%);
+			//}
+			left: 191px;
 			border-style: solid;
 		}
 		&:before{
