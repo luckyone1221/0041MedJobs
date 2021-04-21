@@ -526,10 +526,24 @@ function eventHandler() {
 		});
 		calcCssVars();
 	} //custom modal
-	//end luckyone js
+
+
+	$('.custom-modal-link-js').click(function () {
+		var id = this.getAttribute('href');
+		var modal = document.querySelector(id);
+		$('body').addClass('fixed3');
+		$(modal).fadeIn(function () {
+			$(this).addClass('active');
+		});
+	});
+	$('.close-cm-js').click(function () {
+		$(this).closest('.custom-modal--js').fadeOut(function () {
+			$(this).removeClass('active');
+			$('body').removeClass('fixed3');
+		});
+	}); //end luckyone js
 	//todo New
 	//2 kill ui kit
-
 }
 
 ;

@@ -765,48 +765,6 @@
 			}
 		}
 		//.prof-select2
-		.prof-select2{
-			transform: translateY(10px);
-
-			border: 1px solid $input-focus-border-color!important;
-			border-radius: 5px!important;
-			overflow: hidden;
-			background-color: $white!important;
-
-			.select2-results{
-				&__options{
-					@extend .soc-select2-scroll;
-				}
-				&__option {
-					display: flex !important;
-					align-items: center;
-					padding: 5px 10px !important;
-					height: 48px;
-					border-bottom: none !important;
-
-					&[aria-selected="true"] {
-						background: $gray-100 !important;
-					}
-
-					&--selected {
-						background: $gray-100 !important;
-					}
-
-					&--highlighted {
-						&[aria-selected="true"] {
-							background: #EFF2F6 !important;
-						}
-
-						//background: $gray-100!important;
-						background: #EFF2F6 !important;
-					}
-				}
-
-				}
-		}//??
-
-
-
 	}
 }
 

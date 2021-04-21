@@ -498,6 +498,22 @@ function eventHandler() {
 		calcCssVars();
 	}
 	//custom modal
+	$('.custom-modal-link-js').click(function (){
+		let id = this.getAttribute('href');
+		let modal = document.querySelector(id);
+		$('body').addClass('fixed3');
+		$(modal).fadeIn(function (){
+			$(this).addClass('active');
+		});
+	});
+	$('.close-cm-js').click(function (){
+		$(this).closest('.custom-modal--js').fadeOut(function (){
+			$(this).removeClass('active');
+			$('body').removeClass('fixed3');
+		})
+	});
+
+
 
 	//end luckyone js
 

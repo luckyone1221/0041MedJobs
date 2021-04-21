@@ -83,7 +83,8 @@ body {
 		}
 	}
 
-	&.fixed2{
+	&.fixed2,
+	&.fixed3{
 		overflow: hidden;
 		position: absolute;
 		width: 100%;

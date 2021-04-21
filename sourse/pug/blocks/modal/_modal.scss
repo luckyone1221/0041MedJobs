@@ -91,7 +91,7 @@ a {
 }
 
 .custom-modal{
-	//display: none;
+	display: none;
 	&.active{
 		display: block;
 	}
@@ -102,7 +102,17 @@ a {
 	z-index: 999;
 	width: 100%;
 	height: 100%;
-	background-color: rgba($headings-color, .24);
+
+	&__inner{
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+	}
+	&__close{
+		background-color: rgba($headings-color, .24);
+		flex-grow: 1;
+	}
 
 	&__content{
 		height: 100%;
@@ -116,6 +126,7 @@ a {
 		@include media-breakpoint-up(md){
 			padding: 30px 38px;
 		}
+		width: 100%;
 		@include media-breakpoint-up(xl){
 			padding: 40px 48px;
 			width: 851px;
@@ -127,6 +138,7 @@ a {
 	}
 	//
 	&__cross-btn{
+    cursor: pointer;
 		position: absolute;
 		top: 24px;
 		right: 48px;
@@ -139,6 +151,12 @@ a {
 
 	//
 	.form-wrap{
+		textarea{
+			height: 80px;
+			&.double{
+				height: 160px;
+			}
+		}
 		&__main-title{
 			font-weight: 600;
 			font-size: 24px;
@@ -164,6 +182,10 @@ a {
 				}
 			}
 		}
+		//
+		&__title-col{
+			min-width: 106px;
+		}
 		&__title{
 			font-weight: 500;
 		}
@@ -172,7 +194,18 @@ a {
 		}
 		//
 		&__inp-row{
-			@include roww(24px);
+			@include roww(18px);
+			@include media-breakpoint-up(md){
+				@include roww(24px);
+			}
+
+			--bs-gutter-y: 18px;
+		}
+		&__two-title{
+			font-weight: 500;
+			//font-size: 15px;
+			//line-height: (18/15);
+			//color: $headings-color;
 		}
 		&__input{
 			width: 100%;
@@ -191,7 +224,11 @@ a {
 		&__foot-row{
 			justify-content: flex-end;
 			padding-top: 24px;
-			@include roww(24px);
+
+			@include roww(18px);
+			@include media-breakpoint-up(md){
+				@include roww(24px);
+			}
 		}
 		&__cancel-btn{
 			@extend .btn;
@@ -224,6 +261,83 @@ a {
 			}
 		}
 
+		//repeater
+		&__repeater{
+
+		}
+		&__r-item{
+
+		}
+		//
+		&__remove-item{
+			border-bottom: 1px solid $gray-210;
+			margin-bottom: 48px;
+		}
+		&__r-btn{
+			display: flex;
+			align-items: center;
+
+			--icon-color: #{$gray-550};
+			--ball-bg: #{$gray-100};
+			--txt-color: #{$headings-color};
+			&:hover{
+				--icon-color: #{$white};
+				--ball-bg: #{$warning};
+				--txt-color: #{$warning};
+			}
+
+			padding-bottom: 24px;
+		}
+		&__r-ball{
+			@include mt($smooth);
+			width: 24px;
+			height: 24px;
+			flex-shrink: 0;
+			border-radius: 50%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--ball-bg, #{$light});
+
+			.icon{
+				@include mt();
+				font-size: 10px;
+				color: var(--icon-color);
+			}
+
+			margin-right: 12px;
+		}
+		&__ri-txt{
+			font-size: 15px;
+			line-height: 1.25;
+			color: var(--txt-color, #{$headings-color});
+		}
+		&__r-add-btn{
+			@extend .btn;
+			@extend .btn-outline-primary;
+
+			//color: ;
+			border-radius: 60px;
+			padding: 10px 23px;
+
+			color: $primary!important;
+			&:hover{
+				color: $white!important;
+			}
+		}
+		.custom-chb:last-child{
+			margin-bottom: 0;
+		}
+		.custom-radio{
+			margin-bottom: 12px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&__{}
+		&__{}
+		&__{}
 		&__{}
 	}
 

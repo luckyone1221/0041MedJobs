@@ -9,7 +9,8 @@ mixin modal()
 			+input("Ваше Имя")(required)  
 			+e.BUTTON.btn.btn(type="submit"  ) 
 			+polite()
-	+customModal()
+	//---
+	+customModal('work-conditions', 'Условия работы')
 		//-1
 		+e.input-wrap.form-group
 			+e.title-wrap
@@ -42,29 +43,438 @@ mixin modal()
 				+e.title Профобласть
 				+e.secondary Выберите одну или несколько областей
 			+multipleSelect2('prof-sphere', undefined, undefined, 'Выберите одну или несколько областей')
-			//-+customSlectDuplicate('prof-sphere', ['Врач-хирург', 'Врач-хирург2', 'Врач-хирург3'], undefined, 'Выберите одну или несколько областей')
-				option(value="" label='#')
-				option(value="Врач-хирург") Врач-хирург
-				option(value="Врач-хирург2") Врач-хирург2
-				option(value="Врач-хирург3") Врач-хирург3
+	//- ------------
+	+customModal('experience', 'Опыт работы')
+		+repeatorBl()
+			//-1
+			+e.input-wrap.form-group
+				+e.title-wrap
+					+e.title Опыт работы
+				+e.INPUT.input.form-control(type="text" placeholder="Наименование организации" name="")
+			//-2
+			+e.input-wrap.form-group
+				+e.title-wrap
+					+e.title Должность
+				+e.INPUT.input.form-control(type="text" placeholder="Должность" name="")
+			//-3
+			+e.input-wrap.form-group
+				+e.title-wrap
+					+e.title Обязанности и достижения
+				+e.TEXTAREA.input.form-control(name="")
+			//-4
+			+e.input-wrap.form-group
+				+e.inp-row.row
+					.col-6
+						+e.inp-row.row
+							+e.two-title.col-12 Начало работы
+							.col-6
+								+customSlectDuplicate('month', ['Января', 'Февраля', 'Марта'])
+							.col-6
+								+customSlectDuplicate('year')
+									option 1997
+									- for (var i=1998; i <= new Date().getFullYear(); i++)
+										option=i
+					.col-6
+						+e.inp-row.row
+							+e.two-title.col-12 Окончание работы
+							.col-6
+								+customSlectDuplicate('month', ['Января', 'Февраля', 'Марта'])
+							.col-6
+								+customSlectDuplicate('year')
+									option 1997
+									- for (var i=1998; i <= new Date().getFullYear(); i++)
+										option=i
+							.col-12
+								+customChbDuplicate('Рассмотрю повышение')
+	//- -----
+	+customModal('about', 'Обо мне')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Расскажите о себе
+			+e.TEXTAREA.input.form-control.double(name="" placeholder="Расскажите о себе в нескольких предложениях")
+	//- -----
+	+customModal('family', 'Семья')
+		//-1
+		+e.input-wrap.form-group
+			+e.inp-row.row.align-items-center
+				+e.title-col.col-auto
+					+e.title В браке
+				.col-auto
+					+customRadioDulpicate('Да','family','yes')(checked)
+				.col-auto
+					+customRadioDulpicate('Нет','family','no')
+			+e.inp-row.row.align-items-center
+				+e.title-col.col-auto
+					+e.title Дети
+				.col-auto
+					+customRadioDulpicate('Да','kids','yes')(checked)
+				.col-auto
+					+customRadioDulpicate('Нет','kids','no')
+	//---
+	+customModal('address', 'Место жительства')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Город, улица, дом
+			+e.INPUT.input.form-control(type="text" placeholder="Начните вводить" name="")
+	//---
+	+customModal('prof-skills', 'Профессиональные навыки')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Укажите или выберите не более 5 навыков
+			+multipleSelect2('prof-skills', undefined, undefined, 'Выберите одну или несколько областей')
+				option(selected) Умный
+				option(selected) Усидчевый
+	//---
+	+customModal('common-skills', 'Общие навыки')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Укажите или выберите не более 5 навыков
+			+multipleSelect2('common-skills', undefined, undefined, 'Выберите одну или несколько областей')
+				option(selected) Умный
+				option(selected) Усидчевый
+	//---
+	+customModal('achievements', 'Достижения и награды')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Тип достижения
+			+customSlectDuplicate('achievement-type', ['Звание', 'placeholder', 'placeholder 2'])
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Описание достижения
+			+customSlectDuplicate('achievement-descr', ['Звание', 'placeholder', 'placeholder 2'], undefined, 'Описание достижения')
+				option(label="#")
+				option placeholder 1
+				option placeholder 2
+				option placeholder 3
+	//---
+	+customModal('languages', 'Знание языков')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Родной язык
+			+customSlectDuplicate('mother-lang', ['Русский', 'placeholder', 'placeholder 2'])
+			+e.title-wrap
+				+e.title Инностранные языки
+			+repeatorBl()
+				+e.inp-row.row.pb-24
+					.col-6
+						+customSlectDuplicate('lang', ['Английский', 'Украинский', 'JavaScript'])
+					.col-6
+						+customSlectDuplicate('lang-lvl', ['А1 - Начальный', 'А2 - Начальный', 'А3 - Начальный', 'B1 - Средний'])
+	//---
+	+customModal('sience-grade', 'Научная степень')
+		+e.repeater
+			+e.r-item
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Научная степень
+					+customSlectDuplicate('mother-lang', ['Русский', 'placeholder', 'placeholder 2'], undefined, 'Выберите из списка')
+						option(label="#")
+						option placeholder 1
+						option placeholder 2
+						option placeholder 3
+			+e.r-add-btn(href='#') Добавить
+	//---
+	+customModal('training', 'Повышение квалификации')
+		+e.repeater
+			+e.r-item
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Тип повышения квалификации
+					+customSlectDuplicate('', ['Русский', 'placeholder', 'placeholder 2'], undefined, 'Дополнительное образование, Стажировка, Мероприятие')
+						option(label="#")
+						option Дополнительное образование
+						option Стажировка
+						option Мероприятие
+				//-1
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Наименование
+					+e.INPUT.input.form-control(type="text" placeholder="Наименование" name="")
+				//-2
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Год
+					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="")
+			+e.r-add-btn(href='#') Добавить
+	//---
+	+customModal('employer-preferences', 'Предпочтения по работодателю')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Форма собственности
+			.pb-12
+				+customRadioDulpicate('Не важно','owner-type','Не важно')(checked)
+				+customRadioDulpicate('Частная','owner-type','Частная')
+				+customRadioDulpicate('Государтсвенная','owner-type','Государтсвенная')
+				+customRadioDulpicate('Инностранная','owner-type','Инностранная')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Численность сотрудников
+			.pb-12
+				+customRadioDulpicate('До 20','employee-amount','До 20')(checked)
+				+customRadioDulpicate('20-100','employee-amount','20-100')
+				+customRadioDulpicate('100-300','employee-amount','100-300')
+				+customRadioDulpicate('Более 300','employee-amount','Более 300')
+	//---
+	+customModal('vacancy-preferences', 'Предпочтения по вакансии')
+		//-1
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Готовность к перезду в другие города
+				+e.secondary Выберите регионы или округа (ПФО)
+			+multipleSelect2('common-skills', undefined, undefined, 'Выберите одну или несколько областей')
+				option(selected) Москва
+			+e.inp-row.row.align-items-center
+				.col-md-auto
+					+e.secondary Тип населенного пункта
+				.col-md
+					+e.inp-row.row
+						.col-auto
+							+customChbDuplicate('Столица субъекта')
+						.col-auto
+							+customChbDuplicate('Городской')
+						.col-auto
+							+customChbDuplicate('Сельский')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Готовность к командировкам
+			.pb-0
+				+customRadioDulpicate('Частые','business-trip','Частые')(checked)
+				+customRadioDulpicate('Не частые','business-trip','Не частые')
+				+customRadioDulpicate('Не готов','business-trip','Не готов')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Время на дорогу до работы
+			.pb-0
+				+customRadioDulpicate('до 30 минут','time-to-work','до 30 минут')(checked)
+				+customRadioDulpicate('30 минут - 1 час','time-to-work','30 минут - 1 час')
+				+customRadioDulpicate('1-1,5 часа','time-to-work','1-1,5 часа')
+				+customRadioDulpicate('более 1,5 часов','time-to-work','более 1,5 часов')
+		//-
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Тип занятости
+			.pb-0
+				+customChbDuplicate('Полная занятость')
+				+customChbDuplicate('Частичная занятость')
+				+customChbDuplicate('Проектная работа')
+				+customChbDuplicate('Волонтерство')
+				+customChbDuplicate('Стажировка')
+		//-
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title График работы
+			.pb-0
+				+customChbDuplicate('Полный день')
+				+customChbDuplicate('Сменный график')
+				+customChbDuplicate('Гибкий график')
+				+customChbDuplicate('Удаленная работа')
+				+customChbDuplicate('Вахтовый метод')
+		//-
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Условия оказание медицинской помощи
+			.pb-0
+				+customChbDuplicate('Амбулаторно')
+				+customChbDuplicate('В дневном стационаре')
+				+customChbDuplicate('Стационарно')
+				+customChbDuplicate('Прочие')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Ночные дежурства
+			.pb-0
+				+customRadioDulpicate('Не важно','night-shifts','Не важно')(checked)
+				+customRadioDulpicate('Да','night-shifts','Да')
+				+customRadioDulpicate('Нет','night-shifts','Нет')
+	//---
+	+customModal('articles', 'Статьи')
+		+e.repeater
+			+e.r-item
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Название статьи
+					+e.INPUT.input.form-control(type="text" placeholder="Введите название статьи" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Год релиза статьи
+					+e.INPUT.input.form-control(type="text" placeholder="Введите год релиза статьи" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Наименование журнала
+					+e.INPUT.input.form-control(type="text" placeholder="Наименование журнала" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Номер журнала
+					+e.INPUT.input.form-control(type="text" placeholder="Введите номер журнала" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Номера страниц
+					+e.INPUT.input.form-control(type="text" placeholder="Введите номера страниц" name="")
+			+e.r-add-btn(href='#') Добавить
+	//---
+	+customModal('prof-communities', 'Профессиональные сообщества')
+		+e.repeater
+			+e.r-item
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Наименование
+					+e.INPUT.input.form-control(type="text" placeholder="Введите наименование" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Год
+					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="")
+			+e.r-add-btn(href='#') Добавить
+	//---
+	+customModal('automobile', 'Автомобиль')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Категория прав
+			+e.inp-row.row
+				.col-auto
+					+customChbDuplicate('A')
+				.col-auto
+					+customChbDuplicate('B')
+				.col-auto
+					+customChbDuplicate('C')
+				.col-auto
+					+customChbDuplicate('D')
+				.col-auto
+					+customChbDuplicate('E')
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Наличие автомобиля
+			.d-block
+				+customChbDuplicate('Есть личный автомобиль')
+	//---
+	+customModal('bonuses', 'Бонусы в работе')
+		+e.title-wrap
+			+e.title Выберите из списка
+			.d-block
+				+customChbDuplicate('ДМС или медицинское обслуживание')
+				+customChbDuplicate('Комфортные условия труда')
+				+customChbDuplicate('Современное медицинское оборудование')
+				+customChbDuplicate('Возможности внутреннего совместительства')
+				+customChbDuplicate('Обучение и развитие за счет компании')
+				+customChbDuplicate('Фитнес')
+				+customChbDuplicate('Премии и бонусы')
+				+customChbDuplicate('Программа Земский доктор или фельдшер')
+				+customChbDuplicate('Предоставление жилья')
+				+customChbDuplicate('Предоставление субсидий для переезда')
+	//---
+	+customModal('education', 'Общие навыки')
+		+e.repeater
+			+e.r-item
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Страна
+					+customSlectDuplicate('country', ['Россия', 'Февраля', 'Марта'], undefined, 'Выберите из списка')
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Город
+					+customSlectDuplicate('city', ['Lviv', 'New-York', 'Berlin', 'Say Hey'], undefined, 'Выберите из списка')
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Наименование учебного заведения
+					+e.INPUT.input.form-control(type="text" placeholder="Название или аббревиатура" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Факультет
+					+e.INPUT.input.form-control(type="text" placeholder="Факультет" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Специальность
+					+e.INPUT.input.form-control(type="text" placeholder="Специальность" name="")
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Форма обучения
+					+customSlectDuplicate('city', ['Lviv', 'New-York', 'Berlin', 'Say Hey'], undefined, 'Форма обучения')
+						option Очная
+						option Очно-заочная
+						option Заочная
+						option Экстернат
+						option Дистанционная
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Форма обучения
+					+customSlectDuplicate('city', [''], undefined, 'Форма обучения')
+						option Не выбран
+						option Абитуриент
+						option Студент (специалист)
+						option Студент (Бакалавр)
+						option Студент (Магистр)
+						option Выпускник (специалист)
+						option Выпускник (Бакалавр)
+						option Выпускник (Магистр)
+						option Аспирант
+						option Кандидат наук
+						option Доктор наук
+						option Интерн
+						option Клинический ординатор
+						option Ассистент-стажер
+						option докторант
+						option Адъюнкт
+				//-
+				+e.input-wrap.form-group
+					+e.title-wrap
+						+e.title Год окончания
+					+e.inp-row.row
+						.col-md-6
+							+e.INPUT.input.form-control(type="text" placeholder="Год окончания" name="")
+						.col-md-6
+							+e.secondary Если учитесь в настоящее время — укажите год предполагаемого окончания
+			+e.r-add-btn(href='#') Добавить
 
-	// #modal-call
-	
+
+
 	// end modals
 
-mixin customModal()
-	+b.custom-modal--js
-		+e.content
-			+e.cross-btn.close-cm-js
-				img(loading="lazy" src='img/svg/custom-modal-close.svg' alt="")
-			+form-wrap()
-				+e.main-title Условия работы
-				block
-				+e.foot-row.row
-					.col-6.col-sm-auto
-						+e.cancel-btn.close-cm-js Отменить
-					.col-6.col-sm-auto
-						+e.save-btn(type="submit") Сохранить изменения
+mixin repeatorBl()
+	+e.repeater
+		+e.r-item
+			block
+			+repeatorRemove()
+		+e.r-item
+			block
+			+repeatorRemove()
+		+e.r-add-btn(href='#') Добавить
+
+mixin repeatorRemove()
+	+e.remove-item
+		+e.r-btn(href='#')
+			+e.r-ball
+				+icon('cross')
+			+e.ri-txt Удалить
+
+
+mixin customModal(modalId='place-id', title='Условия работы')
+	+b.custom-modal--js(id=modalId)
+		+e.inner
+			+e.close.close-cm-js
+			+e.content.cm-content-js
+				+e.cross-btn.close-cm-js
+					img(loading="lazy" src='img/svg/custom-modal-close.svg' alt="")
+				+form-wrap()
+					+e.main-title=title
+					block
+					+e.foot-row.row
+						.col-6.col-sm-auto
+							+e.cancel-btn.close-cm-js Отменить
+						.col-6.col-sm-auto
+							+e.save-btn(type="submit") Сохранить изменения
 
 mixin customChbDuplicate(txt)
 	+b.LABEL.custom-chb
@@ -92,3 +502,9 @@ mixin multipleSelect2(selectName, optionsArr=['Супер длинное так�
 			else
 			- for (let item of optionsArr)
 				option(value=item)=item
+
+mixin customRadioDulpicate(txt, name, val)
+	+b.LABEL.custom-radio
+		input(type="radio" class="invisible" name=name value=val)&attributes(attributes)
+		span.circle
+		span.txt=txt
