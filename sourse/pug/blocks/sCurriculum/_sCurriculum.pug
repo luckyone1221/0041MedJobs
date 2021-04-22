@@ -123,26 +123,17 @@ mixin tableBox(data)
 				block
 			else
 				+tableBoxItem('Желаемая должность','Врач-хирург')
+					.col-auto
+						+e.txt-val Врач-хирург
+					.col-auto
+						+e.plate--check Рассмотрю повышение
 				+tableBoxItem('Желаемая заработная плата','150 000 ₽')
+				+tableBoxItem('Приемлемая (минимальная) заработная плата','300 000 ₽')
 				+tableBoxItem('Профобласть')
 					.col-auto
 						+e.plate Хирургия
 					.col-auto
 						+e.plate Хирургическая терапия
-				+tableBoxItem('Готовность к командировкам','Нет')
-				+tableBoxItem('Готовность к переезду')
-					.col-auto
-						+e.plate Москва
-				+tableBoxItem('Занятость')
-					.col-auto
-						+e.plate Полная занятость
-					.col-auto
-						+e.plate Частичная занятость
-				+tableBoxItem('График работы')
-					.col-auto
-						+e.plate Полный день
-					.col-auto
-						+e.plate Сменный график
 
 mixin tableBoxItem(title, txtVal)
 	+e.t-row.row.gy-2.align-items-center
@@ -164,6 +155,8 @@ mixin tableBoxExpItem()
 			.col
 				+e.place УК Медгард
 			.col-12
+				+e.regular Февраль, 2017 — по настоящее время
+			.col-12
 				+e.secondary 3 года, 6 месяцев
 			.col-12
 				+e.regular Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
@@ -172,13 +165,13 @@ mixin tableBoxEducationItem()
 	+b.exp-item
 		+e.row.row.align-items-center
 			.col-auto
-				+e.plate Высшее образование
+				+e.plate Выпускник (Магистр)
 			.col-12
-				+e.regular Московский Государственный Университет
+				+e.regular Россия, г. Москва, Московский Государственный Университет
 			.col-12
-				+e.secondary Факультет хирургии
+				+e.secondary Факультет хирургии, Специальность
 			.col-12
-				+e.regular Специализация хирургия
+				+e.regular Очное отделение
 			.col-12
 				+e.secondary 2020
 
@@ -222,3 +215,13 @@ mixin tableBoxUnionsItem()
 				+e.secondary Наименование мероприятия
 			.col-12
 				+e.regular Год проведения
+
+mixin tableBoxQualItem()
+	+b.exp-item
+		+e.row.row.align-items-center
+			.col-auto
+				+e.plate Стажировка
+			.col-12
+				+e.regular Наименование стажировки
+			.col-12
+				+e.secondary 2019

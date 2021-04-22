@@ -1,5 +1,4 @@
 .modal-win {
-	// display: block;
 	width: 100%;
 	position: relative;
 	max-width: rem(500);
@@ -91,14 +90,18 @@ a {
 }
 
 .custom-modal{
-	display: none;
+	@include mt();
+
+	right: -120vw;
+	--close-bl-o: 0;
 	&.active{
-		display: block;
+		--close-bl-o: 1;
+		right: 0;
 	}
 
 	position: fixed;
 	top: 0;
-	left: 0;
+	//left: 0;
 	z-index: 999;
 	width: 100%;
 	height: 100%;
@@ -110,6 +113,8 @@ a {
 		display: flex;
 	}
 	&__close{
+		@include mt($smooth);
+		opacity: var(--close-bl-o, 1);
 		background-color: rgba($headings-color, .24);
 		flex-grow: 1;
 	}

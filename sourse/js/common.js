@@ -1,3 +1,23 @@
+var isIE11 = Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject;
+
+if (isIE11) {
+	document.body.classList.remove("loaded_hiding");
+	$(".s404--borser").removeClass("d-none");
+}
+
+let div = document.createElement('div');
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+// мы должны вставить элемент в документ, иначе размеры будут равны 0
+if (!isIE11) {
+	document.body.append(div);
+}
+let scrollWidth = div.offsetWidth - div.clientWidth;
+if (!isIE11) {
+	div.remove();
+}
+
 const JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -489,6 +509,7 @@ function eventHandler() {
 	}
 	//css vars
 	let header = document.querySelector("#headerAlt");
+	document.documentElement.style.setProperty('--scroll-width', `${scrollWidth}px`);
 	function calcCssVars() {
 		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
 	}
@@ -502,19 +523,22 @@ function eventHandler() {
 		let id = this.getAttribute('href');
 		let modal = document.querySelector(id);
 		$('body').addClass('fixed3');
-		$(modal).fadeIn(function (){
-			$(this).addClass('active');
-		});
+		//
+
+		$(modal).addClass('active');
+		// $(modal).fadeIn(function (){
+		// 	$(this).addClass('active');
+		// });
 	});
 	$('.close-cm-js').click(function (){
-		$(this).closest('.custom-modal--js').fadeOut(function (){
-			$(this).removeClass('active');
-			$('body').removeClass('fixed3');
-		})
+		$(this).closest('.custom-modal--js').removeClass('active');
+		$('body').removeClass('fixed3');
+		// $(this).closest('.custom-modal--js').fadeOut(function (){
+		// 	$(this).removeClass('active');
+		// 	$('body').removeClass('fixed3');
+		// })
 	});
-
-
-
+	//
 	//end luckyone js
 
 	//todo New

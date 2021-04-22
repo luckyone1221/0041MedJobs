@@ -92,6 +92,16 @@ body {
 		top: 0;
 		z-index: 999;
 	}
+
+	&.fixed3{
+		margin-right: var(--scroll-width, 17px);
+		max-width: calc(100% - var(--scroll-width));
+
+		.headerAlt{
+			margin-right: var(--scroll-width, 17px);
+			max-width: calc(100% - var(--scroll-width));
+		}
+	}
 }
 
 .section {

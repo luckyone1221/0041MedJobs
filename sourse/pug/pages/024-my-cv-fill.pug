@@ -73,12 +73,6 @@ block pagecontent
 			+tableBoxExpItem()
 			+tableBoxExpItem()
 		+tableBox({
-			imgNum: 5,
-			title: 'Семья',
-		})
-			+tableBoxItem('В браке','Да')
-			+tableBoxItem('Дети','Нет')
-		+tableBox({
 			imgNum: 3,
 			title: 'Образование',
 		})
@@ -96,6 +90,21 @@ block pagecontent
 				br
 				br
 				| За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+		+tableBox({
+			imgNum: 5,
+			title: 'Семья',
+		})
+			+tableBoxItem('В браке','Да')
+			+tableBoxItem('Дети','Нет')
+		//-
+		+tableBox({
+			imgNum: 6,
+			title: 'Место жительства',
+		})
+			+b.exp-item
+				+e.row.row.align-items-center
+					.col-auto
+						+e.regular Россия, г. Москва, ул. Иванова, д. 55
 		+tableBox({
 			imgNum: 7,
 			title: 'Профессиональные навыки',
@@ -119,6 +128,12 @@ block pagecontent
 					+cvSkill('Усидчевый')
 					+cvSkill('Усидчевый')
 		+tableBox({
+			imgNum: 9,
+			title: 'Достижения',
+		})
+			+tableBoxAchivementItem()
+			+tableBoxAchivementItem()
+		+tableBox({
 			imgNum: 10,
 			title: 'Знание языков',
 		})
@@ -134,6 +149,72 @@ block pagecontent
 				.col-auto
 					+e.txt-val A1 - Начальный
 		+tableBox({
+			imgNum: 11,
+			title: 'Научная степень',
+		})
+			+tableBoxItem('Наименование','Кандидат наук')
+			+tableBoxItem('Наименование','Доктор наук')
+		+tableBox({
+			imgNum: 12,
+			title: 'Повышение квалификации',
+		})
+			+tableBoxQualItem()
+			+tableBoxQualItem()
+		//-Предпочтения по работодателю
+		+tableBox({
+			imgNum: 13,
+			title: 'Предпочтения по работодателю',
+		})
+			+tableBoxItem('Форма собственности','Не важно')
+			+tableBoxItem('Численность сотрудников','До 20')
+		//-
+		+tableBox({
+			imgNum: 13,
+			title: 'Предпочтения по вакансии',
+		})
+			+tableBoxItem('Готовность к перезду в другие города')
+				.col-auto
+					+e.plate Москва
+				.col-auto
+					+e.plate Самара
+				.col-auto
+					+e.txt-val--check Столица субъекта
+			+tableBoxItem('Готовность к командировкам','Частые')
+			+tableBoxItem('Время на дорогу до работы','До 30 минут')
+			+tableBoxItem('Тип занятости','')
+				.col-auto
+					+e.plate Полная занятость
+				.col-auto
+					+e.plate Частичная занятость
+			+tableBoxItem('График работы','')
+				.col-auto
+					+e.plate Полный день
+			+tableBoxItem('Условия оказание медицинской помощи','')
+				.col-auto
+					+e.plate Амбулаторно
+				.col-auto
+					+e.plate Амбулаторно
+				.col-auto
+					+e.plate Амбулаторно
+				.col-auto
+					+e.plate Амбулаторно
+				.col-auto
+					+e.plate Амбулаторно
+			+tableBoxItem('Ночные дежурства','Не важно')
+		//-
+		+tableBox({
+			imgNum: 15,
+			title: 'Статьи',
+		})
+			+tableBoxArticleItem()
+			+tableBoxArticleItem()
+		+tableBox({
+			imgNum: 16,
+			title: 'Профессиональные сообщества',
+		})
+			+tableBoxUnionsItem()
+			+tableBoxUnionsItem()
+		+tableBox({
 			imgNum: 17,
 			title: 'Автомобиль',
 		})
@@ -144,28 +225,10 @@ block pagecontent
 					+e.ball B
 			+tableBoxItem('Инностранный язык', 'Есть личный автомобиль')
 		+tableBox({
-			imgNum: 9,
-			title: 'Достижения',
+			imgNum: 19,
+			title: 'Бонусы в работе',
 		})
-			+tableBoxAchivementItem()
-			+tableBoxAchivementItem()
-		+tableBox({
-			imgNum: 15,
-			title: 'Статьи',
-		})
-			+tableBoxArticleItem()
-			+tableBoxArticleItem()
-		+tableBox({
-			imgNum: 18,
-			title: 'Мероприятия',
-		})
-			+tableBoxEventsItem()
-			+tableBoxEventsItem()
-		+tableBox({
-			imgNum: 16,
-			title: 'Профессиональные сообщества',
-		})
-			+tableBoxUnionsItem()
-			+tableBoxUnionsItem()
+			+e.event-item ДМС или медицинское обслуживание
+			+e.event-item Комфортные условия труда
 	//-proffesional-1
 	+footerN()
