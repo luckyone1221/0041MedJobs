@@ -267,10 +267,15 @@
 	}
 	&__name{
 		white-space: nowrap;
-		padding: 12px var(--lc-padd-x, 12px);
+		padding: 12px var(--lc-padd-x, 12px) 6px var(--lc-padd-x, 12px);
 		font-weight: 500;
 	}
-	&__{}
+	&__id{
+		font-size: 15px;
+		line-height: (18/15);
+		color: $gray-600;
+		padding: 0 var(--lc-padd-x, 12px) 12px var(--lc-padd-x, 12px);
+	}
 	&__{}
 	&__{}
 }

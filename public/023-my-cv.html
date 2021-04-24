@@ -62,6 +62,8 @@
 										<div class="lc-dd__box">
 											<div class="lc-dd__name">Константинопольский К. К.
 											</div>
+											<div class="lc-dd__id">№1330-4
+											</div>
 											<ul>
 												<li><a href="#">Мое резюме</a></li>
 												<li><a href="#">Настройки профиля</a></li>
@@ -449,6 +451,19 @@
 							</div>
 							<div class="form-wrap__input-wrap form-group">
 								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Город для поиска вакансий
+									</div>
+								</div>
+								<div class="custom-select">
+									<select class="default-select-js" name="city" data-placeholder="">
+										<option value="Самара">Самара</option>
+										<option value="Самара 2">Самара 2</option>
+										<option value="Самара 3">Самара 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Желаемая заработная плата
 									</div>
 									<div class="form-wrap__secondary">Будет видна работодателю
@@ -496,9 +511,11 @@
 									<div class="form-wrap__secondary">Выберите одну или несколько областей
 									</div>
 								</div>
-								<div class="skill-select">
+								<div class="multiple-select">
 									<select class="prof-slect2-js" name="prof-sphere" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
 										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
 										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
 										<option value="качество 1">качество 1</option>
 										<option value="качество 2">качество 2</option>
@@ -534,8 +551,8 @@
 						<form>
 							<div class="form-wrap__main-title">Опыт работы
 							</div>
-							<div class="form-wrap__repeater">
-								<div class="form-wrap__r-item">
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Опыт работы
@@ -655,13 +672,13 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-wrap__remove-item"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
+									<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
 										<svg class="icon icon-cross ">
 											<use xlink:href="img/svg/sprite.svg#cross"></use>
 										</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
 									</div>
 								</div>
-								<div class="form-wrap__r-item">
+								<div class="form-wrap__r-item r-item-js">
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Опыт работы
@@ -781,12 +798,14 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-wrap__remove-item"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
+									<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
 										<svg class="icon icon-cross ">
 											<use xlink:href="img/svg/sprite.svg#cross"></use>
 										</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
 									</div>
-								</div><a class="form-wrap__r-add-btn" href="#">Добавить</a>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -943,9 +962,11 @@
 									<div class="form-wrap__title">Укажите или выберите не более 5 навыков
 									</div>
 								</div>
-								<div class="skill-select">
+								<div class="multiple-select">
 									<select class="prof-slect2-js" name="prof-skills" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
 										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
 										<option selected="selected">Умный</option>
 										<option selected="selected">Усидчевый</option>
 										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
@@ -988,9 +1009,11 @@
 									<div class="form-wrap__title">Укажите или выберите не более 5 навыков
 									</div>
 								</div>
-								<div class="skill-select">
+								<div class="multiple-select">
 									<select class="prof-slect2-js" name="common-skills" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
 										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
 										<option selected="selected">Умный</option>
 										<option selected="selected">Усидчевый</option>
 										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
@@ -1097,8 +1120,8 @@
 									<div class="form-wrap__title">Инностранные языки
 									</div>
 								</div>
-								<div class="form-wrap__repeater">
-									<div class="form-wrap__r-item">
+								<div class="form-wrap__repeater repeator-js">
+									<div class="form-wrap__r-item r-item-js">
 										<div class="form-wrap__inp-row row pb-24">
 											<div class="col-6">
 												<div class="custom-select">
@@ -1120,13 +1143,13 @@
 												</div>
 											</div>
 										</div>
-										<div class="form-wrap__remove-item"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
+										<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
 											<svg class="icon icon-cross ">
 												<use xlink:href="img/svg/sprite.svg#cross"></use>
 											</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
 										</div>
 									</div>
-									<div class="form-wrap__r-item">
+									<div class="form-wrap__r-item r-item-js">
 										<div class="form-wrap__inp-row row pb-24">
 											<div class="col-6">
 												<div class="custom-select">
@@ -1148,12 +1171,14 @@
 												</div>
 											</div>
 										</div>
-										<div class="form-wrap__remove-item"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
+										<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
 											<svg class="icon icon-cross ">
 												<use xlink:href="img/svg/sprite.svg#cross"></use>
 											</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
 										</div>
-									</div><a class="form-wrap__r-add-btn" href="#">Добавить</a>
+									</div>
+									<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+									</button>
 								</div>
 							</div>
 							<div class="form-wrap__foot-row row">
@@ -1182,8 +1207,8 @@
 						<form>
 							<div class="form-wrap__main-title">Научная степень
 							</div>
-							<div class="form-wrap__repeater">
-								<div class="form-wrap__r-item">
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Научная степень
@@ -1198,7 +1223,9 @@
 											</select>
 										</div>
 									</div>
-								</div><a class="form-wrap__r-add-btn" href="#">Добавить</a>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1226,8 +1253,8 @@
 						<form>
 							<div class="form-wrap__main-title">Повышение квалификации
 							</div>
-							<div class="form-wrap__repeater">
-								<div class="form-wrap__r-item">
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Тип повышения квалификации
@@ -1254,7 +1281,9 @@
 											</div>
 										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
 									</div>
-								</div><a class="form-wrap__r-add-btn" href="#">Добавить</a>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1350,14 +1379,16 @@
 							</div>
 							<div class="form-wrap__input-wrap form-group">
 								<div class="form-wrap__title-wrap">
-									<div class="form-wrap__title">Готовность к перезду в другие города
+									<div class="form-wrap__title">Готовность к перезду
 									</div>
 									<div class="form-wrap__secondary">Выберите регионы или округа (ПФО)
 									</div>
 								</div>
-								<div class="skill-select">
+								<div class="multiple-select">
 									<select class="prof-slect2-js" name="common-skills" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
 										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
 										<option selected="selected">Москва</option>
 										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
 										<option value="качество 1">качество 1</option>
@@ -1539,8 +1570,8 @@
 						<form>
 							<div class="form-wrap__main-title">Статьи
 							</div>
-							<div class="form-wrap__repeater">
-								<div class="form-wrap__r-item">
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Название статьи
@@ -1571,7 +1602,9 @@
 											</div>
 										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номера страниц" name=""/>
 									</div>
-								</div><a class="form-wrap__r-add-btn" href="#">Добавить</a>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1599,8 +1632,8 @@
 						<form>
 							<div class="form-wrap__main-title">Профессиональные сообщества
 							</div>
-							<div class="form-wrap__repeater">
-								<div class="form-wrap__r-item">
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование
@@ -1613,7 +1646,9 @@
 											</div>
 										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
 									</div>
-								</div><a class="form-wrap__r-add-btn" href="#">Добавить</a>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1771,10 +1806,10 @@
 					</div>
 					<div class="form-wrap">
 						<form>
-							<div class="form-wrap__main-title">Общие навыки
+							<div class="form-wrap__main-title">Образование
 							</div>
-							<div class="form-wrap__repeater">
-								<div class="form-wrap__r-item">
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Страна
@@ -1875,7 +1910,9 @@
 											</div>
 										</div>
 									</div>
-								</div><a class="form-wrap__r-add-btn" href="#">Добавить</a>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">

@@ -17,6 +17,11 @@ mixin modal()
 				+e.title Желаемая должность
 			+e.INPUT.input.form-control(type="text" placeholder="" name="")
 			+customChbDuplicate('Рассмотрю повышение')
+		//-
+		+e.input-wrap.form-group
+			+e.title-wrap
+				+e.title Город для поиска вакансий
+			+customSlectDuplicate('city', ['Самара', 'Самара 2', 'Самара 3'])
 		//-2
 		+e.input-wrap.form-group
 			+e.title-wrap
@@ -162,8 +167,8 @@ mixin modal()
 						+customSlectDuplicate('lang-lvl', ['А1 - Начальный', 'А2 - Начальный', 'А3 - Начальный', 'B1 - Средний'])
 	//---
 	+customModal('sience-grade', 'Научная степень')
-		+e.repeater
-			+e.r-item
+		+e.repeater.repeator-js
+			+e.r-item.r-item-js
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Научная степень
@@ -172,11 +177,11 @@ mixin modal()
 						option placeholder 1
 						option placeholder 2
 						option placeholder 3
-			+e.r-add-btn(href='#') Добавить
+			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//---
 	+customModal('training', 'Повышение квалификации')
-		+e.repeater
-			+e.r-item
+		+e.repeater.repeator-js
+			+e.r-item.r-item-js
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
@@ -196,7 +201,7 @@ mixin modal()
 					+e.title-wrap
 						+e.title Год
 					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="")
-			+e.r-add-btn(href='#') Добавить
+			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//---
 	+customModal('employer-preferences', 'Предпочтения по работодателю')
 		+e.input-wrap.form-group
@@ -220,7 +225,7 @@ mixin modal()
 		//-1
 		+e.input-wrap.form-group
 			+e.title-wrap
-				+e.title Готовность к перезду в другие города
+				+e.title Готовность к перезду
 				+e.secondary Выберите регионы или округа (ПФО)
 			+multipleSelect2('common-skills', undefined, undefined, 'Выберите одну или несколько областей')
 				option(selected) Москва
@@ -288,8 +293,8 @@ mixin modal()
 				+customRadioDulpicate('Нет','night-shifts','Нет')
 	//---
 	+customModal('articles', 'Статьи')
-		+e.repeater
-			+e.r-item
+		+e.repeater.repeator-js
+			+e.r-item.r-item-js
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
@@ -315,11 +320,11 @@ mixin modal()
 					+e.title-wrap
 						+e.title Номера страниц
 					+e.INPUT.input.form-control(type="text" placeholder="Введите номера страниц" name="")
-			+e.r-add-btn(href='#') Добавить
+			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//---
 	+customModal('prof-communities', 'Профессиональные сообщества')
-		+e.repeater
-			+e.r-item
+		+e.repeater.repeator-js
+			+e.r-item.r-item-js
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
@@ -330,7 +335,7 @@ mixin modal()
 					+e.title-wrap
 						+e.title Год
 					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="")
-			+e.r-add-btn(href='#') Добавить
+			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//---
 	+customModal('automobile', 'Автомобиль')
 		+e.input-wrap.form-group
@@ -368,9 +373,9 @@ mixin modal()
 				+customChbDuplicate('Предоставление жилья')
 				+customChbDuplicate('Предоставление субсидий для переезда')
 	//---
-	+customModal('education', 'Общие навыки')
-		+e.repeater
-			+e.r-item
+	+customModal('education', 'Образование')
+		+e.repeater.repeator-js
+			+e.r-item.r-item-js
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
@@ -436,29 +441,26 @@ mixin modal()
 							+e.INPUT.input.form-control(type="text" placeholder="Год окончания" name="")
 						.col-md-6
 							+e.secondary Если учитесь в настоящее время — укажите год предполагаемого окончания
-			+e.r-add-btn(href='#') Добавить
-
-
+			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 
 	// end modals
 
 mixin repeatorBl()
-	+e.repeater
-		+e.r-item
+	+e.repeater.repeator-js
+		+e.r-item.r-item-js
 			block
 			+repeatorRemove()
-		+e.r-item
+		+e.r-item.r-item-js
 			block
 			+repeatorRemove()
-		+e.r-add-btn(href='#') Добавить
+		+e.r-add-btn.r-add-btn-js(type='button') Добавить
 
 mixin repeatorRemove()
-	+e.remove-item
+	+e.remove-item.r-remove-item-js
 		+e.r-btn(href='#')
 			+e.r-ball
 				+icon('cross')
 			+e.ri-txt Удалить
-
 
 mixin customModal(modalId='place-id', title='Условия работы')
 	+b.custom-modal--js(id=modalId)
@@ -492,11 +494,11 @@ mixin customSlectDuplicate(selectName, optionsArr=['услуга 1', 'очень
 					option(value=item)=item
 
 mixin multipleSelect2(selectName, optionsArr=['Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста', 'качество 1', 'качество 2', 'качество 3', 'качество 4', 'качество 5'], keyClass='prof-slect2-js', dataPlaceholder)
-	+b.skill-select
+	+b.multiple-select
 		select(name=selectName class=keyClass multiple='multiple' data-placeholder=dataPlaceholder)
 			option(value="" label='#')
-			//-option(selected) Умный
-			//-option(selected) Усидчевый
+			//option(selected) Умный
+			//option(selected) Усидчевый
 			if block
 				block
 			else

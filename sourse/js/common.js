@@ -366,6 +366,8 @@ function eventHandler() {
 		maximumSelectionLength: 30,
 		dropdownCssClass: "soc-select2",
 	});
+
+
 	//
 	$('.resp-tabs-js').easyResponsiveTabs({
 		activate: function () {}
@@ -401,15 +403,6 @@ function eventHandler() {
 	//
 
 	//
-	$('.default-select-js').select2({
-		minimumResultsForSearch: Infinity,
-		dropdownCssClass: "default-select2",
-	});
-	//
-	$('.prof-slect2-js').select2({
-		maximumSelectionLength: 30,
-		dropdownCssClass: "default-select2",
-	});
 
 	//from jetbrains animation
 	$('.sidebar-trakcer-js').mousemove(function (){
@@ -523,21 +516,129 @@ function eventHandler() {
 		let id = this.getAttribute('href');
 		let modal = document.querySelector(id);
 		$('body').addClass('fixed3');
-		//
 
 		$(modal).addClass('active');
-		// $(modal).fadeIn(function (){
-		// 	$(this).addClass('active');
-		// });
 	});
 	$('.close-cm-js').click(function (){
 		$(this).closest('.custom-modal--js').removeClass('active');
 		$('body').removeClass('fixed3');
-		// $(this).closest('.custom-modal--js').fadeOut(function (){
-		// 	$(this).removeClass('active');
-		// 	$('body').removeClass('fixed3');
-		// })
 	});
+
+	//repeator js
+	$('.repeator-js').each(function (){
+		let firtsItem = this.querySelector('.r-item-js');
+		let content = firtsItem.innerHTML;
+		//console.log(content);
+
+		let addBtn = this.querySelector('.r-add-btn-js');
+		addBtn.addEventListener('click', duplicateRItem.bind(addBtn, this, content));
+	});
+
+	//delegation of remove btn
+	$('.repeator-js').click(function (){
+		let thisRepeator = this;
+		let target = event.target;
+		if (target.closest('.r-remove-item-js')){
+			let item = target.closest('.r-item-js');
+
+			$(item).slideUp(function (){
+				$(item).addClass('d-none');
+				item.remove();
+				checkRemoveBtn(thisRepeator);
+			});
+
+		}
+	})
+
+	function duplicateRItem(parent, content){
+		let btnParent = this.parentNode;
+		let newItem = document.createElement('div');
+		newItem.classList.add('custom-modal__r-item', 'r-item-js', 'd-none-no-important');
+		newItem.innerHTML = content;
+
+		btnParent.insertBefore(newItem, this);
+		addSelect2ToNewItems(newItem);
+
+		$(newItem).slideDown(function (){
+			$(this).removeClass('d-none-no-important');
+		});
+		checkRemoveBtn(parent);
+	}
+
+	//
+	function checkRemoveBtn(repeatorBl){
+		let items = repeatorBl.querySelectorAll('.r-item-js');
+
+		//case 1
+		if (items.length > 1){
+			for (let item of items){
+				let thisRemoveBtn = item.querySelector('.r-remove-item-js');
+				if (!thisRemoveBtn){
+					let removeBtn = createRemoveBtn();
+					$(removeBtn).addClass('d-none-no-important');
+					item.appendChild(removeBtn);
+
+					$(removeBtn).slideDown(function (){
+						$(this).removeClass('d-none-no-important');
+					})
+
+				}
+			}
+		}
+
+		//case 2
+		else{
+			let removeBtn = items[0].querySelector('.r-remove-item-js');
+			removeBtn.classList.add('pointer-events-none');
+
+			$(removeBtn).slideUp(function (){
+				$(removeBtn).addClass('d-none');
+				removeBtn.remove();
+			});
+		}
+	}
+	function createRemoveBtn(){
+		let removeBtn = document.createElement('div');
+		let content = document.querySelector('.r-remove-item-js').innerHTML;
+
+		removeBtn.classList.add('form-wrap__remove-item', 'r-remove-item-js');
+		removeBtn.innerHTML = content;
+
+		return removeBtn;
+	}
+
+
+	function addSelect2ToNewItems(htmlNode){
+		$(htmlNode).find('.default-select-js').select2({
+			minimumResultsForSearch: Infinity,
+			dropdownCssClass: "default-select2",
+		});
+		$(htmlNode).find('.prof-slect2-js').select2({
+			maximumSelectionLength: 30,
+			dropdownCssClass: "default-select2",
+		});
+	}
+
+
+	// need timeout to properly extract conntent of repeator
+	// it will become useless if u get some innerHtml into another way
+	window.setTimeout(function (){
+		$('.default-select-js').select2({
+			minimumResultsForSearch: Infinity,
+			dropdownCssClass: "default-select2",
+		});
+		$('.prof-slect2-js').select2({
+			maximumSelectionLength: 30,
+			dropdownCssClass: "default-select2",
+		});
+	}, 10);
+
+	// .repeator-js
+	// .r-item-js
+	// .r-remove-item-js
+	// .r-add-btn-js
+
+
 	//
 	//end luckyone js
 

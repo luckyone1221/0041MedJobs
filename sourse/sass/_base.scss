@@ -97,6 +97,13 @@ body {
 		margin-right: var(--scroll-width, 17px);
 		max-width: calc(100% - var(--scroll-width));
 
+		&::before {
+			@include mt(.4);
+			z-index: 999;
+			opacity: 0.24;
+			background-color: $headings-color;
+		}
+
 		.headerAlt{
 			margin-right: var(--scroll-width, 17px);
 			max-width: calc(100% - var(--scroll-width));
@@ -957,3 +964,10 @@ h5{
 }
 
 //
+.d-none-no-important{
+	display: none;
+}
+
+.pointer-events-none{
+	pointer-events: none!important;
+}

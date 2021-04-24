@@ -394,16 +394,7 @@ function eventHandler() {
 		$(this).toggleClass('active');
 	}); //
 	//
-
-	$('.default-select-js').select2({
-		minimumResultsForSearch: Infinity,
-		dropdownCssClass: "default-select2"
-	}); //
-
-	$('.prof-slect2-js').select2({
-		maximumSelectionLength: 30,
-		dropdownCssClass: "default-select2"
-	}); //from jetbrains animation
+	//from jetbrains animation
 
 	$('.sidebar-trakcer-js').mousemove(function () {
 		if (!this.parentElement.classList.contains('active')) return;
@@ -554,19 +545,125 @@ function eventHandler() {
 	$('.custom-modal-link-js').click(function () {
 		var id = this.getAttribute('href');
 		var modal = document.querySelector(id);
-		$('body').addClass('fixed3'); //
-
-		$(modal).addClass('active'); // $(modal).fadeIn(function (){
-		// 	$(this).addClass('active');
-		// });
+		$('body').addClass('fixed3');
+		$(modal).addClass('active');
 	});
 	$('.close-cm-js').click(function () {
 		$(this).closest('.custom-modal--js').removeClass('active');
-		$('body').removeClass('fixed3'); // $(this).closest('.custom-modal--js').fadeOut(function (){
-		// 	$(this).removeClass('active');
-		// 	$('body').removeClass('fixed3');
-		// })
-	}); //
+		$('body').removeClass('fixed3');
+	}); //repeator js
+
+	$('.repeator-js').each(function () {
+		var firtsItem = this.querySelector('.r-item-js');
+		var content = firtsItem.innerHTML; //console.log(content);
+
+		var addBtn = this.querySelector('.r-add-btn-js');
+		addBtn.addEventListener('click', duplicateRItem.bind(addBtn, this, content));
+	}); //delegation of remove btn
+
+	$('.repeator-js').click(function () {
+		var thisRepeator = this;
+		var target = event.target;
+
+		if (target.closest('.r-remove-item-js')) {
+			var item = target.closest('.r-item-js');
+			$(item).slideUp(function () {
+				$(item).addClass('d-none');
+				item.remove();
+				checkRemoveBtn(thisRepeator);
+			});
+		}
+	});
+
+	function duplicateRItem(parent, content) {
+		var btnParent = this.parentNode;
+		var newItem = document.createElement('div');
+		newItem.classList.add('custom-modal__r-item', 'r-item-js', 'd-none-no-important');
+		newItem.innerHTML = content;
+		btnParent.insertBefore(newItem, this);
+		addSelect2ToNewItems(newItem);
+		$(newItem).slideDown(function () {
+			$(this).removeClass('d-none-no-important');
+		});
+		checkRemoveBtn(parent);
+	} //
+
+
+	function checkRemoveBtn(repeatorBl) {
+		var items = repeatorBl.querySelectorAll('.r-item-js'); //case 1
+
+		if (items.length > 1) {
+			var _iterator3 = _createForOfIteratorHelper(items),
+					_step3;
+
+			try {
+				for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+					var item = _step3.value;
+					var thisRemoveBtn = item.querySelector('.r-remove-item-js');
+
+					if (!thisRemoveBtn) {
+						var removeBtn = createRemoveBtn();
+						$(removeBtn).addClass('d-none-no-important');
+						item.appendChild(removeBtn);
+						$(removeBtn).slideDown(function () {
+							$(this).removeClass('d-none-no-important');
+						});
+					}
+				}
+			} catch (err) {
+				_iterator3.e(err);
+			} finally {
+				_iterator3.f();
+			}
+		} //case 2
+		else {
+				var _removeBtn = items[0].querySelector('.r-remove-item-js');
+
+				_removeBtn.classList.add('pointer-events-none');
+
+				$(_removeBtn).slideUp(function () {
+					$(_removeBtn).addClass('d-none');
+
+					_removeBtn.remove();
+				});
+			}
+	}
+
+	function createRemoveBtn() {
+		var removeBtn = document.createElement('div');
+		var content = document.querySelector('.r-remove-item-js').innerHTML;
+		removeBtn.classList.add('form-wrap__remove-item', 'r-remove-item-js');
+		removeBtn.innerHTML = content;
+		return removeBtn;
+	}
+
+	function addSelect2ToNewItems(htmlNode) {
+		$(htmlNode).find('.default-select-js').select2({
+			minimumResultsForSearch: Infinity,
+			dropdownCssClass: "default-select2"
+		});
+		$(htmlNode).find('.prof-slect2-js').select2({
+			maximumSelectionLength: 30,
+			dropdownCssClass: "default-select2"
+		});
+	} // need timeout to properly extract conntent of repeator
+	// it will become useless if u get some innerHtml into another way
+
+
+	window.setTimeout(function () {
+		$('.default-select-js').select2({
+			minimumResultsForSearch: Infinity,
+			dropdownCssClass: "default-select2"
+		});
+		$('.prof-slect2-js').select2({
+			maximumSelectionLength: 30,
+			dropdownCssClass: "default-select2"
+		});
+	}, 10); // .repeator-js
+	// .r-item-js
+	// .r-remove-item-js
+	// .r-add-btn-js
+	//
 	//end luckyone js
 	//todo New
 	//2 kill ui kit
