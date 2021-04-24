@@ -607,19 +607,6 @@ function eventHandler() {
 		return removeBtn;
 	}
 
-
-	function addSelect2ToNewItems(htmlNode){
-		$(htmlNode).find('.default-select-js').select2({
-			minimumResultsForSearch: Infinity,
-			dropdownCssClass: "default-select2",
-		});
-		$(htmlNode).find('.prof-slect2-js').select2({
-			maximumSelectionLength: 30,
-			dropdownCssClass: "default-select2",
-		});
-	}
-
-
 	// need timeout to properly extract conntent of repeator
 	// it will become useless if u get some innerHtml into another way
 	window.setTimeout(function (){
@@ -628,6 +615,7 @@ function eventHandler() {
 			dropdownCssClass: "default-select2",
 		});
 		$('.prof-slect2-js').select2({
+			tags: true,
 			maximumSelectionLength: 30,
 			dropdownCssClass: "default-select2",
 		});
@@ -654,3 +642,14 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
+function addSelect2ToNewItems(htmlNode){
+	$(htmlNode).find('.default-select-js').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownCssClass: "default-select2",
+	});
+	$(htmlNode).find('.prof-slect2-js').select2({
+		tags: true,
+		//maximumSelectionLength: 30,
+		dropdownCssClass: "default-select2",
+	});
+}
