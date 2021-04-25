@@ -514,6 +514,7 @@
 	&__plate{
 		@extend .btn;
 		@extend .btn-light;
+		pointer-events: none;
 		border-radius: 60px;
 		padding: 5px 11px;
 
@@ -616,6 +617,7 @@
 		@extend .btn-light;
 		border-radius: 60px;
 		padding: 5px 11px;
+		pointer-events: none;
 
 		font-size: 15px;
 		line-height: (18/15);

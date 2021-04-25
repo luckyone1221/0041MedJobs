@@ -90,12 +90,31 @@ a {
 }
 
 .custom-modal{
-	@include mt(.4);
+	//
+	&:before{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(1px);
+		filter: blur(0px);
+		opacity: 0;
+		transition: all 0s ease-in-out 0s;
+	}
+
+	@include mt(1);
 
 	right: -120vw;
-	//--close-bl-o: 0;
 	&.active{
-		//--close-bl-o: 1;
+		@include mt(.4);
+		&:before{
+			filter: blur(2px);
+			opacity: 1;
+			transition: all .4s ease-in-out .4s;
+		}
 		right: 0;
 	}
 

@@ -146,7 +146,8 @@ mixin modal()
 		+e.input-wrap.form-group
 			+e.title-wrap
 				+e.title Описание достижения
-			+customSlectDuplicate('achievement-descr', ['Звание', 'placeholder', 'placeholder 2'], undefined, 'Описание достижения')
+			+e.INPUT.input.form-control(type="text" placeholder="" name="")
+			//-+customSlectDuplicate('achievement-descr', ['Звание', 'placeholder', 'placeholder 2'], undefined, 'Описание достижения')
 				option(label="#")
 				option placeholder 1
 				option placeholder 2

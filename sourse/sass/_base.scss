@@ -97,7 +97,7 @@ body {
 		margin-right: var(--scroll-width, 17px);
 		max-width: calc(100% - var(--scroll-width));
 
-		&::before {
+		&:before {
 			@include mt(.4);
 			z-index: 999;
 			opacity: 0.24;
@@ -970,4 +970,58 @@ h5{
 
 .pointer-events-none{
 	pointer-events: none!important;
+}
+
+//
+.scroll-top-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	@include mt(.3);
+	position: fixed;
+	z-index: 999;
+
+	bottom: 45px;
+
+	right: -60vw;
+	//opacity: 0;
+	&.active{
+		right: 45px;
+	}
+
+	&__ball{
+		border: 1px solid $light;
+		@include media-breakpoint-up(xxl){
+			border: none;
+		}
+
+		width: 60px;
+		height: 60px;
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+		@include media-breakpoint-up(xl){
+			width: 40px;
+			height: 40px;
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+		}
+		border-radius: 50%;
+		background-color: $white;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: 7px;
+			color: $warning;
+		}
+	}
+	&__txt{
+		margin-left: 12px;
+		color: $headings-color;
+		font-size: 15px;
+		font-family: $mono;
+	}
+	&__{}
 }

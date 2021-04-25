@@ -620,13 +620,37 @@ function eventHandler() {
 			dropdownCssClass: "default-select2",
 		});
 	}, 10);
-
 	// .repeator-js
 	// .r-item-js
 	// .r-remove-item-js
 	// .r-add-btn-js
 
 
+	//fixed btn
+	$('.scroll-top-btn--js, .scroll-top-js').click(function (){
+		event.preventDefault();
+		window.scrollTo(0,0);
+	})
+
+	let fixedScrollTopBtn = document.querySelector('.scroll-top-btn--js');
+	let footerN = document.querySelector('.footerN--js');
+	if (fixedScrollTopBtn){
+		document.addEventListener('scroll', function (){
+			console.log(footerN.getBoundingClientRect().top + $(window)['scrollTop'](), window.scrollY + vh(100));
+			let footerTop = footerN.getBoundingClientRect().top + $(window)['scrollTop']();
+
+			if (window.scrollY > vh(50) && footerTop > window.scrollY + vh(100)){
+				fixedScrollTopBtn.classList.add('active');
+			}
+			else{
+				fixedScrollTopBtn.classList.remove('active');
+			}
+		}, {passive: true})
+	}
+	function vh(v) {
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		return (v * h) / 100;
+	}
 	//
 	//end luckyone js
 
@@ -653,3 +677,4 @@ function addSelect2ToNewItems(htmlNode){
 		dropdownCssClass: "default-select2",
 	});
 }
+

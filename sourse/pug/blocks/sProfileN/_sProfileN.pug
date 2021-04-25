@@ -251,7 +251,8 @@ mixin asideMenuCv()
 		.d-block
 			block
 			ul
-				+asideMenuCvItem('Основная информация', '#work-conditions')
+				//+asideMenuCvItem('Основная информация', '#work-conditions')
+				li: a.scroll-top-js(href="#") Основная информация
 				+asideMenuCvItem('Условия работы', '#work-conditions')
 				+asideMenuCvItem('Опыт работы', '#experience')
 				+asideMenuCvItem('Образование', '#education')
@@ -269,7 +270,13 @@ mixin asideMenuCv()
 				+asideMenuCvItem('Статьи', '#articles')
 				+asideMenuCvItem('Профессиональные сообщества', '#prof-communities')
 				+asideMenuCvItem('Автомобиль', '#automobile')
-				+asideMenuCvItem('Бонусы в работе(нет в макете сайдбара)', '#bonuses')
+				+asideMenuCvItem('Бонусы в работе', '#bonuses')
 
 mixin asideMenuCvItem(txt, linkHref)
 	li: a.custom-modal-link-js(href=linkHref)=txt
+
+mixin scrollTopBtn()
+	+b.scroll-top-btn--js
+		+e.ball
+			+icon('chevron-top')
+		+e.txt.d-none.d-xl-block Наверх

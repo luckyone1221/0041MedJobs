@@ -653,10 +653,38 @@ function eventHandler() {
 	// .r-item-js
 	// .r-remove-item-js
 	// .r-add-btn-js
-	//
+	//fixed btn
+
+	$('.scroll-top-btn--js, .scroll-top-js').click(function () {
+		event.preventDefault();
+		window.scrollTo(0, 0);
+	});
+	var fixedScrollTopBtn = document.querySelector('.scroll-top-btn--js');
+	var footerN = document.querySelector('.footerN--js');
+
+	if (fixedScrollTopBtn) {
+		document.addEventListener('scroll', function () {
+			console.log(footerN.getBoundingClientRect().top + $(window)['scrollTop'](), window.scrollY + vh(100));
+			var footerTop = footerN.getBoundingClientRect().top + $(window)['scrollTop']();
+
+			if (window.scrollY > vh(50) && footerTop > window.scrollY + vh(100)) {
+				fixedScrollTopBtn.classList.add('active');
+			} else {
+				fixedScrollTopBtn.classList.remove('active');
+			}
+		}, {
+			passive: true
+		});
+	}
+
+	function vh(v) {
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		return v * h / 100;
+	} //
 	//end luckyone js
 	//todo New
 	//2 kill ui kit
+
 }
 
 ;
