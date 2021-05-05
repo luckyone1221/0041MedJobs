@@ -81,31 +81,29 @@ const JSCCommon = {
 		}
 		if (linkModal) addData();
 	},
-	// tabs  .
-	// tabscostume(tab) {
-	// 	let tabs = {
-	// 		Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
-	// 		BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
-	// 		Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
-	// 	}
-	// 	tabs.Btn.forEach((element, index) => {
-	// 		element.addEventListener('click', () => {
-	// 			if (!element.classList.contains('active')) {
-	// 				//turn off old
-	// 				let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
-	// 				let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
-	//
-	// 				oldActiveEl.classList.remove('active');
-	// 				oldActiveContent.classList.remove('active')
-	//
-	// 				//turn on new(cklicked el)
-	// 				element.classList.add('active');
-	// 				tabs.Content[index].classList.add('active');
-	// 			}
-	// 		})
-	// 	})
-	// },
-	// /tabs
+	tabscostume(tab) {
+		let tabs = {
+			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
+			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
+			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
+		}
+		tabs.Btn.forEach((element, index) => {
+			element.addEventListener('click', () => {
+				if (!element.classList.contains('active')) {
+					//turn off old
+					let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
+					let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
+
+					oldActiveEl.classList.remove('active');
+					oldActiveContent.classList.remove('active')
+
+					//turn on new(cklicked el)
+					element.classList.add('active');
+					tabs.Content[index].classList.add('active');
+				}
+			})
+		})
+	},
 
 	inputMask() {
 		// mask for input
@@ -206,7 +204,7 @@ const $ = jQuery;
 function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
-	//JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('c-tabs');
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -215,7 +213,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '00-c2-2.png';
+	screenName = '025-1.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}

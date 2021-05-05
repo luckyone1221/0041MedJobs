@@ -1,0 +1,43 @@
+mixin sCompilations(data)
+	// start sCompilations
+	+b.sCompilations#sCompilations&attributes(attributes)
+		+e.top-row.row.align-items-center
+			.col-auto
+				h1.sProfileN__title Мои подборки
+			.col-auto
+				//+formCheck('Остановить подборку')
+				+chbSwitch('Остановить подборку')
+			.col-xl-auto
+				+e.edit-btn(href='#')
+					+icon('pencil')
+					span Редактировать критерии подбора
+		+b.c-tabs
+			+e.caption.row.resp-tabs-list.d-flex
+				+e.btn--intelegence.active.col-lg-4(href='#')
+					span Интеллектуальный подбор
+					+e.ball 1
+				+e.btn--heart.col-lg-4(href='#')
+					+icon('heart')
+					span Мне понравились
+				+e.btn--heart.col-lg-4(href='#')
+					+icon('cross-big')
+					span Скрытые
+			+e.wrap
+				+e.content.active
+					+e.descr Всего найдено 349 435 вакансий, для вас подобрано 134 вакансий
+				+e.content
+					+e.descr 2
+				+e.content
+					+e.descr 3
+	// end sCompilations
+
+mixin formCheck(txt='lalala')
+	.form-check.form-switch
+		input#flexSwitchCheckDefault.form-check-input(type='checkbox')&attributes(attributes)
+		label.form-check-label(for='flexSwitchCheckDefault')=txt
+
+mixin chbSwitch(txt='lalala')
+	+b.LABEL.custom-switch
+		input(type='checkbox' class='invisible')&attributes(attributes)
+		span.line
+		span.txt=txt

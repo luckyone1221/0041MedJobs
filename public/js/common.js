@@ -103,31 +103,27 @@ var JSCCommon = {
 
 		if (linkModal) addData();
 	},
-	// tabs  .
-	// tabscostume(tab) {
-	// 	let tabs = {
-	// 		Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
-	// 		BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
-	// 		Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
-	// 	}
-	// 	tabs.Btn.forEach((element, index) => {
-	// 		element.addEventListener('click', () => {
-	// 			if (!element.classList.contains('active')) {
-	// 				//turn off old
-	// 				let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
-	// 				let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
-	//
-	// 				oldActiveEl.classList.remove('active');
-	// 				oldActiveContent.classList.remove('active')
-	//
-	// 				//turn on new(cklicked el)
-	// 				element.classList.add('active');
-	// 				tabs.Content[index].classList.add('active');
-	// 			}
-	// 		})
-	// 	})
-	// },
-	// /tabs
+	tabscostume: function tabscostume(tab) {
+		var tabs = {
+			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
+			BtnParent: [].slice.call(document.querySelectorAll(".".concat(tab, "__caption"))),
+			Content: [].slice.call(document.querySelectorAll(".".concat(tab, "__content")))
+		};
+		tabs.Btn.forEach(function (element, index) {
+			element.addEventListener('click', function () {
+				if (!element.classList.contains('active')) {
+					//turn off old
+					var oldActiveEl = element.closest(".".concat(tab)).querySelector(".".concat(tab, "__btn.active"));
+					var oldActiveContent = tabs.Content[index].closest(".".concat(tab)).querySelector(".".concat(tab, "__content.active"));
+					oldActiveEl.classList.remove('active');
+					oldActiveContent.classList.remove('active'); //turn on new(cklicked el)
+
+					element.classList.add('active');
+					tabs.Content[index].classList.add('active');
+				}
+			});
+		});
+	},
 	inputMask: function inputMask() {
 		// mask for input
 		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
@@ -228,8 +224,8 @@ function eventHandler() {
 	var _defaultSl, _Swiper;
 
 	JSCCommon.ifie();
-	JSCCommon.modalCall(); //JSCCommon.tabscostume('tabs');
-
+	JSCCommon.modalCall();
+	JSCCommon.tabscostume('c-tabs');
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -237,7 +233,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '00-c2-2.png';
+	screenName = '025-1.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));

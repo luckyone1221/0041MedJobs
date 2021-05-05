@@ -280,3 +280,18 @@ mixin scrollTopBtn()
 		+e.ball
 			+icon('chevron-top')
 		+e.txt.d-none.d-xl-block Наверх
+
+mixin sProfileNCompilation()
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xl-auto
+					+lSidebarN()
+						+lSidebarSlide(1,'Подборки вакансий')(class='active')
+						+lSidebarSlide(2,'Мое резюме')
+						+lSidebarSlide(3,'Настройки профиля')
+						+lSidebarSlide(4,'Избранные вакансии')
+				+e.content-col.col-xl
+					.center-block
+						block
