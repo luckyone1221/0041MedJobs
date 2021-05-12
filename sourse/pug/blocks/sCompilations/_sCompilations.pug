@@ -23,19 +23,81 @@ mixin sCompilations(data)
 					+icon('cross-big')
 					span Скрытые
 			+e.wrap
-				+e.content.active
-					+e.descr Всего найдено 349 435 вакансий, для вас подобрано 134 вакансий
-					+e.plates-row.row
-						+sCompilationsItem()
-				+e.content
-					+e.descr 2
-				+e.content
-					+e.descr 3
+				if data.EmptyContent
+					+e.content.active
+						+b.sNVac--compilation#sNVac&attributes(attributes)
+							+e.empty
+								+e.e-img
+									img(loading="lazy" src="img/@2x/empty-vac.png" alt="")
+								+e.e-txt.text-center
+									| У вас пока нет новых подборок вакансий. Заполните ваше резюме, чтобы интеллектуальная подборка
+									br
+									| смогла сопоставить информацию с вашего резюме с нашей базой вакансий и подобрать
+									br
+									| для вас наиболее подходящие вакансии.
+								+e.e-btn(href='#') Перейти к резюме
+					+e.content 3
+					+e.content 2
+				else
+					+e.content.active
+						+e.descr.mb-18.mb-md-24 Всего найдено 349 435 вакансий, для вас подобрано 134 вакансий
+						+e.plates-row.row
+							-for (var i = 0; i < 3; i++)
+								+threeCards('item-regular-js')
+					+e.content
+						+e.descr.mb-18.mb-md-24 Вам понравились 3 вакансии
+						+e.plates-row.row
+							-for (var i = 0; i < 3; i++)
+								+threeCards('item-like-js')
+					+e.content
+						+e.descr.mb-18.mb-md-24 Вы скрыли 3 вакансии
+						+e.plates-row.row
+							-for (var i = 0; i < 3; i++)
+								+threeCards('item-dislike-js')
 	// end sCompilations
 
+mixin threeCards(fType)
+	+sCompilationsItem({
+		timeHasBall: true,
+		timeTxt: '5 минут назад',
+		percents: '75%',
+		bateryIcon: '1',
+		title: 'Врач хирург-терапевт',
+		salary: '57 000 ₽',
+		hasLogo: true,
+		companyName: 'ООО УК Медгард',
+		companyCity: 'г. Санкт-Петербург',
+		descr: 'На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское образование, имеющий практические...',
+		itemType: fType
+	})
+	+sCompilationsItem({
+		timeTxt: 'Вчера, 17:53',
+		percents: '98%',
+		bateryIcon: '2',
+		title: 'Терапевт',
+		salary: '25 000 ₽',
+		hasLogo: false,
+		companyName: 'ГДКБ №6',
+		companyCity: 'г. Ростов-на-Дону',
+		descr: `Написание техпроцессов для станков </br> с ЧПУ на машиностроительном производстве`,
+		itemType: fType
+	})
+	+sCompilationsItem({
+		timeTxt: '20 апреля 2021',
+		percents: '75%',
+		bateryIcon: '3',
+		title: 'Длинное название вакансии в две строки',
+		salary: '50 000 - 100 000 ₽',
+		hasLogo: true,
+		companyName: 'ООО УК Медгард',
+		companyCity: 'г. Санкт-Петербург',
+		descr: 'На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское...',
+		itemType: fType
+	})
+
 mixin sCompilationsItem(data)
-	.col-md-6.col-lg-4
-		+b.sComp-item
+	.col-md-6.col-lg-4.sComp-col-js
+		+b.sComp-item(class=data.itemType)
 			+e.head
 				+e.h-row.row.gy-2.align-items-center
 					.col
@@ -44,24 +106,21 @@ mixin sCompilationsItem(data)
 						else
 							+e.h-time=data.timeTxt
 					.col-auto
-						+e.h-sub-row.row.align-items-center
-							.col-auto
-								+e.percents=data.percents
-							.col-auto
-								+e.batery
-									img(loading="lazy" src=`img/svg/batery-${data.bateryIcon || 1}` alt="")
-							.col-auto
-								+b.hint-row.row.mb-12
-									+e.title.col-auto Заполненность резюме
-									.col
-										+e.quest-sign
-											+icon('q-sign')
-											+e.hint-cont
-												+e.hint Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
+						+e.percents=data.percents
+					.col-auto
+						+e.batery
+							img(loading="lazy" src=`img/svg/batery-${data.bateryIcon || 1}.svg` alt="")
+					.col-auto
+						+b.hint-row.row
+							.col
+								+e.quest-sign
+									+icon('q-sign')
+									+e.hint-cont
+										+e.hint Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
 			+e.content
 				+e.title(href="#")=`${data.title || 'Врач хирург-терапевт'}`
-				+e.salary=`${data.title || 'Врач хирург-терапевт'}`
-				+e.logo-row.row.gy-2
+				+e.salary=`${data.salary || 'Врач хирург-терапевт'}`
+				+e.logo-row.row.gy-2.align-items-center
 					.col-auto
 						if data.hasLogo
 							+e.logo(href='#')
@@ -69,19 +128,28 @@ mixin sCompilationsItem(data)
 						else
 							+e.logo--empty(href='#')
 								img(loading="lazy" src="img/svg/sm-company-stab.svg" alt="")
-				+e.descr На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское образование, имеющий практические...
+					.col
+						+e.name=`${data.companyName || 'ООО УК Медгард'}`
+						+e.city=`${data.companyCity || 'г. Санкт-Петербург'}`
+				+e.descr!= data.descr
 				+e.detail(href='#') Подробнее о вакансии
 			+e.footer
-				+e.footer-row.row
-					+e.f-btn--like.--js(href="#")
-						+icon('heart')
-						span Не нравится
-					+e.f-btn--dislike.--js(href="#")
-						+icon('cross-big')
-						span Нравится
-
-
-
+				+e.f-btn--dislike.sComp-btn-js.sComp-dislike-btn-js
+					+icon('cross-big')
+					span Не нравится
+				+e.f-btn--like.sComp-btn-js.sComp-like-btn-js
+					+icon('heart')
+					span Нравится
+				if data.itemType === 'item-like-js'
+					+e.big-btn-cont.bb-cont-js
+						+e.f-btn--like.--long
+							+icon('heart')
+							span Нравится
+				else if data.itemType === 'item-dislike-js'
+					+e.big-btn-cont.bb-cont-js
+						+e.f-btn--dislike.--long
+							+icon('cross-big')
+							span Не нравится
 
 mixin formCheck(txt='lalala')
 	.form-check.form-switch

@@ -161,6 +161,15 @@
 	}
 	&__e-btn{
 		@extend .btn-light-default;
+		font-weight: 500;
+	}
+
+	&--compilation{
+		.sNVac__empty{
+			min-height: 0;
+			padding-top: 48px;
+			padding-bottom: 48px;
+		}
 	}
 } // end.sNVac
 

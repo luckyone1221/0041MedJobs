@@ -649,7 +649,53 @@ function eventHandler() {
 		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		return (v * h) / 100;
 	}
-	//
+
+	//sCompilation js
+
+	//item regular
+	$('.item-regular-js .sComp-btn-js').click(function (){
+		let col = this.closest('.sComp-col-js');
+
+		if (window.matchMedia("(min-width: 768px)").matches){
+			$(col).fadeOut(function (){});
+		}
+		else{
+			$(col).slideUp(function (){});
+		}
+	});
+	//item like/dislike
+	$('.bb-cont-js').click(function (){
+		$(this).fadeOut();
+	});
+	//like
+	$('.item-like-js .sComp-dislike-btn-js').click(function (){
+		let col = this.closest('.sComp-col-js');
+
+		if (window.matchMedia("(min-width: 768px)").matches){
+			$(col).fadeOut(function (){});
+		}
+		else{
+			$(col).slideUp(function (){});
+		}
+	});
+	$('.item-like-js .sComp-like-btn-js').click(function (){
+		$(this).closest('.sComp-col-js').find('.bb-cont-js').fadeIn();
+	});
+	//dislike
+	$('.item-dislike-js .sComp-like-btn-js').click(function (){
+		let col = this.closest('.sComp-col-js');
+
+		if (window.matchMedia("(min-width: 768px)").matches){
+			$(col).fadeOut(function (){});
+		}
+		else{
+			$(col).slideUp(function (){});
+		}
+	});
+	$('.item-dislike-js .sComp-dislike-btn-js').click(function (){
+		$(this).closest('.sComp-col-js').find('.bb-cont-js').fadeIn();
+	});
+
 	//end luckyone js
 
 	//todo New
