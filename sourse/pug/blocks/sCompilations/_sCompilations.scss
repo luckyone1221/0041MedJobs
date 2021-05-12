@@ -150,6 +150,7 @@
 		&__{}
 		&__{}
 	}
+	&__{}
 } // end.sCompilations
 
 
@@ -205,4 +206,46 @@
 		box-shadow: none!important;
 		margin-right: 12px!important;
 	}
+}
+
+//
+.sComp-item{
+	background: $white;
+	border: 1px solid $gray-210;
+	box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+	border-radius: 5px;
+
+
+	&__head{
+		padding: 19px 24px;
+	}
+	&__h-row{}
+	&__h-time{
+		&--ball{}
+	}
+	&__h-sub-row{}
+	&__percents{}
+	&__batery{}
+	//hint
+	.hint-row{}
+	//
+	&__content{}
+	&__title{}
+	&__salary{}
+	&__logo-row{}
+	&__logo{
+		&--empty{}
+		img{}
+	}
+	&__descr{}
+	&__detail{}
+	&__footer{}
+	&__footer-row{}
+	&__f-btn{
+		&--like{}
+		&--dislike{}
+	}
+
+	&__{}
+	&__{}
 }

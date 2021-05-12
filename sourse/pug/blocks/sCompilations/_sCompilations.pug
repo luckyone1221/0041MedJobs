@@ -25,11 +25,63 @@ mixin sCompilations(data)
 			+e.wrap
 				+e.content.active
 					+e.descr Всего найдено 349 435 вакансий, для вас подобрано 134 вакансий
+					+e.plates-row.row
+						+sCompilationsItem()
 				+e.content
 					+e.descr 2
 				+e.content
 					+e.descr 3
 	// end sCompilations
+
+mixin sCompilationsItem(data)
+	.col-md-6.col-lg-4
+		+b.sComp-item
+			+e.head
+				+e.h-row.row.gy-2.align-items-center
+					.col
+						if data.timeHasBall
+							+e.h-time--ball=data.timeTxt
+						else
+							+e.h-time=data.timeTxt
+					.col-auto
+						+e.h-sub-row.row.align-items-center
+							.col-auto
+								+e.percents=data.percents
+							.col-auto
+								+e.batery
+									img(loading="lazy" src=`img/svg/batery-${data.bateryIcon || 1}` alt="")
+							.col-auto
+								+b.hint-row.row.mb-12
+									+e.title.col-auto Заполненность резюме
+									.col
+										+e.quest-sign
+											+icon('q-sign')
+											+e.hint-cont
+												+e.hint Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
+			+e.content
+				+e.title(href="#")=`${data.title || 'Врач хирург-терапевт'}`
+				+e.salary=`${data.title || 'Врач хирург-терапевт'}`
+				+e.logo-row.row.gy-2
+					.col-auto
+						if data.hasLogo
+							+e.logo(href='#')
+								img(loading="lazy" src="img/@2x/n-chosen-1.png" alt="")
+						else
+							+e.logo--empty(href='#')
+								img(loading="lazy" src="img/svg/sm-company-stab.svg" alt="")
+				+e.descr На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское образование, имеющий практические...
+				+e.detail(href='#') Подробнее о вакансии
+			+e.footer
+				+e.footer-row.row
+					+e.f-btn--like.--js(href="#")
+						+icon('heart')
+						span Не нравится
+					+e.f-btn--dislike.--js(href="#")
+						+icon('cross-big')
+						span Нравится
+
+
+
 
 mixin formCheck(txt='lalala')
 	.form-check.form-switch
