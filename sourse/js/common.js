@@ -695,6 +695,10 @@ function eventHandler() {
 	$('.item-dislike-js .sComp-dislike-btn-js').click(function (){
 		$(this).closest('.sComp-col-js').find('.bb-cont-js').fadeIn();
 	});
+	//.myCab-close-alert-js
+	$('.myCab-close-alert-js').click(function (){
+		$(this).closest('.myCab-alert-js').slideUp();
+	})
 
 	//end luckyone js
 

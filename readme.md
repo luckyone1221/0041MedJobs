@@ -27,3 +27,5 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/024-my-cv-fill.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/025-compilations.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/025-compilations-empty.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet-empty.html>

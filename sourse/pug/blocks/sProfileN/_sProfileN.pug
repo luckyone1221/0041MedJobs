@@ -295,3 +295,24 @@ mixin sProfileNCompilation()
 				+e.content-col.col-xl
 					.center-block
 						block
+
+mixin sProfileNMyCab()
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xl-auto
+					+lSidebarN()
+						//-1
+						+lSidebarSlide(1,'Мой кабинет')(class='active')
+						//-2
+						+lSidebarSlide(2,'Мое резюме')
+						//-6
+						+lSidebarSlide(6,'Мои подборки')
+						//-3
+						+lSidebarSlide(3,'Настройки профиля')
+						//4
+						+lSidebarSlide(4,'Избранные вакансии')
+				+e.content-col.col-xl
+					.center-block
+						block

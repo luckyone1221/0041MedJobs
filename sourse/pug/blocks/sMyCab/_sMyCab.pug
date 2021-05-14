@@ -1,0 +1,82 @@
+mixin sMyCab(data)
+	// start sMyCab
+	+b.SECTION.sMyCab#sMyCab&attributes(attributes)
+		+e.top-row.row
+			if !data.hasCompilation
+				.col-12.myCab-alert-js
+					+e.alert
+						+e.a-row.row.align-items-center
+							.col
+								+e.a-sub-row.row.align-items-center
+									.col-auto
+										+e.a-img
+											img(loading="lazy" src="img/svg/orange-alert.svg" alt="")
+									.col
+										+e.a-txt
+											span.bolder Подтвердите регистрацию!
+											br
+											span
+												| Мы отправили письмо для подтверждения регистрации на вашу почту:
+												|
+											span.bolder mymail@mail.ru
+									.col-auto
+										+e.a-btn(href="#") Отправить повторно
+							.col-auto
+								+e.close-btn.myCab-close-alert-js
+									+icon('cross-big')
+			.col-12
+				h1.sProfileN__title Мой кабинет
+			+sMyCabItem({
+				title: 'Настройки профиля',
+			})
+				.col-auto
+					+e.img
+						img(loading="lazy" src=`img/${data.userImg || '@2x/proffesional-1.jpg'}` alt="")
+				.col
+					+e.txt-box
+						+e.name=data.userName
+						+e.b-txt=data.userEmail
+						+e.b-txt=data.userTell
+			+sMyCabItem({
+				title: 'Мое резюме',
+			})
+				.col-12
+					+e.b-txt=data.userDuty
+					+e.b-txt.mb-24=data.userSalary
+					+e.b-hint-cont
+						+b.hint-row.row.mb-12
+							+e.title.col-auto Заполненность резюме
+							.col
+								+e.quest-sign
+									+icon('q-sign')
+									+e.hint-cont
+										+e.hint Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
+					+completeStrip(data.userCvCompletness)
+			.col-12
+				+e.compil-row.row
+					.col-auto
+						+e.c-title Мои подборки
+					if data.hasCompilation
+						.col-auto
+							+e.c-ball 12
+			if data.hasCompilation
+				+threeCards('item-regular-js', 'col-md-6 col-lg-4 col-xl-6 col-xxl-4')
+				.col-12.text-center
+					+e.compil-btn(href="#") Перейти в Мои подборки
+			else
+				.col-12
+					+compilationsEmpty()
+	// end sMyCab
+
+mixin sMyCabItem(data)
+	.col-xl-6
+		+e.box
+			+e.b-row.row.pb-24.align-items-center
+				.col
+					+e.title=data.title
+				.col-auto
+					+e.edit-btn(href='#')
+						+icon('pencil')
+						span Редактировать
+			+e.b-row.row.align-items-center
+				block

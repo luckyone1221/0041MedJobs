@@ -1,0 +1,191 @@
+// start .sMyCab
+.sMyCab {
+
+	&__top-row{
+		@include roww(18px);
+		--bs-gutter-y: 18px;
+		@include media-breakpoint-up(md){
+			@include roww(24px);
+			--bs-gutter-y: 24px;
+		}
+	}
+	&__box{
+		min-height: #{'max(100%, 248px)'};
+
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: 5px;
+		padding: 24px;
+
+		@include mt();
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+		&:hover{
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+		}
+	}
+	&__b-row{
+		@include roww(24px);
+		--bs-gutter-y: 24px;
+	}
+	&__title{
+		//font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+	}
+	&__img{
+		width: 146px;
+		height: 146px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__txt-box{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__name{
+		font-size: rem(15);
+		line-height: 1.5;
+		color: $headings-color;
+		margin-bottom: rem(12);
+	}
+	&__b-txt{
+		margin-bottom: rem(12);
+	}
+	&__edit-btn{
+		color: $gray-600;
+		.icon{
+			font-size: 24px;
+			@include mt();
+			margin-right: 15px;
+		}
+
+		span{
+			font-weight: 500;
+		}
+	}
+
+	&__b-hint-cont{
+		.hint-row{
+			width: 250px;
+		}
+	}
+	.hint-row{
+		&__quest-sign{
+			.icon{
+				position: relative;
+				//left: 1px;
+			}
+		}
+	}
+
+	&__compil-row{
+		@include roww(6px);
+	}
+	&__c-title{
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+		color: $headings-color;
+
+	}
+	&__c-ball{
+		min-width: 30px;
+		height: 30px;
+		border-radius: 60px;
+
+		background: $orange;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: (19/16);
+
+		color: $white;
+	}
+	//
+	&__compil-btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		padding: 10px 23px;
+		border-radius: rem(60);
+
+		color: $primary!important;
+		&:hover{
+			color: $white!important;
+		}
+	}
+
+	//
+
+	&__alert{
+		background: #FFFFFF;
+		border: 1px solid #E4E7EC;
+		box-sizing: border-box;
+		border-radius: 5px;
+
+		padding: 24px;
+	}
+	&__a-row{
+		@include roww(24px);
+		--bs-gutter-y: 24px;
+	}
+	&__a-sub-row{
+		@include roww(12px);
+		--bs-gutter-y: 24px;
+	}
+	&__a-img{
+		width: 48px;
+		height: 48px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__a-btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		padding: 10px 23px;
+		border-radius: rem(60);
+
+		color: $primary!important;
+		&:hover{
+			color: $white!important;
+		}
+	}
+	&__close-btn{
+		cursor: pointer;
+		width: 24px;
+		height: 24px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: 24px;
+			color: $gray-550;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sMyCab
