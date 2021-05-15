@@ -5,7 +5,7 @@ mixin sMyCab(data)
 			if !data.hasCompilation
 				.col-12.myCab-alert-js
 					+e.alert
-						+e.a-row.row.align-items-center
+						+e.a-row.row.align-items-lg-center
 							.col
 								+e.a-sub-row.row.align-items-center
 									.col-auto
@@ -19,7 +19,7 @@ mixin sMyCab(data)
 												| Мы отправили письмо для подтверждения регистрации на вашу почту:
 												|
 											span.bolder mymail@mail.ru
-									.col-auto
+									+e.a-btn-col.col-lg-auto
 										+e.a-btn(href="#") Отправить повторно
 							.col-auto
 								+e.close-btn.myCab-close-alert-js

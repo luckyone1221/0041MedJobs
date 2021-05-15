@@ -1,0 +1,43 @@
+mixin sContactAlt(data)
+	// start sContactAlt
+	+b.SECTION.sContactAlt.section#sContactAlt&attributes(attributes)
+		.container
+			+breadcrumb('Главная', 'Контакты')
+			+b.section-title
+				h1 Контакты
+			+e.row.row
+				+sContactAltBox('Контактная информация')
+					+e.data-items
+						+sContactAltDataItem('Адрес')
+							+e.d-txt--adress
+								| Россия, Санкт-Петербург, пр.
+								br
+								| Стачек, дом 37 литера А, офис 12
+						+sContactAltDataItem('Телефон')
+							+e.d-txt--link(href="tel:+73512160373") +7 (351) 216-03-73
+						+sContactAltDataItem('Электронная почта')
+							+e.d-txt--link(href="mailto:support@medicjobs.ru") support@medicjobs.ru
+						+sContactAltDataItem('Мы в социальных сетях')
+							+socItems()
+				+sContactAltBox('Задать вопрос')
+					+form-wrap()
+						+e.inputs
+							+input('E-mail', 'email', 'Электронная почта')
+							+input('Укажите имя', 'text', 'Ваше имя')
+							+input('Задайте вопрос', 'textarea', 'Ваше сообщение')
+						+e.btn(type="submit") Отправить
+	// end sContactAlt
+
+mixin sContactAltBox(headTxt)
+	.col-xl-6
+		+e.box
+			+e.head=headTxt
+			+e.content
+				block
+
+mixin sContactAltDataItem(key)
+	+e.data-item
+		+e.d-row.row.align-items-center
+			+e.d-key-col.col-auto=key
+			.col
+				block

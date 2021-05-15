@@ -160,6 +160,21 @@
 			max-height: 100%;
 		}
 	}
+	&__a-txt{
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 1.5;
+		color: $headings-color;
+		.bolder{
+			text-shadow: 0 0 .3px rgba($headings-color, .6);
+		}
+	}
+	&__a-btn-col{
+		margin-left: calc(48px + 12px);
+		@include media-breakpoint-up(lg){
+			margin-left: 0;
+		}
+	}
 	&__a-btn{
 		@extend .btn;
 		@extend .btn-outline-primary;

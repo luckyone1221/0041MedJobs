@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>026-my-cabinet</title>
+		<title>027-contacts</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
@@ -12,368 +12,260 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="bg-gray-120 mvp-page"> 
+	<body class="bg-gray-120 headings-color"> 
 		<div class="main-wrapper">
-			<div class="headerAlt-cont">
-				<!-- start headerAlt-->
-				<header class="headerAlt" id="headerAlt">
-					<div class="headerAlt__container container-fluid">
-						<div class="headerAlt__row row row--mb align-items-center">
-							<div class="col col-md-auto"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							</div>
-							<div class="headerAlt__search-col col-md order-last order-md-0">
-								<div class="headerAlt__search"><input class="headerAlt__s-input form-control search-inp-js" type="text" placeholder="Поиск по вакансиям"/>
-									<button class="headerAlt__search-btn search-btn-js" type="button">
-										<svg class="icon icon-zoom-2 ">
-											<use xlink:href="img/svg/sprite.svg#zoom-2"></use>
-										</svg>
-									</button>
-								</div>
-							</div>
-							<div class="col-auto">
-								<div class="headerAlt__bell bell-js active">
-									<svg class="icon icon-bell ">
-										<use xlink:href="img/svg/sprite.svg#bell"></use>
-									</svg>
-									<div class="bell-dd bell-dd--js">
-										<div class="bell-dd__box"><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новое сообщение</span><span class="bell-dd__date">Сегодня, 15:38</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новый отклик на резюме</span><span class="bell-dd__date">Вчера, 10:09</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новый взаимный отклик</span><span class="bell-dd__date">22 марта 2021</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новое сообщение</span><span class="bell-dd__date">Вчера, 10:09</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новый взаимный отклик</span><span class="bell-dd__date">22 марта 2021</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новое сообщение</span><span class="bell-dd__date">Сегодня, 15:38</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новый отклик на резюме</span><span class="bell-dd__date">Вчера, 10:09</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новый взаимный отклик</span><span class="bell-dd__date">22 марта 2021</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новое сообщение</span><span class="bell-dd__date">Вчера, 10:09</span></a><a class="bell-dd__message" href="#"><span class="bell-dd__title">У вас новый взаимный отклик</span><span class="bell-dd__date">22 марта 2021</span></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto">
-								<div class="headerAlt__lc-cont lc-cont-js">
-									<div class="headerAlt__lc-row row align-items-center lc-dd-btn-js">
-										<div class="col-auto">
-											<div class="headerAlt__lc-txt">Мой кабинет
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="headerAlt__lc-img"><img loading="lazy" src="img/svg/sm-portrait-stab.svg" alt=""/>
-											</div>
-										</div>
-										<div class="headerAlt__lc-icon col-auto">
-											<svg class="icon icon-chevron-down ">
-												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="lc-dd lc-dd--js">
-										<div class="lc-dd__box">
-											<div class="lc-dd__name">Константинопольский К. К.
-											</div>
-											<div class="lc-dd__id">№1330-4
-											</div>
-											<ul>
-												<li><a href="#">Мое резюме</a></li>
-												<li><a href="#">Настройки профиля</a></li>
-												<li><a href="#">Подборки вакансий</a></li>
-												<li><a class="muted" href="#">Выйти из профиля</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto d-md-none">
-								<div class="headerAlt__burger mvp-burger-js"><span></span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mvp-menu mvp-menu--js">
-						<ul>
-							<li><a href="#">О компании</a></li>
-							<li><a href="#">Контакты</a></li>
-							<li><a href="#">Помощь</a></li>
-						</ul>
-					</div>
-				</header>
-				<!-- end headerAlt-->
+			<div class="mm mm--js d-xl-none">
+				<div class="container">
+					<ul class="navMenu">
+						<li class="navMenu__item"><a class="navMenu__link active" href="#">Организации</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Личный кабинет</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Уведомления</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link fw-400 text-warning" href="#">Выйти</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<!-- start sProfileN-->
-			<section class="sProfileN section" id="sProfileN">
-				<div class="container-fluid">
-					<div class="sProfileN__row row row row--mb">
-						<div class="col-xl-auto">
-							<div class="l-side-menu">
-								<div class="l-side-menu__slider-wrap">
-									<div class="swiper-container sidebar-slider-js">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js active" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-1 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-1"></use>
-												</svg></span><span class="l-side-menu__txt">Мой кабинет</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="top-nav__container container">
+						<div class="top-nav__row row">
+							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-xl-block">
+								<ul class="navMenu">
+									<li class="navMenu__item"><a class="navMenu__link active" href="#">Организации</a>
+									</li>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+									</li>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-auto"><a class="top-nav__location" href="#">
+								<svg class="icon icon-location ">
+									<use xlink:href="img/svg/sprite.svg#location"></use>
+								</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
+							</div>
+							<div class="col-auto d-none d-lg-block">
+								<div class="top-nav__p-cab">
+									<div class="top-nav__pc-img"><img loading="lazy" src="img/svg/user-stab.svg" alt=""/>
+									</div>
+									<div class="top-nav__pc-txt">Личный кабинет
+									</div>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="col-auto d-xl-none">
+								<div class="top-nav__burger burger-js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start sContactAlt-->
+			<section class="sContactAlt section" id="sContactAlt">
+				<div class="container">
+					<nav class="breadcrumb-par">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+							<li class="breadcrumb-item pointer-ev-none"><a href="#"><span>Контакты</span></a></li>
+						</ol>
+					</nav>
+					<div class="section-title">
+						<h1>Контакты</h1>
+					</div>
+					<div class="sContactAlt__row row">
+						<div class="col-xl-6">
+							<div class="sContactAlt__box">
+								<div class="sContactAlt__head">Контактная информация
+								</div>
+								<div class="sContactAlt__content">
+									<div class="sContactAlt__data-items">
+										<div class="sContactAlt__data-item">
+											<div class="sContactAlt__d-row row align-items-center">
+												<div class="sContactAlt__d-key-col col-auto">Адрес
+												</div>
+												<div class="col">
+													<div class="sContactAlt__d-txt sContactAlt__d-txt--adress">Россия, Санкт-Петербург, пр.<br/>Стачек, дом 37 литера А, офис 12
+													</div>
+												</div>
 											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-2 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-2"></use>
-												</svg></span><span class="l-side-menu__txt">Мое резюме</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+										</div>
+										<div class="sContactAlt__data-item">
+											<div class="sContactAlt__d-row row align-items-center">
+												<div class="sContactAlt__d-key-col col-auto">Телефон
+												</div>
+												<div class="col"><a class="sContactAlt__d-txt sContactAlt__d-txt--link" href="tel:+73512160373">+7 (351) 216-03-73</a>
+												</div>
 											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-6 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-6"></use>
-												</svg></span><span class="l-side-menu__txt">Мои подборки</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+										</div>
+										<div class="sContactAlt__data-item">
+											<div class="sContactAlt__d-row row align-items-center">
+												<div class="sContactAlt__d-key-col col-auto">Электронная почта
+												</div>
+												<div class="col"><a class="sContactAlt__d-txt sContactAlt__d-txt--link" href="mailto:support@medicjobs.ru">support@medicjobs.ru</a>
+												</div>
 											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-3 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-3"></use>
-												</svg></span><span class="l-side-menu__txt">Настройки профиля</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
-											</div>
-											<!--4-->
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-4 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-4"></use>
-												</svg></span><span class="l-side-menu__txt">Избранные вакансии</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+										</div>
+										<div class="sContactAlt__data-item">
+											<div class="sContactAlt__d-row row align-items-center">
+												<div class="sContactAlt__d-key-col col-auto">Мы в социальных сетях
+												</div>
+												<div class="col">
+													<div class="social">
+														<div class="social__row row">
+															<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+															</div>
+															<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+															</div>
+															<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+															</div>
+															<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="sProfileN__content-col col-xl">
-							<div class="center-block">
-								<!-- start sMyCab-->
-								<section class="sMyCab" id="sMyCab">
-									<div class="sMyCab__top-row row">
-										<div class="col-12 myCab-alert-js">
-											<div class="sMyCab__alert">
-												<div class="sMyCab__a-row row align-items-lg-center">
-													<div class="col">
-														<div class="sMyCab__a-sub-row row align-items-center">
-															<div class="col-auto">
-																<div class="sMyCab__a-img"><img loading="lazy" src="img/svg/orange-alert.svg" alt=""/>
-																</div>
-															</div>
-															<div class="col">
-																<div class="sMyCab__a-txt"><span class="bolder">Подтвердите регистрацию!</span><br/><span>
-																		Мы отправили письмо для подтверждения регистрации на вашу почту:
-																		</span><span class="bolder">mymail@mail.ru</span>
-																</div>
-															</div>
-															<div class="sMyCab__a-btn-col col-lg-auto"><a class="sMyCab__a-btn" href="#">Отправить повторно</a>
-															</div>
-														</div>
-													</div>
-													<div class="col-auto">
-														<div class="sMyCab__close-btn myCab-close-alert-js">
-															<svg class="icon icon-cross-big ">
-																<use xlink:href="img/svg/sprite.svg#cross-big"></use>
-															</svg>
-														</div>
-													</div>
+						<div class="col-xl-6">
+							<div class="sContactAlt__box">
+								<div class="sContactAlt__head">Задать вопрос
+								</div>
+								<div class="sContactAlt__content">
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__inputs">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Электронная почта</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/>
+													</label>
 												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Ваше имя</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Укажите имя"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__input-title">Ваше сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Задайте вопрос"></textarea>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
 											</div>
-										</div>
-										<div class="col-12">
-											<h1 class="sProfileN__title">Мой кабинет</h1>
-										</div>
-										<div class="col-xl-6">
-											<div class="sMyCab__box">
-												<div class="sMyCab__b-row row pb-24 align-items-center">
-													<div class="col">
-														<div class="sMyCab__title">Настройки профиля
-														</div>
-													</div>
-													<div class="col-auto"><a class="sMyCab__edit-btn" href="#">
-														<svg class="icon icon-pencil ">
-															<use xlink:href="img/svg/sprite.svg#pencil"></use>
-														</svg><span>Редактировать</span></a>
-													</div>
-												</div>
-												<div class="sMyCab__b-row row align-items-center">
-													<div class="col-auto">
-														<div class="sMyCab__img"><img loading="lazy" src="img/svg/user-stab-big.svg" alt=""/>
-														</div>
-													</div>
-													<div class="col">
-														<div class="sMyCab__txt-box">
-															<div class="sMyCab__name">ФИО не заполнено
-															</div>
-															<div class="sMyCab__b-txt">mymail@mail.ru
-															</div>
-															<div class="sMyCab__b-txt">Телефон не указан
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-6">
-											<div class="sMyCab__box">
-												<div class="sMyCab__b-row row pb-24 align-items-center">
-													<div class="col">
-														<div class="sMyCab__title">Мое резюме
-														</div>
-													</div>
-													<div class="col-auto"><a class="sMyCab__edit-btn" href="#">
-														<svg class="icon icon-pencil ">
-															<use xlink:href="img/svg/sprite.svg#pencil"></use>
-														</svg><span>Редактировать</span></a>
-													</div>
-												</div>
-												<div class="sMyCab__b-row row align-items-center">
-													<div class="col-12">
-														<div class="sMyCab__b-txt">Должность не указана, город не указан
-														</div>
-														<div class="sMyCab__b-txt mb-24">Заработная плата не указана
-														</div>
-														<div class="sMyCab__b-hint-cont">
-															<div class="hint-row row mb-12">
-																<div class="hint-row__title col-auto">Заполненность резюме
-																</div>
-																<div class="col">
-																	<div class="hint-row__quest-sign">
-																		<svg class="icon icon-q-sign ">
-																			<use xlink:href="img/svg/sprite.svg#q-sign"></use>
-																		</svg>
-																		<div class="hint-row__hint-cont">
-																			<div class="hint-row__hint">Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="complete-strip">
-															<div class="complete-strip__line-cont">
-																<div class="complete-strip__line" style="width: 0%;">
-																</div>
-															</div>
-															<div class="complete-strip__number">0%
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-12">
-											<div class="sMyCab__compil-row row">
-												<div class="col-auto">
-													<div class="sMyCab__c-title">Мои подборки
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-12">
-											<div class="sNVac sNVac--compilation" id="sNVac">
-												<div class="sNVac__empty">
-													<div class="sNVac__e-img"><img loading="lazy" src="img/@2x/empty-vac.png" alt=""/>
-													</div>
-													<div class="sNVac__e-txt text-center">У вас пока нет новых подборок вакансий. Заполните ваше резюме, чтобы интеллектуальная подборка<br/>смогла сопоставить информацию с вашего резюме с нашей базой вакансий и подобрать<br/>для вас наиболее подходящие вакансии.
-													</div><a class="sNVac__e-btn" href="#">Перейти к резюме</a>
-												</div>
-											</div>
-										</div>
+											<button class="form-wrap__btn" type="submit">Отправить
+											</button>
+										</form>
 									</div>
-								</section>
-								<!-- end sMyCab-->
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- start footerN-->
-			<footer class="footerN footerN--js" id="footerN">
-				<div class="footerN__ball footerN__ball--1">
-				</div>
-				<div class="footerN__ball footerN__ball--2">
-				</div>
-				<div class="footerN__container container">
-					<div class="footerN__row row row row--mb">
-						<div class="col-xl-auto"><a class="footerN__logo mx-auto mx-xl-0" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							<div class="footerN__gray-txt text-center text-xl-start">
-								Поиск компаний, вакансий
-								<br class="d-none d-xl-block"/>и резюме в сфере медицины
+			<!-- end sContactAlt-->
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-12 col-md-7 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footer__l-txt">
+								Поиск компаний и людей
+								<br class="d-none d-xl-block"/>в сфере медицины.
 							</div>
-							<div class="footerN__like d-none d-xl-flex">
-								<div class="footerN__l-icon fl-icon-js">
-									<svg class="icon icon-like ">
-										<use xlink:href="img/svg/sprite.svg#like"></use>
-									</svg>
-									<svg class="icon icon-like-fill ">
-										<use xlink:href="img/svg/sprite.svg#like-fill"></use>
-									</svg>
-								</div>
-								<div class="footerN__l-txt">244
+							<div class="social">
+								<div class="social__row row justify-content-center justify-content-md-start d-xl-none">
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="footerN__menu-col col-xl d-none d-xl-block">
-							<div class="footerN__menu-row row">
-								<div class="col">
-									<div class="footerN__m-title">MedicJobs
-									</div>
-									<ul class="footerN__m-list">
-										<li><a href="#">О компании</a></li>
-										<li><a href="#">Контакты</a></li>
-										<li><a href="#">Помощь</a></li>
+						<div class="footer__menu-col col-12 col-md-5 col-xl-4">
+							<div class="footer__menu-row row">
+								<div class="col-6">
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Профессионалы</a>
+										</li>
 									</ul>
 								</div>
-								<div class="col">
-									<div class="footerN__m-title">Соискателю
-									</div>
-									<ul class="footerN__m-list">
-										<li><a href="#">Добавить резюме</a></li>
-										<li><a href="#">Поиск вакансий</a></li>
-									</ul>
-								</div>
-								<div class="col">
-									<div class="footerN__m-title">Работодателю
-									</div>
-									<ul class="footerN__m-list">
-										<li><a href="#">Разместить вакансию</a></li>
+								<div class="col-6">
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">О проекте</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-auto">
-							<div class="footerN__soc-items row row row--mb justify-content-center justify-content-xl-end">
-								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/soc-fn-vk.svg" alt=""/></a>
-								</div>
-								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/soc-fn-inst.svg" alt=""/></a>
-								</div>
-								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/soc-fn-tg.svg" alt=""/></a>
-								</div>
-							</div>
-							<div class="footerN__all-rights mb-27 d-xl-none">© 2021 Все права защищены Medicjobs.ru.
-							</div>
-							<div class="footerN__policy-links text-center text-xl-end pb-12 pb-xl-0"><a class="footerN__p-link" href="#">Пользовательское соглашение</a><a class="footerN__p-link" href="#">Политика конфиденциальности</a>
-							</div>
+						<div class="footer__gray-col col-12 col-md-5 col-xl-3 order-1 order-xl-0">
+							<ul class="navMenu gray text-center text-md-start">
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Публичная оферта</a>
+								</li>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Правила пользования</a>
+								</li>
+							</ul>
 						</div>
-						<div class="col-12 mb-0"></div>
-						<div class="col-xl align-self-xl-center d-xl-block d-none">
-							<div class="footerN__all-rights">© 2021 Все права защищены Medicjobs.ru.
-							</div>
-						</div>
-						<div class="col-xl-auto align-self-xl-center">
-							<div class="footerN__scroll-top scroll-top-js justify-content-center">
-								<div class="footerN__st-txt">Наверх
-								</div>
-								<div class="footerN__st-ball">
-									<svg class="icon icon-chevron-top ">
-										<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
-									</svg>
+						<div class="col-xl-2 d-none d-xl-block">
+							<div class="social">
+								<div class="social__row row justify-content-end">
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="#"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-12 d-xl-none text-center">
-							<div class="footerN__like d-inline-flex">
-								<div class="footerN__l-icon fl-icon-js">
-									<svg class="icon icon-like ">
-										<use xlink:href="img/svg/sprite.svg#like"></use>
-									</svg>
-									<svg class="icon icon-like-fill ">
-										<use xlink:href="img/svg/sprite.svg#like-fill"></use>
-									</svg>
+						<div class="col-xl-12 col-md-7 order-2 order-md-0">
+							<div class="row text-center text-md-start">
+								<div class="col-12 col-xl">
+									<div class="footer__all-rights">© 2021 Все права защищены Medicjobs.ru.
+									</div>
 								</div>
-								<div class="footerN__l-txt">244
+								<div class="col-12 col-xl-auto">
+									<div class="footer__likes">
+										<svg class="icon icon-like ">
+											<use xlink:href="img/svg/sprite.svg#like"></use>
+										</svg><span>244</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
-			<!-- end footerN-->
 		</div>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">

@@ -1,0 +1,136 @@
+// start .sContactAlt
+.sContactAlt {
+	--sPT: 36px;
+	--sTPB: 36px;
+
+	--sPB: 60px;
+	@include media-breakpoint-up(md){
+		--sPB: 90px;
+	}
+
+	.breadcrumb{
+		margin-bottom: 8px;
+	}
+	.section-title{
+
+	}
+	&__row{
+		@include roww(18px);
+		--bs-gutter-y: 18px;
+		@include media-breakpoint-up(md){
+			@include roww(24px);
+			--bs-gutter-y: 24px;
+		}
+	}
+	&__box{
+		background: $white;
+		border-radius: 5px;
+
+		--box-x-padd: 48px;
+		min-height: 100%;
+	}
+	&__head{
+		padding: 42px var(--box-x-padd, 48px) 36px;
+		border-bottom: 1px solid $gary-110;
+
+		font-weight: 600;
+		font-size: 19.8px;
+	}
+	&__content{
+		padding:  0 var(--box-x-padd, 48px);
+	}
+	&__data-items{
+		padding-bottom: 24px;
+	}
+	&__data-item{
+		padding: 24px 0;
+		@include media-breakpoint-up(xl){
+			padding: 37.5px 0;
+		}
+		border-bottom: 1px solid $gary-110;
+
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	&__d-row{
+		@include roww(12px);
+		--bs-gutter-y: 18px;
+		@include media-breakpoint-up(md){
+			@include roww(22px);
+			--bs-gutter-y: 24px;
+		}
+	}
+	&__d-key-col{
+		font-weight: 600;
+		font-size: 14px;
+		line-height: (16/14);
+
+		width: 50%;
+	}
+	&__d-txt{
+		font-size: 14px;
+		line-height: 1.75;
+
+		&--link{
+			color: $headings-color;
+			&:hover{
+				color: $primary;
+			}
+		}
+
+		&--adress{
+			position: relative;
+
+			margin-right: -5px;
+			@include media-breakpoint-up(md){
+				margin-right: 0;
+			}
+		}
+	}
+
+	.form-wrap{
+		padding: 46px 0 42px;
+		&__inputs{
+
+		}
+		&__input-wrap{
+			margin-bottom: 22px;
+			&:last-child{
+				margin-bottom: 36px;
+			}
+
+			textarea{
+				height: 96px;
+				padding: 10px;
+			}
+		}
+		&__input-title{
+			font-weight: 600;
+			font-size: 14px;
+			line-height: (16/14);
+			margin-bottom: 15px;
+			display: block;
+		}
+		&__input{
+			padding: 15px 10px;
+			border-radius: 5px;
+			min-height: 0;
+
+			font-size: 14px;
+			line-height: (16/14);
+
+			//color: #888C94;
+		}
+		&__btn{
+			@extend .btn-default;
+			min-width: 220px;
+
+			padding: 14px 20px;
+
+		}
+	}
+
+	&__{}
+	&__{}
+} // end.sContactAlt
