@@ -16,7 +16,7 @@ mixin sSearch(data)
 							+e.f-btn-txt
 								span Фильтр
 								span Закрыть
-						+filter()
+						+filterSearch()
 				.col-xl-9
 					.row.row-default-sm.mb-0
 						+sortSelItem('по алфавиту', 'col-12')
@@ -44,7 +44,7 @@ mixin sSearchVacancy(data)
 						+filterVacancy()
 				.col-xl-9
 					.row.row-default-sm.mb-0
-						+sortSelItem('по соответствию', 'col-6')
+						+sortSelItem('для меня', 'col-6')
 						+sortSelItem('весь период', 'col-6')
 					+Vacancies()
 					+puginRow()
@@ -115,6 +115,35 @@ mixin filter()
 				| Показать
 				|
 			span.text-primary 938
+
+mixin filterSearch()
+	+b.filter--js
+		+filterItem('Регион:', 'active')
+			+e.select
+				select.form-select.form-control
+					option Ленинградская область
+					option Ленинградская область2
+					option Ленинградская область3
+		+filterItem('Город', 'active')
+			+e.select
+				select.form-select.form-control
+					option Санкт-Петербург
+					option Львов
+					option Киев
+		+filterItem('Открытые организации')
+			+customChbGroup(['Показывать только с открытыми вакансиями'])
+		+filterItem('Форма собственности')
+			+customChbGroup(['Частная', 'Государственная'])
+		+filterItem('Проффесиональное направление')
+			+customChbGroup(['Медицинские организации', 'Лаборатории', 'Клинические испытания', 'Лебечное дело (врачи-специалисты)', 'Лицензирование', 'Медициснкое оборудование', 'Санитарно-эпидемиологический надзор', 'Средний и младший медперсонал', 'Товары медицинского назначения', 'Уход за больными', 'Фармацевтика', 'Другое',  'Начало карьеры. мало опыта'])
+		//-+filterItem('')
+			+customChbGroup(['', '', '', '', ''])
+		+e.BUTTON.show-btn(type="submit")
+			span
+				| Показать
+				|
+			span.text-primary 938
+
 mixin filterVacancy()
 	+b.filter--js
 		+filterItem('Регион:')
@@ -135,22 +164,22 @@ mixin filterVacancy()
 				+input('25 000', 'number', undefined, 'salary_from')
 				+input('100 000', 'number', undefined, 'salary_to')
 			+customChb('Не показывать без зарплаты')(checked)
+		+filterItem('Опыт работы')
+			+customChbGroup(['Начало карьеры', '1-3 года', '3-5 лет', 'более 5 лет'])
 		+filterItem('Тип занятости')
-			+customChbGroup(['Полная', 'Неполная', 'Сменная', 'Вахтовая', 'Удаленная работа'])
-		+filterItem('Уровень организации медицинской помощи')
-			+customChbGroup(['Первичный медико-профилактический', 'Стационарный', 'Неотложная', 'Скорая', 'Санаторий'])
-		+filterItem('Тип медицинской службы')
-			+customChbGroup(['Педиатрическая', 'Взрослая', 'Смешанная'])
+			+customChbGroup(['Полная', 'Частичная', 'Временная', 'Стажировка и практика', 'Сезонная/вахта', 'Удаленная'])
 		+filterItem('График работы')
+			+customChbGroup(['Полный день', 'Неполный день', 'Гибкий график', 'Сменный график', 'Вахтовый метод', 'Ненормированный'])
+		+filterItem('Форма собственности компании')
+			+customChbGroup(['Частная', 'Государственная'])
+		//-+filterItem('')
+			+customChbGroup(['', '', '', '', ''])
+		//-+filterItem('График работы')
 			+customChbGroup(['График работы', 'Сменный график', 'Гибкий график'])
 			+e.show-more.active.show-more-js Показать еще 2
 			+e.shm-content.shm-cont-js
 				+customChb('откриваюсь на клик')
 				+customChb('по серой кнопке')
-		+filterItem('Опыт работы')
-			+customChbGroup(['от 1 года до 3 лет', 'от 3 до 6 лет', 'более 6 лет', 'без опыта'])
-		+filterItem('Навыки:')
-			+customChbGroup(['Пользование ПК', 'Умный', 'Усидчевый', 'Терпеливый', 'Спортивный'])
 		+e.BUTTON.show-btn(type="submit")
 			span
 				| Показать
@@ -308,7 +337,7 @@ mixin organizationsItem(data)
 							+e.vac-link(href="#") 7 вакансий
 						else
 							+e.vac-empty Нет вакансий
-			.col-auto
+			//-.col-auto
 				//-have css class "active"
 				+e.like-btn(href='#')
 					+icon('like')

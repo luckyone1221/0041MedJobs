@@ -94,6 +94,7 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
+  "gray": $gray-210,
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 
@@ -257,6 +258,7 @@ $spacers: (0: 0,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  6: 6px,
   12: 12px,
   15: 15px,
   18: 18px,
