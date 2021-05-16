@@ -708,6 +708,28 @@ function eventHandler() {
 	});
 
 	//end luckyone js
+	$('.sBaner-input-js').focus(function (){
+		$('.sBaner-search-row-js, .sBaner-sub-row-js').addClass('active');
+	}).blur(function (){
+		$('.sBaner-search-row-js, .sBaner-sub-row-js').removeClass('active');
+	});
+
+	//.reg-btn--js
+	let regBtn = document.querySelector('.reg-btn--js');
+	let mainWrapper = document.querySelector('.main-wrapper');
+
+	if (regBtn && mainWrapper){
+		window.addEventListener('wheel', function (evt) {
+			//evt.deltaY < 0 && evt.deltaY < regBtn.offsetHeight  &&
+			console.log(mainWrapper.offsetHeight, window.scrollY);
+			if (window.scrollY > window.innerHeight * 1.2 && mainWrapper.offsetHeight > window.scrollY + 500 + window.innerHeight) {
+				regBtn.classList.add("active");
+			}
+			else {
+				regBtn.classList.remove("active");
+			}
+		}, {passive: true});
+	}
 
 	//todo New
 	//2 kill ui kit

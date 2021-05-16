@@ -17,16 +17,20 @@ mixin sBaner(data)
 							| для медицинских сотрудников
 						p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...
 				+form-wrap()
-					+e.search-row.row
-						.col-auto
-							+e.select
-								select.form-control.form-select
-									//-option(selected disabled class="d-none") Вакансии
-									option Вакансии
-									option option 2
-									option option 3
+					+e.search-row.row.sBaner-search-row-js
 						.col
-							+input('Введите название вакансии', 'text', undefined, 'search')
+							+e.sub-row.row.sBaner-sub-row-js
+								.col-auto
+									+e.select
+										select.form-control.form-select
+											//-option(selected disabled class="d-none") Вакансии
+											option Вакансии
+											option option 2
+											option option 3
+								.col
+									+e.input-wrap.form-group
+										+e.INPUT.input.form-control.sBaner-input-js(type="text" placeholder="Введите название вакансии" name="searc")
+								//+input('Введите название вакансии', 'text', undefined, 'search')
 						.col-md-auto
 							+e.find-btn(type="submit") Найти
 

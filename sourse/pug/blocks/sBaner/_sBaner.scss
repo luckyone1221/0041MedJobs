@@ -126,7 +126,32 @@
 		&__search-row{
 			@include roww(0);
 			--bs-gutter-y: 15px;
+			@include media-breakpoint-up(md){
+				--bs-gutter-y: 0px;
+				border-radius: 5px;
+			}
+
+			@include mt();
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+			&.active{
+				@include media-breakpoint-up(md){
+					box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+				}
+			}
 		}
+
+		&__sub-row{
+			@include roww(0);
+
+			@include mt();
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+			&.active{
+				@include media-breakpoint-down(md){
+					box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+				}
+			}
+		}
+
 		&__select{
 			min-width: 165px;
 			@include media-breakpoint-up(md){
@@ -149,7 +174,7 @@
 		}
 		//
 		&__input-wrap{
-			width: calc(100% + 1px);
+			width: calc(100% + 3px);
 			margin-left: -1px;
 		}
 		&__input{

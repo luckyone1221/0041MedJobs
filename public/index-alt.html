@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="headings-color"> 
+	<body class="headings-color has-reg-btn"> 
 		<div class="main-wrapper">
 			<div class="mm mm--js d-xl-none">
 				<div class="container">
@@ -96,20 +96,24 @@
 						</div>
 						<div class="form-wrap">
 							<form>
-								<div class="form-wrap__search-row row">
-									<div class="col-auto">
-										<div class="form-wrap__select">
-											<select class="form-control form-select">
-												<option>Вакансии</option>
-												<option>option 2</option>
-												<option>option 3</option>
-											</select>
-										</div>
-									</div>
+								<div class="form-wrap__search-row row sBaner-search-row-js">
 									<div class="col">
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="text" placeholder="Введите название вакансии"/>
+										<div class="form-wrap__sub-row row sBaner-sub-row-js">
+											<div class="col-auto">
+												<div class="form-wrap__select">
+													<select class="form-control form-select">
+														<option>Вакансии</option>
+														<option>option 2</option>
+														<option>option 3</option>
+													</select>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control sBaner-input-js" type="text" placeholder="Введите название вакансии" name="searc"/>
+												</div>
+											</div>
+											<!--+input('Введите название вакансии', 'text', undefined, 'search')-->
 										</div>
-										<!-- +e.input-wrap-->
 									</div>
 									<div class="col-md-auto">
 										<button class="form-wrap__find-btn" type="submit">Найти
@@ -893,7 +897,7 @@
 						</div>
 					</div>
 				</div>
-			</footer>
+			</footer><a class="reg-btn reg-btn--js d-md-none" href="#">Зарегистрироваться</a>
 		</div>
 		<!--  start modals-->
 		<div class="modal-callback modal-win" id="modal-callback" style="display: none">

@@ -17,7 +17,7 @@ include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sNow/_sNow.pug
 
 block variables
-	- let  mainPage= 'headings-color'
+	- let  mainPage= 'headings-color has-reg-btn'
 block title
 	- let  title= 'index-alt'
 	title= title
@@ -36,3 +36,4 @@ block pagecontent
 	+sFAQ()
 	+sNow()
 	+footer('bg-white')
+	+b.reg-btn--js.d-md-none(href="#") Зарегистрироваться
