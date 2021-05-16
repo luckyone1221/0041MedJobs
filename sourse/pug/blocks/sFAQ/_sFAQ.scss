@@ -1,0 +1,94 @@
+// start .sFAQ
+.sFAQ {
+	--sPB: 120px;
+	--sTPB: 60px;
+
+	--sPT: 60px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 60px;
+	}
+
+	.section-title{
+		--aft-xm: auto;
+
+		h2{
+			letter-spacing: -0.5px;
+		}
+	}
+
+	&__row{
+		@include roww(24px);
+
+		--bs-gutter-y: 12px;
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: 24px;
+		}
+	}
+
+	&__item{
+		background: $white;
+		border-radius: 5px;
+		padding: 20px 24px;
+		min-height: 96px;
+
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.1);
+		--ball-icon-tf: rotateX(0deg);
+		border: 1px solid transparent;
+		&.active{
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+			--ball-icon-tf: rotateX(180deg);
+			border: 1px solid $gary-110;
+		}
+
+		margin-bottom: var(--bs-gutter-y, 24px);
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		cursor: pointer;
+	}
+	&__header-txt{
+		font-size: 16px;
+		line-height: 1.75;
+	}
+	&__ball{
+		flex-shrink: 0;
+		margin-left: 25px;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background: $gray-100;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			@include mt();
+			font-size: 8px;
+			color: $orange;
+			transform: var(--ball-icon-tf);
+		}
+	}
+	//
+	&__content{
+		display: none;
+		&.active{
+			display: block;
+		}
+		padding-top: 14px;
+
+		font-size: 16px;
+		line-height: 1.75;
+	}
+	&__{}
+	&__{}
+} // end.sFAQ

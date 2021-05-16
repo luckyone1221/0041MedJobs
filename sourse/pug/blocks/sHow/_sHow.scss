@@ -44,7 +44,9 @@
 		& > *{
 			//down md arrows
 			&:last-child{
-				content: none;
+				&:after{
+					content: none;
+				}
 			}
 			&:after{
 				content: '';

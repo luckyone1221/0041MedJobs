@@ -1,0 +1,19 @@
+mixin sNow(data)
+	// start sNow
+	+b.SECTION.sNow.section#sNow&attributes(attributes)
+		+e.bg
+			+e.ball--1
+			+e.ball--2
+		+e.container.container
+			+e.row.row
+				.col-xl-6.text-center.text-xl-start
+					+b.section-title--lined
+						h2
+							| Начните пользоваться
+							br
+							| сервисом прямо сейчас!
+					+e.descr Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...
+					+e.btn(href="#") Зарегистрироваться
+				+e.pic-col.col-12
+					+pic('sHow-img.png')(class="sNow__img")
+	// end sNow

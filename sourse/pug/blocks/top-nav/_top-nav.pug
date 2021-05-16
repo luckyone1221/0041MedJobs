@@ -10,6 +10,18 @@ mixin mob-mnu()
 				+e.LI.item: +e.A.link.fw-400.text-warning(href="#") Выйти
 	//  мобильное меню
 
+mixin mob-mnu2()
+	+b.mm--js.d-xl-none
+		.container
+			+b.UL.navMenu--alt
+				+e.LI.item: +e.A.link.active(href="#") Соискатель
+				+e.LI.item: +e.A.link.muted(href="#") Работодатель
+				+e.LI.item: +e.A.link.fw-400(href="#") О проекте
+				+e.LI.item: +e.A.link.fw-400(href="#") Помощь
+				+e.LI.item: +e.A.link.fw-400(href="#") Контакты
+			+e.btn-cont
+				+e.btn(href="#") Разместить резюме
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy

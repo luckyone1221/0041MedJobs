@@ -1,92 +1,146 @@
 .modal-win {
 	width: 100%;
 	position: relative;
-	max-width: rem(500);
+	max-width: 558px!important;
 
-	.modal-content {
-		// max-width: 485px;
-		// padding-right: 40px 15px;
-	}
+	padding: 48px!important;
+	border-radius: 5px;
 
-	.mfp-close {
-		color: $primary;
-		font-size: 40px;
-		font-weight: 100;
-	}
-}
+	.fancybox-button.fancybox-close-small{
+		padding: 0!important;
+		width: 18px!important;
+		height: 18px!important;
+		top: 24px!important;
+		right: 24px!important;
 
-a {
-	outline: 0 !important;
-}
+		background-image: url(../img/svg/modal-cross.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 
-.modal-form {
-	position: relative;
-}
 
-#foot-dialog {
-	h3 {
-		font-size: em(36);
-	}
-}
-
-.mfp-close {
-	user-select: none; // width: 44px;
-	// height: 44px;
-	// line-height: 44px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	text-decoration: none;
-	text-align: center;
-	opacity: .65; // padding: 0 0 18px 10px;
-	// color: #fff;
-	font-style: normal;
-	font-size: 28px;
-	font-family: Arial, Baskerville, monospace;
-	overflow: visible;
-	cursor: pointer;
-	background: 0 0;
-	border: 0;
-	display: block;
-	outline: 0;
-	padding: 0;
-	z-index: 1046;
-	box-shadow: none;
-	color: $body-color;
-	opacity: 1;
-	font-size: 50px;
-	font-weight: 100;
-	width: 56px;
-	height: 56px; // box-shadow: 0 10px $h2-font-size rgba(0, 0, 0, 0.15);
-	// background-color: #fff;
-	border-radius: 50%;
-	line-height: 56px;
-	text-align: center;
-	margin-top: -5px;
-	margin-right: -5px;
-	@include mt;
-
-	&:hover {
-		// background-color: #e3f3f6;
-	}
-}
-
-@include media-breakpoint-up(sm) {
-	.modal-text {
-		max-width: 1000px;
-	}
-}
-
-.polite {
-	.link {
-		color: $primary;
-		cursor: pointer;
-		text-decoration: underline;
-
-		:hover {
+		svg{
 			display: none;
 		}
 	}
+}
+
+//
+.modal-callback{
+	.form-wrap{
+		&__hedline{
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 1.25;
+			color: $headings-color;
+			margin-bottom: 24px;
+		}
+		&__data{
+			padding: 24px 0;
+			border-top:  1px solid $gary-110;
+			border-bottom:  1px solid $gary-110;
+			margin-bottom: 24px;
+		}
+		&__d-row{
+			@include roww(24px);
+			--bs-gutter-y: 24px;
+		}
+		&__img{
+			display: block;
+			width: 68px;
+			height: 68px;
+			border-radius: 50%;
+			overflow: hidden;
+
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__name{
+			font-weight: 600;
+			line-height: 1.25;
+			color: $headings-color;
+			margin-bottom: 6px;
+		}
+		&__short-info{
+			line-height: 1.25;
+			color: $headings-color;
+			margin-bottom: 6px;
+		}
+		&__mail{
+			line-height: 1.25;
+			color: $gray-600;
+		}
+		//
+		&__input-title{
+			display: block;
+			font-weight: 600;
+			color: $headings-color;
+			font-size: 14px;
+			margin-bottom: 14px;
+		}
+		&__input-wrap{
+			margin-bottom: 36px;
+			textarea{
+				height: 96px;
+				padding: 10px;
+			}
+		}
+		&__input{
+			font-size: 14px;
+			padding: 14px 10px;
+		}
+		&__btn{
+			@extend .btn-default;
+			min-width: 220px;
+			padding: 14px 20px;
+
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 1.25;
+		}
+		&__{}
+		&__{}
+	}
+
+	&__{}
+}
+
+.modal-contacts{
+	&__title{
+		font-weight: 600;
+		font-size: 20px;
+		color: $headings-color;
+		margin-bottom: 40px;
+	}
+
+	&__items{}
+	&__item{
+		margin-bottom: 19px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__i-title{
+		font-weight: 600;
+		font-size: 16px;
+		line-height: (19/16);
+		color: $headings-color;
+		margin-bottom: 8px;
+	}
+	&__link{
+		display: block;
+		font-size: 16px;
+		line-height: (19/16);
+
+		color: $headings-color;
+		&:hover{
+			color: $headings-color;
+		}
+	}
+	&__{}
 }
 
 .custom-modal{

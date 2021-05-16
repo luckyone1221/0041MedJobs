@@ -699,6 +699,13 @@ function eventHandler() {
 	$('.myCab-close-alert-js').click(function (){
 		$(this).closest('.myCab-alert-js').slideUp();
 	})
+	//
+	$('.free-dd-head-js').click(function (){
+		$(this.parentElement).toggleClass('active');
+		$(this.parentElement).find('.free-dd-content-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
 
 	//end luckyone js
 

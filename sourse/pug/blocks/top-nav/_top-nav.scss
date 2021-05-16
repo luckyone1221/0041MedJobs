@@ -212,6 +212,7 @@
 	position: fixed;
 	top: var(--header-h);
 	left: -120vw;
+	//left: 0;
 	&.active{
 		left: 0;
 	}
@@ -258,5 +259,48 @@
 				//color: $primary;
 			}
 		}
+
+		//alt menu
+		&--alt{
+			.navMenu__item{}
+			.navMenu__link{
+				padding: 28px 0;
+
+				&.active{
+					color: $body-color!important;
+					position: relative;
+					z-index: 1;
+					&:before{
+						content: '';
+						position: absolute;
+						top: 0;
+						left: calc(-1 * (100vw - 100%) / 2);
+						width: 2px;
+						height: 100%;
+						background: linear-gradient(180deg, #2AED80 0.21%, #10B7F5 99.92%);
+					}
+				}
+				&.muted{
+					color: $secondary!important;
+				}
+
+
+
+			}
+		}
+	}
+
+	//
+	&__btn-cont{
+		padding: 24px 0;
+	}
+	&__btn{
+		@extend .btn-default-outline2;
+		width: 100%;
+		padding: 14px 20px;
+
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.25;
 	}
 }

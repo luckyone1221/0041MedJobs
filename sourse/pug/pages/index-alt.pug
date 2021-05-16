@@ -13,6 +13,8 @@ include ../blocks/sBalls/_sBalls.pug
 include ../blocks/sLogoes/_sLogoes.pug
 include ../blocks/sVantage/_sVantage.pug
 include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
 
 block variables
 	- let  mainPage= 'headings-color'
@@ -20,7 +22,7 @@ block title
 	- let  title= 'index-alt'
 	title= title
 block pagecontent
-	+mob-mnu()
+	+mob-mnu2()
 	+header()
 		+top-nav2()
 	+sBaner()
@@ -31,4 +33,6 @@ block pagecontent
 	+sLogoes()
 	+sVantage()
 	+sHow()
-	+footer()
+	+sFAQ()
+	+sNow()
+	+footer('bg-white')

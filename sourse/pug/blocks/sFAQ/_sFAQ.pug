@@ -1,0 +1,24 @@
+mixin sFAQ(data)
+	// start sFAQ
+	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
+		.container
+			+b.section-title--lined.text-center
+				h2 Ответы на вопросы
+			+e.row.row
+				.col-xl-6
+					+sFAQItem('Я не собираюсь активно искать работу?')
+					+sFAQItem('Что нужно для начала: резюме, портфолио, что ещe?')
+					+sFAQItem('Сколько предложений я буду получать?')
+				.col-xl-6
+					+sFAQItem('Чем всe это отличается от стандартных сервисов с вакансиями?')
+					+sFAQItem('Это безопасно? Кто будет видеть мои данные?')
+					+sFAQItem('Какие компании будут искать людей через MedicJobs?')
+	// end sFAQ
+
+mixin sFAQItem(txt)
+	+e.item
+		+e.header.free-dd-head-js
+			+e.header-txt=txt
+			+e.ball
+				+icon('chevron-down')
+		+e.content.free-dd-content-js Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
