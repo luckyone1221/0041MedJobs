@@ -1,0 +1,142 @@
+// start .sVacDay
+.sVacDay {
+	--sTPB: 45px;
+
+	--sPT: 80px;
+	--sPB: 30px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+		--sPB: 25px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPB: 30px;
+	}
+
+	.section-title{
+		--aft-xm: auto;
+		@include media-breakpoint-up(xl){
+			--aft-xm: 0;
+		}
+	}
+
+	&__row{
+		@include roww(12px);
+		--bs-gutter-y: 12px;
+		@include media-breakpoint-up(md){
+			@include roww(24px);
+			--bs-gutter-y: 24px;
+		}
+	}
+	&__card{
+		min-height: 100%;
+		@include mt();
+		background: $white;
+		border: 1px solid $gary-110;
+		border-radius: 5px;
+
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+		&:hover{
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+		}
+
+		padding: 24px;
+
+		position: relative;
+	}
+	&__star{
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		width: 24px;
+		height: 24px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__duty{
+		@extend .primary-link;
+
+		display: inline-block;
+		margin-bottom: 6px;
+		font-weight: 600;
+		line-height: 1.25;
+	}
+	&__salary{
+		font-weight: 600;
+		margin-bottom: 18px;
+	}
+	&__logo-row{
+		@include roww(12px);
+		--bs-gutter-y: 12px;
+
+		padding-bottom: 18px;
+	}
+	&__logo{
+		width: 48px;
+		height: 48px;
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: 5px;
+
+		padding: rem(5);
+		&--empty{
+			background: $gray-100;
+			border: 1px solid $gray-100;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	&__name{
+		font-size: 14px;
+		line-height: 1.5;
+		margin-bottom: 6px;
+	}
+	&__city{
+		font-size: 14px;
+		line-height: 1.25;
+		color: $secondary;
+	}
+	&__btns-row{
+		@include roww(12px);
+	}
+	&__call-btn{
+		@extend .btn-default-outline2;
+		padding: 15px;
+		width: 100%;
+	}
+	&__contacts-btn{
+		@extend .btn;
+		@extend .btn-outline-gray;
+		box-shadow: none!important;
+		width: 100%;
+
+		padding: 14px 5px;
+		font-weight: 500;
+		font-size: 14px;
+
+		color: $headings-color!important;
+		&:hover{
+			color: $headings-color!important;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sVacDay

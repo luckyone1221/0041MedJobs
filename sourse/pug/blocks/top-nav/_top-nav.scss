@@ -13,6 +13,22 @@
 		box-shadow: 0 9px 9px -9px rgba($black, .25);
 	}
 
+	//top-nav2
+	&--alt{
+		.top-nav__location{
+			@include media-breakpoint-up(xl){
+
+			}
+		}
+		.top-nav__{}
+	}
+	&__location-col{
+		@include media-breakpoint-up(xl){
+			padding-right: 2px;
+		}
+	}
+	//
+
 	&__container{
 
 	}
@@ -104,6 +120,14 @@
 	&__loc-txt{
 
 	}
+	//place-cv
+	&__place-cv{
+		@extend .btn-default-outline;
+		padding: 14px 22.25px;
+
+		//line-height: 1.25;
+	}
+
 	//p-cab
 	&__p-cab{
 		display: flex;

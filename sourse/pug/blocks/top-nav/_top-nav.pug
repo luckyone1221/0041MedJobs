@@ -37,3 +37,25 @@ mixin top-nav()
 					+e.burger.burger-js
 						span
 	// end top-nav
+
+mixin top-nav2()
+	// start top-nav
+	+b.top-nav--alt.block-with-lazy
+		+e.container.container
+			+e.row.row
+				.col.col-xl-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col.d-none.d-xl-block
+					+b.UL.navMenu
+						+e.LI.item: +e.A.link.active(href="#") Соискатель
+						+e.LI.item: +e.A.link(href="#") Работодатель
+				+e.location-col.col-auto
+					+e.location(href='#')
+						+icon('location')
+						+e.loc-txt Санкт-Петербург
+				.col-auto.d-none.d-lg-block
+					+e.place-cv(href="#") Разместить резюме
+				.col-auto.d-xl-none
+					+e.burger.burger-js
+						span

@@ -30,3 +30,4 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet-empty.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/027-contacts.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/index-alt.html>

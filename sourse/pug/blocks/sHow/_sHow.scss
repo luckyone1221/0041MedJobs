@@ -1,0 +1,215 @@
+// start .sHow
+.sHow {
+	--sPT: 60px;
+	--sPB: 60px;
+	--sTPB: 60px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 88px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 87px;
+	}
+
+	.section-title{
+		--aft-xm: auto;
+
+		h2{
+			letter-spacing: -0.5px;
+		}
+	}
+
+	&__row{
+		@include roww(24px);
+
+		--bs-gutter-y: 30px;
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: 65px;
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-y: 30px;
+		}
+
+		counter-reset: list 0;
+
+		.bot-col{
+			@include media-breakpoint-up(xl){
+				width: 37.1% !important;
+			}
+		}
+
+		& > *{
+			//down md arrows
+			&:last-child{
+				content: none;
+			}
+			&:after{
+				content: '';
+				@include media-breakpoint-up(md){
+					content: none;
+				}
+				display: block;
+				margin: 30px auto 0 auto;
+				width: 30px;
+				height: 60px;
+
+				background-image: url(../img/svg/sHow-arrow-down.svg);
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+			//up xl arrows
+			.sHow__item{
+				position: relative;
+				z-index: 1;
+				&:after{
+					position: absolute;
+					z-index: -1;
+					@include media-breakpoint-down(xl){
+						content: none!important;
+					}
+				}
+			}
+
+			&:nth-child(1){
+				.sHow__item:after{
+					content: '';
+					top: 133px;
+					left: calc(100% + 36px);
+
+					width: 100px;
+					height: 30px;
+					transform: translateY(-50%);
+					background-image: url(../img/svg/sHow-arrow-right.svg);
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+			&:nth-child(2){
+				.sHow__item:after{
+					content: '';
+					top: 133px;
+					left: calc(100% + 36px);
+
+					width: 100px;
+					height: 30px;
+					transform: translateY(-50%);
+					background-image: url(../img/svg/sHow-arrow-right.svg);
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+			&:nth-child(3){
+				.sHow__item:after{
+					content: '';
+					top: calc(100% + 0px);
+					right: calc(50% + 0px);
+
+					height: 92px;
+					width: 54px;
+					background-image: url(../img/svg/sHow-arrow-bot.svg);
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+			&:nth-child(4){}
+			&:nth-child(5){
+				.sHow__item:after{
+					content: '';
+					top: 133px;
+					left: calc(100% + 30px);
+
+					width: 100px;
+					height: 30px;
+					transform: translateY(-50%);
+					background-image: url(../img/svg/sHow-arrow-left.svg);
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+
+	&__item{
+		width: 267px;
+		max-width: 100%;
+		margin: 0 auto;
+
+		@include media-breakpoint-up(md){
+			min-height: 100%;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__img-box{
+		position: relative;
+		z-index: 1;
+		&:before{
+			counter-increment: list;
+			content: counter(list);
+			position: absolute;
+			z-index: 2;
+			top: 20px;
+			right: 20px;
+
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			background-color: $primary;
+			color: $white;
+
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 23px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+	&__img{
+		width: 267px;
+		height: 267px;
+		max-width: 100%;
+
+		border-radius: 50%;
+		overflow: hidden;
+
+		margin-bottom: 30px;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	//
+	&__txt{
+		line-height: 1.75;
+		margin-bottom: 15px;
+
+		strong{
+			font-weight: 600;
+		}
+	}
+	&__btn{
+		@extend .btn-default;
+
+		min-width: 200px;
+		padding: 14px 19px;
+	}
+	&__{}
+	&__{}
+} // end.sHow

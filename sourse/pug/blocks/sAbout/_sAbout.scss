@@ -1,0 +1,58 @@
+// start .sAbout
+.sAbout {
+	--sPT: 60px;
+	--sPB: 60px;
+	--sTPB: 30px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 30px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 45px;
+		--sPB: 60px;
+		--sTPB: 30px;
+	}
+
+	.section-title{
+		--aft-xm: auto;
+		@include media-breakpoint-up(xl){
+			--aft-xm: 0;
+			padding-top: 12px;
+		}
+	}
+
+	&__row{
+		@include roww(24px);
+
+		--bs-gutter-y: 54px;
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: 82px;
+		}
+
+		flex-direction: column-reverse;
+		@include media-breakpoint-up(xl){
+			flex-direction: row;
+		}
+	}
+	&__pic{
+		width: 100%;
+		height: auto;
+
+		display: flex;
+		justify-content: center;
+		@include media-breakpoint-up(xl){
+			display: block;
+		}
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+	}
+	&__descr{
+		font-size: 16px;
+		line-height: 1.75;
+		color: $headings-color;
+	}
+	&__{}
+} // end.sAbout

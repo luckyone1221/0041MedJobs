@@ -31,50 +31,6 @@
 			-webkit-text-fill-color: transparent;
 		}
 	}
-	//header-row
-	//&__header-row{
-	//	@extend .row-default;
-	//	align-items: center;
-	//
-	//	@include media-breakpoint-down(md){
-	//		& > *{
-	//			margin-bottom: 10px;
-	//		}
-	//		margin-bottom: -10px;
-	//	}
-	//
-	//	padding-bottom: 47px;
-	//	@include media-breakpoint-up(xl){
-	//		padding-bottom: 60px;
-	//	}
-	//}
-	//&__btn-col{
-	//	padding-right: 0!important;
-	//}
-	//&__callback-btn{
-	//	min-width: 240px;
-	//	@include media-breakpoint-up(md){
-	//		min-width: 160px;
-	//	}
-	//	@extend .btn-default-outline;
-	//
-	//	padding: 12px 10px;
-	//	font-size: 14px;
-	//}
-	//&__contact-btn{
-	//	min-width: 240px;
-	//	@include media-breakpoint-up(md){
-	//		min-width: 160px;
-	//	}
-	//	font-size: 14px;
-	//
-	//	padding: 12px 10px;
-	//	@extend .btn;
-	//	@extend .btn-outline-light;
-	//
-	//	color: $body-color;
-	//}
-	//
 	&__header{
 		padding-bottom: 24px;
 		@include media-breakpoint-up(xl){

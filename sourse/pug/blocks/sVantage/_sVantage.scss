@@ -1,0 +1,91 @@
+// start .sVantage
+.sVantage {
+	--sPT: 56px;
+	--sPB: 60px;
+	--sTPB: 60px;
+	@include media-breakpoint-up(md){
+		--sPT: 58px;
+		--sPB: 60px;
+		--sTPB: 60px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 60px;
+	}
+
+	.section-title{
+		--aft-xm: auto;
+
+		h2{
+			letter-spacing: -0.5px;
+		}
+	}
+
+	&__row{
+		--bs-gutter-y: 45px;
+
+		@include roww(12px);
+		@include media-breakpoint-up(md){
+			@include roww(24px);
+		}
+	}
+	&__ball{
+		width: 90px;
+		height: 90px;
+		padding: 15px;
+
+		border-radius: 50%;
+		background: $gray-100;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		margin: 0 auto 15px auto;
+
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: -1;
+		}
+
+		&:before{
+			width: 122px;
+			height: 122px;
+			bottom: 10px;
+			right: 40px;
+
+			background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+			opacity: 0.5;
+		}
+		&:after{
+			width: 162px;
+			height: 162px;
+			top: -3px;
+			left: 36px;
+
+			background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+			opacity: 0.5;
+		}
+
+	}
+	&__txt{
+		text-align: center;
+		line-height: 1.75;
+	}
+
+	&__{}
+	&__{}
+} // end.sVantage

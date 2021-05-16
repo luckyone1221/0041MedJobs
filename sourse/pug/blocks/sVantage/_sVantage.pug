@@ -1,0 +1,38 @@
+mixin sVantage(data)
+	// start sVantage
+	+b.SECTION.sVantage.section#sVantage&attributes(attributes)
+		.container
+			+b.section-title--lined.text-center
+				h2
+					| Преимущества для
+					|
+					br.d-md-none
+					| соискателя
+			+e.row.row
+				+sVantageItem(1)
+					| Мы подбираем вакансию под ваши предпочтения
+				+sVantageItem(2)
+					| Легко заполнить профиль
+					|
+					br.d-none.d-xl-block
+					| и резюме
+				+sVantageItem(3)
+					| Мы постоянно совершенствуем алгоритм подбора вакансий
+				+sVantageItem(4)
+					| Не нужно слов, распределяйте вакансии на понравившиеся и нет
+				+sVantageItem(5)
+					| Если вам понравилась вакансия, то мы сами вышлем ваше резюме работодателю
+				+sVantageItem(6)
+					| Если ваше резюме подходит работодателю, мы оповестим работодателя, но контактные данные будут недоступны пока вы не одобрите переписку
+				+sVantageItem(7)
+					| Мы будем подбирать схожие вакансии и рекомендовать ваше резюме 24/7
+				+sVantageItem(8)
+					| Наш алгоритм ищет и среди крупных рекрутинговых сайтов hh.ru и trudvsem.ru
+	// end sVantage
+
+mixin sVantageItem(imgNum)
+	.col-6.col-lg-4.col-xl-3
+		+e.ball
+			img(loading="lazy" src=`img/@2x/sVantage-${imgNum}.png` alt="")
+		+e.txt
+			block

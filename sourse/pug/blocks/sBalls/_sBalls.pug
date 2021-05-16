@@ -1,0 +1,18 @@
+mixin sBalls(data)
+	// start sBalls
+	+b.SECTION.sBalls.section#sBalls&attributes(attributes)
+		.container
+			+e.row.row.justify-content-center.align-items-center
+				.col-xl-6.text-center.text-xl-start
+					+b.section-title--lined
+						h2 Мы собираем вакансии с крупных рекрутинговых сайтов
+					+e.descr Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...
+				+e.ball-col.col-6.col-sm-auto.col-xl-3
+					+e.ball
+						img(loading="lazy" src="img/@2x/sBalls-1.png" alt="")
+				+e.ball-col.col-6.col-sm-auto.col-xl-3
+					+e.ball
+						img(loading="lazy" src="img/svg/sBalls-2.svg" alt="")
+
+
+	// end sBalls

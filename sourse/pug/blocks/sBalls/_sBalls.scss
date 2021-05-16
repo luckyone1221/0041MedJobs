@@ -1,0 +1,68 @@
+// start .sBalls
+.sBalls {
+	--sPT: 60px;
+	--sPB: 60px;
+	--sTPB: 30px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 30px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 30px;
+	}
+
+	.section-title{
+		--aft-xm: auto;
+		@include media-breakpoint-up(xl){
+			--aft-xm: 0;
+		}
+
+		h2{
+			@include media-breakpoint-up(xl){
+				max-width: 460px;
+			}
+		}
+	}
+
+	&__row{
+		--bs-gutter-y: 45px;
+
+		@include roww(9px);
+		@include media-breakpoint-up(md){
+			@include roww(24px);
+		}
+	}
+	&__descr{
+		//font-size: 16px;
+		line-height: 1.75;
+	}
+	&__ball-col{
+		@include media-breakpoint-between(sm, lg){
+			max-width: 50%;
+		}
+	}
+	&__ball{
+		max-width: 100%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 267px;
+		height: 267px;
+		border-radius: 50%;
+		background: $gray-100;
+		padding: rem(40);
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__{}
+} // end.sBalls

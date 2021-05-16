@@ -1,0 +1,33 @@
+mixin sBaner(data)
+	// start sBaner
+	+b.SECTION.sBaner.section#sBaner&attributes(attributes)
+		+e.bg
+			+e.ball--1
+			+e.ball--2
+			+e.ball--3.d-none.d-xl-block
+			+e.ball--4.d-none.d-xl-block
+		+e.container.container
+			+pic('sBaner-img.png')(class="sBaner__img d-none d-xl-flex")
+			+e.row.row
+				.col-xl-5
+					+b.section-title.text-center.text-xl-start
+						h1
+							| Подбор вакансий
+							br
+							| для медицинских сотрудников
+						p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...
+				+form-wrap()
+					+e.search-row.row
+						.col-auto
+							+e.select
+								select.form-control.form-select
+									//-option(selected disabled class="d-none") Вакансии
+									option Вакансии
+									option option 2
+									option option 3
+						.col
+							+input('Введите название вакансии', 'text', undefined, 'search')
+						.col-md-auto
+							+e.find-btn(type="submit") Найти
+
+	// end sBaner

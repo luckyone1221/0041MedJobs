@@ -1,0 +1,46 @@
+mixin sHow(data)
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		.container
+			+b.section-title--lined.text-center
+				h2 Как работает подборка
+			+e.row.row.justify-content-center
+				+sHowStep(1, 'col-md-6 col-xl-3')
+					+e.txt
+						strong.d-block Зарегистрируйтесь
+						| или авторизуйтесь на сайте
+					+e.btn(href='#') Зарегистрироваться
+				+sHowStep(2, 'col-md-6 col-xl-6')
+					+e.txt
+						strong Заполните профиль и резюме
+				+sHowStep(3, 'col-md-6 col-xl-3')
+					+e.txt
+						strong.d-block Интеллектуальный алгоритм
+						| начнет подбирать вакансии
+						br
+						| под ваше резюме
+				+sHowStep(4, 'col-md-6 col-xl-4 bot-col order-xl-last')
+					+e.txt
+						strong
+							| Выберите вакансии
+							|
+						| которые понравились и мы уведомим работодателя о вашем интересе
+				+sHowStep(5, 'col-md-6 col-xl-4 bot-col')
+					+e.txt
+						strong
+							| Когда будут появляться новые вакансии,
+							|
+						| мы уведомим вас и работодателя, отправив анонимное резюме
+				//-sHow-arrow-right
+				//-sHow-arrow-bot
+				//-sHow-arrow-left
+				//-sHow-arrow-down
+	// end sHow
+
+mixin sHowStep(imgNum, colAddClasses='')
+	.text-center(class=colAddClasses)
+		+e.item
+			+e.img-box
+				+e.img
+					img(loading="lazy" src=`img/@2x/sHow-${imgNum}.png` alt="")
+			block
