@@ -17,10 +17,6 @@
 			<div class="mm mm--js d-xl-none">
 				<div class="container">
 					<ul class="navMenu navMenu--alt">
-						<li class="navMenu__item"><a class="navMenu__link active" href="#">Соискатель</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link muted" href="#">Работодатель</a>
-						</li>
 						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">О проекте</a>
 						</li>
 						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Помощь</a>
@@ -28,7 +24,7 @@
 						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Контакты</a>
 						</li>
 					</ul>
-					<div class="mm__btn-cont"><a class="mm__btn" href="#">Разместить резюме</a>
+					<div class="mm__btn-cont"><a class="mm__btn" href="#">Заполнить резюме</a>
 					</div>
 				</div>
 			</div>
@@ -38,20 +34,41 @@
 				<div class="top-nav top-nav--alt block-with-lazy">
 					<div class="top-nav__container container">
 						<div class="top-nav__row row">
-							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="col"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
-							<div class="col d-none d-xl-block">
-								<ul class="navMenu">
-									<li class="navMenu__item"><a class="navMenu__link active" href="#">Соискатель</a>
-									</li>
-									<li class="navMenu__item"><a class="navMenu__link" href="#">Работодатель</a>
-									</li>
-								</ul>
-							</div>
-							<div class="top-nav__location-col col-auto"><a class="top-nav__location" href="#">
+							<div class="col-auto"><a class="top-nav__location" href="#">
 								<svg class="icon icon-location ">
 									<use xlink:href="img/svg/sprite.svg#location"></use>
 								</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
+							</div>
+							<div class="col-auto">
+								<div class="top-nav__p-cab">
+									<div class="top-nav__pc-img"><img loading="lazy" src="img/svg/user-stab.svg" alt=""/>
+									</div>
+									<div class="top-nav__pc-txt d-none d-md-block">Личный кабинет
+									</div>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+									<div class="p-cab-dd">
+										<div class="p-cab-dd__inner">
+											<div class="p-cab-dd__top-txt">
+												<div class="p-cab-dd__name">Константинопольский К. К.
+												</div>
+												<div class="p-cab-dd__id">№1330-4
+												</div>
+											</div>
+											<div class="p-cab-dd__menu">
+												<ul>
+													<li><a href="#">Подборки вакансий</a></li>
+													<li><a href="#">Мое резюме</a></li>
+													<li><a href="#">Настройки профиля</a></li>
+													<li><a class="log-out" href="#">Выйти из профиля</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="col-auto d-none d-lg-block"><a class="top-nav__place-cv" href="#">Разместить резюме</a>
 							</div>
@@ -813,7 +830,7 @@
 				</div>
 			</section>
 			<!-- end sNow-->
-			<footer class="footer bg-white">
+			<footer class="footer footer-white">
 				<div class="container">
 					<div class="footer__row row">
 						<div class="col-12 col-md-7 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>

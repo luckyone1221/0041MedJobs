@@ -1,20 +1,31 @@
-mixin headerAlt(data)
+mixin headerAlt(bellActive)
 	// start headerAlt
 	+b.HEADER.headerAlt#headerAlt&attributes(attributes)
 		+e.container.container-fluid
 			+e.row.row--mb.align-items-center
-				.col.col-md-auto
+				.col.col-lg-auto
 					+e.logo(href='#')
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
-				+e.search-col.col-md.order-last.order-md-0
+				+e.search-col.col-lg.order-last.order-lg-0
 					+e.search
 						+e.INPUT.s-input.form-control.search-inp-js(type="text" placeholder="Поиск по вакансиям")
 						+e.search-btn.search-btn-js(type='button')
 							+icon('zoom-2')
+						+e.serch-type-dd
+							+e.st-txt.headerAlt-st-txt-js Вакансии
+							+e.st-dd.headerAlt-st-dd-js
+								+e.st-inner
+									+e.st-item.headerAlt-st-item-js.current(data-inp-placeholder="Поиск по вакансиям") Вакансии
+									+e.st-item.headerAlt-st-item-js(data-inp-placeholder="Поиск по организациям") Организации
 				.col-auto
-					+e.bell.bell-js.active
-						+icon('bell')
-						+bellDD()
+					if bellActive
+						+e.bell.bell-js.active
+							+icon('bell')
+							+bellDD()
+					else
+						+e.bell.bell-js
+							+icon('bell')
+							+bellDDEmpty()
 				.col-auto
 					+e.lc-cont.lc-cont-js
 						+e.lc-row.row.align-items-center.lc-dd-btn-js
@@ -41,6 +52,11 @@ mixin bellDD()
 				+bellDDMessage('У вас новый взаимный отклик', '22 марта 2021')
 				+bellDDMessage('У вас новое сообщение', 'Вчера, 10:09')
 				+bellDDMessage('У вас новый взаимный отклик', '22 марта 2021')
+
+mixin bellDDEmpty()
+	+b.bell-dd--js
+		+e.box
+			.text-center.p-12 Новых уведомлений нет.
 
 mixin bellDDMessage(title, date)
 	+e.message(href='#')

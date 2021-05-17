@@ -285,13 +285,13 @@ function eventHandler() {
 	//luckyone js
 
 	$('.burger-js').click(function () {
-		$('.burger-js, .mm--js').toggleClass('active');
+		$('.burger-js, .mm--js, .top-nav').toggleClass('active');
 		$('body').toggleClass('fixed2');
 	});
 	window.addEventListener('resize', function () {
 		if (window.matchMedia("(min-width: 1200px)").matches) {
 			//menu
-			$('.burger-js, .mm--js').removeClass('active');
+			$('.burger-js, .mm--js, .top-nav').removeClass('active');
 			$('body').removeClass('fixed2'); //filter remove
 			// $('.f-btn-js').removeClass('active');
 			// $('.filter--js').slideUp(function (){
@@ -300,6 +300,12 @@ function eventHandler() {
 		}
 	}, {
 		passive: true
+	});
+	document.addEventListener('click', function () {
+		if (!event.target.closest('.top-nav') && !event.target.closest('.mm--js')) {
+			$('.burger-js, .mm--js, .top-nav').removeClass('active');
+			$('body').removeClass('fixed2');
+		}
 	}); //accordion
 
 	$('.dd-head-js').click(function () {
@@ -384,12 +390,37 @@ function eventHandler() {
 		$(this.parentElement).find('.search-btn-js').addClass('active');
 	}).blur(function () {
 		$(this.parentElement).find('.search-btn-js').removeClass('active');
+	}); //serch-type dd
+
+	$('.headerAlt-st-txt-js').click(function () {
+		document.body.removeEventListener('click', headerAltStMissClick);
+		$('.headerAlt-st-txt-js, .headerAlt-st-dd-js').toggleClass('active');
+		window.setTimeout(function () {
+			document.body.addEventListener('click', headerAltStMissClick);
+		}, 10);
+	});
+
+	function headerAltStMissClick() {
+		if (!event.target.closest('.lc-dd--js')) {
+			document.body.removeEventListener('click', headerAltStMissClick);
+			$('.headerAlt-st-txt-js, .headerAlt-st-dd-js').removeClass('active');
+		}
+	}
+
+	$('.headerAlt-st-item-js').click(function () {
+		$('.headerAlt-st-item-js').each(function () {
+			$(this).removeClass('current');
+		});
+		$(this).addClass('current');
+		var stTxt = document.querySelector('.headerAlt-st-txt-js');
+		stTxt.innerHTML = this.innerHTML;
+		var input = document.querySelector('.search-inp-js');
+		input.setAttribute('placeholder', this.getAttribute('data-inp-placeholder'));
 	}); //new footem items
 
 	$('.fl-icon-js').click(function () {
 		$(this).toggleClass('active');
 	}); //
-	//
 	//from jetbrains animation
 
 	$('.sidebar-trakcer-js').mousemove(function () {
@@ -753,9 +784,14 @@ function eventHandler() {
 		}, {
 			passive: true
 		});
-	} //todo New
-	//2 kill ui kit
+	} //
 
+
+	$('.sVacPage-like-btn-js').click(function () {
+		event.preventDefault();
+		$(this).toggleClass('active');
+	}); //todo New
+	//2 kill ui kit
 }
 
 ;

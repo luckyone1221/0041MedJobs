@@ -117,7 +117,7 @@
 	}
 	h5{
 		font-weight: 600;
-		font-size: 20px;
+		font-size: 16px;
 		margin-bottom: 24px;
 	}
 	ul{
@@ -336,26 +336,47 @@
 		justify-content: center;
 
 		.icon{
-			stroke: $secondary;
-		}
-		&:hover{
-			.icon{
-				stroke: $secondary;
-			}
-		}
-		&.active{
-			.icon{
-				stroke: $warning;
-			}
-		}
+			@include mt();
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
 
-		.icon{
 			font-size: 24px;
 			margin-right: 6px;
-			//stroke: $secondary;
-			color: transparent;
+			color: currentColor;
+		}
+
+		color: $secondary;
+		&:hover{
+			color: $warning;
+		}
+
+		.icon-like{
+			opacity: 1;
+		}
+		.icon-like-fill{
+			opacity: 0;
+			fill: $warning;
+		}
+		&.active{
+			color: $warning;
+
+			.icon-like{
+				opacity: 0;
+			}
+			.icon-like-fill{
+				opacity: 1;
+			}
 		}
 	}
+	&__icon-cont{
+		width: 24px;
+		height: 24px;
+		margin-right: 12px;
+		position: relative;
+	}
+
 	&__tc-txt{
 		color: $headings-color;
 		font-size: 14px;

@@ -22,6 +22,18 @@ mixin mob-mnu2()
 			+e.btn-cont
 				+e.btn(href="#") Разместить резюме
 
+mixin mob-mnu3()
+	+b.mm--js.d-xl-none
+		.container
+			+b.UL.navMenu--alt
+				//-+e.LI.item: +e.A.link.active(href="#") Соискатель
+				//-+e.LI.item: +e.A.link.muted(href="#") Работодатель
+				+e.LI.item: +e.A.link.fw-400(href="#") О проекте
+				+e.LI.item: +e.A.link.fw-400(href="#") Помощь
+				+e.LI.item: +e.A.link.fw-400(href="#") Контакты
+			+e.btn-cont
+				+e.btn(href="#") Заполнить резюме
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
@@ -71,3 +83,46 @@ mixin top-nav2()
 				.col-auto.d-xl-none
 					+e.burger.burger-js
 						span
+
+mixin top-nav3()
+	// start top-nav
+	+b.top-nav--alt.block-with-lazy
+		+e.container.container
+			+e.row.row
+				.col
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				//-.col.d-none.d-xl-block
+					+b.UL.navMenu
+						+e.LI.item: +e.A.link.active(href="#") Организации
+						+e.LI.item: +e.A.link(href="#") Вакансии
+						+e.LI.item: +e.A.link(href="#") Профессионалы
+				.col-auto
+					+e.location(href='#')
+						+icon('location')
+						+e.loc-txt Санкт-Петербург
+				.col-auto
+					+e.p-cab
+						+e.pc-img
+							img(loading="lazy" src="img/svg/user-stab.svg" alt="")
+						+e.pc-txt.d-none.d-md-block Личный кабинет
+						+icon('chevron-down')
+						+pCabDD()
+				.col-auto.d-none.d-lg-block
+					+e.place-cv(href="#") Разместить резюме
+				.col-auto.d-xl-none
+					+e.burger.burger-js
+						span
+
+mixin pCabDD()
+	+b.p-cab-dd
+		+e.inner
+			+e.top-txt
+				+e.name Константинопольский К. К.
+				+e.id №1330-4
+			+e.menu
+				ul
+					li: a(href="#") Подборки вакансий
+					li: a(href="#") Мое резюме
+					li: a(href="#") Настройки профиля
+					li: a.log-out(href="#") Выйти из профиля

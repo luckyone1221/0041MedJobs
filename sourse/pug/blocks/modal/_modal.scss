@@ -91,6 +91,10 @@
 		&__input{
 			font-size: 14px;
 			padding: 14px 10px;
+
+			&:focus{
+				box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+			}
 		}
 		&__btn{
 			@extend .btn-default;

@@ -92,6 +92,13 @@ body {
 		top: 0;
 		z-index: 999;
 	}
+	&.fixed2{
+		&::before {
+			z-index: 990;
+			opacity: 0.5;
+			background-color: $headings-color;
+		}
+	}
 
 	&.fixed3{
 		margin-right: var(--scroll-width, 17px);

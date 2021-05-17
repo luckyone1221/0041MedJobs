@@ -59,11 +59,14 @@
 		margin-bottom: rem(12);
 	}
 	&__edit-btn{
+		display: flex;
+		align-items: center;
+
 		color: $gray-600;
 		.icon{
 			font-size: 24px;
-			@include mt();
-			margin-right: 15px;
+			//@include mt();
+			margin-right: 12px;
 		}
 
 		span{
@@ -163,7 +166,7 @@
 	&__a-txt{
 		font-weight: 500;
 		font-size: 15px;
-		line-height: 1.5;
+		line-height: 1.75;
 		color: $headings-color;
 		.bolder{
 			text-shadow: 0 0 .3px rgba($headings-color, .6);

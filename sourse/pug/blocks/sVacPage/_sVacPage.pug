@@ -96,8 +96,10 @@ mixin shortData(addClasses='')
 				+e.show-btn.mb-xl-12.link-modal(href="#modal-contacts") Показать контакты
 			.col-auto.col-xl-12
 				//class active
-				+e.to-chosen.mb-xl-12(href='#')
-					+icon('heart')
+				+e.to-chosen.mb-xl-12.sVacPage-like-btn-js(href='#')
+					+e.icon-cont
+						+icon('like')
+						+icon('like-fill')
 					+e.tc-txt В избранное
 			.col-auto.col-xl-12
 				+e.gray Размещено: 04.02.2021

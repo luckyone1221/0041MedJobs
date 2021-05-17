@@ -4,7 +4,7 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 99;
+	z-index: 999;
 	background-color: $white;
 	border-bottom: 1px solid $gray-210;
 
@@ -82,6 +82,82 @@
 			}
 		}
 	}
+	//serch-type-dd
+	&__serch-type-dd{
+		position: absolute;
+		top: 0;
+		height: 100%;
+		right: 0;
+	}
+	&__st-txt{
+		cursor: pointer;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding-right: 24px;
+
+		&:after{
+			@include mt();
+			transform: rotateX(0deg);
+
+			display: inline-block;
+			content: '';
+			width: 10px;
+			height: 10px;
+			margin-left: 12px;
+
+			background-image: url(../img/svg/chevron-down.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&.active{
+			&:after{
+				transform: rotateX(180deg);
+			}
+		}
+	}
+	&__st-dd{
+		@include mt();
+		transform-origin: top center;
+
+		position: absolute;
+		top: 100%;
+		right: 24px;
+		width: auto;
+		padding-top: 12px;
+
+		transform: scaleY(0);
+		z-index: 99;
+		&.active{
+			transform: scaleY(1);
+			z-index: 990;
+		}
+	}
+	&__st-inner{
+		background: $white;
+		border: 1px solid $gray-210;
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+		border-radius: 5px;
+		padding: 12px 0;
+	}
+
+	&__st-item{
+		display: block;
+		cursor: pointer;
+		padding: 12px;
+
+		&.current{
+			background: $gray-100;
+		}
+		&:hover{
+			background: rgba($gray-100, .5);
+		}
+	}
+	&__{}
+	//
+
 	&__bell{
 		display: flex;
 		align-items: center;
@@ -288,7 +364,7 @@
 	z-index: 100;
 	&.active{
 		transform: scaleY(1);
-		z-index: 999;
+		z-index: 998;
 	}
 	position: absolute;
 	background: $white;
@@ -334,7 +410,7 @@
 	position: absolute;
 	top: 100%;
 
-	transform: var(--bell-scale);
+	//transform: var(--bell-scale);
 	left: 50%;
 	transform: translateX(-50%) var(--bell-scale);
 	padding-top: 28px;

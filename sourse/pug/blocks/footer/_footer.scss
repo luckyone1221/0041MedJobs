@@ -128,6 +128,16 @@
 	&__{}
 	&__{}
 	&__{}
+
+	&.footer-white{
+		background-color: $white;
+
+		.navMenu__item{
+			&:hover{
+				--link-col: #{$primary};
+			}
+		}
+	}
 }
 
 .social{
@@ -158,4 +168,5 @@
 			height: 100%;
 		}
 	}
+
 }
