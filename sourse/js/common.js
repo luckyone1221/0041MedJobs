@@ -510,6 +510,7 @@ function eventHandler() {
 	//repeator js
 	$('.repeator-js').each(function (){
 		let firtsItem = this.querySelector('.r-item-js');
+		if (!firtsItem) return;
 		let content = firtsItem.innerHTML;
 		//console.log(content);
 
@@ -608,7 +609,9 @@ function eventHandler() {
 	// .r-remove-item-js
 	// .r-add-btn-js
 
-
+ $(document).on("click", ".bnt", function(){
+	 newInput.attr("name",' nameNew')
+ })
 	//fixed btn
 	$('.scroll-top-btn--js, .scroll-top-js').click(function (){
 		event.preventDefault();
