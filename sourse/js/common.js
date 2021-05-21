@@ -512,10 +512,13 @@ function eventHandler() {
 		let firtsItem = this.querySelector('.r-item-js');
 		if (!firtsItem) return;
 		let content = firtsItem.innerHTML;
-		//console.log(content);
 
+		//console.log(content);
+		
 		let addBtn = this.querySelector('.r-add-btn-js');
 		addBtn.addEventListener('click', duplicateRItem.bind(addBtn, this, content));
+		
+
 	});
 
 	//delegation of remove btn
@@ -545,6 +548,19 @@ function eventHandler() {
 
 		$(newItem).slideDown(function (){
 			$(this).removeClass('d-none-no-important');
+			let index = $(this).index();
+			let names = newItem.querySelectorAll('[name]');
+			names.forEach(function (el) {
+				let oldName = el.getAttribute('name').split("][");
+				let number = el.getAttribute('name').split("][").pop().split(']').shift();
+				// const lastItem = oldName[oldName.length - 2]
+				el.setAttribute("name", ` ${oldName[0]}][${index}]`);
+				let newName = el.getAttribute('name');
+				// console.log(lastItem);
+				console.log(newName);
+
+				
+			})
 		});
 		checkRemoveBtn(parent);
 	}

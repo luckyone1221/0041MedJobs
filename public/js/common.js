@@ -567,6 +567,17 @@ function eventHandler() {
 		addSelect2ToNewItems(newItem);
 		$(newItem).slideDown(function () {
 			$(this).removeClass('d-none-no-important');
+			var index = $(this).index();
+			var names = newItem.querySelectorAll('[name]');
+			names.forEach(function (el) {
+				var oldName = el.getAttribute('name').split("][");
+				var number = el.getAttribute('name').split("][").pop().split(']').shift(); // const lastItem = oldName[oldName.length - 2]
+
+				el.setAttribute("name", " ".concat(oldName[0], "][").concat(index, "]"));
+				var newName = el.getAttribute('name'); // console.log(lastItem);
+
+				console.log(newName);
+			});
 		});
 		checkRemoveBtn(parent);
 	} //

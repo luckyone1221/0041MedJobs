@@ -70,7 +70,7 @@ mixin modal()
 			+e.input-wrap.form-group
 				+e.title-wrap
 					+e.title Опыт работы
-				+e.INPUT.input.form-control(type="text" placeholder="Наименование организации" name="")
+				+e.INPUT.input.form-control(type="text" placeholder="Наименование организации" name="WorkingHistory[name][0]")
 			//-2
 			+e.input-wrap.form-group
 				+e.title-wrap
@@ -466,9 +466,9 @@ mixin repeatorBl()
 		+e.r-item.r-item-js
 			block
 			+repeatorRemove()
-		+e.r-item.r-item-js
-			block
-			+repeatorRemove()
+		//- +e.r-item.r-item-js
+		//- 	block
+		//- 	+repeatorRemove()
 		+e.r-add-btn.r-add-btn-js(type='button') Добавить
 
 mixin repeatorRemove()
