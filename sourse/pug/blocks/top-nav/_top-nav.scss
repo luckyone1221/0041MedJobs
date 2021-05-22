@@ -113,7 +113,8 @@
 
 		color: $body-color;
 		&:hover{
-			color: $primary;
+			//color: $primary;
+			color: $body-color;
 		}
 
 		margin-right: 7px;
@@ -147,6 +148,8 @@
 		}
 
 		position: relative;
+
+		//
 		--p-cab-dd-scale: 0;
 		&:hover{
 			--p-cab-dd-scale: 1;

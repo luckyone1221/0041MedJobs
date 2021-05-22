@@ -48,7 +48,7 @@ mixin top-nav()
 						+e.LI.item: +e.A.link(href="#") Вакансии
 						+e.LI.item: +e.A.link(href="#") Профессионалы
 				.col-auto
-					+e.location(href='#')
+					+e.location
 						+icon('location')
 						+e.loc-txt Санкт-Петербург
 				.col-auto.d-none.d-lg-block
@@ -75,7 +75,7 @@ mixin top-nav2()
 						+e.LI.item: +e.A.link.active(href="#") Соискатель
 						+e.LI.item: +e.A.link(href="#") Работодатель
 				+e.location-col.col-auto
-					+e.location(href='#')
+					+e.location
 						+icon('location')
 						+e.loc-txt Санкт-Петербург
 				.col-auto.d-none.d-lg-block
@@ -98,7 +98,7 @@ mixin top-nav3()
 						+e.LI.item: +e.A.link(href="#") Вакансии
 						+e.LI.item: +e.A.link(href="#") Профессионалы
 				.col-auto
-					+e.location(href='#')
+					+e.location
 						+icon('location')
 						+e.loc-txt Санкт-Петербург
 				.col-auto

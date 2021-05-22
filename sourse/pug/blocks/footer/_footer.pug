@@ -30,16 +30,15 @@ mixin footer(addClasses='')
                 +icon('like')
                 span 244
 
-
 mixin socItems(addClasses)
   +b.social&attributes(attributes)
     +e.row.row(class=addClasses)
-      +socItem('fb')
-      +socItem('vk')
-      +socItem('in')
-      +socItem('tg')
+      +socItem('fb', 'https://www.facebook.com/medicjobs.ru/')
+      +socItem('vk', 'https://vk.com/medicjobs')
+      +socItem('in', 'https://www.instagram.com/medicjobs.ru/')
+      //-+socItem('tg', '')
 
-mixin socItem(imgName)
+mixin socItem(imgName, link='#')
   .col-auto
-    +e.item(href="#")
+    +e.item(href=link)
       img(loading="lazy" src=`img/svg/${imgName}.svg` alt="")

@@ -744,8 +744,6 @@ function eventHandler() {
 	//todo New
 	//2 kill ui kit
 
-
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

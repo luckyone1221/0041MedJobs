@@ -7,9 +7,10 @@ include ../blocks/sCards/_sCards.pug
 include ../blocks/sWhat/_sWhat.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= ''
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
 block title
-	- let  title= 'title'
+	- let  title= 'MEDICJOBS.RU | Подбор вакансий для медицинских сотрудников'
 	title= title
 block pagecontent
 	+mob-mnu()

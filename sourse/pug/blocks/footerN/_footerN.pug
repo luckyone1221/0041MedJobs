@@ -25,9 +25,9 @@ mixin footerN(data)
 						+fNMenu('Работодателю', 'Разместить вакансию')
 				.col-xl-auto
 					+e.soc-items.row.row--mb.justify-content-center.justify-content-xl-end
-						+fNSocItem('vk')
-						+fNSocItem('inst')
-						+fNSocItem('tg')
+						+fNSocItem('vk', 'https://vk.com/medicjobs')
+						+fNSocItem('inst', 'https://www.instagram.com/medicjobs.ru/')
+						//-+fNSocItem('tg', '')
 					+e.all-rights.mb-27.d-xl-none © 2021 Все права защищены Medicjobs.ru.
 					+e.policy-links.text-center.text-xl-end.pb-12.pb-xl-0
 						+e.p-link(href='#') Пользовательское соглашение
@@ -55,7 +55,7 @@ mixin fNMenu(title, ...items)
 			- for(let item of items)
 				li: a(href="#")=item
 
-mixin fNSocItem(imgNum)
+mixin fNSocItem(imgNum, link='#')
 	.col-auto
-		+e.s-item(href='#')
+		+e.s-item(href=link)
 			img(loading="lazy" src=`img/svg/soc-fn-${imgNum}.svg` alt="")

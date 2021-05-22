@@ -27,8 +27,10 @@ mixin headerAlt(bellActive)
 							+icon('bell')
 							+bellDDEmpty()
 				.col-auto
-					+e.lc-cont.lc-cont-js
-						+e.lc-row.row.align-items-center.lc-dd-btn-js
+					//-.lc-cont-js
+					+e.lc-cont
+						//-.lc-dd-btn-js
+						+e.lc-row.row.align-items-center
 							.col-auto
 								+e.lc-txt Мой кабинет
 							.col-auto
@@ -36,7 +38,8 @@ mixin headerAlt(bellActive)
 									img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
 							+e.lc-icon.col-auto
 								+icon('chevron-down')
-						+lcDD()
+						//-+lcDD()
+						+pCabDD()
 				.col-auto.d-md-none
 					+e.burger.mvp-burger-js
 						span
@@ -64,7 +67,8 @@ mixin bellDDMessage(title, date)
 		+e.date=date
 
 mixin lcDD()
-	+b.lc-dd--js
+	+b.lc-dd
+		//-.lc-dd--js
 		+e.box
 			+e.name Константинопольский К. К.
 			+e.id №1330-4
