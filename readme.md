@@ -1,16 +1,17 @@
-1. <https://luckyone1221.github.io/0041MedJobs/public/index-alt.html>
+Главные страницы
+1. <https://luckyone1221.github.io/0041MedJobs/public/02-search.html>
+2. <https://luckyone1221.github.io/0041MedJobs/public/03-profile.html>
+3. <https://luckyone1221.github.io/0041MedJobs/public/04-vacancy.html>
+4. <https://luckyone1221.github.io/0041MedJobs/public/05-vac-page.html>
+5. <https://luckyone1221.github.io/0041MedJobs/public/index-alt.html>
+6. <https://luckyone1221.github.io/0041MedJobs/public/08-authorization.html> 
+7. <https://luckyone1221.github.io/0041MedJobs/public/09-reg.html>
+8. <https://luckyone1221.github.io/0041MedJobs/public/010-restore.html>
+9.  <https://luckyone1221.github.io/0041MedJobs/public/010-code.html>
+<!-- 9. <https://luckyone1221.github.io/0041MedJobs/public/06-profesionals.html> -->
 <!-- https://github.com/luckyone1221/0041MedJobs -->
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/index.html> -->
-1. <https://luckyone1221.github.io/0041MedJobs/public/02-search.html>
-1. <https://luckyone1221.github.io/0041MedJobs/public/03-profile.html>
-1. <https://luckyone1221.github.io/0041MedJobs/public/04-vacancy.html>
-1. <https://luckyone1221.github.io/0041MedJobs/public/05-vac-page.html>
-1. <https://luckyone1221.github.io/0041MedJobs/public/06-profesionals.html>
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/07-proffesional.html>-->
-2. <https://luckyone1221.github.io/0041MedJobs/public/08-authorization.html> 
-1. <https://luckyone1221.github.io/0041MedJobs/public/09-reg.html>
-1. <https://luckyone1221.github.io/0041MedJobs/public/010-restore.html>
-1. <https://luckyone1221.github.io/0041MedJobs/public/010-code.html>
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/011-profile.html> -->
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/012-company-profile.html> -->
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/013-vacancy.html> -->
@@ -20,7 +21,7 @@
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/018-employee.html> -->
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/00-stab1.html> -->
 <!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/00-stab2.html> -->
-===========
+===========  Личный кабинет соискателя
 1. <https://luckyone1221.github.io/0041MedJobs/public/020-profile-sett.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/021-chosen-vacancy.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/022-ch-v-empty.html>
