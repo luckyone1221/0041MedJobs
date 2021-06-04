@@ -6,8 +6,8 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/04-vacancy.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/05-vac-page.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/06-profesionals.html>
-<!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/07-proffesional.html>
-2. <https://luckyone1221.github.io/0041MedJobs/public/08-authorization.html> -->
+<!-- 1. <https://luckyone1221.github.io/0041MedJobs/public/07-proffesional.html>-->
+2. <https://luckyone1221.github.io/0041MedJobs/public/08-authorization.html> 
 1. <https://luckyone1221.github.io/0041MedJobs/public/09-reg.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/010-restore.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/010-code.html>
