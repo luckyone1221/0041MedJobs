@@ -30,6 +30,7 @@
 	&__card{
 		min-height: 100%;
 		@include mt();
+		display: block;
 		background: $white;
 		border: 1px solid $gary-110;
 		border-radius: 5px;
@@ -73,6 +74,7 @@
 	&__salary{
 		font-weight: 600;
 		margin-bottom: 18px;
+		color: $body-color;
 	}
 	&__logo-row{
 		@include roww(12px);
@@ -108,6 +110,7 @@
 		font-size: 14px;
 		line-height: 1.5;
 		margin-bottom: 6px;
+		color: $body-color;
 	}
 	&__city{
 		font-size: 14px;

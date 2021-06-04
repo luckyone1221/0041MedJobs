@@ -3,7 +3,7 @@ mixin sEmplDay(data)
 	+b.SECTION.sEmplDay.section#sEmplDay&attributes(attributes)
 		.container
 			+b.section-title--lined.text-center.text-xl-start
-				h2 Работодатели дня¬
+				h2 Работодатели дня
 			+e.row.row
 				+sEmplDayCard(1).col-lg-3.col-6
 				+sEmplDayCard(2).col-lg-3.col-6
@@ -19,9 +19,9 @@ mixin sEmplDay(data)
 
 mixin sEmplDayCard(imgNum)
 	div&attributes(attributes)
-		+e.card
-			+e.img(href="#")
+		+e.card(href="#")
+			+e.DIV.img
 				img(loading="lazy" src=`img/@2x/sEmplDay-${imgNum}.png` alt="")
-			+e.txt-content.text-center
-				+e.name(href="#") ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-				+e.vac-ammount(href='#') 7 вакансий
+			+e.DIV.txt-content.text-center
+				+e.DIV.name ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+				+e.DIV.vac-ammount 7 вакансий

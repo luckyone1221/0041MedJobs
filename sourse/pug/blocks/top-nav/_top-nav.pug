@@ -98,7 +98,7 @@ mixin top-nav3()
 						+e.LI.item: +e.A.link(href="#") Вакансии
 						+e.LI.item: +e.A.link(href="#") Профессионалы
 				.col-auto
-					+e.location
+					+e.location.link-modal(href='#modal-city') 
 						+icon('location')
 						+e.loc-txt Санкт-Петербург
 				.col-auto
@@ -145,7 +145,7 @@ mixin top-nav4()
 						+e.LI.item: +e.A.link(href="#") Вакансии
 						+e.LI.item: +e.A.link(href="#") Организации
 				+e.location-col.col-auto
-					+e.location
+					+e.location.link-modal(href='#modal-city') 
 						+icon('location')
 						+e.loc-txt Санкт-Петербург
 				.col-auto.d-xl-none

@@ -22,6 +22,7 @@
 	}
 	&__card{
 		min-height: 100%;
+		display: block;
 		@include mt();
 		background: $white;
 		border: 1px solid $gary-110;
