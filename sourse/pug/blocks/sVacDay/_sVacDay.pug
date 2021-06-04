@@ -6,11 +6,17 @@ mixin sVacDay(data)
 				h2 Вакансии дня
 			+e.row.row
 				-for (var i = 0; i < 6; i++)
+					+sVacDayCard().col-xl-4
+			// br убрать  внизу вариант, когда 2 карточки
+			br
+			br
+			+e.row.row
+				-for (var i = 0; i < 2; i++)
 					+sVacDayCard()
 	// end sVacDay
 
 mixin sVacDayCard()
-	.col-md-6
+	div.col-md-6&attributes(attributes)
 		+e.card
 			//-+e.star
 				img(loading="lazy" src="img/svg/circle-star.svg" alt="")

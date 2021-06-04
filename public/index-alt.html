@@ -14,9 +14,13 @@
 	<meta name="description" content="Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.">
 	<body class="headings-color has-reg-btn"> 
 		<div class="main-wrapper">
-			<div class="mm mm--js d-xl-none">
+			<div class="mm mm--js mm--alt d-xl-none">
 				<div class="container">
 					<ul class="navMenu navMenu--alt">
+						<li class="navMenu__item"><a class="navMenu__link active" href="#">Соискатель</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link muted" href="#">Работодатель</a>
+						</li>
 						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">О проекте</a>
 						</li>
 						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Помощь</a>
@@ -24,8 +28,6 @@
 						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Контакты</a>
 						</li>
 					</ul>
-					<div class="mm__btn-cont"><a class="mm__btn" href="#">Заполнить резюме</a>
-					</div>
 				</div>
 			</div>
 			<!-- start header-->
@@ -34,9 +36,29 @@
 				<div class="top-nav top-nav--alt block-with-lazy">
 					<div class="top-nav__container container">
 						<div class="top-nav__row row">
-							<div class="col"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
-							<div class="col-auto">
+							<div class="col-auto d-none d-xl-block">
+								<div class="top-nav__colooker-dd-cont">
+									<div class="top-nav__c-dd-btn">Соискатель
+									</div>
+									<div class="colooker-dd">
+										<div class="colooker-dd__content"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col d-none d-xl-block">
+								<ul class="navMenu">
+									<li class="navMenu__item"><a class="navMenu__link active" href="#">Главная</a>
+									</li>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+									</li>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
+									</li>
+								</ul>
+							</div>
+							<div class="top-nav__location-col col-auto">
 								<div class="top-nav__location">
 									<svg class="icon icon-location ">
 										<use xlink:href="img/svg/sprite.svg#location"></use>
@@ -44,37 +66,6 @@
 									<div class="top-nav__loc-txt">Санкт-Петербург
 									</div>
 								</div>
-							</div>
-							<div class="col-auto">
-								<div class="top-nav__p-cab">
-									<div class="top-nav__pc-img"><img loading="lazy" src="img/svg/user-stab.svg" alt=""/>
-									</div>
-									<div class="top-nav__pc-txt d-none d-md-block">Личный кабинет
-									</div>
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg>
-									<div class="p-cab-dd">
-										<div class="p-cab-dd__inner">
-											<div class="p-cab-dd__top-txt">
-												<div class="p-cab-dd__name">Константинопольский К. К.
-												</div>
-												<div class="p-cab-dd__id">№1330-4
-												</div>
-											</div>
-											<div class="p-cab-dd__menu">
-												<ul>
-													<li><a href="#">Подборки вакансий</a></li>
-													<li><a href="#">Мое резюме</a></li>
-													<li><a href="#">Настройки профиля</a></li>
-													<li><a class="log-out" href="#">Выйти из профиля</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto d-none d-lg-block"><a class="top-nav__place-cv" href="#">Разместить резюме</a>
 							</div>
 							<div class="col-auto d-xl-none">
 								<div class="top-nav__burger burger-js"><span></span>
@@ -154,7 +145,7 @@
 						<h2>Вакансии дня</h2>
 					</div>
 					<div class="sVacDay__row row">
-						<div class="col-md-6">
+						<div class="col-md-6 col-xl-4">
 							<div class="sVacDay__card"><a class="sVacDay__duty" href="#">Врач-терапевт стационар</a>
 								<div class="sVacDay__salary">30 000-35 000 ₽
 								</div>
@@ -172,7 +163,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xl-4">
 							<div class="sVacDay__card"><a class="sVacDay__duty" href="#">Врач-терапевт стационар</a>
 								<div class="sVacDay__salary">30 000-35 000 ₽
 								</div>
@@ -190,7 +181,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xl-4">
 							<div class="sVacDay__card"><a class="sVacDay__duty" href="#">Врач-терапевт стационар</a>
 								<div class="sVacDay__salary">30 000-35 000 ₽
 								</div>
@@ -208,7 +199,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 col-xl-4">
 							<div class="sVacDay__card"><a class="sVacDay__duty" href="#">Врач-терапевт стационар</a>
 								<div class="sVacDay__salary">30 000-35 000 ₽
 								</div>
@@ -226,6 +217,45 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-md-6 col-xl-4">
+							<div class="sVacDay__card"><a class="sVacDay__duty" href="#">Врач-терапевт стационар</a>
+								<div class="sVacDay__salary">30 000-35 000 ₽
+								</div>
+								<div class="sVacDay__logo-row row">
+									<div class="col-auto">
+										<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/n-chosen-1.png" alt=""/>
+										</div>
+									</div>
+									<div class="col">
+										<div class="sVacDay__name">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+										</div>
+										<div class="sVacDay__city">г. Санкт-Петербург
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-4">
+							<div class="sVacDay__card"><a class="sVacDay__duty" href="#">Врач-терапевт стационар</a>
+								<div class="sVacDay__salary">30 000-35 000 ₽
+								</div>
+								<div class="sVacDay__logo-row row">
+									<div class="col-auto">
+										<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/n-chosen-1.png" alt=""/>
+										</div>
+									</div>
+									<div class="col">
+										<div class="sVacDay__name">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+										</div>
+										<div class="sVacDay__city">г. Санкт-Петербург
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- br убрать  внизу вариант, когда 2 карточки--><br/><br/>
+					<div class="sVacDay__row row">
 						<div class="col-md-6">
 							<div class="sVacDay__card"><a class="sVacDay__duty" href="#">Врач-терапевт стационар</a>
 								<div class="sVacDay__salary">30 000-35 000 ₽
@@ -270,29 +300,38 @@
 			<section class="sEmplDay section" id="sEmplDay">
 				<div class="container">
 					<div class="section-title section-title--lined text-center text-xl-start">
-						<h2>Работодатели дня</h2>
+						<h2>Работодатели дня¬</h2>
 					</div>
 					<div class="sEmplDay__row row">
-						<div class="col-lg-6">
+						<div class="col-lg-3 col-6">
 							<div class="sEmplDay__card"><a class="sEmplDay__img" href="#"><img loading="lazy" src="img/@2x/sEmplDay-1.png" alt=""/></a>
 								<div class="sEmplDay__txt-content text-center"><a class="sEmplDay__name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a><a class="sEmplDay__vac-ammount" href="#">7 вакансий</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-3 col-6">
 							<div class="sEmplDay__card"><a class="sEmplDay__img" href="#"><img loading="lazy" src="img/@2x/sEmplDay-2.png" alt=""/></a>
 								<div class="sEmplDay__txt-content text-center"><a class="sEmplDay__name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a><a class="sEmplDay__vac-ammount" href="#">7 вакансий</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-3 col-6">
 							<div class="sEmplDay__card"><a class="sEmplDay__img" href="#"><img loading="lazy" src="img/@2x/sEmplDay-3.png" alt=""/></a>
 								<div class="sEmplDay__txt-content text-center"><a class="sEmplDay__name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a><a class="sEmplDay__vac-ammount" href="#">7 вакансий</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-3 col-6">
 							<div class="sEmplDay__card"><a class="sEmplDay__img" href="#"><img loading="lazy" src="img/@2x/sEmplDay-4.png" alt=""/></a>
+								<div class="sEmplDay__txt-content text-center"><a class="sEmplDay__name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a><a class="sEmplDay__vac-ammount" href="#">7 вакансий</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- br убрать убрать  внизу вариант, когда 2 карточки--><br/><br/>
+					<div class="sEmplDay__row row">
+						<div class="col-lg-6">
+							<div class="sEmplDay__card"><a class="sEmplDay__img" href="#"><img loading="lazy" src="img/@2x/sEmplDay-1.png" alt=""/></a>
 								<div class="sEmplDay__txt-content text-center"><a class="sEmplDay__name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a><a class="sEmplDay__vac-ammount" href="#">7 вакансий</a>
 								</div>
 							</div>

@@ -3,17 +3,22 @@ mixin sEmplDay(data)
 	+b.SECTION.sEmplDay.section#sEmplDay&attributes(attributes)
 		.container
 			+b.section-title--lined.text-center.text-xl-start
-				h2 Работодатели дня
+				h2 Работодатели дня¬
 			+e.row.row
-				+sEmplDayCard(1)
-				+sEmplDayCard(2)
-				+sEmplDayCard(3)
-				+sEmplDayCard(4)
+				+sEmplDayCard(1).col-lg-3.col-6
+				+sEmplDayCard(2).col-lg-3.col-6
+				+sEmplDayCard(3).col-lg-3.col-6
+				+sEmplDayCard(4).col-lg-3.col-6
+			// br убрать убрать  внизу вариант, когда 2 карточки
+			br
+			br
+			+e.row.row
+				+sEmplDayCard(1).col-lg-6
 	// end sEmplDay
 
 
 mixin sEmplDayCard(imgNum)
-	.col-lg-6
+	div&attributes(attributes)
 		+e.card
 			+e.img(href="#")
 				img(loading="lazy" src=`img/@2x/sEmplDay-${imgNum}.png` alt="")
