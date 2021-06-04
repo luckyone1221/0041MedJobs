@@ -157,6 +157,11 @@
 				@include roww(24px);
 				--bs-gutter-y: 24px;
 			}
+
+			@include media-breakpoint-between(xlg, xl){
+				@include roww(20px);
+				--bs-gutter-y: 20px;
+			}
 		}
 	}
 
@@ -241,9 +246,14 @@
 	@include media-breakpoint-up(md){
 		--card-x-padd: 24px;
 	}
+	@include media-breakpoint-between(xlg,xl){
+		--card-x-padd: 16px;
+	}
 
 	&__head{
 		padding: 19px var(--card-x-padd, 24px);
+
+
 		border-bottom: 1px solid $gray-210;
 	}
 	&__h-row{
@@ -315,10 +325,17 @@
 	&__content{
 		flex-grow: 1;
 		padding: 24px var(--card-x-padd, 24px) 30px var(--card-x-padd, 24px);
+		@include media-breakpoint-between(xlg,xl){
+			padding: 18px var(--card-x-padd, 24px) 24px var(--card-x-padd, 24px);
+		}
 	}
 	&__title{
 		font-weight: 500;
 		font-size: 20px;
+		@include media-breakpoint-between(xlg,xl){
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
 		line-height: 1.5;
 		color: $cyan;
 		margin-bottom: 6px;
@@ -359,9 +376,13 @@
 		}
 	}
 	&__descr{
-		font-size: 15px;
 		line-height: 1.75;
 		margin-bottom: 6px;
+
+		font-size: 15px;
+		@include media-breakpoint-between(xlg,xl){
+			font-size: 14px;
+		}
 	}
 	&__detail{
 		display: inline-block;
@@ -388,6 +409,11 @@
 		justify-content: center;
 
 		padding: 18px;
+		font-size: 15px;
+		@include media-breakpoint-between(xlg, xxl){
+			padding: 18px 12px;
+			font-size: 12px;
+		}
 
 		&--like{
 			color: $orange;
@@ -408,11 +434,13 @@
 		}
 
 		font-weight: 500;
-		font-size: 15px;
 		line-height: (18/15);
 
 		.icon{
 			font-size: 24px;
+			@include media-breakpoint-between(xlg, xxl){
+				font-size: 18px;
+			}
 			margin-right: 12px;
 			color: currentColor;
 		}

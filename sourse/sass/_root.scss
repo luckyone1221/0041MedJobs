@@ -17,11 +17,31 @@
 	@include media-breakpoint-up(md){
 		--mvp-cont-padd-x: 24px;
 	}
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-between(xlg, xl){
+		--mvp-cont-padd-x: 20px;
+	}
+	@include media-breakpoint-up(xxl){
 		--mvp-cont-padd-x: 48px;
 	}
-
 	--cont-mw-xl: 1140px;
+	//
+	@include media-breakpoint-up(xlg){
+		--aside-l-w: 220px;
+		--aside-r-w: 180px;
+	}
+	@include media-breakpoint-up(xl){
+		--aside-l-w: 220px;
+		--aside-r-w: 180px;
+	}
+	@include media-breakpoint-up(xxl){
+		--aside-l-w: 240px;
+		--aside-r-w: 240px;
+	}
+	@include media-breakpoint-up(base){
+		--aside-l-w: 294px;
+		--aside-r-w: 294px;
+	}
+
 
 	//
 	--swiperArrowSize: #{rem(68)};

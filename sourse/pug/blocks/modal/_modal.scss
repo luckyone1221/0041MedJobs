@@ -147,6 +147,145 @@
 	&__{}
 }
 
+//
+.modal-city{
+	font-family: $default-font;
+
+	&__title{
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.25;
+		color: $headings-color;
+
+		margin-bottom: 24px;
+	}
+	.form-wrap{
+		&__input-wrap{
+			position: relative;
+			margin-bottom: 24px;
+
+			input:focus + .form-wrap__cross-btn{
+				opacity: 1;
+			}
+		}
+		&__input{
+			font-family: $default-font;
+			padding: 15px 11px;
+			&--soc{
+				padding-left: 48px;
+			}
+
+			font-size: 14px;
+			line-height: (16/14);
+			//color: #888C94;
+			@include placeholder(){
+				color: $gray-600;
+			}
+
+			&:focus{
+				border-color: $cyan!important;
+			}
+		}
+
+		&__cross-btn{
+			@include mt();
+			@extend .btn;
+			opacity: 0;
+
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			padding: 15px 12px;
+			width: 42px;
+			height: 48px;
+
+			background-image: url(../img/svg/modal-cross.svg);
+			background-size: 18px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+		}
+
+		&__soc-icon{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 12px;
+			width: 24px;
+			height: 24px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.icon{
+				font-size: 24px;
+			}
+		}
+		&__results{
+			ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				max-height: 348px;
+				overflow-y: auto;
+				@extend .custom-scroll2;
+
+				li{
+
+				}
+				a{
+					display: block;
+					font-size: 14px;
+					line-height: 2.25;
+
+					color: $headings-color;
+					&:hover{
+						color: $primary;
+					}
+
+					&.current{
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		&__btns-row{
+			@include roww(24px);
+			--bs-gutter-y: 24px;
+		}
+		&__discard-btn{
+			@extend .btn-light-default;
+			font-family: $mono;
+
+			font-weight: 500;
+			font-size: 15px;
+			line-height: (18/15);
+			color: $headings-color;
+		}
+		&__save-btn{
+			@extend .btn-default;
+			font-family: $mono;
+
+			font-weight: 500;
+			font-size: 15px;
+			line-height: (18/15);
+			color: $headings-color;
+
+			border-radius: 50px;
+			padding: 11px 24px;
+		}
+
+		//
+		&__{}
+	}
+
+	&__{}
+	&__{}
+}
+//
+
 .custom-modal{
 	//
 	&:before{

@@ -7,33 +7,42 @@
 		--sPT: 24px;
 	}
 	--sPB: 60px;
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-up(xlg){
 		--sPB: 60px;
 		// position: static;
-	overflow: visible;
+		overflow: visible;
 	}
 
-	@include media-breakpoint-up(xl){
-		--aside-l-w: 240px;
-		--aside-r-w: 240px;
-	}
-	@include media-breakpoint-up(base){
-		--aside-l-w: 294px;
-		--aside-r-w: 294px;
-	}
+	//moved to root
+	//@include media-breakpoint-up(xlg){
+	//	--aside-l-w: 220px;
+	//	--aside-r-w: 180px;
+	//}
+	//@include media-breakpoint-up(xl){
+	//	--aside-l-w: 220px;
+	//	--aside-r-w: 180px;
+	//}
+	//@include media-breakpoint-up(xxl){
+	//	--aside-l-w: 240px;
+	//	--aside-r-w: 240px;
+	//}
+	//@include media-breakpoint-up(base){
+	//	--aside-l-w: 294px;
+	//	--aside-r-w: 294px;
+	//}
 
 	&__row{
 		@include roww(var(--mvp-cont-padd-x, 24px));
+
 		--col-mb: 18px;
 		@include media-breakpoint-up(md){
 			--col-mb: 24px;
 		}
 	}
 	&__content-col{ 
-			@media (min-width: 1920px){
-			max-width: calc(100% -340px -340px);
-	 
-	}
+		@media (min-width: 1920px){
+			max-width: calc(100% - 340px - 340px);
+		}
 		// @include media-breakpoint-up(xxl){
 		// 	max-width: calc(1140px + var(--mvp-cont-padd-x, 24px));
 		// }
@@ -63,7 +72,6 @@
 
 		position: sticky;
 		z-index: 1;
-		//top: calc(var(--header-h) - 30px);
 		top: calc(var(--header-h) + var(--sPT) - 57px);
 		padding-top: 57px;
 		width: var(--aside-r-w, 240px);
@@ -96,7 +104,11 @@
 					@include mt($smooth);
 					color: $gray-600;
 					display: block;
-					padding: 3.5px 23px;
+
+					padding: 3.5px 15px;
+					@include media-breakpoint-up(xxl){
+						padding: 3.5px 23px;
+					}
 
 					border-left: 2px solid transparent;
 
@@ -133,7 +145,13 @@
 		@include media-breakpoint-up(md){
 			padding: 37px;
 		}
+		@include media-breakpoint-between(xlg, xl){
+			padding: 24px;
+		}
 		@include media-breakpoint-up(xl){
+			padding: 36px;
+		}
+		@include media-breakpoint-up(xxl){
 			padding: 48px;
 		}
 
@@ -513,7 +531,7 @@
 	top: calc(var(--header-h) + var(--sPT));
 
 	max-width: 100%;
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-up(xlg){
 		width: var(--aside-l-w, 240px);
 	}
 	&__slider-wrap{
@@ -521,7 +539,7 @@
 			overflow: visible!important;
 		}
 		.swiper-wrapper{
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xlg){
 				flex-wrap: wrap!important;
 				transform: none!important;
 			}
@@ -529,7 +547,7 @@
 		.swiper-slide{
 			width: auto;
 			max-width: 100%;
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xlg){
 				width: 100%;
 				margin-right: 0!important;
 			}
@@ -551,7 +569,7 @@
 
 		border: 1px solid $gray-210;
 		padding: 11.5px 23px;
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xlg){
 			padding: 10.5px 10px;
 			border: 1px solid transparent;
 		}

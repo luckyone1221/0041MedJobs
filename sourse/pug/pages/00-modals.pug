@@ -20,21 +20,18 @@ block variables
 	- let  mainPage= 'headings-color has-reg-btn'
 	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
 block title
-	- let  title= 'MEDICJOBS.RU | Подбор вакансий для медицинских сотрудников'
+	- let  title= '00-modals'
 	title= title
 block pagecontent
-	+mob-mnu3()
+	+mob-mnu4()
 	+header()
-		+top-nav3()
-	+sBaner()
-	+sVacDay()
-	+sEmplDay()
-	+sAbout()
-	+sBalls()
-	+sLogoes()
-	+sVantage()
-	+sHow()
-	+sFAQ()
-	+sNow()
-	+footerAlt()
+		+top-nav4()
+	.section
+		.container
+			.row.gy-3
+				.col-auto
+					a.btn-default.link-modal(href='#modal-city') Выберите город
+				.col-auto
+					a.btn-default.link-modal(href='#modal-city2') Выберите город2
+	+footer('footer-white')
 	+b.reg-btn--js.d-md-none(href="#") Зарегистрироваться

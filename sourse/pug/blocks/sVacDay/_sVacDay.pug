@@ -10,9 +10,9 @@ mixin sVacDay(data)
 	// end sVacDay
 
 mixin sVacDayCard()
-	.col-md-6.col-xl-4
+	.col-md-6
 		+e.card
-			+e.star
+			//-+e.star
 				img(loading="lazy" src="img/svg/circle-star.svg" alt="")
 			+e.duty(href='#') Врач-терапевт стационар
 			+e.salary 30 000-35 000 ₽
@@ -23,7 +23,7 @@ mixin sVacDayCard()
 				.col
 					+e.name ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
 					+e.city г. Санкт-Петербург
-			+e.btns-row.row
+			//-+e.btns-row.row
 				.col-6
 					+e.call-btn(href="#") Откликнуться
 				.col-6

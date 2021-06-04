@@ -13,14 +13,10 @@ mixin sEmplDay(data)
 
 
 mixin sEmplDayCard(imgNum)
-	.col-xl-6
+	.col-lg-6
 		+e.card
-			+e.star
-				img(loading="lazy" src="img/svg/circle-star.svg" alt="")
-			+e.c-row.row.align-items-center
-				.col-auto
-					+e.img(href="#")
-						img(loading="lazy" src=`img/@2x/sEmplDay-${imgNum}.png` alt="")
-				.col
-					+e.name(href="#") ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-					+e.vac-ammount(href='#') 7 вакансий
+			+e.img(href="#")
+				img(loading="lazy" src=`img/@2x/sEmplDay-${imgNum}.png` alt="")
+			+e.txt-content.text-center
+				+e.name(href="#") ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+				+e.vac-ammount(href='#') 7 вакансий

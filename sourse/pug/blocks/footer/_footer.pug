@@ -30,12 +30,48 @@ mixin footer(addClasses='')
                 +icon('like')
                 span 244
 
+mixin footerAlt(addClasses='')
+  +b.FOOTER.footer--alt(class=addClasses)
+    .container
+      +e.row.row
+        .col-12.col-md-5.col-xl-3
+          +e.logo(href="#")
+            img(loading="lazy" src="img/svg/logo.svg" alt="")
+          +e.l-txt
+            | Поиск компаний и людей
+            |
+            br.d-none.d-xl-block
+            | в сфере медицины.
+          +socItems('justify-content-center justify-content-md-start d-xl-none')
+        .col-12.col-md-5.col-xl-4
+          +e.a-menu-row.row.text-center.text-md-start
+            .col-12.col-md-6
+              +e.a-title(href="#") Соискатель
+              +mnu4()
+            .col-12.col-md-6
+              +e.a-title(href="#") Работодатель
+        +e.gray-col.col-12.col-md-2.col-xl-3
+          +mnu5()(class="text-center text-md-start")
+        .col-xl-2.d-none.d-xl-block
+          +socItems('justify-content-end')
+        .col-12.order-2.order-md-0
+          +e.ar-row.row.text-center.text-md-start
+            .col-12.col-md
+              +e.all-rights © 2021 Все права защищены Medicjobs.ru.
+            .col-12.col-md-auto
+              +e.gray-row.row
+                .col-auto
+                  +e.g-link(href='#') Правила пользования
+                .col-auto
+                  +e.g-link(href='#') Публичная оферта
+
 mixin socItems(addClasses)
   +b.social&attributes(attributes)
     +e.row.row(class=addClasses)
       +socItem('fb', 'https://www.facebook.com/medicjobs.ru/')
       +socItem('vk', 'https://vk.com/medicjobs')
       +socItem('in', 'https://www.instagram.com/medicjobs.ru/')
+      +socItem('tg', 'https://www.instagram.com/medicjobs.ru/')
       //-+socItem('tg', '')
 
 mixin socItem(imgName, link='#')

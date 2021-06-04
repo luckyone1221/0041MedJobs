@@ -126,3 +126,46 @@ mixin pCabDD()
 					li: a(href="#") Мое резюме
 					li: a(href="#") Настройки профиля
 					li: a.log-out(href="#") Выйти из профиля
+
+mixin top-nav4()
+	// start top-nav
+	+b.top-nav--alt.block-with-lazy
+		+e.container.container
+			+e.row.row
+				.col.col-xl-auto
+					+e.logo(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col-auto.d-none.d-xl-block
+					+e.colooker-dd-cont
+						+e.c-dd-btn Соискатель
+						+colookerDD()
+				.col.d-none.d-xl-block
+					+b.UL.navMenu
+						+e.LI.item: +e.A.link.active(href="#") Главная
+						+e.LI.item: +e.A.link(href="#") Вакансии
+						+e.LI.item: +e.A.link(href="#") Организации
+				+e.location-col.col-auto
+					+e.location
+						+icon('location')
+						+e.loc-txt Санкт-Петербург
+				.col-auto.d-xl-none
+					+e.burger.burger-js
+						span
+
+mixin colookerDD()
+	+b.colooker-dd
+		+e.content
+			+e.item.active(href="#") Соискатель
+			+e.item(href="#") Работодатель
+
+mixin mob-mnu4()
+	+b.mm--js.--alt.d-xl-none
+		.container
+			+b.UL.navMenu--alt
+				+e.LI.item: +e.A.link.active(href="#") Соискатель
+				+e.LI.item: +e.A.link.muted(href="#") Работодатель
+				+e.LI.item: +e.A.link.fw-400(href="#") О проекте
+				+e.LI.item: +e.A.link.fw-400(href="#") Помощь
+				+e.LI.item: +e.A.link.fw-400(href="#") Контакты
+			//-+e.btn-cont
+				+e.btn(href="#") Разместить резюме

@@ -486,6 +486,43 @@ iframe {
 	}
 }
 
+.custom-scroll2 {
+	&::-webkit-scrollbar-thumb {
+		opacity: 1;
+		display: block
+	}
+
+	&::-webkit-scrollbar-track {
+		border: none;
+		background: $gary-110;
+		border-radius: 5px;
+		-webkit-box-shadow: none;
+	}
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 2px;
+		background-color: transparent;
+		border-radius: 5px;
+		// border-right: 2px;
+		/* or add it to the track */
+		border-color: transparent;
+		opacity: 0;
+		-webkit-box-shadow: none;
+
+	}
+
+	/* Add a thumb */
+	&::-webkit-scrollbar-thumb {
+		background: var(--bs-primary) ;
+		border-radius: 2.5px;
+	}
+
+	&::-webkit-scrollbar-button {
+		display: none
+	}
+}
+
 h1{
 	font-size: 48px;
 }
@@ -1117,4 +1154,16 @@ h5{
 
 	@extend .btn-default;
 	border-radius: 0;
+}
+
+//
+.my-cv-page{
+	@include media-breakpoint-between(xlg, xxl){
+		--aside-l-w: 220px!important;
+		--aside-r-w: 200px!important;
+	}
+	//@include media-breakpoint-between(xlg, xl){
+	//	--aside-l-w: 220px!important;
+	//	--aside-r-w: 180px!important;
+	//}
 }

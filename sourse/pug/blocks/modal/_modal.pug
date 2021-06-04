@@ -24,6 +24,41 @@ mixin modal()
 			+e.item
 				+e.i-title Email:
 				+e.link(href="mailto:konstantinopolskaya1616@gmail.com") konstantinopolskaya1616@gmail.com
+	//
+	+b.modal-city.modal-win(id="modal-city" class=" " style="display: none" )
+		+e.title Выберите город
+		+form-wrap()
+			+e.input-wrap.form-group
+				+e.INPUT.input.form-control(type="text" placeholder="Введите город" name="city")
+				+e.cross-btn(type="button")
+			+e.results
+				ul
+					li: a(href="#")  Москва
+					li: a.current(href="#")  Екатеринбург
+					li: a(href="#")  Краснодар
+					li: a(href="#")  Нижний Новгород
+					li: a(href="#")  Новосибирск
+					li: a(href="#")  Ростов-на-Дону
+					li: a(href="#")  Самара
+					li: a(href="#")  Санкт-Петербург
+					li: a(href="#")  Уфа
+					li: a(href="#")  Челябинск
+					li: a(href="#")  Таганрог
+					//
+					li: a(href="#")  Самара
+					li: a(href="#")  Санкт-Петербург
+					li: a(href="#")  Уфа
+					li: a(href="#")  Челябинск
+					li: a(href="#")  Таганрог
+	+b.modal-city.modal-win(id="modal-city2" class=" " style="display: none" )
+		+e.title Выберите город
+		+form-wrap()
+			+e.input-wrap.form-group
+				+e.INPUT.input.form-control(type="text" placeholder="Введите город" name="city" value="Толь")
+				+e.cross-btn(type="button")
+			+e.results
+				ul
+					li: a(href="#") Тольятти
 	//---
 	+customModal('work-conditions', 'Условия работы')
 		//-1
@@ -458,8 +493,29 @@ mixin modal()
 						.col-md-6
 							+e.secondary Если учитесь в настоящее время — укажите год предполагаемого окончания
 			+e.r-add-btn.r-add-btn-js(type='button') Добавить
-
+	//-+socModal('')
+	+socModal('fb', '#2D88FF;')
+	+socModal('vk', '#2787F5;')
+	+socModal('inst', '#E05496;')
+	+socModal('tg', '#2EA3E6;')
+	+socModal('ok', '#EE8208;')
+	+socModal('tw', '#1DA1F2;')
+	+socModal('gpl', '#DB4A39;')
 	// end modals
+
+mixin socModal(iconName, iconColor)
+	+b.modal-city.modal-win(id=`add-soc-${iconName}` class=" " style="display: none" )
+		+e.title Добавить социальный профиль
+		+form-wrap()
+			+e.input-wrap.form-group.mb-48
+				+e.INPUT.input--soc.form-control(type="text" placeholder="Ссылка на профиль" name=`soc-${iconName}`)
+				+e.soc-icon
+					+icon(`soc-${iconName}`)(style=`color: ${iconColor}`)
+			+e.btns-row.row.justify-content-end
+				.col-auto
+					+e.discard-btn(type="button") Отменить
+				.col-auto
+					+e.save-btn(type="button") Сохранить изменения
 
 mixin repeatorBl()
 	+e.repeater.repeator-js

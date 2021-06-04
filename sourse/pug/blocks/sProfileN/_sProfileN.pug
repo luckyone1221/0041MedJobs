@@ -3,9 +3,9 @@ mixin sProfileN(data)
 	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
 		.container-fluid
 			+e.row.row.row--mb
-				.col-xl-auto
+				.col-xlg-auto
 					+lSidebarN()
-				.col-xl
+				.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
 							.col
@@ -103,12 +103,20 @@ mixin sProfileN(data)
 							.col-12
 								+profileNBox('Социальные профили', 'box-3')(class="row--mb soc-row")
 									+socProfieItem('fb')
-									+socProfieItem('vk', 'has-dell-link', true)(style="background-color: #2787F5;")
+									+socProfieItem('vk')
 									+socProfieItem('inst')
 									+socProfieItem('tg')
 									+socProfieItem('ok')
 									+socProfieItem('tw')
 									+socProfieItem('gpl')
+									//active items
+									+socProfieItem('fb', 'has-dell-link', true)(style="background-color: #2D88FF;")
+									+socProfieItem('vk', 'has-dell-link', true)(style="background-color: #2787F5;")
+									+socProfieItem('inst', 'has-dell-link', true)(style="background-color: #E05496;")
+									+socProfieItem('tg', 'has-dell-link', true)(style="background-color: #2EA3E6;")
+									+socProfieItem('ok', 'has-dell-link', true)(style="background-color: #EE8208;")
+									+socProfieItem('tw', 'has-dell-link', true)(style="background-color: #1DA1F2;")
+									+socProfieItem('gpl', 'has-dell-link', true)(style="background-color: #DB4A39;")
 							.col-12
 								+profileNBox('Настройка уведомлений', 'box-4')
 									.col-12
@@ -130,7 +138,7 @@ mixin sProfileN(data)
 										])
 									+e.btn-col.pt-md-15.pt-xl-25.col-12
 										+e.save-btn(type="submit") Сохранить изменения
-				.col-xl-auto.d-none.d-xxl-block
+				.col-xlg-auto.d-none.d-xlg-block
 					+asideMenu()
 	// end sProfileN
 mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], keyClass='default-select-js')
@@ -158,7 +166,7 @@ mixin socProfieItem(iconName, addClasses='', del=false)
 			if del
 				+e.s-link(href="#") Удалить
 			else
-				+e.s-link(href="#") Добавить
+				+e.s-link.link-modal(href=`#add-soc-${iconName}`) Добавить
 
 mixin customRadio(txt, name, val)
 	+b.LABEL.custom-radio
@@ -201,14 +209,14 @@ mixin sProfileNEmpty(data)
 	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
 		.container-fluid
 			+e.row.row.row--mb
-				.col-xl-auto
+				.col-xlg-auto
 					+lSidebarN()
 						+lSidebarSlide(1,'Подборки вакансий')
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')
 						+lSidebarSlide(4,'Избранные вакансии')(class='active')
 						//-+lSidebarSlide(5,'Подборки вакансий')
-				+e.content-col.col-xl
+				+e.content-col.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
 							.col
@@ -221,21 +229,21 @@ mixin sProfileNCv(data)
 	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
 		.container-fluid
 			+e.row.row.row--mb
-				.col-xl-auto
+				.col-xlg-auto
 					+lSidebarN()
 						+lSidebarSlide(1,'Подборки вакансий')
 						+lSidebarSlide(2,'Мое резюме')(class='active')
 						+lSidebarSlide(3,'Настройки профиля')
 						+lSidebarSlide(4,'Избранные вакансии')
 						//-+lSidebarSlide(5,'Подборки вакансий')
-				+e.content-col.col-xl
+				+e.content-col.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
 							.col
 								+e.H1.title=data.title
 							.col-12
 								block
-				.col-xl-auto.d-none.d-xxl-block
+				.col-xlg-auto.d-none.d-xlg-block
 					+asideMenuCv()
 						+b.hint-row.row.mb-12
 							+e.title.col-auto Заполненность резюме
@@ -286,13 +294,13 @@ mixin sProfileNCompilation()
 	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
 		.container-fluid
 			+e.row.row.row--mb
-				.col-xl-auto
+				.col-xlg-auto
 					+lSidebarN()
 						+lSidebarSlide(1,'Подборки вакансий')(class='active')
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')
 						+lSidebarSlide(4,'Избранные вакансии')
-				+e.content-col.col-xl
+				+e.content-col.col-xlg
 					.center-block
 						block
 
@@ -301,7 +309,7 @@ mixin sProfileNMyCab()
 	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
 		.container-fluid
 			+e.row.row.row--mb
-				.col-xl-auto
+				.col-xlg-auto
 					+lSidebarN()
 						//-1
 						+lSidebarSlide(1,'Мой кабинет')(class='active')
@@ -313,6 +321,6 @@ mixin sProfileNMyCab()
 						+lSidebarSlide(3,'Настройки профиля')
 						//4
 						+lSidebarSlide(4,'Избранные вакансии')
-				+e.content-col.col-xl
+				+e.content-col.col-xlg
 					.center-block
 						block

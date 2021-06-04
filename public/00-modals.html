@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>00-stab1</title>
+		<title>00-modals</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.gstatic.com">
@@ -11,35 +11,162 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<meta name="description" content="о чем страница">
-	<body> 
+	<meta name="description" content="Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.">
+	<body class="headings-color has-reg-btn"> 
 		<div class="main-wrapper">
-			<!-- start sEntry-->
-			<section class="sEntry section" id="sEntry">
-				<div class="sEntry__bg">
-					<div class="sEntry__ball sEntry__ball--1">
-					</div>
-					<div class="sEntry__ball sEntry__ball--2">
-					</div>
-					<div class="sEntry__ball sEntry__ball--3">
-					</div>
-					<div class="sEntry__ball sEntry__ball--4">
-					</div>
+			<div class="mm mm--js mm--alt d-xl-none">
+				<div class="container">
+					<ul class="navMenu navMenu--alt">
+						<li class="navMenu__item"><a class="navMenu__link active" href="#">Соискатель</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link muted" href="#">Работодатель</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">О проекте</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Помощь</a>
+						</li>
+						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Контакты</a>
+						</li>
+					</ul>
 				</div>
-				<div class="sEntry__container container">
-					<div class="sEntry__logo"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
-					</div>
-					<div class="section-title text-center">
-						<h1>Поиск компаний<br/>и людей в сфере медицины</h1>
-						<p>Приветствуем Вас на сайте Medicjobs.ru. На данный момент сайт находится в разработке.</p>
-						<div class="section-title__btn">Вход для разработчиков
+			</div>
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav top-nav--alt block-with-lazy">
+					<div class="top-nav__container container">
+						<div class="top-nav__row row">
+							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col-auto d-none d-xl-block">
+								<div class="top-nav__colooker-dd-cont">
+									<div class="top-nav__c-dd-btn">Соискатель
+									</div>
+									<div class="colooker-dd">
+										<div class="colooker-dd__content"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col d-none d-xl-block">
+								<ul class="navMenu">
+									<li class="navMenu__item"><a class="navMenu__link active" href="#">Главная</a>
+									</li>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+									</li>
+									<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
+									</li>
+								</ul>
+							</div>
+							<div class="top-nav__location-col col-auto">
+								<div class="top-nav__location">
+									<svg class="icon icon-location ">
+										<use xlink:href="img/svg/sprite.svg#location"></use>
+									</svg>
+									<div class="top-nav__loc-txt">Санкт-Петербург
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-xl-none">
+								<div class="top-nav__burger burger-js"><span></span>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="sEntry__img"><img loading="lazy" src="img/@2x/stab-img.png" alt=""/>
+				</div>
+			</header>
+			<!-- end header-->
+			<div class="section">
+				<div class="container">
+					<div class="row gy-3">
+						<div class="col-auto"><a class="btn-default link-modal" href="#modal-city">Выберите город</a></div>
+						<div class="col-auto"><a class="btn-default link-modal" href="#modal-city2">Выберите город2</a></div>
 					</div>
 				</div>
-			</section>
-			<!-- end sEntry-->
+			</div>
+			<footer class="footer footer-white">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-12 col-md-7 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footer__l-txt">
+								Поиск компаний и людей
+								<br class="d-none d-xl-block"/>в сфере медицины.
+							</div>
+							<div class="social">
+								<div class="social__row row justify-content-center justify-content-md-start d-xl-none">
+									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer__menu-col col-12 col-md-5 col-xl-4">
+							<div class="footer__menu-row row">
+								<div class="col-6">
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6">
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">О проекте</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="footer__gray-col col-12 col-md-5 col-xl-3 order-1 order-xl-0">
+							<ul class="navMenu gray text-center text-md-start">
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Публичная оферта</a>
+								</li>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Правила пользования</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xl-2 d-none d-xl-block">
+							<div class="social">
+								<div class="social__row row justify-content-end">
+									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-12 col-md-7 order-2 order-md-0">
+							<div class="row text-center text-md-start">
+								<div class="col-12 col-xl">
+									<div class="footer__all-rights">© 2021 Все права защищены Medicjobs.ru.
+									</div>
+								</div>
+								<div class="col-12 col-xl-auto">
+									<div class="footer__likes">
+										<svg class="icon icon-like ">
+											<use xlink:href="img/svg/sprite.svg#like"></use>
+										</svg><span>244</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer><a class="reg-btn reg-btn--js d-md-none" href="#">Зарегистрироваться</a>
 		</div>
 		<!--  start modals-->
 		<div class="modal-callback modal-win" id="modal-callback" style="display: none">

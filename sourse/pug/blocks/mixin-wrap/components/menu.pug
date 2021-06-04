@@ -31,3 +31,24 @@ mixin mnu3()
 	+b.UL.navMenu&attributes(attributes)
 		each linkPatch, linkName in nav
 			+e.LI.item: +e.A.link(href=linkPatch)= linkName
+
+mixin mnu4()
+	-
+		var nav= {
+			"Вакансии":"#",
+			"Организации":"#",
+			//"Профессионалы":"#",
+		}
+	+b.UL.navMenu
+		each linkPatch, linkName in nav
+			+e.LI.item: +e.A.link(href=linkPatch )= linkName
+
+mixin mnu5()
+	-
+		var nav= {
+			"Помощь":"#",
+			"Контакты":"#",
+		}
+	+b.UL.navMenu&attributes(attributes)
+		each linkPatch, linkName in nav
+			+e.LI.item: +e.A.link(href=linkPatch)= linkName

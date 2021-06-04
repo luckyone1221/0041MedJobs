@@ -126,6 +126,8 @@
 															</div>
 															<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
 															</div>
+															<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -170,10 +172,10 @@
 				</div>
 			</section>
 			<!-- end sContactAlt-->
-			<footer class="footer">
+			<footer class="footer footer--alt">
 				<div class="container">
 					<div class="footer__row row">
-						<div class="col-12 col-md-7 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							<div class="footer__l-txt">
 								Поиск компаний и людей
 								<br class="d-none d-xl-block"/>в сфере медицины.
@@ -186,36 +188,30 @@
 									</div>
 									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
 									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="footer__menu-col col-12 col-md-5 col-xl-4">
-							<div class="footer__menu-row row">
-								<div class="col-6">
+						<div class="col-12 col-md-5 col-xl-4">
+							<div class="footer__a-menu-row row text-center text-md-start">
+								<div class="col-12 col-md-6"><a class="footer__a-title" href="#">Соискатель</a>
 									<ul class="navMenu">
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
-										</li>
 										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
+										</li>
 									</ul>
 								</div>
-								<div class="col-6">
-									<ul class="navMenu">
-										<li class="navMenu__item"><a class="navMenu__link" href="#">О проекте</a>
-										</li>
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
-										</li>
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
-										</li>
-									</ul>
+								<div class="col-12 col-md-6"><a class="footer__a-title" href="#">Работодатель</a>
 								</div>
 							</div>
 						</div>
-						<div class="footer__gray-col col-12 col-md-5 col-xl-3 order-1 order-xl-0">
-							<ul class="navMenu gray text-center text-md-start">
-								<li class="navMenu__item"><a class="navMenu__link" href="#">Публичная оферта</a>
+						<div class="footer__gray-col col-12 col-md-2 col-xl-3">
+							<ul class="navMenu text-center text-md-start">
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
 								</li>
-								<li class="navMenu__item"><a class="navMenu__link" href="#">Правила пользования</a>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
 								</li>
 							</ul>
 						</div>
@@ -228,20 +224,23 @@
 									</div>
 									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
 									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-12 col-md-7 order-2 order-md-0">
-							<div class="row text-center text-md-start">
-								<div class="col-12 col-xl">
+						<div class="col-12 order-2 order-md-0">
+							<div class="footer__ar-row row text-center text-md-start">
+								<div class="col-12 col-md">
 									<div class="footer__all-rights">© 2021 Все права защищены Medicjobs.ru.
 									</div>
 								</div>
-								<div class="col-12 col-xl-auto">
-									<div class="footer__likes">
-										<svg class="icon icon-like ">
-											<use xlink:href="img/svg/sprite.svg#like"></use>
-										</svg><span>244</span>
+								<div class="col-12 col-md-auto">
+									<div class="footer__gray-row row">
+										<div class="col-auto"><a class="footer__g-link" href="#">Правила пользования</a>
+										</div>
+										<div class="col-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -294,6 +293,57 @@
 					<div class="modal-contacts__i-title">Email:
 					</div><a class="modal-contacts__link" href="mailto:konstantinopolskaya1616@gmail.com">konstantinopolskaya1616@gmail.com</a>
 				</div>
+			</div>
+		</div>
+		<!---->
+		<div class="modal-city modal-win" id="modal-city" style="display: none">
+			<div class="modal-city__title">Выберите город
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите город" name="city"/>
+						<button class="form-wrap__cross-btn" type="button">
+						</button>
+					</div>
+					<div class="form-wrap__results">
+						<ul>
+							<li><a href="#"> Москва</a></li>
+							<li><a class="current" href="#"> Екатеринбург</a></li>
+							<li><a href="#"> Краснодар</a></li>
+							<li><a href="#"> Нижний Новгород</a></li>
+							<li><a href="#"> Новосибирск</a></li>
+							<li><a href="#"> Ростов-на-Дону</a></li>
+							<li><a href="#"> Самара</a></li>
+							<li><a href="#"> Санкт-Петербург</a></li>
+							<li><a href="#"> Уфа</a></li>
+							<li><a href="#"> Челябинск</a></li>
+							<li><a href="#"> Таганрог</a></li>
+							<!---->
+							<li><a href="#"> Самара</a></li>
+							<li><a href="#"> Санкт-Петербург</a></li>
+							<li><a href="#"> Уфа</a></li>
+							<li><a href="#"> Челябинск</a></li>
+							<li><a href="#"> Таганрог</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="modal-city2" style="display: none">
+			<div class="modal-city__title">Выберите город
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите город" name="city" value="Толь"/>
+						<button class="form-wrap__cross-btn" type="button">
+						</button>
+					</div>
+					<div class="form-wrap__results">
+						<ul>
+							<li><a href="#">Тольятти</a></li>
+						</ul>
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="custom-modal custom-modal--js" id="work-conditions">
@@ -1632,6 +1682,181 @@
 						</form>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-fb" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-fb"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-fb " style="color: #2D88FF;">
+								<use xlink:href="img/svg/sprite.svg#soc-fb"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-vk" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-vk"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-vk " style="color: #2787F5;">
+								<use xlink:href="img/svg/sprite.svg#soc-vk"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-inst" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-inst"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-inst " style="color: #E05496;">
+								<use xlink:href="img/svg/sprite.svg#soc-inst"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-tg" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-tg"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-tg " style="color: #2EA3E6;">
+								<use xlink:href="img/svg/sprite.svg#soc-tg"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-ok" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-ok"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-ok " style="color: #EE8208;">
+								<use xlink:href="img/svg/sprite.svg#soc-ok"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-tw" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-tw"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-tw " style="color: #1DA1F2;">
+								<use xlink:href="img/svg/sprite.svg#soc-tw"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-gpl" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-gpl"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-gpl " style="color: #DB4A39;">
+								<use xlink:href="img/svg/sprite.svg#soc-gpl"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 		<!-- end modals-->
