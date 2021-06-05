@@ -86,7 +86,8 @@
 		margin-bottom: 39px;
 	}
 	&__btn{
-		@extend .btn-default;
+		//@extend .btn-default;
+		@extend .green-btn;
 
 		font-weight: 600;
 		font-size: 18px;

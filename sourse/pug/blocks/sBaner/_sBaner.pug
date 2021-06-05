@@ -30,8 +30,9 @@ mixin sBaner(data)
 								.col
 									+e.input-wrap.form-group
 										+e.INPUT.input.form-control.sBaner-input-js(type="text" placeholder="Введите название вакансии" name="searc")
+										+e.find-btn.d-none.d-md-block(type="submit") Найти
 								//+input('Введите название вакансии', 'text', undefined, 'search')
-						.col-md-auto
+						.col-md-auto.d-md-none
 							+e.find-btn(type="submit") Найти
 
 	// end sBaner

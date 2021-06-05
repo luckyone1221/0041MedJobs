@@ -8,7 +8,6 @@ mixin sSearch(data)
 			+e.row.row
 				+e.filter-col.col-xl-3
 					+e.filter-cont
-						//-f-btn
 						+e.f-btn.f-btn-js.d-xl-none
 							+e.f-img
 								img(loading="lazy" src="img/svg/filter-bar.svg" alt="")
@@ -18,14 +17,16 @@ mixin sSearch(data)
 								span Закрыть
 						+filterSearch()
 				.col-xl-9
-					.row.row-default-sm.mb-0
+					//-.row.row-default-sm.mb-0
 						+sortSelItem('по алфавиту', 'col-12')
-					+organizations()
+					//-+organizations()
+					+newOrganizations()
 					+puginRow()
 	// end sSearch
+
 mixin sSearchVacancy(data)
 	// start sSearch
-	+b.SECTION.sSearch.section#sSearch&attributes(attributes)
+	+b.SECTION.sSearch--vacancy.section#sSearch&attributes(attributes)
 		.container
 			block
 			+b.section-title
@@ -43,10 +44,39 @@ mixin sSearchVacancy(data)
 								span Закрыть
 						+filterVacancy()
 				.col-xl-9
-					.row.row-default-sm.mb-0
+					//-.row.row-default-sm.mb-0
 						+sortSelItem('для меня', 'col-6')
 						+sortSelItem('весь период', 'col-6')
-					+Vacancies()
+					//+Vacancies()
+					+e.vac-items.pb-36.pb-xl-48
+						+profileItem({
+							logo: '1',
+						})
+						+profileItem({
+							logo: false,
+						})
+						+profileItem({
+							logo: '1',
+						})
+						//-
+						+profileItem({
+							logo: '2',
+						})
+						+profileItem({
+							logo: '1',
+						})
+						+profileItem({
+							logo: '2',
+						})
+						//-
+						+profileItem({
+							logo: '1',
+							addClasses: "d-none d-xl-block",
+						})
+						+profileItem({
+							logo: '2',
+							addClasses: "d-none d-xl-block",
+						})
 					+puginRow()
 	// end sSearch
 
@@ -110,11 +140,7 @@ mixin filter()
 			+customChbGroup(['Педиатрическая', 'Взрослая', 'Смешанная'])
 		+filterItem('Форма собственности')
 			+customChbGroup(['Частная', 'Государтсвенная'])
-		+e.BUTTON.show-btn(type="submit")
-			span
-				| Показать
-				|
-			span.text-primary 938
+		+e.BUTTON.show-btn(type="submit") Показать 938
 
 mixin filterSearch()
 	+b.filter--js
@@ -138,14 +164,10 @@ mixin filterSearch()
 			+customChbGroup(['Медицинские организации', 'Лаборатории', 'Клинические испытания', 'Лебечное дело (врачи-специалисты)', 'Лицензирование', 'Медициснкое оборудование', 'Санитарно-эпидемиологический надзор', 'Средний и младший медперсонал', 'Товары медицинского назначения', 'Уход за больными', 'Фармацевтика', 'Другое',  'Начало карьеры. "мало опыта"'])
 		//-+filterItem('')
 			+customChbGroup(['', '', '', '', ''])
-		+e.BUTTON.show-btn(type="submit")
-			span
-				| Показать
-				|
-			span.text-primary 938
+		+e.BUTTON.show-btn(type="submit") Показать 938
 
 mixin filterVacancy()
-	+b.filter--js
+	+b.filter--js.--vac
 		+filterItem('Регион:')
 			+e.select
 				select.form-select.form-control
@@ -159,7 +181,7 @@ mixin filterVacancy()
 					option Львов
 					option Киев
 		//-new
-		+filterItem('Уровень дохода, ₽')
+		+filterItem('Уровень дохода, руб')
 			+b.two-inps
 				+input('25 000', 'number', undefined, 'salary_from')
 				+input('100 000', 'number', undefined, 'salary_to')
@@ -180,11 +202,7 @@ mixin filterVacancy()
 			+e.shm-content.shm-cont-js
 				+customChb('откриваюсь на клик')
 				+customChb('по серой кнопке')
-		+e.BUTTON.show-btn(type="submit")
-			span
-				| Показать
-				|
-			span.text-primary 938
+		+e.BUTTON.show-btn(type="submit") Показать 938
 
 mixin filterProf()
 	+b.filter--js
@@ -249,11 +267,7 @@ mixin filterProf()
 				+customChb('по серой кнопке')
 		+filterItem('Статус')
 			+customChbGroup(['В поиске работы', 'Рассмотрю варианты', 'Не рассматриваю'])
-		+e.BUTTON.show-btn(type="submit")
-			span
-				| Показать
-				|
-			span.text-primary 938
+		+e.BUTTON.show-btn(type="submit") Показать 938
 
 mixin filterItem(title, activeClass="active", addContentCl='')
 	+e.item.f-item-js(class=activeClass)
@@ -476,3 +490,29 @@ mixin puginRow()
 					option 12
 					option 24
 					option 36
+
+mixin newOrganizations()
+	+b.organN
+		-for(var i =0; i < 6; i++)
+			+newOrganizationsItem({
+				logo: false,
+				title: 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург',
+			})
+			+newOrganizationsItem({
+				logo: true,
+				title: 'Всероссийский центр экстренной и радиационной медицины им. А. М. Никифорова МЧС России',
+			})
+
+mixin newOrganizationsItem(data)
+	+e.item
+		+e.row.row.align-items-center
+			.col-auto
+				if data.logo
+					+e.logo-box(href='#')
+						img(loading="lazy" src=`img/svg/company-logo.svg` alt="")
+				else
+					+e.logo-box--empty(href='#')
+						img(loading="lazy" src=`img/svg/company-stab2.svg` alt="")
+			.col
+				+e.title(href='#')=data.title
+				+e.city г. Санкт-Петербург, пр. Мечникова, д.27

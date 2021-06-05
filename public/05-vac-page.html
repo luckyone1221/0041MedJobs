@@ -12,60 +12,63 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<meta name="description" content="о чем страница">
-	<body> 
+	<body class="new-header"> 
 		<div class="main-wrapper">
-			<div class="mm mm--js mm--alt d-xl-none">
-				<div class="container">
-					<ul class="navMenu navMenu--alt">
-						<li class="navMenu__item"><a class="navMenu__link active" href="#">Соискатель</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link muted" href="#">Работодатель</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">О проекте</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Помощь</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Контакты</a>
-						</li>
-					</ul>
+			<div class="mm mm--js mm--alt5 d-xl-none">
+				<div class="new-mnu">
+					<div class="new-mnu__box"><a class="top-nav__blue-cv-btn" href="#">Разместить резюме</a><a class="new-mnu__enter-btn" href="#">Войти</a>
+					</div>
+					<div class="new-mnu__box"><a class="top-nav__location link-modal" href="#modal-city">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Работодатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">О компании</a><a class="new-mnu__item" href="#">Помощь</a><a class="new-mnu__item" href="#">Контакты</a>
+					</div>
 				</div>
 			</div>
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav top-nav--alt block-with-lazy">
-					<div class="top-nav__container container">
-						<div class="top-nav__row row">
-							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+					<div class="top-nav__container top-nav__container--alt5 container">
+						<div class="top-nav__row top-nav__row--alt row">
+							<div class="col-auto d-lg-none">
+								<div class="top-nav__burger top-nav__burger--alt burger-js"><span></span>
+								</div>
 							</div>
-							<div class="col-auto d-none d-xl-block">
+							<div class="col col-lg-auto"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-lg-block">
 								<div class="top-nav__colooker-dd-cont">
 									<div class="top-nav__c-dd-btn">Соискатель
 									</div>
 									<div class="colooker-dd">
-										<div class="colooker-dd__content"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a>
+										<div class="colooker-dd__content">
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											</div>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col d-none d-xl-block">
-								<ul class="navMenu">
-									<li class="navMenu__item"><a class="navMenu__link active" href="#">Главная</a>
-									</li>
-									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
-									</li>
-									<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
-									</li>
-								</ul>
-							</div>
-							<div class="top-nav__location-col col-auto"><a class="top-nav__location link-modal" href="#modal-city"> 
+							<div class="top-nav__location-col col-auto d-none d-md-block"><a class="top-nav__location link-modal" href="#modal-city">
 								<svg class="icon icon-location ">
 									<use xlink:href="img/svg/sprite.svg#location"></use>
 								</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
 							</div>
-							<div class="col-auto d-xl-none">
-								<div class="top-nav__burger burger-js"><span></span>
-								</div>
+							<div class="col-auto"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a><a class="top-nav__mob-cv-btn d-md-none" href="#"><span class="top-nav__mcv-icon">
+								<svg class="icon icon-plus-bold ">
+									<use xlink:href="img/svg/sprite.svg#plus-bold"></use>
+								</svg></span><span class="top-nav__mcv-txt">Разместить резюме</span></a>
+							</div>
+							<div class="col-auto"><a class="top-nav__enter-link d-none d-md-inline" href="#">Войти</a><a class="top-nav__mob-enter d-md-none" href="#">
+								<svg class="icon icon-avatar-stab ">
+									<use xlink:href="img/svg/sprite.svg#avatar-stab"></use>
+								</svg></a>
 							</div>
 						</div>
 					</div>
@@ -86,10 +89,12 @@
 										<option>option 3</option>
 									</select>
 								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="text" placeholder="Введите название вакансии"/>
+								<!--+input(inpPh, 'text', undefined, 'search')-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название вакансии" name="searc"/>
+									<button class="form-wrap__btn d-none d-md-inline-block" type="submit"><span>Найти</span>
+									</button>
 								</div>
-								<!-- +e.input-wrap-->
-								<button class="form-wrap__btn" type="submit"><span class="d-none d-md-block">Найти</span>
+								<button class="form-wrap__btn d-flex d-md-none" type="submit"><span class="d-none d-md-block">Найти</span>
 									<svg class="icon icon-zoom d-md-none">
 										<use xlink:href="img/svg/sprite.svg#zoom"></use>
 									</svg>
@@ -113,17 +118,68 @@
 						<div class="col-12 col-xl-9">
 							<div class="sVacPage__header">
 								<div class="sVacPage__header-row row align-items-center">
-									<div class="col-md-auto">
-										<div class="sVacPage__logo"><img loading="lazy" src="img/@2x/company-logo-3.png" alt=""/>
-										</div>
+									<div class="col-auto"><a class="sVacPage__logo sVacPage__logo--empty" href="#"><img loading="lazy" src="img/svg/company-stab2.svg" alt=""/></a>
 									</div>
-									<div class="col-md">
-										<div class="sVacPage__name">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-										</div>
+									<div class="col"><a class="sVacPage__name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
 										<div class="sVacPage__city">г. Санкт-Петербург, пр. Мечникова, д.27
 										</div>
 									</div>
 								</div>
+							</div>
+							<div class="st-data d-xl-none mb-27">
+								<div class="st-data__top-row row justify-content-center align-items-center">
+									<div class="st-data__btn-col col-6 col-xl-12"><a class="st-data__call-btn link-modal" href="#modal-callback">Откликнуться</a>
+									</div>
+									<div class="st-data__btn-col col-6 col-xl-12"><a class="st-data__show-btn mb-xl-12 link-modal" href="#modal-contacts">Показать контакты</a>
+									</div>
+									<div class="col-auto col-xl-12">
+										<!--class active--><a class="st-data__to-chosen mb-xl-12 sVacPage-like-btn-js" href="#"><span class="st-data__icon-cont">
+										<svg class="icon icon-like ">
+											<use xlink:href="img/svg/sprite.svg#like"></use>
+										</svg>
+										<svg class="icon icon-like-fill ">
+											<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+										</svg></span><span class="st-data__tc-txt">В избранное</span></a>
+									</div>
+									<div class="col-auto col-xl-12">
+										<div class="st-data__gray">Размещено: 04.02.2021
+										</div>
+									</div>
+								</div>
+							</div>
+							<ul class="sVacPage__striped-ul sVacPage__striped-ul--common">
+								<li><strong>Опыт работы:&nbsp;</strong><span>от 1 до 3 лет</span></li>
+								<li><strong>Тип занятости:&nbsp;</strong><span>Полная</span></li>
+								<li><strong>График:&nbsp;</strong><span>Полный день</span></li>
+							</ul>
+							<h5>Обязанности:</h5>
+							<ul>
+								<li>Погрузка/разгрузка</li>
+								<li>Размещение и перемещение товара в пределах зон хранения склада.</li>
+								<li>Выполнение установленных объемов погрузочно-разгрузочных работ.</li>
+								<li>Подсобные работы</li>
+							</ul>
+							<h5>Требования:</h5>
+							<ul>
+								<li>Внимательность.</li>
+								<li>Активные, честные, аккуратные.</li>
+								<li>Умение ладить с коллективом, неконфликтные.</li>
+							</ul>
+							<h5>Условия:</h5>
+							<ul>
+								<li class="no-before">Г. Долгопрудный, мкр. Хлебниково, Новое шоссе 1ст1</li>
+								<li>График 6/1, смена 12 часов (из них 1 час перерыва)</li>
+								<li>Дневная смена с 8.00 до 20.00</li>
+								<li>Проживание БЕСПЛАТНО в общежитии компании</li>
+								<li>Доставка до рабочего места</li>
+								<li>Спецодежда предоставляется.</li>
+								<li>Трудоустройство - самозанятость.</li>
+								<li>еженедельные авансы от 1500 р до 2000 р.</li>
+							</ul>
+							<h5 class="mb-24">Расположение на карте</h5>
+							<div class="sVacPage__location">Г. Долгопрудный, мкр. Хлебниково, Новое шоссе 1ст1
+							</div>
+							<div class="sVacPage__map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa24858180c70500d85f43cf6f43344f955abbaae44d7b9c6bf32f8e46d75746d&amp;width=868&amp;height=554&amp;lang=ru_RU&amp;scroll=false"></script>
 							</div>
 							<div class="st-data d-xl-none mb-24">
 								<div class="st-data__top-row row justify-content-center align-items-center">
@@ -144,196 +200,153 @@
 										<div class="st-data__gray">Размещено: 04.02.2021
 										</div>
 									</div>
-									<div class="col-auto col-xl-12">
-										<div class="st-data__gray">Обновлено: 04.02.2021
+								</div>
+							</div>
+							<div class="prof-soc d-xl-none mb-48">
+								<div class="prof-soc__box">
+									<div class="prof-soc__title">Поделиться вакансией
+									</div>
+								</div>
+								<div class="prof-soc__box">
+									<div class="prof-soc__row row">
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tg.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tw.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-fb.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-vk.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-ok.svg" alt=""/></a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<ul class="sVacPage__striped-ul">
-								<li><strong>Опыт работы:&nbsp;</strong><span>от 1 до 3 лет</span></li>
-								<li><strong>Тип занятости:&nbsp;</strong><span>Полная</span></li>
-								<li><strong>График:&nbsp;</strong><span>Полный день</span></li>
-							</ul>
-							<h5>Обязанности:</h5>
-							<ul>
-								<li>Терапевтический приём пациентов отделения стоматологии;</li>
-								<li>Оказание квалифицированной медицинской помощи пациентам, используя современные методы профилактики, диагностики, лечения;</li>
-								<li>Ведение установленной медицинской документации;</li>
-								<li>Проведение санитарно-просветительской работы среди больных по укреплению здоровья и профилактике заболеваний, пропаганде здорового образа жизни;</li>
-								<li>Обеспечение соблюдения требований охраны труда, техники безопасности, гигиены труда, противопожарной безопасности при эксплуатации помещений, оборудования и аппаратуры, используемой в стоматологической практике.</li>
-							</ul>
-							<h5>Требования:</h5>
-							<ul>
-								<li>Высшее медицинское образование;</li>
-								<li>Наличие действующего сертификата "Стоматология терапевтическая";</li>
-								<li>Ведение установленной медицинской документации;</li>
-								<li>Опыт работы по специальности;</li>
-								<li>Все виды терапевтического лечения;</li>
-							</ul>
-							<h5>Условия:</h5>
-							<ul>
-								<li>Официальное оформление по ТК РФ;</li>
-								<li>Полный соц.пакет;</li>
-								<li>Получение медицинских услуг в клиниках на льготных условиях.</li>
-							</ul>
-							<h5>Навыки:</h5>
-							<div class="sVacPage__skill-row row">
-								<div class="col-auto">
-									<div class="sVacPage__sk-btn">Умный
-									</div>
-								</div>
-								<div class="col-auto">
-									<div class="sVacPage__sk-btn">Усидчевый
-									</div>
-								</div>
-							</div>
-							<h5>Фотографии</h5>
-							<div class="galery-row row">
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-2.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-2.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-4.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-4.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-								</div>
-							</div>
-							<h5>Расположение на карте</h5>
-							<div class="sVacPage__map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa24858180c70500d85f43cf6f43344f955abbaae44d7b9c6bf32f8e46d75746d&amp;width=868&amp;height=554&amp;lang=ru_RU&amp;scroll=false"></script>
-							</div>
-							<h5>Похожие вакансии:</h5>
-							<div class="organ organ--vac">
-								<div class="organ__item organ__item--vac">
-									<div class="organ__row organ__row--vac row">
-										<div class="col"><a class="organ__title" href="#">Врач-терапевт стационар</a><a class="organ__org-name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__city">г. Санкт-Петербург
-											</div>
-										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__description">Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.
-									</div>
-									<div class="organ__salary">30 000-35 000 ₽
-									</div>
-									<div class="organ__galary">
-										<div class="organ__g-row row">
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-4.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-4.jpg" alt=""/></a>
-											</div>
-										</div>
-									</div>
-									<div class="organ__lower-row row align-items-md-center">
-										<div class="col">
-											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto"><a class="organ__respond-btn" href="#">Откликнуться</a>
-												</div>
-												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Размещено:
-															</span><span>04.02.2021</span>
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Обновлено:
-															</span><span>04.02.2021</span>
-													</div>
+							<h5 class="mb-24">Похожие вакансии:</h5>
+							<div class="sVacPage__vacancy-items">
+								<div class="prof-vac">
+									<div class="prof-vac__date-box">
+										<div class="prof-vac__date-row row align-items-center">
+											<div class="col-auto">
+												<div class="prof-vac__date">04.02.2021
 												</div>
 											</div>
+											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg></a>
+											</div>
 										</div>
-										<div class="col-auto"><a class="organ__like-btn" href="#">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg></a>
+									</div>
+									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
+										<div class="prof-vac__salary">30 000-35 000 ₽
+										</div>
+									</div>
+									<div class="prof-vac__row row">
+										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
+										</div>
+										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="prof-vac__city">г. Санкт-Петербург
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item organ__item--vac">
-									<div class="organ__row organ__row--vac row">
-										<div class="col"><a class="organ__title" href="#">Врач-терапевт стационар</a><a class="organ__org-name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__city">г. Санкт-Петербург
+								<div class="prof-vac">
+									<div class="prof-vac__date-box">
+										<div class="prof-vac__date-row row align-items-center">
+											<div class="col-auto">
+												<div class="prof-vac__date">04.02.2021
+												</div>
 											</div>
-										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__description">Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.
-									</div>
-									<div class="organ__salary">30 000-35 000 ₽
-									</div>
-									<div class="organ__galary">
-										<div class="organ__g-row row">
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-4.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-4.jpg" alt=""/></a>
+											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg></a>
 											</div>
 										</div>
 									</div>
-									<div class="organ__lower-row row align-items-md-center">
-										<div class="col">
-											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto"><a class="organ__respond-btn" href="#">Откликнуться</a>
-												</div>
-												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Размещено:
-															</span><span>04.02.2021</span>
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Обновлено:
-															</span><span>04.02.2021</span>
-													</div>
-												</div>
+									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
+										<div class="prof-vac__salary">30 000-35 000 ₽
+										</div>
+									</div>
+									<div class="prof-vac__row row">
+										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-2.png" alt=""/></a>
+										</div>
+										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="prof-vac__city">г. Санкт-Петербург
 											</div>
 										</div>
-										<div class="col-auto"><a class="organ__like-btn" href="#">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg></a>
+									</div>
+								</div>
+								<div class="prof-vac">
+									<div class="prof-vac__date-box">
+										<div class="prof-vac__date-row row align-items-center">
+											<div class="col-auto">
+												<div class="prof-vac__date">04.02.2021
+												</div>
+											</div>
+											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div>
+									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
+										<div class="prof-vac__salary">30 000-35 000 ₽
+										</div>
+									</div>
+									<div class="prof-vac__row row">
+										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
+										</div>
+										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="prof-vac__city">г. Санкт-Петербург
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-3 d-none d-xl-block">
-							<div class="st-data">
-								<div class="st-data__top-row row justify-content-center align-items-center">
-									<div class="st-data__btn-col col-6 col-xl-12"><a class="st-data__call-btn link-modal" href="#modal-callback">Откликнуться</a>
-									</div>
-									<div class="st-data__btn-col col-6 col-xl-12"><a class="st-data__show-btn mb-xl-12 link-modal" href="#modal-contacts">Показать контакты</a>
-									</div>
-									<div class="col-auto col-xl-12">
-										<!--class active--><a class="st-data__to-chosen mb-xl-12 sVacPage-like-btn-js" href="#"><span class="st-data__icon-cont">
-										<svg class="icon icon-like ">
-											<use xlink:href="img/svg/sprite.svg#like"></use>
-										</svg>
-										<svg class="icon icon-like-fill ">
-											<use xlink:href="img/svg/sprite.svg#like-fill"></use>
-										</svg></span><span class="st-data__tc-txt">В избранное</span></a>
-									</div>
-									<div class="col-auto col-xl-12">
-										<div class="st-data__gray">Размещено: 04.02.2021
+						<div class="sVacPage__sticky-col col-xl-3 d-none d-xl-block">
+							<div class="sVacPage__sticky-item">
+								<div class="st-data mb-24">
+									<div class="st-data__top-row row justify-content-center align-items-center">
+										<div class="st-data__btn-col col-6 col-xl-12"><a class="st-data__call-btn link-modal" href="#modal-callback">Откликнуться</a>
+										</div>
+										<div class="st-data__btn-col col-6 col-xl-12"><a class="st-data__show-btn mb-xl-12 link-modal" href="#modal-contacts">Показать контакты</a>
+										</div>
+										<div class="col-auto col-xl-12">
+											<!--class active--><a class="st-data__to-chosen mb-xl-12 sVacPage-like-btn-js" href="#"><span class="st-data__icon-cont">
+											<svg class="icon icon-like ">
+												<use xlink:href="img/svg/sprite.svg#like"></use>
+											</svg>
+											<svg class="icon icon-like-fill ">
+												<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+											</svg></span><span class="st-data__tc-txt">В избранное</span></a>
+										</div>
+										<div class="col-auto col-xl-12">
+											<div class="st-data__gray">Размещено: 04.02.2021
+											</div>
 										</div>
 									</div>
-									<div class="col-auto col-xl-12">
-										<div class="st-data__gray">Обновлено: 04.02.2021
+								</div>
+								<div class="prof-soc">
+									<div class="prof-soc__box">
+										<div class="prof-soc__title">Поделиться вакансией
+										</div>
+									</div>
+									<div class="prof-soc__box">
+										<div class="prof-soc__row row">
+											<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tg.svg" alt=""/></a>
+											</div>
+											<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tw.svg" alt=""/></a>
+											</div>
+											<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-fb.svg" alt=""/></a>
+											</div>
+											<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-vk.svg" alt=""/></a>
+											</div>
+											<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-ok.svg" alt=""/></a>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -346,12 +359,12 @@
 			<footer class="footer footer--alt">
 				<div class="container">
 					<div class="footer__row row">
-						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							<div class="footer__l-txt">
+						<div class="col-12 col-md-5 col-xl-4"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footer__l-txt footer__l-txt--alt">
 								Поиск компаний и людей
 								<br class="d-none d-xl-block"/>в сфере медицины.
 							</div>
-							<div class="social">
+							<div class="social mb-27 mb-xl-0">
 								<div class="social__row row justify-content-center justify-content-md-start d-xl-none">
 									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
 									</div>
@@ -378,7 +391,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="footer__gray-col col-12 col-md-2 col-xl-3">
+						<div class="footer__gray-col col-12 col-md-2 col-xl-2">
 							<ul class="navMenu text-center text-md-start">
 								<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
 								</li>
@@ -403,14 +416,14 @@
 						<div class="col-12 order-2 order-md-0">
 							<div class="footer__ar-row row text-center text-md-start">
 								<div class="col-12 col-md">
-									<div class="footer__all-rights">© 2021 Все права защищены Medicjobs.ru.
+									<div class="footer__all-rights mb-0">© 2021 Все права защищены Medicjobs.ru.
 									</div>
 								</div>
 								<div class="col-12 col-md-auto">
 									<div class="footer__gray-row row">
-										<div class="col-auto"><a class="footer__g-link" href="#">Правила пользования</a>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Правила пользования</a>
 										</div>
-										<div class="col-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
 										</div>
 									</div>
 								</div>

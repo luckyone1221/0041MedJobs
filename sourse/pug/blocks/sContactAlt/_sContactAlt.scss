@@ -1,12 +1,9 @@
 // start .sContactAlt
 .sContactAlt {
-	--sPT: 36px;
-	--sTPB: 36px;
+	--sPT: 24px;
+	--sTPB: 24px;
 
-	--sPB: 60px;
-	@include media-breakpoint-up(md){
-		--sPB: 90px;
-	}
+	--sPB: 80px;
 
 	.breadcrumb{
 		margin-bottom: 8px;
@@ -125,11 +122,9 @@
 			}
 		}
 		&__btn{
-			@extend .btn-default;
+			@extend .green-btn;
 			min-width: 220px;
-
 			padding: 14px 20px;
-
 		}
 	}
 

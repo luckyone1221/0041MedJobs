@@ -155,8 +155,16 @@ mixin top-nav4()
 mixin colookerDD()
 	+b.colooker-dd
 		+e.content
-			+e.item.active(href="#") Соискатель
-			+e.item(href="#") Работодатель
+			+e.box--top
+				+e.item.active(href="#") Соискатель
+				+e.item(href="#") Работодатель
+				+e.item(href='#') Вакансии
+				+e.item(href='#') Организации
+			+e.box
+				+e.item(href='#') О компании
+				+e.item(href='#') Помощь
+				+e.item(href='#') Контакты
+
 
 mixin mob-mnu4()
 	+b.mm--js.--alt.d-xl-none
@@ -169,3 +177,76 @@ mixin mob-mnu4()
 				+e.LI.item: +e.A.link.fw-400(href="#") Контакты
 			//-+e.btn-cont
 				+e.btn(href="#") Разместить резюме
+
+mixin top-nav5(data)
+	// start top-nav
+	+b.top-nav--alt.block-with-lazy
+		+e.container--alt5.container
+			+e.row--alt.row
+				.col-auto.d-lg-none
+					+e.burger--alt.burger-js
+						span
+				.col.col-lg-auto
+					+e.logo--alt(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col.d-none.d-lg-block
+					+e.colooker-dd-cont
+						+e.c-dd-btn Соискатель
+						+colookerDD()
+				//-.col.d-none.d-xl-block
+					+b.UL.navMenu
+						+e.LI.item: +e.A.link.active(href="#") Главная
+						+e.LI.item: +e.A.link(href="#") Вакансии
+						+e.LI.item: +e.A.link(href="#") Организации
+				+e.location-col.col-auto.d-none.d-md-block
+					+e.location.link-modal(href='#modal-city')
+						+icon('location')
+						+e.loc-txt Санкт-Петербург
+				.col-auto
+					+e.blue-cv-btn.d-none.d-md-inline-block(href="#") Разместить резюме
+					+e.mob-cv-btn.d-md-none(href="#")
+						+e.mcv-icon
+							+icon('plus-bold')
+						+e.mcv-txt Разместить резюме
+				if !data.logged
+					.col-auto
+						+e.enter-link.d-none.d-md-inline(href="#") Войти
+						+e.mob-enter.d-md-none(href='#')
+							+icon('avatar-stab')
+				else
+					.col-auto
+						//-.lc-cont-js
+						.headerAlt__lc-cont
+							//-.lc-dd-btn-js
+							.headerAlt__lc-row.row.align-items-center
+								.col-auto.d-none.d-lg-block
+									.headerAlt__lc-txt Мой кабинет
+								.col-auto
+									.headerAlt__lc-img
+										img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
+								.headerAlt__lc-icon.col-auto
+									+icon('chevron-down')
+							+pCabDD()
+
+mixin mob-mnu5(data)
+	+b.mm--js.--alt5.d-xl-none
+		+b.new-mnu
+			+e.box
+				a.top-nav__blue-cv-btn(href="#") Разместить резюме
+				if !data.logged
+					+e.enter-btn(href="#") Войти
+				else
+					+e.enter-btn(href="#") Мой кабинет
+			+e.box
+				a.top-nav__location.link-modal(href='#modal-city')
+					+icon('location')
+					span.top-nav__loc-txt Санкт-Петербург
+			+e.box--menu
+				+e.item.active(href="#") Соискатель
+				+e.item(href="#") Работодатель
+				+e.item(href='#') Вакансии
+				+e.item(href='#') Организации
+			+e.box--menu
+				+e.item(href='#') О компании
+				+e.item(href='#') Помощь
+				+e.item(href='#') Контакты

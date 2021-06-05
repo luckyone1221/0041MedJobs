@@ -12,60 +12,63 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<meta name="description" content="о чем страница">
-	<body> 
+	<body class="new-header"> 
 		<div class="main-wrapper">
-			<div class="mm mm--js mm--alt d-xl-none">
-				<div class="container">
-					<ul class="navMenu navMenu--alt">
-						<li class="navMenu__item"><a class="navMenu__link active" href="#">Соискатель</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link muted" href="#">Работодатель</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">О проекте</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Помощь</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Контакты</a>
-						</li>
-					</ul>
+			<div class="mm mm--js mm--alt5 d-xl-none">
+				<div class="new-mnu">
+					<div class="new-mnu__box"><a class="top-nav__blue-cv-btn" href="#">Разместить резюме</a><a class="new-mnu__enter-btn" href="#">Войти</a>
+					</div>
+					<div class="new-mnu__box"><a class="top-nav__location link-modal" href="#modal-city">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Работодатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">О компании</a><a class="new-mnu__item" href="#">Помощь</a><a class="new-mnu__item" href="#">Контакты</a>
+					</div>
 				</div>
 			</div>
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav top-nav--alt block-with-lazy">
-					<div class="top-nav__container container">
-						<div class="top-nav__row row">
-							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+					<div class="top-nav__container top-nav__container--alt5 container">
+						<div class="top-nav__row top-nav__row--alt row">
+							<div class="col-auto d-lg-none">
+								<div class="top-nav__burger top-nav__burger--alt burger-js"><span></span>
+								</div>
 							</div>
-							<div class="col-auto d-none d-xl-block">
+							<div class="col col-lg-auto"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-lg-block">
 								<div class="top-nav__colooker-dd-cont">
 									<div class="top-nav__c-dd-btn">Соискатель
 									</div>
 									<div class="colooker-dd">
-										<div class="colooker-dd__content"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a>
+										<div class="colooker-dd__content">
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											</div>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col d-none d-xl-block">
-								<ul class="navMenu">
-									<li class="navMenu__item"><a class="navMenu__link active" href="#">Главная</a>
-									</li>
-									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
-									</li>
-									<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
-									</li>
-								</ul>
-							</div>
-							<div class="top-nav__location-col col-auto"><a class="top-nav__location link-modal" href="#modal-city"> 
+							<div class="top-nav__location-col col-auto d-none d-md-block"><a class="top-nav__location link-modal" href="#modal-city">
 								<svg class="icon icon-location ">
 									<use xlink:href="img/svg/sprite.svg#location"></use>
 								</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
 							</div>
-							<div class="col-auto d-xl-none">
-								<div class="top-nav__burger burger-js"><span></span>
-								</div>
+							<div class="col-auto"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a><a class="top-nav__mob-cv-btn d-md-none" href="#"><span class="top-nav__mcv-icon">
+								<svg class="icon icon-plus-bold ">
+									<use xlink:href="img/svg/sprite.svg#plus-bold"></use>
+								</svg></span><span class="top-nav__mcv-txt">Разместить резюме</span></a>
+							</div>
+							<div class="col-auto"><a class="top-nav__enter-link d-none d-md-inline" href="#">Войти</a><a class="top-nav__mob-enter d-md-none" href="#">
+								<svg class="icon icon-avatar-stab ">
+									<use xlink:href="img/svg/sprite.svg#avatar-stab"></use>
+								</svg></a>
 							</div>
 						</div>
 					</div>
@@ -86,10 +89,12 @@
 										<option>option 3</option>
 									</select>
 								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="text" placeholder="Введите название организации"/>
+								<!--+input(inpPh, 'text', undefined, 'search')-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название организации" name="searc"/>
+									<button class="form-wrap__btn d-none d-md-inline-block" type="submit"><span>Найти</span>
+									</button>
 								</div>
-								<!-- +e.input-wrap-->
-								<button class="form-wrap__btn" type="submit"><span class="d-none d-md-block">Найти</span>
+								<button class="form-wrap__btn d-flex d-md-none" type="submit"><span class="d-none d-md-block">Найти</span>
 									<svg class="icon icon-zoom d-md-none">
 										<use xlink:href="img/svg/sprite.svg#zoom"></use>
 									</svg>
@@ -214,286 +219,129 @@
 											</div>
 										</div>
 									</div>
-									<button class="filter__show-btn" type="submit"><span>
-											Показать
-											</span><span class="text-primary">938</span>
+									<button class="filter__show-btn" type="submit">Показать 938
 									</button>
 								</div>
 							</div>
 						</div>
 						<div class="col-xl-9">
-							<div class="row row-default-sm mb-0">
-								<div class="col-md-4 col-12">
-									<div class="sSearch__sort-select">
-										<select class="form-control form-select">
-											<option>по алфавиту</option>
-											<option>option 2</option>
-											<option>option 3</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="organ">
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+							<div class="organN">
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box organN__logo-box--empty" href="#"><img loading="lazy" src="img/svg/company-stab2.svg" alt=""/></a>
 										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto"><a class="organ__vac-link" href="#">7 вакансий</a>
-												</div>
+										<div class="col"><a class="organN__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М.<br class="d-none d-md-block"/>Никифорова МЧС России</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box" href="#"><img loading="lazy" src="img/svg/company-logo.svg" alt=""/></a>
 										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__vac-empty">Нет вакансий
-													</div>
-												</div>
+										<div class="col"><a class="organN__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М. Никифорова МЧС России</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box organN__logo-box--empty" href="#"><img loading="lazy" src="img/svg/company-stab2.svg" alt=""/></a>
 										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto"><a class="organ__vac-link" href="#">7 вакансий</a>
-												</div>
+										<div class="col"><a class="organN__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М.<br class="d-none d-md-block"/>Никифорова МЧС России</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box" href="#"><img loading="lazy" src="img/svg/company-logo.svg" alt=""/></a>
 										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__vac-empty">Нет вакансий
-													</div>
-												</div>
+										<div class="col"><a class="organN__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М. Никифорова МЧС России</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box organN__logo-box--empty" href="#"><img loading="lazy" src="img/svg/company-stab2.svg" alt=""/></a>
 										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto"><a class="organ__vac-link" href="#">7 вакансий</a>
-												</div>
+										<div class="col"><a class="organN__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М.<br class="d-none d-md-block"/>Никифорова МЧС России</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box" href="#"><img loading="lazy" src="img/svg/company-logo.svg" alt=""/></a>
 										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__vac-empty">Нет вакансий
-													</div>
-												</div>
+										<div class="col"><a class="organN__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М. Никифорова МЧС России</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box organN__logo-box--empty" href="#"><img loading="lazy" src="img/svg/company-stab2.svg" alt=""/></a>
 										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto"><a class="organ__vac-link" href="#">7 вакансий</a>
-												</div>
+										<div class="col"><a class="organN__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М.<br class="d-none d-md-block"/>Никифорова МЧС России</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box" href="#"><img loading="lazy" src="img/svg/company-logo.svg" alt=""/></a>
 										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__vac-empty">Нет вакансий
-													</div>
-												</div>
+										<div class="col"><a class="organN__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М. Никифорова МЧС России</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item d-none d-xl-flex">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box organN__logo-box--empty" href="#"><img loading="lazy" src="img/svg/company-stab2.svg" alt=""/></a>
 										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto"><a class="organ__vac-link" href="#">7 вакансий</a>
-												</div>
+										<div class="col"><a class="organN__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item d-none d-xl-flex">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М.<br class="d-none d-md-block"/>Никифорова МЧС России</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box" href="#"><img loading="lazy" src="img/svg/company-logo.svg" alt=""/></a>
 										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__vac-empty">Нет вакансий
-													</div>
-												</div>
+										<div class="col"><a class="organN__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М. Никифорова МЧС России</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item d-none d-xl-flex">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box organN__logo-box--empty" href="#"><img loading="lazy" src="img/svg/company-stab2.svg" alt=""/></a>
 										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto"><a class="organ__vac-link" href="#">7 вакансий</a>
-												</div>
+										<div class="col"><a class="organN__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item d-none d-xl-flex">
-									<div class="organ__row row">
-										<div class="col"><a class="organ__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М.<br class="d-none d-md-block"/>Никифорова МЧС России</a>
-											<div class="organ__descr">г. Санкт-Петербург, пр. Мечникова, д.27
-											</div>
+								<div class="organN__item">
+									<div class="organN__row row align-items-center">
+										<div class="col-auto"><a class="organN__logo-box" href="#"><img loading="lazy" src="img/svg/company-logo.svg" alt=""/></a>
 										</div>
-									</div>
-									<div class="organ__lower-row row align-items-center">
-										<div class="col">
-											<div class="organ__data-row row align-items-center">
-												<div class="col-auto">
-													<div class="organ__workers-amount">Более 100 сотрудников
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__vac-empty">Нет вакансий
-													</div>
-												</div>
+										<div class="col"><a class="organN__title" href="#">Всероссийский центр экстренной и радиационной медицины им. А. М. Никифорова МЧС России</a>
+											<div class="organN__city">г. Санкт-Петербург, пр. Мечникова, д.27
 											</div>
 										</div>
 									</div>
@@ -536,29 +384,15 @@
 				</div>
 			</section>
 			<!-- end sSearch-->
-			<!-- start sDescr-->
-			<section class="sDescr section" id="sDescr">
-				<div class="container">
-					<div class="section-title">
-						<h2>
-							Медицинские и фармацевтические организации
-							<br class="d-none d-xl-block"/>в Санкт-Петербурге
-						</h2>
-						<p>Работа в Санкт-Петербурге — это широкий выбор вакансий в различных отраслях деятельности: от сотрудников сферы обслуживания до топ-менеджеров крупных компаний. Найти работу в этом многообразии несложно, для чего подходят различные методы. Можно пойти в Службу занятости или кадровое агентство, можно использовать свои социальные связи, можно напрямую обратиться в интересующие компании.</p>
-						<p>Однако наиболее популярным способом поиска работы в Санкт-Петербурге остаются сайты по трудоустройству. Чтобы быстро найти достойный вариант — размещайте резюме и ищите вакансии в тех источниках, которые пользуются широким спросом среди работодателей. К их числу относится Medicjobs. Используя нашу обширную информационную базу, вы быстро найдете подходящую вакансию.</p>
-					</div>
-				</div>
-			</section>
-			<!-- end sDescr-->
 			<footer class="footer footer--alt">
 				<div class="container">
 					<div class="footer__row row">
-						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							<div class="footer__l-txt">
+						<div class="col-12 col-md-5 col-xl-4"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footer__l-txt footer__l-txt--alt">
 								Поиск компаний и людей
 								<br class="d-none d-xl-block"/>в сфере медицины.
 							</div>
-							<div class="social">
+							<div class="social mb-27 mb-xl-0">
 								<div class="social__row row justify-content-center justify-content-md-start d-xl-none">
 									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
 									</div>
@@ -585,7 +419,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="footer__gray-col col-12 col-md-2 col-xl-3">
+						<div class="footer__gray-col col-12 col-md-2 col-xl-2">
 							<ul class="navMenu text-center text-md-start">
 								<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
 								</li>
@@ -610,14 +444,14 @@
 						<div class="col-12 order-2 order-md-0">
 							<div class="footer__ar-row row text-center text-md-start">
 								<div class="col-12 col-md">
-									<div class="footer__all-rights">© 2021 Все права защищены Medicjobs.ru.
+									<div class="footer__all-rights mb-0">© 2021 Все права защищены Medicjobs.ru.
 									</div>
 								</div>
 								<div class="col-12 col-md-auto">
 									<div class="footer__gray-row row">
-										<div class="col-auto"><a class="footer__g-link" href="#">Правила пользования</a>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Правила пользования</a>
 										</div>
-										<div class="col-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
 										</div>
 									</div>
 								</div>

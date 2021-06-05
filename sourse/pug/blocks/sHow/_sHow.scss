@@ -207,7 +207,8 @@
 		}
 	}
 	&__btn{
-		@extend .btn-default;
+		//@extend .btn-default;
+		@extend .green-btn;
 
 		min-width: 200px;
 		padding: 14px 19px;

@@ -97,13 +97,9 @@
 			}
 		}
 		&__btn{
-			@extend .btn-default;
-			min-width: 220px;
+			@extend .green-btn;
 			padding: 14px 20px;
-
-			font-weight: 600;
-			font-size: 16px;
-			line-height: 1.25;
+			min-width: 220px;
 		}
 		&__{}
 		&__{}

@@ -1,12 +1,6 @@
 .footer {
 	margin-top: auto;
-	padding: 63px 0;
-	@include media-breakpoint-up(md){
-		padding: 63px 0;
-	}
-	@include media-breakpoint-up(xl){
-		padding: 60px 0;
-	}
+	padding: 60px 0;
 	background-color: $light;
 
 	//
@@ -15,7 +9,8 @@
 		background-color: $white;
 	}
 	&__gray-row{
-
+		@include roww(24px);
+		--bs-gutter-y: 15px;
 	}
 	&__g-link{
 		font-size: rem(16);
@@ -103,6 +98,9 @@
 		}
 		margin-bottom: 38px;
 
+		&--alt{
+			margin-bottom: 30px!important;
+		}
 		img{
 			width: auto;
 			height: auto;
@@ -118,6 +116,10 @@
 		padding-bottom: 42px;
 		@include media-breakpoint-up(xl){
 			padding-bottom: 40px;
+		}
+
+		&--alt{
+			padding-bottom: 30px!important;
 		}
 	}
 	//
@@ -155,6 +157,8 @@
 		@include media-breakpoint-up(xl){
 			margin-bottom: 0;
 		}
+
+		//26px
 	}
 
 	//

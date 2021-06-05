@@ -7,18 +7,23 @@ include ../blocks/sCards/_sCards.pug
 include ../blocks/sWhat/_sWhat.pug
 include ../blocks/sSearch/_sSearch.pug
 include ../blocks/sDescr/_sDescr.pug
+include ../blocks/sProfile/_sProfile.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'new-header'
 block title
 	- let  title= '04-vacancy'
 	title= title
 block pagecontent
-	+mob-mnu4()
+	+mob-mnu5({
+		logged: false,
+	})
 	+header()
-		+top-nav4()
+		+top-nav5({
+			logged: false,
+		})
 	+sSearchVacancy()
 		+inpStrip('Вакансии', 'Введите название вакансии')
 		+breadcrumb('Главная', 'Вакансии')
-	+sDescr()
+	//-+sDescr()
 	+footerAlt()

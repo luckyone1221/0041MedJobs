@@ -176,13 +176,16 @@
 		&__input-wrap{
 			width: calc(100% + 3px);
 			margin-left: -1px;
+
+			position: relative;
+			z-index: 1;
 		}
 		&__input{
 			padding: 19px 18px;
 			border-radius: 0 5px 5px 0;
 			@include media-breakpoint-up(md){
-				padding: 19px 24px;
-				border-radius: 0;
+				padding: 19px 170px 19px 24px;
+				border-radius: 0 5px 5px 0;
 			}
 
 			position: relative;
@@ -191,14 +194,23 @@
 				z-index: 1;
 			}
 		}
+
+		//
 		&__find-btn{
-			@extend .btn-default;
-			font-weight: 600;
+			@extend .green-btn;
+
+			position: relative;
+			@include media-breakpoint-up(md){
+				position: absolute;
+				top: 5px;
+				right: 5px;
+			}
 
 			width: 100%;
+			padding: 20px 24px;
 			@include media-breakpoint-up(md){
 				width: 170px;
-				border-radius: 0 5px 5px 0;
+				padding: 15px 24px;
 			}
 		}
 		&__{}

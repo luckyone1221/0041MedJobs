@@ -19,13 +19,17 @@ include ../blocks/sCompilations/_sCompilations.pug
 include ../blocks/sContactAlt/_sContactAlt.pug
 
 block variables
-	- let  mainPage= 'bg-gray-120 headings-color'
+	- let  mainPage= 'bg-gray-120 headings-color new-header'
 block title
 	- let  title= '027-contacts'
 	title= title
 block pagecontent
-	+mob-mnu4()
+	+mob-mnu5({
+		logged: false,
+	})
 	+header()
-		+top-nav4()
+		+top-nav5({
+			logged: false,
+		})
 	+sContactAlt()
 	+footerAlt()

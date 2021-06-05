@@ -124,15 +124,16 @@
 			}
 		}
 		&__input-wrap{
+			position: relative;
 			flex-grow: 1;
 			margin-left: -1px;
 		}
 		&__input{
-			border-radius: 0;
-
 			padding: 19px 18px;
+			border-radius: 0;
 			@include media-breakpoint-up(md){
 				padding: 19px 24px;
+				border-radius: 0 5px 5px 0;
 			}
 
 			position: relative;
@@ -142,21 +143,25 @@
 			}
 		}
 		&__btn{
-			@extend .btn-default;
-			border-radius: 0 5px 5px 0;
-			font-weight: 600;
-
-			display: flex;
+			@extend .green-btn;
 			align-items: center;
 			justify-content: center;
-			text-align: center;
 
-			@include media-breakpoint-down(md){
-				padding: 0;
-				width: 60px;
-				height: 60px;
+			width: 60px;
+			height: 60px;
+			padding: 0;
+			border-radius: 0 5px 5px 0;
+			@include media-breakpoint-up(md){
+				padding: 15px 24px;
+				border-radius: 5px;
+				display: block;
+				width: 170px;
+				height: auto;
+
+				position: absolute;
+				top: 5px;
+				right: 5px;
 			}
-			width: 170px;
 
 			.icon{
 				font-size: 20px;

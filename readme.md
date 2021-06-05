@@ -1,5 +1,6 @@
 Главные страницы
-1. <https://luckyone1221.github.io/0041MedJobs/public/index-alt.html> 
+1. <https://luckyone1221.github.io/0041MedJobs/public/index-alt.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/00-header-logged.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/02-search.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/03-profile.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/04-vacancy.html>

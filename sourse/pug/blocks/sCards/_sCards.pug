@@ -32,7 +32,11 @@ mixin inpStrip(selectPh, inpPh)
 					option option 1
 					option option 2
 					option option 3
-			+input(inpPh, 'text', undefined, 'search')
-			+e.btn(type='submit')
+			//+input(inpPh, 'text', undefined, 'search')
+			+e.input-wrap.form-group
+				+e.INPUT.input.form-control(type="text" placeholder=inpPh name="searc")
+				+e.btn.d-none.d-md-inline-block(type='submit')
+					span Найти
+			+e.btn.d-flex.d-md-none(type='submit')
 				span.d-none.d-md-block Найти
 				+icon('zoom', 'd-md-none')

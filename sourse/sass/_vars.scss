@@ -24,6 +24,7 @@ $gray-115: #E5E5E5;
 $gray-120: #D8D8D8;
 $gray-200: #e9ecef !default;
 $gray-210: #E4E7EC;
+$gray-220: #E9E9EC;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
@@ -56,6 +57,7 @@ $red2: #df061c;
 $orange: #F15A22 !default;
 $yellow: #ffc107 !default;
 $green: #2AED80 !default;
+$green2: #43D081;
 $teal: #20c997 !default;
 $cyan: #10B7F5 !default;
 
@@ -68,7 +70,6 @@ $colors: ("blue": $blue,
   "orange": $orange,
   "yellow": $yellow,
   "green": $green,
-  "teal": $teal,
   "cyan": $cyan,
   "white": $white,
   "gray": $gray-600,
@@ -95,6 +96,7 @@ $theme-colors: (
   "danger": $danger,
   "light": $light,
   "gray": $gray-210,
+  "teal": $teal,
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 
@@ -269,7 +271,7 @@ $spacers: (0: 0,
   36: 36px,
   41: 41px,
   43: 43px,
-  48: 43px,
+  48: 48px,
   50: 50px,
   55: 55px
 ) !default;

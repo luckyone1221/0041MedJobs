@@ -12,60 +12,63 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<meta name="description" content="о чем страница">
-	<body> 
+	<body class="new-header"> 
 		<div class="main-wrapper">
-			<div class="mm mm--js mm--alt d-xl-none">
-				<div class="container">
-					<ul class="navMenu navMenu--alt">
-						<li class="navMenu__item"><a class="navMenu__link active" href="#">Соискатель</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link muted" href="#">Работодатель</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">О проекте</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Помощь</a>
-						</li>
-						<li class="navMenu__item"><a class="navMenu__link fw-400" href="#">Контакты</a>
-						</li>
-					</ul>
+			<div class="mm mm--js mm--alt5 d-xl-none">
+				<div class="new-mnu">
+					<div class="new-mnu__box"><a class="top-nav__blue-cv-btn" href="#">Разместить резюме</a><a class="new-mnu__enter-btn" href="#">Войти</a>
+					</div>
+					<div class="new-mnu__box"><a class="top-nav__location link-modal" href="#modal-city">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Работодатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">О компании</a><a class="new-mnu__item" href="#">Помощь</a><a class="new-mnu__item" href="#">Контакты</a>
+					</div>
 				</div>
 			</div>
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav top-nav--alt block-with-lazy">
-					<div class="top-nav__container container">
-						<div class="top-nav__row row">
-							<div class="col col-xl-auto"><a class="top-nav__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+					<div class="top-nav__container top-nav__container--alt5 container">
+						<div class="top-nav__row top-nav__row--alt row">
+							<div class="col-auto d-lg-none">
+								<div class="top-nav__burger top-nav__burger--alt burger-js"><span></span>
+								</div>
 							</div>
-							<div class="col-auto d-none d-xl-block">
+							<div class="col col-lg-auto"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-lg-block">
 								<div class="top-nav__colooker-dd-cont">
 									<div class="top-nav__c-dd-btn">Соискатель
 									</div>
 									<div class="colooker-dd">
-										<div class="colooker-dd__content"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a>
+										<div class="colooker-dd__content">
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											</div>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col d-none d-xl-block">
-								<ul class="navMenu">
-									<li class="navMenu__item"><a class="navMenu__link active" href="#">Главная</a>
-									</li>
-									<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
-									</li>
-									<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
-									</li>
-								</ul>
-							</div>
-							<div class="top-nav__location-col col-auto"><a class="top-nav__location link-modal" href="#modal-city"> 
+							<div class="top-nav__location-col col-auto d-none d-md-block"><a class="top-nav__location link-modal" href="#modal-city">
 								<svg class="icon icon-location ">
 									<use xlink:href="img/svg/sprite.svg#location"></use>
 								</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
 							</div>
-							<div class="col-auto d-xl-none">
-								<div class="top-nav__burger burger-js"><span></span>
-								</div>
+							<div class="col-auto"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a><a class="top-nav__mob-cv-btn d-md-none" href="#"><span class="top-nav__mcv-icon">
+								<svg class="icon icon-plus-bold ">
+									<use xlink:href="img/svg/sprite.svg#plus-bold"></use>
+								</svg></span><span class="top-nav__mcv-txt">Разместить резюме</span></a>
+							</div>
+							<div class="col-auto"><a class="top-nav__enter-link d-none d-md-inline" href="#">Войти</a><a class="top-nav__mob-enter d-md-none" href="#">
+								<svg class="icon icon-avatar-stab ">
+									<use xlink:href="img/svg/sprite.svg#avatar-stab"></use>
+								</svg></a>
 							</div>
 						</div>
 					</div>
@@ -86,10 +89,12 @@
 										<option>option 3</option>
 									</select>
 								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="search" type="text" placeholder="Введите название организации"/>
+								<!--+input(inpPh, 'text', undefined, 'search')-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название организации" name="searc"/>
+									<button class="form-wrap__btn d-none d-md-inline-block" type="submit"><span>Найти</span>
+									</button>
 								</div>
-								<!-- +e.input-wrap-->
-								<button class="form-wrap__btn" type="submit"><span class="d-none d-md-block">Найти</span>
+								<button class="form-wrap__btn d-flex d-md-none" type="submit"><span class="d-none d-md-block">Найти</span>
 									<svg class="icon icon-zoom d-md-none">
 										<use xlink:href="img/svg/sprite.svg#zoom"></use>
 									</svg>
@@ -116,21 +121,25 @@
 							</div>
 						</div>
 						<div class="section-title__row row align-items-center">
-							<div class="col-auto"><a class="section-title__logo" href="#"><img loading="lazy" src="img/@2x/company-logo-3.jpg" alt=""/></a>
+							<div class="col-auto">
+								<!--+e.logo(href='#')img(loading="lazy" src="img/@2x/company-logo-3.jpg" alt="")
+								--><a class="section-title__logo" href="#"><img loading="lazy" src="img/svg/company-stab3.svg" alt=""/></a>
 							</div>
 							<div class="col-12 col-md">
-								<h1>ООО Центр Дентальной Травматологии</h1>
+								<h1>ЧУЗ Клиническая больница «РЖД - Медицина» города&#160;Санкт-Петербург</h1>
 							</div>
 						</div>
 					</div>
 					<div class="sProfile__row row">
 						<div class="sProfile__l-col col-xl-9">
-							<div class="sProfile__sub-title pb-25">Об организации
-							</div>
 							<div class="sProfile__txt-box">
-								<p>Центр дентальной травматологии Iceberg.<br/>Наша стоматологическая клиника, основанная в 2013 году является ведущей частной клиникой в стоматологической травматологии (IADT Fellow). В 2019 году стала второй в рейтинге лучших частных клиник России по версии “Коммерсантъ”.<br/>Мы помогаем людям открыто улыбаться, общаться уверенно и наслаждаться пищей, чтобы они могли достигать свои жизненные цели, не задумываясь о проблемах с зубами.<br/>Открыто делимся опытом и формируем уважение к российской медицине среди мирового сообщества,  повышая компетентность врачей и населения по всему миру.<br/>Объединяем усилия профессиональной команды и оснащение  цифровой зуботехнической лаборатории, взрослого отделения и детского отделения с анестезиологией, чтобы восстановить прежний вид улыбки и восстановить здоровье на долгие годы.</p>
+								<p>Центр дентальной травматологии Iceberg.</p>
+								<p>Наша стоматологическая клиника, основанная в 2013 году является ведущей частной клиникой в стоматологической травматологии (IADT Fellow). В 2019 году стала второй в рейтинге лучших частных клиник России по версии “Коммерсантъ”.</p>
+								<p>Мы помогаем людям открыто улыбаться, общаться уверенно и наслаждаться пищей, чтобы они могли достигать свои жизненные цели, не задумываясь о проблемах с зубами.</p>
+								<p>Открыто делимся опытом и формируем уважение к российской медицине среди мирового сообщества,  повышая компетентность врачей и населения по всему миру.</p>
+								<p>Объединяем усилия профессиональной команды и оснащение  цифровой зуботехнической лаборатории, взрослого отделения и детского отделения с анестезиологией, чтобы восстановить прежний вид улыбки и восстановить здоровье на долгие годы.</p>
 							</div>
-							<div class="contacts d-xl-none mb-55">
+							<div class="contacts d-xl-none mb-18 mb-md-24">
 								<div class="contacts__row row">
 									<div class="col-12">
 										<div class="contacts__item">
@@ -138,7 +147,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Город:
 											</div>
@@ -146,185 +155,142 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Адрес:
 											</div>
-											<div class="contacts__txt">435345, г. Санкт-Петербург, ул. Иванова, д 7
+											<div class="contacts__txt contacts__txt--address">435345, г. Санкт-Петербург, ул. Иванова, д 7
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Телефон:
 											</div><a class="contacts__tell" href="tel:+74995465567">+ 7 (499) 546-55-67</a>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">E-mail:
 											</div><a class="contacts__link" href="mailto:info@iceberg.dental">info@iceberg.dental</a>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Сайт:
 											</div><a class="contacts__link" href="www.iceberg.dental" target="_blank">www.iceberg.dental</a>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
-										<div class="contacts__item">
-											<div class="contacts__title">Ответственное лицо:
-											</div>
-											<div class="contacts__txt mb-6">Константинопольская Ирина Васильевна
-											</div>
-											<div class="contacts__title">HR менеджер
-											</div><a class="contacts__tell mb-6" href="tel:+74995465567">+ 7 (499) 546-55-67</a><a class="contacts__link" href="mailto:info@iceberg.dental">info@iceberg.dental</a>
-										</div>
+								</div>
+							</div>
+							<div class="prof-soc d-xl-none mb-18 mb-md-24">
+								<div class="prof-soc__box">
+									<div class="prof-soc__title">Поделиться
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
-										<div class="contacts__item">
-											<div class="contacts__social-row row">
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/tw.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/ok.svg" alt=""/></a>
-												</div>
-											</div>
+								</div>
+								<div class="prof-soc__box">
+									<div class="prof-soc__row row">
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tg.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tw.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-fb.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-vk.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-ok.svg" alt=""/></a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="sProfile__sub-title pb-43">Фотографии
+							<div class="sProfile__sm-title pb-18 pb-md-24">Вакансии организации
 							</div>
-							<div class="galery-row row">
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-2.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-2.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-4.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-4.jpg" alt=""/></a>
-								</div>
-								<div class="col-6 col-md-4"><a class="galery-row__g-item" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-								</div>
-							</div>
-							<div class="sProfile__sm-title pb-43">Вакансии организации
-							</div>
-							<div class="organ organ--vac">
-								<div class="organ__item organ__item--vac">
-									<div class="organ__row organ__row--vac row">
-										<div class="col"><a class="organ__title" href="#">Врач-терапевт стационар</a><a class="organ__org-name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__city">г. Санкт-Петербург
+							<div class="sProfile__vac-items">
+								<div class="prof-vac">
+									<div class="prof-vac__date-box">
+										<div class="prof-vac__date-row row align-items-center">
+											<div class="col-auto">
+												<div class="prof-vac__date">04.02.2021
+												</div>
 											</div>
-										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__description">Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.
-									</div>
-									<div class="organ__salary">30 000-35 000 ₽
-									</div>
-									<div class="organ__galary">
-										<div class="organ__g-row row">
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-4.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-4.jpg" alt=""/></a>
+											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg></a>
 											</div>
 										</div>
 									</div>
-									<div class="organ__lower-row row align-items-md-center">
-										<div class="col">
-											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto"><a class="organ__respond-btn" href="#">Откликнуться</a>
-												</div>
-												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Размещено:
-															</span><span>04.02.2021</span>
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Обновлено:
-															</span><span>04.02.2021</span>
-													</div>
-												</div>
-											</div>
+									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
+										<div class="prof-vac__salary">30 000-35 000 ₽
 										</div>
-										<div class="col-auto"><a class="organ__like-btn" href="#">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg></a>
+									</div>
+									<div class="prof-vac__row row">
+										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
+										</div>
+										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="prof-vac__city">г. Санкт-Петербург
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="organ__item organ__item--vac">
-									<div class="organ__row organ__row--vac row">
-										<div class="col"><a class="organ__title" href="#">Врач-терапевт стационар</a><a class="organ__org-name" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
-											<div class="organ__city">г. Санкт-Петербург
+								<div class="prof-vac">
+									<div class="prof-vac__date-box">
+										<div class="prof-vac__date-row row align-items-center">
+											<div class="col-auto">
+												<div class="prof-vac__date">04.02.2021
+												</div>
 											</div>
-										</div>
-										<div class="col-auto"><a class="organ__company-logo" href="#"><img loading="lazy" src="img/@2x/company-logo.png" alt=""/></a>
-										</div>
-									</div>
-									<div class="organ__description">Получает информацию о заболевании. Применяет объективные методы обследования больного. Выявляет общие и специфические признаки заболевания. Выполняет перечень работ и услуг. Высшее профильное образование.
-									</div>
-									<div class="organ__salary">30 000-35 000 ₽
-									</div>
-									<div class="organ__galary">
-										<div class="organ__g-row row">
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-3.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-3.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-1.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-1.jpg" alt=""/></a>
-											</div>
-											<div class="col col-part-5"><a class="organ__g-img" href="img/@2x/stab-4.jpg" data-fancybox="jobGalery1"><img loading="lazy" src="img/@2x/stab-4.jpg" alt=""/></a>
+											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg></a>
 											</div>
 										</div>
 									</div>
-									<div class="organ__lower-row row align-items-md-center">
-										<div class="col">
-											<div class="organ__btns-row row align-items-md-center">
-												<div class="col-auto"><a class="organ__respond-btn" href="#">Откликнуться</a>
-												</div>
-												<div class="col-auto"><a class="organ__show-btn" href="#">Показать контакты</a>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Размещено:
-															</span><span>04.02.2021</span>
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="organ__placement"><span class="d-md-block d-xl-inline">
-															Обновлено:
-															</span><span>04.02.2021</span>
-													</div>
-												</div>
+									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
+										<div class="prof-vac__salary">30 000-35 000 ₽
+										</div>
+									</div>
+									<div class="prof-vac__row row">
+										<div class="col-auto"><a class="prof-vac__logo prof-vac__logo--empty" href="#"><img loading="lazy" src="img/svg/company-stab4.svg" alt=""/></a>
+										</div>
+										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="prof-vac__city">г. Санкт-Петербург
 											</div>
 										</div>
-										<div class="col-auto"><a class="organ__like-btn" href="#">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg></a>
+									</div>
+								</div>
+								<div class="prof-vac">
+									<div class="prof-vac__date-box">
+										<div class="prof-vac__date-row row align-items-center">
+											<div class="col-auto">
+												<div class="prof-vac__date">04.02.2021
+												</div>
+											</div>
+											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div>
+									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
+										<div class="prof-vac__salary">30 000-35 000 ₽
+										</div>
+									</div>
+									<div class="prof-vac__row row">
+										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
+										</div>
+										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+											<div class="prof-vac__city">г. Санкт-Петербург
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-xl-3 d-none d-xl-block">
-							<div class="contacts mb-36">
+							<div class="contacts mb-24">
 								<div class="contacts__row row">
 									<div class="col-12">
 										<div class="contacts__item">
@@ -332,7 +298,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Город:
 											</div>
@@ -340,70 +306,52 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Адрес:
 											</div>
-											<div class="contacts__txt">435345, г. Санкт-Петербург, ул. Иванова, д 7
+											<div class="contacts__txt contacts__txt--address">435345, г. Санкт-Петербург, ул. Иванова, д 7
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Телефон:
 											</div><a class="contacts__tell" href="tel:+74995465567">+ 7 (499) 546-55-67</a>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">E-mail:
 											</div><a class="contacts__link" href="mailto:info@iceberg.dental">info@iceberg.dental</a>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
+									<div class="col-12">
 										<div class="contacts__item">
 											<div class="contacts__title">Сайт:
 											</div><a class="contacts__link" href="www.iceberg.dental" target="_blank">www.iceberg.dental</a>
 										</div>
 									</div>
-									<div class="col-12 col-md-6 col-xl-12">
-										<div class="contacts__item">
-											<div class="contacts__title">Ответственное лицо:
-											</div>
-											<div class="contacts__txt mb-6">Константинопольская Ирина Васильевна
-											</div>
-											<div class="contacts__title">HR менеджер
-											</div><a class="contacts__tell mb-6" href="tel:+74995465567">+ 7 (499) 546-55-67</a><a class="contacts__link" href="mailto:info@iceberg.dental">info@iceberg.dental</a>
-										</div>
-									</div>
-									<div class="col-12 col-md-6 col-xl-12">
-										<div class="contacts__item">
-											<div class="contacts__social-row row">
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/tw.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
-												</div>
-												<div class="col-auto"><a class="contacts__soc-link" href="#"><img loading="lazy" src="img/svg/ok.svg" alt=""/></a>
-												</div>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>
-							<div class="emp-am">
-								<div class="emp-am__bg">
-									<div class="emp-am__ball emp-am__ball--1">
-									</div>
-									<div class="emp-am__ball emp-am__ball--2">
+							<div class="prof-soc">
+								<div class="prof-soc__box">
+									<div class="prof-soc__title">Поделиться
 									</div>
 								</div>
-								<div class="emp-am__title">Количество сотрудников
-								</div>
-								<div class="emp-am__amount"><img loading="lazy" src="img/@2x/doctor.png" alt=""/><span>102</span>
+								<div class="prof-soc__box">
+									<div class="prof-soc__row row">
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tg.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-tw.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-fb.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-vk.svg" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="prof-soc__item" href="#"><img loading="lazy" src="img/svg/n-ok.svg" alt=""/></a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -414,12 +362,12 @@
 			<footer class="footer footer--alt">
 				<div class="container">
 					<div class="footer__row row">
-						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							<div class="footer__l-txt">
+						<div class="col-12 col-md-5 col-xl-4"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footer__l-txt footer__l-txt--alt">
 								Поиск компаний и людей
 								<br class="d-none d-xl-block"/>в сфере медицины.
 							</div>
-							<div class="social">
+							<div class="social mb-27 mb-xl-0">
 								<div class="social__row row justify-content-center justify-content-md-start d-xl-none">
 									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
 									</div>
@@ -446,7 +394,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="footer__gray-col col-12 col-md-2 col-xl-3">
+						<div class="footer__gray-col col-12 col-md-2 col-xl-2">
 							<ul class="navMenu text-center text-md-start">
 								<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
 								</li>
@@ -471,14 +419,14 @@
 						<div class="col-12 order-2 order-md-0">
 							<div class="footer__ar-row row text-center text-md-start">
 								<div class="col-12 col-md">
-									<div class="footer__all-rights">© 2021 Все права защищены Medicjobs.ru.
+									<div class="footer__all-rights mb-0">© 2021 Все права защищены Medicjobs.ru.
 									</div>
 								</div>
 								<div class="col-12 col-md-auto">
 									<div class="footer__gray-row row">
-										<div class="col-auto"><a class="footer__g-link" href="#">Правила пользования</a>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Правила пользования</a>
 										</div>
-										<div class="col-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
 										</div>
 									</div>
 								</div>

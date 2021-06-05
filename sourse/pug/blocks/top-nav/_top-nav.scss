@@ -26,6 +26,9 @@
 		}
 		.top-nav__{}
 	}
+
+
+
 	&__location-col{
 		@include media-breakpoint-up(xl){
 			padding-right: 2px;
@@ -33,7 +36,7 @@
 	}
 	//top-nav4
 	&__colooker-dd-cont{
-		margin: 0 24px;
+		//margin: 0 24px;
 
 		position: relative;
 
@@ -63,15 +66,20 @@
 		}
 	}
 	&__{}
-	//
+	//5
+	&--alt5{
 
+	}
 	&__container{
-
+		&--alt5{
+			@include media-breakpoint-between(lg, xlg){
+				padding: 0 8px;
+			}
+		}
 	}
 	&__row{
 		height: var(--header-h);
 		align-items: center;
-
 
 		@include media-breakpoint-up(md){
 			@include roww(48px);
@@ -81,6 +89,13 @@
 	&__logo{
 		display: block;
 		width: 218px;
+
+		&--alt{
+			width: 188px;
+			@include media-breakpoint-up(md){
+				width: 170px;
+			}
+		}
 
 		img{
 			width: auto;
@@ -251,6 +266,88 @@
 				transform: rotate(-45deg);
 			}
 		}
+
+		&--alt{
+			width: 24px;
+			height: 24px;
+
+			span,
+			span:before,
+			span:after{
+				width: 24px!important;
+				height: 2px;
+			}
+
+			span:before{
+				top: -8px;
+			}
+			span:after{
+				top: 8px;
+			}
+		}
+	}
+
+	//5
+	&__blue-cv-btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		padding: 8px 16px;
+		min-width: 200px;
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.25;
+	}
+	&__enter-link{
+		font-size: 16px;
+		line-height: 1.25;
+		color: $headings-color;
+		&:hover{
+			color: $primary;
+		}
+	}
+
+	//
+	&__mob-cv-btn{
+		display: inline-flex;
+		align-items: center;
+
+	}
+	&__mcv-icon{
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+		border-radius: 50%;
+		background: $cyan;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: 12px;
+			color: $white;
+		}
+	}
+	&__mcv-txt{
+		font-size: rem(16);
+		line-height: 1.25;
+		color: $headings-color;
+	}
+	&__mob-enter{
+		margin-left: 3px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+
+		.icon{
+			font-size: 24px;
+			color: $gray-550;
+		}
 	}
 	&__{}
 	&__{}
@@ -273,6 +370,14 @@
 	height: auto;
 	&--alt{
 		height: calc(100vh - var(--header-h));
+	}
+	&--alt5{
+		height: calc(100vh - var(--header-h));
+
+		width: 374px;
+		@include media-breakpoint-up(md){
+			width: 272px;
+		}
 	}
 
 
@@ -449,18 +554,24 @@
 	top: 100%;
 	left: 0;
 	width: auto;
+	min-width: 186px;
 	height: auto;
 	padding-top: 20px;
 
 	&__content{
-		padding: 15px 0;
 		background: $white;
-		border: 1px solid $gray-210;
+		border: 1px solid $gray-220;
 		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
 		border-radius: 5px;
 	}
+	&__box{
+		padding: 10px 0;
+		&--top{
+			border-bottom: 1px solid $gray-220;
+		}
+	}
 	&__item{
-		padding: 10px;
+		padding: 12px 14px;
 		display: block;
 
 		background-color: transparent;
@@ -471,10 +582,77 @@
 		}
 
 		&.active{
-			color: $primary;
-			&:hover{
-				color: $primary;
+			font-weight: bold;
+		}
+	}
+	&__{}
+}
+
+//
+.new-mnu{
+	height: 100%;
+	overflow-y: auto;
+
+	--box-px: 24px;
+	@include media-breakpoint-up(md){
+		--box-px: 18px;
+	}
+
+	&__box{
+		padding: 24px var(--box-px, 18px);
+		border-bottom: 1px solid $gray-220;
+
+		&:last-child{
+			border-bottom: none;
+		}
+
+		&--menu{
+			padding: 10px 0;
+		}
+	}
+	.top-nav{
+		&__blue-cv-btn{
+			display: block;
+			min-width: 100%;
+			margin-bottom: 12px;
+		}
+		&__location{
+			.icon{
+
 			}
+		}
+		&__loc-txt{
+
+		}
+	}
+	&__enter-btn{
+		@extend .btn;
+		@extend .btn-light;
+		min-width: 100%;
+		border-radius: 6px;
+
+		font-weight: bold;
+		font-size: rem(16);
+		line-height: 1.25;
+		color: $secondary;
+
+		padding: 10px 15px;
+	}
+
+	&__item{
+		display: block;
+		padding: 10px var(--box-px, 18px);
+
+
+		background-color: transparent;
+		color: $headings-color;
+		&:hover{
+			background: rgba($gray-100, .5);
+			color: $primary;
+		}
+
+		&.active{
+			font-weight: bold;
 		}
 	}
 	&__{}

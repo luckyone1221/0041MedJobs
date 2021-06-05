@@ -9,16 +9,20 @@ include ../blocks/sSearch/_sSearch.pug
 include ../blocks/sDescr/_sDescr.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'new-header'
 block title
 	- let  title= '02-search'
 	title= title
 block pagecontent
-	+mob-mnu4()
+	+mob-mnu5({
+		logged: false,
+	})
 	+header()
-		+top-nav4()
+		+top-nav5({
+			logged: false,
+		})
 	+sSearch()
 		+inpStrip('Организации', 'Введите название организации')
 		+breadcrumb('Главная', 'Организации')
-	+sDescr()
+	//-+sDescr()
 	+footerAlt()
