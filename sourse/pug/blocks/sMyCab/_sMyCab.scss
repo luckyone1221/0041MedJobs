@@ -8,6 +8,11 @@
 			@include roww(24px);
 			--bs-gutter-y: 24px;
 		}
+		@include media-breakpoint-between(xlg, xl){
+			@include roww(18px);
+			--bs-gutter-y: 18px;
+		}
+
 	}
 	&__box{
 		min-height: #{'max(100%, 248px)'};
@@ -26,10 +31,18 @@
 	&__b-row{
 		@include roww(24px);
 		--bs-gutter-y: 24px;
+
+		@include media-breakpoint-between(xlg, xl){
+			@include roww(18px);
+			--bs-gutter-y: 18px;
+		}
 	}
 	&__title{
 		//font-weight: 500;
 		font-size: 20px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 18px;
+		}
 		line-height: 1.5;
 	}
 	&__img{
@@ -90,17 +103,30 @@
 
 	&__compil-row{
 		@include roww(6px);
+		@include media-breakpoint-between(xlg, xl){
+			padding-top: 10px;
+		}
 	}
 	&__c-title{
 		font-weight: 500;
 		font-size: 20px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 18px;
+		}
+
 		line-height: 1.5;
 		color: $headings-color;
-
 	}
 	&__c-ball{
 		min-width: 30px;
 		height: 30px;
+		font-size: 16px;
+		@include media-breakpoint-between(xlg, xl){
+			min-width: 24px;
+			height: 24px;
+			font-size: 14px;
+		}
+
 		border-radius: 60px;
 
 		background: $orange;
@@ -111,7 +137,6 @@
 		text-align: center;
 
 		font-weight: 500;
-		font-size: 16px;
 		line-height: (19/16);
 
 		color: $white;
@@ -120,6 +145,10 @@
 	&__compil-btn{
 		@extend .btn;
 		@extend .btn-outline-primary;
+
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+		}
 
 		padding: 10px 23px;
 		border-radius: rem(60);
@@ -133,24 +162,38 @@
 	//
 
 	&__alert{
-		background: #FFFFFF;
-		border: 1px solid #E4E7EC;
+		background: $white;
+		border: 1px solid $gray-210;
 		box-sizing: border-box;
 		border-radius: 5px;
 
 		padding: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			padding: 18px;
+		}
 	}
 	&__a-row{
 		@include roww(24px);
 		--bs-gutter-y: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			@include roww(18px);
+			--bs-gutter-y: 18px;
+		}
 	}
 	&__a-sub-row{
 		@include roww(12px);
 		--bs-gutter-y: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			--bs-gutter-y: 18px;
+		}
 	}
 	&__a-img{
 		width: 48px;
 		height: 48px;
+		@include media-breakpoint-between(xlg, xl){
+			width: 36px;
+			height: 36px;
+		}
 
 		display: flex;
 		align-items: center;
@@ -165,7 +208,7 @@
 	}
 	&__a-txt{
 		font-weight: 500;
-		font-size: 15px;
+		//font-size: 15px;
 		line-height: 1.75;
 		color: $headings-color;
 		.bolder{
@@ -185,6 +228,10 @@
 		padding: 10px 23px;
 		border-radius: rem(60);
 
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+		}
+
 		color: $primary!important;
 		&:hover{
 			color: $white!important;
@@ -194,6 +241,10 @@
 		cursor: pointer;
 		width: 24px;
 		height: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			width: 18px;
+			height: 18px;
+		}
 
 		display: flex;
 		align-items: center;
@@ -201,6 +252,9 @@
 
 		.icon{
 			font-size: 24px;
+			@include media-breakpoint-between(xlg, xl){
+				font-size: 18px;
+			}
 			color: $gray-550;
 		}
 	}

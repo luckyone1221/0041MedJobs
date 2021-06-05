@@ -1,12 +1,5 @@
 // start .sCurriculum
 .sCurriculum {
-
-	&__{}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
 	//
 	&__box{
 		position: relative;
@@ -25,6 +18,10 @@
 		@include media-breakpoint-up(xl){
 			padding: 36px;
 		}
+		@include media-breakpoint-between(xlg, xl){
+			padding: 24px;
+		}
+
 		@include media-breakpoint-up(xxl){
 			padding: 47px;
 		}
@@ -47,6 +44,14 @@
 			top: 20px;
 			right: 20px;
 		}
+
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+			.icon{
+				font-size: 18px;
+				margin-right: 8px;
+			}
+		}
 		@include media-breakpoint-up(xl){
 			top: 24px;
 			right: 24px;
@@ -61,7 +66,7 @@
 	&__row{
 		@include roww(0);
 		@include media-breakpoint-up(xl){
-			@include roww(24px);
+			@include roww(36px);
 		}
 		@include media-breakpoint-up(xxl){
 			@include roww(48px);
@@ -78,7 +83,7 @@
 			padding-bottom: 23px;
 		}
 		border-bottom: 1px solid $gray-210;
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(xl){
 			border-bottom: none;
 			border-right: 1px solid $gray-210;
 			margin-bottom: 0;
@@ -126,6 +131,9 @@
 	&__name{
 		font-weight: 500;
 		font-size: 20px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 18px;
+		}
 		line-height: 1.5;
 
 		@include media-breakpoint-up(md){
@@ -173,6 +181,9 @@
 	&__title{
 		font-weight: 500;
 		font-size: 20px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 18px;
+		}
 		line-height: 1.5;
 
 		margin-bottom: 15px;
@@ -181,7 +192,7 @@
 		}
 	}
 	&__descr{
-		font-size: 15px;
+		//font-size: 15px;
 		line-height: 1.6;
 
 		margin-bottom: 34px;
@@ -279,7 +290,12 @@
 	}
 	&__title{
 		font-weight: 500;
+
 		font-size: 20px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 18px;
+		}
+
 		line-height: 1.5;
 		margin-bottom: 16px;
 	}
@@ -496,6 +512,10 @@
 	&__h-title{
     font-weight: 500;
     font-size: 20px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 18px;
+		}
+
     line-height: 1.5;
 	}
 	//.edit-btn
@@ -554,6 +574,10 @@
 		padding: 5px 11px;
 
 		font-size: 15px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+		}
+
 		line-height: (18/15);
 		color: $headings-color;
 		font-family: $mono;
@@ -655,6 +679,10 @@
 		pointer-events: none;
 
 		font-size: 15px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+		}
+
 		line-height: (18/15);
 		color: $headings-color;
 		font-family: $mono;
@@ -685,6 +713,10 @@
 		padding: 5px 11px;
 
 		font-size: 15px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+		}
+
 		line-height: (18/15);
 		color: $headings-color;
 		font-family: $mono;

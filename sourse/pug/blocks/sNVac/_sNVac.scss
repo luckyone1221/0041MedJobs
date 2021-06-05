@@ -19,6 +19,9 @@
 		@include media-breakpoint-up(md){
 			padding: 24px;
 		}
+		@include media-breakpoint-between(xlg, xl){
+			padding: 18px;
+		}
 		@include media-breakpoint-up(xl){
 			padding: 24px 24px 20px;
 		}
@@ -35,6 +38,11 @@
 	&__main-row{
 		--col-mb: 24px;
 		@include roww(24px);
+
+		@include media-breakpoint-between(xlg, xl){
+			--col-mb: 18px;
+			@include roww(18px);
+		}
 	}
 	&__data-row{
 		@include roww(24px);
@@ -80,10 +88,11 @@
 		--col-mb: 6px;
 	}
 	&__company{
+		display: inline-block;
 		@extend .primary-link;
 	}
 	&__city{
-		font-size: 15px;
+		//font-size: 15px;
 		line-height: 1.5;
 		color: $gray-600;
 	}
@@ -102,6 +111,10 @@
 
 		border-radius: 50px;
 		font-size: 15px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+		}
+
 		line-height: (18/15);
 		padding: 10px 24px;
 		color: $headings-color;
@@ -115,11 +128,19 @@
 
 		width: 40px;
 		height: 40px;
+		@include media-breakpoint-between(xlg, xl){
+			width: 36px;
+			height: 36px;
+		}
+
 		border: 1px solid $gray-210;
 		border-radius: 50%;
 
 		.icon{
 			color: $warning;
+			@include media-breakpoint-between(xlg, xl){
+				font-size: 18px;
+			}
 			font-size: 20px;
 		}
 	}
@@ -156,13 +177,20 @@
 		animation: top-bot 2s linear infinite;
 	}
 	&__e-txt{
-		font-size: 15px;
 		line-height: 1.5;
+
 		margin-bottom: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			margin-bottom: 18px;
+		}
 	}
 	&__e-btn{
 		@extend .btn-light-default;
 		font-weight: 500;
+
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 13px;
+		}
 	}
 
 	&--compilation{

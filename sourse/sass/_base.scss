@@ -964,8 +964,12 @@ h5{
 .mvp-page{
 	//new default css
 	font-family: $mono;
-	font-size: 15px;
 	line-height: (18/15);
+
+	@include media-breakpoint-between(xlg, xl){
+		font-size: 13px;
+	}
+	font-size: 15px;
 	color: $headings-color;
 
 	//.container,

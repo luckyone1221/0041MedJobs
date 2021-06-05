@@ -56,6 +56,10 @@
 	&__title{
 		font-weight: 600;
 		font-size: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 18px;
+		}
+
 		line-height: (29/24);
 		margin-bottom: 0;
 	}
@@ -132,6 +136,9 @@
 			--pd-col-w: calc(100% - 147px);
 			--i-title-w: 209px;
 		}
+		@include media-breakpoint-between(xlg,xl){
+			--i-title-w: 180px;
+		}
 		@include media-breakpoint-up(base){
 			--pd-col-w: 733px;
 			--i-title-w: 242px;
@@ -164,6 +171,9 @@
 				margin-bottom: 34px;
 				@include media-breakpoint-up(md){
 					margin-bottom: 38px;
+				}
+				@include media-breakpoint-between(xlg, xl){
+					margin-bottom: 24px;
 				}
 				@include media-breakpoint-up(xl){
 					margin-bottom: 47px;
@@ -245,6 +255,9 @@
 			}
 			&__input-wrap{
 				margin-bottom: 24px;
+				@include media-breakpoint-between(xlg, xl){
+					margin-bottom: 18px;
+				}
 
 				&--no-lab, label{
 					@include media-breakpoint-up(md){
@@ -261,6 +274,9 @@
 					width: calc(100% -  var(--i-title-w, 200px));
 				}
 				font-size: 15px;
+				@include media-breakpoint-between(xlg, xl){
+					font-size: 13px;
+				}
 
 				padding: 10px;
 				border-radius: 5px;
@@ -268,6 +284,9 @@
 			&__select{
 				padding: 9px 25px 9px 10px;
 				font-size: 15px;
+				@include media-breakpoint-between(xlg, xl){
+					font-size: 13px;
+				}
 				background-position-x: calc(100% - 10px);
 			}
 			&__input-title{
@@ -331,7 +350,11 @@
 				@extend .btn-default;
 				padding: 10.5px 20px;
 				border-radius: 50px;
+
 				font-size: 15px;
+				@include media-breakpoint-between(xlg, xl){
+					font-size: 13px;
+				}
 				line-height: (18/15);
 
 				&.muted{
@@ -427,20 +450,29 @@
 
 				width: 40px;
 				height: 40px;
+				margin-right: 12px;
+				@include media-breakpoint-between(xlg, xl){
+					width: 36px;
+					height: 36px;
+					margin-right: 10px;
+				}
+
 				border-radius: 5px;
 				background-color: $light;
-				margin-right: 12px;
 
 				.icon{
 					font-size: 24px;
+					@include media-breakpoint-between(xlg, xl){
+						font-size: 18px;
+					}
+
 					&.icon-soc-tw{
 						font-size: 20px;
+						@include media-breakpoint-between(xlg, xl){
+							font-size: 16px;
+						}
 					}
 					color: var(--icon-color, #{$gray-550});
-					//width: auto;
-					//height: auto;
-					//max-width: 100%;
-					//max-height: 100%;
 				}
 			}
 			&__s-link{
@@ -465,6 +497,9 @@
 					}
 					.txt{
 						font-size: 15px;
+						@include media-breakpoint-between(xlg, xl){
+							font-size: 13px;
+						}
 					}
 				}
 
@@ -596,7 +631,11 @@
 		.icon{
 			@include mt($smooth);
 			color: var(--icon-col, #{$gray-550});
+
 			font-size: 24px;
+			@include media-breakpoint-between(xlg, xl){
+				font-size: 18px;
+			}
 		}
 	}
 	&__txt{

@@ -51,6 +51,10 @@
 
 		padding: 9px 38px;
 		border-radius: 50px;
+
+		@include media-breakpoint-between(xlg, xl){
+			font-size: 14px;
+		}
 	}
 	&__search-btn{
 		@extend .btn;

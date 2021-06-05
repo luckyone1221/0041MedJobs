@@ -3,23 +3,39 @@
 	&__{}
 	&__{}
 	&__top-row{
-		--bs-gutter-y: #{24px};
+		--bs-gutter-y: 24px;
 		@include roww(24px);
-
 		padding-bottom: 24px;
+
+		@include media-breakpoint-between(xlg, xl){
+			--bs-gutter-y: 18px;
+			@include roww(18px);
+			padding-bottom: 18px;
+		}
 	}
 	&__edit-btn{
 		color: $gray-600;
 		.icon{
-			font-size: 24px;
 			@include mt();
+
+			font-size: 24px;
 			margin-right: 15px;
+			@include media-breakpoint-between(xlg, xl){
+				font-size: 18px;
+				margin-right: 12px;
+			}
 		}
 
 		span{
 			font-weight: 500;
 		}
 	}
+
+	//.custom-switch{
+	//	@include media-breakpoint-between(xlg, xl){
+	//		font-size: 13px;
+	//	}
+	//}
 
 	.c-tabs{
 		&__caption{
@@ -32,8 +48,8 @@
 			justify-content: center;
 			height: rem(60);
 
-			font-size: 15px;
-			line-height: 18px;
+			//font-size: 15px;
+			//line-height: 18/15;
 
 			background-color: $white;
 			&:hover{
@@ -114,6 +130,10 @@
 			.icon{
 				@include mt();
 				font-size: 24px;
+				@include media-breakpoint-between(xlg, xl){
+					font-size: 18px;
+				}
+
 				margin-right: 14px;
 			}
 
@@ -159,8 +179,8 @@
 			}
 
 			@include media-breakpoint-between(xlg, xl){
-				@include roww(20px);
-				--bs-gutter-y: 20px;
+				@include roww(18px);
+				--bs-gutter-y: 18px;
 			}
 		}
 	}
@@ -206,7 +226,7 @@
 		}
 	}
 	.txt{
-		font-size: 15px;
+		//font-size: 15px;
 		line-height: (18/15);
 		color: $headings-color;
 	}
@@ -247,13 +267,11 @@
 		--card-x-padd: 24px;
 	}
 	@include media-breakpoint-between(xlg,xl){
-		--card-x-padd: 16px;
+		--card-x-padd: 18px;
 	}
 
 	&__head{
-		padding: 19px var(--card-x-padd, 24px);
-
-
+		padding: 18px var(--card-x-padd, 24px);
 		border-bottom: 1px solid $gray-210;
 	}
 	&__h-row{
@@ -280,13 +298,17 @@
 	&__h-sub-row{}
 	&__percents{
 		font-weight: 500;
-		font-size: 15px;
+		//font-size: 15px;
 		line-height: (18/15);
 		color: $headings-color;
 	}
 	&__batery{
 		width: 24px;
 		height: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			width: 18px;
+			height: 18px;
+		}
 
 		display: flex;
 		align-items: center;
@@ -325,6 +347,7 @@
 	&__content{
 		flex-grow: 1;
 		padding: 24px var(--card-x-padd, 24px) 30px var(--card-x-padd, 24px);
+
 		@include media-breakpoint-between(xlg,xl){
 			padding: 18px var(--card-x-padd, 24px) 24px var(--card-x-padd, 24px);
 		}
@@ -332,10 +355,12 @@
 	&__title{
 		font-weight: 500;
 		font-size: 20px;
+
 		@include media-breakpoint-between(xlg,xl){
 			font-size: 18px;
 			margin-bottom: 10px;
 		}
+
 		line-height: 1.5;
 		color: $cyan;
 		margin-bottom: 6px;
@@ -343,8 +368,13 @@
 	&__salary{
 		font-weight: 500;
 		font-size: 20px;
-		line-height: 1.5;
 		margin-bottom: 18px;
+		@include media-breakpoint-between(xlg,xl){
+			font-size: 16px;
+			margin-bottom: 16px;
+		}
+
+		line-height: 1.5;
 	}
 	&__logo-row{
 		@include roww(12px);
@@ -379,15 +409,15 @@
 		line-height: 1.75;
 		margin-bottom: 6px;
 
-		font-size: 15px;
-		@include media-breakpoint-between(xlg,xl){
-			font-size: 14px;
-		}
+		//font-size: 15px;
+		//@include media-breakpoint-between(xlg,xl){
+		//	font-size: 13px;
+		//}
 	}
 	&__detail{
 		display: inline-block;
 		font-weight: 500;
-		font-size: 15px;
+		//font-size: 15px;
 		line-height: 1.75;
 
 		@extend .primary-link;
