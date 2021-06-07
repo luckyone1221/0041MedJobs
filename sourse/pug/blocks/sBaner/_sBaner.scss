@@ -159,6 +159,7 @@
 			}
 
 			select{
+				border-color: $gary-110!important;
 				border-radius: 5px 0 0 5px;
 				position: relative;
 
@@ -181,6 +182,8 @@
 			z-index: 1;
 		}
 		&__input{
+			border-color: $gary-110!important;
+
 			padding: 19px 18px;
 			border-radius: 0 5px 5px 0;
 			@include media-breakpoint-up(md){

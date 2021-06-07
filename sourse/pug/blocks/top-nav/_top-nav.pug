@@ -137,7 +137,7 @@ mixin top-nav4()
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				.col-auto.d-none.d-xl-block
 					+e.colooker-dd-cont
-						+e.c-dd-btn Соискатель
+						+e.c-dd-btn.colooker-dd-btn-js Соискатель
 						+colookerDD()
 				.col.d-none.d-xl-block
 					+b.UL.navMenu
@@ -153,7 +153,7 @@ mixin top-nav4()
 						span
 
 mixin colookerDD()
-	+b.colooker-dd
+	+b.colooker-dd--js
 		+e.content
 			+e.box--top
 				+e.item.active(href="#") Соискатель
@@ -191,7 +191,7 @@ mixin top-nav5(data)
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				.col.d-none.d-lg-block
 					+e.colooker-dd-cont
-						+e.c-dd-btn Соискатель
+						+e.c-dd-btn.colooker-dd-btn-js Соискатель
 						+colookerDD()
 				//-.col.d-none.d-xl-block
 					+b.UL.navMenu

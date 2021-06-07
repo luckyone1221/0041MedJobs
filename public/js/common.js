@@ -760,8 +760,29 @@ function eventHandler() {
 	$('.sVacPage-like-btn-js').click(function () {
 		event.preventDefault();
 		$(this).toggleClass('active');
-	}); //todo New
+	}); //
+	//
+
+	$('.colooker-dd-btn-js').click(function () {
+		$(this).toggleClass('active');
+		$('.colooker-dd--js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //
+
+	if (document.querySelector('.colooker-dd-btn-js')) {
+		document.addEventListener('click', function () {
+			if (!event.target.closest('.colooker-dd-btn-js') && !event.target.closest('.colooker-dd--js')) {
+				$('.colooker-dd-btn-js').removeClass('active');
+				$('.colooker-dd--js').slideUp(function () {
+					$(this).toggleClass('active');
+				});
+			}
+		});
+	} //
+	//todo New
 	//2 kill ui kit
+
 }
 
 ;

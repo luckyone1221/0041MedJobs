@@ -46,6 +46,7 @@
 		}
 	}
 	&__c-dd-btn{
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		font-size: 16px;
@@ -53,6 +54,8 @@
 		color: $headings-color;
 
 		&:after{
+			@include mt();
+			transform: var(--arrow-tf, rotateX(0deg));
 			content: '';
 			width: 10px;
 			height: 10px;
@@ -64,7 +67,13 @@
 			background-position: center;
 			background-size: contain;
 		}
+
+		&.active{
+			--arrow-tf: rotateX(180deg);
+		}
 	}
+
+
 	&__{}
 	//5
 	&--alt5{
@@ -546,11 +555,17 @@
 }
 
 .colooker-dd{
-	@include mt();
-	transform-origin: top center;
-	transform: scaleY(var(--c-dd-scale, 0));
+	//@include mt();
+	//transform-origin: top center;
+	//transform: scaleY(var(--c-dd-scale, 0));
+
+	display: none;
+	&.active{
+		display: block;
+	}
 
 	position: absolute;
+	z-index: 10;
 	top: 100%;
 	left: 0;
 	width: auto;
