@@ -141,8 +141,8 @@ mixin sProfileN(data)
 				.col-xlg-auto.d-none.d-xlg-block
 					+asideMenu()
 	// end sProfileN
-mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], keyClass='default-select-js')
-	+b.custom-select
+mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], keyClass='default-select-js', addContClasses)
+	+b.custom-select(class=addContClasses)
 		select(name=selectName class=keyClass)
 			if block
 				block

@@ -72,6 +72,10 @@
       margin: 0 0 0 85px;
     }
 
+    @include media-breakpoint-between(xl, xxl){
+      padding: 30px 15px 40px;
+    }
+
     display: flex;
     flex-direction: column;
   }
@@ -134,7 +138,7 @@
 
       &.reuire{
         &:after{
-          content: '*';
+          //content: '*';
           font-size: 18px;
           color: $red2;
           margin-left: 5px;
@@ -149,6 +153,11 @@
     }
     &__input{
       padding: 12.5px 60px 12.5px 20px;
+
+      box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+      &:focus{
+        box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+      }
     }
     &__fc-row{
       @extend .row-default;
@@ -158,9 +167,11 @@
       }
     }
     &__login-btn{
-      @extend .btn-default;
+      //@extend .btn-default;
+      @extend .green-btn;
       min-width: 170px;
       padding: 14px 20px;
+
     }
     &__muted-btn{
       @extend .btn;
@@ -171,7 +182,10 @@
       line-height: 1.25;
       min-width: 170px;
       padding: 14px 20px;
-      color: $secondary;
+
+      &.disabled{
+        color: $secondary;
+      }
     }
     &__forget-link{
       font-weight: 600;
@@ -182,6 +196,25 @@
     &__select{
       padding: 13px 40px 13px 12px;
     }
+
+    .custom-select{
+      min-width: 90px;
+      //width: 100%;
+
+      .select2-selection{
+        --select-h: 48px;
+        border-color: $gary-110!important;
+      }
+      .select2.select2-container.select2-container--default{
+        height: 48px!important;
+      }
+      .select2-selection__rendered{
+        display: flex!important;
+        align-items: center!important;
+        --rendered-fs: 14px;
+      }
+    }
+
     &__policy{
       @include roww(12px);
     }
@@ -206,7 +239,8 @@
     border-top: 1px solid $gary-110;
   }
   &__reg-btn{
-    @extend .btn-default-outline;
+    //@extend .btn-default-outline;
+    @extend .green-outline-btn;
     width: 100%;
     min-height: 0;
     padding: 14px 20px;

@@ -4,8 +4,15 @@
 		<meta charset="utf-8">
 		<title>02-search</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.gstatic.com">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			window.addEventListener('resize', () => {
+				this.innerWidth > 570
+								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			}, {passive: true});
+		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
@@ -43,11 +50,13 @@
 							</div>
 							<div class="col d-none d-lg-block">
 								<div class="top-nav__colooker-dd-cont">
-									<div class="top-nav__c-dd-btn">Соискатель
+									<div class="top-nav__c-dd-btn colooker-dd-btn-js">Соискатель
 									</div>
-									<div class="colooker-dd">
+									<div class="colooker-dd colooker-dd--js">
 										<div class="colooker-dd__content">
-											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											</div>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">Работодатель</a>
 											</div>
 											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
 											</div>
@@ -78,19 +87,19 @@
 			<!-- start sSearch-->
 			<section class="sSearch section" id="sSearch">
 				<div class="container">
-					<div class="inp-str">
+					<div class="inp-str inp-str--js">
 						<div class="form-wrap">
 							<form>
 								<div class="form-wrap__select">
-									<select class="form-control form-select">
-										<option class="d-none" selected="selected" disabled="disabled">Организации</option>
-										<option>option 1</option>
-										<option>option 2</option>
-										<option>option 3</option>
-									</select>
+									<div class="custom-select">
+										<select class="main-page-select2-js" name="type">
+											<option value="Организации">Организации</option>
+											<option value="Самара2">Самара2</option>
+											<option value="Самара2">Самара2</option>
+										</select>
+									</div>
 								</div>
-								<!--+input(inpPh, 'text', undefined, 'search')-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название организации" name="searc"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control inp-str-input-js" type="text" placeholder="Введите название организации" name="searc"/>
 									<button class="form-wrap__btn d-none d-md-inline-block" type="submit"><span>Найти</span>
 									</button>
 								</div>
@@ -122,14 +131,14 @@
 								</div>
 								<div class="filter filter--js">
 									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">Регион:
+										<div class="filter__head dd-head-js">Регион
 										</div>
 										<div class="filter__content dd-content-js active">
-											<div class="filter__select">
-												<select class="form-select form-control">
-													<option>Ленинградская область</option>
-													<option>Ленинградская область2</option>
-													<option>Ленинградская область3</option>
+											<div class="custom-select">
+												<select class="main-page-select2-js" name="name">
+													<option value="Ленинградская область">Ленинградская область</option>
+													<option value="Самара2">Самара2</option>
+													<option value="Самара2">Самара2</option>
 												</select>
 											</div>
 										</div>
@@ -138,11 +147,11 @@
 										<div class="filter__head dd-head-js">Город
 										</div>
 										<div class="filter__content dd-content-js active">
-											<div class="filter__select">
-												<select class="form-select form-control">
-													<option>Санкт-Петербург</option>
-													<option>Львов</option>
-													<option>Киев</option>
+											<div class="custom-select">
+												<select class="main-page-select2-js" name="name">
+													<option value="Санкт-Петербург">Санкт-Петербург</option>
+													<option value="Львов">Львов</option>
+													<option value="Львов2">Львов2</option>
 												</select>
 											</div>
 										</div>
@@ -212,9 +221,6 @@
 												</label>
 												<label class="custom-chb">
 													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Другое</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Начало карьеры. &quot;мало опыта&quot;</span>
 												</label>
 											</div>
 										</div>
@@ -371,11 +377,19 @@
 									<div class="pugin-row__select-cont">
 										<div class="pugin-row__sel-title">Показать по:
 										</div>
-										<select class="pugin-row__select form-control form-select">
-											<option>12</option>
-											<option>24</option>
-											<option>36</option>
-										</select>
+										<div class="custom-select">
+											<select class="main-page-select2-js" name="name">
+												<option value="12">12</option>
+												<option value="24">24</option>
+												<option value="36">36</option>
+											</select>
+										</div>
+										<!--+e.SELECT.select.form-control.form-select
+										option 12
+										option 24
+										option 36
+										
+										-->
 									</div>
 								</div>
 							</div>

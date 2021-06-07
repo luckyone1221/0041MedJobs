@@ -205,23 +205,22 @@
 		&:hover{
 			--p-cab-dd-scale: 1;
 		}
+
+		position: relative;
+		&:hover{
+			//--dd-scale: 1;
+		}
 	}
 	&__lc-row{
 		@include roww(12px);
 		cursor: pointer;
 
-		--chevron-tf: rotateX(0deg);
 		--dd-scale: 0;
-		
 		position: relative;
-	}
-	&__lc-cont{
-		position: relative;
-		&:hover{
-			--chevron-tf: rotateX(180deg);
-			//--dd-scale: 1;
+
+		&.active{
+			--chevron-tf: 180deg;
 		}
-		
 	}
 	&__lc-txt{
 
@@ -240,9 +239,10 @@
 		}
 	}
 	&__lc-icon{
+		@include mt($smooth);
+		transform: rotateX(var(--chevron-tf, 0deg));
+
 		.icon{
-			@include mt($smooth);
-			transform: var(--chevron-tf, rotateX(0deg));
 			font-size: 7px;
 			color: $warning;
 		}

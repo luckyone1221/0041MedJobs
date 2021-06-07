@@ -193,24 +193,32 @@
 	}
 
 	//p-cab
+	&__p-wrap{
+		position: relative;
+	}
 	&__p-cab{
 		cursor: pointer;
 		display: flex;
 		align-items: center;
+		//
+		//--p-cab-dd-scale: 0;
+		//&:hover{
+		//	--p-cab-dd-scale: 1;
+		//}
+		&.active{
+			--chevron-tf: 180deg;
+		}
+	}
+	&__pc-icon{
+		@include mt($smooth);
+		transform: rotateX(var(--chevron-tf, 0deg));
 
 		.icon{
 			color: $warning;
 			font-size: 8px;
 		}
-
-		position: relative;
-
-		//
-		--p-cab-dd-scale: 0;
-		&:hover{
-			--p-cab-dd-scale: 1;
-		}
 	}
+
 	&__pc-img{
 		width: 30px;
 		height: 30px;
@@ -491,7 +499,13 @@
 	font-family: $mono;
 	@include mt();
 	transform-origin: top center;
-	transform: scaleY(var(--p-cab-dd-scale, 0));
+	//transform: scaleY(var(--p-cab-dd-scale, 0));
+
+	transform: scaleY(0);
+	&.active{
+		transform: scaleY(1);
+	}
+
 
 	position: absolute;
 	right: 0;
@@ -555,13 +569,13 @@
 }
 
 .colooker-dd{
-	//@include mt();
-	//transform-origin: top center;
+	@include mt();
+	transform-origin: top center;
 	//transform: scaleY(var(--c-dd-scale, 0));
 
-	display: none;
+	transform: scaleY(0);
 	&.active{
-		display: block;
+		transform: scaleY(1);
 	}
 
 	position: absolute;
@@ -581,8 +595,9 @@
 	}
 	&__box{
 		padding: 10px 0;
-		&--top{
-			border-bottom: 1px solid $gray-220;
+		border-bottom: 1px solid $gray-220;
+		&:last-child{
+			border-bottom: none;
 		}
 	}
 	&__item{

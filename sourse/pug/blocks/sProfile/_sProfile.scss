@@ -147,7 +147,7 @@
 			align-items: center;
 			justify-content: center;
 
-			color: $secondary;
+			color: $gray-120;
 			&:hover{
 				color: $secondary;
 			}
@@ -439,11 +439,11 @@
 			font-size: 24px;
 		}
 
-		color: $secondary;
+		color: $gray-120;
 		&:hover{
-			color: $secondary;
+			color: $gray-120;
 		}
-		&.acitve{
+		&.active{
 			color: $warning;
 		}
 

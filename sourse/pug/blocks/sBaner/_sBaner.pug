@@ -21,7 +21,8 @@ mixin sBaner(data)
 						.col
 							+e.sub-row.row.sBaner-sub-row-js
 								.col-auto
-									+e.select
+									+customSlect('type', ['Вакансии','Самара2','Самара2'], 'main-page-select2-js')
+									//-+e.select
 										select.form-control.form-select
 											//-option(selected disabled class="d-none") Вакансии
 											option Вакансии

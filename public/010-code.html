@@ -4,8 +4,15 @@
 		<meta charset="utf-8">
 		<title>010-restore</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.gstatic.com">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			window.addEventListener('resize', () => {
+				this.innerWidth > 570
+								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			}, {passive: true});
+		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
@@ -46,12 +53,12 @@
 													</span><a href="#">Изменить e-mail</a>
 											</div>
 											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title reuire">Код:</span><input class="form-wrap__input form-control" type="text" required="required" name="code"/>
+												<label><span class="form-wrap__input-title reuire">Код</span><input class="form-wrap__input form-control" type="text" required="required" name="code"/>
 												</label>
 											</div>
 											<div class="form-wrap__fc-row row align-items-center pb-0">
 												<div class="col-auto">
-													<button class="form-wrap__muted-btn" type="submit">Войти
+													<button class="form-wrap__muted-btn disabled" type="submit">Войти
 													</button>
 												</div>
 												<div class="col-auto"><a class="form-wrap__forget-link" href="#">Отправить код повторно</a>

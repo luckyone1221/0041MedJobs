@@ -1209,26 +1209,26 @@ h5{
 	&:hover{
 		color: $white!important;
 		background: $green3!important;
-
-		//&:before{
-		//	opacity: 1;
-		//}
 	}
-
-	//&:before{
-	//	@include mt();
-	//	opacity: 0;
-	//	content: '';
-	//	position: absolute;
-	//	width: 100%;
-	//	height: 100%;
-	//	border-radius: inherit;
-	//	top: 0;
-	//	left: 0;
-	//	z-index: -1;
-	//	background: linear-gradient(86.99deg, #2AED80 0.21%, #10B7F5 99.92%);
-	//}
 }
+
+.green-outline-btn{
+	@extend .btn;
+	@extend .btn-outline-success;
+	border-width: 2px!important;
+	font-size: 16px;
+	line-height: 1.25;
+
+	border-color: $green2!important;
+	background-color: transparent!important;
+	color: $headings-color!important;
+	&:hover{
+		color: $white!important;
+		border-color: $green3!important;
+		background-color: $green3!important;
+	}
+}
+
 //
 .btn-outline-primary{
 	border-width: 2px;

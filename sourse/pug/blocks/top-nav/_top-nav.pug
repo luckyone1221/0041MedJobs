@@ -52,11 +52,14 @@ mixin top-nav()
 						+icon('location')
 						+e.loc-txt Санкт-Петербург
 				.col-auto.d-none.d-lg-block
-					+e.p-cab
-						+e.pc-img
-							img(loading="lazy" src="img/svg/user-stab.svg" alt="")
-						+e.pc-txt Личный кабинет
-						+icon('chevron-down')
+					+e.p-wrap.lc-cont-js
+						+e.p-cab.lc-dd-btn-js
+							+e.pc-img
+								img(loading="lazy" src="img/svg/user-stab.svg" alt="")
+							+e.pc-txt.d-none.d-md-block Личный кабинет
+							+e.pc-icon
+								+icon('chevron-down')
+						+pCabDD()
 				.col-auto.d-xl-none
 					+e.burger.burger-js
 						span
@@ -92,21 +95,18 @@ mixin top-nav3()
 				.col
 					+e.logo(href='#')
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
-				//-.col.d-none.d-xl-block
-					+b.UL.navMenu
-						+e.LI.item: +e.A.link.active(href="#") Организации
-						+e.LI.item: +e.A.link(href="#") Вакансии
-						+e.LI.item: +e.A.link(href="#") Профессионалы
 				.col-auto
 					+e.location.link-modal(href='#modal-city') 
 						+icon('location')
 						+e.loc-txt Санкт-Петербург
 				.col-auto
-					+e.p-cab
-						+e.pc-img
-							img(loading="lazy" src="img/svg/user-stab.svg" alt="")
-						+e.pc-txt.d-none.d-md-block Личный кабинет
-						+icon('chevron-down')
+					+e.p-wrap.lc-cont-js
+						+e.p-cab.lc-dd-btn-js
+							+e.pc-img
+								img(loading="lazy" src="img/svg/user-stab.svg" alt="")
+							+e.pc-txt.d-none.d-md-block Личный кабинет
+							+e.pc-icon
+								+icon('chevron-down')
 						+pCabDD()
 				.col-auto.d-none.d-lg-block
 					+e.place-cv(href="#") Разместить резюме
@@ -115,7 +115,7 @@ mixin top-nav3()
 						span
 
 mixin pCabDD()
-	+b.p-cab-dd
+	+b.p-cab-dd.lc-dd--js
 		+e.inner
 			+e.top-txt
 				+e.name Константинопольский К. К.
@@ -157,9 +157,10 @@ mixin colookerDD()
 		+e.content
 			+e.box--top
 				+e.item.active(href="#") Соискатель
-				+e.item(href="#") Работодатель
 				+e.item(href='#') Вакансии
 				+e.item(href='#') Организации
+			+e.box
+				+e.item(href="#") Работодатель
 			+e.box
 				+e.item(href='#') О компании
 				+e.item(href='#') Помощь
@@ -215,16 +216,12 @@ mixin top-nav5(data)
 							+icon('avatar-stab')
 				else
 					.col-auto
-						//-.lc-cont-js
-						.headerAlt__lc-cont
-							//-.lc-dd-btn-js
-							.headerAlt__lc-row.row.align-items-center
-								.col-auto.d-none.d-lg-block
-									.headerAlt__lc-txt Мой кабинет
-								.col-auto
-									.headerAlt__lc-img
-										img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
-								.headerAlt__lc-icon.col-auto
+						+e.p-wrap.lc-cont-js
+							+e.p-cab.lc-dd-btn-js
+								+e.pc-img
+									img(loading="lazy" src="img/svg/user-stab.svg" alt="")
+								+e.pc-txt.d-none.d-md-block Личный кабинет
+								+e.pc-icon
 									+icon('chevron-down')
 							+pCabDD()
 

@@ -24,17 +24,12 @@ mixin sCardsItem(title)
 			+e.btn(href='#') Перейти
 
 mixin inpStrip(selectPh, inpPh)
-	+b.inp-str
+	+b.inp-str--js
 		+form-wrap
 			+e.select
-				select.form-control.form-select
-					option(selected disabled class="d-none")=selectPh
-					option option 1
-					option option 2
-					option option 3
-			//+input(inpPh, 'text', undefined, 'search')
+				+customSlect('type', [selectPh,'Самара2','Самара2'], 'main-page-select2-js')
 			+e.input-wrap.form-group
-				+e.INPUT.input.form-control(type="text" placeholder=inpPh name="searc")
+				+e.INPUT.input.form-control.inp-str-input-js(type="text" placeholder=inpPh name="searc")
 				+e.btn.d-none.d-md-inline-block(type='submit')
 					span Найти
 			+e.btn.d-flex.d-md-none(type='submit')

@@ -21,6 +21,12 @@
 			letter-spacing: -0.5px;
 		}
 	}
+	&__h-row-cont{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
 	&__row{
 		@include roww(12px);
 		--bs-gutter-y: 12px;
@@ -28,6 +34,8 @@
 			@include roww(24px);
 			--bs-gutter-y: 24px;
 		}
+
+		padding-bottom: var(--bs-gutter-y);
 	}
 	&__item{
 		display: flex;
@@ -75,8 +83,28 @@
 
 
 	}
-	&__{}
-	&__{}
+
+	//
+	&__show-hide-cont{}
+	&__show-hide-btn{
+		@extend .green-btn;
+		min-width: 170px;
+
+		span:first-child{
+			display: inline;
+		}
+		span:last-child{
+			display: none;
+		}
+		&.active{
+			span:first-child{
+				display: none;
+			}
+			span:last-child{
+				display: inline;
+			}
+		}
+	}
 	&__{}
 	&__{}
 } // end.sLogoes

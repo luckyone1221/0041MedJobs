@@ -20,25 +20,22 @@ block pagecontent
 			+form-wrap
 				h1 Регистрация
 				+e.input-wrap
-					+e.SPAN.input-title.reuire Тип пользователя:
-					+e.SELECT.select.form-control.form-select
-						option Профессионал
-						option option 1
-						option option 2
+					+e.SPAN.input-title.reuire Тип пользователя
+					+customSlect('name', ['Соискатель','option 1','option 2'], 'main-page-select2-js')
 				+e.input-wrap.form-group
 					label
-						+e.SPAN.input-title.reuire E-mail:
+						+e.SPAN.input-title.reuire E-mail
 						+e.INPUT.input.form-control(type="email" required name="email")
 				+e.input-wrap.form-group.mb-36
 					label
-						+e.SPAN.input-title.reuire Пароль:
+						+e.SPAN.input-title.reuire Пароль
 						+e.inp-cont
 							+e.INPUT.input.form-control(type="password" required name="pass")
 							+e.show-hide-btn.toggle-pass-inp-js
 								+icon('pass-eye')
 				+e.input-wrap.form-group.mb-30
 					label
-						+e.SPAN.input-title.reuire Повторите пароль:
+						+e.SPAN.input-title.reuire Повторите пароль
 						+e.inp-cont
 							+e.INPUT.input.form-control(type="password" required name="pass-repeat")
 							+e.show-hide-btn.toggle-pass-inp-js

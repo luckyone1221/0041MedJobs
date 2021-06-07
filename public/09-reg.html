@@ -4,8 +4,15 @@
 		<meta charset="utf-8">
 		<title>09-reg</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.gstatic.com">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			window.addEventListener('resize', () => {
+				this.innerWidth > 570
+								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			}, {passive: true});
+		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
@@ -41,19 +48,21 @@
 									<div class="form-wrap">
 										<form>
 											<h1>Регистрация</h1>
-											<div class="form-wrap__input-wrap"><span class="form-wrap__input-title reuire">Тип пользователя:</span>
-												<select class="form-wrap__select form-control form-select">
-													<option>Профессионал</option>
-													<option>option 1</option>
-													<option>option 2</option>
-												</select>
+											<div class="form-wrap__input-wrap"><span class="form-wrap__input-title reuire">Тип пользователя</span>
+												<div class="custom-select">
+													<select class="main-page-select2-js" name="name">
+														<option value="Соискатель">Соискатель</option>
+														<option value="option 1">option 1</option>
+														<option value="option 2">option 2</option>
+													</select>
+												</div>
 											</div>
 											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title reuire">E-mail:</span><input class="form-wrap__input form-control" type="email" required="required" name="email"/>
+												<label><span class="form-wrap__input-title reuire">E-mail</span><input class="form-wrap__input form-control" type="email" required="required" name="email"/>
 												</label>
 											</div>
 											<div class="form-wrap__input-wrap form-group mb-36">
-												<label><span class="form-wrap__input-title reuire">Пароль:</span>
+												<label><span class="form-wrap__input-title reuire">Пароль</span>
 													<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass"/>
 														<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
 															<svg class="icon icon-pass-eye ">
@@ -64,7 +73,7 @@
 												</label>
 											</div>
 											<div class="form-wrap__input-wrap form-group mb-30">
-												<label><span class="form-wrap__input-title reuire">Повторите пароль:</span>
+												<label><span class="form-wrap__input-title reuire">Повторите пароль</span>
 													<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass-repeat"/>
 														<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
 															<svg class="icon icon-pass-eye ">

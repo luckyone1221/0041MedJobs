@@ -1,5 +1,6 @@
 extends layout/main.pug
 
+
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sCards/_sCards.pug
@@ -8,16 +9,11 @@ include ../blocks/sSearch/_sSearch.pug
 include ../blocks/sDescr/_sDescr.pug
 include ../blocks/profesionals/_profesionals.pug
 include ../blocks/logPage/_logPage.pug
-include ../blocks/sAccProfile/_sAccProfile.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '014-employer'
+	- let  title= '08-authorization'
 	title= title
 block pagecontent
-	+mob-mnu4() 
-	+header()
-		+top-nav4()
-	+sAccProfileEmployer()
-	+footerAlt()
+	+logPage()

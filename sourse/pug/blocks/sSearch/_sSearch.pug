@@ -118,14 +118,16 @@ mixin sortSelItem(chosenItem, bootClasses)
 
 mixin filter()
 	+b.filter--js
-		+filterItem('Регион:', 'active')
-			+e.select
+		+filterItem('Регион', 'active')
+			+customSlect('name', ['Ленинградская область','option2','option3'], 'main-page-select2-js')
+			//+e.select
 				select.form-select.form-control
 					option Ленинградская область
 					option Ленинградская область2
 					option Ленинградская область3
 		+filterItem('Город', 'active')
-			+e.select
+			+customSlect('name', ['Санкт-Петербург','option2','option3'], 'main-page-select2-js')
+			//-+e.select
 				select.form-select.form-control
 					option Санкт-Петербург
 					option Львов
@@ -144,42 +146,26 @@ mixin filter()
 
 mixin filterSearch()
 	+b.filter--js
-		+filterItem('Регион:', 'active')
-			+e.select
-				select.form-select.form-control
-					option Ленинградская область
-					option Ленинградская область2
-					option Ленинградская область3
+		+filterItem('Регион', 'active')
+			+customSlect('name', ['Ленинградская область','Самара2','Самара2'], 'main-page-select2-js')
 		+filterItem('Город', 'active')
-			+e.select
-				select.form-select.form-control
-					option Санкт-Петербург
-					option Львов
-					option Киев
+			+customSlect('name', ['Санкт-Петербург','Львов','Львов2'], 'main-page-select2-js')
 		+filterItem('Открытые организации')
 			+customChbGroup(['Показывать только с открытыми вакансиями'])
 		+filterItem('Форма собственности')
 			+customChbGroup(['Частная', 'Государственная'])
 		+filterItem('Проффесиональное направление')
-			+customChbGroup(['Медицинские организации', 'Лаборатории', 'Клинические испытания', 'Лебечное дело (врачи-специалисты)', 'Лицензирование', 'Медициснкое оборудование', 'Санитарно-эпидемиологический надзор', 'Средний и младший медперсонал', 'Товары медицинского назначения', 'Уход за больными', 'Фармацевтика', 'Другое',  'Начало карьеры. "мало опыта"'])
+			+customChbGroup(['Медицинские организации', 'Лаборатории', 'Клинические испытания', 'Лебечное дело (врачи-специалисты)', 'Лицензирование', 'Медициснкое оборудование', 'Санитарно-эпидемиологический надзор', 'Средний и младший медперсонал', 'Товары медицинского назначения', 'Уход за больными', 'Фармацевтика', 'Другое'])
 		//-+filterItem('')
 			+customChbGroup(['', '', '', '', ''])
 		+e.BUTTON.show-btn(type="submit") Показать 938
 
 mixin filterVacancy()
 	+b.filter--js.--vac
-		+filterItem('Регион:')
-			+e.select
-				select.form-select.form-control
-					option Ленинградская область
-					option Ленинградская область2
-					option Ленинградская область3
+		+filterItem('Регион')
+			+customSlect('name', ['Ленинградская область','Самара2','Самара2'], 'main-page-select2-js')
 		+filterItem('Город')
-			+e.select
-				select.form-select.form-control
-					option Санкт-Петербург
-					option Львов
-					option Киев
+			+customSlect('name', ['Санкт-Петербург','Самара2','Самара2'], 'main-page-select2-js')
 		//-new
 		+filterItem('Уровень дохода, руб')
 			+b.two-inps
@@ -206,18 +192,10 @@ mixin filterVacancy()
 
 mixin filterProf()
 	+b.filter--js
-		+filterItem('Регион:', 'active')
-			+e.select
-				select.form-select.form-control
-					option Ленинградская область
-					option Ленинградская область2
-					option Ленинградская область3
-		+filterItem('Город', 'active')
-			+e.select
-				select.form-select.form-control
-					option Санкт-Петербург
-					option Львов
-					option Киев
+		+filterItem('Регион')
+			+customSlect('name', ['Ленинградская область', 'Самара2', 'Самара2'], 'main-page-select2-js')
+		+filterItem('Город')
+			+customSlect('name', ['Санкт-Петербург', 'Самара2', 'Самара2'], 'main-page-select2-js')
 		+filterItem('Опыт работы')
 			+customChbGroup(['от 1 года до 3 лет', 'от 3 до 6 лет', 'более 6 лет', 'без опыта'])
 		+filterItem('Возраст, лет')
@@ -486,7 +464,8 @@ mixin puginRow()
 		.col-auto
 			+e.select-cont
 				+e.sel-title Показать по:
-				+e.SELECT.select.form-control.form-select
+				+customSlect('name', ['12','24','36'], 'main-page-select2-js')
+				//+e.SELECT.select.form-control.form-select
 					option 12
 					option 24
 					option 36

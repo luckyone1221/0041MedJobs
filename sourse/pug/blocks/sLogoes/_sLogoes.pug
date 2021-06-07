@@ -14,8 +14,16 @@ mixin sLogoes(data)
 					br.d-xl-none
 					| медицинских организаций
 			+e.row.row
-				-for(var i = 1; i < 25; i++)
+				-for(var i = 1; i < 13; i++)
 					+sLogoesItem(i)
+			+e.h-row-cont.sLogoes-row-js
+				+e.row--hidden.row.hidden-row-js
+					-for (var i = 13; i < 25; i++)
+						+sLogoesItem(i)
+			+e.show-hide-cont.text-center.pt-18.pt-sm-24
+				+e.show-hide-btn.sLogoes-btn-js
+					span Показать еще
+					span Скрыть
 	// end sLogoes
 
 mixin sLogoesItem(imgNum)

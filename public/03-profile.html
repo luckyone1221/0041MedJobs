@@ -4,8 +4,15 @@
 		<meta charset="utf-8">
 		<title>03-profile</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.gstatic.com">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			window.addEventListener('resize', () => {
+				this.innerWidth > 570
+								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			}, {passive: true});
+		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
@@ -43,11 +50,13 @@
 							</div>
 							<div class="col d-none d-lg-block">
 								<div class="top-nav__colooker-dd-cont">
-									<div class="top-nav__c-dd-btn">Соискатель
+									<div class="top-nav__c-dd-btn colooker-dd-btn-js">Соискатель
 									</div>
-									<div class="colooker-dd">
+									<div class="colooker-dd colooker-dd--js">
 										<div class="colooker-dd__content">
-											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Работодатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											</div>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">Работодатель</a>
 											</div>
 											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
 											</div>
@@ -78,19 +87,19 @@
 			<!-- start sProfile-->
 			<section class="sProfile section" id="sProfile">
 				<div class="container">
-					<div class="inp-str">
+					<div class="inp-str inp-str--js">
 						<div class="form-wrap">
 							<form>
 								<div class="form-wrap__select">
-									<select class="form-control form-select">
-										<option class="d-none" selected="selected" disabled="disabled">Организации</option>
-										<option>option 1</option>
-										<option>option 2</option>
-										<option>option 3</option>
-									</select>
+									<div class="custom-select">
+										<select class="main-page-select2-js" name="type">
+											<option value="Организации">Организации</option>
+											<option value="Самара2">Самара2</option>
+											<option value="Самара2">Самара2</option>
+										</select>
+									</div>
 								</div>
-								<!--+input(inpPh, 'text', undefined, 'search')-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название организации" name="searc"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control inp-str-input-js" type="text" placeholder="Введите название организации" name="searc"/>
 									<button class="form-wrap__btn d-none d-md-inline-block" type="submit"><span>Найти</span>
 									</button>
 								</div>
@@ -183,7 +192,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="prof-soc d-xl-none mb-18 mb-md-24">
+							<div class="prof-soc d-xl-none mb-36 mb-md-48">
 								<div class="prof-soc__box">
 									<div class="prof-soc__title">Поделиться
 									</div>
@@ -227,7 +236,9 @@
 									<div class="prof-vac__row row">
 										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
 										</div>
-										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+										<div class="col">
+											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+											</div>
 											<div class="prof-vac__city">г. Санкт-Петербург
 											</div>
 										</div>
@@ -254,7 +265,9 @@
 									<div class="prof-vac__row row">
 										<div class="col-auto"><a class="prof-vac__logo prof-vac__logo--empty" href="#"><img loading="lazy" src="img/svg/company-stab4.svg" alt=""/></a>
 										</div>
-										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+										<div class="col">
+											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+											</div>
 											<div class="prof-vac__city">г. Санкт-Петербург
 											</div>
 										</div>
@@ -281,7 +294,9 @@
 									<div class="prof-vac__row row">
 										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
 										</div>
-										<div class="col"><a class="prof-vac__title" href="#">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург</a>
+										<div class="col">
+											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
+											</div>
 											<div class="prof-vac__city">г. Санкт-Петербург
 											</div>
 										</div>
