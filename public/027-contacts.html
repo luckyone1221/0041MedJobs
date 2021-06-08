@@ -4,14 +4,17 @@
 		<meta charset="utf-8">
 		<title>027-contacts</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=570,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<script>
 			let viewport = document.querySelector("meta[name=viewport]");
-			window.addEventListener('resize', () => {
-				this.innerWidth > 570
-								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-			}, {passive: true});
+			if (navigator.platform.indexOf("iPad") != -1) {
+				window.addEventListener('resize', () => { 
+					this.innerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+						:  viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+				}, { passive: true });
+			}
 		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">

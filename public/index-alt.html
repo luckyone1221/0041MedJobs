@@ -4,14 +4,17 @@
 		<meta charset="utf-8">
 		<title>MEDICJOBS.RU | Подбор вакансий для медицинских сотрудников</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=570,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<script>
 			let viewport = document.querySelector("meta[name=viewport]");
-			window.addEventListener('resize', () => {
-				this.innerWidth > 570
-								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-			}, {passive: true});
+			if (navigator.platform.indexOf("iPad") != -1) {
+				window.addEventListener('resize', () => { 
+					this.innerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+						:  viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+				}, { passive: true });
+			}
 		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -428,156 +431,152 @@
 						</h2>
 					</div>
 					<div class="sLogoes__row row">
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb1"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-1.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb2"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-2.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb3"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-3.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb4"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-4.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb5"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-5.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb6"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-6.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb7"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-7.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb8"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-8.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb9"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-9.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb10"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-10.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb11"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-11.png" alt=""/></div>
 							</label>
 						</div>
-						<div class="col-4 col-md-3 col-xl-2">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
 							<label class="sLogoes__item">
 								<input class="invisible" type="checkbox" name="sLogoesChb12"/>
 								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-12.png" alt=""/></div>
 							</label>
 						</div>
-					</div>
-					<div class="sLogoes__h-row-cont sLogoes-row-js">
-						<div class="sLogoes__row sLogoes__row--hidden row hidden-row-js">
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb13"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-13.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb14"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-14.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb15"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-15.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb16"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-16.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb17"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-17.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb18"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-18.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb19"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-19.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb20"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-20.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb21"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-21.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb22"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-22.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb23"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-23.png" alt=""/></div>
-								</label>
-							</div>
-							<div class="col-4 col-md-3 col-xl-2">
-								<label class="sLogoes__item">
-									<input class="invisible" type="checkbox" name="sLogoesChb24"/>
-									<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-24.png" alt=""/></div>
-								</label>
-							</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb13"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-13.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb14"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-14.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb15"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-15.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb16"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-16.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb17"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-17.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb18"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-18.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb19"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-19.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb20"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-20.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb21"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-21.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb22"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-22.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb23"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-23.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb24"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-24.png" alt=""/></div>
+							</label>
 						</div>
 					</div>
-					<div class="sLogoes__show-hide-cont text-center pt-18 pt-sm-24">
+					<div class="sLogoes__show-hide-cont text-center pt-18 pt-sm-24 d-md-none">
 						<div class="sLogoes__show-hide-btn sLogoes-btn-js"><span>Показать еще</span><span>Скрыть</span>
 						</div>
 					</div>

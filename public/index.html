@@ -4,14 +4,17 @@
 		<meta charset="utf-8">
 		<title>MEDICJOBS.RU | Подбор вакансий для медицинских сотрудников</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=570,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<script>
 			let viewport = document.querySelector("meta[name=viewport]");
-			window.addEventListener('resize', () => {
-				this.innerWidth > 570
-								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-			}, {passive: true});
+			if (navigator.platform.indexOf("iPad") != -1) {
+				window.addEventListener('resize', () => { 
+					this.innerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+						:  viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+				}, { passive: true });
+			}
 		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -127,7 +130,7 @@
 			<!-- start sCards-->
 			<div class="sCards section" id="sCards">
 				<div class="container">
-					<div class="inp-str">
+					<div class="inp-str inp-str--js">
 						<div class="form-wrap">
 							<form>
 								<div class="form-wrap__select">
@@ -139,8 +142,7 @@
 										</select>
 									</div>
 								</div>
-								<!--+input(inpPh, 'text', undefined, 'search')-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите название организации" name="searc"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control inp-str-input-js" type="text" placeholder="Введите название организации" name="searc"/>
 									<button class="form-wrap__btn d-none d-md-inline-block" type="submit"><span>Найти</span>
 									</button>
 								</div>

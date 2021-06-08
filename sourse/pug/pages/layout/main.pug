@@ -26,16 +26,18 @@ html(lang="ru")
 		//- meta(name="viewport", content="width=device-width, shrink-to-fit=no")
 		//- meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,  shrink-to-fit=no")
 		//-meta(name="viewport", content="width=device-width,initial-scale=1.0")
-		//-meta(content="width=576,  maximum-scale=1.0, user-scalable=no  " name="viewport")
+		meta(content="width=570,  maximum-scale=1.0, user-scalable=no  " name="viewport")
 		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon')
 		<meta name="format-detection" content="telephone=no">
 		script.
 			let viewport = document.querySelector("meta[name=viewport]");
-			window.addEventListener('resize', () => {
-				this.innerWidth > 570
-								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-			}, {passive: true});
+			if (navigator.platform.indexOf("iPad") != -1) {
+				window.addEventListener('resize', () => { 
+					this.innerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+						:  viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+				}, { passive: true });
+			}
 		+allcss()
 	block variables
 	//- style.

@@ -1,20 +1,6 @@
 "use strict";
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -27,7 +13,7 @@ if (isIE11) {
 	$(".s404--borser").removeClass("d-none");
 }
 
-var div = document.createElement('div');
+let div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
 div.style.height = '50px'; // мы должны вставить элемент в документ, иначе размеры будут равны 0
@@ -36,17 +22,18 @@ if (!isIE11) {
 	document.body.append(div);
 }
 
-var scrollWidth = div.offsetWidth - div.clientWidth;
+let scrollWidth = div.offsetWidth - div.clientWidth;
 
 if (!isIE11) {
 	div.remove();
 }
 
-var JSCCommon = {
+const JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-	modalCall: function modalCall() {
+
+	modalCall() {
 		$(".link-modal").fancybox({
 			arrows: false,
 			infobar: false,
@@ -67,10 +54,10 @@ var JSCCommon = {
 
 				}
 			},
-			beforeLoad: function beforeLoad() {
+			beforeLoad: function () {
 				document.querySelector("html").classList.add("fixed");
 			},
-			afterClose: function afterClose() {
+			afterClose: function () {
 				document.querySelector("html").classList.remove("fixed");
 			}
 		});
@@ -78,17 +65,17 @@ var JSCCommon = {
 			$.fancybox.close();
 		});
 		$.fancybox.defaults.backFocus = false;
-		var linkModal = document.querySelectorAll('.link-modal');
+		const linkModal = document.querySelectorAll('.link-modal');
 
 		function addData() {
-			linkModal.forEach(function (element) {
-				element.addEventListener('click', function () {
-					var modal = document.querySelector(element.getAttribute("href"));
-					var data = element.dataset;
+			linkModal.forEach(element => {
+				element.addEventListener('click', () => {
+					let modal = document.querySelector(element.getAttribute("href"));
+					const data = element.dataset;
 
 					function setValue(val, elem) {
 						if (elem && val) {
-							var el = modal.querySelector(elem);
+							const el = modal.querySelector(elem);
 							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
 						}
 					}
@@ -103,18 +90,19 @@ var JSCCommon = {
 
 		if (linkModal) addData();
 	},
-	tabscostume: function tabscostume(tab) {
-		var tabs = {
+
+	tabscostume(tab) {
+		let tabs = {
 			Btn: [].slice.call(document.querySelectorAll(".".concat(tab, "__btn"))),
 			BtnParent: [].slice.call(document.querySelectorAll(".".concat(tab, "__caption"))),
 			Content: [].slice.call(document.querySelectorAll(".".concat(tab, "__content")))
 		};
-		tabs.Btn.forEach(function (element, index) {
-			element.addEventListener('click', function () {
+		tabs.Btn.forEach((element, index) => {
+			element.addEventListener('click', () => {
 				if (!element.classList.contains('active')) {
 					//turn off old
-					var oldActiveEl = element.closest(".".concat(tab)).querySelector(".".concat(tab, "__btn.active"));
-					var oldActiveContent = tabs.Content[index].closest(".".concat(tab)).querySelector(".".concat(tab, "__content.active"));
+					let oldActiveEl = element.closest(".".concat(tab)).querySelector(".".concat(tab, "__btn.active"));
+					let oldActiveContent = tabs.Content[index].closest(".".concat(tab)).querySelector(".".concat(tab, "__content.active"));
 					oldActiveEl.classList.remove('active');
 					oldActiveContent.classList.remove('active'); //turn on new(cklicked el)
 
@@ -124,42 +112,46 @@ var JSCCommon = {
 			});
 		});
 	},
-	inputMask: function inputMask() {
+
+	inputMask() {
 		// mask for input
-		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(function (element) {
 			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 		});
 		Inputmask("+9(999)999-99-99").mask(InputTel);
 	},
+
 	// /inputMask
-	ifie: function ifie() {
+	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 		if (isIE11) {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
-	heightwindow: function heightwindow() {
+
+	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-		var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
+		let vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
 
 		document.documentElement.style.setProperty('--vh', "".concat(vh, "px")); // We listen to the resize event
 
-		window.addEventListener('resize', function () {
+		window.addEventListener('resize', () => {
 			// We execute the same script as before
-			var vh = window.innerHeight * 0.01;
+			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
 		}, {
 			passive: true
 		});
 	},
-	animateScroll: function animateScroll() {
-		var header = document.querySelector("#headerAlt");
+
+	animateScroll() {
+		let header = document.querySelector("#headerAlt");
 		$(document).on('click', '.scroll-link, .aside-menu-js > ul > li > a', function () {
 			event.preventDefault();
-			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top - header.offsetHeight - 20; //$('html, body').animate({ scrollTop: destination }, 1100);
+			const elementClick = $(this).attr("href");
+			const destination = $(elementClick).offset().top - header.offsetHeight - 20; //$('html, body').animate({ scrollTop: destination }, 1100);
 
 			window.scrollTo({
 				top: destination,
@@ -168,17 +160,17 @@ var JSCCommon = {
 			return false;
 		});
 	},
-	getCurrentYear: function getCurrentYear(el) {
-		var now = new Date();
-		var currentYear = document.querySelector(el);
+
+	getCurrentYear(el) {
+		let now = new Date();
+		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
+
 };
-var $ = jQuery;
+const $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl, _Swiper;
-
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('c-tabs');
@@ -187,14 +179,14 @@ function eventHandler() {
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
 
 	var x = window.location.host;
-	var screenName;
+	let screenName;
 	screenName = '027-1920.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
 	}
 
-	var topH = document.querySelector(".top-nav");
+	let topH = document.querySelector(".top-nav");
 
 	function scrollHandler() {
 		if (topH) {
@@ -206,30 +198,34 @@ function eventHandler() {
 		}
 	}
 
-	window.addEventListener('scroll', function () {
+	window.addEventListener('scroll', () => {
 		scrollHandler();
 	}, {
 		passive: true
 	});
 	scrollHandler();
-	var defaultSl = (_defaultSl = {
+	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true
 		},
-		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true // renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
 
-	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		}
+	};
+	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,
 		loopFillGroupWithBlank: true,
@@ -287,7 +283,7 @@ function eventHandler() {
 	}); //
 
 	$('.toggle-pass-inp-js').click(function () {
-		var inp = this.parentElement.querySelector('input');
+		let inp = this.parentElement.querySelector('input');
 		if (!inp) return;
 
 		if (this.classList.contains('pass-visiable')) {
@@ -315,8 +311,8 @@ function eventHandler() {
 		// }
 
 
-		var baseUrl = "img/svg/";
-		var $state = $('<span class="select2-results__img">' + '<img src="' + baseUrl + state.element.getAttribute('data-icon') + '.svg" alt="' + state.text + '"/>' + '</span>');
+		let baseUrl = "img/svg/";
+		let $state = $('<span class="select2-results__img">' + '<img src="' + baseUrl + state.element.getAttribute('data-icon') + '.svg" alt="' + state.text + '"/>' + '</span>');
 		return $state;
 	} //multiple select2
 
@@ -327,7 +323,7 @@ function eventHandler() {
 	}); //
 
 	$('.resp-tabs-js').easyResponsiveTabs({
-		activate: function activate() {}
+		activate: function () {}
 	}); //scroll top js
 
 	$('.scroll-top-js').click(function () {
@@ -336,10 +332,13 @@ function eventHandler() {
 	//020 page +
 	//020 page +
 
-	var sidebarSlider = new Swiper('.sidebar-slider-js', (_Swiper = {
+	let sidebarSlider = new Swiper('.sidebar-slider-js', {
 		slidesPerView: 'auto',
-		spaceBetween: 12
-	}, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "freeMode", true), _Swiper)); //headerAlt
+		spaceBetween: 12,
+		slidesPerView: 'auto',
+		freeMode: true //freeModeMomentum: true,
+
+	}); //headerAlt
 
 	$('.search-inp-js').focus(function () {
 		$(this.parentElement).find('.search-btn-js').addClass('active');
@@ -367,9 +366,9 @@ function eventHandler() {
 			$(this).removeClass('current');
 		});
 		$(this).addClass('current');
-		var stTxt = document.querySelector('.headerAlt-st-txt-js');
+		let stTxt = document.querySelector('.headerAlt-st-txt-js');
 		stTxt.innerHTML = this.innerHTML;
-		var input = document.querySelector('.search-inp-js');
+		let input = document.querySelector('.search-inp-js');
 		input.setAttribute('placeholder', this.getAttribute('data-inp-placeholder'));
 	}); //new footem items
 
@@ -380,46 +379,26 @@ function eventHandler() {
 
 	$('.sidebar-trakcer-js').mousemove(function () {
 		if (!this.parentElement.classList.contains('active')) return;
-		var balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
+		let balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
 
-		var _iterator = _createForOfIteratorHelper(balls),
-				_step;
-
-		try {
-			for (_iterator.s(); !(_step = _iterator.n()).done;) {
-				var ball = _step.value;
-				ball.setAttribute("style", "top: ".concat(event.offsetY, "px; left: ").concat(event.offsetX, "px;"));
-			}
-		} catch (err) {
-			_iterator.e(err);
-		} finally {
-			_iterator.f();
+		for (let ball of balls) {
+			ball.setAttribute("style", "top: ".concat(event.offsetY, "px; left: ").concat(event.offsetX, "px;"));
 		}
 	}).mouseenter(function () {
-		var balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
+		let balls = this.parentElement.querySelectorAll('.sidebar-ball-js');
 		$(balls).addClass('has-transition');
 		window.setTimeout(function () {
 			$(balls).removeClass('has-transition');
 		}, 300);
 	}); //aside menu js
 
-	var sidebarItems = document.querySelectorAll('.sidebar-box-js');
-	var sidebarLinks = document.querySelectorAll('.aside-menu-js > ul > li > a');
-	var sideBarItemsMiddle = [];
+	let sidebarItems = document.querySelectorAll('.sidebar-box-js');
+	let sidebarLinks = document.querySelectorAll('.aside-menu-js > ul > li > a');
+	let sideBarItemsMiddle = [];
 
 	function setSBItemMiddle() {
-		var _iterator2 = _createForOfIteratorHelper(sidebarItems),
-				_step2;
-
-		try {
-			for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-				var item = _step2.value;
-				sideBarItemsMiddle.push(item.getBoundingClientRect().top + item.offsetHeight / 2);
-			}
-		} catch (err) {
-			_iterator2.e(err);
-		} finally {
-			_iterator2.f();
+		for (let item of sidebarItems) {
+			sideBarItemsMiddle.push(item.getBoundingClientRect().top + item.offsetHeight / 2);
 		}
 	}
 
@@ -433,14 +412,10 @@ function eventHandler() {
 	}
 
 	document.addEventListener('scroll', function () {
-		var scrollTop = window.scrollY;
+		let scrollTop = window.scrollY;
 
-		for (var _i = 0, _Object$entries = Object.entries(sideBarItemsMiddle); _i < _Object$entries.length; _i++) {
-			var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
-					index = _Object$entries$_i[0],
-					middle = _Object$entries$_i[1];
-
-			var prev = void 0;
+		for (let [index, middle] of Object.entries(sideBarItemsMiddle)) {
+			let prev;
 
 			if (index == 0) {
 				prev = 0;
@@ -475,7 +450,7 @@ function eventHandler() {
 	} //colookerBtn
 
 
-	var colookerBtn = document.querySelector('.colooker-dd-btn-js');
+	let colookerBtn = document.querySelector('.colooker-dd-btn-js');
 	console.log(colookerBtn);
 	$(colookerBtn).click(function () {
 		$(colookerBtn).toggleClass('active');
@@ -525,7 +500,7 @@ function eventHandler() {
 	} //css vars
 
 
-	var header = document.querySelector("#headerAlt");
+	let header = document.querySelector("#headerAlt");
 	document.documentElement.style.setProperty('--scroll-width', "".concat(scrollWidth, "px"));
 
 	function calcCssVars() {
@@ -544,8 +519,8 @@ function eventHandler() {
 
 
 	$('.custom-modal-link-js').click(function () {
-		var id = this.getAttribute('href');
-		var modal = document.querySelector(id);
+		let id = this.getAttribute('href');
+		let modal = document.querySelector(id);
 		$('body').addClass('fixed3');
 		$(modal).addClass('active');
 	});
@@ -555,20 +530,20 @@ function eventHandler() {
 	}); //repeator js
 
 	$('.repeator-js').each(function () {
-		var firtsItem = this.querySelector('.r-item-js');
+		let firtsItem = this.querySelector('.r-item-js');
 		if (!firtsItem) return;
-		var content = firtsItem.innerHTML; //console.log(content);
+		let content = firtsItem.innerHTML; //console.log(content);
 
-		var addBtn = this.querySelector('.r-add-btn-js');
+		let addBtn = this.querySelector('.r-add-btn-js');
 		addBtn.addEventListener('click', duplicateRItem.bind(addBtn, this, content));
 	}); //delegation of remove btn
 
 	$('.repeator-js').click(function () {
-		var thisRepeator = this;
-		var target = event.target;
+		let thisRepeator = this;
+		let target = event.target;
 
 		if (target.closest('.r-remove-item-js')) {
-			var item = target.closest('.r-item-js');
+			let item = target.closest('.r-item-js');
 			$(item).slideUp(function () {
 				$(item).addClass('d-none');
 				item.remove();
@@ -578,22 +553,22 @@ function eventHandler() {
 	});
 
 	function duplicateRItem(parent, content) {
-		var btnParent = this.parentNode;
-		var newItem = document.createElement('div');
+		let btnParent = this.parentNode;
+		let newItem = document.createElement('div');
 		newItem.classList.add('custom-modal__r-item', 'r-item-js', 'd-none-no-important');
 		newItem.innerHTML = content;
 		btnParent.insertBefore(newItem, this);
 		addSelect2ToNewItems(newItem);
 		$(newItem).slideDown(function () {
 			$(this).removeClass('d-none-no-important');
-			var index = $(this).index();
-			var names = newItem.querySelectorAll('[name]');
+			let index = $(this).index();
+			let names = newItem.querySelectorAll('[name]');
 			names.forEach(function (el) {
-				var oldName = el.getAttribute('name').split("][");
-				var number = el.getAttribute('name').split("][").pop().split(']').shift(); // const lastItem = oldName[oldName.length - 2]
+				let oldName = el.getAttribute('name').split("][");
+				let number = el.getAttribute('name').split("][").pop().split(']').shift(); // const lastItem = oldName[oldName.length - 2]
 
 				el.setAttribute("name", " ".concat(oldName[0], "][").concat(index, "]"));
-				var newName = el.getAttribute('name'); // console.log(lastItem);
+				let newName = el.getAttribute('name'); // console.log(lastItem);
 
 				console.log(newName);
 			});
@@ -603,48 +578,35 @@ function eventHandler() {
 
 
 	function checkRemoveBtn(repeatorBl) {
-		var items = repeatorBl.querySelectorAll('.r-item-js'); //case 1
+		let items = repeatorBl.querySelectorAll('.r-item-js'); //case 1
 
 		if (items.length > 1) {
-			var _iterator3 = _createForOfIteratorHelper(items),
-					_step3;
+			for (let item of items) {
+				let thisRemoveBtn = item.querySelector('.r-remove-item-js');
 
-			try {
-				for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-					var item = _step3.value;
-					var thisRemoveBtn = item.querySelector('.r-remove-item-js');
-
-					if (!thisRemoveBtn) {
-						var removeBtn = createRemoveBtn();
-						$(removeBtn).addClass('d-none-no-important');
-						item.appendChild(removeBtn);
-						$(removeBtn).slideDown(function () {
-							$(this).removeClass('d-none-no-important');
-						});
-					}
+				if (!thisRemoveBtn) {
+					let removeBtn = createRemoveBtn();
+					$(removeBtn).addClass('d-none-no-important');
+					item.appendChild(removeBtn);
+					$(removeBtn).slideDown(function () {
+						$(this).removeClass('d-none-no-important');
+					});
 				}
-			} catch (err) {
-				_iterator3.e(err);
-			} finally {
-				_iterator3.f();
 			}
 		} //case 2
 		else {
-				var _removeBtn = items[0].querySelector('.r-remove-item-js');
-
-				_removeBtn.classList.add('pointer-events-none');
-
-				$(_removeBtn).slideUp(function () {
-					$(_removeBtn).addClass('d-none');
-
-					_removeBtn.remove();
+				let removeBtn = items[0].querySelector('.r-remove-item-js');
+				removeBtn.classList.add('pointer-events-none');
+				$(removeBtn).slideUp(function () {
+					$(removeBtn).addClass('d-none');
+					removeBtn.remove();
 				});
 			}
 	}
 
 	function createRemoveBtn() {
-		var removeBtn = document.createElement('div');
-		var content = document.querySelector('.r-remove-item-js').innerHTML;
+		let removeBtn = document.createElement('div');
+		let content = document.querySelector('.r-remove-item-js').innerHTML;
 		removeBtn.classList.add('form-wrap__remove-item', 'r-remove-item-js');
 		removeBtn.innerHTML = content;
 		return removeBtn;
@@ -675,13 +637,13 @@ function eventHandler() {
 		event.preventDefault();
 		window.scrollTo(0, 0);
 	});
-	var fixedScrollTopBtn = document.querySelector('.scroll-top-btn--js');
-	var footerN = document.querySelector('.footerN--js');
+	let fixedScrollTopBtn = document.querySelector('.scroll-top-btn--js');
+	let footerN = document.querySelector('.footerN--js');
 
 	if (fixedScrollTopBtn) {
 		document.addEventListener('scroll', function () {
 			console.log(footerN.getBoundingClientRect().top + $(window)['scrollTop'](), window.scrollY + vh(100));
-			var footerTop = footerN.getBoundingClientRect().top + $(window)['scrollTop']();
+			let footerTop = footerN.getBoundingClientRect().top + $(window)['scrollTop']();
 
 			if (window.scrollY > vh(50) && footerTop > window.scrollY + vh(100)) {
 				fixedScrollTopBtn.classList.add('active');
@@ -701,7 +663,7 @@ function eventHandler() {
 
 
 	$('.item-regular-js .sComp-btn-js').click(function () {
-		var col = this.closest('.sComp-col-js');
+		let col = this.closest('.sComp-col-js');
 
 		if (window.matchMedia("(min-width: 768px)").matches) {
 			$(col).fadeOut(function () {});
@@ -715,7 +677,7 @@ function eventHandler() {
 	}); //like
 
 	$('.item-like-js .sComp-dislike-btn-js').click(function () {
-		var col = this.closest('.sComp-col-js');
+		let col = this.closest('.sComp-col-js');
 
 		if (window.matchMedia("(min-width: 768px)").matches) {
 			$(col).fadeOut(function () {});
@@ -728,7 +690,7 @@ function eventHandler() {
 	}); //dislike
 
 	$('.item-dislike-js .sComp-like-btn-js').click(function () {
-		var col = this.closest('.sComp-col-js');
+		let col = this.closest('.sComp-col-js');
 
 		if (window.matchMedia("(min-width: 768px)").matches) {
 			$(col).fadeOut(function () {});
@@ -757,8 +719,8 @@ function eventHandler() {
 		$('.sBaner-search-row-js, .sBaner-sub-row-js').removeClass('active');
 	}); //.reg-btn--js
 
-	var regBtn = document.querySelector('.reg-btn--js');
-	var mainWrapper = document.querySelector('.main-wrapper');
+	let regBtn = document.querySelector('.reg-btn--js');
+	let mainWrapper = document.querySelector('.main-wrapper');
 
 	if (regBtn && mainWrapper) {
 		window.addEventListener('wheel', function (evt) {
@@ -793,7 +755,7 @@ function eventHandler() {
 
 	$('.sLogoes-btn-js').click(function () {
 		$(this).toggleClass('active');
-		$('.sLogoes-row-js').slideToggle(function () {
+		$('.sLogoes__col:nth-child(n+7)').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
 	}); //todo New

@@ -1194,7 +1194,7 @@ h5{
 //
 .green-btn{
 	@extend .btn;
-	@extend .btn-success;
+	// @extend .btn-success;
 	border: none!important;
 
 	font-weight: 600;
@@ -1214,7 +1214,7 @@ h5{
 
 .green-outline-btn{
 	@extend .btn;
-	@extend .btn-outline-success;
+	// @extend .btn-outline-success;
 	border-width: 2px!important;
 	font-size: 16px;
 	line-height: 1.25;

@@ -778,7 +778,7 @@ function eventHandler() {
 	$('.sLogoes-btn-js').click(function (){
 		$(this).toggleClass('active');
 
-		$('.sLogoes-row-js').slideToggle(function (){
+		$('.sLogoes__col:nth-child(n+7)').slideToggle(function (){
 			$(this).toggleClass('active');
 		})
 	})

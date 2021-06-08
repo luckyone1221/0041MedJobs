@@ -3,17 +3,7 @@
 	--sPT: 60px;
 	--sPB: 60px;
 	--sTPB: 60px;
-	@include media-breakpoint-up(md){
-		--sPT: 60px;
-		--sPB: 60px;
-		--sTPB: 60px;
-	}
-	@include media-breakpoint-up(xl){
-		--sPT: 60px;
-		--sPB: 60px;
-		--sTPB: 60px;
-	}
-
+ 
 	.section-title{
 		--aft-xm: auto;
 
@@ -87,8 +77,22 @@
 	//
 	&__show-hide-cont{}
 	&__show-hide-btn{
-		@extend .green-btn;
-		min-width: 170px;
+		@extend .btn;
+		@extend .btn-gray;
+		// @extend .green-btn;
+		min-width: 208px;
+		padding: rem(14) rem(10);
+		&::after{
+			content: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 -4.62904e-07L6 4.58L10.59 -6.16331e-08L12 1.41L6 7.41L-6.1633e-08 1.41L1.41 -4.62904e-07Z' fill='%23F15A22'/%3E%3C/svg%3E%0A");
+			margin-left: rem(5);
+			display: inline-block;
+			@include mt;
+		}
+		&.active{
+			&::after{
+				transform: rotateX(180deg);
+			}
+		}
 
 		span:first-child{
 			display: inline;
@@ -107,4 +111,16 @@
 	}
 	&__{}
 	&__{}
+
+	&__col {
+		&:nth-child(n + 7) {
+			@include media-breakpoint-up(md) {
+			display: block !important;
+			}
+			@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+}
+
 } // end.sLogoes
