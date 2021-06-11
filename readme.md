@@ -34,7 +34,7 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet-empty.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/027-contacts.html>
-===========  
+===========   Личный кабнет работодателя
 1. <https://luckyone1221.github.io/0041MedJobs/public/028-creator-lc.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/029-my-vacancy.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/030-my-vacancy-empty.html>
