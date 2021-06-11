@@ -258,6 +258,71 @@
 			color: $gray-550;
 		}
 	}
+
+	//Creator
+	&__cr-row{
+		--bs-gutter-x: 24px;
+	}
+	&__cr-txt-col{
+		& > *{
+			margin-bottom: 6px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__cr-portrait{
+		width: 146px;
+		height: 146px;
+		@include media-breakpoint-between(xlg,xl){
+			width: 120px;
+			height: 120px;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 10px;
+
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: rem(5);
+		&--empty{
+			background: $gray-100;
+			border: 1px solid $gray-100;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__cr-name{
+		line-height: 1.5;
+	}
+	&__cr-city{
+		line-height: (18/15);
+		color: $secondary;
+	}
+	&__cr-tel{
+		line-height: 1.5;
+	}
+	&__cr-mail{
+		line-height: 1.5;
+	}
+	&__cr-cite{
+		@extend .primary-link;
+		display: inline-block;
+	}
+	&__cr-no-cite{
+		line-height: 1.5;
+	}
+	//
+	&__vac-items-col{
+	}
 	&__{}
 	&__{}
 } // end.sMyCab

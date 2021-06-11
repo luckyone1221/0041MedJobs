@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>024-my-cv-fill</title>
+		<title>032-create-cab-empty</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta content="width=570,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
@@ -22,35 +22,19 @@
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<meta name="description" content="о чем страница">
-	<body class="bg-gray-120 mvp-page my-cv-page"> 
+	<body class="bg-gray-120 mvp-page"> 
 		<div class="main-wrapper">
 			<div class="headerAlt-cont">
 				<!-- start headerAlt-->
 				<header class="headerAlt" id="headerAlt">
 					<div class="headerAlt__container container-fluid">
 						<div class="headerAlt__row row row--mb align-items-center">
-							<div class="col-lg-auto col"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="col-lg-auto col col-md-auto"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
-							<div class="headerAlt__search-col col-lg order-last order-lg-0">
-								<div class="headerAlt__search"><input class="headerAlt__s-input form-control search-inp-js" type="text" placeholder="Поиск по вакансиям"/>
-									<button class="headerAlt__search-btn search-btn-js" type="button">
-										<svg class="icon icon-zoom-2 ">
-											<use xlink:href="img/svg/sprite.svg#zoom-2"></use>
-										</svg>
-									</button>
-									<div class="headerAlt__serch-type-dd">
-										<div class="headerAlt__st-txt headerAlt-st-txt-js">Вакансии
-										</div>
-										<div class="headerAlt__st-dd headerAlt-st-dd-js">
-											<div class="headerAlt__st-inner">
-												<div class="headerAlt__st-item headerAlt-st-item-js current" data-inp-placeholder="Поиск по вакансиям">Вакансии
-												</div>
-												<div class="headerAlt__st-item headerAlt-st-item-js" data-inp-placeholder="Поиск по организациям">Организации
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="col d-none d-md-block"><a class="vac-btn" href="#"><span class="vac-btn__v-icon">
+								<svg class="icon icon-vac-plus ">
+									<use xlink:href="img/svg/sprite.svg#vac-plus"></use>
+								</svg></span><span>Разместить вакансию</span></a>
 							</div>
 							<div class="col-auto">
 								<div class="headerAlt__bell bell-js">
@@ -126,25 +110,20 @@
 								<div class="l-side-menu__slider-wrap">
 									<div class="swiper-container sidebar-slider-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-1 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-1"></use>
-												</svg></span><span class="l-side-menu__txt">Подборки вакансий</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
-											</div>
 											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js active" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-2 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-2"></use>
-												</svg></span><span class="l-side-menu__txt">Мое резюме</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+												<svg class="icon icon-side-mnu-7 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-7"></use>
+												</svg></span><span class="l-side-menu__txt">Мой кабинет</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
 											</div>
 											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-3 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-3"></use>
+												<svg class="icon icon-side-mnu-8 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-8"></use>
+												</svg></span><span class="l-side-menu__txt">Мои вакансии</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+											</div>
+											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
+												<svg class="icon icon-side-mnu-9 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-9"></use>
 												</svg></span><span class="l-side-menu__txt">Настройки профиля</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
-											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-4 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-4"></use>
-												</svg></span><span class="l-side-menu__txt">Избранные вакансии</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
 											</div>
 										</div>
 									</div>
@@ -153,1246 +132,96 @@
 						</div>
 						<div class="sProfileN__content-col col-xlg">
 							<div class="center-block">
-								<div class="sProfileN__title-row row row row--mb align-items-center">
-									<div class="col">
-										<h1 class="sProfileN__title">Мое резюме
-										</h1>
-									</div>
-									<div class="col-12">
-										<div class="data-box sCurriculum__box">
-											<div class="data-box__row row">
-												<div class="data-box__img-col col-xl-auto">
-													<div class="data-box__sub-row row align-items-center">
-														<div class="col-auto">
-															<div class="data-box__img"><img loading="lazy" src="img/@2x/proffesional-1.jpg" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="data-box__name-box">
-																<div class="data-box__name mb-12 mb-md-0 d-xl-none">Контстантинопольский Контстантин Александрович
-																</div><a class="edit-btn" href="#">
-																<svg class="icon icon-pencil ">
-																	<use xlink:href="img/svg/sprite.svg#pencil"></use>
-																</svg><span>Редактировать</span></a>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-xl">
-													<div class="data-box__name d-none d-xl-block mb-24">Ишметов Михаил Сергеевич
-													</div>
-													<div class="data-box__data-items">
-														<div class="data-box__data-item row">
-															<div class="data-box__key-col col-auto">Возраст
-															</div>
-															<div class="data-box__val-col col">24 года
-															</div>
-														</div>
-														<div class="data-box__data-item row">
-															<div class="data-box__key-col col-auto">Город проживания
-															</div>
-															<div class="data-box__val-col col">Самара
-															</div>
-														</div>
-														<div class="data-box__data-item row">
-															<div class="data-box__key-col col-auto">Email
-															</div>
-															<div class="data-box__val-col col">arts.man@mail.ru
-															</div>
-														</div>
-														<div class="data-box__data-item row">
-															<div class="data-box__key-col col-auto">Телефон
-															</div>
-															<div class="data-box__val-col col">+7 (919) 811-28-48
-															</div>
-														</div>
-														<div class="data-box__data-item row">
-															<div class="data-box__key-col col-auto">Социальные профили
-															</div>
-															<div class="data-box__val-col col">
-																<div class="cv-soc">
-																	<div class="cv-soc__row row gy-1">
-																		<div class="col-auto"><a class="cv-soc__item" href="#"><img loading="lazy" src="img/svg/cv-soc-vk.svg" alt=""/></a>
-																		</div>
-																		<div class="col-auto"><a class="cv-soc__item" href="#"><img loading="lazy" src="img/svg/cv-soc-fb.svg" alt=""/></a>
-																		</div>
-																		<div class="col-auto"><a class="cv-soc__item" href="#"><img loading="lazy" src="img/svg/cv-soc-in.svg" alt=""/></a>
-																		</div>
-																		<div class="col-auto"><a class="cv-soc__item" href="#"><img loading="lazy" src="img/svg/cv-soc-tg.svg" alt=""/></a>
-																		</div>
-																		<div class="col-auto"><a class="cv-soc__item" href="#"><img loading="lazy" src="img/svg/cv-soc-ok.svg" alt=""/></a>
-																		</div>
-																		<div class="col-auto"><a class="cv-soc__item" href="#"><img loading="lazy" src="img/svg/cv-soc-tw.svg" alt=""/></a>
-																		</div>
-																		<div class="col-auto"><a class="cv-soc__item" href="#"><img loading="lazy" src="img/svg/cv-soc-gpls.svg" alt=""/></a>
-																		</div>
-																	</div>
+								<!-- start sMyCab-->
+								<section class="sMyCab" id="sMyCab">
+									<div class="sMyCab__top-row row">
+										<div class="col-12 myCab-alert-js">
+											<div class="sMyCab__alert">
+												<div class="sMyCab__a-row row align-items-lg-center">
+													<div class="col">
+														<div class="sMyCab__a-sub-row row align-items-center">
+															<div class="col-auto">
+																<div class="sMyCab__a-img"><img loading="lazy" src="img/svg/orange-alert.svg" alt=""/>
 																</div>
 															</div>
+															<div class="col">
+																<div class="sMyCab__a-txt"><span class="bolder">Подтвердите регистрацию!</span><br/><span>
+																		Мы отправили письмо для подтверждения регистрации на вашу почту:
+																		</span><span class="bolder">mymail@mail.ru</span>
+																</div>
+															</div>
+															<div class="sMyCab__a-btn-col col-lg-auto"><a class="sMyCab__a-btn" href="#">Отправить повторно</a>
+															</div>
+														</div>
+													</div>
+													<div class="col-auto">
+														<div class="sMyCab__close-btn myCab-close-alert-js">
+															<svg class="icon icon-cross-big ">
+																<use xlink:href="img/svg/sprite.svg#cross-big"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="complete-box sCurriculum__box d-xxl-none">
-											<div class="complete-box__title">Заполненность резюме
-											</div>
-											<div class="complete-box__descr">Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
-											</div>
-											<div class="complete-strip">
-												<div class="complete-strip__line-cont">
-													<div class="complete-strip__line" style="width: 67%;">
-													</div>
-												</div>
-												<div class="complete-strip__number">67%
-												</div>
-											</div>
+										<div class="col-12">
+											<h1 class="sProfileN__title">Мой кабинет</h1>
 										</div>
-										<div class="add-box sCurriculum__box">
-											<div class="add-box__title">Добавить информацию в мое резюме
-											</div>
-											<div class="add-box__descr">Укажите дополнительную информацию в своем резюме, чтобы интеллектуальная подборка могла подобрать для вас наиболее подходящие вакансии.
-											</div>
-											<div class="add-box__row row">
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#work-conditions"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-1.png" alt=""/></span><span class="add-box__txt"><span class="black">Условия работы</span><span class="blue">+10%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#experience"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-2.png" alt=""/></span><span class="add-box__txt"><span class="black">Опыт работы</span><span class="blue">+10%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#education"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-3.png" alt=""/></span><span class="add-box__txt"><span class="black">Образование</span><span class="blue">+10%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#about"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-4.png" alt=""/></span><span class="add-box__txt"><span class="black">Обо мне</span><span class="blue">+13%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#family"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-5.png" alt=""/></span><span class="add-box__txt"><span class="black">Семья</span><span class="blue">+2%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#address"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-6.png" alt=""/></span><span class="add-box__txt"><span class="black">Место жительства</span><span class="blue">+1%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#prof-skills"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-7.png" alt=""/></span><span class="add-box__txt"><span class="black">Профессиональные навыки</span><span class="blue">+15%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#common-skills"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-8.png" alt=""/></span><span class="add-box__txt"><span class="black">Общие навыки</span><span class="blue">+15%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#achievements"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-9.png" alt=""/></span><span class="add-box__txt"><span class="black">Достижения и награды</span><span class="blue">+7%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#languages"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-10.png" alt=""/></span><span class="add-box__txt"><span class="black">Знание языков</span><span class="blue">+15%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#sience-grade"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-11.png" alt=""/></span><span class="add-box__txt"><span class="black">Научная степень</span><span class="blue">+5%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#training"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-12.png" alt=""/></span><span class="add-box__txt"><span class="black">Повышение квалификации</span><span class="blue">+10%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#employer-preferences"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-13.png" alt=""/></span><span class="add-box__txt"><span class="black">Предпочтения по работодателю</span><span class="blue">+15%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#vacancy-preferences"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-14.png" alt=""/></span><span class="add-box__txt"><span class="black">Предпочтения по вакансии</span><span class="blue">+16%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#articles"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-15.png" alt=""/></span><span class="add-box__txt"><span class="black">Статьи</span><span class="blue">+5%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#prof-communities"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-16.png" alt=""/></span><span class="add-box__txt"><span class="black">Профессиональные сообщества</span><span class="blue">+5%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#automobile"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-17.png" alt=""/></span><span class="add-box__txt"><span class="black">Автомобиль</span><span class="blue">+5%</span></span></a>
-												</div>
-												<div class="add-box__col col-6 col-md-auto"><a class="add-box__item custom-modal-link-js" href="#bonuses"><span class="add-box__img"><img loading="lazy" src="img/@2x/add-box-item-19.png" alt=""/></span><span class="add-box__txt"><span class="black">Бонусы в работе</span><span class="blue">+10%</span></span></a>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center pb-30">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-1.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Условия работы
-															</div>
+										<div class="col-12">
+											<div class="sMyCab__box">
+												<div class="sMyCab__b-row row pb-24 align-items-center">
+													<div class="col">
+														<div class="sMyCab__title">Настройки профиля
 														</div>
 													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Желаемая должность
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Врач-хирург
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate table-box__plate--check">Рассмотрю повышение
-																</div>
-															</div>
-														</div>
+													<div class="col-auto"><a class="sMyCab__edit-btn" href="#">
+														<svg class="icon icon-pencil2 ">
+															<use xlink:href="img/svg/sprite.svg#pencil2"></use>
+														</svg><span>Редактировать</span></a>
 													</div>
 												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Желаемая заработная плата
+												<div class="sMyCab__cr-row row align-items-center">
+													<div class="col-auto">
+														<div class="sMyCab__cr-portrait"><img loading="lazy" src="img/@2x/creator-my-cab-logo.png" alt=""/>
 														</div>
 													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">150 000 ₽
-																</div>
-															</div>
+													<div class="sMyCab__cr-txt-col col">
+														<div class="sMyCab__cr-name">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
 														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Приемлемая (минимальная) заработная плата
+														<div class="sMyCab__cr-city">г. Санкт-Петербург
 														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">300 000 ₽
-																</div>
-															</div>
+														<div class="sMyCab__cr-tel">+7 (800) 000-54-44
 														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Профобласть
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__plate">Хирургия
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate">Хирургическая терапия
-																</div>
-															</div>
-														</div>
+														<div class="sMyCab__cr-mail">info@clinica.ru
+														</div><a class="sMyCab__cr-cite" href="#" target="blank">https://medclinica.ru</a>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-2.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Опыт работы
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Врач-хирург
-															</div>
-														</div>
-														<div class="col">
-															<div class="exp-item__place">УК Медгард
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Февраль, 2017 — по настоящее время
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">3 года, 6 месяцев
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Врач-хирург
-															</div>
-														</div>
-														<div class="col">
-															<div class="exp-item__place">УК Медгард
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Февраль, 2017 — по настоящее время
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">3 года, 6 месяцев
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона
-															</div>
-														</div>
+										<div class="col-12">
+											<div class="sMyCab__compil-row row">
+												<div class="col-auto">
+													<div class="sMyCab__c-title">Мои вакансии
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-3.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Образование
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Выпускник (Магистр)
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Россия, г. Москва, Московский Государственный Университет
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">Факультет хирургии, Специальность
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Очное отделение
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">2020
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Выпускник (Магистр)
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Россия, г. Москва, Московский Государственный Университет
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">Факультет хирургии, Специальность
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Очное отделение
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">2020
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-4.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Обо мне
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__about-txt">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.."<br><br>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.<br><br>За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-5.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Семья
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">В браке
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Да
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Дети
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Нет
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-6.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Место жительства
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__regular">Россия, г. Москва, ул. Иванова, д. 55
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-7.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Профессиональные навыки
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="cv-skills gy-1">
-													<div class="cv-skills__row row">
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Умный
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Усидчевый
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Умный
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Усидчевый
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Усидчевый
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-8.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Общие навыки
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="cv-skills gy-1">
-													<div class="cv-skills__row row">
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Умный
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Усидчевый
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Умный
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Усидчевый
-															</div>
-														</div>
-														<div class="col-auto">
-															<div class="cv-skills__cv-skill">Усидчевый
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-9.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Достижения
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Звание
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Заслуженный врач Российской Федерации 2014
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Звание
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Заслуженный врач Российской Федерации 2014
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-10.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Знание языков
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Родной язык
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Русский
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Инностранный язык
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__plate">Английский
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__txt-val">A1 - Начальный
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Инностранный язык
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__plate">Испанский
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__txt-val">A1 - Начальный
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-11.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Научная степень
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Наименование
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Кандидат наук
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Наименование
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Доктор наук
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-12.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Повышение квалификации
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Стажировка
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Наименование стажировки
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">2019
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__plate">Стажировка
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Наименование стажировки
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">2019
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-13.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Предпочтения по работодателю
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Форма собственности
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Не важно
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Численность сотрудников
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">До 20
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-13.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Предпочтения по вакансии
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Готовность к перезду в другие города
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__plate">Москва
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate">Самара
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__txt-val table-box__txt-val--check">Столица субъекта
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Готовность к командировкам
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Частые
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Время на дорогу до работы
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">До 30 минут
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Тип занятости
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__plate">Полная занятость
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate">Частичная занятость
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">График работы
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__plate">Полный день
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Условия оказание медицинской помощи
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__plate">Амбулаторно
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate">Амбулаторно
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate">Амбулаторно
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate">Амбулаторно
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__plate">Амбулаторно
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Ночные дежурства
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Не важно
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-15.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Статьи
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-12">
-															<div class="exp-item__regular">Название статьи, год релиза
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">Наименование журнала
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Номер журнала
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">Номера страниц
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-12">
-															<div class="exp-item__regular">Название статьи, год релиза
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">Наименование журнала
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Номер журнала
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__secondary">Номера страниц
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-16.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Профессиональные сообщества
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__secondary">Наименование мероприятия
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Год проведения
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="exp-item">
-													<div class="exp-item__row row align-items-center">
-														<div class="col-auto">
-															<div class="exp-item__secondary">Наименование мероприятия
-															</div>
-														</div>
-														<div class="col-12">
-															<div class="exp-item__regular">Год проведения
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-17.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Автомобиль
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Категория прав
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__ball">A
-																</div>
-															</div>
-															<div class="col-auto">
-																<div class="table-box__ball">B
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="table-box__t-row row gy-2 align-items-center">
-													<div class="col-md-6 col-xxl-5 col-base-6">
-														<div class="table-box__title">Инностранный язык
-														</div>
-													</div>
-													<div class="col-md-6 col-xxl-7 col-base-6">
-														<div class="table-box__sub-row row align-items-center gy-1">
-															<div class="col-auto">
-																<div class="table-box__txt-val">Есть личный автомобиль
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="table-box sCurriculum__box">
-											<div class="table-box__header-row row align-items-center">
-												<div class="col">
-													<div class="table-box__title-row row align-items-center">
-														<div class="col-auto">
-															<div class="table-box__img"><img loading="lazy" src="img/@2x/add-box-item-19.png" alt=""/>
-															</div>
-														</div>
-														<div class="col">
-															<div class="table-box__h-title">Бонусы в работе
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto"><a class="edit-btn" href="#">
-													<svg class="icon icon-pencil ">
-														<use xlink:href="img/svg/sprite.svg#pencil"></use>
-													</svg><span>Редактировать</span></a>
-												</div>
-											</div>
-											<div class="table-box__table">
-												<div class="table-box__event-item">ДМС или медицинское обслуживание
-												</div>
-												<div class="table-box__event-item">Комфортные условия труда
+										<div class="col-12">
+											<!-- start sNVac-->
+											<div class="sNVac" id="sNVac">
+												<div class="sNVac__empty">
+													<div class="sNVac__e-img"><img loading="lazy" src="img/@2x/empty-vac.png" alt=""/>
+													</div>
+													<div class="sNVac__e-txt">У вас пока нет созданных вакансий.
+													</div><a class="vac-btn" href="#"><span class="vac-btn__v-icon">
+													<svg class="icon icon-vac-plus ">
+														<use xlink:href="img/svg/sprite.svg#vac-plus"></use>
+													</svg></span><span>Разместить вакансию</span></a>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xlg-auto d-none d-xlg-block">
-							<div class="sProfileN__aside-menu sProfileN__aside-menu--static aside-menu-js">
-								<div class="d-block">
-									<div class="hint-row row mb-12">
-										<div class="hint-row__title col-auto">Заполненность резюме
-										</div>
-										<div class="col">
-											<div class="hint-row__quest-sign">
-												<svg class="icon icon-q-sign ">
-													<use xlink:href="img/svg/sprite.svg#q-sign"></use>
-												</svg>
-												<div class="hint-row__hint-cont">
-													<div class="hint-row__hint">Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="complete-strip mb-24">
-										<div class="complete-strip__line-cont">
-											<div class="complete-strip__line" style="width: 10%;">
-											</div>
-										</div>
-										<div class="complete-strip__number">10%
-										</div>
-									</div>
-									<ul>
-										<!--+asideMenuCvItem('Основная информация', '#work-conditions')-->
-										<li><a class="scroll-top-js" href="#">Основная информация</a></li>
-										<li><a class="custom-modal-link-js" href="#work-conditions">Условия работы</a></li>
-										<li><a class="custom-modal-link-js" href="#experience">Опыт работы</a></li>
-										<li><a class="custom-modal-link-js" href="#education">Образование</a></li>
-										<li><a class="custom-modal-link-js" href="#about">Обо мне</a></li>
-										<li><a class="custom-modal-link-js" href="#family">Семья</a></li>
-										<li><a class="custom-modal-link-js" href="#address">Место жительства</a></li>
-										<li><a class="custom-modal-link-js" href="#prof-skills">Профессиональные навыки</a></li>
-										<li><a class="custom-modal-link-js" href="#common-skills">Общие навыки</a></li>
-										<li><a class="custom-modal-link-js" href="#achievements">Достижения и награды</a></li>
-										<li><a class="custom-modal-link-js" href="#languages">Знание языков</a></li>
-										<li><a class="custom-modal-link-js" href="#sience-grade">Научная степень</a></li>
-										<li><a class="custom-modal-link-js" href="#training">Повышение квалификации</a></li>
-										<li><a class="custom-modal-link-js" href="#employer-preferences">Предпочтения по работодателю</a></li>
-										<li><a class="custom-modal-link-js" href="#vacancy-preferences">Предпочтения по вакансии</a></li>
-										<li><a class="custom-modal-link-js" href="#articles">Статьи</a></li>
-										<li><a class="custom-modal-link-js" href="#prof-communities">Профессиональные сообщества</a></li>
-										<li><a class="custom-modal-link-js" href="#automobile">Автомобиль</a></li>
-										<li><a class="custom-modal-link-js" href="#bonuses">Бонусы в работе</a></li>
-									</ul>
-								</div>
+								</section>
 							</div>
 						</div>
 					</div>
@@ -1498,15 +327,6 @@
 				</div>
 			</footer>
 			<!-- end footerN-->
-			<div class="scroll-top-btn scroll-top-btn--js">
-				<div class="scroll-top-btn__ball">
-					<svg class="icon icon-chevron-top ">
-						<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
-					</svg>
-				</div>
-				<div class="scroll-top-btn__txt d-none d-xl-block">Наверх
-				</div>
-			</div>
 		</div>
 		<!--  start modals-->
 		<div class="modal-callback modal-win" id="modal-callback" style="display: none">

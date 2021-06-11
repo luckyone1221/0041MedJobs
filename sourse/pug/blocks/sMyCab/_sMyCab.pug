@@ -80,3 +80,98 @@ mixin sMyCabItem(data)
 						span Редактировать
 			+e.b-row.row.align-items-center
 				block
+
+mixin sMyCabC(data)
+	// start sMyCab
+	+b.SECTION.sMyCab#sMyCab&attributes(attributes)
+		+e.top-row.row
+			if !data.hasCompilation
+				.col-12.myCab-alert-js
+					+e.alert
+						+e.a-row.row.align-items-lg-center
+							.col
+								+e.a-sub-row.row.align-items-center
+									.col-auto
+										+e.a-img
+											img(loading="lazy" src="img/svg/orange-alert.svg" alt="")
+									.col
+										+e.a-txt
+											span.bolder Подтвердите регистрацию!
+											br
+											span
+												| Мы отправили письмо для подтверждения регистрации на вашу почту:
+												|
+											span.bolder mymail@mail.ru
+									+e.a-btn-col.col-lg-auto
+										+e.a-btn(href="#") Отправить повторно
+							.col-auto
+								+e.close-btn.myCab-close-alert-js
+									+icon('cross-big')
+			.col-12
+				h1.sProfileN__title Мой кабинет
+			.col-12
+				+e.box
+					+e.b-row.row.pb-24.align-items-center
+						.col
+							+e.title=data.title
+						.col-auto
+							+e.edit-btn(href='#')
+								+icon('pencil2')
+								span Редактировать
+					+e.cr-row.row.align-items-center
+						.col-auto
+							if data.logo
+								+e.cr-portrait
+									img(loading="lazy" src='img/@2x/creator-my-cab-logo.png' alt="")
+							else
+								+e.cr-portrait--empty
+									img(loading="lazy" src='img/svg/company-stab6.svg' alt="")
+						+e.cr-txt-col.col
+							+e.cr-name=data.name
+							+e.cr-city=data.city
+							+e.cr-tel=data.tel
+							+e.cr-mail=data.mail
+							if data.cite
+								+e.cr-cite(href="#" target="blank") https://medclinica.ru
+							else
+								+e.cr-no-cite Адрес сайта не указан
+			.col-12
+				+e.compil-row.row
+					.col-auto
+						+e.c-title Мои вакансии
+			if data.hasVacantions
+				.col-12
+					+snVacItemCreator({
+						time: 'Вчера, 17:53',
+						vacName: 'Врач хирург-терапевт',
+						salary: '330 000 ₽',
+						publishedDate: true,
+						remain: true,
+						greenPlate: true,
+						mutedPlate: false,
+						hasBtnsRow: true,
+						blueBtn: true,
+						grayBtn: true,
+						orangeBtn: true,
+					})
+					+snVacItemCreator({
+						time: 'Вчера, 17:53',
+						vacName: 'Врач хирург-терапевт',
+						salary: '330 000 ₽',
+						mutedPlate: 'Черновик',
+						hasBtnsRow: true,
+						grayBtn: true,
+					})
+					+snVacItemCreator({
+						time: 'Вчера, 17:53',
+						vacName: 'Врач хирург-терапевт',
+						salary: '330 000 ₽',
+						mutedPlate: 'Архив',
+					})
+				.col-12.text-center
+					+e.compil-btn(href="#") Перейти в Мои вакансии
+			else
+				.col-12
+					+sNVacCreatorEmpty()
+
+			//-if data.hasCompilation

@@ -29,7 +29,7 @@
 				<header class="headerAlt" id="headerAlt">
 					<div class="headerAlt__container container-fluid">
 						<div class="headerAlt__row row row--mb align-items-center">
-							<div class="col col-lg-auto"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="col-lg-auto col"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
 							<div class="headerAlt__search-col col-lg order-last order-lg-0">
 								<div class="headerAlt__search"><input class="headerAlt__s-input form-control search-inp-js" type="text" placeholder="Поиск по вакансиям"/>
@@ -163,7 +163,7 @@
 										<div class="sNVac" id="sNVac">
 											<div class="sNVac__items">
 												<div class="sNVac__item">
-													<div class="sNVac__main-row row row row--mb align-items-center">
+													<div class="sNVac__main-row row align-items-center">
 														<div class="col-md">
 															<div class="sNVac__data-row row align-items-center">
 																<div class="col-auto"><a class="sNVac__img" href="#"><img loading="lazy" src="img/svg/sqsuare-users-stab.svg" alt=""/></a>
@@ -200,7 +200,7 @@
 													</div>
 												</div>
 												<div class="sNVac__item">
-													<div class="sNVac__main-row row row row--mb align-items-center">
+													<div class="sNVac__main-row row align-items-center">
 														<div class="col-md">
 															<div class="sNVac__data-row row align-items-center">
 																<div class="col-auto"><a class="sNVac__img" href="#"><img loading="lazy" src="img/@2x/n-chosen-1.png" alt=""/></a>
@@ -237,7 +237,7 @@
 													</div>
 												</div>
 												<div class="sNVac__item">
-													<div class="sNVac__main-row row row row--mb align-items-center">
+													<div class="sNVac__main-row row align-items-center">
 														<div class="col-md">
 															<div class="sNVac__data-row row align-items-center">
 																<div class="col-auto"><a class="sNVac__img" href="#"><img loading="lazy" src="img/@2x/n-chosen-2.png" alt=""/></a>
@@ -274,7 +274,7 @@
 													</div>
 												</div>
 												<div class="sNVac__item">
-													<div class="sNVac__main-row row row row--mb align-items-center">
+													<div class="sNVac__main-row row align-items-center">
 														<div class="col-md">
 															<div class="sNVac__data-row row align-items-center">
 																<div class="col-auto"><a class="sNVac__img" href="#"><img loading="lazy" src="img/svg/sqsuare-users-stab.svg" alt=""/></a>
@@ -535,6 +535,61 @@
 						</ul>
 					</div>
 				</form>
+			</div>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-load" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<button class="modal-load__btn modal-load__btn--load" type="button">Загрузить файл
+			</button>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-load2" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<div class="modal-load__name">...logo-company.png
+			</div>
+			<button class="modal-load__btn modal-load__btn--save" type="button">Сохранить
+			</button>
+		</div>
+		<!--modal archive-->
+		<div class="modal-load modal-win text-center" id="modal-achive" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row justify-content-center">
+				<div class="col-auto">
+					<button class="modal-load__btn-sm" type="button">Да
+					</button>
+				</div>
+				<div class="col-auto">
+					<button class="modal-load__btn-sm modal-close-js" type="button">Нет
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-achive2" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row">
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась с MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась не с помощью MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция не закрылась
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Другая причина
+					</button>
+				</div>
 			</div>
 		</div>
 		<div class="custom-modal custom-modal--js" id="work-conditions">

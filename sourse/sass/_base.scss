@@ -1238,3 +1238,19 @@ h5{
 		color: $white!important;
 	}
 }
+//
+.btn-gray-blue{
+	@extend .btn;
+	@extend .btn-light;
+	border: none!important;
+	border-radius: 60px;
+
+	padding: 11px 16px;
+
+	color: $headings-color!important;
+	background-color: $gray-100!important;
+	&:hover{
+		color: $white!important;
+		background-color: $primary!important;
+	}
+}

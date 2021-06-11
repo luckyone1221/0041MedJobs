@@ -2,28 +2,31 @@ mixin sNVac(data)
 	// start sNVac
 	+b.sNVac#sNVac&attributes(attributes)
 		+e.items
-			+snVacItem({
-				time: 'Вчера, 17:53',
-				vacName: 'Врач хирург-терапевт',
-				salary: '330 000 ₽'
-			})
-			+snVacItem({
-				time: '24 февраля 2021',
-				imgName: '1',
-				vacName: 'Врач педиатр',
-				salary: '70 000 ₽'
-			})
-			+snVacItem({
-				time: '24 февраля 2021',
-				imgName: '2',
-				vacName: 'Гинеколог',
-				salary: '200 000 ₽ – 250 000 ₽'
-			})
-			+snVacItem({
-				time: 'Вчера, 17:53',
-				vacName: 'Врач хирург-терапевт',
-				salary: 'з/п не указана'
-			})
+			if block
+				block
+			else
+				+snVacItem({
+					time: 'Вчера, 17:53',
+					vacName: 'Врач хирург-терапевт',
+					salary: '330 000 ₽'
+				})
+				+snVacItem({
+					time: '24 февраля 2021',
+					imgName: '1',
+					vacName: 'Врач педиатр',
+					salary: '70 000 ₽'
+				})
+				+snVacItem({
+					time: '24 февраля 2021',
+					imgName: '2',
+					vacName: 'Гинеколог',
+					salary: '200 000 ₽ – 250 000 ₽'
+				})
+				+snVacItem({
+					time: 'Вчера, 17:53',
+					vacName: 'Врач хирург-терапевт',
+					salary: 'з/п не указана'
+				})
 		+puginationN()
 	// end sNVac
 
@@ -38,7 +41,7 @@ mixin sNVacEmpty(data)
 
 mixin snVacItem(data)
 	+e.item
-		+e.main-row.row.row--mb.align-items-center
+		+e.main-row.row.align-items-center
 			.col-md
 				+e.data-row.row.align-items-center
 					.col-auto
@@ -64,6 +67,65 @@ mixin snVacItem(data)
 					.col-auto
 						+e.like-btn(href="#")
 							+icon('like-fill')
+
+mixin snVacItemCreator(data)
+	+b.creator-item
+		+e.main-row.row
+			+e.main-l-col.col-lg
+				+e.data-row.row.align-items-center
+					.col-auto
+						+e.img(href='#')
+							if data.imgName
+								img(loading="lazy" src=`img/@2x/n-chosen-${data.imgName}.png` alt="")
+							else
+								img(loading="lazy" src=`img/svg/sqsuare-users-stab.svg` alt="")
+					.col
+						+e.vac-name(href='#')=data.vacName
+						+e.salary=data.salary
+						+e.loc-row.row.row--mb.align-items-center
+							.col-auto.col-md-12.col-xl-auto
+								+e.city г. Санкт-Петербург, пр. Мечникова, д.27
+			.col-md.col-lg-auto
+				+e.status-row.row.align-items-center
+					if data.publishedDate
+						.col-auto.order-0.order-md-last.order-lg-0
+							+e.p-date Опубликовано: 9 июня 2021
+					if data.remain
+						.col-auto
+							+e.remain Осталось 29 дн.
+					if data.greenPlate
+						.col-auto
+							+e.plate(style="border-color: #43D081; color: #43D081;") Запущено
+					if data.mutedPlate
+						.col-auto
+							+e.plate(style="background-color: #EFF2F6; color: #888C94; border-color: #EFF2F6;")=data.mutedPlate
+				if data.hasBtnsRow
+					+creatorBtns(data, 'd-md-none d-lg-flex')
+		+creatorBtns(data, 'd-none d-md-flex d-lg-none')
+
+mixin creatorBtns(data, addClasess='')
+	+e.btns-row.row.align-items-center(class=addClasess)
+		if data.blueBtn
+			.col-auto
+				+e.l-btn--blue(href='#') Открыть
+		if data.grayBtn
+			.col-auto
+				+e.l-btn--gray(href='#') Редактировать
+		if data.orangeBtn
+			.col-auto
+				+e.l-btn--orange.link-modal(href='#modal-archive') В архив
+
+mixin sNVacCreatorEmpty(data)
+	// start sNVac
+	+b.sNVac#sNVac&attributes(attributes)
+		+e.empty
+			+e.e-img
+				img(loading="lazy" src="img/@2x/empty-vac.png" alt="")
+			+e.e-txt У вас пока нет созданных вакансий.
+			+b.vac-btn(href="#")
+				+e.v-icon
+					+icon('vac-plus')
+				span Разместить вакансию
 
 mixin puginationN()
 	+b.pugination-n.row

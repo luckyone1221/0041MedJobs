@@ -9,15 +9,21 @@ include ../blocks/sDescr/_sDescr.pug
 include ../blocks/profesionals/_profesionals.pug
 include ../blocks/logPage/_logPage.pug
 include ../blocks/sAccProfile/_sAccProfile.pug
+include ../blocks/headerAlt/_headerAlt.pug
+include ../blocks/sProfileN/_sProfileN.pug
+include ../blocks/footerN/_footerN.pug
+include ../blocks/sNVac/_sNVac.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'bg-gray-120 mvp-page'
 block title
-	- let  title= '011-profile'
+	- let  title= '030-my-vacancy-empty'
 	title= title
 block pagecontent
-	+mob-mnu4()
-	+header()
-		+top-nav4()
-	+sAccProfile()
-	+footerAlt()
+	.headerAlt-cont
+		+headerAlt(false, false,true,'col col-md-auto')
+	+sProfileNCreatorVac({
+		title: 'Мои вакансии'
+	})
+		+sNVacCreatorEmpty()
+	+footerN()

@@ -141,9 +141,10 @@ mixin sProfileN(data)
 				.col-xlg-auto.d-none.d-xlg-block
 					+asideMenu()
 	// end sProfileN
+
 mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очень долгая услуга услуга 2', 'очень долгая услуга'], keyClass='default-select-js', addContClasses)
 	+b.custom-select(class=addContClasses)
-		select(name=selectName class=keyClass)
+		select(name=selectName class=keyClass)&attributes(attributes)
 			if block
 				block
 			else
@@ -152,11 +153,14 @@ mixin customSlect(selectName, optionsArr=['услуга 1', 'очень очен
 
 mixin asideMenu()
 	+e.aside-menu.aside-menu-js
-		ul
-			li: a.active(href='#box-1') Личные данные
-			li: a(href='#box-2') Безопасность
-			li: a(href='#box-3') Социальные профили
-			li: a(href='#box-4') Настройка уведомлений
+		if block
+			block
+		else
+			ul
+				li: a.active(href='#box-1') Личные данные
+				li: a(href='#box-2') Безопасность
+				li: a(href='#box-3') Социальные профили
+				li: a(href='#box-4') Настройка уведомлений
 
 mixin socProfieItem(iconName, addClasses='', del=false)
 	.col-auto
@@ -321,6 +325,271 @@ mixin sProfileNMyCab()
 						+lSidebarSlide(3,'Настройки профиля')
 						//4
 						+lSidebarSlide(4,'Избранные вакансии')
+				+e.content-col.col-xlg
+					.center-block
+						block
+
+mixin sProfileNCreator(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')
+						+lSidebarSlide(8,'Мои вакансии')
+						+lSidebarSlide(9,'Настройки профиля')(class='active')
+				.col-xlg
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title Настройки профиля
+							.col-12
+								+profileNBox('Об организации', 'box-1')
+									+e.b-col-pd.col-xl-auto
+										+input('E-mail при регистрации', 'email', 'E-mail при регистрации', 'reg-mail')
+										+input('Наименование организации', 'text', 'Наименование организации', 'name')
+										+e.input-wrap--no-lab
+											+e.input-title Город
+											+e.inps-row.row
+												.col-12
+													+customSlect('', ['Самара', 'Самара2', 'Самара2'])(data-placeholder='Выберите город')
+														option(value="" label='#')
+														option(value="Самара") Самара
+														option(value="Самара2") Самара2
+									+e.port-col--square.col-auto.ms-auto
+										+e.b-portrait--suare.--empty(href='#')
+											img(loading="lazy" src="img/svg/company-stab5.svg" alt="")
+										+e.b-change(href='#')
+											+e.b-change-img
+												img(loading="lazy" src="img/svg/cloud.svg" alt="")
+											span Заменить
+									+e.b-col-pd--base.col-xl-auto
+										+input('Введите адрес', 'text', 'Адрес')
+										+e.input-wrap--no-lab
+											+e.input-title Форма собственности компании
+											+e.inps-row.row
+												.col-12
+													+customSlect('', ['Самара', 'Самара2', 'Самара2'])(data-placeholder='Выберите из списка')
+														option(value="" label='#')
+														option(value="Самара") Самара
+														option(value="Самара2") Самара2
+										+input('Введите адрес сайта', 'text', 'Сайт')
+										+input('Введите описание организации', 'textarea', 'Описание организации')
+										//-+e.input-wrap--no-lab.align-items-start
+											+e.input-title Описание организации
+											+e.inps-row.row
+												.col-12
+													+e.TEXTAREA.input.form-control(placeholder="Введите описание организации")
+									+e.btn-col.col-12
+										+e.save-btn(type="submit") Сохранить изменения
+							.col-12
+								+profileNBox('Контактное лицо', 'box-2', 'pt-12 pt-md-0')
+									+e.b-col-pd--base.col-xl-auto
+										+input('Введите телефон', 'tel', 'Контактный телефон')
+										+input('Контактный e-mail', 'email', 'Введите e-mail')
+									+e.btn-col.col-12
+										+e.save-btn.muted(type="submit") Сохранить изменения
+							.col-12
+								+profileNBox('Безопасность', 'box-2', 'pt-12 pt-md-0')
+									+e.pass-col.col-base
+										//-1
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title.reuire Текущий пароль
+												+e.SPAN.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="current-pass" placeholder="Введите текущий пароль")
+													+e.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										//-2
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title.reuire Новый пароль
+												+e.SPAN.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="new-pass" placeholder="Введите новый пароль")
+													+e.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+										//-3
+										+e.input-wrap.form-group
+											label
+												+e.SPAN.input-title.reuire Новый пароль
+												+e.SPAN.inp-cont
+													+e.INPUT.input.form-control(type="password" required name="new-pass-repeat" placeholder="Повторите новый пароль")
+													+e.show-hide-btn.toggle-pass-inp-js
+														+icon('pass-eye')
+									+e.hint-col.col-base-auto
+										+e.h-title Пароль должен содержать:
+										+e.UL.h-list
+											li хотя бы одну цифру (0-9)
+											li хотя бы одну латинскую строчную букву (a-z)
+											li хотя бы одну латинскую прописную букву (A-Z)
+											li 6 знаков и более
+									+e.btn-col--security.col-12
+										+e.save-btn.muted(type="submit") Сохранить изменения
+							.col-12
+								+profileNBox('Реквизиты', 'box-4')
+									+e.b-col-pd--base.col-xl-auto
+										+input('Введите ИНН', 'text', 'ИНН')
+										+input('Введите юридическое наименование', 'text', 'Юридическое наименование')
+										+input('Введите юридический адрес', 'text', 'Юридический адрес')
+										+input('Введите расчетный счет', 'text', 'Расчетный счет')
+										+input('БИК банка', 'text', 'Введите БИК банка')
+										+input('Введите корреспондентский счет', 'text', 'Корреспондентский счет')
+									+e.btn-col.col-12
+										+e.save-btn.muted(type="submit") Сохранить изменения
+				.col-xlg-auto.d-none.d-xlg-block
+					+asideMenu()
+						ul
+							li: a.active(href='#box-1') Об организации
+							li: a(href='#box-2') Контактное лицо
+							li: a(href='#box-3') Безопасность
+							li: a(href='#box-4') Реквизиты
+						+e.how-btn(href='#') Как выглядит профиль
+
+mixin sProfileNCreatorVac(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')
+						+lSidebarSlide(8,'Мои вакансии')(class='active')
+						+lSidebarSlide(9,'Настройки профиля')
+				+e.content-col.col-xlg
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title=data.title
+							.col-auto.d-none.d-xlg-block
+								+e.place-vac(href='#')
+									+e.pv-ball
+										+icon('vac-plus')
+									span Разместить вакансию
+							.col-12
+								block
+
+mixin sProfileNCreate(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')
+						+lSidebarSlide(8,'Мои вакансии')
+						+lSidebarSlide(9,'Настройки профиля')
+				+e.content-col.col-xlg
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title=data.title
+							.col-12
+								+e.box
+									+form-wrap
+										+e.b-title Основная информация
+										+e.b-row.mb-48.mb-xlg-24.mb-xl-48.row&attributes(attributes)
+											+e.b-col-pd--base.col-12
+												+input('Должность', 'text', 'Введите должность')
+												//-
+												+e.input-wrap--no-lab
+													+e.input-title Регион
+													+e.inps-row.row
+														.col-12
+															+customSlect('')(data-placeholder='Выберите регион')
+																option(value="" label='#')
+																option(value="Самара") Самара
+																option(value="Самара2") Самара2
+												//-
+												+e.input-wrap--no-lab
+													+e.input-title Город
+													+e.inps-row.row
+														.col-12
+															+customSlect('')(data-placeholder='Выберите город')
+																option(value="" label='#')
+																option(value="Самара") Самара
+																option(value="Самара2") Самара2
+												//-
+												+input('Адрес', 'text', 'Введите адрес (дадата)')
+												//-
+												+e.input-wrap--no-lab
+													+e.input-title Опыт работы
+													+e.inps-row.row
+														.col-12
+															+customSlect('')(data-placeholder='Выберите из списка')
+																option(value="" label='#')
+																option(value="Самара") Самара
+																option(value="Самара2") Самара2
+												//-
+												+e.input-wrap--no-lab
+													+e.input-title Тип занятости
+													+e.inps-row.row
+														.col-12
+															+customSlect('')(data-placeholder='Выберите из списка')
+																option(value="" label='#')
+																option(value="Самара") Самара
+																option(value="Самара2") Самара2
+												//-
+												+e.input-wrap--no-lab
+													+e.input-title График
+													+e.inps-row.row
+														.col-12
+															+customSlect('')(data-placeholder='Выберите из списка')
+																option(value="" label='#')
+																option(value="Самара") Самара
+																option(value="Самара2") Самара2
+												+e.input-wrap--no-lab
+													+e.input-title Заработная плата, ₽
+													+e.inps-row.row
+														.col-12
+															+e.couple-row.row
+																+e.c-col.col-6(data-ph="от")
+																	+e.INPUT.input--couple.form-control(type="text" placeholder='25 000')
+																+e.c-col.col-6(data-ph="до")
+																	+e.INPUT.input--couple.form-control(type="text" placeholder='100 000')
+															+customChb('Не указывать')
+												//-
+												+e.input-wrap--no-lab.align-items-start
+													+e.input-title Описание вакансии
+													+e.inps-row.row
+														.col-12
+															+e.TEXTAREA.input--big-ta.form-control(placeholder="")
+												//-
+												+e.input-wrap--no-lab.align-items-start
+													+e.input-title Ключевые навыки
+													+e.inps-row.row
+														.col-12
+															+multipleSelect2('prof-skills', undefined, undefined, '')
+																option(selected) Умный
+																option(selected) Усидчевый
+										//-second block
+										+e.b-title.mb-24.mb-base-48 Контактное лицо
+										+e.cf-txt.d-base-none.mb-24 Укажите контактное лицо, которое будет принимать звонки и письма с откликами соискателей.
+										+e.b-row.row&attributes(attributes)
+											+e.b-col-pd--base.col-base-auto
+												+input('Введите ФИО', 'text', 'Контактное лицо')
+												+input('Введите должность', 'text', 'Должность контактного лица')
+												+input('Введите телефон', 'tel', 'Телефон контактного лица')
+												+input('Введите e-mail', 'email', 'E-mail контактного лица')
+											.col-base.d-none.d-base-block
+												+e.cf-txt Укажите контактное лицо, которое будет принимать звонки и письма с откликами соискателей.
+											+e.btn-col.col-12
+												+e.sub-btns-row.row.justify-content-center.justify-content-md-end
+													.col-auto
+														+e.cr-btn--gray(type="button") Сохранить как черновик
+													.col-auto
+														+e.cr-btn--green(type="button") Опубликовать вакансию
+
+mixin sProfileNCreatorCab(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')(class='active')
+						+lSidebarSlide(8,'Мои вакансии')
+						+lSidebarSlide(9,'Настройки профиля')
 				+e.content-col.col-xlg
 					.center-block
 						block

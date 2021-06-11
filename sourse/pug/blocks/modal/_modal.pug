@@ -59,6 +59,35 @@ mixin modal()
 			+e.results
 				ul
 					li: a(href="#") Тольятти
+	//-modal load
+	+b.modal-load.modal-win.text-center(id="modal-load" class=" " style="display: none" )
+		+e.title Загрузите фотографию
+		+e.descr Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+		+e.btn--load(type="button") Загрузить файл
+	+b.modal-load.modal-win.text-center(id="modal-load2" class="" style="display: none")
+		+e.title Загрузите фотографию
+		+e.descr Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+		+e.name ...logo-company.png
+		+e.btn--save(type="button") Сохранить
+	//modal archive
+	+b.modal-load.modal-win.text-center(id="modal-achive" class="" style="display: none")
+		+e.title Вы уверены, что хотите перенести вакансию в архив?
+		+e.btns-row.row.justify-content-center
+			.col-auto
+				+e.btn-sm(type="button") Да
+			.col-auto
+				+e.btn-sm.modal-close-js(type="button") Нет
+	+b.modal-load.modal-win.text-center(id="modal-achive2" class="" style="display: none")
+		+e.title Вы уверены, что хотите перенести вакансию в архив?
+		+e.btns-row.row
+			.col-12
+				+e.btn-big(type="button") Позиция закрылась с MedicJobs.ru
+			.col-12
+				+e.btn-big(type="button") Позиция закрылась не с помощью MedicJobs.ru
+			.col-12
+				+e.btn-big(type="button") Позиция не закрылась
+			.col-12
+				+e.btn-big(type="button") Другая причина
 	//---
 	+customModal('work-conditions', 'Условия работы')
 		//-1

@@ -34,3 +34,10 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet-empty.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/027-contacts.html>
+===========  
+1. <https://luckyone1221.github.io/0041MedJobs/public/028-creator-lc.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/029-my-vacancy.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/030-my-vacancy-empty.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/031-create-vac.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/032-create-cab.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/033-create-cab-empty.html>
