@@ -4,15 +4,22 @@
 		<meta charset="utf-8">
 		<title>04-vacancy</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="width=570,  maximum-scale=1.0, user-scalable=no  " name="viewport">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
 		<script>
 			let viewport = document.querySelector("meta[name=viewport]");
-			if (navigator.platform.indexOf("iPad") != -1) {
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
 				window.addEventListener('resize', () => { 
-					this.innerWidth > 570 
-						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
-						:  viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+				 w();
 				}, { passive: true });
 			}
 		</script><link rel="preconnect" href="https://fonts.gstatic.com">
@@ -507,10 +514,10 @@
 								<div class="col">
 									<div class="pugination">
 										<ul class="pagination">
-											<li class="prev disabled"><a href="#">
+											<li class="prev disabled"><span>
 													<svg class="icon icon-chevron-left ">
 														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-													</svg></a></li>
+													</svg></span></li>
 											<li class="active"><a href="#">1</a></li>
 											<li><a href="#">2</a></li>
 											<li><a href="#">3</a></li>
@@ -720,6 +727,61 @@
 						</ul>
 					</div>
 				</form>
+			</div>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-load" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<button class="modal-load__btn modal-load__btn--load" type="button">Загрузить файл
+			</button>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-load2" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<div class="modal-load__name">...logo-company.png
+			</div>
+			<button class="modal-load__btn modal-load__btn--save" type="button">Сохранить
+			</button>
+		</div>
+		<!--modal archive-->
+		<div class="modal-load modal-win text-center" id="modal-achive" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row justify-content-center">
+				<div class="col-auto">
+					<button class="modal-load__btn-sm" type="button">Да
+					</button>
+				</div>
+				<div class="col-auto">
+					<button class="modal-load__btn-sm modal-close-js" type="button">Нет
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-achive2" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row">
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась с MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась не с помощью MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция не закрылась
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Другая причина
+					</button>
+				</div>
 			</div>
 		</div>
 		<div class="custom-modal custom-modal--js" id="work-conditions">
