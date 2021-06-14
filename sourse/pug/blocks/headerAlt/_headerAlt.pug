@@ -19,6 +19,7 @@ mixin headerAlt(bellActive, hasSearch=true, hasVacBtn, logoColClasses='col')
 							+e.search-btn.search-btn-js(type='button')
 								+icon('zoom-2')
 							+e.serch-type-dd
+								input.headerAlt-st-hidden-inp-js(type="hidden" value="Вакансии")
 								+e.st-txt.headerAlt-st-txt-js Вакансии
 								+e.st-dd.headerAlt-st-dd-js
 									+e.st-inner

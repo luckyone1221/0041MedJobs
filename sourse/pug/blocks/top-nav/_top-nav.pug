@@ -202,7 +202,7 @@ mixin top-nav5(data)
 				+e.location-col.col-auto.d-none.d-md-block
 					+e.location.link-modal(href='#modal-city')
 						+icon('location')
-						+e.loc-txt Санкт-Петербург
+						+e.loc-txt=`${data.location || 'Санкт-Петербург'}`
 				.col-auto
 					+e.blue-cv-btn.d-none.d-md-inline-block(href="#") Разместить резюме
 					+e.mob-cv-btn.d-md-none(href="#")

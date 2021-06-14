@@ -1,0 +1,38 @@
+mixin sAdvantage(data)
+	// start sAdvantage
+	+b.SECTION.sAdvantage.section#sAdvantage&attributes(attributes)
+		.container
+			+b.section-title--lined.text-center
+				h2
+					| Преимущества для
+					|
+					br.d-md-none
+					| соискателя
+			+e.row.row
+				+sAVantageItem(1)
+					| Сервис специализируется только на вакансиях и организациях в сфере медицины
+				+sAVantageItem(2)
+					| Легко заполнить профиль
+					|
+					br.d-none.d-xl-block
+					| и резюме
+				+sAVantageItem(3)
+					| Постоянно развиваем и совершенствуем сервис по поиску вакансий и организаций
+				+sAVantageItem(4)
+					| Сохраняйте вакансии в избранное, чтобы не потерять
+				+sAVantageItem(5)
+					| Откликайтесь на понравившиеся вакансии и ждите приглашения на собеседование
+				+sAVantageItem(6)
+					| Если работодателю понравится ваше резюме, вы получите уведомление
+				+sAVantageItem(7)
+					| Мы подбираем вакансии под ваше резюме и предлагаем их вам
+				+sAVantageItem(8)
+					| Наш алгоритм ищет лучшие медицинские вакансии с рекрутингового сайта hh.ru
+	// end sAdvantage
+
+mixin sAVantageItem(imgNum)
+	.col-6.col-lg-4.col-xl-3
+		+e.img
+			img(loading="lazy" src=`img/svg/sAVantage-${imgNum}.svg` alt="")
+		+e.txt.text-center
+			block

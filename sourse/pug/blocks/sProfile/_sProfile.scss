@@ -414,6 +414,15 @@
 		box-shadow: 0px 5px 10px rgba(38, 39, 40, 0.15);
 	}
 
+	&.item-alt{
+		border-color: $primary;
+
+		box-shadow: inset 0 0 0 1px rgba($primary, 1), 0px 5px 10px rgba(38, 39, 40, 0);
+		&:hover{
+			box-shadow: inset 0 0 0 1px rgba($primary, 1), 0px 5px 10px rgba(38, 39, 40, 0.15);
+		}
+	}
+
 	&__date-box{
 		position: absolute;
 		top: 18px;
@@ -473,6 +482,15 @@
 
 		margin-bottom: 16px;
 	}
+	&__descr{
+		font-size: 14px;
+		@include media-breakpoint-between(xlg,xl){
+			font-size: 12px;
+		}
+
+		line-height: 1.5;
+		padding-bottom: 12px;
+	}
 	&__row{
 		@include roww(12px);
 	}
@@ -520,5 +538,42 @@
 		font-size: 13.7px;
 		color: $gray-600;
 	}
+
+	//
+	&__hidden-btns{
+		padding-top: 24px;
+		@include media-breakpoint-between(xlg, xl){
+			padding-top: 18px;
+		}
+	}
+
+	.prof-vac-hidden-js{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+	&__btns-row{
+		--bs-gutter-y: 12px;
+		--bs-gutter-x: 12px;
+	}
+	&__btn{
+		@extend .btn;
+		min-width: 150px;
+		border-radius: 6px;
+		border: none!important;
+		padding: 10px 20px;
+		font-size: inherit!important;
+
+		&--blue{
+			@extend .btn-primary;
+			font-weight: 700;
+			color: $white!important;
+		}
+		&--gray{
+			@extend .btn-light;
+		}
+	}
+	&__{}
 	&__{}
 }

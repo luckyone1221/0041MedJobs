@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/sProfile/_sProfile.pug
+
+block variables
+	- let  mainPage= 'new-header'
+block title
+	- let  title= 'вакансии'
+	title= title
+block pagecontent
+	+mob-mnu5({
+		logged: false,
+	})
+	+header()
+		+top-nav5({
+			logged: false,
+			location: 'Москва',
+		})
+	+sSearchVacancyDemo()
+		+inpStrip('Вакансии', 'Введите название вакансии')
+		+breadcrumb('Главная', 'Вакансии')
+	+footerAlt()

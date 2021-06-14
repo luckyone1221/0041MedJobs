@@ -4,31 +4,35 @@ mixin sVacDay(data)
 		.container
 			+b.section-title--lined.text-center.text-xl-start
 				h2 Вакансии дня
-			+e.row.row
-				-for (var i = 0; i < 6; i++)
-					+sVacDayCard().col-xl-4
-			// br убрать  внизу вариант, когда 2 карточки
-			br
-			br
-			+e.row.row
-				-for (var i = 0; i < 2; i++)
-					+sVacDayCard()
+			if block
+				block
+			else
+				+e.row.row
+					-for (var i = 0; i < 6; i++)
+						+sVacDayCard({}).col-xl-4
+				// br убрать  внизу вариант, когда 2 карточки
+				br
+				br
+				+e.row.row
+					-for (var i = 0; i < 2; i++)
+						+sVacDayCard({})
 	// end sVacDay
+	//-demo-vac-
 
-mixin sVacDayCard()
+mixin sVacDayCard(data)
 	div.col-md-6&attributes(attributes)
 		+e.card(href='#')
 			//-+e.star
 				img(loading="lazy" src="img/svg/circle-star.svg" alt="")
-			+e.DIV.duty Врач-терапевт стационар
-			+e.DIV.salary 30 000-35 000 ₽
+			+e.DIV.duty=`${data.duty || 'Врач-терапевт стационар'}`
+			+e.DIV.salary=`${data.salary || '30 000-35 000 ₽'}`
 			+e.DIV.logo-row.row
 				.col-auto
 					+e.DIV.logo
-						img(loading="lazy" src="img/@2x/n-chosen-1.png" alt="")
+						img(loading="lazy" src=`img/@2x/${data.imgName || 'n-chosen-1'}.png` alt="")
 				.col
-					+e.DIV.name ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-					+e.DIV.city г. Санкт-Петербург
+					+e.DIV.name=`${data.name || 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург'}`
+					+e.DIV.city=`${data.city || 'г. Санкт-Петербург'}`
 			//-+e.btns-row.row
 				.col-6
 					+e.call-btn(href="#") Откликнуться

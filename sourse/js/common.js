@@ -379,6 +379,9 @@ function eventHandler() {
 
 		let input = document.querySelector('.search-inp-js');
 		input.setAttribute('placeholder', this.getAttribute('data-inp-placeholder'));
+
+		let hiddenInput = document.querySelector('.headerAlt-st-hidden-inp-js');
+		hiddenInput.value = this.getAttribute('data-inp-placeholder');
 	});
 
 	//new footem items
@@ -458,7 +461,8 @@ function eventHandler() {
 	}
 	//colookerBtn
 	let colookerBtn = document.querySelector('.colooker-dd-btn-js');
-	console.log(colookerBtn);
+	//console.log(colookerBtn);
+
 	$(colookerBtn).click(function (){
 		$(colookerBtn).toggleClass('active');
 		$('.colooker-dd--js').toggleClass('active');
@@ -781,11 +785,18 @@ function eventHandler() {
 		$('.sLogoes__col:nth-child(n+7)').slideToggle(function (){
 			$(this).toggleClass('active');
 		})
-	})
+	});
 
-
-	//todo New
-	//2 kill ui kit
+	//
+	// $('.prof-vac-js').mouseenter(function (){
+	// 	$(this).find('.prof-vac-hidden-js').slideDown(function (){
+	// 		$(this).addClass('active');
+	// 	});
+	// }).mouseleave(function (){
+	// 	$(this).find('.prof-vac-hidden-js').slideUp(function (){
+	// 		$(this).removeClass('active');
+	// 	});
+	// });
 
 };
 if (document.readyState !== 'loading') {

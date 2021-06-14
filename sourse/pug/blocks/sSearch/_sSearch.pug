@@ -188,7 +188,7 @@ mixin filterVacancy()
 			+e.shm-content.shm-cont-js
 				+customChb('откриваюсь на клик')
 				+customChb('по серой кнопке')
-		+e.BUTTON.show-btn(type="submit") Показать 938
+		+e.BUTTON.show-btn(type="submit") Показать 95
 
 mixin filterProf()
 	+b.filter--js
@@ -495,3 +495,83 @@ mixin newOrganizationsItem(data)
 			.col
 				+e.title(href='#')=data.title
 				+e.city г. Санкт-Петербург, пр. Мечникова, д.27
+
+mixin sSearchVacancyDemo(data)
+	// start sSearch
+	+b.SECTION.sSearch--vacancy.section#sSearch&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h1 Вакансии
+			+e.row.row
+				+e.filter-col.col-xl-3
+					+e.filter-cont
+						//-f-btn
+						+e.f-btn.f-btn-js.d-xl-none
+							+e.f-img
+								img(loading="lazy" src="img/svg/filter-bar.svg" alt="")
+								img(loading="lazy" src="img/svg/filter-cross.svg" alt="")
+							+e.f-btn-txt
+								span Фильтр
+								span Закрыть
+						+filterVacancy()
+				.col-xl-9
+					+e.vac-items.pb-36.pb-xl-48
+						+profileItem({
+							date: '12 июня 2021',
+							name: 'Медицинская сестра',
+							salary: '50 000-100 000 ₽',
+							imgName: 'demo-vac-',
+							logo: 1,
+							title: 'ООО Лаборатория Гемотест',
+							city: 'г. Москва',
+							addClasses: 'item-alt',
+							hiddenItems: true,
+						})
+						+profileItem({
+							date: '12 июня 2021',
+							name: 'Врач рентгенолог КТ',
+							salary: 'от 100 000 ₽',
+							imgName: 'demo-vac-',
+							logo: 2,
+							title: 'МРЦ Беляево (Центр Дикуля)',
+							city: 'г. Москва',
+						})
+						+profileItem({
+							date: '12 июня 2021',
+							name: 'Архивариус',
+							salary: '50 000 ₽',
+							imgName: 'demo-vac-',
+							logo: 3,
+							title: 'ГК Медси. Клиники',
+							city: 'г. Москва',
+						})
+						+profileItem({
+							date: '12 июня 2021',
+							name: 'Ночной дежурант в аптеку',
+							salary: '18 000-25 000 ₽',
+							imgName: 'demo-vac-',
+							logo: 4,
+							title: 'ЗАО ЭВАЛАР',
+							city: 'г. Москва',
+						})
+						+profileItem({
+							date: '12 июня 2021',
+							name: 'Врач-дерматовенеролог',
+							salary: '75 000 ₽',
+							imgName: 'demo-vac-',
+							logo: 5,
+							title: 'БУДЬ ЗДОРОВ, Клиника',
+							city: 'г. Москва',
+						})
+						+profileItem({
+							date: '12 июня 2021',
+							name: 'Врач-стоматолог-терапевт',
+							salary: 'З/п не указана',
+							imgName: 'demo-vac-',
+							logo: 6,
+							title: 'ГК Медси. Клиники',
+							city: 'г. Москва',
+						})
+					+puginRow()
+	// end sSearch

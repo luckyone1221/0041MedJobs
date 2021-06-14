@@ -1,6 +1,6 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -370,6 +370,8 @@ function eventHandler() {
 		stTxt.innerHTML = this.innerHTML;
 		let input = document.querySelector('.search-inp-js');
 		input.setAttribute('placeholder', this.getAttribute('data-inp-placeholder'));
+		let hiddenInput = document.querySelector('.headerAlt-st-hidden-inp-js');
+		hiddenInput.value = this.getAttribute('data-inp-placeholder');
 	}); //new footem items
 
 	$('.fl-icon-js').click(function () {
@@ -450,8 +452,8 @@ function eventHandler() {
 	} //colookerBtn
 
 
-	let colookerBtn = document.querySelector('.colooker-dd-btn-js');
-	console.log(colookerBtn);
+	let colookerBtn = document.querySelector('.colooker-dd-btn-js'); //console.log(colookerBtn);
+
 	$(colookerBtn).click(function () {
 		$(colookerBtn).toggleClass('active');
 		$('.colooker-dd--js').toggleClass('active');
@@ -758,8 +760,16 @@ function eventHandler() {
 		$('.sLogoes__col:nth-child(n+7)').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
-	}); //todo New
-	//2 kill ui kit
+	}); //
+	// $('.prof-vac-js').mouseenter(function (){
+	// 	$(this).find('.prof-vac-hidden-js').slideDown(function (){
+	// 		$(this).addClass('active');
+	// 	});
+	// }).mouseleave(function (){
+	// 	$(this).find('.prof-vac-hidden-js').slideUp(function (){
+	// 		$(this).removeClass('active');
+	// 	});
+	// });
 }
 
 ;

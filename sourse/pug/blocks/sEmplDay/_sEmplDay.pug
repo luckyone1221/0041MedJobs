@@ -4,24 +4,37 @@ mixin sEmplDay(data)
 		.container
 			+b.section-title--lined.text-center.text-xl-start
 				h2 Работодатели дня
-			+e.row.row
-				+sEmplDayCard(1).col-lg-3.col-6
-				+sEmplDayCard(2).col-lg-3.col-6
-				+sEmplDayCard(3).col-lg-3.col-6
-				+sEmplDayCard(4).col-lg-3.col-6
-			// br убрать убрать  внизу вариант, когда 2 карточки
-			br
-			br
-			+e.row.row
-				+sEmplDayCard(1).col-lg-6
+			if block
+				block
+			else
+				+e.row.row
+					+sEmplDayCard({
+						imgNum: 1,
+					}).col-lg-3.col-6
+					+sEmplDayCard({
+						imgNum: 2,
+					}).col-lg-3.col-6
+					+sEmplDayCard({
+						imgNum: 3,
+					}).col-lg-3.col-6
+					+sEmplDayCard({
+						imgNum: 4,
+					}).col-lg-3.col-6
+				// br убрать убрать  внизу вариант, когда 2 карточки
+				br
+				br
+				+e.row.row
+					+sEmplDayCard({
+						imgNum: 1,
+					}).col-lg-6
 	// end sEmplDay
 
 
-mixin sEmplDayCard(imgNum)
+mixin sEmplDayCard(data)
 	div&attributes(attributes)
 		+e.card(href="#")
 			+e.DIV.img
-				img(loading="lazy" src=`img/@2x/sEmplDay-${imgNum}.png` alt="")
+				img(loading="lazy" src=`img/@2x/sEmplDay-${data.imgNum || 1}.png` alt="")
 			+e.DIV.txt-content.text-center
-				+e.DIV.name ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-				+e.DIV.vac-ammount 7 вакансий
+				+e.DIV.name=`${data.name || 'ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург'}`
+				+e.DIV.vac-ammount=`${data.vacAmount || '7 вакансий'}`

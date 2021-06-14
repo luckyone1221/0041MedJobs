@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>главная</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<meta name="description" content="Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.">
+	<body class="headings-color has-reg-btn new-header"> 
+		<div class="main-wrapper">
+			<div class="mm mm--js mm--alt5 d-xl-none">
+				<div class="new-mnu">
+					<div class="new-mnu__box"><a class="top-nav__blue-cv-btn" href="#">Разместить резюме</a><a class="new-mnu__enter-btn" href="#">Войти</a>
+					</div>
+					<div class="new-mnu__box"><a class="top-nav__location link-modal" href="#modal-city">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Работодатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">О компании</a><a class="new-mnu__item" href="#">Помощь</a><a class="new-mnu__item" href="#">Контакты</a>
+					</div>
+				</div>
+			</div>
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav top-nav--alt block-with-lazy">
+					<div class="top-nav__container top-nav__container--alt5 container">
+						<div class="top-nav__row top-nav__row--alt row">
+							<div class="col-auto d-lg-none">
+								<div class="top-nav__burger top-nav__burger--alt burger-js"><span></span>
+								</div>
+							</div>
+							<div class="col col-lg-auto"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-lg-block">
+								<div class="top-nav__colooker-dd-cont">
+									<div class="top-nav__c-dd-btn colooker-dd-btn-js">Соискатель
+									</div>
+									<div class="colooker-dd colooker-dd--js">
+										<div class="colooker-dd__content">
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											</div>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">Работодатель</a>
+											</div>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="top-nav__location-col col-auto d-none d-md-block"><a class="top-nav__location link-modal" href="#modal-city">
+								<svg class="icon icon-location ">
+									<use xlink:href="img/svg/sprite.svg#location"></use>
+								</svg><span class="top-nav__loc-txt">Москва</span></a>
+							</div>
+							<div class="col-auto"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a><a class="top-nav__mob-cv-btn d-md-none" href="#"><span class="top-nav__mcv-icon">
+								<svg class="icon icon-plus-bold ">
+									<use xlink:href="img/svg/sprite.svg#plus-bold"></use>
+								</svg></span><span class="top-nav__mcv-txt">Разместить резюме</span></a>
+							</div>
+							<div class="col-auto"><a class="top-nav__enter-link d-none d-md-inline" href="#">Войти</a><a class="top-nav__mob-enter d-md-none" href="#">
+								<svg class="icon icon-avatar-stab ">
+									<use xlink:href="img/svg/sprite.svg#avatar-stab"></use>
+								</svg></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- end header-->
+			<!-- start sBaner-->
+			<section class="sBaner section" id="sBaner">
+				<div class="sBaner__bg">
+					<div class="sBaner__ball sBaner__ball--1">
+					</div>
+					<div class="sBaner__ball sBaner__ball--2">
+					</div>
+					<div class="sBaner__ball sBaner__ball--3 d-none d-xl-block">
+					</div>
+					<div class="sBaner__ball sBaner__ball--4 d-none d-xl-block">
+					</div>
+				</div>
+				<div class="sBaner__container container">
+					<!-- picture-->
+					<picture class="sBaner__img d-none d-xl-flex"> 
+						<noscript class="loading-lazy">
+							<source type="image/webp" srcset="img/@2x/webp/sBaner-img.webp" media="(min-width:576px)"/>
+							<source type="image/webp" srcset="img/@1x/webp/sBaner-img.webp"/>
+							<source type="image/png" srcset="img/@2x/sBaner-img.png" media="(min-width:576px)"/>
+							<source type="image/png" srcset="img/@1x/sBaner-img.png"/><img src="img/@2x/sBaner-img.png" alt="" loading="lazy"/>
+						</noscript>
+					</picture>
+					<!-- /picture-->
+					<div class="sBaner__row row">
+						<div class="col-xl-5">
+							<div class="section-title text-center text-xl-start">
+								<h1>Подбор вакансий<br/>для медицинских сотрудников</h1>
+								<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более...</p>
+							</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__search-row row sBaner-search-row-js">
+									<div class="col">
+										<div class="form-wrap__sub-row row sBaner-sub-row-js">
+											<div class="col-auto">
+												<div class="custom-select">
+													<select class="main-page-select2-js" name="type">
+														<option value="Вакансии">Вакансии</option>
+														<option value="Самара2">Самара2</option>
+														<option value="Самара2">Самара2</option>
+													</select>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control sBaner-input-js" type="text" placeholder="Введите название вакансии" name="searc"/>
+													<button class="form-wrap__find-btn d-none d-md-block" type="submit">Найти
+													</button>
+												</div>
+											</div>
+											<!--+input('Введите название вакансии', 'text', undefined, 'search')-->
+										</div>
+									</div>
+									<div class="col-md-auto d-md-none">
+										<button class="form-wrap__find-btn" type="submit">Найти
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sBaner-->
+			<!-- start sVacDay-->
+			<section class="sVacDay section" id="sVacDay">
+				<div class="container">
+					<div class="section-title section-title--lined text-center text-xl-start">
+						<h2>Вакансии дня</h2>
+					</div>
+					<div class="sVacDay__row row">
+						<div class="col-md-6 col-xl-4"><a class="sVacDay__card" href="#">
+							<div class="sVacDay__duty">Медицинская сестра
+							</div>
+							<div class="sVacDay__salary">50 000-100 000 ₽
+							</div>
+							<div class="sVacDay__logo-row row">
+								<div class="col-auto">
+									<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/demo-vac-1.png" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="sVacDay__name">ООО Лаборатория Гемотест
+									</div>
+									<div class="sVacDay__city">г. Москва
+									</div>
+								</div>
+							</div></a>
+						</div>
+						<div class="col-md-6 col-xl-4"><a class="sVacDay__card" href="#">
+							<div class="sVacDay__duty">Врач рентгенолог КТ
+							</div>
+							<div class="sVacDay__salary">от 100 000 ₽
+							</div>
+							<div class="sVacDay__logo-row row">
+								<div class="col-auto">
+									<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/demo-vac-2.png" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="sVacDay__name">МРЦ Беляево (Центр Дикуля)
+									</div>
+									<div class="sVacDay__city">г. Москва
+									</div>
+								</div>
+							</div></a>
+						</div>
+						<div class="col-md-6 col-xl-4"><a class="sVacDay__card" href="#">
+							<div class="sVacDay__duty">Архивариус
+							</div>
+							<div class="sVacDay__salary">50 000 ₽
+							</div>
+							<div class="sVacDay__logo-row row">
+								<div class="col-auto">
+									<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/demo-vac-3.png" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="sVacDay__name">ГК Медси. Клиники
+									</div>
+									<div class="sVacDay__city">г. Москва
+									</div>
+								</div>
+							</div></a>
+						</div>
+						<div class="col-md-6 col-xl-4"><a class="sVacDay__card" href="#">
+							<div class="sVacDay__duty">Ночной дежурант в аптеку
+							</div>
+							<div class="sVacDay__salary">18 000-25 000 ₽
+							</div>
+							<div class="sVacDay__logo-row row">
+								<div class="col-auto">
+									<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/demo-vac-4.png" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="sVacDay__name">ЗАО ЭВАЛАР
+									</div>
+									<div class="sVacDay__city">г. Москва
+									</div>
+								</div>
+							</div></a>
+						</div>
+						<div class="col-md-6 col-xl-4"><a class="sVacDay__card" href="#">
+							<div class="sVacDay__duty">Врач-дерматовенеролог
+							</div>
+							<div class="sVacDay__salary">75 000 ₽
+							</div>
+							<div class="sVacDay__logo-row row">
+								<div class="col-auto">
+									<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/demo-vac-5.png" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="sVacDay__name">БУДЬ ЗДОРОВ, Клиника
+									</div>
+									<div class="sVacDay__city">г. Москва
+									</div>
+								</div>
+							</div></a>
+						</div>
+						<div class="col-md-6 col-xl-4"><a class="sVacDay__card" href="#">
+							<div class="sVacDay__duty">Врач-стоматолог-терапевт
+							</div>
+							<div class="sVacDay__salary">З/п не указана
+							</div>
+							<div class="sVacDay__logo-row row">
+								<div class="col-auto">
+									<div class="sVacDay__logo"><img loading="lazy" src="img/@2x/demo-vac-6.png" alt=""/>
+									</div>
+								</div>
+								<div class="col">
+									<div class="sVacDay__name">ГК Медси. Клиники
+									</div>
+									<div class="sVacDay__city">г. Москва
+									</div>
+								</div>
+							</div></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sVacDay-->
+			<!-- start sEmplDay-->
+			<section class="sEmplDay section" id="sEmplDay">
+				<div class="container">
+					<div class="section-title section-title--lined text-center text-xl-start">
+						<h2>Работодатели дня</h2>
+					</div>
+					<div class="sEmplDay__row row">
+						<div class="col-lg-3 col-6"><a class="sEmplDay__card" href="#">
+							<div class="sEmplDay__img"><img loading="lazy" src="img/@2x/sEmplDay-5.png" alt=""/>
+							</div>
+							<div class="sEmplDay__txt-content text-center">
+								<div class="sEmplDay__name">ГК Медси. Клиники
+								</div>
+								<div class="sEmplDay__vac-ammount">13 вакансий
+								</div>
+							</div></a>
+						</div>
+						<div class="col-lg-3 col-6"><a class="sEmplDay__card" href="#">
+							<div class="sEmplDay__img"><img loading="lazy" src="img/@2x/sEmplDay-6.png" alt=""/>
+							</div>
+							<div class="sEmplDay__txt-content text-center">
+								<div class="sEmplDay__name">МРЦ Беляево (Центр Дикуля)
+								</div>
+								<div class="sEmplDay__vac-ammount">5 вакансий
+								</div>
+							</div></a>
+						</div>
+						<div class="col-lg-3 col-6"><a class="sEmplDay__card" href="#">
+							<div class="sEmplDay__img"><img loading="lazy" src="img/@2x/sEmplDay-7.png" alt=""/>
+							</div>
+							<div class="sEmplDay__txt-content text-center">
+								<div class="sEmplDay__name">ЗАО Эвалар
+								</div>
+								<div class="sEmplDay__vac-ammount">2 вакансии
+								</div>
+							</div></a>
+						</div>
+						<div class="col-lg-3 col-6"><a class="sEmplDay__card" href="#">
+							<div class="sEmplDay__img"><img loading="lazy" src="img/@2x/sEmplDay-8.png" alt=""/>
+							</div>
+							<div class="sEmplDay__txt-content text-center">
+								<div class="sEmplDay__name">ООО Лаборатория Гемотест
+								</div>
+								<div class="sEmplDay__vac-ammount">3 вакасии
+								</div>
+							</div></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sEmplDay-->
+			<!-- start sAbout-->
+			<section class="sAbout section" id="sAbout">
+				<div class="container">
+					<div class="sAbout__row row align-items-center">
+						<div class="col-xl-6">
+							<!-- picture-->
+							<picture class="sAbout__pic"> 
+								<noscript class="loading-lazy">
+									<source type="image/webp" srcset="img/@2x/webp/sAbout-pic.webp"/><img src="img/@2x/sAbout-pic.png" alt="" loading="lazy"/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="col-xl-6 text-center text-xl-start">
+							<div class="section-title section-title--lined">
+								<h2>О проекте MedicJobs</h2>
+							</div>
+							<div class="sAbout__descr">MedicJobs создан медиками для медиков. Мы понимаем, с какими проблемами сталкивается медицинский сотрудник при поиске работы. Именно для этого мы создали MedicJobs, чтобы работодатели могли быстро найти подходящего сотрудника, а соискатели — хорошую работу. Мы понимаем всю специфичность профессии, поэтому внедрили гибкие фильтры, интеллектуальный подбор, систему оценок и многое другое.MedicJobs будет выдавать в поиске только подходящие вакансии и рекомендовать резюме работодателям автоматически. Наша задача - минимизировать ваши потери времени и оказать эффективную помощь по поиску работы.
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sAbout-->
+			<!-- start sLogoes-->
+			<section class="sLogoes section" id="sLogoes">
+				<div class="container">
+					<div class="section-title section-title--lined text-center">
+						<h2>
+							На нашем сайте
+							<br class="d-md-none"/>представлены вакансии<br/>частных и государственных
+							<br class="d-xl-none"/>медицинских организаций
+						</h2>
+					</div>
+					<div class="sLogoes__row row">
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb1"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-1.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb2"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-2.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb3"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-3.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb4"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-4.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb5"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-5.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb6"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-6.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb7"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-7.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb8"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-8.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb9"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-9.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb10"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-10.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb11"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-11.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb12"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-12.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb13"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-13.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb14"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-14.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb15"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-15.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb16"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-16.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb17"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-17.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb18"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-18.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb19"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-19.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb20"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-20.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb21"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-21.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb22"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-22.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb23"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-23.png" alt=""/></div>
+							</label>
+						</div>
+						<div class="sLogoes__col col-4 col-md-3 col-xl-2">
+							<label class="sLogoes__item">
+								<input class="invisible" type="checkbox" name="sLogoesChb24"/>
+								<div class="logo-img"><img loading="lazy" src="img/@2x/sLogoes-24.png" alt=""/></div>
+							</label>
+						</div>
+					</div>
+					<div class="sLogoes__show-hide-cont text-center pt-18 pt-sm-24 d-md-none">
+						<div class="sLogoes__show-hide-btn sLogoes-btn-js"><span>Показать еще</span><span>Скрыть</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sLogoes-->
+			<!-- start sAdvantage-->
+			<section class="sAdvantage section" id="sAdvantage">
+				<div class="container">
+					<div class="section-title section-title--lined text-center">
+						<h2>
+							Преимущества для
+							<br class="d-md-none"/>соискателя
+						</h2>
+					</div>
+					<div class="sAdvantage__row row">
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-1.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">Сервис специализируется только на вакансиях и организациях в сфере медицины
+							</div>
+						</div>
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-2.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">
+								Легко заполнить профиль
+								<br class="d-none d-xl-block"/>и резюме
+							</div>
+						</div>
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-3.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">Постоянно развиваем и совершенствуем сервис по поиску вакансий и организаций
+							</div>
+						</div>
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-4.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">Сохраняйте вакансии в избранное, чтобы не потерять
+							</div>
+						</div>
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-5.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">Откликайтесь на понравившиеся вакансии и ждите приглашения на собеседование
+							</div>
+						</div>
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-6.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">Если работодателю понравится ваше резюме, вы получите уведомление
+							</div>
+						</div>
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-7.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">Мы подбираем вакансии под ваше резюме и предлагаем их вам
+							</div>
+						</div>
+						<div class="col-6 col-lg-4 col-xl-3">
+							<div class="sAdvantage__img"><img loading="lazy" src="img/svg/sAVantage-8.svg" alt=""/>
+							</div>
+							<div class="sAdvantage__txt text-center">Наш алгоритм ищет лучшие медицинские вакансии с рекрутингового сайта hh.ru
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sAdvantage-->
+			<!-- start sNow-->
+			<section class="sNow section" id="sNow">
+				<div class="sNow__bg">
+					<div class="sNow__ball sNow__ball--1">
+					</div>
+					<div class="sNow__ball sNow__ball--2">
+					</div>
+				</div>
+				<div class="sNow__container container">
+					<div class="sNow__row row">
+						<div class="col-xl-6 text-center text-xl-start">
+							<div class="section-title section-title--lined">
+								<h2>Начните пользоваться<br/>сервисом прямо сейчас!</h2>
+							</div>
+							<div class="sNow__descr">Наша задача - минимизировать ваши потери времени и оказать эффективную помощь по поиску работы.
+							</div><a class="sNow__btn" href="#">Зарегистрироваться</a>
+						</div>
+						<div class="sNow__pic-col col-12">
+							<!-- picture-->
+							<picture class="sNow__img"> 
+								<noscript class="loading-lazy">
+									<source type="image/webp" srcset="img/@2x/webp/sHow-img.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/sHow-img.webp"/>
+									<source type="image/png" srcset="img/@2x/sHow-img.png" media="(min-width:576px)"/>
+									<source type="image/png" srcset="img/@1x/sHow-img.png"/><img src="img/@2x/sHow-img.png" alt="" loading="lazy"/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sNow-->
+			<footer class="footer footer--alt">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-12 col-md-5 col-xl-4"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footer__l-txt footer__l-txt--alt">
+								Поиск компаний и людей
+								<br class="d-none d-xl-block"/>в сфере медицины.
+							</div>
+							<div class="social mb-27 mb-xl-0">
+								<div class="social__row row justify-content-center justify-content-md-start d-xl-none">
+									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-5 col-xl-4">
+							<div class="footer__a-menu-row row text-center text-md-start">
+								<div class="col-12 col-md-6"><a class="footer__a-title" href="#">Соискатель</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-12 col-md-6"><a class="footer__a-title" href="#">Работодатель</a>
+								</div>
+							</div>
+						</div>
+						<div class="footer__gray-col col-12 col-md-2 col-xl-2">
+							<ul class="navMenu text-center text-md-start">
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
+								</li>
+								<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xl-2 d-none d-xl-block">
+							<div class="social">
+								<div class="social__row row justify-content-end">
+									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 order-2 order-md-0">
+							<div class="footer__ar-row row text-center text-md-start">
+								<div class="col-12 col-md">
+									<div class="footer__all-rights mb-0">© 2021 Все права защищены Medicjobs.ru.
+									</div>
+								</div>
+								<div class="col-12 col-md-auto">
+									<div class="footer__gray-row row">
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Правила пользования</a>
+										</div>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer><a class="reg-btn reg-btn--js d-md-none" href="#">Зарегистрироваться</a>
+		</div>
+		<!--  start modals-->
+		<div class="modal-callback modal-win" id="modal-callback" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__hedline">Откликнуться на вакансию
+					</div>
+					<div class="form-wrap__data">
+						<div class="form-wrap__d-row row">
+							<div class="col-auto">
+								<div class="form-wrap__img"><img loading="lazy" src="img/@2x/proffesional-1.jpg" alt=""/>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-wrap__name">Иванов Иван Иванович
+								</div>
+								<div class="form-wrap__short-info">24 года, Самара, Врач-хирург, 30 000 руб
+								</div>
+								<div class="form-wrap__mail">arts.man@mail.ru
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Сопроводительное письмо:</span><textarea class="form-wrap__input form-control" name="message" placeholder="Ваше сообщение"></textarea>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn" type="submit">Отправить
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="modal-contacts modal-win" id="modal-contacts" style="display: none">
+			<div class="modal-contacts__title">Контакты компании
+			</div>
+			<div class="modal-contacts__items">
+				<div class="modal-contacts__item">
+					<div class="modal-contacts__i-title">Телефон:
+					</div><a class="modal-contacts__link" href="tel:+79198112840">+7 (919) 811-28-40</a>
+				</div>
+				<div class="modal-contacts__item">
+					<div class="modal-contacts__i-title">Email:
+					</div><a class="modal-contacts__link" href="mailto:konstantinopolskaya1616@gmail.com">konstantinopolskaya1616@gmail.com</a>
+				</div>
+			</div>
+		</div>
+		<!---->
+		<div class="modal-city modal-win" id="modal-city" style="display: none">
+			<div class="modal-city__title">Выберите город
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите город" name="city"/>
+						<button class="form-wrap__cross-btn" type="button">
+						</button>
+					</div>
+					<div class="form-wrap__results">
+						<ul>
+							<li><a href="#"> Москва</a></li>
+							<li><a class="current" href="#"> Екатеринбург</a></li>
+							<li><a href="#"> Краснодар</a></li>
+							<li><a href="#"> Нижний Новгород</a></li>
+							<li><a href="#"> Новосибирск</a></li>
+							<li><a href="#"> Ростов-на-Дону</a></li>
+							<li><a href="#"> Самара</a></li>
+							<li><a href="#"> Санкт-Петербург</a></li>
+							<li><a href="#"> Уфа</a></li>
+							<li><a href="#"> Челябинск</a></li>
+							<li><a href="#"> Таганрог</a></li>
+							<!---->
+							<li><a href="#"> Самара</a></li>
+							<li><a href="#"> Санкт-Петербург</a></li>
+							<li><a href="#"> Уфа</a></li>
+							<li><a href="#"> Челябинск</a></li>
+							<li><a href="#"> Таганрог</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="modal-city2" style="display: none">
+			<div class="modal-city__title">Выберите город
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Введите город" name="city" value="Толь"/>
+						<button class="form-wrap__cross-btn" type="button">
+						</button>
+					</div>
+					<div class="form-wrap__results">
+						<ul>
+							<li><a href="#">Тольятти</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-load" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<button class="modal-load__btn modal-load__btn--load" type="button">Загрузить файл
+			</button>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-load2" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<div class="modal-load__name">...logo-company.png
+			</div>
+			<button class="modal-load__btn modal-load__btn--save" type="button">Сохранить
+			</button>
+		</div>
+		<!--modal archive-->
+		<div class="modal-load modal-win text-center" id="modal-achive" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row justify-content-center">
+				<div class="col-auto">
+					<button class="modal-load__btn-sm" type="button">Да
+					</button>
+				</div>
+				<div class="col-auto">
+					<button class="modal-load__btn-sm modal-close-js" type="button">Нет
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-achive2" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row">
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась с MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась не с помощью MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция не закрылась
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Другая причина
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="work-conditions">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Условия работы
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Желаемая должность
+									</div>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Рассмотрю повышение</span>
+								</label>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Город для поиска вакансий
+									</div>
+								</div>
+								<div class="custom-select">
+									<select class="default-select-js" name="city" data-placeholder="">
+										<option value="Самара">Самара</option>
+										<option value="Самара 2">Самара 2</option>
+										<option value="Самара 3">Самара 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Желаемая заработная плата
+									</div>
+									<div class="form-wrap__secondary">Будет видна работодателю
+									</div>
+								</div>
+								<div class="form-wrap__inp-row row">
+									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+									</div>
+									<div class="col-auto">
+										<div class="custom-select">
+											<select class="default-select-js" name="currency" data-placeholder="">
+												<option value="₽">₽</option>
+												<option value="A">A</option>
+												<option value="B">B</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Приемлемая (минимальная) заработная плата
+									</div>
+									<div class="form-wrap__secondary">Задается для интеллектуального поиска
+									</div>
+								</div>
+								<div class="form-wrap__inp-row row">
+									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+									</div>
+									<div class="col-auto">
+										<div class="custom-select">
+											<select class="default-select-js" name="currency" data-placeholder="">
+												<option value="₽">₽</option>
+												<option value="A">A</option>
+												<option value="B">B</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Профобласть
+									</div>
+									<div class="form-wrap__secondary">Выберите одну или несколько областей
+									</div>
+								</div>
+								<div class="multiple-select">
+									<select class="prof-slect2-js" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
+										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
+										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
+										<option value="качество 1">качество 1</option>
+										<option value="качество 2">качество 2</option>
+										<option value="качество 3">качество 3</option>
+										<option value="качество 4">качество 4</option>
+										<option value="качество 5">качество 5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="experience">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Опыт работы
+							</div>
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Опыт работы
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование организации" name="WorkingHistory[name][0]"/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Должность
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Должность" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Обязанности и достижения
+											</div>
+										</div><textarea class="form-wrap__input form-control" name=""></textarea>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__inp-row row">
+											<div class="col-6">
+												<div class="form-wrap__inp-row row">
+													<div class="form-wrap__two-title col-12">Начало работы
+													</div>
+													<div class="col-6">
+														<div class="custom-select">
+															<select class="default-select-js" name="month" data-placeholder="">
+																<option value="Января">Января</option>
+																<option value="Февраля">Февраля</option>
+																<option value="Марта">Марта</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-6">
+														<div class="custom-select">
+															<select class="default-select-js" name="year" data-placeholder="">
+																<option>1997</option>
+																<option>1998</option>
+																<option>1999</option>
+																<option>2000</option>
+																<option>2001</option>
+																<option>2002</option>
+																<option>2003</option>
+																<option>2004</option>
+																<option>2005</option>
+																<option>2006</option>
+																<option>2007</option>
+																<option>2008</option>
+																<option>2009</option>
+																<option>2010</option>
+																<option>2011</option>
+																<option>2012</option>
+																<option>2013</option>
+																<option>2014</option>
+																<option>2015</option>
+																<option>2016</option>
+																<option>2017</option>
+																<option>2018</option>
+																<option>2019</option>
+																<option>2020</option>
+																<option>2021</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="form-wrap__inp-row row">
+													<div class="form-wrap__two-title col-12">Окончание работы
+													</div>
+													<div class="col-6">
+														<div class="custom-select">
+															<select class="default-select-js" name="month" data-placeholder="">
+																<option value="Января">Января</option>
+																<option value="Февраля">Февраля</option>
+																<option value="Марта">Марта</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-6">
+														<div class="custom-select">
+															<select class="default-select-js" name="year" data-placeholder="">
+																<option>1997</option>
+																<option>1998</option>
+																<option>1999</option>
+																<option>2000</option>
+																<option>2001</option>
+																<option>2002</option>
+																<option>2003</option>
+																<option>2004</option>
+																<option>2005</option>
+																<option>2006</option>
+																<option>2007</option>
+																<option>2008</option>
+																<option>2009</option>
+																<option>2010</option>
+																<option>2011</option>
+																<option>2012</option>
+																<option>2013</option>
+																<option>2014</option>
+																<option>2015</option>
+																<option>2016</option>
+																<option>2017</option>
+																<option>2018</option>
+																<option>2019</option>
+																<option>2020</option>
+																<option>2021</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-12">
+														<label class="custom-chb">
+															<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Рассмотрю повышение</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
+										<svg class="icon icon-cross ">
+											<use xlink:href="img/svg/sprite.svg#cross"></use>
+										</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
+									</div>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="about">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Обо мне
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Расскажите о себе
+									</div>
+								</div><textarea class="form-wrap__input form-control double" name="" placeholder="Расскажите о себе в нескольких предложениях"></textarea>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="family">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Семья
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__inp-row row align-items-center">
+									<div class="form-wrap__title-col col-auto">
+										<div class="form-wrap__title">В браке
+										</div>
+									</div>
+									<div class="col-auto">
+										<label class="custom-radio">
+											<input class="invisible" type="radio" name="family" value="yes" checked="checked"/><span class="circle"></span><span class="txt">Да</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="custom-radio">
+											<input class="invisible" type="radio" name="family" value="no"/><span class="circle"></span><span class="txt">Нет</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-wrap__inp-row row align-items-center">
+									<div class="form-wrap__title-col col-auto">
+										<div class="form-wrap__title">Дети
+										</div>
+									</div>
+									<div class="col-auto">
+										<label class="custom-radio">
+											<input class="invisible" type="radio" name="kids" value="yes" checked="checked"/><span class="circle"></span><span class="txt">Да</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="custom-radio">
+											<input class="invisible" type="radio" name="kids" value="no"/><span class="circle"></span><span class="txt">Нет</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="address">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Место жительства
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Город, улица, дом
+									</div>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="Начните вводить" name=""/>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="prof-skills">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Профессиональные навыки
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Укажите или выберите не более 5 навыков
+									</div>
+								</div>
+								<div class="multiple-select">
+									<select class="prof-slect2-js" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
+										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
+										<option selected="selected">Умный</option>
+										<option selected="selected">Усидчевый</option>
+										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
+										<option value="качество 1">качество 1</option>
+										<option value="качество 2">качество 2</option>
+										<option value="качество 3">качество 3</option>
+										<option value="качество 4">качество 4</option>
+										<option value="качество 5">качество 5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="common-skills">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Общие навыки
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Укажите или выберите не более 5 навыков
+									</div>
+								</div>
+								<div class="multiple-select">
+									<select class="prof-slect2-js" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
+										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
+										<option selected="selected">Умный</option>
+										<option selected="selected">Усидчевый</option>
+										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
+										<option value="качество 1">качество 1</option>
+										<option value="качество 2">качество 2</option>
+										<option value="качество 3">качество 3</option>
+										<option value="качество 4">качество 4</option>
+										<option value="качество 5">качество 5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="achievements">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Достижения и награды
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Тип достижения
+									</div>
+								</div>
+								<div class="custom-select">
+									<select class="default-select-js" name="achievement-type" data-placeholder="">
+										<option value="Звание">Звание</option>
+										<option value="placeholder">placeholder</option>
+										<option value="placeholder 2">placeholder 2</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Описание достижения
+									</div>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="languages">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Знание языков
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Родной язык
+									</div>
+								</div>
+								<div class="custom-select">
+									<select class="default-select-js" name="mother-lang" data-placeholder="">
+										<option value="Русский">Русский</option>
+										<option value="placeholder">placeholder</option>
+										<option value="placeholder 2">placeholder 2</option>
+									</select>
+								</div>
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Инностранные языки
+									</div>
+								</div>
+								<div class="form-wrap__repeater repeator-js">
+									<div class="form-wrap__r-item r-item-js">
+										<div class="form-wrap__inp-row row pb-24">
+											<div class="col-6">
+												<div class="custom-select">
+													<select class="default-select-js" name="lang" data-placeholder="">
+														<option value="Английский">Английский</option>
+														<option value="Украинский">Украинский</option>
+														<option value="JavaScript">JavaScript</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="custom-select">
+													<select class="default-select-js" name="lang-lvl" data-placeholder="">
+														<option value="А1 - Начальный">А1 - Начальный</option>
+														<option value="А2 - Начальный">А2 - Начальный</option>
+														<option value="А3 - Начальный">А3 - Начальный</option>
+														<option value="B1 - Средний">B1 - Средний</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
+											<svg class="icon icon-cross ">
+												<use xlink:href="img/svg/sprite.svg#cross"></use>
+											</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
+										</div>
+									</div>
+									<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+									</button>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="sience-grade">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Научная степень
+							</div>
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Научная степень
+											</div>
+										</div>
+										<div class="custom-select">
+											<select class="default-select-js" name="mother-lang" data-placeholder="Выберите из списка">
+												<option label="#"></option>
+												<option>placeholder 1</option>
+												<option>placeholder 2</option>
+												<option>placeholder 3</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="training">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Повышение квалификации
+							</div>
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Тип повышения квалификации
+											</div>
+										</div>
+										<div class="custom-select">
+											<select class="default-select-js" name="" data-placeholder="Дополнительное образование, Стажировка, Мероприятие">
+												<option label="#"></option>
+												<option>Дополнительное образование</option>
+												<option>Стажировка</option>
+												<option>Мероприятие</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Наименование
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Год
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
+									</div>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="employer-preferences">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Предпочтения по работодателю
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Форма собственности
+									</div>
+								</div>
+								<div class="pb-12">
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="owner-type" value="Не важно" checked="checked"/><span class="circle"></span><span class="txt">Не важно</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="owner-type" value="Частная"/><span class="circle"></span><span class="txt">Частная</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="owner-type" value="Государтсвенная"/><span class="circle"></span><span class="txt">Государтсвенная</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="owner-type" value="Инностранная"/><span class="circle"></span><span class="txt">Инностранная</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Численность сотрудников
+									</div>
+								</div>
+								<div class="pb-12">
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="employee-amount" value="До 20" checked="checked"/><span class="circle"></span><span class="txt">До 20</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="employee-amount" value="20-100"/><span class="circle"></span><span class="txt">20-100</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="employee-amount" value="100-300"/><span class="circle"></span><span class="txt">100-300</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="employee-amount" value="Более 300"/><span class="circle"></span><span class="txt">Более 300</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="vacancy-preferences">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Предпочтения по вакансии
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Готовность к перезду
+									</div>
+									<div class="form-wrap__secondary">Выберите регионы или округа (ПФО)
+									</div>
+								</div>
+								<div class="multiple-select">
+									<select class="prof-slect2-js" multiple="multiple" data-placeholder="Выберите одну или несколько областей">
+										<option value="" label="#"></option>
+										<!--option(selected) Умный-->
+										<!--option(selected) Усидчевый-->
+										<option selected="selected">Москва</option>
+										<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
+										<option value="качество 1">качество 1</option>
+										<option value="качество 2">качество 2</option>
+										<option value="качество 3">качество 3</option>
+										<option value="качество 4">качество 4</option>
+										<option value="качество 5">качество 5</option>
+									</select>
+								</div>
+								<div class="form-wrap__inp-row row align-items-center">
+									<div class="col-md-auto">
+										<div class="form-wrap__secondary">Тип населенного пункта
+										</div>
+									</div>
+									<div class="col-md">
+										<div class="form-wrap__inp-row row">
+											<div class="col-auto">
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Столица субъекта</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Городской</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Сельский</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Готовность к командировкам
+									</div>
+								</div>
+								<div class="pb-0">
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="business-trip" value="Частые" checked="checked"/><span class="circle"></span><span class="txt">Частые</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="business-trip" value="Не частые"/><span class="circle"></span><span class="txt">Не частые</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="business-trip" value="Не готов"/><span class="circle"></span><span class="txt">Не готов</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Время на дорогу до работы
+									</div>
+								</div>
+								<div class="pb-0">
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="time-to-work" value="до 30 минут" checked="checked"/><span class="circle"></span><span class="txt">до 30 минут</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="time-to-work" value="30 минут - 1 час"/><span class="circle"></span><span class="txt">30 минут - 1 час</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="time-to-work" value="1-1,5 часа"/><span class="circle"></span><span class="txt">1-1,5 часа</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="time-to-work" value="более 1,5 часов"/><span class="circle"></span><span class="txt">более 1,5 часов</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Тип занятости
+									</div>
+								</div>
+								<div class="pb-0">
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Полная занятость</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Частичная занятость</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Проектная работа</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Волонтерство</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стажировка</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">График работы
+									</div>
+								</div>
+								<div class="pb-0">
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Полный день</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Сменный график</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Гибкий график</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Удаленная работа</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Вахтовый метод</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Условия оказание медицинской помощи
+									</div>
+								</div>
+								<div class="pb-0">
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Амбулаторно</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">В дневном стационаре</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стационарно</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Прочие</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Ночные дежурства
+									</div>
+								</div>
+								<div class="pb-0">
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="night-shifts" value="Не важно" checked="checked"/><span class="circle"></span><span class="txt">Не важно</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="night-shifts" value="Да"/><span class="circle"></span><span class="txt">Да</span>
+									</label>
+									<label class="custom-radio">
+										<input class="invisible" type="radio" name="night-shifts" value="Нет"/><span class="circle"></span><span class="txt">Нет</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="articles">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Статьи
+							</div>
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Название статьи
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите название статьи" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Год релиза статьи
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год релиза статьи" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Наименование журнала
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование журнала" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Номер журнала
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номер журнала" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Номера страниц
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номера страниц" name=""/>
+									</div>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="prof-communities">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Профессиональные сообщества
+							</div>
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Наименование
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите наименование" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Год
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
+									</div>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="automobile">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Автомобиль
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Категория прав
+									</div>
+								</div>
+								<div class="form-wrap__inp-row row">
+									<div class="col-auto">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">A</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">B</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">C</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">D</span>
+										</label>
+									</div>
+									<div class="col-auto">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">E</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__input-wrap form-group">
+								<div class="form-wrap__title-wrap">
+									<div class="form-wrap__title">Наличие автомобиля
+									</div>
+								</div>
+								<div class="d-block">
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Есть личный автомобиль</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="bonuses">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Бонусы в работе
+							</div>
+							<div class="form-wrap__title-wrap">
+								<div class="form-wrap__title">Выберите из списка
+								</div>
+								<div class="d-block">
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">ДМС или медицинское обслуживание</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Комфортные условия труда</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Современное медицинское оборудование</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Возможности внутреннего совместительства</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Обучение и развитие за счет компании</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фитнес</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Премии и бонусы</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Программа Земский доктор или фельдшер</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Предоставление жилья</span>
+									</label>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Предоставление субсидий для переезда</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="custom-modal custom-modal--js" id="education">
+			<div class="custom-modal__inner">
+				<div class="custom-modal__close close-cm-js">
+				</div>
+				<div class="custom-modal__content cm-content-js">
+					<div class="custom-modal__cross-btn close-cm-js"><img loading="lazy" src="img/svg/custom-modal-close.svg" alt=""/>
+					</div>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__main-title">Образование
+							</div>
+							<div class="form-wrap__repeater repeator-js">
+								<div class="form-wrap__r-item r-item-js">
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Страна
+											</div>
+										</div>
+										<div class="custom-select">
+											<select class="default-select-js" name="country" data-placeholder="Выберите из списка">
+												<option value="Россия">Россия</option>
+												<option value="Февраля">Февраля</option>
+												<option value="Марта">Марта</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Город
+											</div>
+										</div>
+										<div class="custom-select">
+											<select class="default-select-js" name="city" data-placeholder="Выберите из списка">
+												<option value="Lviv">Lviv</option>
+												<option value="New-York">New-York</option>
+												<option value="Berlin">Berlin</option>
+												<option value="Say Hey">Say Hey</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Наименование учебного заведения
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Название или аббревиатура" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Факультет
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Факультет" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Специальность
+											</div>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Специальность" name=""/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Форма обучения
+											</div>
+										</div>
+										<div class="custom-select">
+											<select class="default-select-js" name="city" data-placeholder="Форма обучения">
+												<option>Очная</option>
+												<option>Очно-заочная</option>
+												<option>Заочная</option>
+												<option>Экстернат</option>
+												<option>Дистанционная</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Форма обучения
+											</div>
+										</div>
+										<div class="custom-select">
+											<select class="default-select-js" name="city" data-placeholder="Форма обучения">
+												<option>Не выбран</option>
+												<option>Абитуриент</option>
+												<option>Студент (специалист)</option>
+												<option>Студент (Бакалавр)</option>
+												<option>Студент (Магистр)</option>
+												<option>Выпускник (специалист)</option>
+												<option>Выпускник (Бакалавр)</option>
+												<option>Выпускник (Магистр)</option>
+												<option>Аспирант</option>
+												<option>Кандидат наук</option>
+												<option>Доктор наук</option>
+												<option>Интерн</option>
+												<option>Клинический ординатор</option>
+												<option>Ассистент-стажер</option>
+												<option>докторант</option>
+												<option>Адъюнкт</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__title-wrap">
+											<div class="form-wrap__title">Год окончания
+											</div>
+										</div>
+										<div class="form-wrap__inp-row row">
+											<div class="col-md-6"><input class="form-wrap__input form-control" type="text" placeholder="Год окончания" name=""/>
+											</div>
+											<div class="col-md-6">
+												<div class="form-wrap__secondary">Если учитесь в настоящее время — укажите год предполагаемого окончания
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+								</button>
+							</div>
+							<div class="form-wrap__foot-row row">
+								<div class="col-6 col-sm-auto">
+									<div class="form-wrap__cancel-btn close-cm-js">Отменить
+									</div>
+								</div>
+								<div class="col-6 col-sm-auto">
+									<button class="form-wrap__save-btn" type="submit">Сохранить изменения
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-fb" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-fb"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-fb " style="color: #2D88FF;">
+								<use xlink:href="img/svg/sprite.svg#soc-fb"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-vk" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-vk"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-vk " style="color: #2787F5;">
+								<use xlink:href="img/svg/sprite.svg#soc-vk"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-inst" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-inst"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-inst " style="color: #E05496;">
+								<use xlink:href="img/svg/sprite.svg#soc-inst"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-tg" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-tg"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-tg " style="color: #2EA3E6;">
+								<use xlink:href="img/svg/sprite.svg#soc-tg"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-ok" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-ok"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-ok " style="color: #EE8208;">
+								<use xlink:href="img/svg/sprite.svg#soc-ok"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-tw" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-tw"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-tw " style="color: #1DA1F2;">
+								<use xlink:href="img/svg/sprite.svg#soc-tw"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-city modal-win" id="add-soc-gpl" style="display: none">
+			<div class="modal-city__title">Добавить социальный профиль
+			</div>
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__input-wrap form-group mb-48"><input class="form-wrap__input form-wrap__input--soc form-control" type="text" placeholder="Ссылка на профиль" name="soc-gpl"/>
+						<div class="form-wrap__soc-icon">
+							<svg class="icon icon-soc-gpl " style="color: #DB4A39;">
+								<use xlink:href="img/svg/sprite.svg#soc-gpl"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__btns-row row justify-content-end">
+						<div class="col-auto">
+							<button class="form-wrap__discard-btn" type="button">Отменить
+							</button>
+						</div>
+						<div class="col-auto">
+							<button class="form-wrap__save-btn" type="button">Сохранить изменения
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end modals-->
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<!---->
+		<script src="js/easy-responsive-tabs.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

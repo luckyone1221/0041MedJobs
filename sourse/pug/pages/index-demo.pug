@@ -1,0 +1,116 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sAdvantage/_sAdvantage.pug
+
+block variables
+	- let  mainPage= 'headings-color has-reg-btn new-header'
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= 'главная'
+	title= title
+block pagecontent
+	+mob-mnu5({
+		logged: false,
+	})
+	+header()
+		+top-nav5({
+			logged: false,
+			location: 'Москва',
+		})
+	+sBaner()
+	+sVacDay()
+		+e.row.row
+			+sVacDayCard({
+				duty: 'Медицинская сестра',
+				salary: '50 000-100 000 ₽',
+				imgName: 'demo-vac-1',
+				name: 'ООО Лаборатория Гемотест',
+				city: 'г. Москва',
+			}).col-xl-4
+			+sVacDayCard({
+				duty: 'Врач рентгенолог КТ',
+				salary: 'от 100 000 ₽',
+				imgName: 'demo-vac-2',
+				name: 'МРЦ Беляево (Центр Дикуля)',
+				city: 'г. Москва',
+			}).col-xl-4
+			+sVacDayCard({
+				duty: 'Архивариус',
+				salary: '50 000 ₽',
+				imgName: 'demo-vac-3',
+				name: 'ГК Медси. Клиники',
+				city: 'г. Москва',
+			}).col-xl-4
+			+sVacDayCard({
+				duty: 'Ночной дежурант в аптеку',
+				salary: '18 000-25 000 ₽',
+				imgName: 'demo-vac-4',
+				name: 'ЗАО ЭВАЛАР',
+				city: 'г. Москва',
+			}).col-xl-4
+			+sVacDayCard({
+				duty: 'Врач-дерматовенеролог',
+				salary: '75 000 ₽',
+				imgName: 'demo-vac-5',
+				name: 'БУДЬ ЗДОРОВ, Клиника',
+				city: 'г. Москва',
+			}).col-xl-4
+			+sVacDayCard({
+				duty: 'Врач-стоматолог-терапевт',
+				salary: 'З/п не указана',
+				imgName: 'demo-vac-6',
+				name: 'ГК Медси. Клиники',
+				city: 'г. Москва',
+			}).col-xl-4
+	+sEmplDay()
+		+e.row.row
+			+sEmplDayCard({
+				imgNum: 5,
+				name: 'ГК Медси. Клиники',
+				vacAmount: '13 вакансий',
+			}).col-lg-3.col-6
+			+sEmplDayCard({
+				imgNum: 6,
+				name: 'МРЦ Беляево (Центр Дикуля)',
+				vacAmount: '5 вакансий',
+			}).col-lg-3.col-6
+			+sEmplDayCard({
+				imgNum: 7,
+				name: 'ЗАО Эвалар',
+				vacAmount: '2 вакансии',
+			}).col-lg-3.col-6
+			+sEmplDayCard({
+				imgNum: 8,
+				name: 'ООО Лаборатория Гемотест',
+				vacAmount: '3 вакасии',
+			}).col-lg-3.col-6
+	+sAbout()
+		+b.section-title--lined
+			h2 О проекте MedicJobs
+		+e.descr MedicJobs создан медиками для медиков. Мы понимаем, с какими проблемами сталкивается медицинский сотрудник при поиске работы. Именно для этого мы создали MedicJobs, чтобы работодатели могли быстро найти подходящего сотрудника, а соискатели — хорошую работу. Мы понимаем всю специфичность профессии, поэтому внедрили гибкие фильтры, интеллектуальный подбор, систему оценок и многое другое.MedicJobs будет выдавать в поиске только подходящие вакансии и рекомендовать резюме работодателям автоматически. Наша задача - минимизировать ваши потери времени и оказать эффективную помощь по поиску работы.
+	//-+sBalls()
+	+sLogoes()
+	//-+sVantage()
+	+sAdvantage()
+	//-+sHow()
+	//-+sFAQ()
+	+sNow({
+		descr: 'Наша задача - минимизировать ваши потери времени и оказать эффективную помощь по поиску работы.',
+	})
+	+footerAlt()
+	+b.reg-btn--js.d-md-none(href="#") Зарегистрироваться
