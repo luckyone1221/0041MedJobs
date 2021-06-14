@@ -4,7 +4,7 @@ mixin sAbout(data)
 		.container
 			+e.row.row.align-items-center
 				.col-xl-6
-					+pic('sAbout-pic.png', undefined, 0)(class="sAbout__pic")
+					+pic(`${data.picTxt || 'sAbout-pic.png'}`, undefined, 0)(class="sAbout__pic")
 				.col-xl-6.text-center.text-xl-start
 					if block
 						block
