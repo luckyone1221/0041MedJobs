@@ -65,6 +65,8 @@
 
 	&__duty{
 		@extend .primary-link;
+		color: $body-color !important;
+
 
 		display: inline-block;
 		margin-bottom: 8px;
@@ -74,7 +76,8 @@
 	&__salary{
 		font-weight: 600;
 		margin-bottom: 18px;
-		color: $body-color;
+		// color: $body-color;
+		@extend .text-primary;
 	}
 	&__logo-row{
 		@include roww(12px);
