@@ -708,6 +708,8 @@
 		@include roww(6px);
 	}
 	&__cv-skill{
+		cursor: default;
+		pointer-events: none;
 		@extend .btn;
 		@extend .btn-light;
 		padding: 5px 11px;

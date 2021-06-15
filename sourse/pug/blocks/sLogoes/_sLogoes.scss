@@ -37,14 +37,14 @@
 				filter: grayscale(0);
 			}
 		}
-		&:hover{
-			.logo-img{
-				img{
-					opacity: 1;
-					filter: grayscale(0);
-				}
-			}
-		}
+		//&:hover{
+		//	.logo-img{
+		//		img{
+		//			opacity: 1;
+		//			filter: grayscale(0);
+		//		}
+		//	}
+		//}
 
 		.logo-img{
 			display: block;

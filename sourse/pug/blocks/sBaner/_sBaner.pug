@@ -7,7 +7,9 @@ mixin sBaner(data)
 			+e.ball--3.d-none.d-xl-block
 			+e.ball--4.d-none.d-xl-block
 		+e.container.container
-			+pic('sBaner-img.png')(class="sBaner__img d-none d-xl-flex")
+			//-+pic('sBaner-img.png')(class="sBaner__img d-none d-xl-flex")
+			+e.img.d-none.d-xl-flex
+				img(loading='lazy' src="img/@2x/sBaner-img.png" alt="")
 			+e.row.row
 				.col-xl-5
 					+b.section-title.text-center.text-xl-start
