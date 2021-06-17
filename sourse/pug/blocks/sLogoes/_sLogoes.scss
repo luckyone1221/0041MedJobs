@@ -29,9 +29,10 @@
 	}
 	&__item{
 		display: flex;
-		cursor: pointer;
+		// cursor: pointer;
+		filter: grayscale(0);
 
-		input:checked + .logo-img{
+	 .logo-img{
 			img{
 				opacity: 1;
 				filter: grayscale(0);

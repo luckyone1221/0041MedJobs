@@ -28,7 +28,6 @@ mixin sLogoes(data)
 
 mixin sLogoesItem(imgNum)
 	+e.col.col-4.col-md-3.col-xl-2
-		+e.LABEL.item
-			input(type="checkbox" class="invisible" name=`sLogoesChb${imgNum}`)
+		+e.item
 			.logo-img
 				img(loading="lazy" src=`img/@2x/sLogoes-${imgNum}.png` alt="")
