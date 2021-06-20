@@ -1,0 +1,100 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= 'headings-color reg-page'
+	//-headings-color has-reg-btn new-header
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '039-expirience'
+	title= title
+block pagecontent
+	+sReg({
+		title: 'Опыт работы',
+		logo: false,
+		backHeader: false,
+		stepHeader: true,
+		stepHeaderItems: [
+			'Личная информация',
+			'Условия работы',
+			'Опыт работы',
+			'Образование',
+			'Повышение квалификации',
+		],
+		checkedItems: 2,
+		currentItem: 2,
+		lowerRow: true,
+		lowerSkip: true,
+	})
+		+form-wrap()(class="with-labels")
+			//-
+			+e.repeater.repeator-js.text-start.mb-48
+				+e.r-item.r-item-js
+					//-begin item
+					+e.input-wrap.form-group
+						label
+							+e.SPAN.input-title Наименование организации
+							+e.INPUT.input.form-control.mb-12(type="text" required name="" placeholder="Наименование организации")
+					//-
+					+e.input-wrap.form-group
+						label
+							+e.SPAN.input-title Должность
+							+e.INPUT.input.form-control.mb-12(type="text" required name="" placeholder="Введите должность")
+					+e.input-wrap.form-group
+						label
+							+e.SPAN.input-title Обязанности и достижения
+							+e.TEXTAREA.input.form-control.mb-12(type="text" required name="" placeholder="")
+					+e.input-wrap
+						+e.input-title Начало работы
+						+e.inps-row.row.radio-row
+							.col-6
+								+customSlect('month')(data-placeholder="Месяц")
+									option(label="#" selected)
+									- for (var i=1; i <= 4; i++)
+										option=i
+							.col-6
+								+customSlect('year')(data-placeholder="Год")
+									option(label="#" selected)
+									- for (var i=1; i <= 4; i++)
+										option=i
+					+e.input-wrap
+						+e.input-title Окончание работы
+						+e.inps-row.row.radio-row.mb-12
+							.col-6
+								+customSlect('month')(data-placeholder="Месяц")
+									option(label="#" selected)
+									- for (var i=1; i <= 4; i++)
+										option=i
+							.col-6
+								+customSlect('year')(data-placeholder="Год")
+									option(label="#" selected)
+									- for (var i=1; i <= 4; i++)
+										option=i
+						+customChb('по настоящее время')
+					//-end item
+				+e.r-add-btn.r-add-btn-js(type='button') Добавить
+			+e.btn-cont
+				+e.btn-row.row
+					.col-6
+						+e.back-btn(type="button")
+							+icon('chevron-left')
+							span Назад
+					.col-6
+						+e.green-btn(type="button") Сохранить

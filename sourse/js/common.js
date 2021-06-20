@@ -168,7 +168,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '029.png';
+	screenName = '035.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -208,9 +208,6 @@ function eventHandler() {
 			el: ' .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
 		},
 	}
 
@@ -541,8 +538,6 @@ function eventHandler() {
 		
 		let addBtn = this.querySelector('.r-add-btn-js');
 		addBtn.addEventListener('click', duplicateRItem.bind(addBtn, this, content));
-		
-
 	});
 
 	//delegation of remove btn
@@ -787,16 +782,42 @@ function eventHandler() {
 		})
 	});
 
+	//sReg
+	let regHeader = document.querySelector(".sReg-header-js");
+	function calcRegHeaderH() {
+		document.documentElement.style.setProperty('--sReg-header-h', `${regHeader.offsetHeight}px`);
+	}
+	if (regHeader){
+		window.addEventListener('resize', calcRegHeaderH, { passive: true });
+		window.addEventListener('scroll', calcRegHeaderH, { passive: true });
+		calcRegHeaderH();
+	}
+
+	//sReg
+	let StepsSlider = new Swiper('.sReg-step-slider-js', {
+		slidesPerView: 'auto',
+
+		breakpoints:{
+			0:{
+				spaceBetween: 24,
+			},
+			1200:{
+				spaceBetween: 48,
+			},
+		},
+
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+	});
 	//
-	// $('.prof-vac-js').mouseenter(function (){
-	// 	$(this).find('.prof-vac-hidden-js').slideDown(function (){
-	// 		$(this).addClass('active');
-	// 	});
-	// }).mouseleave(function (){
-	// 	$(this).find('.prof-vac-hidden-js').slideUp(function (){
-	// 		$(this).removeClass('active');
-	// 	});
-	// });
+	$('.sReg-portrait-inp-js').change(function (){
+		let tmppath = URL.createObjectURL(event.target.files[0]);
+		let img = document.querySelector('.sReg-portrait-js img');
+		img.setAttribute('src', tmppath);
+	});
 
 };
 if (document.readyState !== 'loading') {

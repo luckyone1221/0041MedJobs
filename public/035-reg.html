@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>09-reg</title>
+		<title>035-reg</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
@@ -28,103 +28,101 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<meta name="description" content="о чем страница">
-	<body> 
+	<meta name="description" content="Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.">
+	<body class="headings-color reg-page"> 
 		<div class="main-wrapper">
-			<!-- start logPage-->
-			<section class="logPage section" id="logPage">
-				<div class="logPage__row row">
-					<div class="logPage__bg-col col-xl-6 d-none d-xl-block">
-						<div class="logPage__bg">
-							<div class="logPage__ball logPage__ball--1">
+			<!-- start sReg-->
+			<section class="sReg" id="sReg">
+				<div class="sReg__header sReg-header-js">
+					<div class="sReg__container-fl container-fluid">
+						<div class="sReg__h-row row">
+							<div class="col-auto"><a class="sReg__back-btn" href="#">
+								<svg class="icon icon-chevron-left ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+								</svg><span>Назад</span></a>
 							</div>
-							<div class="logPage__ball logPage__ball--2">
-							</div><img loading="lazy" src="img/@2x/reg-img.png" alt=""/>
 						</div>
 					</div>
-					<div class="col-12 col-xl-6">
-						<div class="logPage__container container">
-							<div class="logPage__header-row row align-items-center">
-								<div class="col"><a class="logPage__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-								</div>
-								<div class="col-auto"><a class="logPage__back-btn" href="#">
-									<svg class="icon icon-chevron-left ">
-										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-									</svg><span>Назад</span></a>
+				</div>
+				<div class="sReg__main-cont container">
+					<div class="sReg__logo"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+					</div>
+					<div class="sReg__box text-center">
+						<div class="sReg__b-content">
+							<h1 class="sReg__title">Регистрация
+							</h1>
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__c-cont">
+										<div class="form-wrap__c-row row">
+											<div class="col">
+												<label class="btn-radio">
+													<input class="invisible" type="radio" name="role" value="employee" checked="checked"/>
+													<div class="plate">Я соискатель</div>
+												</label>
+											</div>
+											<div class="col">
+												<label class="btn-radio">
+													<input class="invisible" type="radio" name="role" value="employer"/>
+													<div class="plate">Я работодатель</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control undefined" type="password" required="required" name="pass" placeholder="Введите пароль"/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control undefined" type="password" required="required" name="pass" placeholder="Введите пароль"/>
+											<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
+												<svg class="icon icon-pass-eye ">
+													<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass-repeat" placeholder="Повторите пароль"/>
+											<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
+												<svg class="icon icon-pass-eye ">
+													<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__btn-cont">
+										<button class="form-wrap__green-btn" type="submit">Зарегистрироваться
+										</button>
+									</div>
+									<div class="form-wrap__policy-row row text-start">
+										<div class="col-auto">
+											<label class="custom-chb">
+												<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt"></span>
+											</label>
+										</div>
+										<div class="form-wrap__policy-txt col">
+											Я принимаю условия
+											<a href="#">Пользовательского соглашения</a>
+											и даю свое согласие на обработку моей персональной информации на условиях, определенных
+											<a href="#">Политикой конфиденциальности.</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="sReg__lower-content pt-24 align-items-center">
+						<div class="sReg__l-row row">
+							<div class="col-auto">
+								<div class="sReg__l-txt">Уже зарегистрированы?
 								</div>
 							</div>
-							<div class="logPage__content">
-								<div class="reg-form">
-									<div class="form-wrap">
-										<form>
-											<h1>Регистрация</h1>
-											<div class="form-wrap__input-wrap"><span class="form-wrap__input-title reuire">Тип пользователя</span>
-												<div class="custom-select">
-													<select class="main-page-select2-js" name="name">
-														<option value="Соискатель">Соискатель</option>
-														<option value="option 1">option 1</option>
-														<option value="option 2">option 2</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title reuire">E-mail</span><input class="form-wrap__input form-control" type="email" required="required" name="email"/>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group mb-36">
-												<label><span class="form-wrap__input-title reuire">Пароль</span>
-													<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass"/>
-														<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
-															<svg class="icon icon-pass-eye ">
-																<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
-															</svg>
-														</div>
-													</div>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group mb-30">
-												<label><span class="form-wrap__input-title reuire">Повторите пароль</span>
-													<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass-repeat"/>
-														<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
-															<svg class="icon icon-pass-eye ">
-																<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
-															</svg>
-														</div>
-													</div>
-												</label>
-											</div>
-											<div class="form-wrap__policy row pb-30 align-items-center">
-												<div class="col-auto">
-													<label class="custom-chb">
-														<input class="d-none" type="checkbox" name="name" checked><span class="square m-0"></span>
-													</label>
-												</div>
-												<div class="col">
-													<div class="form-wrap__p-txt">
-														Я принимаю условия
-														<a href="#">Пользовательского соглашения</a>
-														и даю свое согласие на обработку моей персональной информации на условиях, определенных
-														<a href="#">Политикой конфиденциальности.</a>
-													</div>
-												</div>
-											</div>
-											<div class="form-wrap__fc-row row align-items-center">
-												<div class="col-auto">
-													<button class="form-wrap__login-btn form-wrap__login-btn--200" type="submit">Зарегистрироваться
-													</button>
-												</div>
-												<div class="col-auto"><a class="form-wrap__forget-link" href="#">Уже зарегистрированы?</a>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
+							<div class="col-auto"><a class="sReg__l-link" href="#">Войти</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end logPage-->
+			<!-- end sReg-->
 		</div>
 		<!--  start modals-->
 		<div class="modal-callback modal-win" id="modal-callback" style="display: none">

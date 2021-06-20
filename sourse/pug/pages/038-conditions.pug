@@ -1,0 +1,105 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= 'headings-color reg-page'
+	//-headings-color has-reg-btn new-header
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '038-conditions'
+	title= title
+block pagecontent
+	+sReg({
+		title: 'Условия работы',
+		logo: false,
+		backHeader: false,
+		stepHeader: true,
+		stepHeaderItems: [
+			'Личная информация',
+			'Условия работы',
+			'Опыт работы',
+			'Образование',
+			'Повышение квалификации',
+		],
+		checkedItems: 1,
+		currentItem: 1,
+		lowerRow: true,
+		lowerSkip: true,
+	})
+		+form-wrap()(class="with-labels")
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title Желаемая должность
+					+e.INPUT.input.form-control.mb-12(type="text" required name="" placeholder="Введите должность")
+					+customChb('Рассмотрю повышение')
+			+e.input-wrap.form-group
+				+e.SPAN.input-title Регион для поиска вакансий
+				+customSlect('region')(data-placeholder="Выберите регион")
+					option(label="#" selected)
+					- for (var i=1; i <= 4; i++)
+						option=i
+			+e.input-wrap.form-group
+				+e.SPAN.input-title Город для поиска вакансий
+				+customSlect('region')(data-placeholder="Выберите город")
+					option(label="#" selected)
+					- for (var i=1; i <= 4; i++)
+						option=i
+			//-
+			+e.input-wrap
+				+e.input-title
+					span Желаемая заработная плата
+					.text-secondary.mt-6.fw-400 Будет видна работодателю
+				+e.inps-row.row.radio-row
+					.col
+						+e.INPUT.input.form-control.mb-12(type="number" name="" placeholder="50 000")
+					.col-auto.ff-mono
+						+customSlect('region')
+							- for (var i=1; i <= 4; i++)
+								option ₽
+								option ₽2
+								option ₽3
+			+e.input-wrap
+				+e.input-title
+					span Приемлемая (минимальная) заработная плата
+					.text-secondary.mt-6.fw-400 Задается для интеллектуального поиска
+				+e.inps-row.row.radio-row
+					.col
+						+e.INPUT.input.form-control.mb-12(type="number" name="" placeholder="30 000")
+					.col-auto.ff-mono
+						+customSlect('region')
+							- for (var i=1; i <= 4; i++)
+								option ₽
+								option ₽2
+								option ₽3
+			//-
+			+e.input-wrap.form-group
+				+e.SPAN.input-title Профобласть
+				+customSlect('region')(data-placeholder="Выберите одну или несколько областей")
+					option(label="#" selected)
+					- for (var i=1; i <= 4; i++)
+						option=i
+			+e.btn-cont.pt-18
+				+e.btn-row.row
+					.col-6
+						+e.back-btn(type="button")
+							+icon('chevron-left')
+							span Назад
+					.col-6
+						+e.green-btn(type="button") Сохранить

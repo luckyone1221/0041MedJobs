@@ -1,6 +1,6 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -180,7 +180,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '029.png';
+	screenName = '035.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -219,10 +219,7 @@ function eventHandler() {
 		pagination: {
 			el: ' .swiper-pagination',
 			type: 'bullets',
-			clickable: true // renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-
+			clickable: true
 		}
 	};
 	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
@@ -760,16 +757,47 @@ function eventHandler() {
 		$('.sLogoes__col:nth-child(n+7)').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
+	}); //sReg
+
+	let regHeader = document.querySelector(".sReg-header-js");
+
+	function calcRegHeaderH() {
+		document.documentElement.style.setProperty('--sReg-header-h', "".concat(regHeader.offsetHeight, "px"));
+	}
+
+	if (regHeader) {
+		window.addEventListener('resize', calcRegHeaderH, {
+			passive: true
+		});
+		window.addEventListener('scroll', calcRegHeaderH, {
+			passive: true
+		});
+		calcRegHeaderH();
+	} //sReg
+
+
+	let StepsSlider = new Swiper('.sReg-step-slider-js', {
+		slidesPerView: 'auto',
+		breakpoints: {
+			0: {
+				spaceBetween: 24
+			},
+			1200: {
+				spaceBetween: 48
+			}
+		},
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true
 	}); //
-	// $('.prof-vac-js').mouseenter(function (){
-	// 	$(this).find('.prof-vac-hidden-js').slideDown(function (){
-	// 		$(this).addClass('active');
-	// 	});
-	// }).mouseleave(function (){
-	// 	$(this).find('.prof-vac-hidden-js').slideUp(function (){
-	// 		$(this).removeClass('active');
-	// 	});
-	// });
+
+	$('.sReg-portrait-inp-js').change(function () {
+		let tmppath = URL.createObjectURL(event.target.files[0]);
+		let img = document.querySelector('.sReg-portrait-js img');
+		img.setAttribute('src', tmppath);
+	});
 }
 
 ;

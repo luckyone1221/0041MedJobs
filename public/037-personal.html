@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>09-reg</title>
+		<title>037-personal</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
@@ -28,103 +28,189 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<meta name="description" content="о чем страница">
-	<body> 
+	<meta name="description" content="Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.">
+	<body class="headings-color reg-page"> 
 		<div class="main-wrapper">
-			<!-- start logPage-->
-			<section class="logPage section" id="logPage">
-				<div class="logPage__row row">
-					<div class="logPage__bg-col col-xl-6 d-none d-xl-block">
-						<div class="logPage__bg">
-							<div class="logPage__ball logPage__ball--1">
-							</div>
-							<div class="logPage__ball logPage__ball--2">
-							</div><img loading="lazy" src="img/@2x/reg-img.png" alt=""/>
-						</div>
-					</div>
-					<div class="col-12 col-xl-6">
-						<div class="logPage__container container">
-							<div class="logPage__header-row row align-items-center">
-								<div class="col"><a class="logPage__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-								</div>
-								<div class="col-auto"><a class="logPage__back-btn" href="#">
-									<svg class="icon icon-chevron-left ">
-										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-									</svg><span>Назад</span></a>
-								</div>
-							</div>
-							<div class="logPage__content">
-								<div class="reg-form">
-									<div class="form-wrap">
-										<form>
-											<h1>Регистрация</h1>
-											<div class="form-wrap__input-wrap"><span class="form-wrap__input-title reuire">Тип пользователя</span>
-												<div class="custom-select">
-													<select class="main-page-select2-js" name="name">
-														<option value="Соискатель">Соискатель</option>
-														<option value="option 1">option 1</option>
-														<option value="option 2">option 2</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title reuire">E-mail</span><input class="form-wrap__input form-control" type="email" required="required" name="email"/>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group mb-36">
-												<label><span class="form-wrap__input-title reuire">Пароль</span>
-													<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass"/>
-														<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
-															<svg class="icon icon-pass-eye ">
-																<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
-															</svg>
-														</div>
-													</div>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group mb-30">
-												<label><span class="form-wrap__input-title reuire">Повторите пароль</span>
-													<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass-repeat"/>
-														<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
-															<svg class="icon icon-pass-eye ">
-																<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
-															</svg>
-														</div>
-													</div>
-												</label>
-											</div>
-											<div class="form-wrap__policy row pb-30 align-items-center">
-												<div class="col-auto">
-													<label class="custom-chb">
-														<input class="d-none" type="checkbox" name="name" checked><span class="square m-0"></span>
-													</label>
-												</div>
-												<div class="col">
-													<div class="form-wrap__p-txt">
-														Я принимаю условия
-														<a href="#">Пользовательского соглашения</a>
-														и даю свое согласие на обработку моей персональной информации на условиях, определенных
-														<a href="#">Политикой конфиденциальности.</a>
-													</div>
-												</div>
-											</div>
-											<div class="form-wrap__fc-row row align-items-center">
-												<div class="col-auto">
-													<button class="form-wrap__login-btn form-wrap__login-btn--200" type="submit">Зарегистрироваться
-													</button>
-												</div>
-												<div class="col-auto"><a class="form-wrap__forget-link" href="#">Уже зарегистрированы?</a>
-												</div>
-											</div>
-										</form>
+			<!-- start sReg-->
+			<section class="sReg" id="sReg">
+				<div class="sReg__steps-head sReg-header-js">
+					<div class="container-fluid">
+						<div class="sReg__step-slider">
+							<div class="swiper-container sReg-step-slider-js">
+								<div class="swiper-wrapper">
+									<!--+sRegStep(checked,current,txt)-->
+									<div class="swiper-slide">
+										<div class="sReg__step false current">Личная информация
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sReg__step false false">Условия работы
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sReg__step false false">Опыт работы
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sReg__step false false">Образование
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sReg__step false false">Повышение квалификации
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="sReg__main-cont container">
+					<div class="sReg__box text-center">
+						<div class="sReg__b-content">
+							<h1 class="sReg__title">Личная информация
+							</h1>
+							<div class="sReg__portrait-bl">
+								<div class="sReg__portrait sReg-portrait-js"><img loading="lazy" src="img/svg/portrait-stab.svg" alt="">
+								</div>
+								<div class="sReg__p-txt"><b>
+										Ваша фотография.
+										</b>формат: jpg, png.<br>Максимальный размер файла: 2 Mb.<br>Рекомендованный размер: 300х300 px.
+								</div>
+								<label class="sReg__upload-label">
+									<input class="sReg-portrait-inp-js invisible" type="file" accept=".png, .jpg, .jpeg"><span class="sReg__upload">Загрузить</span>
+								</label>
+							</div>
+							<div class="form-wrap with-labels">
+								<form>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Имя</span><input class="form-wrap__input form-control" type="text" required="required" name="" placeholder="Введите имя"/>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Отчество</span><input class="form-wrap__input form-control" type="text" required="required" name="" placeholder="Введите отчество"/>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Фамилия</span><input class="form-wrap__input form-control" type="email" required="required" name="" placeholder="Введите фамилию"/>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap">
+										<div class="form-wrap__input-title require">Пол
+										</div>
+										<div class="form-wrap__inps-row row radio-row">
+											<div class="col-auto">
+												<label class="custom-radio">
+													<input class="invisible" type="radio" name="male" value="man" checked="checked"/><span class="circle"></span><span class="txt">Мужской</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-radio">
+													<input class="invisible" type="radio" name="male" value="woman"/><span class="circle"></span><span class="txt">Женский</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap">
+										<div class="form-wrap__input-title require">Дата рождения
+										</div>
+										<div class="form-wrap__inps-row row">
+											<div class="col">
+												<div class="custom-select">
+													<select class="default-select-js" name="day">
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+														<option>6</option>
+														<option>7</option>
+														<option>8</option>
+														<option>9</option>
+														<option>10</option>
+														<option>11</option>
+														<option>12</option>
+														<option>13</option>
+														<option>14</option>
+														<option>15</option>
+														<option>16</option>
+														<option>17</option>
+														<option>18</option>
+														<option>19</option>
+														<option>20</option>
+														<option>21</option>
+														<option>22</option>
+														<option>23</option>
+														<option>24</option>
+														<option>25</option>
+														<option>26</option>
+														<option>27</option>
+														<option>28</option>
+														<option>29</option>
+														<option>30</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-wrap__month-col col-auto">
+												<div class="custom-select">
+													<select class="default-select-js" name="month">
+														<option value="Января">Января</option>
+														<option value="Февраля">Февраля</option>
+														<option value="Марта">Марта</option>
+													</select>
+												</div>
+											</div>
+											<div class="col">
+												<div class="custom-select">
+													<select class="default-select-js" name="year">
+														<option>1997</option>
+														<option>1998</option>
+														<option>1999</option>
+														<option>2000</option>
+														<option>2001</option>
+														<option>2002</option>
+														<option>2003</option>
+														<option>2004</option>
+														<option>2005</option>
+														<option>2006</option>
+														<option>2007</option>
+														<option>2008</option>
+														<option>2009</option>
+														<option>2010</option>
+														<option>2011</option>
+														<option>2012</option>
+														<option>2013</option>
+														<option>2014</option>
+														<option>2015</option>
+														<option>2016</option>
+														<option>2017</option>
+														<option>2018</option>
+														<option>2019</option>
+														<option>2020</option>
+														<option>2021</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Город проживания</span><input class="form-wrap__input form-control" type="text" required="required" name="" placeholder="Введите город (дадата)"/>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Телефон</span><input class="form-wrap__input form-control" type="tel" required="required" name="" placeholder="+7 (912) 345-67-89"/>
+										</label>
+									</div>
+									<div class="form-wrap__btn-cont pt-18">
+										<button class="form-wrap__green-btn" type="submit">Сохранить
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
-			<!-- end logPage-->
+			<!-- end sReg-->
 		</div>
 		<!--  start modals-->
 		<div class="modal-callback modal-win" id="modal-callback" style="display: none">
