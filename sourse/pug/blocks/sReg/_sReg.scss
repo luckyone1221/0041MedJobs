@@ -78,17 +78,59 @@
     margin-bottom: 36px;
   }
   .form-wrap{
-    &__c-cont{
+    //&__c-cont{
+    //  border: 1px solid $gary-110;
+    //  border-radius: 5px;
+    //
+    //  margin-bottom: 24px;
+    //  padding: 4px;
+    //}
+    //&__c-row{
+    //  --bs-gutter-x: 4px;
+    //  --bs-gutter-y: 4px;
+    //}
+
+    //role-chb
+    &__role-chb{
       border: 1px solid $gary-110;
       border-radius: 5px;
 
       margin-bottom: 24px;
       padding: 4px;
+
+      justify-content: space-between;
+
+      input:checked + .plate{
+        color: $headings-color!important;
+        background-color: $gray-100!important;
+      }
+      input:not(:checked) + .plate + .plate{
+        color: $headings-color!important;
+        background-color: $gray-100!important;
+      }
     }
-    &__c-row{
-      --bs-gutter-x: 4px;
-      --bs-gutter-y: 4px;
+
+    .plate{
+      @extend .btn;
+      @extend .btn-light;
+      border: none!important;
+
+      padding: 11px 20px;
+      font-size: inherit!important;
+      line-height: 1.25;
+      text-align: center;
+
+      width: calc(50% - 2px);
+
+      color: $secondary!important;
+      background-color: transparent!important;
+
+      //&:hover{
+      //  color: $headings-color!important;
+      //}
     }
+    //
+
 
     --inp-title-mb: 12px;
     &.with-labels{
@@ -351,7 +393,7 @@
 
     font-weight: 600;
     line-height: 1.5;
-    color: $secondary;
+    color: $secondary!important;
 
     &.current,
     &.checked{
@@ -361,13 +403,13 @@
     }
 
     &.checked{
-      color: $secondary;
+      color: $secondary!important;
       &:before{
         background-image: url(../img/svg/check.svg);
       }
     }
     &.current{
-      color: $body-color;
+      color: $body-color!important;
     }
   }
   //

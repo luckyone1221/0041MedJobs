@@ -32,12 +32,10 @@ mixin sReg(data)
 						block
 					else
 						+form-wrap()
-							+e.c-cont
-								+e.c-row.row
-									.col
-										+sRegBtnRadio('Я соискатель', 'role', 'employee')(checked)
-									.col
-										+sRegBtnRadio('Я работодатель', 'role', 'employer')
+							+e.LABEL.role-chb
+								input(type="checkbox" class="invisible" name='role')
+								+b.plate--employee Я соискатель
+								+b.plate--employer Я работодатель
 							//-+input('Электронная почта','email')
 							+e.input-wrap.form-group
 								+e.INPUT.input.form-control(class=`${data.error && 'border-danger'}` type="password" required name="pass" placeholder="Введите пароль")
@@ -83,7 +81,7 @@ mixin sReg(data)
 	// end sReg
 mixin sRegStep(checked,current,txt)
 	.swiper-slide
-		+e.step(class=`${checked && 'checked'} ${current && 'current'}`)=txt
+		+e.step(class=`${checked && 'checked'} ${current && 'current'}` href="#")=txt
 
 mixin sRegBtnRadio(txt, name, val)
 	+b.LABEL.btn-radio
