@@ -300,10 +300,10 @@
 
 	@include mt(1);
 
-	// right: -120vw;
-	right: 0;
+	// right: 0;
 	&:not(.active){
-		transform: translateX(120%);
+		// transform: translateX(120%);
+		right: -120%;
 		// opacity: 0;
 		visibility: hidden
 	}
