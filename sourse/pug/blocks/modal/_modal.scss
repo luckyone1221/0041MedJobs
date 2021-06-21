@@ -283,7 +283,7 @@
 //
 
 .custom-modal{
-	display: none;
+	// display: none;
 	//
 	&:before{
 		content: '';
@@ -304,6 +304,10 @@
 	right: 0;
 	transform: translateX(100%);
 	visibility: hidden;
+	&:not(.active){
+		// width: 1px;
+		
+	}
 	&.active{
 		transform: translateX(0);
 		visibility: visible;
