@@ -299,16 +299,13 @@
 	}
 
 	@include mt(1);
-
+	background-clip: padding-box;
 	right: 0;
-	&:not(.active){
-		// transform: translateX(120%);
-		right: -120%;
-		// opacity: 0;
-		visibility: hidden
-	}
-	
+	transform: translateX(100%);
+	visibility: hidden;
 	&.active{
+		transform: translateX(0);
+		visibility: visible;
 		@include mt(.4);
 		&:before{
 			filter: blur(2px);

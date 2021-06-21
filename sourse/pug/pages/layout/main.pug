@@ -43,9 +43,7 @@ html(lang="ru")
 				}
 
 				w();
-				window.addEventListener('resize', () => {
-					w();
-				}, {passive: true});
+				window.addEventListener('resize', () =>  w() , {passive: true});
 			}
 		+allcss()
 	block variables
