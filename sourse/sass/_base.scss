@@ -1254,3 +1254,47 @@ h5{
 		background-color: $primary!important;
 	}
 }
+
+.reg-page{
+	background-color: $gray-100;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+//duplicate
+.inp-cont{
+	position: relative;
+	display: block;
+}
+.show-hide-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 46px;
+	cursor: pointer;
+	height: 100%;
+
+	.icon{
+		@include mt();
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 20px;
+		transform: translateY(-50%) translateX(-50%);
+		color: $dim;
+	}
+
+	&.pass-visiable{
+		.icon{
+			color: $warning;
+		}
+	}
+}
+
+.ff-mono{
+	font-family: $mono!important;
+	*{
+		font-family: $mono!important;
+	}
+}

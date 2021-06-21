@@ -44,3 +44,11 @@
 ===========   Демо для работодателя
 1. <https://luckyone1221.github.io/0041MedJobs/public/index-demo.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/034-vacancy-demo.html>
+===========   Регистрация
+1. <https://luckyone1221.github.io/0041MedJobs/public/035-reg.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/035-reg-error.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/036-accept.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/037-personal.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/038-conditions.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/039-expirience.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/040-education.html>

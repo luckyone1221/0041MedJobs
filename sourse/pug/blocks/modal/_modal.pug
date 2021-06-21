@@ -94,7 +94,7 @@ mixin modal()
 		+e.input-wrap.form-group
 			+e.title-wrap
 				+e.title Желаемая должность
-			+e.INPUT.input.form-control(type="text" placeholder="" name="")
+			+e.INPUT.input.form-control(type="text" placeholder="" name="la")
 			+customChbDuplicate('Рассмотрю повышение')
 		//-
 		+e.input-wrap.form-group
@@ -108,7 +108,7 @@ mixin modal()
 				+e.secondary Будет видна работодателю
 			+e.inp-row.row
 				.col
-					+e.INPUT.input.form-control(type="text" placeholder="" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="" name="la")
 				.col-auto
 					+customSlectDuplicate('currency', ['₽', 'A', 'B'])
 		//-3
@@ -118,7 +118,7 @@ mixin modal()
 				+e.secondary Задается для интеллектуального поиска
 			+e.inp-row.row
 				.col
-					+e.INPUT.input.form-control(type="text" placeholder="" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="" name="la")
 				.col-auto
 					+customSlectDuplicate('currency', ['₽', 'A', 'B'])
 		//-4
@@ -139,12 +139,12 @@ mixin modal()
 			+e.input-wrap.form-group
 				+e.title-wrap
 					+e.title Должность
-				+e.INPUT.input.form-control(type="text" placeholder="Должность" name="")
+				+e.INPUT.input.form-control(type="text" placeholder="Должность" name="la")
 			//-3
 			+e.input-wrap.form-group
 				+e.title-wrap
 					+e.title Обязанности и достижения
-				+e.TEXTAREA.input.form-control(name="")
+				+e.TEXTAREA.input.form-control(name="la")
 			//-4
 			+e.input-wrap.form-group
 				+e.inp-row.row
@@ -175,7 +175,7 @@ mixin modal()
 		+e.input-wrap.form-group
 			+e.title-wrap
 				+e.title Расскажите о себе
-			+e.TEXTAREA.input.form-control.double(name="" placeholder="Расскажите о себе в нескольких предложениях")
+			+e.TEXTAREA.input.form-control.double(name="la" placeholder="Расскажите о себе в нескольких предложениях")
 	//- -----
 	+customModal('family', 'Семья')
 		//-1
@@ -199,7 +199,7 @@ mixin modal()
 		+e.input-wrap.form-group
 			+e.title-wrap
 				+e.title Город, улица, дом
-			+e.INPUT.input.form-control(type="text" placeholder="Начните вводить" name="")
+			+e.INPUT.input.form-control(type="text" placeholder="Начните вводить" name="la")
 	//---
 	+customModal('prof-skills', 'Профессиональные навыки')
 		+e.input-wrap.form-group
@@ -225,7 +225,7 @@ mixin modal()
 		+e.input-wrap.form-group
 			+e.title-wrap
 				+e.title Описание достижения
-			+e.INPUT.input.form-control(type="text" placeholder="" name="")
+			+e.INPUT.input.form-control(type="text" placeholder="" name="la")
 			//-+customSlectDuplicate('achievement-descr', ['Звание', 'placeholder', 'placeholder 2'], undefined, 'Описание достижения')
 				option(label="#")
 				option placeholder 1
@@ -266,7 +266,7 @@ mixin modal()
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Тип повышения квалификации
-					+customSlectDuplicate('', ['Русский', 'placeholder', 'placeholder 2'], undefined, 'Дополнительное образование, Стажировка, Мероприятие')
+					+customSlectDuplicate('la', ['Русский', 'placeholder', 'placeholder 2'], undefined, 'Дополнительное образование, Стажировка, Мероприятие')
 						option(label="#")
 						option Дополнительное образование
 						option Стажировка
@@ -275,12 +275,12 @@ mixin modal()
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Наименование
-					+e.INPUT.input.form-control(type="text" placeholder="Наименование" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Наименование" name="la")
 				//-2
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Год
-					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="la")
 			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//---
 	+customModal('employer-preferences', 'Предпочтения по работодателю')
@@ -379,27 +379,27 @@ mixin modal()
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Название статьи
-					+e.INPUT.input.form-control(type="text" placeholder="Введите название статьи" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Введите название статьи" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Год релиза статьи
-					+e.INPUT.input.form-control(type="text" placeholder="Введите год релиза статьи" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Введите год релиза статьи" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Наименование журнала
-					+e.INPUT.input.form-control(type="text" placeholder="Наименование журнала" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Наименование журнала" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Номер журнала
-					+e.INPUT.input.form-control(type="text" placeholder="Введите номер журнала" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Введите номер журнала" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Номера страниц
-					+e.INPUT.input.form-control(type="text" placeholder="Введите номера страниц" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Введите номера страниц" name="la")
 			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//---
 	+customModal('prof-communities', 'Профессиональные сообщества')
@@ -409,12 +409,12 @@ mixin modal()
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Наименование
-					+e.INPUT.input.form-control(type="text" placeholder="Введите наименование" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Введите наименование" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Год
-					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Введите год" name="la")
 			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//---
 	+customModal('automobile', 'Автомобиль')
@@ -470,17 +470,17 @@ mixin modal()
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Наименование учебного заведения
-					+e.INPUT.input.form-control(type="text" placeholder="Название или аббревиатура" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Название или аббревиатура" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Факультет
-					+e.INPUT.input.form-control(type="text" placeholder="Факультет" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Факультет" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
 						+e.title Специальность
-					+e.INPUT.input.form-control(type="text" placeholder="Специальность" name="")
+					+e.INPUT.input.form-control(type="text" placeholder="Специальность" name="la")
 				//-
 				+e.input-wrap.form-group
 					+e.title-wrap
@@ -518,7 +518,7 @@ mixin modal()
 						+e.title Год окончания
 					+e.inp-row.row
 						.col-md-6
-							+e.INPUT.input.form-control(type="text" placeholder="Год окончания" name="")
+							+e.INPUT.input.form-control(type="text" placeholder="Год окончания" name="la")
 						.col-md-6
 							+e.secondary Если учитесь в настоящее время — укажите год предполагаемого окончания
 			+e.r-add-btn.r-add-btn-js(type='button') Добавить

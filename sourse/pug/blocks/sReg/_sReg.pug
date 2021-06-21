@@ -1,0 +1,89 @@
+mixin sReg(data)
+	// start sReg
+	+b.SECTION.sReg#sReg&attributes(attributes)
+		if data.backHeader
+			+e.header.sReg-header-js
+				+e.container-fl.container-fluid
+					+e.h-row.row
+						.col-auto
+							+e.back-btn(href="#")
+								+icon('chevron-left')
+								span Назад
+		if data.stepHeader
+			+e.steps-head.sReg-header-js
+				.container-fluid
+					+e.step-slider
+						.swiper-container.sReg-step-slider-js
+							.swiper-wrapper
+								//+sRegStep(checked,current,txt)
+								if data.stepHeaderItems
+									- for(var i = 0; i < data.stepHeaderItems.length; i++)
+										- let isCurrent = data.currentItem === i;
+										- let isChecked = data.checkedItems > i;
+										+sRegStep(isChecked, isCurrent, data.stepHeaderItems[i])
+		+e.main-cont.container
+			if data.logo
+				+e.logo
+					img(loading='lazy' src='img/svg/logo.svg' alt="")
+			+e.box.text-center
+				+e.b-content
+					+e.H1.title=data.title
+					if block
+						block
+					else
+						+form-wrap()
+							+e.LABEL.role-chb
+								input(type="checkbox" class="invisible" name='role')
+								+b.plate--employee Я соискатель
+								+b.plate--employer Я работодатель
+							//-+input('Электронная почта','email')
+							+e.input-wrap.form-group
+								+e.INPUT.input.form-control(class=`${data.error && 'border-danger'}` type="password" required name="pass" placeholder="Введите пароль")
+								if data.error
+									+e.error.text-start Пользователь с таким e-mail уже существует.
+							+e.input-wrap.form-group
+								+e.inp-cont
+									+e.INPUT.input.form-control(class=`${data.error && 'border-danger'}` type="password" required name="pass" placeholder="Введите пароль")
+									+e.show-hide-btn.toggle-pass-inp-js
+										+icon('pass-eye')
+								if data.error
+									+e.error.text-start Текст ошибки.
+							+e.input-wrap.form-group
+								+e.inp-cont
+									+e.INPUT.input.form-control(type="password" required name="pass-repeat" placeholder="Повторите пароль")
+									+e.show-hide-btn.toggle-pass-inp-js
+										+icon('pass-eye')
+							+e.btn-cont
+								+e.green-btn(type="submit") Зарегистрироваться
+							+e.policy-row.row.text-start
+								.col-auto
+									+customChb('')(checked)
+								+e.policy-txt.col
+									| Я принимаю условия
+									|
+									a(href="#") Пользовательского соглашения
+									|
+									| и даю свое согласие на обработку моей персональной информации на условиях, определенных
+									|
+									a(href="#") Политикой конфиденциальности.
+			if data.lowerRow
+				+e.lower-content.pt-24.align-items-center
+					+e.l-row.row
+						if data.lowerLog
+							.col-auto
+								+e.l-txt Уже зарегистрированы?
+							.col-auto
+								+e.l-link(href='#') Войти
+						if data.lowerSkip
+							.col-auto
+								+e.l-link(href='#') Пропустить
+
+	// end sReg
+mixin sRegStep(checked,current,txt)
+	.swiper-slide
+		+e.step(class=`${checked && 'checked'} ${current && 'current'}` href="#")=txt
+
+mixin sRegBtnRadio(txt, name, val)
+	+b.LABEL.btn-radio
+		input(type="radio" class="invisible" name=name value=val)&attributes(attributes)
+		.plate=txt

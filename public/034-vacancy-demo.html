@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>вакансии</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="о чем страница">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
 		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
 		<script>
@@ -12,15 +13,16 @@
 			if (is_safari) {
 				//- alert(navigator.userAgent);
 				function w() {
-					this.outerWidth > 570 
-						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
-						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					this.outerWidth > 570
+									? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+									: viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no"
 					//- alert(this.outerWidth + ', '+  viewport.content);
 				}
-				 w();
-				window.addEventListener('resize', () => { 
-				 w();
-				}, { passive: true });
+			
+				w();
+				window.addEventListener('resize', () => {
+					w();
+				}, {passive: true});
 			}
 		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -28,7 +30,6 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<meta name="description" content="о чем страница">
 	<body class="new-header"> 
 		<div class="main-wrapper">
 			<div class="mm mm--js mm--alt5 d-xl-none">
@@ -750,7 +751,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Желаемая должность
 									</div>
-								</div><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 								<label class="custom-chb">
 									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Рассмотрю повышение</span>
 								</label>
@@ -776,7 +777,7 @@
 									</div>
 								</div>
 								<div class="form-wrap__inp-row row">
-									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 									</div>
 									<div class="col-auto">
 										<div class="custom-select">
@@ -797,7 +798,7 @@
 									</div>
 								</div>
 								<div class="form-wrap__inp-row row">
-									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 									</div>
 									<div class="col-auto">
 										<div class="custom-select">
@@ -869,13 +870,13 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Должность
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Должность" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Должность" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Обязанности и достижения
 											</div>
-										</div><textarea class="form-wrap__input form-control" name=""></textarea>
+										</div><textarea class="form-wrap__input form-control" name="la"></textarea>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__inp-row row">
@@ -1017,7 +1018,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Расскажите о себе
 									</div>
-								</div><textarea class="form-wrap__input form-control double" name="" placeholder="Расскажите о себе в нескольких предложениях"></textarea>
+								</div><textarea class="form-wrap__input form-control double" name="la" placeholder="Расскажите о себе в нескольких предложениях"></textarea>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1109,7 +1110,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Город, улица, дом
 									</div>
-								</div><input class="form-wrap__input form-control" type="text" placeholder="Начните вводить" name=""/>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="Начните вводить" name="la"/>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1248,7 +1249,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Описание достижения
 									</div>
-								</div><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1405,7 +1406,7 @@
 											</div>
 										</div>
 										<div class="custom-select">
-											<select class="default-select-js" name="" data-placeholder="Дополнительное образование, Стажировка, Мероприятие">
+											<select class="default-select-js" name="la" data-placeholder="Дополнительное образование, Стажировка, Мероприятие">
 												<option label="#"></option>
 												<option>Дополнительное образование</option>
 												<option>Стажировка</option>
@@ -1417,13 +1418,13 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Год
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name="la"/>
 									</div>
 								</div>
 								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
@@ -1720,31 +1721,31 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Название статьи
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите название статьи" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите название статьи" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Год релиза статьи
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год релиза статьи" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год релиза статьи" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование журнала
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование журнала" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование журнала" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Номер журнала
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номер журнала" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номер журнала" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Номера страниц
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номера страниц" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номера страниц" name="la"/>
 									</div>
 								</div>
 								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
@@ -1782,13 +1783,13 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите наименование" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите наименование" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Год
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name="la"/>
 									</div>
 								</div>
 								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
@@ -1985,19 +1986,19 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование учебного заведения
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Название или аббревиатура" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Название или аббревиатура" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Факультет
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Факультет" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Факультет" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Специальность
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Специальность" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Специальность" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
@@ -2046,7 +2047,7 @@
 											</div>
 										</div>
 										<div class="form-wrap__inp-row row">
-											<div class="col-md-6"><input class="form-wrap__input form-control" type="text" placeholder="Год окончания" name=""/>
+											<div class="col-md-6"><input class="form-wrap__input form-control" type="text" placeholder="Год окончания" name="la"/>
 											</div>
 											<div class="col-md-6">
 												<div class="form-wrap__secondary">Если учитесь в настоящее время — укажите год предполагаемого окончания
