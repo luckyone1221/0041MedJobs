@@ -300,7 +300,14 @@
 
 	@include mt(1);
 
-	right: -120vw;
+	// right: -120vw;
+	right: 0;
+	&:not(.active){
+		transform: translateX(120%);
+		// opacity: 0;
+		visibility: hidden
+	}
+	
 	&.active{
 		@include mt(.4);
 		&:before{
@@ -308,7 +315,6 @@
 			opacity: 1;
 			transition: all .4s ease-in-out .4s;
 		}
-		right: 0;
 	}
 
 	position: fixed;
