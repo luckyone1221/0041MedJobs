@@ -308,6 +308,7 @@
 		transform: translateX(0);
 		visibility: visible;
 		@include mt(.4);
+		display: block;
 		&:before{
 			filter: blur(2px);
 			opacity: 1;
