@@ -1357,6 +1357,15 @@ h5{
 
 	color: #F15A22;
 
+	.swiper-container{
+		overflow: visible!important;
+	}
+	.swiper-wrapper{
+
+	}
+	.swiper-slide{
+		width: 1140px;
+	}
 
 	&__{}
 	&__{}

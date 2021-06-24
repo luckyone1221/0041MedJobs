@@ -238,22 +238,14 @@ function eventHandler() {
 		calcAlertLineHeight();
 		window.setTimeout(calcAlertLineHeight, 30);
 
-		let alertLineMarquee;
-		if(!window.matchMedia("(min-width: 1200px)").matches){
-			alertLineMarquee = $('.running-txt-js').marquee({});
-		}
-
-		window.addEventListener('resize', watchAlertLine.bind(undefined, alertLineMarquee), { passive: true });
-	}
-	//
-	function watchAlertLine(alertLineMarquee){
-		if (alertLineMarquee){
-			alertLineMarquee.marquee('destroy');
-		}
-
-		if(!window.matchMedia("(min-width: 1200px)").matches){
-			alertLineMarquee = $('.running-txt-js').marquee({});
-		}
+		let alertLineSlider = new Swiper('.alert-line-slider-js', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			loopFillGroupWithBlank: true,
+			touchRatio: 0.2,
+			slideToClickedSlide: true,
+			freeModeMomentum: true,
+		});
 	}
 
 	$('.burger-js').click(function (){

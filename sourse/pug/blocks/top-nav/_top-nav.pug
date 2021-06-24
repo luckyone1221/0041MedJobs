@@ -251,4 +251,7 @@ mixin mob-mnu5(data)
 mixin alertLine()
 	+b.alert-line--js.active
 		.container
-			+e.txt.running-txt-js Уважаемые посетители! Сайт Medicjobs.ru находится на стадии технического запуска, заранее приносим извинения за возможные временные сбои в работе сайта.
+			.swiper-container.alert-line-slider-js
+				.swiper-wrapper
+					.swiper-slide
+						+e.txt Уважаемые посетители! Сайт Medicjobs.ru находится на стадии технического запуска, заранее приносим извинения за возможные временные сбои в работе сайта.
