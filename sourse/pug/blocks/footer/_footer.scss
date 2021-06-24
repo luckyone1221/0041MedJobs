@@ -194,9 +194,38 @@
 			}
 		}
 	}
+
+	//
+	//.social{
+	//	margin-bottom: 40px;
+	//	@include media-breakpoint-up(md){
+	//		margin-bottom: 38px;
+	//	}
+	//	@include media-breakpoint-up(xl){
+	//		margin-bottom: 36px;
+	//	}
+	//}
+	&__business-logo{
+		display: block;
+
+		margin-bottom: 40px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 38px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 36px;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
 }
 
 .social{
+
 	&__row{
 		@include roww(10px);
 

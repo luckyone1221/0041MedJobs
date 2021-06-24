@@ -176,8 +176,8 @@
 		}
 	}
 	&__soc-items{
-		@include roww(24px);
-		--col-mb: 12px;
+		--bs-gutter-x: 10px;
+		--col-mb: 10px;
 
 		padding-bottom: 40px;
 		@include media-breakpoint-up(md){
@@ -187,9 +187,27 @@
 			padding-bottom: 36px;
 		}
 	}
+	&__business-logo{
+		display: block;
+
+		margin-bottom: 40px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 38px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 36px;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
 	&__s-item{
-		width: 24px;
-		height: 24px;
+		width: 30px;
+		height: 30px;
 
 		display: flex;
 		align-items: center;

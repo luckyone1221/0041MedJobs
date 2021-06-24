@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= 'headings-color reg-page'
+	//-headings-color has-reg-btn new-header
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '041-e-reg'
+	title= title
+block pagecontent
+	+sReg({
+		title: 'Регистрация',
+		logo: true,
+		backHeader: false,
+		stepHeader: false,
+		checkedItems: 3,
+		currentItem: 3,
+		lowerRow: true,
+		lowerLog: true,
+	})
+		+form-wrap()
+			+e.LABEL.role-chb
+				input(type="checkbox" class="invisible" name='role')
+				+b.plate--employee Я соискатель
+				+b.plate--employer Я работодатель
+			//-+input('Электронная почта','email')
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require ИНН организации
+					+e.INPUT.input.form-control.mb-12(type="text" name="la" placeholder="Введите ИНН организации" required)
+			+e.btn-cont
+				+e.green-btn.muted(type="submit") Продолжить
+			+e.not-found
+				| Если ваша организация не найдена, обратитесь в
+				|
+				a(href='#') поддержку.

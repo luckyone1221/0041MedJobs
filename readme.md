@@ -34,6 +34,7 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/026-my-cabinet-empty.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/027-contacts.html>
+
 ===========   Личный кабинет работодателя
 1. <https://luckyone1221.github.io/0041MedJobs/public/028-creator-lc.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/029-my-vacancy.html>
@@ -41,20 +42,27 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/031-create-vac.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/032-create-cab.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/033-create-cab-empty.html>
+
 ===========   Демо для работодателя
 1. <https://luckyone1221.github.io/0041MedJobs/public/index-demo.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/034-vacancy-demo.html>
-===========   Регистрация
+
+==============================   Регистрация
 1. <https://luckyone1221.github.io/0041MedJobs/public/035-reg.html>
-2. <https://luckyone1221.github.io/0041MedJobs/public/035-reg-error.html>
-3. <https://luckyone1221.github.io/0041MedJobs/public/036-accept.html>
-4. <https://luckyone1221.github.io/0041MedJobs/public/037-personal.html>
-5. <https://luckyone1221.github.io/0041MedJobs/public/038-conditions.html>
-6. <https://luckyone1221.github.io/0041MedJobs/public/039-expirience.html>
-7. <https://luckyone1221.github.io/0041MedJobs/public/040-education.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/035-reg-error.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/036-accept.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/037-personal.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/038-conditions.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/039-expirience.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/040-education.html>
+
+==============================   Регистрация
+1. <https://luckyone1221.github.io/0041MedJobs/public/041-e-reg.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/042-e-reg.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/043-e-reg.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/044-create-cab-empty.html>
 
 ===========   Опросник
-
 1. <https://luckyone1221.github.io/0041MedJobs/public/041-qwiz-1.html>
 2. <https://luckyone1221.github.io/0041MedJobs/public/041-qwiz-2.html>
 3. <https://luckyone1221.github.io/0041MedJobs/public/041-qwiz-3.html>

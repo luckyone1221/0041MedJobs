@@ -9,25 +9,28 @@ mixin footerN(data)
 					+e.logo.mx-auto.mx-xl-0(href="/")
 						img(loading="lazy" src='img/svg/logo.svg' alt="")
 					+e.gray-txt.text-center.text-xl-start
-						| Поиск компаний, вакансий
+						| Сервис по поиску работы
 						|
 						br.d-none.d-xl-block
-						| и резюме в сфере медицины
-					+e.like.d-none.d-xl-flex
+						| в сфере медицины.
+					//-+e.like.d-none.d-xl-flex
 						+e.l-icon.fl-icon-js
 							+icon('like')
 							+icon('like-fill')
 						+e.l-txt 244
 				+e.menu-col.col-xl.d-none.d-xl-block
 					+e.menu-row.row
-						+fNMenu('MedicJobs', 'О компании', 'Контакты', 'Помощь')
-						+fNMenu('Соискателю', 'Добавить резюме', 'Поиск вакансий')
-						+fNMenu('Работодателю', 'Разместить вакансию')
+						+fNMenu('MedicJobs', 'Контакты')
+						+fNMenu('Соискателю', 'Вакансии', 'Организации', 'Оценить компанию', 'Рейтинг зарплат')
+						+fNMenu('Работодателю', 'Публикация вакансии')
 				.col-xl-auto
 					+e.soc-items.row.row--mb.justify-content-center.justify-content-xl-end
-						+fNSocItem('vk', 'https://vk.com/medicjobs')
-						+fNSocItem('inst', 'https://www.instagram.com/medicjobs.ru/')
-						//-+fNSocItem('tg', '')
+						+fNSocItem('fb', 'https://vk.com/medicjobs')
+						+fNSocItem('vk', '#')
+						+fNSocItem('inst', '#')
+						+fNSocItem('tg', '#')
+					+e.business-logo.text-center.text-xl-start(href="#")
+						img(loading="lazy" src="img/@2x/bissnes-logo.png" alt="")
 					+e.all-rights.mb-27.d-xl-none © 2021 Все права защищены Medicjobs.ru.
 					+e.policy-links.text-center.text-xl-end.pb-12.pb-xl-0
 						+e.p-link(href='#') Пользовательское соглашение
@@ -40,7 +43,7 @@ mixin footerN(data)
 						+e.st-txt Наверх
 						+e.st-ball
 							+icon('chevron-top')
-				.col-12.d-xl-none.text-center
+				//-.col-12.d-xl-none.text-center
 					+e.like.d-inline-flex
 						+e.l-icon.fl-icon-js
 							+icon('like')
@@ -58,4 +61,5 @@ mixin fNMenu(title, ...items)
 mixin fNSocItem(imgNum, link='#')
 	.col-auto
 		+e.s-item(href=link)
-			img(loading="lazy" src=`img/svg/soc-fn-${imgNum}.svg` alt="")
+			//-img(loading="lazy" src=`img/svg/soc-fn-${imgNum}.svg` alt="")
+			img(loading="lazy" src=`img/svg/new-soc-${imgNum}.svg` alt="")

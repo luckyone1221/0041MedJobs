@@ -1,0 +1,64 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= 'headings-color reg-page'
+	//-headings-color has-reg-btn new-header
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '042-e-reg'
+	title= title
+block pagecontent
+	+sReg({
+		title: 'Регистрация работодателя',
+		logo: true,
+		backHeader: false,
+		stepHeader: false,
+		checkedItems: 3,
+		currentItem: 3,
+		lowerRow: true,
+		lowerLog: true,
+	})
+		+form-wrap()
+			+e.input-wrap.form-group
+				+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Введите пароль")
+			+e.input-wrap.form-group
+				+e.inp-cont
+					+e.INPUT.input.form-control(type="password" required name="pass" placeholder="Введите пароль")
+					+e.show-hide-btn.toggle-pass-inp-js
+						+icon('pass-eye')
+			+e.input-wrap.form-group
+				+e.inp-cont
+					+e.INPUT.input.form-control(type="password" required name="pass-repeat" placeholder="Повторите пароль")
+					+e.show-hide-btn.toggle-pass-inp-js
+						+icon('pass-eye')
+			+e.btn-cont
+				+e.green-btn(type="submit") Зарегистрироваться
+			+e.policy-row.row.text-start
+				.col-auto
+					+customChb('')(checked)
+				+e.policy-txt.col
+					| Я принимаю условия
+					|
+					a(href="#") Пользовательского соглашения
+					|
+					| и даю свое согласие на обработку моей персональной информации на условиях, определенных
+					|
+					a(href="#") Политикой конфиденциальности.

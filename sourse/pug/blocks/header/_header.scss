@@ -1,4 +1,4 @@
 // start .header
 .header {
-	padding-top: var(--header-h);
+	padding-top: calc(var(--top-nav-top) + var(--header-h));
 } // end.header

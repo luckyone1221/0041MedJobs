@@ -225,15 +225,48 @@ function eventHandler() {
 
 	//luckyone js
 
+	//alert line
+	let alertLine = document.querySelector('.alert-line--js');
+	function calcAlertLineHeight() {
+		if (!alertLine) return
+		document.documentElement.style.setProperty('--top-nav-top', `${alertLine.offsetHeight}px`);
+	}
+
+	if (alertLine){
+		window.addEventListener('resize', calcAlertLineHeight, { passive: true });
+		window.addEventListener('scroll', calcAlertLineHeight, { passive: true });
+		calcAlertLineHeight();
+		window.setTimeout(calcAlertLineHeight, 30);
+
+		let alertLineMarquee;
+		if(!window.matchMedia("(min-width: 1200px)").matches){
+			alertLineMarquee = $('.running-txt-js').marquee({});
+		}
+
+		window.addEventListener('resize', watchAlertLine.bind(undefined, alertLineMarquee), { passive: true });
+	}
+	//
+	function watchAlertLine(alertLineMarquee){
+		if (alertLineMarquee){
+			alertLineMarquee.marquee('destroy');
+		}
+
+		if(!window.matchMedia("(min-width: 1200px)").matches){
+			alertLineMarquee = $('.running-txt-js').marquee({});
+		}
+	}
+
 	$('.burger-js').click(function (){
 		$('.burger-js, .mm--js, .top-nav').toggleClass('active');
 		$('body').toggleClass('fixed2');
+		$('.alert-line--js').toggleClass('active');
 	});
 	window.addEventListener('resize', function (){
 		if(window.matchMedia("(min-width: 1200px)").matches){
 			//menu
 			$('.burger-js, .mm--js, .top-nav').removeClass('active');
 			$('body').removeClass('fixed2');
+			$('.alert-line--js').addClass('active');
 
 			//filter remove
 			// $('.f-btn-js').removeClass('active');
@@ -246,6 +279,7 @@ function eventHandler() {
 		if (!event.target.closest('.top-nav') && !event.target.closest('.mm--js')){
 			$('.burger-js, .mm--js, .top-nav').removeClass('active');
 			$('body').removeClass('fixed2');
+			$('.alert-line--js').addClass('active');
 		}
 	});
 
@@ -818,8 +852,6 @@ function eventHandler() {
 		let img = document.querySelector('.sReg-portrait-js img');
 		img.setAttribute('src', tmppath);
 	});
-
-	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

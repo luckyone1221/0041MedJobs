@@ -94,7 +94,7 @@
 
 		position: sticky;
 		z-index: 1;
-		top: calc(var(--header-h) + var(--sPT) - 57px);
+		top: calc(var(--header-h) + var(--sPT) - 57px + var(--top-nav-top, 0));
 		padding-top: 57px;
 		width: var(--aside-r-w, 240px);
 		@media (min-width: 1920px) {
@@ -708,9 +708,7 @@
 
 .l-side-menu{
 	position: sticky;
-	//top: rem(40);
-	//top: calc(var(--header-h) + 20px);
-	top: calc(var(--header-h) + var(--sPT));
+	top: calc(var(--header-h) + var(--sPT) + var(--top-nav-top, 0));
 
 	max-width: 100%;
 	@include media-breakpoint-up(xlg){

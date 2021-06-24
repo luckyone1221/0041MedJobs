@@ -4,23 +4,38 @@
 		<meta charset="utf-8">
 		<title>012-company-profile</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="о чем страница">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
 		<script>
 			let viewport = document.querySelector("meta[name=viewport]");
-			window.addEventListener('resize', () => {
-				this.innerWidth > 570
-								? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-								: viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-			}, {passive: true});
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 570
+									? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+									: viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no"
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+			
+				w();
+				window.addEventListener('resize', () =>  w() , {passive: true});
+			}
 		</script><link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<meta name="description" content="о чем страница">
 	<body> 
 		<div class="main-wrapper">
+			<div class="alert-line alert-line--js active">
+				<div class="container">
+					<div class="alert-line__txt running-txt-js">Уважаемые посетители! Сайт Medicjobs.ru находится на стадии технического запуска, заранее приносим извинения за возможные временные сбои в работе сайта.
+					</div>
+				</div>
+			</div>
 			<div class="mm mm--js mm--alt d-xl-none">
 				<div class="container">
 					<ul class="navMenu navMenu--alt">
@@ -370,13 +385,13 @@
 			<footer class="footer footer--alt">
 				<div class="container">
 					<div class="footer__row row">
-						<div class="col-12 col-md-5 col-xl-4"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							<div class="footer__l-txt footer__l-txt--alt">
-								Поиск компаний и людей
+								Сервис по поиску работы
 								<br class="d-none d-xl-block"/>в сфере медицины.
 							</div>
-							<div class="social mb-27 mb-xl-0">
-								<div class="social__row row justify-content-center justify-content-md-start d-xl-none">
+							<div class="social">
+								<div class="social__row row justify-content-center justify-content-md-start d-xl-none mb-0">
 									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
 									</div>
 									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
@@ -386,33 +401,39 @@
 									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
 									</div>
 								</div>
-							</div>
+							</div><a class="footer__business-logo text-center text-md-start" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
 						</div>
-						<div class="col-12 col-md-5 col-xl-4">
+						<div class="col-12 col-md-7 col-xl-7">
 							<div class="footer__a-menu-row row text-center text-md-start">
-								<div class="col-12 col-md-6"><a class="footer__a-title" href="#">Соискатель</a>
+								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">MedicJobs</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">Соискатель</a>
 									<ul class="navMenu">
 										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
 										</li>
 										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
 										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Оценить компанию</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Рейтинг зарплат</a>
+										</li>
 									</ul>
 								</div>
-								<div class="col-12 col-md-6"><a class="footer__a-title" href="#">Работодатель</a>
+								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">Работодатель</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Публикация вакансии</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="footer__gray-col col-12 col-md-2 col-xl-2">
-							<ul class="navMenu text-center text-md-start">
-								<li class="navMenu__item"><a class="navMenu__link" href="#">Помощь</a>
-								</li>
-								<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
-								</li>
-							</ul>
-						</div>
 						<div class="col-xl-2 d-none d-xl-block">
 							<div class="social">
-								<div class="social__row row justify-content-end">
+								<div class="social__row row justify-content-end mb-48">
 									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
 									</div>
 									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
@@ -422,7 +443,7 @@
 									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
 									</div>
 								</div>
-							</div>
+							</div><a class="footer__business-logo text-center text-xl-start" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
 						</div>
 						<div class="col-12 order-2 order-md-0">
 							<div class="footer__ar-row row text-center text-md-start">
@@ -541,6 +562,61 @@
 				</form>
 			</div>
 		</div>
+		<div class="modal-load modal-win text-center" id="modal-load" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<button class="modal-load__btn modal-load__btn--load" type="button">Загрузить файл
+			</button>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-load2" style="display: none">
+			<div class="modal-load__title">Загрузите фотографию
+			</div>
+			<div class="modal-load__descr">Фотография весом не более 3 мб, размером не более 1024 пикс. (ширина) и 1024 пикс. (высота), в форматах: jpeg или png.
+			</div>
+			<div class="modal-load__name">...logo-company.png
+			</div>
+			<button class="modal-load__btn modal-load__btn--save" type="button">Сохранить
+			</button>
+		</div>
+		<!--modal archive-->
+		<div class="modal-load modal-win text-center" id="modal-achive" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row justify-content-center">
+				<div class="col-auto">
+					<button class="modal-load__btn-sm" type="button">Да
+					</button>
+				</div>
+				<div class="col-auto">
+					<button class="modal-load__btn-sm modal-close-js" type="button">Нет
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-load modal-win text-center" id="modal-achive2" style="display: none">
+			<div class="modal-load__title">Вы уверены, что хотите перенести вакансию в архив?
+			</div>
+			<div class="modal-load__btns-row row">
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась с MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция закрылась не с помощью MedicJobs.ru
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Позиция не закрылась
+					</button>
+				</div>
+				<div class="col-12">
+					<button class="modal-load__btn-big" type="button">Другая причина
+					</button>
+				</div>
+			</div>
+		</div>
 		<div class="custom-modal custom-modal--js" id="work-conditions">
 			<div class="custom-modal__inner">
 				<div class="custom-modal__close close-cm-js">
@@ -556,7 +632,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Желаемая должность
 									</div>
-								</div><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 								<label class="custom-chb">
 									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Рассмотрю повышение</span>
 								</label>
@@ -582,7 +658,7 @@
 									</div>
 								</div>
 								<div class="form-wrap__inp-row row">
-									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 									</div>
 									<div class="col-auto">
 										<div class="custom-select">
@@ -603,7 +679,7 @@
 									</div>
 								</div>
 								<div class="form-wrap__inp-row row">
-									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+									<div class="col"><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 									</div>
 									<div class="col-auto">
 										<div class="custom-select">
@@ -675,13 +751,13 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Должность
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Должность" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Должность" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Обязанности и достижения
 											</div>
-										</div><textarea class="form-wrap__input form-control" name=""></textarea>
+										</div><textarea class="form-wrap__input form-control" name="la"></textarea>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__inp-row row">
@@ -823,7 +899,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Расскажите о себе
 									</div>
-								</div><textarea class="form-wrap__input form-control double" name="" placeholder="Расскажите о себе в нескольких предложениях"></textarea>
+								</div><textarea class="form-wrap__input form-control double" name="la" placeholder="Расскажите о себе в нескольких предложениях"></textarea>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -915,7 +991,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Город, улица, дом
 									</div>
-								</div><input class="form-wrap__input form-control" type="text" placeholder="Начните вводить" name=""/>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="Начните вводить" name="la"/>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1054,7 +1130,7 @@
 								<div class="form-wrap__title-wrap">
 									<div class="form-wrap__title">Описание достижения
 									</div>
-								</div><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+								</div><input class="form-wrap__input form-control" type="text" placeholder="" name="la"/>
 							</div>
 							<div class="form-wrap__foot-row row">
 								<div class="col-6 col-sm-auto">
@@ -1211,7 +1287,7 @@
 											</div>
 										</div>
 										<div class="custom-select">
-											<select class="default-select-js" name="" data-placeholder="Дополнительное образование, Стажировка, Мероприятие">
+											<select class="default-select-js" name="la" data-placeholder="Дополнительное образование, Стажировка, Мероприятие">
 												<option label="#"></option>
 												<option>Дополнительное образование</option>
 												<option>Стажировка</option>
@@ -1223,13 +1299,13 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Год
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name="la"/>
 									</div>
 								</div>
 								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
@@ -1526,31 +1602,31 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Название статьи
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите название статьи" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите название статьи" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Год релиза статьи
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год релиза статьи" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год релиза статьи" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование журнала
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование журнала" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Наименование журнала" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Номер журнала
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номер журнала" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номер журнала" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Номера страниц
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номера страниц" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите номера страниц" name="la"/>
 									</div>
 								</div>
 								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
@@ -1588,13 +1664,13 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите наименование" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите наименование" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Год
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Введите год" name="la"/>
 									</div>
 								</div>
 								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
@@ -1791,19 +1867,19 @@
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Наименование учебного заведения
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Название или аббревиатура" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Название или аббревиатура" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Факультет
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Факультет" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Факультет" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
 											<div class="form-wrap__title">Специальность
 											</div>
-										</div><input class="form-wrap__input form-control" type="text" placeholder="Специальность" name=""/>
+										</div><input class="form-wrap__input form-control" type="text" placeholder="Специальность" name="la"/>
 									</div>
 									<div class="form-wrap__input-wrap form-group">
 										<div class="form-wrap__title-wrap">
@@ -1852,7 +1928,7 @@
 											</div>
 										</div>
 										<div class="form-wrap__inp-row row">
-											<div class="col-md-6"><input class="form-wrap__input form-control" type="text" placeholder="Год окончания" name=""/>
+											<div class="col-md-6"><input class="form-wrap__input form-control" type="text" placeholder="Год окончания" name="la"/>
 											</div>
 											<div class="col-md-6">
 												<div class="form-wrap__secondary">Если учитесь в настоящее время — укажите год предполагаемого окончания
@@ -2061,6 +2137,8 @@
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="js/jquery.marquee.min.js"></script>
+		<!--from npm-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->

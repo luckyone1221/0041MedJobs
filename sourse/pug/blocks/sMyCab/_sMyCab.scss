@@ -214,6 +214,16 @@
 		.bolder{
 			text-shadow: 0 0 .3px rgba($headings-color, .6);
 		}
+
+		&--alt-lh{
+			line-height: 1.5;
+			font-weight: 400;
+
+			.bolder{
+				font-weight: 600;
+				text-shadow: none;
+			}
+		}
 	}
 	&__a-btn-col{
 		margin-left: calc(48px + 12px);

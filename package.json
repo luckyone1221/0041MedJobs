@@ -67,6 +67,7 @@
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",
+    "marquee": "^0.2.1",
     "select2": "^4.1.0-rc.0",
     "swiper": "^5.4.5"
   }

@@ -1,10 +1,11 @@
 .top-nav {
+	transition: top .3s ease-in-out;
 	border-bottom: 1px solid $gary-110;
 
 	background-color: $body-bg;
 	position: fixed;
 	z-index: 999;
-	top: 0;
+	top: var(--top-nav-top, 0);
 	left: 0;
 	width: 100%;
 	height: var(--header-h);

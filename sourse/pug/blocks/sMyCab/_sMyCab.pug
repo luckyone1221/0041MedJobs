@@ -85,7 +85,7 @@ mixin sMyCabC(data)
 	// start sMyCab
 	+b.SECTION.sMyCab#sMyCab&attributes(attributes)
 		+e.top-row.row
-			if !data.hasCompilation
+			if !data.hasCompilation && !data.moderation
 				.col-12.myCab-alert-js
 					+e.alert
 						+e.a-row.row.align-items-lg-center
@@ -107,6 +107,18 @@ mixin sMyCabC(data)
 							.col-auto
 								+e.close-btn.myCab-close-alert-js
 									+icon('cross-big')
+			if data.moderation
+				.col-12.myCab-alert-js
+					+e.alert
+						+e.a-sub-row.row.align-items-center
+							.col-auto
+								+e.a-img
+									img(loading="lazy" src="img/svg/orange-alert.svg" alt="")
+							.col
+								+e.a-txt--alt-lh
+									span.bolder Ваш профиль на модерации.
+									br
+									span Вы можете создавать вакансии, но пока не можете их публиковать. Мы свяжемся с вами для подтверждения регистрации, после чего вы сможете воспользоваться полным функционалом.
 			.col-12
 				h1.sProfileN__title Мой кабинет
 			.col-12

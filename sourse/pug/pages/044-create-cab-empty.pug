@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/profesionals/_profesionals.pug
+include ../blocks/logPage/_logPage.pug
+include ../blocks/sAccProfile/_sAccProfile.pug
+include ../blocks/headerAlt/_headerAlt.pug
+include ../blocks/sProfileN/_sProfileN.pug
+include ../blocks/footerN/_footerN.pug
+include ../blocks/sNVac/_sNVac.pug
+include ../blocks/sMyCab/_sMyCab.pug
+
+block variables
+	- let  mainPage= 'bg-gray-120 mvp-page'
+block title
+	- let  title= '044-create-cab-empty'
+	title= title
+block pagecontent
+	.headerAlt-cont
+		+headerAlt(false, false,true,'col col-md-auto')
+	+sProfileNCreatorCab({
+		title: 'Мой кабинет',
+	})
+		+sMyCabC({
+			title: "Настройки профиля",
+			hasVacantions: false,
+			moderation: true,
+			logo: false,
+			name: 'Наименование организации не указано',
+			city: 'Город не указан',
+			tel: 'Телефон не указан',
+			mail: 'E-mail не указан',
+			cite: false,
+		})
+	+footerN()
