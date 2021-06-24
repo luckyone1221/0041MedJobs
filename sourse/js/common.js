@@ -819,12 +819,14 @@ function eventHandler() {
 		img.setAttribute('src', tmppath);
 	});
 
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
 
 function addSelect2ToNewItems(htmlNode){
 	$(htmlNode).find('.default-select-js').select2({
