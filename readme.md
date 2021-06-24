@@ -56,7 +56,7 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/039-expirience.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/040-education.html>
 
-==============================   Регистрация
+==============================   Регистрация 2
 1. <https://luckyone1221.github.io/0041MedJobs/public/041-e-reg.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/042-e-reg.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/043-e-reg.html>
