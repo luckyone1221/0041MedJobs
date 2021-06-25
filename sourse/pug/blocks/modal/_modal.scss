@@ -302,15 +302,17 @@
 	@include mt(1);
 	background-clip: padding-box;
 	right: 0;
-	transform: translateX(100%);
-	visibility: hidden;
+	--pos:100%;
+	--vis: hidden;
+	transform: translateX(var(--pos));
+	visibility: var(--vis);
 	&:not(.active){
 		// width: 1px;
 		
 	}
 	&.active{
-		transform: translateX(0);
-		visibility: visible;
+		--pos: 0;
+		--vis: visible;
 		@include mt(.4);
 		display: block;
 		&:before{

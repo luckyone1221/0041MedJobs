@@ -563,8 +563,8 @@ mixin repeatorRemove()
 				+icon('cross')
 			+e.ri-txt Удалить
 
-mixin customModal(modalId='place-id', title='Условия работы')
-	+b.custom-modal--js(id=modalId)
+mixin customModal(modalId='place-id', title='Условия работы' ) 
+	+b.custom-modal--js(id=modalId style="")
 		+e.inner
 			+e.close.close-cm-js
 			+e.content.cm-content-js
