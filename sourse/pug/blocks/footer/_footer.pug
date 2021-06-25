@@ -43,8 +43,9 @@ mixin footerAlt(addClasses='')
             br.d-none.d-xl-block
             | в сфере медицины.
           +socItems('justify-content-center justify-content-md-start d-xl-none mb-0')
-          +e.business-logo.text-center.text-md-start(href="#")
-            img(loading="lazy" src="img/@2x/bissnes-logo.png" alt="")
+          .d-xl-none
+            +e.business-logo.text-center.text-md-start(href="#")
+              img(loading="lazy" src="img/@2x/bissnes-logo.png" alt="")
         .col-12.col-md-7.col-xl-7
           +e.a-menu-row.row.text-center.text-md-start
             .col-12.col-md-4
