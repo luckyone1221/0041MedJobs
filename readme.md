@@ -66,3 +66,8 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/041-qwiz-1.html>
 2. <https://luckyone1221.github.io/0041MedJobs/public/041-qwiz-2.html>
 3. <https://luckyone1221.github.io/0041MedJobs/public/041-qwiz-3.html>
+4. 
+===========   старая регистрация/авторизация/восст пароля
+1. <https://luckyone1221.github.io/0041MedJobs/public/09-reg.html>
+2. <https://luckyone1221.github.io/0041MedJobs/public/08-authorization.html>
+3. <https://luckyone1221.github.io/0041MedJobs/public/010-restore.html>
