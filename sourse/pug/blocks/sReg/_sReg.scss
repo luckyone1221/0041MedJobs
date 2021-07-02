@@ -1,6 +1,6 @@
 // start .sReg
 .sReg {
-  padding-top: var(--top-nav-top);
+  padding-top: var(--top-nav-top, 0px);
 
   flex-grow: 1;
   display: flex;

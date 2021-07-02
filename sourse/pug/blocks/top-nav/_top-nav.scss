@@ -5,7 +5,7 @@
 	background-color: $body-bg;
 	position: fixed;
 	z-index: 999;
-	top: var(--top-nav-top, 0);
+	top: var(--top-nav-top, 0px);
 	left: 0;
 	width: 100%;
 	height: var(--header-h);

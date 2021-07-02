@@ -1,7 +1,7 @@
 // start .headerAlt
 .headerAlt {
 	transition: top .3s ease-in-out;
-	top: var(--top-nav-top, 0);
+	top: var(--top-nav-top, 0px);
 	//top: 0;
 
 	position: fixed;
@@ -495,10 +495,10 @@
 
 .headerAlt-cont{
 	//padding-top: var(--header-h, 125px);
-	padding-top: calc(var(--header-h, 125px) + var(--header-h));
+	padding-top: calc(var(--header-h, 125px) + var(--top-nav-top, 0px));
 	@include media-breakpoint-up(md){
 		//padding-top: var(--header-h, 90px);
-		padding-top: calc(var(--header-h, 90px) + var(--header-h));
+		padding-top: calc(var(--header-h, 90px) + var(--top-nav-top, 0px));
 	}
 }
 
