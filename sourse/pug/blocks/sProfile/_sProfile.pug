@@ -50,7 +50,7 @@ mixin profileItem(data)
 				.col-auto
 					+e.date=`${data.date || '04.02.2021'}`
 				.col-auto
-					+e.like-btn(href='#')
+					+e.like-btn(href='#' class=`${data.likeBtnClasses || ''}`)
 						+icon('like')
 		+e.name-bl
 			+e.name(href="#")=`${data.name || 'Врач-терапевт стационар'}`
