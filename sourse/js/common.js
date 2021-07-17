@@ -587,11 +587,10 @@ function eventHandler() {
 		let newItem = document.createElement('div');
 		newItem.classList.add('custom-modal__r-item', 'r-item-js', 'd-none-no-important');
 		newItem.innerHTML = content;
-
 		btnParent.insertBefore(newItem, this);
-		addSelect2ToNewItems(newItem);
-
+		
 		$(newItem).slideDown(function (){
+			addSelect2ToNewItems(this);
 			$(this).removeClass('d-none-no-important');
 			let index = $(this).index();
 			let names = newItem.querySelectorAll('[name]');
@@ -683,7 +682,8 @@ function eventHandler() {
 	let footerN = document.querySelector('.footerN--js');
 	if (fixedScrollTopBtn){
 		document.addEventListener('scroll', function (){
-			console.log(footerN.getBoundingClientRect().top + $(window)['scrollTop'](), window.scrollY + vh(100));
+			// console.log(footerN.getBoundingClientRect().top + $(window)['scrollTop'](), window.scrollY + vh(100));
+			if (!footerN) return;
 			let footerTop = footerN.getBoundingClientRect().top + $(window)['scrollTop']();
 
 			if (window.scrollY > vh(50) && footerTop > window.scrollY + vh(100)){
@@ -862,5 +862,6 @@ function addSelect2ToNewItems(htmlNode){
 		//maximumSelectionLength: 30,
 		dropdownCssClass: "default-select2",
 	});
+	// console.log($(htmlNode).find('.default-select-js'));
 }
 

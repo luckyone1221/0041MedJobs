@@ -1,7 +1,10 @@
 :root {
 	--animate-delay: 1.2s;
+	
+	@include media-breakpoint-up(sm) {
 	--fontSizeBase: #{$em-base};
-
+}
+--fontSizeBase: 20px;
 	--sPT: #{rem(40)};
 	--sPB: #{rem(45)};
 	--sTPB: #{rem(30)};

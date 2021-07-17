@@ -1,6 +1,6 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -587,8 +587,8 @@ function eventHandler() {
 		newItem.classList.add('custom-modal__r-item', 'r-item-js', 'd-none-no-important');
 		newItem.innerHTML = content;
 		btnParent.insertBefore(newItem, this);
-		addSelect2ToNewItems(newItem);
 		$(newItem).slideDown(function () {
+			addSelect2ToNewItems(this);
 			$(this).removeClass('d-none-no-important');
 			let index = $(this).index();
 			let names = newItem.querySelectorAll('[name]');
@@ -671,7 +671,8 @@ function eventHandler() {
 
 	if (fixedScrollTopBtn) {
 		document.addEventListener('scroll', function () {
-			console.log(footerN.getBoundingClientRect().top + $(window)['scrollTop'](), window.scrollY + vh(100));
+			// console.log(footerN.getBoundingClientRect().top + $(window)['scrollTop'](), window.scrollY + vh(100));
+			if (!footerN) return;
 			let footerTop = footerN.getBoundingClientRect().top + $(window)['scrollTop']();
 
 			if (window.scrollY > vh(50) && footerTop > window.scrollY + vh(100)) {
@@ -847,5 +848,5 @@ function addSelect2ToNewItems(htmlNode) {
 		tags: true,
 		//maximumSelectionLength: 30,
 		dropdownCssClass: "default-select2"
-	});
+	}); // console.log($(htmlNode).find('.default-select-js'));
 }

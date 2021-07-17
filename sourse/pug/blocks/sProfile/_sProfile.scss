@@ -437,6 +437,7 @@
 		color: $gray-600;
 	}
 	&__like-btn{
+		cursor: pointer;
 		width: 24px;
 		height: 24px;
 
@@ -506,8 +507,9 @@
 		background: $white;
 		border: 1px solid $gray-210;
 		border-radius: 5px;
-
+		padding: rem(2);
 		&--empty{
+			padding: 0;
 			border: 1px solid $gray-100;
 			background: $gray-100;
 		}
