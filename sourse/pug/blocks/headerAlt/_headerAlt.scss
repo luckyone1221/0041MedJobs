@@ -551,10 +551,11 @@
 	padding: 8px 20px;
 	border-radius: 60px;
 
-	font-size: 15px;
-	@include media-breakpoint-between(xlg, xl){
-		font-size: 13px;
-	}
+	font-size: inherit;
+	//font-size: 15px;
+	//@include media-breakpoint-between(xlg, xl){
+	//	font-size: 13px;
+	//}
 
 	display: inline-flex;
 	align-items: center;

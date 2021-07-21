@@ -217,6 +217,10 @@
 			padding-bottom: 48px;
 		}
 	}
+
+	.vac-btn{
+		font-size: inherit;
+	}
 } // end.sNVac
 
 @keyframes top-bot {
@@ -354,6 +358,9 @@
 		margin-bottom: 0;
 	}
 
+	@media (max-width: 576px){
+		padding: 24px;
+	}
 	padding: 18px 18px 24px 18px;
 	@include media-breakpoint-up(md){
 		padding: 24px;
@@ -438,12 +445,14 @@
 		--col-mb: 6px;
 	}
 	&__city{
-		//font-size: 15px;
 		line-height: 1.5;
 		color: $gray-600;
 	}
 	//
 	&__status-row{
+		@media (max-width: 576px){
+			--bs-gutter-y: 18px;
+		}
 		--bs-gutter-x: 12px;
 		--bs-gutter-y: 12px;
 		justify-content: flex-end;
@@ -486,10 +495,11 @@
 		border-width: 1px!important;
 		border-radius: 60px;
 
-		font-size: 15px;
-		@include media-breakpoint-between(xlg,xl){
-			font-size: 13px;
+		@media (max-width: 576px){
+			min-width: 0;
+			padding: 12px 20px;
 		}
+		font-size: inherit;
 		line-height: (18/15);
 
 		&--blue{

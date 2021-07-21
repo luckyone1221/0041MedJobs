@@ -675,6 +675,9 @@
 				width: 100%!important;
 				border-radius: var(--couple-inp-br, 0);
 				padding-left: 33px;
+				@media (max-width: 576px){
+					padding-left: 40px;
+				}
 			}
 			//
 
@@ -693,6 +696,10 @@
 				padding: 11px 16px;
 				border-radius: 60px;
 
+				@media (max-width: 576px){
+					font-size: 17px;
+					padding: 11px 6px;
+				}
 				font-size: 15px;
 				@include media-breakpoint-between(xlg,xl){
 					font-size: 13px;
