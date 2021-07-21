@@ -972,6 +972,10 @@ h5{
 	font-family: $mono;
 	line-height: (18/15);
 
+	//
+	@media (max-width: 576px){
+		font-size: 20px;
+	}
 	@include media-breakpoint-between(xlg, xl){
 		font-size: 13px;
 	}

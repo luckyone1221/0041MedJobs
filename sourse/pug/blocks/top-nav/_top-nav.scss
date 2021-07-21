@@ -512,6 +512,9 @@
 	right: 0;
 	top: 100%;
 	min-width: 260px;
+	@media (max-width: 576px){
+		min-width: 300px;
+	}
 	padding-top: 25px;
 
 	&__inner{
@@ -520,7 +523,6 @@
 		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
 		border-radius: 5px;
 		padding: 12px 0;
-
 		--inner-x-padd: 12px;
 	}
 	&__top-txt{
@@ -528,13 +530,15 @@
 	}
 	&__name{
 		font-weight: 500;
-		font-size: 15px;
+		//font-size: 15px;
+		font-size: inherit;
 		line-height: (18/15);
 		color: $headings-color;
 		margin-bottom: 6px;
 	}
 	&__id{
-		font-size: 15px;
+		//font-size: 15px;
+		font-size: inherit;
 		line-height: (18/15);
 		color: $secondary;
 	}
@@ -548,7 +552,8 @@
 
 				a{
 					display: block;
-					font-size: 15px;
+					//font-size: 15px;
+					font-size: inherit;
 					line-height: (18/15);
 					color: $headings-color;
 
