@@ -972,7 +972,11 @@ h5{
 	font-family: $mono;
 	line-height: (18/15);
 
+
 	//
+	--pugination-n-link-padd: 12px 16px;
+	--pugination-n-pages-padd: 12px;
+	--pugination-n-icon-fs: 13px;
 	@media (max-width: 576px){
 		font-size: 20px;
 	}

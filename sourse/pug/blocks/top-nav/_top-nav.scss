@@ -164,6 +164,9 @@
 
 		.icon{
 			color: $warning;
+			@media (max-width: 576px){
+				font-size: 30px;
+			}
 			font-size: 24px;
 			margin-right: 5px;
 		}
@@ -180,7 +183,9 @@
 		}
 	}
 	&__loc-txt{
-
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
 	}
 	//place-cv
 	&__place-cv{
@@ -288,11 +293,15 @@
 		&--alt{
 			width: 24px;
 			height: 24px;
+			@media (max-width: 576px){
+				width: 32px;
+				height: 32px;
+			}
 
 			span,
 			span:before,
 			span:after{
-				width: 24px!important;
+				width: 100%!important;
 				height: 2px;
 			}
 
@@ -314,10 +323,18 @@
 		min-width: 200px;
 		font-weight: bold;
 		font-size: rem(16);
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
+
 		line-height: 1.25;
 	}
 	&__enter-link{
 		font-size: 16px;
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
+
 		line-height: 1.25;
 		color: $headings-color;
 		&:hover{
@@ -335,6 +352,11 @@
 		flex-shrink: 0;
 		width: 24px;
 		height: 24px;
+		@media (max-width: 576px){
+			width: 30px;
+			height: 30px;
+		}
+
 		margin-right: 10px;
 		border-radius: 50%;
 		background: $cyan;
@@ -345,11 +367,17 @@
 
 		.icon{
 			font-size: 12px;
+			@media (max-width: 576px){
+				font-size: 16px;
+			}
 			color: $white;
 		}
 	}
 	&__mcv-txt{
 		font-size: rem(16);
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
 		line-height: 1.25;
 		color: $headings-color;
 	}
@@ -361,9 +389,16 @@
 		justify-content: center;
 		width: 24px;
 		height: 24px;
+		@media (max-width: 576px){
+			width: 30px;
+			height: 30px;
+		}
 
 		.icon{
 			font-size: 24px;
+			@media (max-width: 576px){
+				font-size: 30px;
+			}
 			color: $gray-550;
 		}
 	}
@@ -679,7 +714,9 @@
 		display: block;
 		padding: 10px var(--box-px, 18px);
 
-
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
 		background-color: transparent;
 		color: $headings-color;
 		&:hover{

@@ -7,11 +7,19 @@
 
 	.breadcrumb{
 		margin-bottom: 8px;
+		@media (max-width: 576px){
+			margin-bottom: 12px;
+		}
+
+		*{
+			font-size: inherit;
+		}
 	}
 	.section-title{
 
 	}
 	&__row{
+
 		@include roww(18px);
 		--bs-gutter-y: 18px;
 		@include media-breakpoint-up(md){
@@ -24,6 +32,9 @@
 		border-radius: 5px;
 
 		--box-x-padd: 48px;
+		@media (max-width: 576px){
+			--box-x-padd: 36px;
+		}
 		min-height: 100%;
 	}
 	&__head{
@@ -32,6 +43,9 @@
 
 		font-weight: 600;
 		font-size: 19.8px;
+		@media (max-width: 576px){
+			font-size: 24px;
+		}
 	}
 	&__content{
 		padding:  0 var(--box-x-padd, 48px);
@@ -61,12 +75,18 @@
 	&__d-key-col{
 		font-weight: 600;
 		font-size: 14px;
+		@media (max-width: 576px){
+			font-size: 17px;
+		}
 		line-height: (16/14);
 
 		width: 50%;
 	}
 	&__d-txt{
 		font-size: 14px;
+		@media (max-width: 576px){
+			font-size: 17px;
+		}
 		line-height: 1.75;
 
 		&--link{
@@ -99,12 +119,18 @@
 
 			textarea{
 				height: 96px;
+				@media (max-width: 576px){
+					height: 120px;
+				}
 				padding: 10px;
 			}
 		}
 		&__input-title{
 			font-weight: 600;
 			font-size: 14px;
+			@media (max-width: 576px){
+				font-size: 18px;
+			}
 			line-height: (16/14);
 			margin-bottom: 15px;
 			display: block;
@@ -115,6 +141,9 @@
 			min-height: 0;
 
 			font-size: 14px;
+			@media (max-width: 576px){
+				font-size: 18px;
+			}
 			line-height: (16/14);
 
 			&:focus{
@@ -125,6 +154,8 @@
 			@extend .green-btn;
 			min-width: 220px;
 			padding: 14px 20px;
+
+			font-size: inherit;
 		}
 	}
 
