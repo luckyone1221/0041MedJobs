@@ -254,12 +254,14 @@
 	&__img{
 		//width: 34px;
 		//height: 34px;
-		width: 24px;
-		height: 24px;
-		margin: 0 auto 18px auto;
+		width: rem(24px *1.4);
+		height: rem(24px *1.4);
+		margin: 0 auto rem(12px) auto;
 		@include media-breakpoint-up(md){
-			width: 24px;
-			height: 24px;
+			width: rem(24px);
+			height: rem(24px);
+			// width: 24px;
+			// height: 24px;
 			margin: 0 12px 0 0;
 		}
 
