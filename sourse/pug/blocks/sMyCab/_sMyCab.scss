@@ -20,7 +20,11 @@
 		background: $white;
 		border: 1px solid $gray-210;
 		border-radius: 5px;
+
 		padding: 24px;
+		@media (max-width: 576px){
+			padding: 32px;
+		}
 
 		@include mt();
 		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
@@ -39,6 +43,10 @@
 	}
 	&__title{
 		//font-weight: 500;
+		@media (max-width: 576px){
+			font-size: 24px;
+		}
+
 		font-size: 20px;
 		@include media-breakpoint-between(xlg, xl){
 			font-size: 18px;
@@ -63,7 +71,7 @@
 		}
 	}
 	&__name{
-		font-size: rem(15);
+		font-size: inherit;
 		line-height: 1.5;
 		color: $headings-color;
 		margin-bottom: rem(12);
@@ -89,14 +97,28 @@
 
 	&__b-hint-cont{
 		.hint-row{
-			width: 250px;
+			align-items: center;
+			//!!!!!
+			@media (min-width: 576px){
+				width: 250px;
+			}
 		}
+
 	}
 	.hint-row{
 		&__quest-sign{
+			@media (max-width: 576px){
+				width: 24px;
+				height: 24px;
+			}
 			.icon{
 				position: relative;
 				//left: 1px;
+
+				//!!!!!max
+				@media (max-width: 576px){
+					font-size: 15px;
+				}
 			}
 		}
 	}
@@ -146,6 +168,9 @@
 		@extend .btn;
 		@extend .btn-outline-primary;
 
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
 		@include media-breakpoint-between(xlg, xl){
 			font-size: 13px;
 		}
@@ -238,6 +263,9 @@
 		padding: 10px 23px;
 		border-radius: rem(60);
 
+		@media (max-width: 576px){
+			font-size: 18px;
+		}
 		@include media-breakpoint-between(xlg, xl){
 			font-size: 13px;
 		}

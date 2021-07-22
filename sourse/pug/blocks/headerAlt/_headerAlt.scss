@@ -12,6 +12,9 @@
 	background-color: $white;
 	border-bottom: 1px solid $gray-210;
 
+	@media (max-width: 576px){
+		padding: 24px 0;
+	}
 	padding: 18px 0;
 	@include media-breakpoint-up(md){
 		padding: 24px 0;
@@ -24,6 +27,9 @@
 
 	}
 	&__row{
+		@media (max-width: 576px){
+			--col-mb: 18px;
+		}
 		@include roww(18px);
 		--col-mb: 14px;
 		@include media-breakpoint-up(md){
@@ -48,6 +54,12 @@
 	&__logo{
 		display: block;
 		width: 200px;
+		@media (max-width: 576px){
+			width: 240px;
+			img{
+				width: 100%;
+			}
+		}
 
 		img{
 			width: auto;
@@ -66,6 +78,10 @@
 	}
 	&__s-input{
 		width: 100%;
+		@media (max-width: 576px){
+			font-size: 21px;
+			padding: 12px 44px;
+		}
 
 		padding: 9px 38px;
 		border-radius: 50px;
@@ -82,6 +98,10 @@
 		left: 15px;
 		transform: translateY(-50%);
 
+		@media (max-width: 576px){
+			width: 24px;
+			height: 24px;
+		}
 		width: 18px;
 		height: 18px;
 		padding: 0;
@@ -95,6 +115,10 @@
 
 		.icon{
 			@include mt($smooth);
+
+			@media (max-width: 576px){
+				font-size: 24px;
+			}
 			font-size: 18px;
 			color: $secondary;
 		}
@@ -203,10 +227,17 @@
 			right: 0;
 		}
 
+		@media (max-width: 576px){
+			width: 30px;
+			height: 30px;
+		}
 		width: 24px;
 		height: 24px;
 		.icon{
 			@include mt($sharp);
+			@media (max-width: 576px){
+				font-size: 30px;
+			}
 			font-size: 24px;
 			color: $gray-550;
 		}
@@ -243,10 +274,16 @@
 		}
 	}
 	&__lc-txt{
-
+		@media (max-width: 576px){
+			display: none;
+		}
 	}
 	&__lc-img{
 		display: block;
+		@media (max-width: 576px){
+			width: 40px;
+			height: 40px;
+		}
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
@@ -270,6 +307,10 @@
 
 	&__burger{
 		cursor: pointer;
+		@media (max-width: 576px){
+			width: 40px;
+			height: 40px;
+		}
 		width: 34px;
 		height: 34px;
 		position: relative;
@@ -375,7 +416,7 @@
 		font-weight: 500;
 	}
 	&__id{
-		font-size: 15px;
+		//font-size: 15px;
 		line-height: (18/15);
 		color: $gray-600;
 		padding: 0 var(--lc-padd-x, 12px) 12px var(--lc-padd-x, 12px);
@@ -510,10 +551,11 @@
 	padding: 8px 20px;
 	border-radius: 60px;
 
-	font-size: 15px;
-	@include media-breakpoint-between(xlg, xl){
-		font-size: 13px;
-	}
+	font-size: inherit;
+	//font-size: 15px;
+	//@include media-breakpoint-between(xlg, xl){
+	//	font-size: 13px;
+	//}
 
 	display: inline-flex;
 	align-items: center;

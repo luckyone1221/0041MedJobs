@@ -2,6 +2,7 @@
 .sProfileN {
 	position: relative;
 	overflow: hidden;
+
 	--sPT: 18px;
 	@include media-breakpoint-up(md){
 		--sPT: 24px;
@@ -34,9 +35,13 @@
 	}
 	&__title{
 		font-weight: 600;
+
 		font-size: 24px;
 		@include media-breakpoint-between(xlg, xl){
 			font-size: 18px;
+		}
+		@media (max-width: 576px){
+			font-size: 30px;
 		}
 
 		line-height: (29/24);
@@ -191,6 +196,7 @@
 		border: 1px solid $gray-210;
 		border-radius: 5px;
 
+
 		padding: 33px;
 		@include media-breakpoint-up(md){
 			padding: 37px;
@@ -207,7 +213,11 @@
 
 		.form-wrap{
 			&__b-title{
+				@media (max-width: 576px){
+					font-size: 24px;
+				}
 				font-size: 20px;
+
 				line-height: 1.5;
 				font-weight: 500;
 
@@ -232,6 +242,9 @@
 				}
 			}
 			&__b-col-pd{
+				@media (max-width: 576px){
+					max-width: 100%;
+				}
 				max-width: var(--pd-col-w, 550px);
 				flex-grow: 1;
 
@@ -243,6 +256,12 @@
 				}
 			}
 			&__port-col{
+				@media (max-width: 576px){
+					width: 100% !important;
+					max-width: 100% !important;
+					order: -1;
+				}
+
 				max-width: calc(100% - var(--pd-col-w, 550px));
 
 				&--square{
@@ -290,6 +309,11 @@
 			}
 			&__b-change{
 				width: 100%;
+				@media (max-width: 576px){
+					max-width: 150px;
+					margin-bottom: 24px;
+				}
+
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -314,6 +338,10 @@
 				}
 			}
 			&__input-wrap{
+				@media (max-width: 576px){
+					margin-bottom: 30px;
+				}
+
 				margin-bottom: 24px;
 				@include media-breakpoint-between(xlg, xl){
 					margin-bottom: 18px;
@@ -338,22 +366,48 @@
 				@include media-breakpoint-up(md){
 					width: calc(100% -  var(--i-title-w, 200px));
 				}
-				font-size: 15px;
-				@include media-breakpoint-between(xlg, xl){
-					font-size: 13px;
-				}
+
+				font-size: inherit;
+				//font-size: 15px;
+				//@include media-breakpoint-between(xlg, xl){
+				//	font-size: 13px;
+				//}
 
 				padding: 10px;
 				border-radius: 5px;
 			}
 			&__select{
 				padding: 9px 25px 9px 10px;
-				font-size: 15px;
-				@include media-breakpoint-between(xlg, xl){
-					font-size: 13px;
-				}
+
+				font-size: inherit;
+				//font-size: 15px;
+				//@include media-breakpoint-between(xlg, xl){
+				//	font-size: 13px;
+				//}
 				background-position-x: calc(100% - 10px);
 			}
+			//select2
+			.custom-select{
+				@media (max-width: 576px){
+					font-size: 20px;
+
+					.select2-selection{
+						--select-h: 47px;
+						border-color: $gary-110!important;
+					}
+					.select2.select2-container.select2-container--default{
+						height: 47px!important;
+					}
+					.select2-selection__rendered{
+						display: flex!important;
+						align-items: center!important;
+						--rendered-fs: 20px;
+					}
+				}
+			}
+
+			//
+
 			&__input-title{
 				@include media-breakpoint-up(md){
 					min-height: 40px;
@@ -424,10 +478,11 @@
 				padding: 10.5px 20px;
 				border-radius: 50px;
 
-				font-size: 15px;
-				@include media-breakpoint-between(xlg, xl){
-					font-size: 13px;
-				}
+				font-size: inherit;
+				//font-size: 15px;
+				//@include media-breakpoint-between(xlg, xl){
+				//	font-size: 13px;
+				//}
 				line-height: (18/15);
 
 				&.muted{
@@ -565,6 +620,7 @@
 				padding-bottom: 24px;
 			}
 			.custom-chb{
+				align-items: center;
 				&:last-child{
 					margin-bottom: 0;
 				}
@@ -572,10 +628,14 @@
 					margin-right: 6px;
 				}
 				.txt{
-					font-size: 15px;
-					@include media-breakpoint-between(xlg, xl){
-						font-size: 13px;
-					}
+					font-size: inherit;
+					//@media (max-width: 576px){
+					//	font-size: 20px;
+					//}
+					//font-size: 15px;
+					//@include media-breakpoint-between(xlg, xl){
+					//	font-size: 13px;
+					//}
 				}
 			}
 
@@ -615,6 +675,9 @@
 				width: 100%!important;
 				border-radius: var(--couple-inp-br, 0);
 				padding-left: 33px;
+				@media (max-width: 576px){
+					padding-left: 40px;
+				}
 			}
 			//
 
@@ -633,6 +696,10 @@
 				padding: 11px 16px;
 				border-radius: 60px;
 
+				@media (max-width: 576px){
+					font-size: 17px;
+					padding: 11px 6px;
+				}
 				font-size: 15px;
 				@include media-breakpoint-between(xlg,xl){
 					font-size: 13px;
@@ -765,6 +832,13 @@
 
 	}
 	&__icon{
+		@media (max-width: 576px){
+			width: 30px;
+			height: 30px;
+			.icon{
+				font-size: 30px;
+			}
+		}
 		width: 24px;
 		height: 24px;
 		margin-right: 12px;

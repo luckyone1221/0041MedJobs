@@ -31,6 +31,10 @@
 		&__hedline{
 			font-weight: 600;
 			font-size: 20px;
+			@media (max-width: 576px){
+				font-size: 24px;
+			}
+
 			line-height: 1.25;
 			color: $headings-color;
 			margin-bottom: 24px;
@@ -78,6 +82,10 @@
 			display: block;
 			font-weight: 600;
 			color: $headings-color;
+
+			@media (max-width: 576px){
+				font-size: 28px;
+			}
 			font-size: 14px;
 			margin-bottom: 14px;
 		}
@@ -85,10 +93,16 @@
 			margin-bottom: 36px;
 			textarea{
 				height: 96px;
+				@media (max-width: 576px){
+					height: 120px;
+				}
 				padding: 10px;
 			}
 		}
 		&__input{
+			@media (max-width: 576px){
+				font-size: 18px;
+			}
 			font-size: 14px;
 			padding: 14px 10px;
 
@@ -100,6 +114,7 @@
 			@extend .green-btn;
 			padding: 14px 20px;
 			min-width: 220px;
+			font-size: inherit;
 		}
 		&__{}
 		&__{}
@@ -112,6 +127,9 @@
 	&__title{
 		font-weight: 600;
 		font-size: 20px;
+		@media (max-width: 576px){
+			font-size: 24px;
+		}
 		color: $headings-color;
 		margin-bottom: 40px;
 	}
@@ -126,6 +144,10 @@
 	&__i-title{
 		font-weight: 600;
 		font-size: 16px;
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
+
 		line-height: (19/16);
 		color: $headings-color;
 		margin-bottom: 8px;
@@ -133,6 +155,10 @@
 	&__link{
 		display: block;
 		font-size: 16px;
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
+
 		line-height: (19/16);
 
 		color: $headings-color;
@@ -150,6 +176,9 @@
 	&__title{
 		font-weight: 600;
 		font-size: 16px;
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
 		line-height: 1.25;
 		color: $headings-color;
 
@@ -171,6 +200,9 @@
 				padding-left: 48px;
 			}
 
+			@media (max-width: 576px){
+				font-size: 18px;
+			}
 			font-size: 14px;
 			line-height: (16/14);
 			//color: #888C94;
@@ -198,6 +230,9 @@
 
 			background-image: url(../img/svg/modal-cross.svg);
 			background-size: 18px;
+			@media (max-width: 576px){
+				background-size: 24px;
+			}
 			background-repeat: no-repeat;
 			background-position: 50%;
 		}
@@ -216,6 +251,7 @@
 
 			.icon{
 				font-size: 24px;
+
 			}
 		}
 		&__results{
@@ -234,6 +270,9 @@
 				a{
 					display: block;
 					font-size: 14px;
+					@media (max-width: 576px){
+						font-size: 18px;
+					}
 					line-height: 2.25;
 
 					color: $headings-color;
@@ -256,7 +295,7 @@
 			font-family: $mono;
 
 			font-weight: 500;
-			font-size: 15px;
+			font-size: inherit;
 			line-height: (18/15);
 			color: $headings-color;
 		}
@@ -265,7 +304,7 @@
 			font-family: $mono;
 
 			font-weight: 500;
-			font-size: 15px;
+			font-size: inherit;
 			line-height: (18/15);
 			color: $headings-color;
 
@@ -370,6 +409,9 @@
 		right: 48px;
 
 		.icon{
+			@media (max-width: 576px){
+				font-size: 32px;
+			}
 			font-size: 24px;
 			color: $secondary;
 		}
@@ -435,7 +477,7 @@
 		}
 		&__input{
 			width: 100%;
-			font-size: 15px;
+			font-size: inherit;
 
 			padding: 10px;
 			border-radius: 5px;
@@ -461,10 +503,12 @@
 			@extend .btn-light;
 			border-radius: 60px;
 
-			padding: 10px 23px;
+			@media (max-width: 576px){
+				padding: 10px 11px;
+			}
 
 			font-weight: 500;
-			font-size: 15px;
+			font-size: inherit;
 			line-height: (18/15);
 		}
 		&__save-btn{
@@ -472,9 +516,12 @@
 			border-radius: 60px;
 
 			padding: 10px 23px;
+			@media (max-width: 576px){
+				padding: 10px 11px;
+			}
 
 			font-weight: 500;
-			font-size: 15px;
+			font-size: inherit;
 			line-height: (18/15);
 		}
 		.skill-select{
@@ -535,7 +582,7 @@
 			margin-right: 12px;
 		}
 		&__ri-txt{
-			font-size: 15px;
+			font-size: inherit;
 			line-height: 1.25;
 			color: var(--txt-color, #{$headings-color});
 		}
@@ -552,8 +599,16 @@
 				color: $white!important;
 			}
 		}
-		.custom-chb:last-child{
-			margin-bottom: 0;
+		.custom-chb{
+			.txt{
+				@media (max-width: 576px){
+					font-size: 17px;
+				}
+				font-size: inherit;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 		.custom-radio{
 			margin-bottom: 12px;
@@ -568,6 +623,23 @@
 	}
 
 	&__{}
+
+	.custom-select{
+		@media (max-width: 576px){
+			.select2-selection{
+				--select-h: 48px;
+			}
+			.select2.select2-container.select2-container--default{
+				height: 48px!important;
+			}
+			.select2-selection__rendered{
+				display: flex!important;
+				align-items: center!important;
+				--rendered-fs: 18px;
+			}
+		}
+	}
+
 }
 
 //multiple select alt
@@ -582,15 +654,15 @@
 	*{
 		font-family: $default-font!important;
 		font-weight: 400!important;
-		font-size: 15px!important;
+		font-size: inherit!important;
 		line-height: (18/15);
 		white-space: normal!important;
 	}
 
 	.select2-selection.select2-selection--multiple{
-		min-height: 40px;
+		min-height: rem(40px);
 		padding: 0px!important;
-		border-radius: 5px!important;
+		border-radius: rem(5px)!important;
 		@include mt();
 		width: 100%!important;
 		height: 100%!important;
@@ -613,10 +685,10 @@
 		height: 100% !important;
 
 		&__rendered{
-			margin: 0 0 -10px!important;
-			padding: 4px 24px 4px 5px!important;
+			margin: 0 0 rem(-10px)!important;
+			padding: rem(4px) rem(24px) rem(4px) rem(5px)!important;
 			& > *{
-				margin: 0 2.5px 9px 2.5px!important;
+				margin: 0 rem(2.5px) rem(9px) rem(2.5px)!important;
 			}
 			display: flex!important;
 			flex-wrap: wrap!important;
@@ -629,8 +701,8 @@
 
 			border: none!important;
 			background-color: $light!important;
-			padding: 5px 5px!important;
-			border-radius: 3px!important;
+			padding: rem(5px) rem(5px)!important;
+			border-radius: rem(3px)!important;
 		}
 		&__choice__remove{
 			position: absolute!important;
@@ -657,7 +729,7 @@
 			padding: 0!important;
 			margin: 0!important;
 			font-family: $mono!important;
-			font-size: 15px!important;
+			font-size: inherit!important;
 			line-height: (18/15) !important;
 
 			color: $dark!important;
@@ -668,11 +740,13 @@
 				display: inline-block;
 				vertical-align: baseline;
 				@include mt();
-				width: 8px;
-				height: 8px;
+				width: rem(8px);
+				height: rem(8px);
 				margin-left: 6px;
 
 				background-image: url(../img/svg/sm-cross2.svg);
+				background-size: 100%;
+				background-repeat: no-repeat;
 			}
 		}
 	}
@@ -682,8 +756,8 @@
 			display: inline-block!important;
 		}
 		.select2-search__field{
-			margin: 5px!important;
-			height: 30px!important;
+			margin: rem(5px)!important;
+			height: rem(30px)!important;
 		}
 	}
 	.select2-search{
@@ -692,10 +766,10 @@
 			margin: 0!important;
 			height: 0px!important;
 
-			line-height: 30px!important;
-			padding: 0 5px!important;
+			line-height: rem(30px)!important;
+			padding: 0 rem(5px)!important;
 
-			font-size: 15px!important;
+			font-size: inherit!important;
 			font-family: $mono!important;
 
 			//padding: 5px!important;

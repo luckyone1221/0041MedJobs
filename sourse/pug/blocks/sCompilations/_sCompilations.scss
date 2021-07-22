@@ -18,6 +18,9 @@
 		.icon{
 			@include mt();
 
+			@media (max-width: 576px){
+				font-size: 30px;
+			}
 			font-size: 24px;
 			margin-right: 15px;
 			@include media-breakpoint-between(xlg, xl){
@@ -48,6 +51,7 @@
 			justify-content: center;
 			height: rem(60);
 
+			font-size: inherit;
 			//font-size: 15px;
 			//line-height: 18/15;
 
@@ -129,6 +133,10 @@
 			//
 			.icon{
 				@include mt();
+
+				@media (max-width: 576px){
+					font-size: 30px;
+				}
 				font-size: 24px;
 				@include media-breakpoint-between(xlg, xl){
 					font-size: 18px;
@@ -151,8 +159,15 @@
 			}
 		}
 		&__ball{
+			@media (max-width: 576px){
+				width: 24px;
+				height: 24px;
+				font-size: 16px;
+			}
 			width: 20px;
 			height: 20px;
+			font-size: 12px;
+
 			border-radius: 50%;
 			background: $orange;
 
@@ -164,7 +179,6 @@
 			color: $white;
 
 			font-weight: 500;
-			font-size: 12px;
 			line-height: (15/12);
 		}
 		&__{}
@@ -303,6 +317,10 @@
 		color: $headings-color;
 	}
 	&__batery{
+		@media (max-width: 576px){
+			width: 30px;
+			height: 30px;
+		}
 		width: 24px;
 		height: 24px;
 		@include media-breakpoint-between(xlg, xl){
@@ -324,9 +342,20 @@
 	//hint
 	.hint-row{
 		&__quest-sign{
+			@media (max-width: 576px){
+				width: 24px;
+				height: 24px;
+			}
 			.icon{
+				//!!!!!min
 				position: relative;
 				left: 1px;
+
+				//!!!!!max
+				@media (max-width: 576px){
+					font-size: 15px;
+				}
+
 			}
 		}
 
@@ -354,6 +383,10 @@
 	}
 	&__title{
 		font-weight: 500;
+
+		@media (max-width: 576px){
+			font-size: 24px;
+		}
 		font-size: 20px;
 
 		@include media-breakpoint-between(xlg,xl){
@@ -367,6 +400,10 @@
 	}
 	&__salary{
 		font-weight: 500;
+
+		@media (max-width: 576px){
+			font-size: 24px;
+		}
 		font-size: 20px;
 		margin-bottom: 18px;
 		@include media-breakpoint-between(xlg,xl){
@@ -381,6 +418,10 @@
 		padding-bottom: 18px;
 	}
 	&__logo{
+		@media (max-width: 576px){
+			width: 72px;
+			height: 72px;
+		}
 		width: 48px;
 		height: 48px;
 		border-radius: 5px;
@@ -408,16 +449,10 @@
 	&__descr{
 		line-height: 1.75;
 		margin-bottom: 6px;
-
-		//font-size: 15px;
-		//@include media-breakpoint-between(xlg,xl){
-		//	font-size: 13px;
-		//}
 	}
 	&__detail{
 		display: inline-block;
 		font-weight: 500;
-		//font-size: 15px;
 		line-height: 1.75;
 
 		@extend .primary-link;
@@ -438,6 +473,9 @@
 		align-items: center;
 		justify-content: center;
 
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
 		padding: 18px;
 		font-size: 15px;
 		@include media-breakpoint-between(xlg, xxl){
@@ -467,6 +505,9 @@
 		line-height: (18/15);
 
 		.icon{
+			@media (max-width: 576px){
+				font-size: 28px;
+			}
 			font-size: 24px;
 			@include media-breakpoint-between(xlg, xxl){
 				font-size: 18px;

@@ -360,7 +360,7 @@
 .custom-chb{
 	display: flex!important;
 	align-items: flex-start;
-	margin-bottom: 12px;
+	margin-bottom: rem(12px);
 	&:last-child{
 		margin-bottom: 0;
 	}
@@ -379,15 +379,15 @@
 	.square{
 		display: block;
 		flex-shrink: 0;
-		width: 24px;
-		height: 24px;
-		margin-right: 8px;
+		width: rem(24px);
+		height: rem(24px);
+		margin-right: rem(8px);
 
 		@include mt(.05);
 
 		background: $white;
 		border: var(--sq-border);
-		border-radius: 5px;
+		border-radius: rem(5px);
 
 		position: relative;
 		&:after{
@@ -403,13 +403,13 @@
 			background-repeat: no-repeat;
 			background-image: url(../img/svg/check.svg);
 			background-position: center;
-			background-size: 10px;
+			background-size: rem(10px);
 		}
 	}
 	.txt{
 		display: block;
-		margin-top: 2px;
-		font-size: 14px;
+		margin-top: rem(2px);
+		font-size: rem(14px);
 		line-height: 1.5;
 	}
 

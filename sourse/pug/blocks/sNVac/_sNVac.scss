@@ -10,6 +10,10 @@
 	&__item{
 		@include mt($smooth);
 
+		@media (max-width: 576px){
+			margin-bottom: 16px;
+			padding: 24px;
+		}
 		margin-bottom: 12px;
 		&:last-child{
 			margin-bottom: 0;
@@ -110,10 +114,12 @@
 		@extend .btn-outline-light;
 
 		border-radius: 50px;
-		font-size: 15px;
-		@include media-breakpoint-between(xlg, xl){
-			font-size: 13px;
-		}
+
+		font-size: inherit;
+		//font-size: 15px;
+		//@include media-breakpoint-between(xlg, xl){
+		//	font-size: 13px;
+		//}
 
 		line-height: (18/15);
 		padding: 10px 24px;
@@ -126,6 +132,10 @@
 		align-items: center;
 		justify-content: center;
 
+		@media (max-width: 576px){
+			width: 46px;
+			height: 46px;
+		}
 		width: 40px;
 		height: 40px;
 		@include media-breakpoint-between(xlg, xl){
@@ -140,6 +150,10 @@
 			color: $warning;
 			@include media-breakpoint-between(xlg, xl){
 				font-size: 18px;
+			}
+
+			@media (max-width: 576px){
+				font-size: 24px;
 			}
 			font-size: 20px;
 		}
@@ -188,6 +202,9 @@
 		@extend .btn-light-default;
 		font-weight: 500;
 
+		@media (max-width: 576px){
+			font-size: 20px;
+		}
 		@include media-breakpoint-between(xlg, xl){
 			font-size: 13px;
 		}
@@ -199,6 +216,10 @@
 			padding-top: 48px;
 			padding-bottom: 48px;
 		}
+	}
+
+	.vac-btn{
+		font-size: inherit;
 	}
 } // end.sNVac
 
@@ -240,6 +261,10 @@
 				align-items: center;
 				justify-content: center;
 				padding: 8px;
+				@media (max-width: 576px){
+					padding: var(--pugination-n-pages-padd, 8px);
+				}
+
 				min-width: 39px;
 				min-height: 40px;
 				color: $headings-color;
@@ -273,12 +298,18 @@
 			&.prev,
 			&.next{
 				a{
+					@media (max-width: 576px){
+						padding: var(--pugination-n-link-padd, 8px 12px);
+					}
 					padding: 8px 12px;
 					min-width: 89px;
 				}
 
 				.icon{
 					font-size: 10px;
+					@media (max-width: 576px){
+						font-size: var(--pugination-n-icon-fs, 10px);
+					}
 					color: $warning;
 				}
 			}
@@ -287,6 +318,9 @@
 				a{
 					.icon{
 						margin-right: 6px;
+						@media (max-width: 576px){
+							margin-right: 10px;
+						}
 					}
 				}
 			}
@@ -294,6 +328,9 @@
 				a{
 					.icon{
 						margin-left: 6px;
+						@media (max-width: 576px){
+							margin-left: 10px;
+						}
 					}
 				}
 			}
@@ -321,6 +358,9 @@
 		margin-bottom: 0;
 	}
 
+	@media (max-width: 576px){
+		padding: 24px;
+	}
 	padding: 18px 18px 24px 18px;
 	@include media-breakpoint-up(md){
 		padding: 24px;
@@ -405,12 +445,14 @@
 		--col-mb: 6px;
 	}
 	&__city{
-		//font-size: 15px;
 		line-height: 1.5;
 		color: $gray-600;
 	}
 	//
 	&__status-row{
+		@media (max-width: 576px){
+			--bs-gutter-y: 18px;
+		}
 		--bs-gutter-x: 12px;
 		--bs-gutter-y: 12px;
 		justify-content: flex-end;
@@ -453,10 +495,11 @@
 		border-width: 1px!important;
 		border-radius: 60px;
 
-		font-size: 15px;
-		@include media-breakpoint-between(xlg,xl){
-			font-size: 13px;
+		@media (max-width: 576px){
+			min-width: 0;
+			padding: 12px 20px;
 		}
+		font-size: inherit;
 		line-height: (18/15);
 
 		&--blue{

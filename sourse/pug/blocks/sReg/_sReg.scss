@@ -1,4 +1,24 @@
 // start .sReg
+
+ .reg-page{
+   @include media-breakpoint-down(sm){
+     font-size: 20px;
+     .select2-selection.select2-selection--multiple{
+       min-height: rem(51);
+     }
+
+
+     .custom-chb .square{
+       width: rem(24px);
+       height: rem(24px);
+       margin-right: rem(8px);
+      //  transition: all .05s;
+      //  background: #fff;
+      //  border: var(--sq-border);
+       border-radius: rem(5px);
+     }
+   }
+ }
 .sReg {
   padding-top: var(--top-nav-top, 0px);
 
@@ -23,12 +43,12 @@
     display: flex;
     align-items: center;
     color: $headings-color;
-    padding: 7.5px 15px;
+    padding: rem(7.5px) rem(15px);
 
     .icon{
       color: $warning;
-      margin-right: 6px;
-      font-size: 10px;
+      margin-right: rem(6px);
+      font-size: rem(10px);
     }
   }
   &__main-cont{
@@ -45,8 +65,8 @@
   }
   &__logo{
     display: block;
-    width: 200px;
-    margin-bottom: 48px;
+    width: rem(200px);
+    margin-bottom: rem(48px);
 
     img{
       width: 100%;
@@ -63,21 +83,21 @@
     }
     width: 100%;
     @include media-breakpoint-up(md){
-      width: 558px;
-      border-radius: 5px;
+      width: rem(558px);
+      border-radius: rem(5px);
     }
 
-    padding: 48px;
+    padding: rem(48px);
   }
   &__b-content{
-    max-width: 412px;
+    max-width: rem(412px);
     margin: 0 auto;
   }
   &__title{
     font-weight: 600;
-    font-size: 30px;
+    font-size: rem(30px);
     line-height: 1.25;
-    margin-bottom: 36px;
+    margin-bottom: rem(36px);
   }
   .form-wrap{
     //&__c-cont{
@@ -94,11 +114,11 @@
 
     //role-chb
     &__role-chb{
-      border: 1px solid $gary-110;
-      border-radius: 5px;
+      border: rem(1px) solid $gary-110;
+      border-radius: rem(5px);
 
-      margin-bottom: 24px;
-      padding: 4px;
+      margin-bottom: rem(24px);
+      padding: rem(4px);
 
       justify-content: space-between;
 
@@ -117,12 +137,12 @@
       @extend .btn-light;
       border: none!important;
 
-      padding: 11px 20px;
+      padding: rem(11px) rem(20px);
       font-size: inherit!important;
       line-height: 1.25;
       text-align: center;
 
-      width: calc(50% - 2px);
+      width: calc(50% - #{rem(2px)});
 
       color: $secondary!important;
       background-color: transparent!important;
@@ -134,9 +154,9 @@
     //
 
 
-    --inp-title-mb: 12px;
+    --inp-title-mb: #{rem(12px)};
     &.with-labels{
-      --inp-title-mb: 18px;
+      --inp-title-mb: #{rem(18px)};
     }
 
     form{
@@ -146,14 +166,14 @@
     }
 
     &__input-wrap{
-      margin-bottom: var(--inp-title-mb, 12px);
+      margin-bottom: var(--inp-title-mb, #{rem(12px)});
 
       textarea{
-        height: 96px;
+        height: rem(96px);
       }
     }
     &__error{
-      margin-top: 6px;
+      margin-top: rem(6px);
 
       line-height: 1.25;
       color: $danger;
@@ -164,17 +184,17 @@
       font-weight: 600;
       color: $headings-color;
 
-      font-size: 14px;
-      line-height: 16px;
-      margin-bottom: 9px;
+      font-size: rem(14px);
+      line-height: (16 / 14);
+      margin-bottom: rem(9px);
 
       //
       &.require{
         &:after{
           content: '*';
-          font-size: 18px;
+          font-size: rem(18px);
           color: $red2;
-          margin-left: 5px;
+          margin-left: rem(5px);
         }
       }
     }
@@ -184,28 +204,37 @@
     &__show-hide-btn{
       @extend .show-hide-btn;
     }
+    .form-wrap__show-hide-btn .icon{
+      font-size: rem(20);
+    }
     &__input{
-      padding: 14.5px 60px 14.5px 12px;
-      font-size: 14px;
+      padding: rem(14.5px) rem(60px) rem(14.5px) rem(12px);
+      	@include media-breakpoint-up(md){
 
-      box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+          font-size: rem(14px);
+        }
+
+      box-shadow: 0px 0px rem(15px) rgba(38, 39, 40, 0);
       &:focus{
-        box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+        box-shadow: 0px 0px rem(15px) rgba(38, 39, 40, 0.15);
       }
     }
     //
     &__btn-cont{
-      padding-top: 12px;
-      margin-bottom: 24px;
+      padding-top: rem(12px);
+      margin-bottom: rem(24px);
     }
     &__btn-row{
-      --bs-gutter-x: 24px;
-      --bs-gutter-y: 24px;
+      --bs-gutter-x: #{rem(24px)};
+      --bs-gutter-y: #{rem(24px)};
     }
     &__green-btn{
       @extend .green-btn;
       width: 100%;
-      padding: 14px 20px;
+      padding: rem(14px) rem(20px);
+      	@include media-breakpoint-down(md) {
+          font-size: rem(20);
+        }
     }
     &__back-btn{
       @extend .btn;
@@ -217,17 +246,17 @@
       align-items: center;
       justify-content: center;
       color: $headings-color;
-      padding: 14.5px 15px;
+      padding: rem(14.5px) rem(15px);
 
       .icon{
         color: $warning;
-        margin-right: 6px;
-        font-size: 10px;
+        margin-right: #{rem(6px)};
+        font-size: #{rem(10px)};
       }
     }
     //
     &__not-found{
-      font-size: 13.5px;
+      font-size: rem(13.5px);
       line-height: 1.25;
       text-align: center;
 
@@ -238,20 +267,20 @@
 
     //
     &__policy-row{
-      --bs-gutter-x: 12px;
+      --bs-gutter-x: #{rem(12px)};
       .square{
         margin-right: 0;
       }
     }
     &__policy-txt{
-      font-size: 12px;
+      font-size: rem(12px);
       line-height: 1.75;
       color: $headings-color;
     }
 
     &__inps-row{
-      --bs-gutter-x: 24px;
-      --bs-gutter-y: 24px;
+      --bs-gutter-x: #{rem(24px)};
+      --bs-gutter-y: #{rem(24px)};
     }
     &__month-col{
       width: 45%;
@@ -259,26 +288,26 @@
 
     //.custom-select
     .custom-select{
-      min-width: 90px;
+      min-width: rem(90px);
       //width: 100%;
 
       .select2-selection{
-        --select-h: 48px;
+        --select-h: #{rem(48px)};
         border-color: $gary-110!important;
       }
       .select2.select2-container.select2-container--default{
-        height: 48px!important;
+        height: rem(48px)!important;
       }
       .select2-selection__rendered{
         display: flex!important;
         align-items: center!important;
-        --rendered-fs: 14px;
+        --rendered-fs: #{rem(14px)};
       }
     }
     //repeator
     &__remove-item{
       border-bottom: 1px solid $gray-210;
-      margin-bottom: 48px;
+      margin-bottom: rem(48px);
     }
     &__r-btn{
       display: flex;
@@ -293,12 +322,12 @@
         --txt-color: #{$warning};
       }
 
-      padding-bottom: 24px;
+      padding-bottom: rem(24px);
     }
     &__r-ball{
       @include mt($smooth);
-      width: 24px;
-      height: 24px;
+      width: rem(24px);
+      height: rem(24px);
       flex-shrink: 0;
       border-radius: 50%;
 
@@ -309,14 +338,14 @@
 
       .icon{
         @include mt();
-        font-size: 10px;
+        font-size: rem(10px);
         color: var(--icon-color);
       }
 
-      margin-right: 12px;
+      margin-right: rem(12px);
     }
     &__ri-txt{
-      font-size: 15px;
+      font-size: rem(15px);
       line-height: 1.25;
       color: var(--txt-color, #{$headings-color});
     }
@@ -325,12 +354,12 @@
       @extend .btn-outline-primary;
 
       font-weight: 600;
-      font-size: 14px;
+      font-size: rem(14px);
       line-height: (16/14);
 
-      border-radius: 60px;
-      padding: 11px 23px;
-      border-width: 1px;
+      border-radius: rem(60px);
+      padding: rem(11px) rem(23px);
+      border-width: rem(1px);
 
       color: $primary!important;
       &:hover{
@@ -341,7 +370,7 @@
       margin-bottom: 0;
     }
     .custom-radio{
-      margin-bottom: 12px;
+      margin-bottom: rem(12px);
       &:last-child{
         margin-bottom: 0;
       }
@@ -354,8 +383,9 @@
 
   }
   &__l-row{
-    --bs-gutter-x: 6px;
-    --bs-gutter-y: 12px;
+    --bs-gutter-x: #{rem(6px)};
+    --bs-gutter-y: #{rem(12px)};
+    align-items: center;
   }
   &__l-txt{
     line-height: 1.25;
@@ -371,10 +401,10 @@
     background: $white;
     position: relative;
     overflow: hidden;
-    padding: 18px 0;
+    padding: rem(18px) 0;
     border-bottom: 1px solid $gary-110;
 
-    margin-bottom: 48px;
+    margin-bottom: rem(48px);
   }
   &__step-slider{
     .swiper-container{
@@ -395,9 +425,9 @@
 
     &:before{
       content: '';
-      width: 24px;
-      height: 24px;
-      margin-right: 12px;
+      width: rem(24px);
+      height: rem(24px);
+      margin-right: rem(12px);
       border-radius: 50%;
       border: 1px solid $gary-110;
 
@@ -431,11 +461,11 @@
     margin-bottom: 24px;
   }
   &__portrait{
-    width: 146px;
-    height: 146px;
+    width: rem(146px);
+    height: rem(146px);
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 12px auto;
+    margin: 0 auto rem(12px) auto;
 
     img{
       width: 100%;
@@ -444,7 +474,7 @@
     }
   }
   &__p-txt{
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
 
     line-height: 1.5;
     b{
@@ -463,9 +493,9 @@
     &:before{
       content: '';
       display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 6px;
+      width: rem(16px);
+      height: rem(16px);
+      margin-right: rem(6px);
 
       background-repeat: no-repeat;
       background-image: url(../img/svg/cloud.svg);
@@ -473,7 +503,7 @@
       background-size: contain;
     }
 
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: (16/14);
     color: $primary;
   }
@@ -500,7 +530,7 @@
     @extend .btn-light;
     border: none!important;
 
-    padding: 11px 20px;
+    padding: rem(11px) rem(20px);
     font-size: inherit!important;
     line-height: 1.25;
     text-align: center;
