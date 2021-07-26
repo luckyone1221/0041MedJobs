@@ -55,7 +55,7 @@ mixin profileItem(data)
 		+e.name-bl
 			+e.name(href="#")=`${data.name || 'Врач-терапевт стационар'}`
 			+e.salary=`${data.salary || '30 000-35 000 ₽'}`
-		if data.hiddenItems
+		if data.hiddenItems || data.descr
 			//-.prof-vac-hidden-js
 			+e.descr Образование среднее специальное медицинское; Наличие действующего сертификата: «Сестринское дело»/«Акушерское дело»; Владение навыком взятия венозной крови; Опыт работы от года (желательно); Знание...
 		+e.row.row

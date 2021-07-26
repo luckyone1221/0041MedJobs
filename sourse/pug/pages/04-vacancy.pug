@@ -23,7 +23,9 @@ block pagecontent
 			logged: false,
 			location: 'Москва',
 		})
-	+sSearchVacancy()
+	+sSearchVacancy({
+		title: 'Вакансии',
+	})
 		+inpStrip('Вакансии', 'Введите название вакансии')
 		+breadcrumb('Главная', 'Вакансии')
 	//-+sDescr()
