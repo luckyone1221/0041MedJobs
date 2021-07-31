@@ -1,0 +1,47 @@
+mixin sTitle(data)
+	// start sTitle
+	+b.SECTION.sTitle.section#sTitle&attributes(attributes)
+		.container
+			+e.top-box
+				+b.section-title.d-none.d-md-block
+					h1 Поиск работы в сфере медицины
+				+e.search-row.row
+					.col-12
+						+e.input-wrap.form-group
+							+e.INPUT.input.form-control.sBaner-input-js(type="text" placeholder="Должность, организация" name="searc")
+							+e.inv-nav.inv-nav-js
+								+e.in-row.row.align-items-center
+									.col-auto.d-none.d-md-block
+										+e.location(href="#")
+											+icon('location')
+											span Комсомольск-на-Амуре
+									.col-auto.d-none.d-md-block
+										+e.filter-btn(href="#")
+											+icon('filter')
+									.col-auto
+										+e.find-btn(type="submit") Найти
+					.col-auto.d-md-none
+						+e.mob-filter-btn(href="#")
+							+icon('filter')
+					.col-auto.d-md-none
+						+e.mob-location(href="#")
+							+icon('location')
+							span Комсомольск-на-Амуре
+			+e.slider-wrap
+				.swiper-container.sTitle-slider-js
+					.swiper-wrapper
+						+sTitleSlide('Врач-терапевт')
+						+sTitleSlide('Врач-педиатр')
+						+sTitleSlide('Медицинская сестра')
+						+sTitleSlide('Медицинская сестра участковая')
+						+sTitleSlide('Старшая медицинская сестра')
+						+sTitleSlide('Фельдшер')
+					.d-none.d-md-block.d-xl-none
+						+arrow2()
+	// end sTitle
+
+mixin sTitleSlide(name)
+	.swiper-slide
+		+e.item(href="#")
+			+e.name=name
+			+e.vac-amount 1 638 вакансий

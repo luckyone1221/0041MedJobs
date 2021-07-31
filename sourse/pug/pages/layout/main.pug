@@ -15,7 +15,8 @@ include ../../blocks/sForm/_sForm.pug
 include ../../blocks/sProfileN/_sProfileN.pug
 
 doctype html
-html(lang="ru")
+block variables
+html(lang="ru" class= htmlClasses)
 	head
 		meta(charset="utf-8")
 
@@ -46,7 +47,6 @@ html(lang="ru")
 				window.addEventListener('resize', () =>  w() , {passive: true});
 			}
 		+allcss()
-	block variables
 	//- style.
 	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
 	//- body.loaded_hiding(class= mainPage)

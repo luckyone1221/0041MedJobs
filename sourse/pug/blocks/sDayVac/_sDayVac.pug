@@ -1,0 +1,67 @@
+mixin sDayVac(data)
+	// start sDayVac
+	+b.SECTION.sDayVac.section#sDayVac&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Вакансии дня в Санкт-Петербурге
+			+e.slider-wrap
+				.swiper-container.sDayVac-slider-js
+					.swiper-wrapper
+						+sDayVacItem({
+							name: 'Медицинская сестра',
+							salary: '50 000-100 000',
+							organization: 'ООО Лаборатория Гемотест',
+							imgNum: 1,
+						})
+						+sDayVacItem({
+							name: 'Архивариус',
+							salary: '50 000',
+							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+							imgNum: 2,
+						})
+						+sDayVacItem({
+							name: 'Ночной дежурант в аптеку',
+							salary: '50 000-100 000',
+							organization: 'ЗАО ЭВАЛАР',
+							imgNum: 3,
+						})
+						+sDayVacItem({
+							name: 'Врач-дерматовенеролог',
+							salary: '50 000-100 000',
+							organization: 'БУДЬ ЗДОРОВ, Клиника',
+							imgNum: 4,
+						})
+						+sDayVacItem({
+							name: 'Медицинская сестра',
+							salary: '50 000-100 000',
+							organization: 'ООО Лаборатория Гемотест',
+							imgNum: 1,
+						})
+						+sDayVacItem({
+							name: 'Врач-хирург',
+							salary: '50 000',
+							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+						})
+	// end sDayVac
+
+mixin sDayVacItem(data)
+	.swiper-slide
+		+e.item
+			+e.top-row.row
+				.col
+					+e.name(href="#")=data.name
+					+e.salary
+						span=data.salary
+						span.ff-mono.ms-1 ₽
+				.col-auto
+					+b.like-btn(href='#')
+						+icon('like')
+			.mt-auto
+				+e.bot-row.row.align-items-end
+					.col
+						+e.org-name=data.organization
+						+e.city г. Москва
+					if data.imgNum
+						.col-auto
+							+e.logo
+								img(loading="lazy" src=`img/@2x/sDayVac-${data.imgNum}.png` alt="")

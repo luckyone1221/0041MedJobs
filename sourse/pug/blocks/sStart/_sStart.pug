@@ -1,0 +1,14 @@
+mixin sStart(data)
+	// start sStart
+	+b.SECTION.sStart#sStart&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2
+					| Начните пользоваться
+					br
+					| сервисом прямо сейчас!
+				p Наша задача - минимизировать ваши потери времени и оказать эффективную помощь по поиску работы.
+				+e.btn(href="#") Зарегистрироваться
+			+e.img
+				img(loading="lazy" src='img/@2x/sStart.png' alt="")
+	// end sStart

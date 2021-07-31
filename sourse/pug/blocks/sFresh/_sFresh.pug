@@ -1,0 +1,54 @@
+mixin sFresh(data)
+	// start sFresh
+	+b.SECTION.sFresh.section#sFresh&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Свежие вакансии в Санкт-Петербурге
+			+e.slider-wrap
+				.swiper-container.sDayVac-slider-js
+					.swiper-wrapper
+						-for(var i = 0; i < 2; i++)
+							+sFreshSlide({
+								name: 'Врач рентгенолог КТ',
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+								imgNum: 2,
+							})
+							+sFreshSlide({
+								name: 'Медицинская сестра',
+								organization: 'МРЦ Беляево (Центр Дикуля)',
+								imgNum: 5,
+							})
+							+sFreshSlide({
+								name: 'Медицинская сестра',
+								organization: 'БУДЬ ЗДОРОВ, Клиника',
+								imgNum: 4,
+							})
+			.text-lg-center
+				+b.all-btn(href="#")
+					span Все вакансии
+					+icon('chevron-right')
+	// end sFresh
+
+mixin sFreshSlide(data)
+	.swiper-slide
+		+e.item
+			+e.top-row.row
+				.col
+					+e.date Сегодня
+				.col-auto
+					+b.like-btn(href='#')
+						+icon('like')
+			+e.name(href='#')=data.name
+			+e.salary
+				span 30 000-35 000
+				span.ff-mono.ms-1 ₽
+			+e.descr Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат
+			.mt-auto
+				+e.bot-row.row.align-items-end.align-items-xl-center
+					.col
+						+e.org-name=data.organization
+						+e.city г. Москва
+					if data.imgNum
+						.col-auto
+							+e.logo
+								img(loading="lazy" src=`img/@2x/sDayVac-${data.imgNum}.png` alt="")

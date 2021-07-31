@@ -1,0 +1,30 @@
+mixin sUsefull(data)
+	// start sUsefull
+	+b.SECTION.sUsefull.section#sUsefull&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Полезные статьи
+			+e.slider-wrap
+				.swiper-container.sUsefull-slider-js
+					.swiper-wrapper
+						- for (var i = 0; i < 2; i++)
+							+sUsefullSlide(1)
+							+sUsefullSlide(2)
+							+sUsefullSlide(3)
+					.d-none.d-lg-block
+						+arrow2()
+					.swiper-pagination.d-none.d-lg-flex
+			.text-lg-center
+				+b.all-btn(href="#")
+					span Все статьи
+					+icon('chevron-right')
+	// end sUsefull
+
+mixin sUsefullSlide(imgNum)
+	.swiper-slide
+		+e.item(href="#")
+			+e.img
+				img(loading="lazy" src=`img/@2x/sUsefull-${imgNum}.jpg` alt='')
+			+e.title Долой территоризм: какие личные вещи запрещены на работе
+			+e.descr Что можно считать стыдной работой? У каждого своя история
+			+e.date 19 ноября 2021

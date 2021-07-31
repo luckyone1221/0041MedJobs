@@ -1,0 +1,87 @@
+// start .sNews
+.sNews {
+	--sPT: 20px;
+	--sPB: 27px;
+	--sTPB: 32px;
+	@include media-breakpoint-up(md){
+		--sPT: 20px;
+		--sPB: 20px;
+		--sTPB: 30px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 24px;
+		--sPB: 24px;
+		--sTPB: 36px;
+	}
+
+	&__slider-wrap{
+		padding-bottom: 32px;
+		@include media-breakpoint-up(md){
+			padding-bottom: 30px;
+		}
+		@include media-breakpoint-up(xl){
+			padding-bottom: 36px;
+		}
+
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+			@include media-breakpoint-up(lg){
+				flex-wrap: wrap!important;
+				transform: none!important;
+
+				@include roww(24px);
+				width: calc(100% + 24px);
+				margin-bottom: -24px;
+			}
+		}
+		.swiper-slide{
+			width: 360px;
+			@include media-breakpoint-up(md){
+				width: 216px;
+			}
+			@include media-breakpoint-up(lg){
+				width: calc(100% / 4);
+				margin: 0 0 24px!important;
+			}
+
+			height: auto;
+		}
+	}
+	&__item{
+		display: block;
+		@extend .new-page-item;
+		min-height: 100%;
+
+		padding: 24px;
+		@include media-breakpoint-up(md){
+			padding: 19px;
+		}
+
+		color: $headings-color;
+		&:hover{
+			color: $cyan;
+		}
+	}
+	&__title{
+		display: block;
+		margin-bottom: 4px;
+		@include media-breakpoint-up(xl){
+			margin-bottom: 6px;
+		}
+		color: currentColor;
+	}
+	&__date{
+		display: block;
+
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+		color: $gray-600;
+	}
+	&__{}
+	&__{}
+} // end.sNews
+

@@ -1,0 +1,39 @@
+mixin sEmployer(data)
+	// start sEmployer
+	+b.SECTION.sEmployer.section#sEmployer&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Работодатели дня в Санкт-Петербурге
+			+e.slider-wrap
+				.swiper-container.sDayVac-slider-js
+					.swiper-wrapper
+						+sEmployerSlide({
+							imgNum: '1',
+							title: 'ГК Медси. Клиники',
+							vac: '13 вакансий',
+						})
+						+sEmployerSlide({
+							imgNum: '2',
+							title: 'МРЦ Беляево (Центр Дикуля)',
+							vac: '5 вакансий',
+						})
+						+sEmployerSlide({
+							imgNum: '3',
+							title: 'ЗАО Эвалар',
+							vac: '2 вакансии',
+						})
+						+sEmployerSlide({
+							imgNum: '4',
+							title: 'ООО Лаборатория Гемотест',
+							vac: '3 вакасии',
+						})
+	// end sEmployer
+
+mixin sEmployerSlide(data)
+	.swiper-slide
+		+e.item.text-center(href='#')
+			+e.logo
+				img(loading="lazy" src=`img/@2x/sEmployer-${data.imgNum}.png` alt="")
+			+e.title=data.title
+			+e.city г. Москва
+			+e.vac-amount=data.vac

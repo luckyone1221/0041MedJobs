@@ -1,0 +1,68 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sTitle/_sTitle.pug
+include ../blocks/sDayVac/_sDayVac.pug
+include ../blocks/sEmployer/_sEmployer.pug
+include ../blocks/sFresh/_sFresh.pug
+include ../blocks/sWork/_sWork.pug
+include ../blocks/sTell/_sTell.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sStart/_sStart.pug
+
+block variables
+	- let  mainPage= 'headings-color new-header new-page'
+	- let  htmlClasses= 'alt-base-size'
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '045-main'
+	title= title
+block pagecontent
+	+mob-mnu5({
+		logged: false,
+	})
+	+header()
+		+top-nav5({
+			logged: false,
+			location: 'Комсомольск-на-Урале',
+		})
+	+sTitle()
+	+sDayVac()
+	+sEmployer()
+	+sFresh()
+	+sWork()
+	+sTell({
+		addClasses: '',
+		titleTxt: 'Расскажите о своей зарплате',
+		descr: 'Мы в MedicJobs составляем актуальный рейтинг заработных плат на рынке труда в медицине.',
+		btnTxt: 'Пройти опрос',
+		imgName: 'sTell-img',
+	})
+	+sUsefull()
+	+sNews()
+	+sTell({
+		addClasses: 'sTell--alt',
+		titleTxt: 'Оцените организацию в которой работали',
+		descr: 'Компания Medicjobs гарантирует полную приватность ваших оценок. Они никогда не будут показаны третьим лицам, кроме как в анонимной или агрегированной с другими данными форме.',
+		btnTxt: 'Пройти опрос',
+		imgName: 'sTell-img2',
+	})
+	+sService()
+	+sStart()
+	+footerAlt()

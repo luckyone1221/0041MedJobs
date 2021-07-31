@@ -72,3 +72,6 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/09-reg.html>
 2. <https://luckyone1221.github.io/0041MedJobs/public/08-authorization.html>
 3. <https://luckyone1221.github.io/0041MedJobs/public/010-restore.html>
+
+========== 30.07.2021
+1. <https://luckyone1221.github.io/0041MedJobs/public/045-main.html>

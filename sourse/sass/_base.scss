@@ -1,5 +1,11 @@
 .pixel-perfect {
 	top: 0;
+	//lg baner
+	//top: -38px;
+	//md baner
+	//top: 73px;
+	//down md baner
+	//top: 94px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -1102,6 +1108,7 @@ h5{
 	}
 	&__{}
 }
+
 //
 .headings-color{
 	color: $headings-color;
@@ -1207,7 +1214,6 @@ h5{
 //
 .green-btn{
 	@extend .btn;
-	// @extend .btn-success;
 	border: none!important;
 
 	font-weight: 600;
@@ -1388,5 +1394,129 @@ h5{
 			flex: 0 0 auto;
 			width: auto;
 		}
+	}
+}
+
+//
+.alt-base-size{
+	font-size: 24px!important;
+	@include media-breakpoint-up(md){
+		font-size: 16px!important;
+	}
+}
+
+.new-page{
+	font-size: inherit!important;
+
+	--fontSizeBase: 16px!important;
+	.container{
+		@include media-breakpoint-between(lg,xl){
+			max-width: 966px!important;
+		}
+		@include media-breakpoint-down(md){
+			max-width: 546px!important;
+		}
+	}
+
+	.section-title{
+		h2{
+			letter-spacing: -0.2px;
+
+			font-size: 32px;
+			@include media-breakpoint-up(md){
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+
+//045 arrow
+.swiper-prev,
+.swiper-next{
+	width: rem(50);
+	height: rem(50);
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	z-index: 10;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.icon{
+		color: $orange;
+		font-size: 10px;
+	}
+
+
+	background: $white;
+	border: 1px solid $gary-110;
+	box-shadow: 0px 5px 15px rgba(38, 39, 40, 0.15);
+}
+
+.swiper-prev{
+	left: 0;
+}
+.swiper-next{
+	right: 0;
+}
+
+//
+.white-btn{
+	@extend .btn;
+	@extend .btn-light;
+
+	background: $white!important;
+	border: 1px solid $gary-110!important;
+	border-radius: 8px;
+	&:hover{
+		background: $white!important;
+		border: 1px solid $gary-110!important;
+	}
+}
+//
+.new-page-item{
+	background: $white;
+	@include mt();
+	box-shadow: 0px 5px 15px rgba(38, 39, 40, 0.0);
+	border: 1px solid $gary-110;
+	&:hover{
+		box-shadow: 0px 5px 15px rgba(38, 39, 40, 0.15);
+		border: 1px solid $white;
+	}
+
+	border-radius: 12px;
+	@include media-breakpoint-up(md){
+		border-radius: 8px;
+	}
+}
+
+//.all-btn
+.all-btn{
+	font-size: inherit;
+	@extend .white-btn;
+	min-width: 170px;
+
+	padding: 15px 23px;
+	@include media-breakpoint-up(md){
+		padding: 15px;
+	}
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	line-height: (19/16);
+
+	.icon{
+		font-size: 16px;
+		@include media-breakpoint-up(md){
+			font-size: 10px;
+		}
+		color: $orange;
+		margin-left: 12px;
 	}
 }

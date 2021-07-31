@@ -1,0 +1,22 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Новости
+			+e.slider-wrap
+				.swiper-container.sDayVac-slider-js
+					.swiper-wrapper
+						-for(var i =0; i < 8; i ++)
+							+sNewsSlide()
+			.text-lg-center
+				+b.all-btn(href="#")
+					span Все новости
+					+icon('chevron-right')
+	// end sNews
+
+mixin sNewsSlide()
+	.swiper-slide
+		+e.item(href='#')
+			+e.title Долой территоризм: какие личные вещи запрещены на работе
+			+e.date 19 ноября 2021

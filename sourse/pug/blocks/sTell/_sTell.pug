@@ -1,0 +1,15 @@
+mixin sTell(data)
+	// start sTell
+	+b.sTell.section(class=data.addClasses)#sTell&attributes(attributes)
+		.container
+			+e.box
+				+e.row.row
+					+e.txt-col.col-md-auto
+						+e.title=data.titleTxt
+						+e.descr=data.descr
+						+e.btn(href='#')=data.btnTxt
+					.col-md.align-self-lg-end
+						+e.img
+							img(loading="lazy" src=`img/svg/${data.imgName}.svg` alt="")
+
+	// end sTell

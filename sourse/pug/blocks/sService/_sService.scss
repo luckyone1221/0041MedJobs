@@ -1,0 +1,76 @@
+// start .sService
+.sService {
+	--sTPB: 0px;
+	--sPB: 60px;
+
+	--sPT: 20px;
+	@include media-breakpoint-up(md){
+		--sPT: 20px;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: 24px;
+	}
+
+	.section-title{
+		h2{
+			margin-bottom: 32px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 30px;
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: 36px;
+			}
+		}
+		&__toggle-box{
+
+		}
+		&__content{
+			& > *:last-child{
+				margin-bottom: 0;
+			}
+			margin-bottom: 18px;
+			@include media-breakpoint-up(xl){
+				margin-bottom: 24px;
+			}
+		}
+		&__hidden{
+			& > *:last-child{
+				margin-bottom: 0;
+			}
+			margin-bottom: 18px;
+			@include media-breakpoint-up(xl){
+				margin-bottom: 24px;
+			}
+		}
+		&__toggle{
+			span:first-child{
+				display: inline;
+			}
+			span:last-child{
+				display: none;
+			}
+
+			&.active{
+				span:first-child{
+					display: none;
+				}
+				span:last-child{
+					display: inline;
+				}
+			}
+
+			line-height: (19/16);
+			color: $cyan;
+			cursor: pointer;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sService
+
+.toggle-content-js{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
