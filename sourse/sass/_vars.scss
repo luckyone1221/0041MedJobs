@@ -60,6 +60,7 @@ $yellow: #ffc107 !default;
 $green: #2AED80 !default;
 $green2: #43D081;
 $green3: #2BDD79;
+$green4: #00B0A4;
 $teal: #20c997 !default;
 $cyan: #10B7F5 !default;
 
@@ -99,6 +100,7 @@ $theme-colors: (
   "light": $light,
   "gray": $gray-210,
   "teal": $teal,
+  "teal2": $green4,
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 

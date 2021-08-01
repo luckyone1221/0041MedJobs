@@ -1519,3 +1519,49 @@ h5{
 		margin-left: 12px;
 	}
 }
+
+//
+.page-head{
+	background: $gray-130;
+	padding: 24px 0;
+	@include media-breakpoint-up(md){
+		padding: 20px 0;
+	}
+	@include media-breakpoint-up(xl){
+		padding: 24px 0;
+	}
+
+	.breadcrumb{
+		margin-bottom: 15px;
+		a{
+			font-size: 13.4px;
+		}
+
+		.breadcrumb-item:after{
+			margin: 0 5px;
+		}
+	}
+
+	h1{
+		letter-spacing: -0.4px;
+
+		font-size: 36px;
+		@include media-breakpoint-up(xl){
+			font-size: 42px;
+		}
+
+		margin-bottom: 24px;
+	}
+
+	//
+	.new-search{
+		&__find-btn{
+			width: 120px;
+			@include media-breakpoint-up(lg){
+				width: 140px;
+			}
+		}
+	}
+	&__{}
+	&__{}
+}

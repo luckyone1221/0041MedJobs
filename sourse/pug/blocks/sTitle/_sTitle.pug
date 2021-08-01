@@ -5,28 +5,29 @@ mixin sTitle(data)
 			+e.top-box
 				+b.section-title.d-none.d-md-block
 					h1 Поиск работы в сфере медицины
-				+e.search-row.row
-					.col-12
-						+e.input-wrap.form-group
-							+e.INPUT.input.form-control.sBaner-input-js(type="text" placeholder="Должность, организация" name="searc")
-							+e.inv-nav.inv-nav-js
-								+e.in-row.row.align-items-center
-									.col-auto.d-none.d-md-block
-										+e.location(href="#")
-											+icon('location')
-											span Комсомольск-на-Амуре
-									.col-auto.d-none.d-md-block
-										+e.filter-btn(href="#")
-											+icon('filter')
-									.col-auto
-										+e.find-btn(type="submit") Найти
-					.col-auto.d-md-none
-						+e.mob-filter-btn(href="#")
-							+icon('filter')
-					.col-auto.d-md-none
-						+e.mob-location(href="#")
-							+icon('location')
-							span Комсомольск-на-Амуре
+				+b.new-search
+					+e.search-row.row
+						.col-12
+							+e.input-wrap.form-group
+								+e.INPUT.input.form-control.sBaner-input-js(type="text" placeholder="Должность, организация" name="searc")
+								+e.inv-nav.inv-nav-js
+									+e.in-row.row.align-items-center
+										.col-auto.d-none.d-md-block
+											+e.location(href="#")
+												+icon('location')
+												span Комсомольск-на-Амуре
+										.col-auto.d-none.d-md-block
+											+e.filter-btn(href="#")
+												+icon('filter')
+										.col-auto
+											+e.find-btn(type="submit") Найти
+						.col-auto.d-md-none
+							+e.mob-filter-btn(href="#")
+								+icon('filter')
+						.col-auto.d-md-none
+							+e.mob-location(href="#")
+								+icon('location')
+								span Комсомольск-на-Амуре
 			+e.slider-wrap
 				.swiper-container.sTitle-slider-js
 					.swiper-wrapper

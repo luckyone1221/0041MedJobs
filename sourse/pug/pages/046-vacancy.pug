@@ -1,0 +1,47 @@
+extends layout/main.pug
+
+
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sTitle/_sTitle.pug
+include ../blocks/sDayVac/_sDayVac.pug
+include ../blocks/sEmployer/_sEmployer.pug
+include ../blocks/sFresh/_sFresh.pug
+include ../blocks/sWork/_sWork.pug
+include ../blocks/sTell/_sTell.pug
+include ../blocks/sUsefull/_sUsefull.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sService/_sService.pug
+include ../blocks/sStart/_sStart.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= 'headings-color new-header new-page'
+	- let  htmlClasses= 'alt-base-size'
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '046-vacancy'
+	title= title
+block pagecontent
+	+mob-mnu6({
+		logged: false,
+	})
+	+header()
+		+top-nav6({
+			logged: false,
+			location: 'Санкт-Петербург',
+		})
+	+b.page-head
+		.container
+			+breadcrumb('Главная', 'Вакансии')
+			h1 Вакансии в Комсомольск-на-Амуре
+			+b.new-search
+				+e.search-row.row
+					.col-12
+						+e.input-wrap.form-group
+							+e.INPUT.input.form-control.sBaner-input-js(type="text" placeholder="Введите желаемую должность или организацию" name="searc")
+							+e.inv-nav.inv-nav-js
+								+e.in-row.row.align-items-center
+									.col-auto
+										+e.find-btn(type="submit") Найти
+	+sCatalog()
+	+footerAltNew('bigger')

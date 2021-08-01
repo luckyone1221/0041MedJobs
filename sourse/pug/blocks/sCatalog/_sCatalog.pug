@@ -1,0 +1,167 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+e.top-row.row.align-items-center
+				.col-auto
+					+e.found Найдено 1 434 вакансий
+				.col-auto
+					+sCatalogDD('Новые')
+						+sCatalogDDItem('sort1', 'Новые')(checked)
+						+sCatalogDDItem('sort1', 'По зарплате')
+				.col
+					+sCatalogDD('За все время')
+						+sCatalogDDItem('sort2', 'За все время')(checked)
+						+sCatalogDDItem('sort2', 'За сутки')
+						+sCatalogDDItem('sort2', 'За неделю')
+						+sCatalogDDItem('sort2', 'За месяц')
+				.col-auto
+					+e.wide-btn
+						span Расширенный фильтр
+						+icon('filter')
+			+e.main-row.row
+				.col-lg-9
+					+e.items
+						+sCatalogItem({
+							title: 'Врач стоматолог-терапевт-хирург',
+							salary: '30 000-35 000',
+							defaultBtns: true,
+							pillsRow: true,
+							grayPill: true,
+							orangePill: true,
+							bluePill: true,
+							greenPill: true,
+							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+							logoImg: 2,
+						})
+						+sCatalogItem({
+							title: 'Архивариус',
+							salary: '50 000',
+							defaultBtns: true,
+							organization: 'БУДЬ ЗДОРОВ, Клиника',
+							logoImg: '4',
+						})
+						+sCatalogItem({
+							title: 'Медицинская сестра',
+							salary: '30 000-35 000',
+							defaultBtns: false,
+							serviceBlock: true,
+							organization: 'МРЦ Беляево (Центр Дикуля)',
+							logoImg: '4',
+						})
+						+sCatalogItem({
+							title: 'Врач рентгенолог КТ',
+							salary: '50 000',
+							defaultBtns: true,
+							pillsRow: true,
+							grayPill: true,
+							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+						})
+						+sCatalogItem({
+							addClasses: 'gray-card',
+							title: 'Врач стоматолог-терапевт-хирург',
+							salary: '30 000-35 000',
+							bg: true,
+							descr: 'Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные',
+							tealBtns: true,
+							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+							logoImg: '2',
+						})
+						+sCatalogItem({
+							title: 'Медицинская сестра',
+							salary: '30 000-35 000',
+							defaultBtns: true,
+							pillsRow: true,
+							orangePill: true,
+							greenPill: true,
+							organization: 'МРЦ Беляево (Центр Дикуля)',
+							logoImg: 5,
+						})
+						+sCatalogItem({
+							title: 'Врач рентгенолог КТ',
+							salary: '50 000',
+							serviceBlock: true,
+							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+						})
+				.col-lg-3
+	// end sCatalog
+
+mixin sCatalogItem(data)
+	+b.cat-item(class=data.addClasses)
+		if data.bg
+			+e.bg
+				img(loading="lazy" src="img/@2x/sCatalog-item-bg.png" alt="")
+		+e.top-row.row
+			.col
+				+e.title(href='#')=data.title
+				+e.salary
+					span=data.salary
+					span.fw-600.ms-1 ₽
+			.col-auto
+				+e.date-row.row.align-items-center
+					.col-auto
+						+e.date 22 июля 2021, 19:19
+					.col-auto
+						+b.like-btn(href='#')
+							+icon('like')
+		if data.pillsRow
+			+e.pills-row.row
+				if data.grayPill
+					+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+				if data.orangePill
+					+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+				if data.bluePill
+					+sCatalogItemPill('#e8f8fe', 'Соцпакет', 2)
+				if data.greenPill
+					+sCatalogItemPill('#edfbf3', 'Бонусы', 3)
+		if data.descr
+			+e.descr=data.descr
+		else
+			+e.descr Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+		+e.btns-row.row.align-items-center
+			if data.defaultBtns
+				.col-auto
+					+e.btn--blue(href='#') Откликнуться
+				.col-auto
+					+e.btn--gray(href='#') Позвонить
+			if data.tealBtns
+				.col-auto
+					+e.btn--teal(href='#') Откликнуться
+				.col-auto
+					+e.btn--white(href='#') Позвонить
+			if data.serviceBlock
+				.col-auto
+					+e.btn--gray(href='#') Подробнее
+				.col-auto
+					+e.s-gray Вакансия предоставлена сервисом
+					+e.s-link(href="superjob.ru" target="_blank") superjob.ru
+		+e.bot-row.row.align-items-end.align-items-xl-center
+			.col
+				+e.org-name=data.organization
+				+e.city г. Москва
+			if data.logoImg
+				.col-auto
+					+e.logo
+						img(loading="lazy" src=`img/@2x/sDayVac-${data.logoImg}.png` alt="")
+
+
+mixin sCatalogItemPill(bgColor,txt, imgNum)
+	.col-auto
+		+e.pill(style=`background: ${bgColor};`)
+			if imgNum
+				+e.p-img
+					img(loading="lazy" src=`img/svg/sCatalog-pill-${imgNum}.svg` alt="")
+			span=txt
+
+
+
+mixin sCatalogDD(headTxt)
+	+e.dd.sCatalog-dd-js
+		+e.dd-head.sCatalog-dd-head-js=headTxt
+		+e.dd-content.sCatalog-dd-content-js
+			block
+
+mixin sCatalogDDItem(name, txt)
+	+e.LABEL.dd-item
+		input(type='radio' name=name val=txt class='invisible')&attributes(attributes)
+		span.txt.txt-js=txt
