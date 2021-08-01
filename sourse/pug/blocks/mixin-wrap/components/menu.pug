@@ -71,3 +71,13 @@ mixin mnu7()
 	+b.UL.navMenu&attributes(attributes)
 		each linkPatch, linkName in nav
 			+e.LI.item: +e.A.link(href=linkPatch)= linkName
+
+mixin mnu8()
+	-
+		var nav= {
+			"Публикация вакансии":"#",
+			"Тарифы":"#",
+		}
+	+b.UL.navMenu&attributes(attributes)
+		each linkPatch, linkName in nav
+			+e.LI.item: +e.A.link(href=linkPatch)= linkName

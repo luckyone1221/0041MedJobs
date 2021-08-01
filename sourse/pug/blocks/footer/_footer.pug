@@ -57,8 +57,6 @@ mixin footerAlt(addClasses='')
             .col-12.col-md-4
               +e.a-title(href="#") Работодатель
               +mnu6()
-        //-+e.gray-col.col-12.col-md-2.col-xl-2
-          +mnu5()(class="text-center text-md-start")
         .col-xl-2.d-none.d-xl-block
           +socItems('justify-content-end mb-48')
           +e.business-logo.text-center.text-xl-start(href="#")
@@ -87,3 +85,45 @@ mixin socItem(imgName, link='#')
   .col-auto
     +e.item(href=link)
       img(loading="lazy" src=`img/svg/${imgName}.svg` alt="")
+
+mixin footerAltNew(addClasses='')
+  +b.FOOTER.footer--alt.--bigger-mob(class=addClasses)
+    .container
+      +e.row.row
+        .col-12.col-md-5.col-xl-3
+          +e.logo--alt(href="#")
+            img(loading="lazy" src="img/svg/logo.svg" alt="")
+          +e.l-txt--alt
+            | Сервис по поиску работы
+            |
+            br.d-none.d-xl-block
+            | в сфере медицины.
+          +socItems('justify-content-center justify-content-md-start d-xl-none mb-0')
+          .d-xl-none
+            +e.business-logo(href="#")
+              img(loading="lazy" src="img/@2x/bissnes-logo.png" alt="")
+        .col-12.col-md-7.col-xl-7
+          +e.a-menu-row.row
+            .col-12.col-md-4
+              +e.a-title(href="#") MedicJobs
+              +mnu7()
+            .col-12.col-md-4
+              +e.a-title(href="#") Соискатель
+              +mnu4()
+            .col-12.col-md-4
+              +e.a-title(href="#") Работодатель
+              +mnu8()
+        .col-xl-2.d-none.d-xl-block
+          +socItems('justify-content-end mb-48')
+          +e.business-logo(href="#")
+            img(loading="lazy" src="img/@2x/bissnes-logo.png" alt="")
+        .col-12.order-2.order-md-0
+          +e.ar-row.row
+            .col-12.col-md
+              +e.all-rights.mb-0 © 2021 Все права защищены Medicjobs.ru.
+            .col-12.col-md-auto
+              +e.gray-row.row
+                .col-md-auto
+                  +e.g-link(href='#') Правила пользования
+                .col-md-auto
+                  +e.g-link(href='#') Публичная оферта

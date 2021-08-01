@@ -1,5 +1,7 @@
 .pixel-perfect {
 	top: 0;
+	//footer
+	//top: 477px;
 	//lg baner
 	//top: -38px;
 	//md baner
@@ -21,10 +23,7 @@
 
 body,
 html {
-
 	font-size: var(--fontSizeBase);
-	// @include font-size(1rem);
-	// overflow-x: hidden;
 }
 html{
 	-webkit-text-size-adjust: 100%;

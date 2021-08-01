@@ -8,6 +8,75 @@
 		border-top: 1px solid $gray-210;
 		background-color: $white;
 	}
+	&--bigger-mob{
+		text-align: left;
+		@include media-breakpoint-down(md){
+			padding: 55px 0;
+		}
+
+		.footer__row{
+			& > *{
+				@include media-breakpoint-down(md){
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+		}
+
+		.footer__logo{
+			@include media-breakpoint-down(md){
+				width: 240px;
+				img{
+					width: 100%;
+				}
+				margin-bottom: 23px!important;
+			}
+		}
+		.social{
+			@include media-breakpoint-down(md){
+				margin-bottom: 22px;
+			}
+			&__item{
+				@include media-breakpoint-down(md){
+					width: 48px;
+					height: 48px;
+				}
+			}
+			&__row{
+				@include media-breakpoint-down(md){
+					--bs-gutter-x: 12px;
+				}
+			}
+		}
+		.footer__business-logo{
+			@include media-breakpoint-down(md){
+				width: 263px;
+				margin-bottom: 34px;
+
+				img{
+					width: 100%;
+				}
+			}
+		}
+		.navMenu__item{
+			@include media-breakpoint-down(md){
+				margin: 0 0 13px!important;
+			}
+		}
+
+		.footer__l-txt{
+			@include media-breakpoint-down(md){
+				max-width: 60%;
+				line-height: 1.25;
+			}
+		}
+
+		.footer__a-title{
+			font-size: inherit;
+		}
+	}
+
 	&__gray-row{
 		@include roww(24px);
 		--bs-gutter-y: 15px;
@@ -108,7 +177,7 @@
 		}
 	}
 	&__l-txt{
-		font-size: 16px;
+		font-size: rem(16);
 		line-height: 1.5;
 
 		color: $secondary;

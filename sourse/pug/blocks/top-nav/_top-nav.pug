@@ -250,3 +250,86 @@ mixin alertLine()
 				.swiper-wrapper
 					.swiper-slide
 						+e.txt Уважаемые посетители! Сайт Medicjobs.ru находится на стадии технического запуска, заранее приносим извинения за возможные временные сбои в работе сайта.
+
+mixin top-nav6(data)
+	// start top-nav
+	+b.top-nav--alt.--new.block-with-lazy
+		+e.container--alt5.container
+			+e.row--alt.row
+				.col-auto.d-lg-none
+					+e.burger--alt.burger-js
+						span
+				.col.col-lg-auto.order-first.order-md-0
+					+e.logo--alt(href='#')
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
+				.col.d-none.d-lg-block
+					+e.colooker-dd-cont
+						+e.c-dd-btn.colooker-dd-btn-js Соискатель
+						+colookerDD2()
+				+e.location-col.col-auto.d-none.d-md-block
+					+e.location.link-modal(href='#modal-city')
+						+icon('location')
+						+e.loc-txt=`${data.location || 'Санкт-Петербург'}`
+				.col-auto.d-none.d-md-block
+					+e.blue-cv-btn.d-none.d-md-inline-block(href="#") Разместить резюме
+					//-+e.mob-cv-btn.d-md-none(href="#")
+						+e.mcv-icon
+							+icon('plus-bold')
+						+e.mcv-txt Разместить резюме
+				if !data.logged
+					.col-auto.d-none.d-md-block
+						+e.enter-link.d-none.d-md-inline(href="#") Войти
+						//+e.mob-enter.d-md-none(href='#')
+							+icon('avatar-stab')
+				else
+					.col-auto
+						+e.p-wrap.lc-cont-js
+							+e.p-cab.lc-dd-btn-js
+								+e.pc-img
+									img(loading="lazy" src="img/svg/user-stab.svg" alt="")
+								+e.pc-txt.d-none.d-md-block Личный кабинет
+								+e.pc-icon
+									+icon('chevron-down')
+							+pCabDD()
+
+mixin colookerDD2()
+	+b.colooker-dd--js
+		+e.content
+			+e.box--top
+				+e.item.active(href="#") Соискатель
+				+e.item(href='#') Вакансии
+				+e.item(href='#') Организации
+				+e.item(href='#') Оценить компанию
+				+e.item(href='#') Рейтинг зарплат
+			+e.box
+				+e.item.active(href="#") Работодатель
+				+e.item(href='#') Публикация вакансии
+				+e.item(href='#') Тарифы
+			+e.box
+				+e.item(href='#') Контакты
+
+mixin mob-mnu6(data)
+	+b.mm--js.--alt5.d-xl-none
+		+b.new-mnu
+			+e.box
+				a.top-nav__blue-cv-btn(href="#") Разместить резюме
+				if !data.logged
+					+e.enter-btn(href="#") Войти
+				else
+					+e.enter-btn(href="#") Мой кабинет
+			+e.box
+				a.top-nav__location.link-modal(href='#modal-city')
+					+icon('location')
+					span.top-nav__loc-txt Комсомольск-на-Амуре
+			+e.box--menu
+				+e.item.active(href="#") Соискатель
+				+e.item(href="#") Вакансии
+				+e.item(href='#') Организации
+				+e.item(href='#') Оценить компанию
+				+e.item(href='#') Рейтинг зарплат
+			+e.box--menu
+				+e.item(href='#') Работодатель
+				+e.item(href='#') Публикация вакансии
+				+e.item(href='#') Тарифы
+			+e.box--menu
+				+e.item(href='#') Контакты

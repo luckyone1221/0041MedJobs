@@ -27,6 +27,21 @@
 		}
 		.top-nav__{}
 	}
+	&--new{
+		.top-nav__logo{
+			@include media-breakpoint-down(md){
+				width: 236px;
+				img{
+					width: 100%;
+				}
+			}
+		}
+
+		.top-nav__burger{
+			width: 36px;
+		}
+		//burger
+	}
 
 
 

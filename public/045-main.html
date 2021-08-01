@@ -38,25 +38,27 @@
 					<div class="new-mnu__box"><a class="top-nav__location link-modal" href="#modal-city">
 							<svg class="icon icon-location ">
 								<use xlink:href="img/svg/sprite.svg#location"></use>
-							</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
+							</svg><span class="top-nav__loc-txt">Комсомольск-на-Амуре</span></a>
 					</div>
-					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Работодатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a><a class="new-mnu__item" href="#">Оценить компанию</a><a class="new-mnu__item" href="#">Рейтинг зарплат</a>
 					</div>
-					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">О компании</a><a class="new-mnu__item" href="#">Помощь</a><a class="new-mnu__item" href="#">Контакты</a>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">Работодатель</a><a class="new-mnu__item" href="#">Публикация вакансии</a><a class="new-mnu__item" href="#">Тарифы</a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">Контакты</a>
 					</div>
 				</div>
 			</div>
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
-				<div class="top-nav top-nav--alt block-with-lazy">
+				<div class="top-nav top-nav--alt top-nav--new block-with-lazy">
 					<div class="top-nav__container top-nav__container--alt5 container">
 						<div class="top-nav__row top-nav__row--alt row">
 							<div class="col-auto d-lg-none">
 								<div class="top-nav__burger top-nav__burger--alt burger-js"><span></span>
 								</div>
 							</div>
-							<div class="col col-lg-auto"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="col col-lg-auto order-first order-md-0"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
 							<div class="col d-none d-lg-block">
 								<div class="top-nav__colooker-dd-cont">
@@ -64,11 +66,11 @@
 									</div>
 									<div class="colooker-dd colooker-dd--js">
 										<div class="colooker-dd__content">
-											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a><a class="colooker-dd__item" href="#">Оценить компанию</a><a class="colooker-dd__item" href="#">Рейтинг зарплат</a>
 											</div>
-											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">Работодатель</a>
+											<div class="colooker-dd__box"><a class="colooker-dd__item active" href="#">Работодатель</a><a class="colooker-dd__item" href="#">Публикация вакансии</a><a class="colooker-dd__item" href="#">Тарифы</a>
 											</div>
-											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">Контакты</a>
 											</div>
 										</div>
 									</div>
@@ -77,17 +79,13 @@
 							<div class="top-nav__location-col col-auto d-none d-md-block"><a class="top-nav__location link-modal" href="#modal-city">
 								<svg class="icon icon-location ">
 									<use xlink:href="img/svg/sprite.svg#location"></use>
-								</svg><span class="top-nav__loc-txt">Комсомольск-на-Урале</span></a>
+								</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
 							</div>
-							<div class="col-auto"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a><a class="top-nav__mob-cv-btn d-md-none" href="#"><span class="top-nav__mcv-icon">
-								<svg class="icon icon-plus-bold ">
-									<use xlink:href="img/svg/sprite.svg#plus-bold"></use>
-								</svg></span><span class="top-nav__mcv-txt">Разместить резюме</span></a>
+							<div class="col-auto d-none d-md-block"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a>
 							</div>
-							<div class="col-auto"><a class="top-nav__enter-link d-none d-md-inline" href="#">Войти</a><a class="top-nav__mob-enter d-md-none" href="#">
-								<svg class="icon icon-avatar-stab ">
-									<use xlink:href="img/svg/sprite.svg#avatar-stab"></use>
-								</svg></a>
+							<div class="col-auto d-none d-md-block"><a class="top-nav__enter-link d-none d-md-inline" href="#">Войти</a>
+								<!--+e.mob-enter.d-md-none(href='#')+icon('avatar-stab')
+								-->
 							</div>
 						</div>
 					</div>
@@ -828,7 +826,7 @@
 				</div>
 			</section>
 			<!-- end sStart-->
-			<footer class="footer footer--alt">
+			<footer class="footer footer--alt footer--bigger-mob bigger">
 				<div class="container">
 					<div class="footer__row row">
 						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
@@ -848,11 +846,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="d-xl-none"><a class="footer__business-logo text-center text-md-start" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
+							<div class="d-xl-none"><a class="footer__business-logo" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
 							</div>
 						</div>
 						<div class="col-12 col-md-7 col-xl-7">
-							<div class="footer__a-menu-row row text-center text-md-start">
+							<div class="footer__a-menu-row row">
 								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">MedicJobs</a>
 									<ul class="navMenu">
 										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
@@ -875,6 +873,8 @@
 									<ul class="navMenu">
 										<li class="navMenu__item"><a class="navMenu__link" href="#">Публикация вакансии</a>
 										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Тарифы</a>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -891,10 +891,10 @@
 									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
 									</div>
 								</div>
-							</div><a class="footer__business-logo text-center text-xl-start" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
+							</div><a class="footer__business-logo" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
 						</div>
 						<div class="col-12 order-2 order-md-0">
-							<div class="footer__ar-row row text-center text-md-start">
+							<div class="footer__ar-row row">
 								<div class="col-12 col-md">
 									<div class="footer__all-rights mb-0">© 2021 Все права защищены Medicjobs.ru.
 									</div>
