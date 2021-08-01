@@ -54,8 +54,7 @@ mixin sDayVacItem(data)
 						span=data.salary
 						span.ff-mono.ms-1 ₽
 				.col-auto
-					+b.like-btn(href='#')
-						+icon('like')
+					+likeBtn()
 			.mt-auto
 				+e.bot-row.row.align-items-end
 					.col
@@ -65,3 +64,9 @@ mixin sDayVacItem(data)
 						.col-auto
 							+e.logo
 								img(loading="lazy" src=`img/@2x/sDayVac-${data.imgNum}.png` alt="")
+
+mixin likeBtn()
+	//-add class 'active' manualy
+	+b.like-btn(href='#')
+		+icon('like')
+		+icon('like-fill')

@@ -1473,8 +1473,10 @@ h5{
 	border-radius: 8px;
 	&:hover{
 		background: $white!important;
-		border: 1px solid $gary-110!important;
+		border: 1px solid $input-border-color!important;
 	}
+
+
 }
 //
 .new-page-item{

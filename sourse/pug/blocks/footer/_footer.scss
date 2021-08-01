@@ -25,6 +25,9 @@
 		}
 
 		.footer__logo{
+			@include media-breakpoint-up(md){
+				width: 170px;
+			}
 			@include media-breakpoint-down(md){
 				width: 240px;
 				img{

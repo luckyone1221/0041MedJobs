@@ -152,6 +152,9 @@
 		}
 
 		padding-right: var(--inp-nav-w, 24px)!important;
+		&:focus{
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
+		}
 	}
 	&__inv-nav{
 		position: absolute;
@@ -181,12 +184,14 @@
 
 		line-height: 1.25;
 		color: $headings-color;
-
 		&:hover{
-			.icon{
-				color: $orange;
-			}
+			color: $headings-color;
 		}
+		//&:hover{
+		//	.icon{
+		//		color: $orange;
+		//	}
+		//}
 	}
 	&__filter-btn{
 		width: 24px;
@@ -200,11 +205,11 @@
 			font-size: 24px;
 			color: $gray-550;
 		}
-		&:hover{
-			.icon{
-				color: $primary;
-			}
-		}
+		//&:hover{
+		//	.icon{
+		//		color: $primary;
+		//	}
+		//}
 	}
 	&__mob-filter-btn{
 		@extend .white-btn;

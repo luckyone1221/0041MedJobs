@@ -36,8 +36,7 @@ mixin sFreshSlide(data)
 				.col
 					+e.date Сегодня
 				.col-auto
-					+b.like-btn(href='#')
-						+icon('like')
+					+likeBtn()
 			+e.name(href='#')=data.name
 			+e.salary
 				span 30 000-35 000

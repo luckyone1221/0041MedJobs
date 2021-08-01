@@ -39,7 +39,27 @@
 
 		.top-nav__burger{
 			width: 36px;
+
+			@include media-breakpoint-down(md){
+				span,
+				span:before,
+				span:after{
+					height: 3px;
+				}
+
+				span:before{
+					top: -12px;
+				}
+				span:after{
+					top: 12px;
+				}
+			}
 		}
+		//
+		.colooker-dd{
+			font-size: 14px;
+		}
+
 		//burger
 	}
 
@@ -445,6 +465,31 @@
 		width: 374px;
 		@include media-breakpoint-up(md){
 			width: 272px;
+		}
+	}
+	&--alt6{
+		height: calc(100vh +  var(--header-h));
+		max-height: unset;
+		z-index: 1000!important;
+		top: 0;
+
+		width: 374px;
+		@include media-breakpoint-up(md){
+			width: 272px;
+		}
+
+		.top-nav__blue-cv-btn,
+		.new-mnu__enter-btn{
+			font-family: inherit!important;
+			line-height: 1.25!important;
+			font-size: inherit!important;
+			font-weight: bold!important;
+			border-width: 2px!important;
+
+			padding: 13px 20px!important;
+			@include media-breakpoint-up(md){
+				padding: 3px 20px!important;
+			}
 		}
 	}
 

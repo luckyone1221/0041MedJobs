@@ -126,6 +126,96 @@
 			}
 		}
 	}
+	//
+	&__baner{
+    background: $gray-100;
+
+		padding: 24px 24px 0;
+		border-radius: 12px;
+		@include media-breakpoint-up(md){
+			padding: 40px;
+			border-radius: 8px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 48px;
+		}
+		margin-bottom: 24px;
+	}
+	&__b-row{
+		--bs-gutter-x: 24px;
+		--bs-gutter-y: 24px;
+	}
+	&__b-title{
+		font-weight: 600;
+		margin-bottom: 18px;
+
+		font-size: 36px;
+		@include media-breakpoint-up(md){
+			font-size: 30px;
+		}
+		@include media-breakpoint-up(lg){
+			font-size: 32px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 36px;
+		}
+	}
+	&__b-txt-col{
+
+		@include media-breakpoint-up(md){
+			width: calc(308px + var(--bs-gutter-x));
+		}
+		@include media-breakpoint-up(lg){
+			width: calc(336px + var(--bs-gutter-x));
+		}
+		@include media-breakpoint-up(xl){
+			width: calc(380px + var(--bs-gutter-x));
+		}
+	}
+	&__b-txt{
+		margin-bottom: 24px;
+		@include media-breakpoint-up(lg){
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(md){
+			margin-bottom: 24px;
+		}
+	}
+	&__b-btn{
+		@extend .green-btn;
+		font-size: inherit;
+
+		padding: 15px 24px;
+		@include media-breakpoint-up(md){
+			padding: 15px 34px;
+		}
+	}
+	&__b-img{
+		margin: 0 auto;
+		@include media-breakpoint-up(md){
+			margin: 0 0 0 auto;
+		}
+
+		width: 416px;
+		@include media-breakpoint-up(md){
+			width: 308px;
+		}
+		@include media-breakpoint-up(lg){
+			width: 254px;
+		}
+		@include media-breakpoint-up(xl){
+			width: 340px;
+		}
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	//
+	&__items{
+		padding-bottom: 24px;
+	}
 	&__{}
 } // end.sCatalog
 
@@ -186,12 +276,22 @@
 		}
 
 		.like-btn{
+
 			color: $green4;
 			&:hover{
 				color: $green4;
 			}
-			&.acitve{
-				color: $green4;
+			&.active{
+				.icon-like-fill{
+					opacity: 1;
+				}
+				.icon-like{
+					opacity: 0;
+				}
+
+				.icon{
+					color: $green4!important;
+				}
 			}
 		}
 	}
@@ -352,6 +452,6 @@
 
 		background-color: $white;
 	}
-	&__{}
+	//
 	&__{}
 }

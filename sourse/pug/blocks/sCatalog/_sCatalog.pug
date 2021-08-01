@@ -83,6 +83,29 @@ mixin sCatalog(data)
 							serviceBlock: true,
 							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
 						})
+						+e.baner
+							+e.b-row.row.align-items-center
+								+e.b-txt-col.col-md-auto
+									+e.b-title Расскажите о&#160;своей зарплате
+									+e.b-txt Мы в MedicJobs составляем актуальный рейтинг заработных плат на рынке труда в медицине.
+									+e.b-btn(href='#') Пройти опрос
+								.col-md
+									+e.b-img
+										img(loading="lazy" src="img/svg/sTell-img.svg" alt="")
+						+sCatalogItem({
+							title: 'Медицинская сестра',
+							salary: '30 000-35 000',
+							defaultBtns: true,
+							organization: 'МРЦ Беляево (Центр Дикуля)',
+							logoImg: 5,
+						})
+						+sCatalogItem({
+							title: 'Врач рентгенолог КТ',
+							salary: '50 000',
+							defaultBtns: true,
+							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+						})
+					+puginRow()
 				.col-lg-3
 	// end sCatalog
 
@@ -102,8 +125,7 @@ mixin sCatalogItem(data)
 					.col-auto
 						+e.date 22 июля 2021, 19:19
 					.col-auto
-						+b.like-btn(href='#')
-							+icon('like')
+						+likeBtn()
 		if data.pillsRow
 			+e.pills-row.row
 				if data.grayPill
