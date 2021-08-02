@@ -341,14 +341,8 @@
 	@include mt(1);
 	background-clip: padding-box;
 	right: 0;
-	--pos:100%;
-	--vis: hidden;
-	transform: translateX(var(--pos));
-	visibility: var(--vis);
-	&:not(.active){
-		// width: 1px;
-		
-	}
+	left: var(--pos, 105%);
+	visibility: var(--vis, hidden);
 	&.active{
 		--pos: 0;
 		--vis: visible;
