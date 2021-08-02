@@ -272,13 +272,9 @@ mixin top-nav6(data)
 						+e.loc-txt=`${data.location || 'Санкт-Петербург'}`
 				.col-auto.d-none.d-md-block
 					+e.blue-cv-btn.d-none.d-md-inline-block(href="#") Разместить резюме
-					//-+e.mob-cv-btn.d-md-none(href="#")
-						+e.mcv-icon
-							+icon('plus-bold')
-						+e.mcv-txt Разместить резюме
 				if !data.logged
 					.col-auto.d-none.d-md-block
-						+e.enter-link.d-none.d-md-inline(href="#") Войти
+						+e.enter-link.d-none.d-md-inline.link-modal(href="#modal-login") Войти
 						//+e.mob-enter.d-md-none(href='#')
 							+icon('avatar-stab')
 				else

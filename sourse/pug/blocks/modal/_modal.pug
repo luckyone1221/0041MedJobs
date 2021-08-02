@@ -24,7 +24,33 @@ mixin modal()
 			+e.item
 				+e.i-title Email:
 				+e.link(href="mailto:konstantinopolskaya1616@gmail.com") konstantinopolskaya1616@gmail.com
-	//
+	//045++
+	+b.modal-login.text-center.modal-win(id="modal-login" class=" " style="display: none")
+		+e.ball
+			img(loading="lazy" src='img/svg/padlock.svg' alt="")
+		+e.title Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
+		+e.descr После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
+		+e.row.row.justify-content-center
+			.col-md-auto
+				+e.btn--green(href='#') Авторизация
+			.col-md-auto
+				+e.btn--blue(href='#') Регистрация
+		+e.already
+			| Уже зарегистрированы и забыли пароль?
+			|
+			a(href="#") Восстановить доступ
+	+b.modal-cface.text-center.modal-win(id="modal-cface" class=" " style="display: none")
+		+e.face-txt Контактное лицо:
+		+e.name Константин Константинович Константинопольский
+		+e.duty Главный врач
+		+e.number(href='tel:+79035251051') +7 903 525‑10-51
+		+e.mail(href='mailto:info@nameclinic.ru') info@nameclinic.ru
+		+e.shedule-txt Режим работы:
+		+e.shedule-val пн-пт: 8:00—22:00, сб-вс: выходной
+		+e.footer Скажите, что нашли вакансию на сайте MedicJobs.ru
+
+
+	//end 045++
 	+b.modal-city.modal-win(id="modal-city" class=" " style="display: none" )
 		+e.title Выберите город
 		+form-wrap()

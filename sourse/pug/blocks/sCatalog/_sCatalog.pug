@@ -313,7 +313,7 @@ mixin sCatalogItem(data)
 		+e.btns-row.row.align-items-center
 			if data.defaultBtns
 				.col-auto
-					+e.btn--blue(href='#') Откликнуться
+					+e.btn--blue.link-modal(href='#modal-cface') Откликнуться
 				.col-auto
 					+e.btn--gray(href='#') Позвонить
 			if data.tealBtns
