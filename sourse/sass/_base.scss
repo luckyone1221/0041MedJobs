@@ -776,9 +776,7 @@ h5{
 	flex-wrap: wrap;
 	align-items: center;
 
-
 	padding: 0;
-
 	margin: 0 0 8px;
 
 	&-item{
@@ -1536,7 +1534,10 @@ h5{
 	.breadcrumb{
 		margin-bottom: 15px;
 		a{
-			font-size: 13.4px;
+			font-size: 20px;
+			@include media-breakpoint-up(md){
+				font-size: 13.4px;
+			}
 		}
 
 		.breadcrumb-item:after{
@@ -1548,11 +1549,12 @@ h5{
 		letter-spacing: -0.4px;
 
 		font-size: 36px;
+		margin-bottom: 20px;
 		@include media-breakpoint-up(xl){
 			font-size: 42px;
+			margin-bottom: 24px;
 		}
 
-		margin-bottom: 24px;
 	}
 
 	//

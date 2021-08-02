@@ -168,7 +168,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '046.png';
+	screenName = '046-992.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -188,37 +188,6 @@ function eventHandler() {
 		scrollHandler();
 	}, { passive: true });
 	scrollHandler();
-
-
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-	}
-
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-	});
 	// modal window
 
 	//luckyone js
@@ -257,12 +226,6 @@ function eventHandler() {
 			$('.burger-js, .mm--js, .top-nav').removeClass('active');
 			$('body').removeClass('fixed2');
 			$('.alert-line--js').addClass('active');
-
-			//filter remove
-			// $('.f-btn-js').removeClass('active');
-			// $('.filter--js').slideUp(function (){
-			// 	$(this).removeClass('active');
-			// });
 		}
 	}, {passive: true});
 	document.addEventListener('click', function (){
@@ -287,10 +250,6 @@ function eventHandler() {
 		$('.filter--js').slideToggle(250,function (){
 			$(this).toggleClass('active');
 		});
-	});
-
-	document.body.addEventListener('click', function (){
-		//write filter missclick
 	});
 
 	//show more
@@ -929,7 +888,17 @@ function eventHandler() {
 	//
 	$('.sCatalog-dd-content-js input[type="radio"]').change(function (){
 		this.closest('.sCatalog-dd-js').querySelector('.sCatalog-dd-head-js').innerHTML = this.parentElement.querySelector('.txt-js').innerHTML;
-	})
+	});
+
+	//new filter
+	$('.chb-items-toggle-js').click(function (){
+		$(this).toggleClass('active').closest('.chb-items-js').find('.chb-items-hidden-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
+
+	//
+
 
 
 };

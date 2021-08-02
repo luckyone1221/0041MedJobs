@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var isIE11 = Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject;
 
 if (isIE11) {
@@ -180,7 +174,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '046.png';
+	screenName = '046-992.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -203,33 +197,7 @@ function eventHandler() {
 	}, {
 		passive: true
 	});
-	scrollHandler();
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true
-		}
-	};
-	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	})); // modal window
+	scrollHandler(); // modal window
 	//luckyone js
 	//alert line
 
@@ -269,11 +237,7 @@ function eventHandler() {
 			//menu
 			$('.burger-js, .mm--js, .top-nav').removeClass('active');
 			$('body').removeClass('fixed2');
-			$('.alert-line--js').addClass('active'); //filter remove
-			// $('.f-btn-js').removeClass('active');
-			// $('.filter--js').slideUp(function (){
-			// 	$(this).removeClass('active');
-			// });
+			$('.alert-line--js').addClass('active');
 		}
 	}, {
 		passive: true
@@ -298,8 +262,6 @@ function eventHandler() {
 		$('.filter--js').slideToggle(250, function () {
 			$(this).toggleClass('active');
 		});
-	});
-	document.body.addEventListener('click', function () {//write filter missclick
 	}); //show more
 
 	$('.show-more-js').click(function () {
@@ -912,7 +874,13 @@ function eventHandler() {
 
 	$('.sCatalog-dd-content-js input[type="radio"]').change(function () {
 		this.closest('.sCatalog-dd-js').querySelector('.sCatalog-dd-head-js').innerHTML = this.parentElement.querySelector('.txt-js').innerHTML;
-	});
+	}); //new filter
+
+	$('.chb-items-toggle-js').click(function () {
+		$(this).toggleClass('active').closest('.chb-items-js').find('.chb-items-hidden-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //
 }
 
 ;

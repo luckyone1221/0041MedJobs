@@ -123,8 +123,8 @@
 			<div class="sCatalog section" id="sCatalog">
 				<div class="container">
 					<div class="sCatalog__top-row row align-items-center">
-						<div class="col-auto">
-							<div class="sCatalog__found">Найдено 1 434 вакансий
+						<div class="col col-md-auto">
+							<div class="sCatalog__found"><span class="d-none d-md-inline">Найдено</span><span>1 434 вакансий</span>
 							</div>
 						</div>
 						<div class="col-auto">
@@ -141,7 +141,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col">
+						<div class="col-auto col-md">
 							<div class="sCatalog__dd sCatalog-dd-js">
 								<div class="sCatalog__dd-head sCatalog-dd-head-js">За все время
 								</div>
@@ -161,7 +161,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-auto">
+						<div class="col-auto d-none d-md-block">
 							<div class="sCatalog__wide-btn"><span>Расширенный фильтр</span>
 								<svg class="icon icon-filter ">
 									<use xlink:href="img/svg/sprite.svg#filter"></use>
@@ -180,7 +180,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -248,7 +248,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -292,7 +292,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -338,7 +338,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -377,7 +377,7 @@
 									</div>
 								</div>
 								<div class="cat-item gray-card">
-									<div class="cat-item__bg"><img loading="lazy" src="img/@2x/sCatalog-item-bg.png" alt=""/>
+									<div class="cat-item__bg d-none d-md-block"><img loading="lazy" src="img/@2x/sCatalog-item-bg.png" alt=""/>
 									</div>
 									<div class="cat-item__top-row row">
 										<div class="col"><a class="cat-item__title" href="#">Врач стоматолог-терапевт-хирург</a>
@@ -386,7 +386,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -430,7 +430,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -488,7 +488,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -544,7 +544,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -588,7 +588,7 @@
 										</div>
 										<div class="col-auto">
 											<div class="cat-item__date-row row align-items-center">
-												<div class="col-auto">
+												<div class="col-auto d-none d-md-block">
 													<div class="cat-item__date">22 июля 2021, 19:19
 													</div>
 												</div>
@@ -641,7 +641,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="col-auto">
+								<div class="col-auto d-none d-md-block">
 									<div class="pugin-row__select-cont">
 										<div class="pugin-row__sel-title">Показать по:
 										</div>
@@ -652,17 +652,353 @@
 												<option value="36">36</option>
 											</select>
 										</div>
-										<!--+e.SELECT.select.form-control.form-select
-										option 12
-										option 24
-										option 36
-										
-										-->
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__toggle-box toggle-box-js">
+								<div class="sCatalog__content">
+									<p>Вы собираетесь устроиться на работу, но не знаете как? А может сама мысль о поиске вызывает у вас страх? С нашей площадкой поиск работы из рутинного занятия превращается в легкое приключение, ведь на нашем сайте представлено множество вакансий в городских больницах и медицинских центрах Москвы. Мы стараемся сделать все возможное, что бы вы смогли найти работу, которая будет приносить вам удовольствие, в кратчайшие сроки.</p>
+									<p>На нашей площадке ежедневно публикуется множество свежих вакансий в больницах Москвы. Мы сотрудничаем с огромным количеством работодателей, благодаря чему соискателю на постоянной основе предлагается широчайший выбор позиций по поиску работы в различных медицинских учреждениях Москвы, от государственных больниц, до частных клиник.</p>
+								</div>
+								<div class="sCatalog__content toggle-content-js">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?</p>
+								</div>
+								<div class="toggle-txt-btn toggle-btn-js"><span>Показать полностью</span><span>Свернуть</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="cat-filter">
+								<div class="cat-filter__top d-lg-none">
+								</div>
+								<div class="cat-filter__wrap">
+									<div class="cat-filter__header">
+										<div class="cat-filter__header-row row align-items-center">
+											<div class="col">
+												<div class="cat-filter__f-txt">Фильтр
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-filter__discard">Сбросить
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-filter__body">
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col">
+														<div class="cat-filter__h-txt">Регион для поиска
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<!--do not remove ".cat-filter__result-col", even if its empty-->
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Комсомольск-на-Амуре" checked="checked"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Комсомольск-на-Амуре</span><span class="f-checkbox__result-col col-auto"></span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Санкт-Петербург" checked="checked"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Санкт-Петербург</span><span class="f-checkbox__result-col col-auto"></span></span></span>
+													</label><a class="cat-filter__modal-btn" href="#">Изменить</a>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col">
+														<div class="cat-filter__h-txt">Заработная плата, ₽
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="С указаной зарплатой"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">С указаной зарплатой</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 10 000"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 10 000</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 20 000"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 20 000</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 30 000" checked="checked"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 30 000</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 40 000"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 40 000</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 50 000"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 50 000</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<div class="cat-filter__hidden chb-items-hidden-js">
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="от 60 000"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 60 000</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="от 100 000"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 100 000</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+													</div>
+													<div class="cat-filter__toggle-btn chb-items-toggle-js"><span>Показать еще</span><span>Свернуть</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col">
+														<div class="cat-filter__h-txt">Опыт работы
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Без опыта"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Без опыта</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 1 года"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 1 года</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 2 лет"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 2 лет</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 3 лет"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 3 лет</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 4 лет"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 4 лет</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="от 5 лет"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 5 лет</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<div class="cat-filter__hidden chb-items-hidden-js">
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="от 10 лет"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 10 лет</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="от 20 лет"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">от 20 лет</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+													</div>
+													<div class="cat-filter__toggle-btn chb-items-toggle-js"><span>Показать еще</span><span>Свернуть</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col">
+														<div class="cat-filter__h-txt">График работы
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Полный рабочий день"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Полный рабочий день</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Сменный график работы"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Сменный график работы</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Гибкий график"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Гибкий график</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Неполный рабочий день"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Неполный рабочий день</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<div class="cat-filter__hidden chb-items-hidden-js active">
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="Ненормированный рабочий день"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Ненормированный рабочий день</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="Работа вахтовым методом"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Работа вахтовым методом</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+													</div>
+													<div class="cat-filter__toggle-btn chb-items-toggle-js active"><span>Показать еще</span><span>Свернуть</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col-auto">
+														<div class="cat-filter__h-icon"><img loading="lazy" src="img/svg/sCatalog-pill-1.svg" alt=""/>
+														</div>
+													</div>
+													<div class="col">
+														<div class="cat-filter__h-txt">Covid-19
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Только с Covid-19"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Только с Covid-19</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col-auto">
+														<div class="cat-filter__h-icon"><img loading="lazy" src="img/svg/sCatalog-pill-2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="col">
+														<div class="cat-filter__h-txt">Соцпакет
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Единовременная выплата при трудоустройстве"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Единовременная выплата при трудоустройстве</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Выплата по программе &quot;Земский фельдшер&quot;"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Выплата по программе &quot;Земский фельдшер&quot;</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Выплата по программе &quot;Земский доктор&quot;"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Выплата по программе &quot;Земский доктор&quot;</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Предоставления на жилищное обустройство "/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Предоставления на жилищное обустройство </span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Предоставление служебного жилья"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Предоставление служебного жилья</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Компенсация стоимости аренды жилья"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Компенсация стоимости аренды жилья</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<div class="cat-filter__hidden chb-items-hidden-js">
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="Ненормированный рабочий день"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Ненормированный рабочий день</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="Работа вахтовым методом"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Работа вахтовым методом</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+													</div>
+													<div class="cat-filter__toggle-btn chb-items-toggle-js"><span>Показать еще</span><span>Свернуть</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col-auto">
+														<div class="cat-filter__h-icon"><img loading="lazy" src="img/svg/sCatalog-pill-3.svg" alt=""/>
+														</div>
+													</div>
+													<div class="col">
+														<div class="cat-filter__h-txt">Бонусы
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="ДМС или медицинское обслуживание"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">ДМС или медицинское обслуживание</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Комфортные условия труда"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Комфортные условия труда</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Современное медоборудование"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Современное медоборудование</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Возможности внутреннего совместительства"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Возможности внутреннего совместительства</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Обучение и развитие за счет компании"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Обучение и развитие за счет компании</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Фитнес"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Фитнес</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<div class="cat-filter__hidden chb-items-hidden-js">
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="Ненормированный рабочий день"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Ненормированный рабочий день</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+														<label class="f-checkbox">
+															<input class="invisible" type="checkbox" value="Работа вахтовым методом"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Работа вахтовым методом</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+														</label>
+													</div>
+													<div class="cat-filter__toggle-btn chb-items-toggle-js"><span>Показать еще</span><span>Свернуть</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col">
+														<div class="cat-filter__h-txt">Форма собственности
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Частная"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Частная</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Государтсвенная"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Государтсвенная</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Иностранная"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Иностранная</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="cat-filter__item active">
+											<div class="cat-filter__head dd-head-js">
+												<div class="cat-filter__h-row row">
+													<div class="col">
+														<div class="cat-filter__h-txt">Отрасли
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cat-filter__content dd-content-js active">
+												<div class="cat-filter__chb-items chb-items-js">
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Медицина, фармацевтика"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Медицина, фармацевтика</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="It, интернет, связь"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">It, интернет, связь</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Госудраственная служба"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Госудраственная служба</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Кадры, управление персоналом" checked="checked"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Кадры, управление персоналом</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Промышленность, производство"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Промышленность, производство</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label>
+													<label class="f-checkbox">
+														<input class="invisible" type="checkbox" value="Спорт, фитнес, салоны красоты, СПА"/><span class="f-checkbox__box"><span class="f-checkbox__row row"><span class="f-checkbox__txt-col col">Спорт, фитнес, салоны красоты, СПА</span><span class="f-checkbox__result-col col-auto">13 890</span></span></span>
+													</label><a class="cat-filter__modal-btn" href="#">Выбрать несколько</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-3"></div>
 					</div>
 				</div>
 			</div>
