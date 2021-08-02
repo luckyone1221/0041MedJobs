@@ -24,19 +24,21 @@ mixin sCatalog(data)
 						+icon('filter')
 			+e.main-row.row
 				.col-lg-9
-					+e.items
+					+e.items.sCatalog-js
 						+sCatalogItem({
 							title: 'Врач стоматолог-терапевт-хирург',
 							salary: '30 000-35 000',
 							defaultBtns: true,
 							pillsRow: true,
-							grayPill: true,
-							orangePill: true,
-							bluePill: true,
-							greenPill: true,
 							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
 							logoImg: 2,
 						})
+							+sCatalogItemPill('#EFF2F6', 'Будьте первыми')
+							+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+							+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+							+sCatalogItemPill('#edfbf3', 'Жилье', 4)
+							+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
+							+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
 						+sCatalogItem({
 							title: 'Архивариус',
 							salary: '50 000',
@@ -57,9 +59,11 @@ mixin sCatalog(data)
 							salary: '50 000',
 							defaultBtns: true,
 							pillsRow: true,
-							grayPill: true,
 							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
 						})
+							+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+							+sCatalogItemPill('#edfbf3', 'Жилье', 4)
+							+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
 						+sCatalogItem({
 							addClasses: 'gray-card',
 							title: 'Врач стоматолог-терапевт-хирург',
@@ -75,11 +79,10 @@ mixin sCatalog(data)
 							salary: '30 000-35 000',
 							defaultBtns: true,
 							pillsRow: true,
-							orangePill: true,
-							greenPill: true,
 							organization: 'МРЦ Беляево (Центр Дикуля)',
 							logoImg: 5,
 						})
+							+sCatalogItemPill('#feefe9', 'Covid-19', 1)
 						+sCatalogItem({
 							title: 'Врач рентгенолог КТ',
 							salary: '50 000',
@@ -138,14 +141,23 @@ mixin sCatalog(data)
 							span Свернуть
 				.col-lg-3
 					+sCatalogFilter()
+					+e.mob-catalog-btn.cat-filter-toggle-js.d-lg-none
+						+icon('filter')
+						span Быстрые фильтры
 	// end sCatalog
 
 mixin sCatalogFilter()
-	+b.cat-filter
+	+b.cat-filter--js
 		+e.top.d-lg-none
-
+			+e.tr.row.align-items-center
+				.col
+					+e.tr-title Быстрые фильтры
+				.col-auto
+					+e.close-btn.cat-filter-toggle-js
+						img(loading="lazy" src="img/svg/cross-new.svg" alt="")
+			+e.wide-btn(href='#') Перейти в расширенный фильтр
 		+e.wrap
-			+e.header
+			+e.header.d-none.d-lg-block
 				+e.header-row.row.align-items-center
 					.col
 						+e.f-txt Фильтр
@@ -196,30 +208,39 @@ mixin sCatalogFilter()
 				+sCatalogFilterItem('Covid-19', 1)
 					+e.chb-items.chb-items-js
 						+sCatalogFilterChb('Только с Covid-19')
-				+sCatalogFilterItem('Соцпакет', 2)
+				+sCatalogFilterItem('Жилье', 4)
+					+e.chb-items.chb-items-js
+						+sCatalogFilterChb('Предоставление субсидий на жилищное обустройство ')
+						+sCatalogFilterChb('Предоставление служебного жилья')
+						+sCatalogFilterChb('Компенсация стоимости аренды жилья')
+						+sCatalogFilterChb('Компенсация по оплате ком. услуг')
+						+e.hidden.chb-items-hidden-js.active
+							+sCatalogFilterChb('Предоставление земельного участка под ИСЖ')
+							+sCatalogFilterChb('Предоставление субсидий для переезда')
+						+sCatalogFilterToggleBtn('active')
+				//-
+				+sCatalogFilterItem('Денежные выплаты', 6)
 					+e.chb-items.chb-items-js
 						+sCatalogFilterChb('Единовременная выплата при трудоустройстве')
 						+sCatalogFilterChb('Выплата по программе "Земский фельдшер"')
 						+sCatalogFilterChb('Выплата по программе "Земский доктор"')
-						+sCatalogFilterChb('Предоставления на жилищное обустройство ')
-						+sCatalogFilterChb('Предоставление служебного жилья')
-						+sCatalogFilterChb('Компенсация стоимости аренды жилья')
+						+sCatalogFilterChb('Программа государственной поддержки врачей дефицитных специальностей')
+						+sCatalogFilterChb('Премии и бонусы')
 						+e.hidden.chb-items-hidden-js
 							+sCatalogFilterChb('Ненормированный рабочий день')
 							+sCatalogFilterChb('Работа вахтовым методом')
 						+sCatalogFilterToggleBtn()
-				+sCatalogFilterItem('Бонусы', 3)
+				//-
+				+sCatalogFilterItem('Бонусы', 5)
 					+e.chb-items.chb-items-js
+						+sCatalogFilterChb('Предоставление мест в детских садах/школах')
 						+sCatalogFilterChb('ДМС или медицинское обслуживание')
-						+sCatalogFilterChb('Комфортные условия труда')
-						+sCatalogFilterChb('Современное медоборудование')
-						+sCatalogFilterChb('Возможности внутреннего совместительства')
-						+sCatalogFilterChb('Обучение и развитие за счет компании')
-						+sCatalogFilterChb('Фитнес')
-						+e.hidden.chb-items-hidden-js
-							+sCatalogFilterChb('Ненормированный рабочий день')
-							+sCatalogFilterChb('Работа вахтовым методом')
-						+sCatalogFilterToggleBtn()
+						+sCatalogFilterChb('Дополнительный отпуск')
+						+sCatalogFilterChb('Профессиональная профподготовка')
+						+e.hidden.chb-items-hidden-js.active
+							+sCatalogFilterChb('Внутреннее совместительство')
+							+sCatalogFilterChb('Фитнес')
+						+sCatalogFilterToggleBtn('active')
 				+sCatalogFilterItem('Форма собственности')
 					+e.chb-items.chb-items-js
 						+sCatalogFilterChb('Частная')
@@ -234,6 +255,10 @@ mixin sCatalogFilter()
 						+sCatalogFilterChb('Промышленность, производство')
 						+sCatalogFilterChb('Спорт, фитнес, салоны красоты, СПА')
 						+e.modal-btn(href="#") Выбрать несколько
+		+e.footer.d-lg-none
+			+e.btn--green(href="#") Показать 120 вакансий
+			+e.btn--white(href="#") Сбросить фильтр
+
 
 mixin sCatalogFilterToggleBtn(addClasess='')
 	+e.toggle-btn.chb-items-toggle-js(class=addClasess)
@@ -280,14 +305,7 @@ mixin sCatalogItem(data)
 						+likeBtn()
 		if data.pillsRow
 			+e.pills-row.row
-				if data.grayPill
-					+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
-				if data.orangePill
-					+sCatalogItemPill('#feefe9', 'Covid-19', 1)
-				if data.bluePill
-					+sCatalogItemPill('#e8f8fe', 'Соцпакет', 2)
-				if data.greenPill
-					+sCatalogItemPill('#edfbf3', 'Бонусы', 3)
+				block
 		if data.descr
 			+e.descr=data.descr
 		else
@@ -326,7 +344,6 @@ mixin sCatalogItemPill(bgColor,txt, imgNum)
 				+e.p-img
 					img(loading="lazy" src=`img/svg/sCatalog-pill-${imgNum}.svg` alt="")
 			span=txt
-
 
 
 mixin sCatalogDD(headTxt)

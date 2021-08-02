@@ -303,6 +303,44 @@
 	&__toggle{
 
 	}
+	//
+	&__mob-catalog-btn{
+		@include mt();
+		@extend .white-btn;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 15px 24px;
+		font-size: 24px;
+		line-height: (28/24);
+		@include media-breakpoint-up(md) {
+			padding: 15px 28px;
+			font-size: 16px;
+			line-height: (19/16);
+		}
+
+		position: fixed;
+		z-index: 100;
+		left: 50%;
+
+		transform: translateX(-50%);
+		bottom: -120px;
+		&.active{
+			transform: translateX(-50%);
+			bottom: 24px;
+		}
+
+		.icon{
+			font-size: 30px;
+			@include media-breakpoint-up(md){
+				font-size: 20px;
+			}
+			margin-right: 12px;
+			color: $orange;
+		}
+	}
+	&__{}
 	&__{}
 } // end.sCatalog
 
@@ -609,6 +647,123 @@
 
 //
 .cat-filter{
+	@include mt();
+	@include media-breakpoint-down(lg){
+		position: fixed;
+		background-color: $white;
+		z-index: 900;
+
+		left: 0;
+		width: 100%;
+		height: calc(100vh - var(--header-h));
+		overflow-y: auto;
+
+		top: calc(120vh);
+		&.active{
+			top: var(--header-h);
+		}
+	}
+
+	//top
+	&__top{
+		background: $gray-130;
+
+		padding: 20px 30px;
+		@include media-breakpoint-up(md){
+			padding: 24px 20px;
+		}
+	}
+	&__tr{
+		padding-bottom: 24px;
+		@include media-breakpoint-up(md){
+			padding-bottom: 20px;
+		}
+	}
+	&__tr-title{
+		font-weight: 600;
+		font-size: 36px;
+	}
+	&__close-btn{
+		width: 36px;
+		height: 36px;
+		@include media-breakpoint-up(md){
+			width: 24px;
+			height: 24px;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: 100%;
+			height: auto;
+			max-height: 100%;
+		}
+	}
+	&__wide-btn{
+		@extend .white-btn;
+		width: 100%;
+
+		padding: 15px 20px;
+		font-size: 24px;
+		line-height: (28/24);
+		@include media-breakpoint-up(md){
+			padding: 15px 20px;
+			font-size: 16px;
+			line-height: (19/16);
+		}
+	}
+
+
+	//footer
+	&__footer{
+		padding: 20px 30px;
+		@include media-breakpoint-up(md){
+			padding: 24px 20px;
+		}
+	}
+	&__btn{
+		width: 100%;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		margin-bottom: 24px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 20px;
+		}
+
+		&--green{
+			@extend .green-btn;
+			font-weight: bold;
+			line-height: 1.25;
+
+			padding: 15px 20px;
+			font-size: 24px;
+			@include media-breakpoint-up(md){
+				padding: 14px 20px;
+				font-size: 18px;
+			}
+
+		}
+		&--white{
+			@extend .white-btn;
+
+			line-height: 1.25;
+
+			padding: 15px 20px;
+			font-size: 24px;
+			@include media-breakpoint-up(md){
+				padding: 13px 20px;
+				font-size: 18px;
+			}
+		}
+	}
+	&__{}
+
+	//
 
 	&__wrap{
 		@include media-breakpoint-up(lg){
@@ -617,6 +772,7 @@
 			border-radius: rem(8);
 		}
 	}
+
 	&__header{
 		padding: 19px 20px;
 		border-bottom: 1px solid $gary-110;
@@ -627,8 +783,13 @@
 	}
 	&__f-txt{
 		font-weight: 600;
-		font-size: 16px;
-		line-height: (19/16);
+
+		font-size: 20px;
+		line-height: (23/20);
+		@include media-breakpoint-up(md){
+			font-size: 16px;
+			line-height: (19/16);
+		}
 		color: $headings-color;
 
 	}
@@ -644,7 +805,10 @@
 	&__body{}
 	//
 	&__item{
-		padding: 19px 20px;
+		padding: 20px 24px;
+		@include media-breakpoint-up(lg){
+			padding: 19px 20px;
+		}
 		border-bottom: 1px solid $gary-110;
 
 		&.active{
@@ -661,8 +825,12 @@
 		align-items: center;
 	}
 	&__h-icon{
-		width: 20px;
-		height: 20px;
+		width: 25px;
+		height: 25px;
+		@include media-breakpoint-up(md){
+			width: 20px;
+			height: 20px;
+		}
 
 		display: flex;
 		align-items: center;
@@ -675,8 +843,13 @@
 	}
 	&__h-txt{
 		font-weight: 600;
-		font-size: 14px;
-		line-height: (16/14);
+
+		font-size: 20px;
+		line-height: (23/20);
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+			line-height: (16/14);
+		}
 
 		display: flex;
 		align-items: center;

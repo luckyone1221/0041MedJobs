@@ -880,7 +880,40 @@ function eventHandler() {
 		$(this).toggleClass('active').closest('.chb-items-js').find('.chb-items-hidden-js').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
-	}); //
+	}); //fixed filter
+
+	$('.cat-filter-toggle-js').click(function () {
+		$('.cat-filter--js').toggleClass('active');
+		$('body').toggleClass('fixed4');
+	});
+	let sCatalogItems = document.querySelector('.sCatalog-js');
+	document.addEventListener('scroll', function () {
+		let scrollTop = window.scrollY;
+		let itemBottom = sCatalogItems.offsetHeight + getCoords(sCatalogItems).top;
+
+		if (scrollTop + document.documentElement.clientHeight > itemBottom) {
+			$('.cat-filter-toggle-js').removeClass('active');
+		} else {
+			$('.cat-filter-toggle-js').addClass('active');
+		}
+	});
+
+	function getCoords(elem) {
+		// crossbrowser version
+		var box = elem.getBoundingClientRect();
+		var body = document.body;
+		var docEl = document.documentElement;
+		var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+		var clientTop = docEl.clientTop || body.clientTop || 0;
+		var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+		var top = box.top + scrollTop - clientTop;
+		var left = box.left + scrollLeft - clientLeft;
+		return {
+			top: Math.round(top),
+			left: Math.round(left)
+		};
+	}
 }
 
 ;
