@@ -45,9 +45,9 @@ mixin sFreshSlide(data)
 			.mt-auto
 				+e.bot-row.row.align-items-end.align-items-xl-center
 					.col
-						+e.org-name=data.organization
+						+e.org-name(href="#")=data.organization
 						+e.city г. Москва
 					if data.imgNum
 						.col-auto
-							+e.logo
+							+e.logo(href="#")
 								img(loading="lazy" src=`img/@2x/sDayVac-${data.imgNum}.png` alt="")

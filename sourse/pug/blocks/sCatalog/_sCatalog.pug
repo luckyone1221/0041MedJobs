@@ -5,8 +5,7 @@ mixin sCatalog(data)
 			+e.top-row.row.align-items-center
 				.col.col-md-auto
 					+e.found
-						span.d-none.d-md-inline Найдено
-						|
+						span.me-1.d-none.d-md-inline Найдено
 						span 1 434 вакансий
 				.col-auto
 					+sCatalogDD('Новые')
@@ -40,6 +39,7 @@ mixin sCatalog(data)
 							+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
 							+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
 						+sCatalogItem({
+							addClasses: 'blue-card',
 							title: 'Архивариус',
 							salary: '50 000',
 							defaultBtns: true,
@@ -112,33 +112,50 @@ mixin sCatalog(data)
 							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
 						})
 					//-
-					+b.pugin-row.row
-						.col
-							+b.pugination
-								ul.pagination
-									li.prev.disabled: span
-										+icon('chevron-left')
-									li.active: a(href="#") 1
-									li: a(href="#") 2
-									li: a(href="#") 3
-									li: a(href="#") ...
-									li: a(href="#") 5
-									li.next.disabled: a(href="#")
-										+icon('chevron-right')
-						.col-auto.d-none.d-md-block
-							+e.select-cont
-								+e.sel-title Показать по:
-								+customSlect('name', ['12', '24', '36'], 'main-page-select2-js')
-					+e.toggle-box.toggle-box-js
-						+e.content
-							p Вы собираетесь устроиться на работу, но не знаете как? А может сама мысль о поиске вызывает у вас страх? С нашей площадкой поиск работы из рутинного занятия превращается в легкое приключение, ведь на нашем сайте представлено множество вакансий в городских больницах и медицинских центрах Москвы. Мы стараемся сделать все возможное, что бы вы смогли найти работу, которая будет приносить вам удовольствие, в кратчайшие сроки.
-							p На нашей площадке ежедневно публикуется множество свежих вакансий в больницах Москвы. Мы сотрудничаем с огромным количеством работодателей, благодаря чему соискателю на постоянной основе предлагается широчайший выбор позиций по поиску работы в различных медицинских учреждениях Москвы, от государственных больниц, до частных клиник.
-						+e.content.toggle-content-js
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
-						+b.toggle-txt-btn.toggle-btn-js
-							span Показать полностью
-							span Свернуть
+					if !data.notLogged
+						+b.pugin-row.row
+							.col
+								+b.pugination
+									ul.pagination
+										li.prev.disabled: span
+											+icon('chevron-left')
+										li.active: a(href="#") 1
+										li: a(href="#") 2
+										li: a(href="#") 3
+										li: a(href="#") ...
+										li: a(href="#") 5
+										li.next.disabled: a(href="#")
+											+icon('chevron-right')
+							.col-auto.d-none.d-md-block
+								+e.select-cont
+									+e.sel-title Показать по:
+									+customSlect('name', ['12', '24', '36'], 'main-page-select2-js')
+					if data.notLogged
+						+e.login.text-center
+							+e.l-ball-cont
+								+e.l-ball
+									img(loading="lazy" src='img/svg/padlock.svg' alt="")
+							+e.l-title Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
+							+e.l-descr После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
+							+e.l-row.row.justify-content-center
+								.col-md-auto
+									+e.l-btn--green(href='#') Авторизация
+								.col-md-auto
+									+e.l-btn--blue(href='#') Регистрация
+							+e.l-already
+								| Уже зарегистрированы и забыли пароль?
+								|
+								a(href="#") Восстановить доступ
+						+e.toggle-box.toggle-box-js
+							+e.content
+								p Вы собираетесь устроиться на работу, но не знаете как? А может сама мысль о поиске вызывает у вас страх? С нашей площадкой поиск работы из рутинного занятия превращается в легкое приключение, ведь на нашем сайте представлено множество вакансий в городских больницах и медицинских центрах Москвы. Мы стараемся сделать все возможное, что бы вы смогли найти работу, которая будет приносить вам удовольствие, в кратчайшие сроки.
+								p На нашей площадке ежедневно публикуется множество свежих вакансий в больницах Москвы. Мы сотрудничаем с огромным количеством работодателей, благодаря чему соискателю на постоянной основе предлагается широчайший выбор позиций по поиску работы в различных медицинских учреждениях Москвы, от государственных больниц, до частных клиник.
+							+e.content.toggle-content-js
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
+							+b.toggle-txt-btn.toggle-btn-js
+								span Показать полностью
+								span Свернуть
 				.col-lg-3
 					+sCatalogFilter()
 					+e.mob-catalog-btn.cat-filter-toggle-js.d-lg-none
@@ -302,7 +319,7 @@ mixin sCatalogItem(data)
 					.col-auto.d-none.d-md-block
 						+e.date 22 июля 2021, 19:19
 					.col-auto
-						+likeBtn()
+						+likeBtn('toggle-active-on-click-js')
 		if data.pillsRow
 			+e.pills-row.row
 				block
@@ -313,9 +330,9 @@ mixin sCatalogItem(data)
 		+e.btns-row.row.align-items-center
 			if data.defaultBtns
 				.col-auto
-					+e.btn--blue.link-modal(href='#modal-cface') Откликнуться
+					+e.btn--blue Откликнуться
 				.col-auto
-					+e.btn--gray(href='#') Позвонить
+					+e.btn--gray.link-modal(href='#modal-cface') Позвонить
 			if data.tealBtns
 				.col-auto
 					+e.btn--teal(href='#') Откликнуться
@@ -329,11 +346,11 @@ mixin sCatalogItem(data)
 					+e.s-link(href="superjob.ru" target="_blank") superjob.ru
 		+e.bot-row.row.align-items-end.align-items-xl-center
 			.col
-				+e.org-name=data.organization
+				+e.org-name(href='#')=data.organization
 				+e.city г. Москва
 			if data.logoImg
 				.col-auto
-					+e.logo
+					+e.logo(href='#')
 						img(loading="lazy" src=`img/@2x/sDayVac-${data.logoImg}.png` alt="")
 
 

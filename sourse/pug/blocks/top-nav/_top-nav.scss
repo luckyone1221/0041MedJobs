@@ -28,6 +28,8 @@
 		.top-nav__{}
 	}
 	&--new{
+
+		z-index: 100;
 		.top-nav__logo{
 			@include media-breakpoint-down(md){
 				width: 236px;
@@ -40,11 +42,28 @@
 		.top-nav__burger{
 			width: 36px;
 
+
 			@include media-breakpoint-down(md){
 				span,
 				span:before,
 				span:after{
 					height: 3px;
+				}
+
+				span:before{
+					top: -12px;
+				}
+				span:after{
+					top: 12px;
+				}
+			}
+
+			&.active{
+				span,
+				span:before,
+				span:after{
+					transform: none;
+					background-color: $gray-600;
 				}
 
 				span:before{

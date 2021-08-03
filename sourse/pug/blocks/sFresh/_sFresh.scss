@@ -104,7 +104,11 @@
 	}
 	&__descr{
 		font-size: 20px;
+		height: 90px;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		@include media-breakpoint-up(md){
+			height: auto;
 			font-size: 13.5px;
 		}
 
@@ -118,6 +122,12 @@
 		--bs-gutter-y: 12px;
 	}
 	&__org-name{
+		display: inline-block;
+		&:hover{
+			text-decoration: underline;
+		}
+		color: inherit!important;
+
 		font-weight: 500;
 
 		font-size: 20px;

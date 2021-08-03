@@ -28,6 +28,14 @@ html {
 html{
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
+
+	&.fixed{
+		padding-right: var(--scroll-width, 0);
+
+		.top-nav{
+			padding-right: var(--scroll-width, 0);
+		}
+	}
 }
 
 body {
@@ -1461,6 +1469,11 @@ h5{
 	background: $white;
 	border: 1px solid $gary-110;
 	box-shadow: 0px 5px 15px rgba(38, 39, 40, 0.15);
+
+	@include mt($sharp);
+	&.swiper-button-disabled{
+		opacity: 0!important;
+	}
 }
 
 .swiper-prev{

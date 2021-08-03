@@ -58,15 +58,15 @@ mixin sDayVacItem(data)
 			.mt-auto
 				+e.bot-row.row.align-items-end
 					.col
-						+e.org-name=data.organization
+						+e.org-name(href='#')=data.organization
 						+e.city г. Москва
 					if data.imgNum
 						.col-auto
-							+e.logo
+							+e.logo(href='#')
 								img(loading="lazy" src=`img/@2x/sDayVac-${data.imgNum}.png` alt="")
 
-mixin likeBtn()
-	//-add class 'active' manualy
-	+b.like-btn(href='#')
+mixin likeBtn(addClasses)
+	//- add class 'active' manualy
+	+b.like-btn(href='#' class=addClasses)
 		+icon('like')
 		+icon('like-fill')

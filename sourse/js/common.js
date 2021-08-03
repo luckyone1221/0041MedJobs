@@ -9,6 +9,7 @@ let div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
 div.style.height = '50px';
+
 // мы должны вставить элемент в документ, иначе размеры будут равны 0
 if (!isIE11) {
 	document.body.append(div);
@@ -17,6 +18,7 @@ let scrollWidth = div.offsetWidth - div.clientWidth;
 if (!isIE11) {
 	div.remove();
 }
+document.documentElement.style.setProperty('--scroll-width', `${scrollWidth}px`);
 
 const JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
@@ -46,12 +48,14 @@ const JSCCommon = {
 				},
 			},
 			beforeLoad: function () {
-				document.querySelector("html").classList.add("fixed")
+				document.querySelector("html").classList.add("fixed");
 			},
 			afterClose: function () {
-				document.querySelector("html").classList.remove("fixed")
+				document.querySelector("html").classList.remove("fixed");
 			},
 		});
+
+
 		$(".modal-close-js").click(function () {
 			$.fancybox.close();
 		})
@@ -804,6 +808,7 @@ function eventHandler() {
 
 	//045-main ++
 	let sTitleSlider = new Swiper('.sTitle-slider-js', {
+		watchOverflow: true,
 		slidesPerView: 'auto',
 		spaceBetween: 12,
 
@@ -831,7 +836,15 @@ function eventHandler() {
 	//
 	let sUsefullSlider = new Swiper('.sUsefull-slider-js', {
 		slidesPerView: 'auto',
-		spaceBetween: 24,
+
+		breakpoints: {
+			0: {
+				spaceBetween: 30,
+			},
+			768: {
+				spaceBetween: 24,
+			},
+		},
 
 		navigation: {
 			nextEl: '.swiper-next',
@@ -859,17 +872,22 @@ function eventHandler() {
 		//close all except this
 		$('.sCatalog-dd-head-js').each(function (){
 			if (thisHeader !== this){
-				$(this).removeClass('active').parent().find('.sCatalog-dd-content-js').slideUp(function () {
-					$(this).removeClass('active');
-				});
+				$(this).removeClass('active').parent().find('.sCatalog-dd-content-js').removeClass('active');
+				let currentHeader = this;
+
+				window.setTimeout(function (){
+					$(currentHeader).parent().find('.sCatalog-dd-content-js').removeClass('close-alt-effect');
+				}, 300);
 			}
 		});
 
 		//toggle this
 		$(this).toggleClass('active');
-		$(this.parentElement).find('.sCatalog-dd-content-js').slideToggle(function () {
-			$(this).toggleClass('active');
-		});
+		$(this.parentElement).find('.sCatalog-dd-content-js').toggleClass('active');
+		let currentHeader = this;
+		window.setTimeout(function (){
+			$(currentHeader).parent().find('.sCatalog-dd-content-js').addClass('close-alt-effect');
+		}, 300);
 
 		window.setTimeout(function (){
 			document.body.addEventListener('click', sCatalogDDMissClick);
@@ -881,11 +899,17 @@ function eventHandler() {
 		document.body.removeEventListener('click', sCatalogDDMissClick);
 
 		//close all
-		$('.sCatalog-dd-head-js').removeClass('active').parent().find('.sCatalog-dd-content-js').slideUp(function () {
-			$(this).removeClass('active');
+		$('.sCatalog-dd-head-js').each(function (){
+			$(this).removeClass('active').parent().find('.sCatalog-dd-content-js').removeClass('active');
+			let currentHeader = this;
+
+			window.setTimeout(function (){
+				$(currentHeader).parent().find('.sCatalog-dd-content-js').removeClass('close-alt-effect');
+			}, 300);
 		});
 	}
-	//
+
+	//radio txt into html
 	$('.sCatalog-dd-content-js input[type="radio"]').change(function (){
 		this.closest('.sCatalog-dd-js').querySelector('.sCatalog-dd-head-js').innerHTML = this.parentElement.querySelector('.txt-js').innerHTML;
 	});
@@ -904,18 +928,24 @@ function eventHandler() {
 		$('body').toggleClass('fixed4');
 	});
 
-	let sCatalogItems = document.querySelector('.sCatalog-js');
-	document.addEventListener('scroll', function (){
-		let scrollTop = window.scrollY;
-		let itemBottom = sCatalogItems.offsetHeight + getCoords(sCatalogItems).top;
 
-		if (scrollTop + document.documentElement.clientHeight > itemBottom) {
-			$('.cat-filter-toggle-js').removeClass('active');
-		}
-		else{
-			$('.cat-filter-toggle-js').addClass('active');
-		}
-	});
+	let sCatalogItems = document.querySelector('.sCatalog-js');
+	if (sCatalogItems){
+		document.addEventListener('scroll', function (){
+			let scrollTop = window.scrollY;
+			let itemBottom = sCatalogItems.offsetHeight + getCoords(sCatalogItems).top;
+
+			let scolledOverCatItems = scrollTop + document.documentElement.clientHeight > itemBottom;
+			let scolledTopCatItems = scrollTop + 60 > getCoords(sCatalogItems).top;
+
+			if (scolledOverCatItems && scolledTopCatItems) {
+				$('.cat-filter-toggle-js').removeClass('active');
+			}
+			else{
+				$('.cat-filter-toggle-js').addClass('active');
+			}
+		});
+	}
 	function getCoords(elem) { // crossbrowser version
 		var box = elem.getBoundingClientRect();
 
@@ -933,8 +963,10 @@ function eventHandler() {
 
 		return { top: Math.round(top), left: Math.round(left) };
 	}
-
-
+	//
+	$('.toggle-active-on-click-js').click(function (){
+		$(this).toggleClass('active');
+	})
 
 };
 if (document.readyState !== 'loading') {

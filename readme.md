@@ -76,3 +76,4 @@
 ========== 30.07.2021
 1. <https://luckyone1221.github.io/0041MedJobs/public/045-main.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/046-vacancy.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/046-vacancy-2.html>
