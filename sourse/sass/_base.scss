@@ -1,13 +1,5 @@
 .pixel-perfect {
 	top: 0;
-	//footer
-	//top: 477px;
-	//lg baner
-	//top: -38px;
-	//md baner
-	//top: 73px;
-	//down md baner
-	//top: 94px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;

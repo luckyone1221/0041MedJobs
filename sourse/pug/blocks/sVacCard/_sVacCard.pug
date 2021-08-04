@@ -1,0 +1,158 @@
+mixin sVacCard(data)
+	// start sVacCard
+	+b.SECTION.sVacCard.section#sVacCard&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-9
+					.d-none.d-md-block
+						+breadcrumb('Главная', 'Вакансии', 'Врач-стоматолог-ортопед (хирург)')
+					+b.section-title
+						+e.row.row
+							.col
+								h1 Врач-стоматолог-ортопед (хирург)
+							.col-auto
+								+likeBtn()
+					+e.gray Вакансия подходит для: врач-стоматолог, стоматолог, ортопед, врач-хирург, детский врач-хирург
+					+e.salary
+						span от 30 000 до 50 000
+						span.f-mono.ms-1 ₽
+					+e.short-info Комсомольск-на-Амуре, Полный рабочий день, Опыт работы от 3 лет
+					+e.pills-cont
+						+b.cat-pills
+							+e.row.row
+								+sCatalogItemPill('#EFF2F6', 'Будьте первыми')(class="d-none d-md-block")
+								+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+								+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+								+sCatalogItemPill('#edfbf3', 'Жилье', 4)(class="d-none d-md-block")
+								.col-12.m-0.d-none.d-md-block.d-lg-none
+								+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
+								+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
+					+e.mob-descr.d-lg-none
+						+e.m-row.row
+							.col
+								+e.m-title ООО Лаборатория Гемотест
+								+e.m-city г. Москва
+								+e.m-vac-am 3 вакасии
+							.col-auto
+								+e.m-logo
+									img(loading="lazy" src="img/@2x/m-logo.png" alt="")
+					+e.sub-title Описание вакансии
+					+e.content
+						h6 Требования:
+						ul
+							li
+								| опыт работы по специальности
+								|
+								br.d-md-none
+								| врачом-стоматологом-терапевтом от 5-ти лет
+							li наличие действующего сертификата по "стоматологии терапевтической"
+							li владение современными методами лечения
+							li опыт работы с ассистентом в "четыре руки"
+						h6 Обязанности:
+						ul
+							li оказание квалифицированной помощи по своей специальности
+							li оформление медицинской документации
+						h6 Условия:
+						ul
+							li гибкий график работы
+							li стабильная запись
+							li конкурентоспособная заработная плата
+							li возможность повышения квалификации
+							li предоставление скидок на услуги компании для сотрудников и их родственников
+							li оформление в соответствии с ТК РФ
+					+e.sub-title Расположение на карте
+					+e.map
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abaf97ca96139f9956b88ed7aac2976d42a1a2aeb468a7bbd75691bc10129a4f7&amp;width=1275&amp;height=332&amp;lang=ru_RU&amp;scroll=false"></script>
+					+e.date Вакансия опубликована: 22 июля 2021, 19:19
+					+e.mob-descr--like.d-lg-none
+						+e.m-row.row.align-items-center
+							.col
+								+e.like-btn.toggle-active-on-click-js(href='#')
+									+e.icon-cont
+										+icon('like')
+										+icon('like-fill')
+									+e.like-txt.d-lg-none.d-xl-inline Сохранить
+							+sVacCardBtn('share', 'Поделиться')
+							+sVacCardBtn('sad', 'Пожаловаться')
+					+e.familiar-wrap.sVacCard-familiar-js
+						+e.f-title Похожие вакансии
+						+e.familiar
+							+sCatalogItem({
+								title: 'Врач стоматолог-терапевт-хирург',
+								salary: '30 000-35 000',
+								defaultBtns: true,
+								pillsRow: true,
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+								logoImg: 2,
+							})
+								+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+								+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+								+sCatalogItemPill('#edfbf3', 'Жилье', 4)
+								+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
+							+sCatalogItem({
+								addClasses: 'blue-card',
+								title: 'Архивариус',
+								salary: '50 000',
+								defaultBtns: true,
+								organization: 'БУДЬ ЗДОРОВ, Клиника',
+								logoImg: '4',
+							})
+							+sCatalogItem({
+								title: 'Медицинская сестра',
+								salary: '30 000-35 000',
+								defaultBtns: false,
+								serviceBlock: true,
+								organization: 'МРЦ Беляево (Центр Дикуля)',
+								logoImg: '4',
+							})
+							+sCatalogItem({
+								title: 'Врач рентгенолог КТ',
+								salary: '50 000',
+								defaultBtns: true,
+								pillsRow: true,
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+							})
+								+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+							+b.card-baner
+								+e.row.row.align-items-center
+									+e.txt-col.col-md-auto
+										+e.title Оцените организацию в которой работали
+										+e.txt Компания Medicjobs гарантирует полную приватность ваших оценок. Они никогда не будут показаны третьим лицам, кроме как в анонимной или агрегированной с другими данными форме.
+										+e.btn(href='#') Пройти опрос
+									.col-md
+										+e.img
+											img(loading="lazy" src="img/svg/sTell-img2.svg" alt="")
+				+e.aside-col.col-lg-3.d-none.d-lg-block
+					+e.aside-box.text-center
+						+e.a-logo
+							img(loading="lazy" src="img/@2x/aside-box-logo.png" alt="")
+						+e.top-content
+							+e.a-name ООО Лаборатория Гемотест
+							+e.a-city г. Москва
+							+e.a-vac-amount 3 вакасии
+						+e.a-btns
+							+e.a-btn--blue(href="#") Откликнуться
+							+e.a-btn--gray(href="#") Позвонить
+						+e.foot-row.row.align-items-center
+							.col
+								+e.like-btn.toggle-active-on-click-js(href='#')
+									+e.icon-cont
+										+icon('like')
+										+icon('like-fill')
+									+e.like-txt.d-lg-none.d-xl-inline Сохранить
+							+sVacCardBtn('print', 'Распечатать')
+							+sVacCardBtn('share', 'Поделиться')
+							+sVacCardBtn('sad', 'Пожаловаться')
+			+e.fixed-strip.sVacCard-fixed-strip-js
+				+e.fs-row.row
+					.col-6
+						+e.fs-btn--blue(href='#') Откликнуться
+					.col-6
+						+e.fs-btn--gray(href='#') Позвонить
+	// end sVacCard
+
+mixin sVacCardBtn(iconName, hintTxt)
+	.col-auto
+		+e.r-btn(href="#")
+			+icon(iconName)
+			+e.r-hint=hintTxt

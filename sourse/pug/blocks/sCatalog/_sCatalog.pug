@@ -89,14 +89,14 @@ mixin sCatalog(data)
 							serviceBlock: true,
 							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
 						})
-						+e.baner
-							+e.b-row.row.align-items-center
-								+e.b-txt-col.col-md-auto
-									+e.b-title Расскажите о&#160;своей зарплате
-									+e.b-txt Мы в MedicJobs составляем актуальный рейтинг заработных плат на рынке труда в медицине.
-									+e.b-btn(href='#') Пройти опрос
+						+b.card-baner
+							+e.row.row.align-items-center
+								+e.txt-col.col-md-auto
+									+e.title Расскажите о&#160;своей зарплате
+									+e.txt Мы в MedicJobs составляем актуальный рейтинг заработных плат на рынке труда в медицине.
+									+e.btn(href='#') Пройти опрос
 								.col-md
-									+e.b-img
+									+e.img
 										img(loading="lazy" src="img/svg/sTell-img.svg" alt="")
 						+sCatalogItem({
 							title: 'Медицинская сестра',
@@ -321,8 +321,9 @@ mixin sCatalogItem(data)
 					.col-auto
 						+likeBtn('toggle-active-on-click-js')
 		if data.pillsRow
-			+e.pills-row.row
-				block
+			+b.cat-pills
+				+e.row.row
+					block
 		if data.descr
 			+e.descr=data.descr
 		else
@@ -355,7 +356,7 @@ mixin sCatalogItem(data)
 
 
 mixin sCatalogItemPill(bgColor,txt, imgNum)
-	.col-auto
+	.col-auto&attributes(attributes)
 		+e.pill(style=`background: ${bgColor};`)
 			if imgNum
 				+e.p-img

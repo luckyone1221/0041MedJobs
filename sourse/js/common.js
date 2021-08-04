@@ -172,7 +172,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = '046-992.png';
+	screenName = '047-576.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -967,6 +967,27 @@ function eventHandler() {
 	$('.toggle-active-on-click-js').click(function (){
 		$(this).toggleClass('active');
 	})
+
+	//
+	let sVacCardStrip = document.querySelector('.sVacCard-fixed-strip-js');
+	let FamiliarItems = document.querySelector('.sVacCard-familiar-js');
+	if (sVacCardStrip && FamiliarItems){
+		console.log('ok');
+
+		document.addEventListener('scroll', function (){
+			let scrollTop = window.scrollY;
+			let FamiliarTop = getCoords(FamiliarItems).top;
+
+			let scolledOverFamiliar = scrollTop + document.documentElement.clientHeight > FamiliarTop;
+
+			if (scolledOverFamiliar) {
+				$(sVacCardStrip).removeClass('active');
+			}
+			else{
+				$(sVacCardStrip).addClass('active');
+			}
+		});
+	}
 
 };
 if (document.readyState !== 'loading') {
