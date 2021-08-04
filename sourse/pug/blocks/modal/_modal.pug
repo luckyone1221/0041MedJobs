@@ -39,6 +39,21 @@ mixin modal()
 			| Уже зарегистрированы и забыли пароль?
 			|
 			a(href="#") Восстановить доступ
+	//-
+	+b.modal-complain.modal-win(id="modal-complain" style="display: none")
+		+e.title.text-center Укажите причину жалобы
+		+e.radio-items
+			+customRadioDulpicate('Вакансия закрыта / не существует','complain')(checked)
+			+customRadioDulpicate('Условия не соответствуют действительности','complain')
+			+customRadioDulpicate('Мошенничество','complain')
+			+customRadioDulpicate('Вакансия содержит дискриминационные требования','complain')
+			+customRadioDulpicate('Другое','complain')
+		+e.row.row.align-items-center.justify-content-center
+			.col-md-auto
+				+e.btn--blue(href="#") Отправить
+			.col-md-auto
+				+e.btn--gray.modal-close-js(href="#") Отменить
+	//
 	+b.modal-cface.text-center.modal-win(id="modal-cface" class=" " style="display: none")
 		+e.face-txt Контактное лицо:
 		+e.name Константин Константинович Константинопольский
@@ -48,8 +63,6 @@ mixin modal()
 		+e.shedule-txt Режим работы:
 		+e.shedule-val пн-пт: 8:00—22:00, сб-вс: выходной
 		+e.footer Скажите, что нашли вакансию на сайте MedicJobs.ru
-
-
 	//end 045++
 	+b.modal-city.modal-win(id="modal-city" class=" " style="display: none" )
 		+e.title Выберите город
@@ -632,7 +645,7 @@ mixin multipleSelect2(selectName, optionsArr=['Супер длинное так�
 			- for (let item of optionsArr)
 				option(value=item)=item
 
-mixin customRadioDulpicate(txt, name, val)
+mixin customRadioDulpicate(txt, name, val=txt)
 	+b.LABEL.custom-radio
 		input(type="radio" class="invisible" name=name value=val)&attributes(attributes)
 		span.circle

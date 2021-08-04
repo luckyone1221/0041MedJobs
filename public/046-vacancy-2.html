@@ -637,22 +637,22 @@
 									</div>
 								</div>
 							</div>
-							<div class="sCatalog__login text-center">
-								<div class="sCatalog__l-ball-cont">
-									<div class="sCatalog__l-ball"><img loading="lazy" src="img/svg/padlock.svg" alt=""/>
+							<div class="login-baner text-center">
+								<div class="login-baner__ball-cont">
+									<div class="login-baner__ball"><img loading="lazy" src="img/svg/padlock.svg" alt=""/>
 									</div>
 								</div>
-								<div class="sCatalog__l-title">Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
+								<div class="login-baner__title">Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
 								</div>
-								<div class="sCatalog__l-descr">После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
+								<div class="login-baner__descr">После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
 								</div>
-								<div class="sCatalog__l-row row justify-content-center">
-									<div class="col-md-auto"><a class="sCatalog__l-btn sCatalog__l-btn--green" href="#">Авторизация</a>
+								<div class="login-baner__row row justify-content-center">
+									<div class="col-md-auto"><a class="login-baner__btn login-baner__btn--green" href="#">Авторизация</a>
 									</div>
-									<div class="col-md-auto"><a class="sCatalog__l-btn sCatalog__l-btn--blue" href="#">Регистрация</a>
+									<div class="col-md-auto"><a class="login-baner__btn login-baner__btn--blue" href="#">Регистрация</a>
 									</div>
 								</div>
-								<div class="sCatalog__l-already">
+								<div class="login-baner__already">
 									Уже зарегистрированы и забыли пароль?
 									<a href="#">Восстановить доступ</a>
 								</div>
@@ -1205,6 +1205,34 @@
 				<a href="#">Восстановить доступ</a>
 			</div>
 		</div>
+		<div class="modal-complain modal-win" id="modal-complain" style="display: none">
+			<div class="modal-complain__title text-center">Укажите причину жалобы
+			</div>
+			<div class="modal-complain__radio-items">
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Вакансия закрыта / не существует" checked="checked"/><span class="circle"></span><span class="txt">Вакансия закрыта / не существует</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Условия не соответствуют действительности"/><span class="circle"></span><span class="txt">Условия не соответствуют действительности</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Мошенничество"/><span class="circle"></span><span class="txt">Мошенничество</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Вакансия содержит дискриминационные требования"/><span class="circle"></span><span class="txt">Вакансия содержит дискриминационные требования</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Другое"/><span class="circle"></span><span class="txt">Другое</span>
+				</label>
+			</div>
+			<div class="modal-complain__row row align-items-center justify-content-center">
+				<div class="col-md-auto"><a class="modal-complain__btn modal-complain__btn--blue" href="#">Отправить</a>
+				</div>
+				<div class="col-md-auto"><a class="modal-complain__btn modal-complain__btn--gray modal-close-js" href="#">Отменить</a>
+				</div>
+			</div>
+		</div>
+		<!---->
 		<div class="modal-cface text-center modal-win" id="modal-cface" style="display: none">
 			<div class="modal-cface__face-txt">Контактное лицо:
 			</div>

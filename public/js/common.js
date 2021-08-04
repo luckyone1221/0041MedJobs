@@ -175,7 +175,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '047-576.png';
+	screenName = '047-3-992.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -849,6 +849,7 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	}); //.sCatalog-dd
+	//using this twice in sCatalog
 
 	$('.sCatalog-dd-head-js').click(function () {
 		document.body.removeEventListener('click', sCatalogDDMissClick);

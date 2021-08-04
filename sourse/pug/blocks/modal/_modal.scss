@@ -1011,3 +1011,91 @@
 	&__{}
 	&__{}
 }
+//
+
+.modal-complain{
+	&__title{
+    font-weight: 600;
+    font-size: 30px;
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+		}
+
+		margin-bottom: 24px;
+  }
+
+	&__radio-items{
+		padding-bottom: 24px;
+
+		.custom-radio{
+			margin-bottom: 12px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 18px;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			align-items: flex-start!important;
+
+			.circle{
+				width: 30px;
+				height: 30px;
+				margin-right: 12px;
+				@include media-breakpoint-up(md){
+					width: 24px;
+					height: 24px;
+					margin-right: 6px;
+				}
+
+				&:after{
+					top: 50%;
+					left: 50%;
+					transform: translateY(-50%) translateX(-50%);
+
+					width: 18px;
+					height: 18px;
+					@include media-breakpoint-up(md){
+						width: 12px;
+						height: 12px;
+					}
+				}
+			}
+			.txt{
+				line-height: (30/24);
+				@include media-breakpoint-up(md){
+					line-height: (24/16);
+				}
+				font-size: inherit;
+			}
+		}
+
+
+	}
+	&__row{
+		--bs-gutter-x: 20px;
+		--bs-gutter-y: 12px;
+	}
+	&__btn{
+		@extend .btn;
+
+		min-width: 100%;
+		@include media-breakpoint-up(md){
+			min-width: 196px;
+		}
+		padding: 15px 24px;
+
+		&--blue{
+			@extend .btn-primary;
+			color: $white!important;
+			font-weight: 700;
+		}
+		&--gray{
+			@extend .btn-light;
+
+		}
+	}
+	//
+	&__{}
+	&__{}
+}

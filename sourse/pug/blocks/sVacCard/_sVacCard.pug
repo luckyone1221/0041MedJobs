@@ -4,31 +4,41 @@ mixin sVacCard(data)
 		.container
 			+e.row.row
 				.col-lg-9
-					.d-none.d-md-block
-						+breadcrumb('Главная', 'Вакансии', 'Врач-стоматолог-ортопед (хирург)')
-					+b.section-title
-						+e.row.row
-							.col
+					+e.top-row.row
+						.col
+							.d-none.d-md-block
+								+breadcrumb('Главная', 'Вакансии', 'Врач-стоматолог-ортопед (хирург)')
+							+b.section-title
 								h1 Врач-стоматолог-ортопед (хирург)
-							.col-auto
-								+likeBtn()
-					+e.gray Вакансия подходит для: врач-стоматолог, стоматолог, ортопед, врач-хирург, детский врач-хирург
+						+e.top-like-col.col-auto.d-lg-none
+							+likeBtn()
+					if data.gray
+						+e.gray Вакансия подходит для: врач-стоматолог, стоматолог, ортопед, врач-хирург, детский врач-хирург
 					+e.salary
 						span от 30 000 до 50 000
 						span.f-mono.ms-1 ₽
-					+e.short-info Комсомольск-на-Амуре, Полный рабочий день, Опыт работы от 3 лет
-					+e.pills-cont
-						+b.cat-pills
-							+e.row.row
-								+sCatalogItemPill('#EFF2F6', 'Будьте первыми')(class="d-none d-md-block")
-								+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
-								+sCatalogItemPill('#feefe9', 'Covid-19', 1)
-								+sCatalogItemPill('#edfbf3', 'Жилье', 4)(class="d-none d-md-block")
-								.col-12.m-0.d-none.d-md-block.d-lg-none
-								+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
-								+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
+					+e.short-info(class=data.shortInfoClasses) Комсомольск-на-Амуре, Полный рабочий день, Опыт работы от 3 лет
+					if data.pillsRow
+						+e.pills-cont
+							+b.cat-pills
+								+e.row.row
+									+sCatalogItemPill('#EFF2F6', 'Будьте первыми')(class="d-none d-md-block")
+									+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+									+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+									+sCatalogItemPill('#edfbf3', 'Жилье', 4)(class="d-none d-md-block")
+									.col-12.m-0.d-none.d-md-block.d-lg-none
+									+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
+									+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
+					if data.pillsRowAlt
+						+e.pills-cont
+							+b.cat-pills
+								+e.row.row
+									+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+									+sCatalogItemPill('#edfbf3', 'Соцпакет', 4)
+									+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
+					//if data.notAuthorized
 					+e.mob-descr.d-lg-none
-						+e.m-row.row
+						+e.m-row.row.align-items-center
 							.col
 								+e.m-title ООО Лаборатория Гемотест
 								+e.m-city г. Москва
@@ -60,9 +70,12 @@ mixin sVacCard(data)
 							li возможность повышения квалификации
 							li предоставление скидок на услуги компании для сотрудников и их родственников
 							li оформление в соответствии с ТК РФ
-					+e.sub-title Расположение на карте
-					+e.map
-						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abaf97ca96139f9956b88ed7aac2976d42a1a2aeb468a7bbd75691bc10129a4f7&amp;width=1275&amp;height=332&amp;lang=ru_RU&amp;scroll=false"></script>
+					if data.loginBaner
+						+loginBaner()
+					if data.map
+						+e.sub-title Расположение на карте
+						+e.map
+							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abaf97ca96139f9956b88ed7aac2976d42a1a2aeb468a7bbd75691bc10129a4f7&amp;width=1275&amp;height=332&amp;lang=ru_RU&amp;scroll=false"></script>
 					+e.date Вакансия опубликована: 22 июля 2021, 19:19
 					+e.mob-descr--like.d-lg-none
 						+e.m-row.row.align-items-center
@@ -72,8 +85,8 @@ mixin sVacCard(data)
 										+icon('like')
 										+icon('like-fill')
 									+e.like-txt.d-lg-none.d-xl-inline Сохранить
-							+sVacCardBtn('share', 'Поделиться')
-							+sVacCardBtn('sad', 'Пожаловаться')
+							+sVacCardShareDDCont()
+							+sVacCardBtn('sad', 'Пожаловаться', 'link-modal', '#modal-complain')
 					+e.familiar-wrap.sVacCard-familiar-js
 						+e.f-title Похожие вакансии
 						+e.familiar
@@ -131,8 +144,19 @@ mixin sVacCard(data)
 							+e.a-city г. Москва
 							+e.a-vac-amount 3 вакасии
 						+e.a-btns
-							+e.a-btn--blue(href="#") Откликнуться
-							+e.a-btn--gray(href="#") Позвонить
+							if !data.sourceAlt
+								+e.a-btn--blue(href="#") Откликнуться
+								+e.a-btn--gray(href="#") Позвонить
+							else
+								+e.a-btn--gray(href="#")
+									span
+										| Перейти
+										|
+									span.d-none.d-xl-inline на источник
+								+e.a-src
+									| Вакансия предоставлена сервисом
+									|
+									a(href="#" target="_blank") superjob.ru
 						+e.foot-row.row.align-items-center
 							.col
 								+e.like-btn.toggle-active-on-click-js(href='#')
@@ -141,18 +165,56 @@ mixin sVacCard(data)
 										+icon('like-fill')
 									+e.like-txt.d-lg-none.d-xl-inline Сохранить
 							+sVacCardBtn('print', 'Распечатать')
-							+sVacCardBtn('share', 'Поделиться')
-							+sVacCardBtn('sad', 'Пожаловаться')
-			+e.fixed-strip.sVacCard-fixed-strip-js
-				+e.fs-row.row
-					.col-6
-						+e.fs-btn--blue(href='#') Откликнуться
-					.col-6
-						+e.fs-btn--gray(href='#') Позвонить
+							+sVacCardShareDDCont()
+							+sVacCardBtn('sad', 'Пожаловаться', 'link-modal', '#modal-complain')
+			+e.fixed-strip.sVacCard-fixed-strip-js.d-lg-none
+				if !data.sourceAlt
+					+e.fs-row.row
+						.col-6
+							+e.fs-btn--blue(href='#') Откликнуться
+						.col-6
+							+e.fs-btn--gray(href='#') Позвонить
+				else
+					+e.fs-row.row.align-items-center
+						.col-6
+							+e.fs-btn--gray(href='#')
+								span
+									| Перейти
+									|
+								span.d-none.d-md-inline на источник
+						.col-6
+							+e.fs-source
+								| Вакансия предоставлена сервисом
+								|
+								a(href="#" target="_blank") superjob.ru
 	// end sVacCard
 
-mixin sVacCardBtn(iconName, hintTxt)
+mixin sVacCardShareDDCont()
+	+e.r-btn-col.col-auto
+		+e.r-btn.sCatalog-dd-head-js
+			+icon('share')
+			+e.r-hint Поделиться
+		+sVacCardShareDD()
+
+mixin sVacCardShareDD()
+	+b.share-dd.sCatalog-dd-content-js
+		+sVacCardShareDDItem('tg', 'Telegram')
+		+sVacCardShareDDItem('fb', 'Facebook')
+		+sVacCardShareDDItem('vk', 'Vkontakte')
+		+sVacCardShareDDItem('tw', 'Twitter')
+		+sVacCardShareDDItem('ok', 'Одноклассники')
+		+sVacCardShareDDItem('copy-link', 'Скопировать ссылку')
+
+mixin sVacCardShareDDItem(iconName, txt)
+	+e.dd-item(href="#")
+		+e.dd-icon
+			img(loading="lazy" src=`img/svg/share-${iconName}.svg` alt="")
+		+e.dd-txt=txt
+
+
+mixin sVacCardBtn(iconName, hintTxt, addClasses, linkHref="#")
 	.col-auto
-		+e.r-btn(href="#")
+		+e.r-btn(href=linkHref class=addClasses)
 			+icon(iconName)
 			+e.r-hint=hintTxt
+			block

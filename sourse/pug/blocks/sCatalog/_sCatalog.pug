@@ -131,37 +131,40 @@ mixin sCatalog(data)
 									+e.sel-title Показать по:
 									+customSlect('name', ['12', '24', '36'], 'main-page-select2-js')
 					if data.notLogged
-						+e.login.text-center
-							+e.l-ball-cont
-								+e.l-ball
-									img(loading="lazy" src='img/svg/padlock.svg' alt="")
-							+e.l-title Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
-							+e.l-descr После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
-							+e.l-row.row.justify-content-center
-								.col-md-auto
-									+e.l-btn--green(href='#') Авторизация
-								.col-md-auto
-									+e.l-btn--blue(href='#') Регистрация
-							+e.l-already
-								| Уже зарегистрированы и забыли пароль?
-								|
-								a(href="#") Восстановить доступ
-						+e.toggle-box.toggle-box-js
-							+e.content
-								p Вы собираетесь устроиться на работу, но не знаете как? А может сама мысль о поиске вызывает у вас страх? С нашей площадкой поиск работы из рутинного занятия превращается в легкое приключение, ведь на нашем сайте представлено множество вакансий в городских больницах и медицинских центрах Москвы. Мы стараемся сделать все возможное, что бы вы смогли найти работу, которая будет приносить вам удовольствие, в кратчайшие сроки.
-								p На нашей площадке ежедневно публикуется множество свежих вакансий в больницах Москвы. Мы сотрудничаем с огромным количеством работодателей, благодаря чему соискателю на постоянной основе предлагается широчайший выбор позиций по поиску работы в различных медицинских учреждениях Москвы, от государственных больниц, до частных клиник.
-							+e.content.toggle-content-js
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
-							+b.toggle-txt-btn.toggle-btn-js
-								span Показать полностью
-								span Свернуть
+						+loginBaner()
+					+e.toggle-box.toggle-box-js
+						+e.content
+							p Вы собираетесь устроиться на работу, но не знаете как? А может сама мысль о поиске вызывает у вас страх? С нашей площадкой поиск работы из рутинного занятия превращается в легкое приключение, ведь на нашем сайте представлено множество вакансий в городских больницах и медицинских центрах Москвы. Мы стараемся сделать все возможное, что бы вы смогли найти работу, которая будет приносить вам удовольствие, в кратчайшие сроки.
+							p На нашей площадке ежедневно публикуется множество свежих вакансий в больницах Москвы. Мы сотрудничаем с огромным количеством работодателей, благодаря чему соискателю на постоянной основе предлагается широчайший выбор позиций по поиску работы в различных медицинских учреждениях Москвы, от государственных больниц, до частных клиник.
+						+e.content.toggle-content-js
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?
+						+b.toggle-txt-btn.toggle-btn-js
+							span Показать полностью
+							span Свернуть
 				.col-lg-3
 					+sCatalogFilter()
 					+e.mob-catalog-btn.cat-filter-toggle-js.d-lg-none
 						+icon('filter')
 						span Быстрые фильтры
 	// end sCatalog
+
+mixin loginBaner()
+	+b.login-baner.text-center
+		+e.ball-cont
+			+e.ball
+				img(loading="lazy" src='img/svg/padlock.svg' alt="")
+		+e.title Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
+		+e.descr После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
+		+e.row.row.justify-content-center
+			.col-md-auto
+				+e.btn--green(href='#') Авторизация
+			.col-md-auto
+				+e.btn--blue(href='#') Регистрация
+		+e.already
+			| Уже зарегистрированы и забыли пароль?
+			|
+			a(href="#") Восстановить доступ
 
 mixin sCatalogFilter()
 	+b.cat-filter--js
