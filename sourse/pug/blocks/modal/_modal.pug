@@ -25,7 +25,7 @@ mixin modal()
 				+e.i-title Email:
 				+e.link(href="mailto:konstantinopolskaya1616@gmail.com") konstantinopolskaya1616@gmail.com
 	//045++
-	+b.modal-login.text-center.modal-win(id="modal-login" class=" " style="display: none")
+	+b.modal-login.modal-new.text-center.modal-win(id="modal-login" class=" " style="display: none")
 		+e.ball
 			img(loading="lazy" src='img/svg/padlock.svg' alt="")
 		+e.title Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
@@ -40,7 +40,7 @@ mixin modal()
 			|
 			a(href="#") Восстановить доступ
 	//-
-	+b.modal-complain.modal-win(id="modal-complain" style="display: none")
+	+b.modal-complain.modal-new.modal-win(id="modal-complain" style="display: none")
 		+e.title.text-center Укажите причину жалобы
 		+e.radio-items
 			+customRadioDulpicate('Вакансия закрыта / не существует','complain')(checked)
@@ -54,7 +54,7 @@ mixin modal()
 			.col-md-auto
 				+e.btn--gray.modal-close-js(href="#") Отменить
 	//
-	+b.modal-cface.text-center.modal-win(id="modal-cface" class=" " style="display: none")
+	+b.modal-cface.modal-new.text-center.modal-win(id="modal-cface" class=" " style="display: none")
 		+e.face-txt Контактное лицо:
 		+e.name Константин Константинович Константинопольский
 		+e.duty Главный врач

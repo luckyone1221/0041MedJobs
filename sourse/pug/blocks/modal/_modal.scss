@@ -23,6 +23,18 @@
 			display: none;
 		}
 	}
+
+	&.modal-new{
+		.fancybox-button.fancybox-close-small{
+			@include media-breakpoint-down(md){
+				width: 30px!important;
+				height: 30px!important;
+
+				top: 30px!important;
+				right: 30px!important;
+			}
+		}
+	}
 }
 
 //

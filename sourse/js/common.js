@@ -243,7 +243,7 @@ function eventHandler() {
 	//accordion
 	$('.dd-head-js').click(function (){
 		$(this.parentElement).toggleClass('active');
-		$(this.parentElement).find('.dd-content-js').slideToggle(250,function (){
+		$(this.parentElement).find('.dd-content-js').slideToggle(450,function (){
 			$(this).toggleClass('active');
 		});
 	});
@@ -251,7 +251,7 @@ function eventHandler() {
 	//filter dd
 	$('.f-btn-js').click(function (){
 		$(this).toggleClass('active');
-		$('.filter--js').slideToggle(250,function (){
+		$('.filter--js').slideToggle(450,function (){
 			$(this).toggleClass('active');
 		});
 	});
@@ -896,7 +896,7 @@ function eventHandler() {
 	})
 
 	function sCatalogDDMissClick() {
-		if (event.target.closest('.sCatalog-dd-content-js')) return
+		//if (event.target.closest('.sCatalog-dd-content-js')) return
 		document.body.removeEventListener('click', sCatalogDDMissClick);
 
 		//close all

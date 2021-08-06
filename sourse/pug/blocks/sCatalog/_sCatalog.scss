@@ -407,6 +407,7 @@
 	}
 	&__title{
 		display: inline-block;
+
 		font-weight: 600;
 		margin-bottom: 4px;
 		@include media-breakpoint-up(md){
@@ -416,7 +417,9 @@
 
 		color: $headings-color;
 		&:hover{
-			color: $primary;
+			color: $headings-color;
+			text-decoration: underline;
+			//color: $primary;
 		}
 	}
 	&__salary{
@@ -489,23 +492,24 @@
 			@extend .btn-white;
 		}
 	}
+	//
+	&__s-col{
+		font-size: 16px;
+		@include media-breakpoint-up(md){
+			font-size: 12px;
+		}
+	}
 	&__s-gray{
-		font-size: 12px;
 		color: $gray-600;
+		@include media-breakpoint-down(md){
+			display: inline;
+		}
 	}
 	&__s-link{
 		display: inline-block;
 		color: $green4;
 		&:hover{
 			color: $green4;
-		}
-
-		font-size: 20px;
-		@include media-breakpoint-up(md){
-			font-size: 14px;
-		}
-		@include media-breakpoint-up(lg){
-			font-size: 16px;
 		}
 	}
 	//
@@ -574,7 +578,7 @@
 
 		left: 0;
 		width: 100%;
-		height: calc(100vh - var(--header-h));
+		height: calc(var(--vh, 1vh) * 100 - var(--header-h));
 		overflow-y: auto;
 
 		top: calc(120vh);
@@ -714,6 +718,8 @@
 
 	}
 	&__discard{
+		cursor: pointer;
+
 		font-size: 20px;
 		@include media-breakpoint-up(md){
 			font-size: 14px;
@@ -721,6 +727,12 @@
 		line-height: (16/14);
 
 		color: $gray-600;
+		text-decoration: none;
+		&:hover{
+			color: $gray-600;
+			//color: $primary;
+			text-decoration: underline;
+		}
 	}
 	&__body{}
 	//
@@ -784,9 +796,15 @@
 			@include mt();
 			transform: rotateX(var(--chevron-tf, 180deg));
 			content: '';
-			width: 10px;
-			height: 10px;
-			margin-left: 10px;
+
+			width: 18px;
+			height: 18px;
+			margin-left: 12px;
+			@include media-breakpoint-up(md){
+				width: 10px;
+				height: 10px;
+				margin-left: 10px;
+			}
 
 			background-image: url(../img/svg/chevron-down-gray.svg);
 			background-position: center;
@@ -901,8 +919,12 @@
 			transform: translateY(-50%);
 			right: 10px;
 
-			width: 10px;
-			height: 10px;
+			width: 18px;
+			height: 18px;
+			@include media-breakpoint-up(md){
+				width: 10px;
+				height: 10px;
+			}
 
 			background-image: url(../img/svg/cross-gray.svg);
 			background-repeat: no-repeat;

@@ -182,7 +182,7 @@ mixin sCatalogFilter()
 					.col
 						+e.f-txt Фильтр
 					.col-auto
-						+e.discard Сбросить
+						+e.discard(href="#") Сбросить
 			+e.body
 				+sCatalogFilterItem('Регион для поиска')
 					+e.chb-items.chb-items-js
@@ -345,7 +345,7 @@ mixin sCatalogItem(data)
 			if data.serviceBlock
 				.col-auto
 					+e.btn--gray(href='#') Подробнее
-				.col-auto
+				+e.s-col.col
 					+e.s-gray Вакансия предоставлена сервисом
 					+e.s-link(href="superjob.ru" target="_blank") superjob.ru
 		+e.bot-row.row.align-items-end.align-items-xl-center
