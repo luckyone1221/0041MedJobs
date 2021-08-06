@@ -1062,6 +1062,10 @@ function eventHandler() {
 	window.setTimeout(function (){
 		document.body.style.opacity = '1';
 	}, 250);
+	//
+	$('input').each(function (){
+		this.setAttribute('autocomplete', 'off');
+	})
 
 };
 if (document.readyState !== 'loading') {
