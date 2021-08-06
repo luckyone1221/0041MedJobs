@@ -175,7 +175,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '047-3-992.png';
+	screenName = '047-576.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -911,12 +911,13 @@ function eventHandler() {
 			let scrollTop = window.scrollY;
 			let itemBottom = sCatalogItems.offsetHeight + getCoords(sCatalogItems).top;
 			let scolledOverCatItems = scrollTop + document.documentElement.clientHeight > itemBottom;
-			let scolledTopCatItems = scrollTop + 60 > getCoords(sCatalogItems).top;
+			let scolledTopCatItems = window.scrollY > getCoords(sCatalogItems).top;
+			console.log(scolledOverCatItems, scolledTopCatItems);
 
-			if (scolledOverCatItems && scolledTopCatItems) {
-				$('.cat-filter-toggle-js').removeClass('active');
-			} else {
+			if (scolledTopCatItems && !scolledOverCatItems) {
 				$('.cat-filter-toggle-js').addClass('active');
+			} else {
+				$('.cat-filter-toggle-js').removeClass('active');
 			}
 		});
 	}
@@ -978,7 +979,54 @@ function eventHandler() {
 		} else {
 			newSearchInput.setAttribute('placeholder', newSearchInput.getAttribute('data-placeholder-down-lg'));
 		}
-	}
+	} //
+	//yandex lazy
+	//fix here put into pug afterwards
+	// window.setTimeout(function (){
+	// 	let yandexScript = document.createElement('script');
+	// 	yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98');
+	// 	yandexScript.setAttribute('type', 'text/javascript');
+	//
+	// 	document.body.appendChild(yandexScript);
+	// 	console.log(yandexScript);
+	// 	window.setTimeout(function (){
+	// 		ymaps.ready(function () {
+	// 			var myMap = new ymaps.Map('map', {
+	// 					center: [59.938600861371185,30.213698854492115],
+	// 					zoom: 16
+	// 				}, {
+	// 					searchControlProvider: 'yandex#search'
+	// 				}),
+	//
+	// 				// Создаём макет содержимого.
+	// 				MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+	// 					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+	// 				),
+	//
+	// 				myPlacemark = new ymaps.Placemark([59.939338387243374,30.214020719573902], {
+	// 					hintContent: 'ООО Лаборатория Гемотест',
+	// 					balloonContent: 'г. Москва'
+	// 				}, {
+	// 					// Опции.
+	// 					// Необходимо указать данный тип макета.
+	// 					iconLayout: 'default#image',
+	// 					// Своё изображение иконки метки.
+	// 					iconImageHref: 'img/svg/blue-mark.svg',
+	// 					// Размеры метки.
+	// 					iconImageSize: [38.5, 55],
+	// 					// Смещение левого верхнего угла иконки относительно
+	// 					// её "ножки" (точки привязки).
+	// 					//iconImageOffset: [-5, -38]
+	// 					iconImageOffset: [30, -30]
+	// 				});
+	//
+	// 			myMap.geoObjects
+	// 				.add(myPlacemark);
+	// 		});
+	// 	}, 1000);
+	//
+	// }, 2000);
+
 }
 
 ;

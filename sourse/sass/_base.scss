@@ -1434,6 +1434,16 @@ h5{
 			}
 		}
 	}
+	.breadcrumb{
+		&-item{
+			&:not(:last-child) a{
+				color: $secondary;
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
+	}
 
 	.fancybox-bg{
 		background-color: rgba($headings-color, .4);

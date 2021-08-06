@@ -182,6 +182,13 @@
 		--bs-gutter-y: 20px;
 	}
 	&__m-title{
+		display: inline-block;
+		color: $body-color;
+		&:hover{
+			text-decoration: underline;
+			color: $body-color;
+		}
+
 		line-height: 1.5;
 
 		margin-bottom: 6px;
@@ -238,7 +245,11 @@
 		& > *:last-child{
 			margin-bottom: 0;
 		}
-		padding-bottom: 30px;
+
+		padding-bottom: 36px;
+		@include media-breakpoint-up(md){
+			padding-bottom: 30px;
+		}
 		@include media-breakpoint-up(xl){
 			padding-bottom: 36px;
 		}
@@ -248,7 +259,7 @@
 			font-size: inherit;
 			line-height: 1.25;
 
-			margin-bottom: 23px;
+			margin-bottom: 20px;
 			@include media-breakpoint-up(md){
 				margin-bottom: 12px;
 			}
@@ -256,7 +267,10 @@
 
 		ul{
 			list-style: none;
-			margin: 0 0 18px;
+			margin: 0 0 20px;
+			@include media-breakpoint-up(md){
+				margin: 0 0 18px;
+			}
 
 			li{
 				letter-spacing: -0.2px;
@@ -279,7 +293,7 @@
 					content: '';
 					position: absolute;
 
-					top: 21px;
+					top: 14px;
 					left: 15px;
 					width: 4px;
 					height: 4px;
@@ -419,10 +433,16 @@
 		padding-bottom: 20px;
 	}
 	&__a-name{
+		display: inline-block;
+		color: $headings-color;
+		&:hover{
+			color: $headings-color;
+			text-decoration: underline;
+		}
+
 		line-height: 1.5;
 
 		text-align: center;
-		color: $headings-color;
 		margin-bottom: 4px;
 	}
 	&__a-city{
@@ -548,6 +568,8 @@
 		z-index: 20;
 	}
 	&__r-btn{
+		cursor: pointer;
+
 		position: relative;
 		width: 50px;
 		height: 50px;
@@ -572,8 +594,10 @@
 		background-color: transparent;
 		&:hover{
 			background-color: $gray-100;
-			--r-hint-o: 1;
-			--r-hint-scale: 1;
+			@include media-breakpoint-up(xl){
+				--r-hint-o: 1;
+				--r-hint-scale: 1;
+			}
 		}
 
 		&.active{
@@ -675,6 +699,7 @@
 			}
 		}
 
+		margin-bottom: 30px;
 		@include media-breakpoint-up(xl){
 			margin-bottom: 37px;
 		}
@@ -689,8 +714,16 @@
 	position: absolute;
 	text-align: left;
 	z-index: 20;
+
 	right: calc(var(--bs-gutter-x) / 2);
 	bottom: calc(100% + 12px);
+	@include media-breakpoint-up(base){
+		left: calc(var(--bs-gutter-x) / 2);
+		top: calc(100% + 12px);
+		right: unset;
+		bottom: unset;
+	}
+
 	padding: 6px 0;
 
 	//

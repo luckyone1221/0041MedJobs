@@ -50,9 +50,14 @@
 
 		&:after{
 			content: '';
-			width: 10px;
-			height: 10px;
-			margin-left: 6px;
+			width: 14px;
+			height: 14px;
+			margin-left: 8px;
+			@include media-breakpoint-up(md){
+				width: 10px;
+				height: 10px;
+				margin-left: 6px;
+			}
 
 			background-image: url(../img/svg/chevron-down-sm.svg);
 			background-repeat: no-repeat;
@@ -92,7 +97,11 @@
 		}
 		max-width: 220px;
 
-		left: 0;
+		right: 0;
+		@include media-breakpoint-up(md){
+			left: 0;
+			right: unset;
+		}
 		top: calc(100% + 7px);
 		padding: 4px 0;
 
@@ -127,9 +136,15 @@
 				@include mt();
 				opacity: 0;
 				content: '';
-				width: 10px;
-				height: 10px;
-				margin-left: 6px;
+
+				width: 14px;
+				height: 14px;
+				margin-left: 8px;
+				@include media-breakpoint-up(md){
+					width: 10px;
+					height: 10px;
+					margin-left: 6px;
+				}
 
 				background-image: url(../img/svg/check-orange-sm.svg);
 				background-repeat: no-repeat;
@@ -255,6 +270,7 @@
 			line-height: (19/16);
 		}
 
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15)!important;
 		position: fixed;
 		z-index: 100;
 		left: 50%;

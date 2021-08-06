@@ -40,11 +40,11 @@ mixin sVacCard(data)
 					+e.mob-descr.d-lg-none
 						+e.m-row.row.align-items-center
 							.col
-								+e.m-title ООО Лаборатория Гемотест
+								+e.m-title(href="#") ООО Лаборатория Гемотест
 								+e.m-city г. Москва
 								+e.m-vac-am 3 вакасии
 							.col-auto
-								+e.m-logo
+								+e.m-logo(href='#')
 									img(loading="lazy" src="img/@2x/m-logo.png" alt="")
 					+e.sub-title Описание вакансии
 					+e.content
@@ -74,8 +74,53 @@ mixin sVacCard(data)
 						+loginBaner()
 					if data.map
 						+e.sub-title Расположение на карте
-						+e.map
-							<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abaf97ca96139f9956b88ed7aac2976d42a1a2aeb468a7bbd75691bc10129a4f7&amp;width=1275&amp;height=332&amp;lang=ru_RU&amp;scroll=false"></script>
+						+e.map#map
+							//-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abaf97ca96139f9956b88ed7aac2976d42a1a2aeb468a7bbd75691bc10129a4f7&amp;width=1275&amp;height=332&amp;lang=ru_RU&amp;scroll=false"></script>
+							script
+								| window.setTimeout(function (){
+								|    let yandexScript = document.createElement('script');
+								|    yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98');
+								|    yandexScript.setAttribute('type', 'text/javascript');
+								|
+								|    document.body.appendChild(yandexScript);
+								|    console.log(yandexScript);
+								|    window.setTimeout(function (){
+								|      ymaps.ready(function () {
+								|        var myMap = new ymaps.Map('map', {
+								|            center: [59.938600861371185,30.213698854492115],
+								|            zoom: 16
+								|          }, {
+								|            searchControlProvider: 'yandex#search'
+								|          }),
+								|
+								|          // Создаём макет содержимого.
+								|          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+								|            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+								|          ),
+								|
+								|          myPlacemark = new ymaps.Placemark([59.939338387243374,30.214020719573902], {
+								|            hintContent: 'ООО Лаборатория Гемотест',
+								|            balloonContent: 'г. Москва'
+								|          }, {
+								|            // Опции.
+								|            // Необходимо указать данный тип макета.
+								|            iconLayout: 'default#image',
+								|            // Своё изображение иконки метки.
+								|            iconImageHref: 'img/svg/blue-mark.svg',
+								|            // Размеры метки.
+								|            iconImageSize: [38.5, 55],
+								|            // Смещение левого верхнего угла иконки относительно
+								|            // её "ножки" (точки привязки).
+								|            //iconImageOffset: [-5, -38]
+								|            iconImageOffset: [30, -30]
+								|          });
+								|
+								|        myMap.geoObjects
+								|          .add(myPlacemark);
+								|      });
+								|    }, 1000);
+								|
+								|  }, 2000);
 					+e.date Вакансия опубликована: 22 июля 2021, 19:19
 					+e.mob-descr--like.d-lg-none
 						+e.m-row.row.align-items-center
@@ -137,10 +182,10 @@ mixin sVacCard(data)
 											img(loading="lazy" src="img/svg/sTell-img2.svg" alt="")
 				+e.aside-col.col-lg-3.d-none.d-lg-block
 					+e.aside-box.text-center
-						+e.a-logo
+						+e.a-logo(href="#")
 							img(loading="lazy" src="img/@2x/aside-box-logo.png" alt="")
 						+e.top-content
-							+e.a-name ООО Лаборатория Гемотест
+							+e.a-name(href="#") ООО Лаборатория Гемотест
 							+e.a-city г. Москва
 							+e.a-vac-amount 3 вакасии
 						+e.a-btns
@@ -167,7 +212,7 @@ mixin sVacCard(data)
 							+sVacCardBtn('print', 'Распечатать')
 							+sVacCardShareDDCont()
 							+sVacCardBtn('sad', 'Пожаловаться', 'link-modal', '#modal-complain')
-			+e.fixed-strip.sVacCard-fixed-strip-js.d-lg-none
+			+e.fixed-strip.sVacCard-fixed-strip-js.d-lg-none.active
 				if !data.sourceAlt
 					+e.fs-row.row
 						.col-6
