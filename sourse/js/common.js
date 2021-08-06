@@ -1058,6 +1058,8 @@ function eventHandler() {
 	//
 	// }, 2000);
 
+	//show body
+	document.body.style.opacity = '1';
 
 };
 if (document.readyState !== 'loading') {

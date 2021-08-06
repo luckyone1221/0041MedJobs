@@ -1030,7 +1030,10 @@ function eventHandler() {
 	// 	}, 1000);
 	//
 	// }, 2000);
+	//show body
 
+
+	document.body.style.opacity = '1';
 }
 
 ;
