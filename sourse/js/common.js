@@ -1059,7 +1059,9 @@ function eventHandler() {
 	// }, 2000);
 
 	//show body
-	document.body.style.opacity = '1';
+	window.setTimeout(function (){
+		document.body.style.opacity = '1';
+	}, 300);
 
 };
 if (document.readyState !== 'loading') {

@@ -1033,7 +1033,9 @@ function eventHandler() {
 	//show body
 
 
-	document.body.style.opacity = '1';
+	window.setTimeout(function () {
+		document.body.style.opacity = '1';
+	}, 300);
 }
 
 ;
