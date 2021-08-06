@@ -1035,7 +1035,7 @@ function eventHandler() {
 
 	window.setTimeout(function () {
 		document.body.style.opacity = '1';
-	}, 300);
+	}, 200);
 }
 
 ;
