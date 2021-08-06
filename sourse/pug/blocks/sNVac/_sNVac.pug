@@ -74,10 +74,11 @@ mixin snVacItemCreator(data)
 			+e.main-l-col.col-lg
 				+e.data-row.row.align-items-center
 					.col-auto
-						+e.img(href='#')
-							if data.imgName
+						if data.imgName
+							+e.img(href='#')
 								img(loading="lazy" src=`img/@2x/n-chosen-${data.imgName}.png` alt="")
-							else
+						else
+							+e.img--empty(href='#')
 								img(loading="lazy" src=`img/svg/sqsuare-users-stab.svg` alt="")
 					.col
 						+e.vac-name(href='#')=data.vacName

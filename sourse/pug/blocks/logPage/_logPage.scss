@@ -240,7 +240,8 @@
   }
   &__reg-btn{
     //@extend .btn-default-outline;
-    @extend .green-outline-btn;
+    //@extend .green-outline-btn;
+    @extend .orange-outline-btn;
     width: 100%;
     min-height: 0;
     padding: 14px 20px;

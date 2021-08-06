@@ -974,6 +974,10 @@ function eventHandler() {
 	}
 
 	function changenewSearchInputPh() {
+		if (!newSearchInput.getAttribute('data-placeholder-up-lg')) {
+			return;
+		}
+
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			newSearchInput.setAttribute('placeholder', newSearchInput.getAttribute('data-placeholder-up-lg'));
 		} else {

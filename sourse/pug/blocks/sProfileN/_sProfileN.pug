@@ -375,6 +375,19 @@ mixin sProfileNCreator(data)
 														option(value="Самара") Самара
 														option(value="Самара2") Самара2
 										+input('Введите адрес сайта', 'text', 'Сайт')
+										//-def here
+										+e.input-wrap--no-lab
+											+e.input-title Дата рождения
+											+e.inps-row.row
+												.col-auto
+													+e.INPUT.input.day-inp.form-control(type="number" value='22' min='1' max='31')
+												.col
+													+customSlect('month', ['Января', 'Февраля', 'Марта'])
+												.col
+													+customSlect('year')
+														option 1997
+														- for (var i=1998; i <= new Date().getFullYear(); i++)
+															option=i
 										+input('Введите описание организации', 'textarea', 'Описание организации')
 										//-+e.input-wrap--no-lab.align-items-start
 											+e.input-title Описание организации
@@ -461,7 +474,7 @@ mixin sProfileNCreatorVac(data)
 						+e.title-row.row.row--mb.align-items-center
 							.col
 								+e.H1.title=data.title
-							.col-auto.d-none.d-xlg-block
+							.col-auto
 								+e.place-vac(href='#')
 									+e.pv-ball
 										+icon('vac-plus')

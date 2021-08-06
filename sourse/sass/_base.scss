@@ -1259,6 +1259,22 @@ h5{
 		background-color: $green3!important;
 	}
 }
+.orange-outline-btn{
+	@extend .btn;
+	// @extend .btn-outline-success;
+	border-width: 2px!important;
+	font-size: 16px;
+	line-height: 1.25;
+
+	border-color: $orange!important;
+	background-color: transparent!important;
+	color: $headings-color!important;
+	&:hover{
+		color: $white!important;
+		border-color: $orange2!important;
+		background-color: $orange2!important;
+	}
+}
 
 //
 .btn-outline-primary{

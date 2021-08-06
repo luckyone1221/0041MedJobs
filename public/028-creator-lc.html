@@ -208,6 +208,54 @@
 																</label>
 															</div>
 															<!-- +e.input-wrap-->
+															<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
+																<div class="form-wrap__input-title">Дата рождения
+																</div>
+																<div class="form-wrap__inps-row row">
+																	<div class="col-auto"><input class="form-wrap__input day-inp form-control" type="number" value="22" min="1" max="31"/>
+																	</div>
+																	<div class="col">
+																		<div class="custom-select">
+																			<select class="default-select-js" name="month">
+																				<option value="Января">Января</option>
+																				<option value="Февраля">Февраля</option>
+																				<option value="Марта">Марта</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="col">
+																		<div class="custom-select">
+																			<select class="default-select-js" name="year">
+																				<option>1997</option>
+																				<option>1998</option>
+																				<option>1999</option>
+																				<option>2000</option>
+																				<option>2001</option>
+																				<option>2002</option>
+																				<option>2003</option>
+																				<option>2004</option>
+																				<option>2005</option>
+																				<option>2006</option>
+																				<option>2007</option>
+																				<option>2008</option>
+																				<option>2009</option>
+																				<option>2010</option>
+																				<option>2011</option>
+																				<option>2012</option>
+																				<option>2013</option>
+																				<option>2014</option>
+																				<option>2015</option>
+																				<option>2016</option>
+																				<option>2017</option>
+																				<option>2018</option>
+																				<option>2019</option>
+																				<option>2020</option>
+																				<option>2021</option>
+																			</select>
+																		</div>
+																	</div>
+																</div>
+															</div>
 															<div class="form-wrap__input-wrap form-group">
 																<label><span class="form-wrap__input-title">Описание организации</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите описание организации"></textarea>
 																</label>
@@ -489,7 +537,68 @@
 				</div>
 			</div>
 		</div>
+		<!--045++-->
+		<div class="modal-login modal-new text-center modal-win" id="modal-login" style="display: none">
+			<div class="modal-login__ball"><img loading="lazy" src="img/svg/padlock.svg" alt=""/>
+			</div>
+			<div class="modal-login__title">Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
+			</div>
+			<div class="modal-login__descr">После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
+			</div>
+			<div class="modal-login__row row justify-content-center">
+				<div class="col-md-auto"><a class="modal-login__btn modal-login__btn--green" href="#">Авторизация</a>
+				</div>
+				<div class="col-md-auto"><a class="modal-login__btn modal-login__btn--blue" href="#">Регистрация</a>
+				</div>
+			</div>
+			<div class="modal-login__already">
+				Уже зарегистрированы и забыли пароль?
+				<a href="#">Восстановить доступ</a>
+			</div>
+		</div>
+		<div class="modal-complain modal-new modal-win" id="modal-complain" style="display: none">
+			<div class="modal-complain__title text-center">Укажите причину жалобы
+			</div>
+			<div class="modal-complain__radio-items">
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Вакансия закрыта / не существует" checked="checked"/><span class="circle"></span><span class="txt">Вакансия закрыта / не существует</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Условия не соответствуют действительности"/><span class="circle"></span><span class="txt">Условия не соответствуют действительности</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Мошенничество"/><span class="circle"></span><span class="txt">Мошенничество</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Вакансия содержит дискриминационные требования"/><span class="circle"></span><span class="txt">Вакансия содержит дискриминационные требования</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Другое"/><span class="circle"></span><span class="txt">Другое</span>
+				</label>
+			</div>
+			<div class="modal-complain__row row align-items-center justify-content-center">
+				<div class="col-md-auto"><a class="modal-complain__btn modal-complain__btn--blue" href="#">Отправить</a>
+				</div>
+				<div class="col-md-auto"><a class="modal-complain__btn modal-complain__btn--gray modal-close-js" href="#">Отменить</a>
+				</div>
+			</div>
+		</div>
 		<!---->
+		<div class="modal-cface modal-new text-center modal-win" id="modal-cface" style="display: none">
+			<div class="modal-cface__face-txt">Контактное лицо:
+			</div>
+			<div class="modal-cface__name">Константин Константинович Константинопольский
+			</div>
+			<div class="modal-cface__duty">Главный врач
+			</div><a class="modal-cface__number" href="tel:+79035251051">+7 903 525‑10-51</a><a class="modal-cface__mail" href="mailto:info@nameclinic.ru">info@nameclinic.ru</a>
+			<div class="modal-cface__shedule-txt">Режим работы:
+			</div>
+			<div class="modal-cface__shedule-val">пн-пт: 8:00—22:00, сб-вс: выходной
+			</div>
+			<div class="modal-cface__footer">Скажите, что нашли вакансию на сайте MedicJobs.ru
+			</div>
+		</div>
+		<!--end 045++-->
 		<div class="modal-city modal-win" id="modal-city" style="display: none">
 			<div class="modal-city__title">Выберите город
 			</div>
