@@ -12,14 +12,17 @@ include ../blocks/sAccProfile/_sAccProfile.pug
 include ../blocks/headerAlt/_headerAlt.pug
 include ../blocks/sProfileN/_sProfileN.pug
 include ../blocks/footerN/_footerN.pug
+include ../blocks/sNVac/_sNVac.pug
 
 block variables
 	- let  mainPage= 'bg-gray-120 mvp-page'
 block title
-	- let  title= '028-creator-lc'
+	- let  title= '031-create-vac'
 	title= title
 block pagecontent
 	.headerAlt-cont
 		+headerAlt(false, false,true,'col col-md-auto')
-	+sProfileNCreator()
+	+sProfileNCreate({
+		title: 'Разместить вакансию',
+	})
 	+footerN()

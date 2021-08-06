@@ -331,6 +331,7 @@ mixin sProfileNMyCab()
 
 mixin sProfileNCreator(data)
 	// start sProfileN
+	//-028
 	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
 		.container-fluid
 			+e.row.row.row--mb
@@ -592,6 +593,73 @@ mixin sProfileNCreate(data)
 														+e.cr-btn--gray(type="button") Сохранить как черновик
 													.col-auto
 														+e.cr-btn--green(type="button") Опубликовать вакансию
+
+mixin sProfileNCreateAlt(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')
+						+lSidebarSlide(8,'Мои вакансии')
+						+lSidebarSlide(9,'Настройки профиля')
+				+e.content-col.col-xlg
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title=data.title
+							.col-12
+								+e.box
+									+form-wrap
+										+e.box-alt.sidebar-box-js(id="box-1")
+											+e.b-title Основная информация
+											+e.b-row.mb-48.mb-xlg-24.mb-xl-48.row&attributes(attributes)
+												+e.b-col-pd--base.col-12
+													+input('Например, врач-терапевт', 'text', 'Название вакансии')
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title Выберите должность
+														+e.inps-row.row
+															.col-12
+																+multipleSelect2('prof-sphere', undefined, undefined, 'Выберите из списка')
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title Covid-19
+														+e.inps-row.row.radio-row
+															.col-auto
+																+customChbDuplicate('Вакансия связана с Covid-19')
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title Опыт работы
+														+e.inps-row.row
+															.col-12
+																+customSlect('expirience', ['Без опыта','Самара2','Самара2'])
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title График
+														+e.inps-row.row
+															.col-12
+																+customSlect('expirience', ['Полный рабочий день', 'Самара2', 'Самара2'])
+										+e.box-alt.sidebar-box-js(id="box-2")
+											+e.b-title Жилье
+										+e.box-alt.sidebar-box-js(id="box-3")
+											+e.b-title Денежные выплаты
+										+e.box-alt.sidebar-box-js(id="box-4")
+											+e.b-title Бонусы
+										+e.box-alt.sidebar-box-js(id="box-5")
+											+e.b-title Контактная информация
+										+e.box-alt.sidebar-box-js(id="box-6")
+											+e.b-title Настройки публикации
+				.col-xlg-auto.d-none.d-xlg-block
+					+asideMenu()
+						ul
+							li: a.active(href='#box-1') Основная информация
+							li: a(href='#box-2') Жилье
+							li: a(href='#box-3') Денежные выплаты
+							li: a(href='#box-4') Бонусы
+							li: a(href='#box-5') Контактная информация
+							li: a(href='#box-6') Настройки публикации
 
 mixin sProfileNCreatorCab(data)
 	// start sProfileN

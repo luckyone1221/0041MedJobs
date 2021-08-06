@@ -17,13 +17,12 @@ include ../blocks/sNVac/_sNVac.pug
 block variables
 	- let  mainPage= 'bg-gray-120 mvp-page'
 block title
-	- let  title= '021-chosen-vacancy'
+	- let  title= '048-vac-create'
 	title= title
 block pagecontent
 	.headerAlt-cont
-		+headerAlt()
-	+sProfileNEmpty({
-		title: 'Избранные вакансии'
+		+headerAlt(false, false,true,'col col-md-auto')
+	+sProfileNCreateAlt({
+		title: 'Разместить вакансию',
 	})
-		+sNVacEmpty()
 	+footerN()

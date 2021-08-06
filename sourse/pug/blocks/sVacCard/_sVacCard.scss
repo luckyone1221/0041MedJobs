@@ -664,7 +664,10 @@
 		&--blue{
 			@extend .btn-primary;
 			font-weight: bold;
-			color: $white;
+			color: $white!important;
+			&:hover{
+				color: $white;
+			}
 		}
 		&--gray{
 			@extend .btn-light;
