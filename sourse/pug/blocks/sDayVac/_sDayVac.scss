@@ -1,6 +1,5 @@
 // start .sDayVac
 .sDayVac {
-
 	--sPT: 27px;
 	--sTPB: 32px;
 	--sPB: 26px;
@@ -14,6 +13,8 @@
 		--sTPB: 36px;
 		--sPB: 24px;
 	}
+
+	overflow: hidden;
 
 	&__slider-wrap{
 

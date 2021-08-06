@@ -966,6 +966,7 @@ function eventHandler() {
 	}
 	//
 	$('.toggle-active-on-click-js').click(function (){
+		event.preventDefault();
 		$(this).toggleClass('active');
 	})
 
@@ -988,6 +989,21 @@ function eventHandler() {
 				$(sVacCardStrip).addClass('active');
 			}
 		});
+	}
+	//
+	let newSearchInput = document.querySelector('.sBaner-input-js');
+	if (newSearchInput){
+		window.addEventListener('resize', changenewSearchInputPh, {passive: true});
+		changenewSearchInputPh();
+	}
+
+	function changenewSearchInputPh(){
+		if (window.matchMedia("(min-width: 992px)").matches){
+			newSearchInput.setAttribute('placeholder', newSearchInput.getAttribute('data-placeholder-up-lg'));
+		}
+		else{
+			newSearchInput.setAttribute('placeholder', newSearchInput.getAttribute('data-placeholder-down-lg'));
+		}
 	}
 
 

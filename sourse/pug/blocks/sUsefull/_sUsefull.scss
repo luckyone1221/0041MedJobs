@@ -19,6 +19,8 @@
 		--sTPB: 36px;
 	}
 
+	overflow: hidden;
+
 	&__slider-wrap{
 		//@media (max-width: 577px) {
 		//	position: relative;
@@ -122,7 +124,10 @@
 		display: block;
 		@include mt();
 		&:hover{
-			transform: translateY(-4px);
+			@include media-breakpoint-up(xl){
+				transform: translateY(-4px);
+			}
+
 			--title-col: #{$cyan};
 		}
 	}
