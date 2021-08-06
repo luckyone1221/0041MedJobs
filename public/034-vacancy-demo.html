@@ -28,7 +28,7 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="new-header"> 
+	<body class="new-header" style="opacity: 0;">
 		<div class="main-wrapper">
 			<!--+alertLine()-->
 			<div class="mm mm--js mm--alt5 d-xl-none">
@@ -637,7 +637,68 @@
 				</div>
 			</div>
 		</div>
+		<!--045++-->
+		<div class="modal-login modal-new text-center modal-win" id="modal-login" style="display: none">
+			<div class="modal-login__ball"><img loading="lazy" src="img/svg/padlock.svg" alt=""/>
+			</div>
+			<div class="modal-login__title">Авторизуйтесь или зарегистрируйтесь, чтобы познакомиться ближе
+			</div>
+			<div class="modal-login__descr">После авторизации вы получите множество возможностей сервиса MedicJobs.ru.
+			</div>
+			<div class="modal-login__row row justify-content-center">
+				<div class="col-md-auto"><a class="modal-login__btn modal-login__btn--green" href="#">Авторизация</a>
+				</div>
+				<div class="col-md-auto"><a class="modal-login__btn modal-login__btn--blue" href="#">Регистрация</a>
+				</div>
+			</div>
+			<div class="modal-login__already">
+				Уже зарегистрированы и забыли пароль?
+				<a href="#">Восстановить доступ</a>
+			</div>
+		</div>
+		<div class="modal-complain modal-new modal-win" id="modal-complain" style="display: none">
+			<div class="modal-complain__title text-center">Укажите причину жалобы
+			</div>
+			<div class="modal-complain__radio-items">
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Вакансия закрыта / не существует" checked="checked"/><span class="circle"></span><span class="txt">Вакансия закрыта / не существует</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Условия не соответствуют действительности"/><span class="circle"></span><span class="txt">Условия не соответствуют действительности</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Мошенничество"/><span class="circle"></span><span class="txt">Мошенничество</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Вакансия содержит дискриминационные требования"/><span class="circle"></span><span class="txt">Вакансия содержит дискриминационные требования</span>
+				</label>
+				<label class="custom-radio">
+					<input class="invisible" type="radio" name="complain" value="Другое"/><span class="circle"></span><span class="txt">Другое</span>
+				</label>
+			</div>
+			<div class="modal-complain__row row align-items-center justify-content-center">
+				<div class="col-md-auto"><a class="modal-complain__btn modal-complain__btn--blue" href="#">Отправить</a>
+				</div>
+				<div class="col-md-auto"><a class="modal-complain__btn modal-complain__btn--gray modal-close-js" href="#">Отменить</a>
+				</div>
+			</div>
+		</div>
 		<!---->
+		<div class="modal-cface modal-new text-center modal-win" id="modal-cface" style="display: none">
+			<div class="modal-cface__face-txt">Контактное лицо:
+			</div>
+			<div class="modal-cface__name">Константин Константинович Константинопольский
+			</div>
+			<div class="modal-cface__duty">Главный врач
+			</div><a class="modal-cface__number" href="tel:+79035251051">+7 903 525‑10-51</a><a class="modal-cface__mail" href="mailto:info@nameclinic.ru">info@nameclinic.ru</a>
+			<div class="modal-cface__shedule-txt">Режим работы:
+			</div>
+			<div class="modal-cface__shedule-val">пн-пт: 8:00—22:00, сб-вс: выходной
+			</div>
+			<div class="modal-cface__footer">Скажите, что нашли вакансию на сайте MedicJobs.ru
+			</div>
+		</div>
+		<!--end 045++-->
 		<div class="modal-city modal-win" id="modal-city" style="display: none">
 			<div class="modal-city__title">Выберите город
 			</div>

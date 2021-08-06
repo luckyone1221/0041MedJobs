@@ -753,9 +753,9 @@
 	&__body{}
 	//
 	&__item{
-		padding: 20px 24px;
+		padding: 20px 14px;
 		@include media-breakpoint-up(lg){
-			padding: 19px 20px;
+			padding: 20px 10px;
 		}
 		border-bottom: 1px solid $gary-110;
 		&:last-child{
@@ -771,6 +771,7 @@
 	&__head{
 		cursor: pointer;
 		//padding: 0 10px;
+		padding: 0 10px;
 	}
 	&__h-row{
 		--bs-gutter-x: 6px;
@@ -840,7 +841,8 @@
 	//
 	&__chb-items{
 		//padding-bottom: 6px;
-		margin: 0 -10px;
+		//margin: 0 -10px;
+		//width: calc(100% + 20px);
 	}
 	&__hidden{
 		padding-bottom: 6px;

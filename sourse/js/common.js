@@ -1061,7 +1061,7 @@ function eventHandler() {
 	//show body
 	window.setTimeout(function (){
 		document.body.style.opacity = '1';
-	}, 200);
+	}, 250);
 
 };
 if (document.readyState !== 'loading') {
