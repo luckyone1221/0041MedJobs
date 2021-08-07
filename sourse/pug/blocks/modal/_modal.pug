@@ -64,6 +64,52 @@ mixin modal()
 		+e.shedule-val пн-пт: 8:00—22:00, сб-вс: выходной
 		+e.footer Скажите, что нашли вакансию на сайте MedicJobs.ru
 	//end 045++
+	//048++
+	+b.modal-checkbox.modal-new.modal-win(id="modal-sphere" class=" " style="display: none")
+		+e.content
+			+e.header.text-center Выберите отрасль
+			+e.checkboxes
+				+customChbDDItem('Медицина, фармацевтика', 'active')
+					+customChbDDItem('Медицинские организации', 'active')
+						+customChbAlt('Стационар')
+						+customChbAlt('Женская консультация')
+						+customChbAlt('Лаборатория')
+						+customChbAlt('Поликлиника')
+						+customChbAlt('Роддом, родильное отделение')
+						+customChbAlt('Наркология')
+						+customChbAlt('Психиатрия')
+						+customChbAlt('Фтизиатрия')
+						+customChbAlt('Травпункт')
+						+customChbAlt('Хоспис')
+						+customChbAlt('Аптека')
+						+customChbAlt('Стоматология')
+						+customChbAlt('Скорая помощь')
+						+customChbAlt('Онкология')
+					+customChbAlt('Аптека')
+					+customChbAlt('Салоны оптики, мед. оборудования и т.д.')
+					+customChbAlt('Лаборатории')
+					+customChbAlt('Научно-исследовательские и научно-практические учреждения')
+					+customChbAlt('Уход за больными, Хосписы')
+					+customChbAlt('Фармацевтика')
+					+customChbAlt('Санаторий')
+					+customChbAlt('Санитарно-эпидемиологический надзор')
+					+customChbAlt('Другое')
+				//-
+				- for (var i = 0; i < 5; i++)
+					+customChbAlt('IT, интернет, связь')
+					+customChbAlt('Административная работа, серкретариат, АХО')
+					+customChbAlt('Безопасность, службы охраны')(checked)
+					+customChbAlt('Бухгалтерия, финансы, аудит')
+					+customChbAlt('Государственная служба')
+			+e.footer
+				+e.chosen-txt Выбрано: 7 отраслей
+				+e.btns-row.row
+					.col-6
+						+e.btn--gray(type="button") Очистить
+					.col-6
+						+e.btn--green(type="button") Применить
+
+	//end 048++
 	+b.modal-city.modal-win(id="modal-city" class=" " style="display: none" )
 		+e.title Выберите город
 		+form-wrap()
@@ -585,8 +631,8 @@ mixin socModal(iconName, iconColor)
 				.col-auto
 					+e.save-btn(type="button") Сохранить изменения
 
-mixin repeatorBl()
-	+e.repeater.repeator-js
+mixin repeatorBl(addClasses='', hint)
+	+e.repeater.repeator-js(class=addClasses)
 		+e.r-item.r-item-js
 			block
 			+repeatorRemove()
@@ -594,10 +640,13 @@ mixin repeatorBl()
 		//- 	block
 		//- 	+repeatorRemove()
 		+e.r-add-btn.r-add-btn-js(type='button') Добавить
+		if hint
+			+e.r-hint.pt-12.r-hint-js.active=hint
 
 mixin repeatorRemove()
 	+e.remove-item.r-remove-item-js
-		+e.r-btn(href='#')
+		//-removed link here
+		+e.r-btn
 			+e.r-ball
 				+icon('cross')
 			+e.ri-txt Удалить
@@ -650,3 +699,17 @@ mixin customRadioDulpicate(txt, name, val=txt)
 		input(type="radio" class="invisible" name=name value=val)&attributes(attributes)
 		span.circle
 		span.txt=txt
+
+mixin customChbAlt(txt)
+	//-048 ++
+	+e.chb-cont
+		+customChb(txt)&attributes(attributes)
+
+mixin customChbDDItem(txt, addClasses='')
+	+e.dd-item.chb-dd-item-js(class=addClasses)
+		+e.dd-head.chb-dd-head-js
+			+e.dd-arrow
+			+e.ddh-txt=txt
+			+customChb()&attributes(attributes)
+		+e.dd-content.chb-dd-content-js(class=addClasses)
+			block

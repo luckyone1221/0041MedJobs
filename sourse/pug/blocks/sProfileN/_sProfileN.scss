@@ -387,6 +387,203 @@
 				padding: 10px;
 				border-radius: 5px;
 			}
+			//048++
+			&__chose-txt{
+				font-size: 15px;
+				@include media-breakpoint-up(md){
+					font-size: 13px;
+				}
+				line-height: (16/13);
+			}
+			&__sub-box{
+				padding: 33px;
+				@include media-breakpoint-up(md){
+					padding: 37px;
+				}
+				@include media-breakpoint-between(xlg, xl){
+					padding: 24px;
+				}
+				@include media-breakpoint-up(xl){
+					padding: 36px;
+				}
+				@include media-breakpoint-up(xxl){
+					padding: 48px;
+				}
+
+				border-bottom: 1px solid $gray-210;
+
+				.form-wrap__input-title{
+					color: $headings-color;
+				}
+				.form-wrap__input-wrap{
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+
+			}
+			&__sub-title-row{
+				--bs-gutter-x: 24px;
+				--bs-gutter-y: 24px;
+
+				padding-bottom: 24px;
+				&:last-child{
+					padding-bottom: 0;
+				}
+			}
+			&__st-title{
+				width: calc(var(--i-title-w) + var(--bs-gutter-x));
+
+				display: flex;
+				align-items: center;
+				@include media-breakpoint-up(md){
+					min-height: 40px;
+				}
+			}
+			//
+			&__chb-items{
+				label{
+					min-height: 0!important;
+				}
+			}
+
+			&__input{
+				&--w100percents{
+					width: 100% !important;
+				}
+				&--w40{
+					width: 40px !important;
+				}
+				&--w60{
+					width: 60px !important;
+				}
+				&--w120{
+					width: 120px !important;
+				}
+				&--w80{
+					width: 80px !important;
+				}
+
+				&--tell{
+
+				}
+
+			}
+			//--tel
+			&__inps-row{
+				&--tel{
+					--bs-gutter-x: 10px!important;
+				}
+				&--tel-sub{
+					--bs-gutter-x: 10px!important;
+					width: calc(100% + var(--bs-gutter-x)) !important;
+				}
+			}
+
+			&__tel-sub-row{
+				--bs-gutter-x: 5px;
+			}
+			&__time-select-col{
+				width: calc(var(--bs-gutter-x) + 211px);
+				& > *{
+					width: 100%!important;
+				}
+			}
+
+			//repeator duplicate
+			&__repeater{
+
+			}
+			&__r-item{
+
+			}
+			&__remove-item{
+				border-bottom: 1px solid $gray-210;
+				margin-bottom: 48px;
+			}
+			&__r-btn{
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+
+				--icon-color: #{$gray-550};
+				--ball-bg: #{$gray-100};
+				--txt-color: #{$headings-color};
+				&:hover{
+					--icon-color: #{$white};
+					--ball-bg: #{$warning};
+					--txt-color: #{$warning};
+				}
+
+				padding-bottom: 24px;
+			}
+			&__r-ball{
+				@include mt($smooth);
+				width: 24px;
+				height: 24px;
+				flex-shrink: 0;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: var(--ball-bg, #{$light});
+
+				.icon{
+					@include mt();
+					font-size: 10px;
+					color: var(--icon-color);
+				}
+
+				margin-right: 12px;
+			}
+			&__ri-txt{
+				font-size: inherit;
+				line-height: 1.25;
+				color: var(--txt-color, #{$headings-color});
+			}
+			&__r-add-btn{
+				@extend .btn;
+				@extend .btn-outline-primary;
+
+				//color: ;
+				border-radius: 60px;
+				padding: 10px 23px;
+
+				color: $primary!important;
+				&:hover{
+					color: $white!important;
+				}
+			}
+			&__r-hint{
+				display: none;
+				&.active{
+					display: block;
+				}
+			}
+			//
+			&__c-btn{
+				@extend .btn;
+				@extend .btn-outline-primary;
+
+				border-radius: 60px;
+				padding: 10px 23px;
+
+				color: $primary!important;
+				&:hover{
+					color: $white!important;
+				}
+
+				margin-bottom: 12px;
+			}
+			&__c-hint{
+
+			}
+			&__{}
+			&__{}
+
+			//end 048++
+
 			&__select{
 				padding: 9px 25px 9px 10px;
 
@@ -444,17 +641,20 @@
 				flex-grow: 1;
 
 				&.radio-row{
-					@include roww(24px);
-					@include media-breakpoint-up(md){
-						@include roww(24px);
-					}
+					--bs-gutter-x: 24px;
 				}
 
-				@include roww(12px);
+				--bs-gutter-x: 12px;
 				@include media-breakpoint-up(md){
-					@include roww(24px);
+					--bs-gutter-x: 24px;
+				}
+
+				@include media-breakpoint-up(md){
+					width: calc(100% - var(--i-title-w, 200px));
 				}
 			}
+			//
+
 			.day-inp{
 				width: 80px;
 				@include media-breakpoint-up(md){
@@ -694,6 +894,13 @@
 
 			&__input--big-ta{
 				height: 440px!important;
+				width: 100%!important;
+			}
+			&__input--sm-ta{
+				height: 120px!important;
+				@include media-breakpoint-up(md){
+					height: 80px!important;
+				}
 				width: 100%!important;
 			}
 			//

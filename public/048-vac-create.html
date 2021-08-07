@@ -28,7 +28,7 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="bg-gray-120 mvp-page" style="opacity: 0;">
+	<body class="bg-gray-120 mvp-page fancybox-bg-lighter" style="opacity: 0;">
 		<div class="main-wrapper">
 			<!--+alertLine()-->
 			<div class="headerAlt-cont">
@@ -147,13 +147,13 @@
 										</h1>
 									</div>
 									<div class="col-12">
-										<div class="sProfileN__box">
+										<div class="sProfileN__box p-0">
 											<div class="form-wrap">
 												<form>
-													<div class="form-wrap__box-alt sidebar-box-js" id="box-1">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-1">
 														<div class="form-wrap__b-title">Основная информация
 														</div>
-														<div class="form-wrap__b-row mb-48 mb-xlg-24 mb-xl-48 row">
+														<div class="form-wrap__b-row row">
 															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
 																<div class="form-wrap__input-wrap form-group">
 																	<label><span class="form-wrap__input-title">Название вакансии</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, врач-терапевт"/>
@@ -163,7 +163,7 @@
 																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
 																	<div class="form-wrap__input-title">Выберите должность
 																	</div>
-																	<div class="form-wrap__inps-row row">
+																	<div class="form-wrap__inps-row row gy-12">
 																		<div class="col-12">
 																			<div class="multiple-select">
 																				<select class="prof-slect2-js" multiple="multiple" data-placeholder="Выберите из списка">
@@ -177,6 +177,10 @@
 																					<option value="качество 4">качество 4</option>
 																					<option value="качество 5">качество 5</option>
 																				</select>
+																			</div>
+																		</div>
+																		<div class="col-12">
+																			<div class="form-wrap__chose-txt">Выберите до 5-ти должностей из списка, которые подходят на вашу вакансию. Если ваша вакансия подходит под несколько должностей, то это поможет соискателям быстрее найти вашу вакансию, а вам быстрее найти соискателя.
 																			</div>
 																		</div>
 																	</div>
@@ -222,27 +226,303 @@
 																		</div>
 																	</div>
 																</div>
+																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
+																	<div class="form-wrap__input-title">Заработная плата, ₽
+																	</div>
+																	<div class="form-wrap__inps-row row">
+																		<div class="col-12">
+																			<div class="form-wrap__couple-row row">
+																				<div class="form-wrap__c-col col-6" data-ph="от"><input class="form-wrap__input form-wrap__input--couple form-control" type="text" placeholder="25 000"/>
+																				</div>
+																				<div class="form-wrap__c-col col-6" data-ph="до"><input class="form-wrap__input form-wrap__input--couple form-control" type="text" placeholder="100 000"/>
+																				</div>
+																			</div>
+																			<label class="custom-chb">
+																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Не указывать</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="form-wrap__input-wrap form-group">
+																	<label><span class="form-wrap__input-title">Адрес работы</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите адрес"/>
+																	</label>
+																</div>
+																<!-- +e.input-wrap-->
+																<div class="form-wrap__input-wrap form-group">
+																	<label><span class="form-wrap__input-title">Описание вакансии</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите описание вакансии"></textarea>
+																	</label>
+																</div>
+																<!-- +e.input-wrap-->
+																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab align-items-start">
+																	<div class="form-wrap__input-title">Ключевые навыки
+																	</div>
+																	<div class="form-wrap__inps-row row">
+																		<div class="col-12">
+																			<div class="multiple-select">
+																				<select class="prof-slect2-js" multiple="multiple" data-placeholder="">
+																					<option value="" label="#"></option>
+																					<!--option(selected) Умный-->
+																					<!--option(selected) Усидчевый-->
+																					<option selected="selected">Умный</option>
+																					<option selected="selected">Усидчевый</option>
+																					<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
+																					<option value="качество 1">качество 1</option>
+																					<option value="качество 2">качество 2</option>
+																					<option value="качество 3">качество 3</option>
+																					<option value="качество 4">качество 4</option>
+																					<option value="качество 5">качество 5</option>
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
-													<div class="form-wrap__box-alt sidebar-box-js" id="box-2">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-2">
 														<div class="form-wrap__b-title">Жилье
 														</div>
+														<div class="form-wrap__b-row row">
+															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
+																<div class="form-wrap__sub-title-row row">
+																	<div class="form-wrap__st-title col-md-auto align-self-start">Предоставление жилья
+																	</div>
+																	<div class="col-md">
+																		<div class="form-wrap__repeater repeator-js empty-content-js">
+																			<div class="form-wrap__r-item r-item-js">
+																				<div class="form-wrap__inp-row row gy-18 pb-18">
+																					<div class="col-12">
+																						<div class="custom-select">
+																							<select class="default-select-js" name="" data-placeholder="Выберите из списка">
+																								<option value="" label="#"></option>
+																								<option value="Самара">Самара</option>
+																								<option value="Самара2">Самара2</option>
+																							</select>
+																						</div>
+																					</div>
+																					<div class="col-12"><textarea class="form-wrap__input form-wrap__input--sm-ta form-control" placeholder=""></textarea>
+																					</div>
+																				</div>
+																				<div class="form-wrap__remove-item r-remove-item-js">
+																					<div class="form-wrap__r-btn">
+																						<div class="form-wrap__r-ball">
+																							<svg class="icon icon-cross ">
+																								<use xlink:href="img/svg/sprite.svg#cross"></use>
+																							</svg>
+																						</div>
+																						<div class="form-wrap__ri-txt">Удалить
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+																			</button>
+																			<div class="form-wrap__r-hint pt-12 r-hint-js active">Если ваша организация предоставляет жилье для соискателя, укажите об этом и вашу вакансию обязательно заметят.
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="form-wrap__box-alt sidebar-box-js" id="box-3">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-3">
 														<div class="form-wrap__b-title">Денежные выплаты
 														</div>
+														<div class="form-wrap__b-row row">
+															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
+																<div class="form-wrap__sub-title-row row">
+																	<div class="form-wrap__st-title col-md-auto align-self-start">Предоставление жилья
+																	</div>
+																	<div class="col-md">
+																		<div class="form-wrap__repeater repeator-js empty-content-js">
+																			<div class="form-wrap__r-item r-item-js">
+																				<div class="form-wrap__inp-row row gy-18 pb-18">
+																					<div class="col-12">
+																						<div class="custom-select">
+																							<select class="default-select-js" name="" data-placeholder="Выберите из списка">
+																								<option value="" label="#"></option>
+																								<option value="Самара">Самара</option>
+																								<option value="Самара2">Самара2</option>
+																							</select>
+																						</div>
+																					</div>
+																					<div class="col-12"><textarea class="form-wrap__input form-wrap__input--sm-ta form-control" placeholder=""></textarea>
+																					</div>
+																				</div>
+																				<div class="form-wrap__remove-item r-remove-item-js">
+																					<div class="form-wrap__r-btn">
+																						<div class="form-wrap__r-ball">
+																							<svg class="icon icon-cross ">
+																								<use xlink:href="img/svg/sprite.svg#cross"></use>
+																							</svg>
+																						</div>
+																						<div class="form-wrap__ri-txt">Удалить
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
+																			</button>
+																			<div class="form-wrap__r-hint pt-12 r-hint-js active">Если ваша организация предоставляет денежные выплаты для соискателя, укажите об этом и вашу вакансию обязательно заметят.
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="form-wrap__box-alt sidebar-box-js" id="box-4">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-4">
 														<div class="form-wrap__b-title">Бонусы
 														</div>
-													</div>
-													<div class="form-wrap__box-alt sidebar-box-js" id="box-5">
-														<div class="form-wrap__b-title">Контактная информация
+														<div class="form-wrap__b-row row">
+															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
+																<div class="form-wrap__sub-title-row row">
+																	<div class="form-wrap__st-title col-md-auto align-self-start">Предоставление жилья
+																	</div>
+																	<div class="col-md">
+																		<div class="form-wrap__chb-items">
+																			<label class="custom-chb">
+																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Предоставление мест в детских садах/школах</span>
+																			</label>
+																			<label class="custom-chb">
+																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">ДМС или медицинское обслуживание</span>
+																			</label>
+																			<label class="custom-chb">
+																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Дополнительный отпуск</span>
+																			</label>
+																			<label class="custom-chb">
+																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Профессиональная профподготовка</span>
+																			</label>
+																			<label class="custom-chb">
+																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Внутреннее совместительство</span>
+																			</label>
+																			<label class="custom-chb">
+																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фитнес</span>
+																			</label>
+																			<div class="form-wrap__chose-txt">Если ваша организация предоставляет бонусы для соискателя, укажите об этом и вашу вакансию обязательно заметят.
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
-													<div class="form-wrap__box-alt sidebar-box-js" id="box-6">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-5">
+														<div class="form-wrap__b-title">Контактная информация
+														</div>
+														<div class="form-wrap__b-row row">
+															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
+																<div class="form-wrap__input-wrap form-group">
+																	<label><span class="form-wrap__input-title">Контактное лицо</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="ФИО контактного лица"/>
+																	</label>
+																</div>
+																<!-- +e.input-wrap-->
+																<div class="form-wrap__input-wrap form-group">
+																	<label><span class="form-wrap__input-title">Должность</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите должность"/>
+																	</label>
+																</div>
+																<!-- +e.input-wrap-->
+																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
+																	<div class="form-wrap__input-title">E-mail
+																	</div>
+																	<div class="form-wrap__inps-row row gy-12">
+																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control" type="email" required="required" name="email" placeholder="Введите e-mail"/>
+																		</div>
+																		<div class="col-12">
+																			<div class="form-wrap__chose-txt">На этот адрес мы будем уведомлять вас о новых откликах.
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
+																	<div class="form-wrap__input-title">Телефон
+																	</div>
+																	<div class="form-wrap__inps-row form-wrap__inps-row--tel row gy-12 align-items-center tells-input-row-js">
+																		<div class="col-auto">+</div>
+																		<div class="col-auto"><input class="form-wrap__input form-wrap__input--w40 form-control text-center" type="number" value="7" data-symb-amount="1"/>
+																		</div>
+																		<div class="col-auto">
+																			<div class="form-wrap__tel-sub-row row align-items-center">
+																				<div class="col-auto">(</div>
+																				<div class="col-auto"><input class="form-wrap__input form-wrap__input--w60 form-control" type="number" placeholder="___" data-symb-amount="3"/>
+																				</div>
+																				<div class="col-auto">)</div>
+																			</div>
+																		</div>
+																		<div class="col-auto"><input class="form-wrap__input form-wrap__input--w120 form-control" type="number" placeholder="___-__-__" data-symb-amount="7"/>
+																		</div>
+																		<div class="col-auto"><input class="form-wrap__input form-wrap__input--w120 form-control" type="number" placeholder="доб." data-symb-amount="1"/>
+																		</div>
+																		<div class="col-12">
+																			<div class="form-wrap__chose-txt">На этот телефон будут звонить по вашей вакансии соискатели.
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
+																	<div class="form-wrap__input-title">Прием звонков
+																	</div>
+																	<div class="form-wrap__inps-row row gy-12 align-items-center">
+																		<div class="col-auto">
+																			<div class="form-wrap__inps-row form-wrap__inps-row--tel-sub row gy-12 align-items-center tells-input-row-js time-input-row-js">
+																				<div class="col-auto">с:</div>
+																				<div class="col-auto"><input class="form-wrap__input form-wrap__input--w80 form-control" type="number" placeholder="__:__" data-symb-amount="4"/>
+																				</div>
+																				<div class="col-auto">до:</div>
+																				<div class="col-auto"><input class="form-wrap__input form-wrap__input--w80 form-control" type="number" placeholder="__:__" data-symb-amount="4"/>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="form-wrap__time-select-col col-auto">
+																			<div class="custom-select">
+																				<select class="default-select-js" name="days">
+																					<option value="Любой день">Любой день</option>
+																					<option value="Самара2">Самара2</option>
+																					<option value="Самара2">Самара2</option>
+																				</select>
+																			</div>
+																		</div>
+																		<div class="col-12">
+																			<div class="form-wrap__chose-txt">На этот телефон будут звонить по вашей вакансии соискатели.
+																			</div>
+																		</div>
+																		<div class="col-12 pt-12">
+																			<div class="form-wrap__chb-items">
+																				<label class="custom-chb">
+																					<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Хочу получать отклики соискателей на email</span>
+																				</label>
+																				<label class="custom-chb">
+																					<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Принимать звонки от соискателей</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-6">
 														<div class="form-wrap__b-title">Настройки публикации
+														</div>
+														<div class="form-wrap__b-row row">
+															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
+																<div class="form-wrap__sub-title-row row">
+																	<div class="form-wrap__st-title col-md-auto align-self-start">Отрасли вакансии
+																	</div>
+																	<div class="col-md"><a class="form-wrap__c-btn form-wrap__c-btn--blue link-modal" href="#modal-sphere">Выбрать</a>
+																		<div class="form-wrap__c-hint">Выберите одну или несколько отраслей.
+																		</div>
+																	</div>
+																</div>
+																<div class="form-wrap__sub-title-row row">
+																	<div class="form-wrap__st-title col-md-auto align-self-start">Регионы показа
+																	</div>
+																	<div class="col-md"><a class="form-wrap__c-btn form-wrap__c-btn--blue link-modal" href="#modal-region">Выбрать</a>
+																		<div class="form-wrap__c-hint">Выберите один или несколько регионов для показа.
+																		</div>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
 												</form>
@@ -454,6 +734,296 @@
 			</div>
 		</div>
 		<!--end 045++-->
+		<!--048++-->
+		<div class="modal-checkbox modal-new modal-win" id="modal-sphere" style="display: none">
+			<div class="modal-checkbox__content">
+				<div class="modal-checkbox__header text-center">Выберите отрасль
+				</div>
+				<div class="modal-checkbox__checkboxes">
+					<div class="modal-checkbox__dd-item chb-dd-item-js active">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Медицина, фармацевтика
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js active">
+							<div class="modal-checkbox__dd-item chb-dd-item-js active">
+								<div class="modal-checkbox__dd-head chb-dd-head-js">
+									<div class="modal-checkbox__dd-arrow">
+									</div>
+									<div class="modal-checkbox__ddh-txt">Медицинские организации
+									</div>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+									</label>
+								</div>
+								<div class="modal-checkbox__dd-content chb-dd-content-js active">
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стационар</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Женская консультация</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Лаборатория</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Поликлиника</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Роддом, родильное отделение</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Наркология</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Психиатрия</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фтизиатрия</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Травпункт</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Хоспис</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Аптека</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стоматология</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Скорая помощь</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Онкология</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Аптека</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Салоны оптики, мед. оборудования и т.д.</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Лаборатории</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Научно-исследовательские и научно-практические учреждения</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Уход за больными, Хосписы</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фармацевтика</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Санаторий</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Санитарно-эпидемиологический надзор</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Другое</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-checkbox__footer">
+					<div class="modal-checkbox__chosen-txt">Выбрано: 7 отраслей
+					</div>
+					<div class="modal-checkbox__btns-row row">
+						<div class="col-6">
+							<button class="modal-checkbox__btn modal-checkbox__btn--gray" type="button">Очистить
+							</button>
+						</div>
+						<div class="col-6">
+							<button class="modal-checkbox__btn modal-checkbox__btn--green" type="button">Применить
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end 048++-->
 		<div class="modal-city modal-win" id="modal-city" style="display: none">
 			<div class="modal-city__title">Выберите город
 			</div>
@@ -802,10 +1372,16 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
-										<svg class="icon icon-cross ">
-											<use xlink:href="img/svg/sprite.svg#cross"></use>
-										</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
+									<div class="form-wrap__remove-item r-remove-item-js">
+										<div class="form-wrap__r-btn">
+											<div class="form-wrap__r-ball">
+												<svg class="icon icon-cross ">
+													<use xlink:href="img/svg/sprite.svg#cross"></use>
+												</svg>
+											</div>
+											<div class="form-wrap__ri-txt">Удалить
+											</div>
+										</div>
 									</div>
 								</div>
 								<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
@@ -1139,10 +1715,16 @@
 												</div>
 											</div>
 										</div>
-										<div class="form-wrap__remove-item r-remove-item-js"><a class="form-wrap__r-btn" href="#"><span class="form-wrap__r-ball">
-											<svg class="icon icon-cross ">
-												<use xlink:href="img/svg/sprite.svg#cross"></use>
-											</svg></span><span class="form-wrap__ri-txt">Удалить</span></a>
+										<div class="form-wrap__remove-item r-remove-item-js">
+											<div class="form-wrap__r-btn">
+												<div class="form-wrap__r-ball">
+													<svg class="icon icon-cross ">
+														<use xlink:href="img/svg/sprite.svg#cross"></use>
+													</svg>
+												</div>
+												<div class="form-wrap__ri-txt">Удалить
+												</div>
+											</div>
 										</div>
 									</div>
 									<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить

@@ -553,6 +553,8 @@
 			margin-bottom: 48px;
 		}
 		&__r-btn{
+			cursor: pointer;
+
 			display: flex;
 			align-items: center;
 
@@ -605,24 +607,19 @@
 				color: $white!important;
 			}
 		}
-		.custom-chb{
-			.txt{
-				@media (max-width: 576px){
-					font-size: 17px;
-				}
-				font-size: inherit;
-			}
-			&:last-child{
-				margin-bottom: 0;
+
+		//
+		&__r-hint{
+			display: none;
+			&.active{
+				display: block;
 			}
 		}
-		.custom-radio{
-			margin-bottom: 12px;
-			&:last-child{
-				margin-bottom: 0;
-			}
+
+		//
+		&__chb-txt{
+
 		}
-		&__{}
 		&__{}
 		&__{}
 		&__{}
@@ -1108,6 +1105,141 @@
 		}
 	}
 	//
+	&__{}
+	&__{}
+}
+//
+.modal-checkbox{
+	padding: 0!important;
+	--modal-x-padd: 48px;
+	border-radius: 12px!important;
+	//height: calc(var(--vh, 1vh) * 100 - 120px) !important;
+
+	&__content{
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__header{
+		padding: 48px var(--modal-x-padd) 24px;
+		border-bottom: 1px solid $gray-210;
+
+		font-weight: 600;
+		font-size: 30px;
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+		}
+		line-height: 1.25;
+	}
+	&__checkboxes{
+		padding: 24px var(--modal-x-padd);
+		border-bottom: 1px solid $gray-210;
+		flex-grow: 1;
+
+		height: calc(var(--vh, 1vh) * 100 - 120px - 102px - 128px);
+		min-height: 300px;
+		overflow-y: auto;
+	}
+	&__footer{
+		padding: 24px var(--modal-x-padd);
+		border-bottom: 1px solid $gray-210;
+	}
+	&__chosen-txt{
+		line-height: (18/15);
+		margin-bottom: 24px;
+	}
+	&__btns-row{
+		--bs-gutter-x: 12px;
+		--bs-gutter-y: 12px;
+
+	}
+	&__btn{
+		@extend .btn;
+		border: none!important;
+		font-size: inherit!important;
+		border-radius: 60px;
+		line-height: (18/15);
+		font-weight: 500!important;
+		min-width: 100%;
+		padding: 11px 16px;
+
+		&--gray{
+			@extend .btn-light;
+		}
+		&--green{
+			@extend .green-btn;
+		}
+	}
+	//
+	&__chb-cont{
+		.custom-chb{
+			@include mt();
+			padding: 11px 12px;
+
+			background: $white;
+			&:hover{
+				background: $gray-100;
+			}
+
+			border-radius: 5px;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
+	}
+	//
+	&__dd-item{
+		&.active{
+			--arrow-rotate: rotate(0deg);
+		}
+	}
+	&__dd-arrow{
+		@include mt();
+		transform: rotate(var(--arrow-rotate, -90deg));
+
+		content: '';
+		display: inline-block;
+		margin-right: 10px;
+		width: 12px;
+		height: 12px;
+
+		background-image: url(../img/svg/chevron-down-sm.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&__dd-head{
+		cursor: pointer;
+		@include mt();
+		padding: 11px 12px;
+
+		background: $white;
+		&:hover{
+			background: $gray-100;
+		}
+		border-radius: 5px;
+
+		display: flex;
+		align-items: center;
+
+		.custom-chb{
+			margin-left: auto;
+		}
+	}
+	&__ddh-txt{
+
+	}
+	&__chb-cont{
+
+	}
+	&__dd-content{
+		display: none;
+		&.active{
+			display: block;
+		}
+		padding-left: 18px;
+	}
 	&__{}
 	&__{}
 }

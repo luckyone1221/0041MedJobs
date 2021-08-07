@@ -171,7 +171,7 @@ function eventHandler() {
 	JSCCommon.tabscostume('c-tabs');
 	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
+	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
 
 	var x = window.location.host;
 	let screenName;
@@ -524,8 +524,7 @@ function eventHandler() {
 	$('.repeator-js').each(function () {
 		let firtsItem = this.querySelector('.r-item-js');
 		if (!firtsItem) return;
-		let content = firtsItem.innerHTML; //console.log(content);
-
+		let content = firtsItem.innerHTML;
 		let addBtn = this.querySelector('.r-add-btn-js');
 		addBtn.addEventListener('click', duplicateRItem.bind(addBtn, this, content));
 	}); //delegation of remove btn
@@ -540,6 +539,7 @@ function eventHandler() {
 				$(item).addClass('d-none');
 				item.remove();
 				checkRemoveBtn(thisRepeator);
+				checkHint(thisRepeator);
 			});
 		}
 	});
@@ -557,22 +557,36 @@ function eventHandler() {
 			let names = newItem.querySelectorAll('[name]');
 			names.forEach(function (el) {
 				let oldName = el.getAttribute('name').split("][");
-				let number = el.getAttribute('name').split("][").pop().split(']').shift(); // const lastItem = oldName[oldName.length - 2]
-
+				let number = el.getAttribute('name').split("][").pop().split(']').shift();
 				el.setAttribute("name", " ".concat(oldName[0], "][").concat(index, "]"));
-				let newName = el.getAttribute('name'); // console.log(lastItem);
-
-				console.log(newName);
+				let newName = el.getAttribute('name'); //console.log(newName);
 			});
 		});
 		checkRemoveBtn(parent);
+		checkHint(parent);
 	} //
 
+
+	function checkHint(repeatorBl) {
+		let hint = repeatorBl.querySelectorAll('.r-hint-js');
+		let items = repeatorBl.querySelectorAll('.r-item-js');
+		if (!hint) return;
+
+		if (items.length > 0) {
+			$(hint).slideUp(function () {
+				$(this).removeClass('active');
+			});
+		} else {
+			$(hint).slideDown(function () {
+				$(this).addClass('active');
+			});
+		}
+	}
 
 	function checkRemoveBtn(repeatorBl) {
 		let items = repeatorBl.querySelectorAll('.r-item-js'); //case 1
 
-		if (items.length > 1) {
+		if (items.length > 1 || repeatorBl.classList.contains('empty-content-js')) {
 			for (let item of items) {
 				let thisRemoveBtn = item.querySelector('.r-remove-item-js');
 
@@ -620,6 +634,12 @@ function eventHandler() {
 	// .r-item-js
 	// .r-remove-item-js
 	// .r-add-btn-js
+	//hack remove content
+
+	$('.empty-content-js').each(function () {
+		let removeBtn = this.querySelector('.r-remove-item-js');
+		removeBtn.click();
+	}); //
 
 	$(document).on("click", ".bnt", function () {
 		newInput.attr("name", ' nameNew');
@@ -1039,6 +1059,56 @@ function eventHandler() {
 
 	$('input').each(function () {
 		this.setAttribute('autocomplete', 'off');
+	}); //
+
+	$('.tells-input-row-js').each(function () {
+		let tellInputs = this.querySelectorAll('input');
+		$(tellInputs).keyup(function () {
+			if (event.key === "Delete" || event.key === "Backspace") {
+				return;
+			}
+
+			if (this.value.length === Number(this.getAttribute('data-symb-amount'))) {
+				let index = $(tellInputs).index(this);
+
+				if (tellInputs[index + 1]) {
+					tellInputs[index + 1].focus();
+				} else {
+					this.blur();
+				}
+			}
+		});
+	}); //???
+
+	let timeInputs = [].slice.call(document.querySelectorAll('.time-input-row-js input'));
+	$(timeInputs).each(function () {
+		this.setAttribute("pattern", "[0-9]{2}[:][0-9]{2}");
+	});
+	Inputmask("99:99").mask(timeInputs); //
+	// let chbDDHeads = document.querySelectorAll('.chb-dd-head-js');
+	// for (let head of chbDDHeads){
+	//   head.addEventListener('click', function (){
+	//     console.log(this);
+	//     console.log(chbDDHeads);
+	//   });
+	// }
+
+	$('.chb-dd-head-js').click(function () {
+		//avoid label doublecall
+		if (event.target.tagName === 'INPUT' || event.target.closest('label')) {
+			return;
+		}
+
+		$(this.parentElement).toggleClass('active');
+		let content;
+		$(this.parentElement.childNodes).each(function () {
+			if ($(this).hasClass('chb-dd-content-js')) {
+				content = this;
+			}
+		});
+		$(content).slideToggle(function () {
+			$(this).toggleClass('active');
+		});
 	});
 }
 
@@ -1059,5 +1129,5 @@ function addSelect2ToNewItems(htmlNode) {
 		tags: true,
 		//maximumSelectionLength: 30,
 		dropdownCssClass: "default-select2"
-	}); // console.log($(htmlNode).find('.default-select-js'));
+	});
 }
