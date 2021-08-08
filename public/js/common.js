@@ -1057,18 +1057,14 @@ function eventHandler() {
 		document.body.style.opacity = '1';
 	}, 250); //
 
-	$('input').each(function () {
-		this.setAttribute('autocomplete', 'off');
-	}); //
-
 	$('.tells-input-row-js').each(function () {
 		let tellInputs = this.querySelectorAll('input');
 		$(tellInputs).keyup(function () {
-			if (event.key === "Delete" || event.key === "Backspace") {
+			if (event.key === "Delete" || event.key === "Backspace" || event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
 				return;
 			}
 
-			if (this.value.length === Number(this.getAttribute('data-symb-amount'))) {
+			if (this.getAttribute('pattern') && checkPattern(this)) {
 				let index = $(tellInputs).index(this);
 
 				if (tellInputs[index + 1]) {
@@ -1078,21 +1074,16 @@ function eventHandler() {
 				}
 			}
 		});
-	}); //???
-
-	let timeInputs = [].slice.call(document.querySelectorAll('.time-input-row-js input'));
-	$(timeInputs).each(function () {
-		this.setAttribute("pattern", "[0-9]{2}[:][0-9]{2}");
 	});
-	Inputmask("99:99").mask(timeInputs); //
-	// let chbDDHeads = document.querySelectorAll('.chb-dd-head-js');
-	// for (let head of chbDDHeads){
-	//   head.addEventListener('click', function (){
-	//     console.log(this);
-	//     console.log(chbDDHeads);
-	//   });
-	// }
 
+	function checkPattern(elem) {
+		return new RegExp(elem.getAttribute("pattern")).test(elem.value);
+	} //???
+
+
+	$('.number-mask-js').each(function () {
+		Inputmask(this.getAttribute('data-mask')).mask(this);
+	});
 	$('.chb-dd-head-js').click(function () {
 		//avoid label doublecall and chb click toggle
 		if (event.target.tagName === 'INPUT' || event.target.closest('label')) {

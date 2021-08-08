@@ -504,7 +504,7 @@
 				@include media-breakpoint-between(xlg, xl){
 					width: calc(var(--bs-gutter-x) + 153px);
 				}
-				@include media-breakpoint-up(xl){
+				@include media-breakpoint-up(base){
 					width: calc(var(--bs-gutter-x) + 211px);
 				}
 				& > *{

@@ -1655,7 +1655,7 @@ h5{
 	width: 100%;
 	@include media-breakpoint-up(md){
 		width: calc(100% - var(--i-title-w, 200px));
-		margin-left: auto;
+		margin-left: auto!important;
 	}
 
 	transform: translateY(10px);
