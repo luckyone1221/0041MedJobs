@@ -175,7 +175,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '047-576.png';
+	screenName = '048-2.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -1094,18 +1094,18 @@ function eventHandler() {
 	// }
 
 	$('.chb-dd-head-js').click(function () {
-		//avoid label doublecall
+		//avoid label doublecall and chb click toggle
 		if (event.target.tagName === 'INPUT' || event.target.closest('label')) {
 			return;
 		}
 
-		$(this.parentElement).toggleClass('active');
 		let content;
 		$(this.parentElement.childNodes).each(function () {
 			if ($(this).hasClass('chb-dd-content-js')) {
 				content = this;
 			}
 		});
+		$(content.parentElement).toggleClass('active');
 		$(content).slideToggle(function () {
 			$(this).toggleClass('active');
 		});

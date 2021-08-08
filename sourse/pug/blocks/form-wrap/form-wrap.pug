@@ -14,7 +14,6 @@ mixin input(placeholder,  t='text', label, name= t)
 					option(value=` placeholder ${x}`)= `placeholder ${x}`
 		else if t=='file'
 			+e.INPUT.input.form-control(name=name type=t)&attributes(attributes)
-			
 		else if t=='number'
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')&attributes(attributes)
 		else

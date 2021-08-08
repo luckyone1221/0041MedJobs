@@ -108,7 +108,37 @@ mixin modal()
 						+e.btn--gray(type="button") Очистить
 					.col-6
 						+e.btn--green(type="button") Применить
-
+	+b.modal-checkbox.modal-new.modal-win(id="modal-region" class=" " style="display: none")
+		+e.content
+			+e.header.text-center Выберите регионы показа
+			+e.checkboxes
+				+customChbAlt('Россия')(checked)
+				+customChbDDItem('Москва', '')
+				+customChbDDItem('Московская область', '')(checked)
+				+customChbDDItem('Санкт-Петербург', '')
+				+e.letter А
+				+customChbDDItem('Алтайский край', '')
+				+customChbDDItem('Амурская область', '')
+				+customChbDDItem('Архангельская область', '')
+				+e.letter Б
+				+customChbDDItem('Белгородская область', '')
+				+customChbDDItem('Брянская область', 'active')
+					+customChbAlt('Брянск')
+					+customChbAlt('Дятьково')(checked)
+					+customChbAlt('Жуковка')
+					+customChbAlt('Злынка')
+				+e.letter В
+				+customChbDDItem('Владимирская область', '')
+				//-
+				- for (var i = 0; i < 5; i++)
+					+customChbAlt(`Злынка${i}`)
+			+e.footer
+				+e.chosen-txt Выбрано: 1 страна, 7 регионов, 1 город
+				+e.btns-row.row
+					.col-6
+						+e.btn--gray(type="button") Очистить
+					.col-6
+						+e.btn--green(type="button") Применить
 	//end 048++
 	+b.modal-city.modal-win(id="modal-city" class=" " style="display: none" )
 		+e.title Выберите город
@@ -712,4 +742,8 @@ mixin customChbDDItem(txt, addClasses='')
 			+e.ddh-txt=txt
 			+customChb()&attributes(attributes)
 		+e.dd-content.chb-dd-content-js(class=addClasses)
-			block
+			if block
+				block
+			else
+				+customChbAlt('placeholder')(checked)
+				+customChbAlt('placeholder2')(checked)

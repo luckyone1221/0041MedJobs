@@ -509,6 +509,7 @@
 			@extend .btn-light;
 			border-radius: 60px;
 
+			padding: 10px 23px;
 			@media (max-width: 576px){
 				padding: 10px 11px;
 			}
@@ -1187,10 +1188,28 @@
 			justify-content: space-between;
 		}
 	}
+	.custom-chb{
+		.txt{
+			font-size: inherit!important;
+		}
+	}
+	&__letter{
+		padding: 12px 32px;
+		font-weight: 600;
+
+		font-size: 24px;
+		@include media-breakpoint-up(md){
+			font-size: 20px;
+		}
+		line-height: 1.25;
+	}
+
 	//
 	&__dd-item{
 		&.active{
-			--arrow-rotate: rotate(0deg);
+			& > .modal-checkbox__dd-head .modal-checkbox__dd-arrow{
+				--arrow-rotate: rotate(0deg);
+			}
 		}
 	}
 	&__dd-arrow{

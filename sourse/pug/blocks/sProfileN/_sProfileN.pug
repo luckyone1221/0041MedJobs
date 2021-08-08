@@ -616,9 +616,16 @@ mixin sProfileNCreateAlt(data)
 											+e.b-title Основная информация
 											+e.b-row.row
 												+e.b-col-pd--base.col-12
-													+input('Например, врач-терапевт', 'text', 'Название вакансии')
+													//-error
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Название вакансии
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger'}` type="" placeholder="Например, врач-терапевт")
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
 													//-
-													+e.input-wrap--no-lab
+													+e.input-wrap--no-lab.mb-xl-15
 														+e.input-title Выберите должность
 														+e.inps-row.row.gy-12
 															.col-12
@@ -626,7 +633,7 @@ mixin sProfileNCreateAlt(data)
 															.col-12
 																+e.chose-txt Выберите до 5-ти должностей из списка, которые подходят на вашу вакансию. Если ваша вакансия подходит под несколько должностей, то это поможет соискателям быстрее найти вашу вакансию, а вам быстрее найти соискателя.
 													//-
-													+e.input-wrap--no-lab
+													+e.input-wrap--no-lab.mb-xl-18
 														+e.input-title Covid-19
 														+e.inps-row.row.radio-row
 															.col-auto
@@ -644,18 +651,33 @@ mixin sProfileNCreateAlt(data)
 															.col-12
 																+customSlect('expirience', ['Полный рабочий день', 'Самара2', 'Самара2'])
 													//-
-													+e.input-wrap--no-lab
+													+e.input-wrap--no-lab.mb-xl-15
 														+e.input-title Заработная плата, ₽
-														+e.inps-row.row
+														+e.inps-row.row.gy-12
 															.col-12
-																+e.couple-row.row
+																+e.couple-row.row.mb-xl-1
 																	+e.c-col.col-6(data-ph="от")
-																		+e.INPUT.input--couple.form-control(type="text" placeholder='25 000')
+																		+e.INPUT.input--couple.form-control(type="text" placeholder='25 000' class=`${data.error && 'border-danger'}`)
 																	+e.c-col.col-6(data-ph="до")
-																		+e.INPUT.input--couple.form-control(type="text" placeholder='100 000')
+																		+e.INPUT.input--couple.form-control(type="text" placeholder='100 000' class=`${data.error && 'border-danger'}`)
 																+customChb('Не указывать')
-													+input('Введите адрес', 'text', 'Адрес работы')
-													+input('Введите описание вакансии', 'textarea', 'Описание вакансии')
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-error
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Адрес работы
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger'}` type="" placeholder="Введите адрес")
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													+e.input-wrap--no-lab.align-items-start
+														+e.input-title Описание вакансии
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.TEXTAREA.input--big-ta.form-control(placeholder="" class=`${data.error && 'border-danger'}`)
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
 													//-
 													+e.input-wrap--no-lab.align-items-start
 														+e.input-title Ключевые навыки
@@ -665,7 +687,7 @@ mixin sProfileNCreateAlt(data)
 																	option(selected) Умный
 																	option(selected) Усидчевый
 										+e.sub-box.sidebar-box-js(id="box-2")
-											+e.b-title Жилье
+											+e.b-title.mb-12 Жилье
 											//-
 											+e.b-row.row
 												+e.b-col-pd--base.col-12
@@ -687,7 +709,7 @@ mixin sProfileNCreateAlt(data)
 											+e.b-row.row
 												+e.b-col-pd--base.col-12
 													+e.sub-title-row.row
-														+e.st-title.col-md-auto.align-self-start Предоставление жилья
+														+e.st-title.col-md-auto.align-self-start Предоставление денежных выплат
 														.col-md
 															+repeatorBl('empty-content-js', 'Если ваша организация предоставляет денежные выплаты для соискателя, укажите об этом и вашу вакансию обязательно заметят.')
 																+e.inp-row.row.gy-18.pb-18
@@ -704,7 +726,7 @@ mixin sProfileNCreateAlt(data)
 											+e.b-row.row
 												+e.b-col-pd--base.col-12
 													+e.sub-title-row.row
-														+e.st-title.col-md-auto.align-self-start Предоставление жилья
+														+e.st-title.col-md-auto.align-self-start Предоставление бонусов
 														.col-md
 															+e.chb-items
 																+customChb('Предоставление мест в детских садах/школах')
@@ -714,18 +736,34 @@ mixin sProfileNCreateAlt(data)
 																+customChb('Внутреннее совместительство')
 																+customChb('Фитнес')
 																+e.chose-txt Если ваша организация предоставляет бонусы для соискателя, укажите об этом и вашу вакансию обязательно заметят.
-										+e.sub-box.sidebar-box-js(id="box-5")
+										+e.sub-box.sidebar-box-js.pt-xl-32(id="box-5")
 											+e.b-title Контактная информация
 											+e.b-row.row
 												+e.b-col-pd--base.col-12
-													+input('ФИО контактного лица', 'text', 'Контактное лицо')
-													+input('Введите должность', 'text', 'Должность')
+													//-error
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Контактное лицо
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger'}` type="" placeholder="ФИО контактного лица")
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Должность
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger'}` type="" placeholder="Введите должность")
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
 													//-
 													+e.input-wrap--no-lab
 														+e.input-title E-mail
 														+e.inps-row.row.gy-12
 															.col-12
-																+e.INPUT.input--w100percents.form-control(type="email" required name="email" placeholder="Введите e-mail")
+																+e.INPUT.input--w100percents.form-control(type="email" required name="email" placeholder="Введите e-mail" class=`${data.error && 'border-danger'}`)
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
 															.col-12
 																+e.chose-txt На этот адрес мы будем уведомлять вас о новых откликах.
 													//-
@@ -739,13 +777,15 @@ mixin sProfileNCreateAlt(data)
 																+e.tel-sub-row.row.align-items-center
 																	.col-auto (
 																	.col-auto
-																		+e.INPUT.input--w60.form-control(type="number" placeholder='___' data-symb-amount='3')
+																		+e.INPUT.input--w60.form-control(type="number" placeholder='___' data-symb-amount='3' class=`${data.error && 'border-danger'}`)
 																	.col-auto )
 															.col-auto
-																+e.INPUT.input--w120.form-control(type="number" placeholder='___-__-__' data-symb-amount='7')
+																+e.INPUT.input--w120.form-control(type="number" placeholder='___-__-__' data-symb-amount='7' class=`${data.error && 'border-danger'}`)
 															.col-auto
 																+e.INPUT.input--w120.form-control(type="number" placeholder='доб.' data-symb-amount='1')
 															//-
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
 															.col-12
 																+e.chose-txt На этот телефон будут звонить по вашей вакансии соискатели.
 													//-
@@ -756,12 +796,14 @@ mixin sProfileNCreateAlt(data)
 																+e.inps-row--tel-sub.row.gy-12.align-items-center.tells-input-row-js.time-input-row-js
 																	.col-auto с:
 																	.col-auto
-																		+e.INPUT.input--w80.form-control(type="number" placeholder='__:__' data-symb-amount='4')
+																		+e.INPUT.input--w80.form-control(type="number" placeholder='__:__' data-symb-amount='4' class=`${data.error && 'border-danger'}`)
 																	.col-auto до:
 																	.col-auto
-																		+e.INPUT.input--w80.form-control(type="number" placeholder='__:__' data-symb-amount='4')
+																		+e.INPUT.input--w80.form-control(type="number" placeholder='__:__' data-symb-amount='4' class=`${data.error && 'border-danger'}`)
 															+e.time-select-col.col-auto
 																+customSlect('days', ['Любой день', 'Самара2', 'Самара2'])
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
 															.col-12
 																+e.chose-txt На этот телефон будут звонить по вашей вакансии соискатели.
 															.col-12.pt-12
@@ -776,13 +818,33 @@ mixin sProfileNCreateAlt(data)
 														+e.st-title.col-md-auto.align-self-start Отрасли вакансии
 														.col-md
 															+e.c-btn--blue.link-modal(href="#modal-sphere") Выбрать
+															if data.error
+																+e.error.text-start.text-danger.mb-12 Выберите отрасль для вакансии.
 															+e.c-hint Выберите одну или несколько отраслей.
 													+e.sub-title-row.row
 														+e.st-title.col-md-auto.align-self-start Регионы показа
 														.col-md
-															+e.c-btn--blue.link-modal(href="#modal-region") Выбрать
-															+e.c-hint Выберите один или несколько регионов для показа.
-				.col-xlg-auto.d-none.d-xlg-block
+															if !data.chosen
+																+e.c-btn--blue.link-modal(href="#modal-region") Выбрать
+																if data.error
+																	+e.error.text-start.text-danger.mb-12 Выберите регион показа.
+																+e.c-hint Выберите один или несколько регионов для показа.
+															else
+																+e.chosen-items
+																	+e.c-item Республика Башкортостан
+																	+e.c-item Москва
+																	+e.c-item Санкт-Петербург
+																	+e.c-item Владикавказ
+																	+e.c-item Московская область
+																+e.chosen-txt Выбрано: 1 страна, 7 регионов, 1 город
+																+e.c-btn--blue.link-modal(href="#modal-region") Изменить
+										+e.sub-footer
+											+e.sub-btns-row.row.justify-content-center.justify-content-md-end
+												.col-auto
+													+e.cr-btn--gray(type="button") Сохранить как черновик
+												.col-auto
+													+e.cr-btn--green(type="button") Опубликовать вакансию
+				+e.aside-menu-col.col-xlg-auto.d-none.d-xlg-block
 					+asideMenu()
 						ul
 							li: a.active(href='#box-1') Основная информация
