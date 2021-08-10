@@ -619,7 +619,11 @@
 				font-size: inherit!important;
 			}
 			&__c-hint{
-
+				font-size: 15px;
+				@include media-breakpoint-up(md){
+					font-size: 13px;
+				}
+				line-height: (16/13);
 			}
 			//
 			&__sub-footer{
@@ -629,32 +633,45 @@
 			&__chosen-items{
 				line-height: (18/15);
 				margin-bottom: 12px;
+
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
 			}
 			&__c-item{
+				cursor: pointer;
+
+				display: none;
+				&.active{
+					display: block;
+				}
+
 				margin-bottom: 6px;
 				&:last-child{
 					margin-bottom: 0;
 				}
 
-				display: flex;
-				align-items: center;
-				&:after{
-					content: '';
-					flex-shrink: 0;
+				span{
+					display: flex;
+					align-items: center;
+					&:after{
+						content: '';
+						flex-shrink: 0;
 
-					width: 12px;
-					height: 12px;
-					margin-left: 10px;
-					@include media-breakpoint-up(md){
-						width: 8px;
-						height: 8px;
-						margin-left: 5px;
+						width: 12px;
+						height: 12px;
+						margin-left: 10px;
+						@include media-breakpoint-up(md){
+							width: 8px;
+							height: 8px;
+							margin-left: 5px;
+						}
+
+						background-image: url(../img/svg/cross-gray.svg);
+						background-repeat: no-repeat;
+						background-size: contain;
+						background-position: center;
 					}
-
-					background-image: url(../img/svg/cross-gray.svg);
-					background-repeat: no-repeat;
-					background-size: contain;
-					background-position: center;
 				}
 			}
 			&__chosen-txt{
@@ -918,15 +935,21 @@
 				padding-bottom: 24px;
 			}
 			.custom-chb{
-				align-items: center;
+				//align-items: center;
+
 				&:last-child{
 					margin-bottom: 0;
 				}
 				.square{
-					margin-right: 6px;
+					margin-right: 12px;
+					@include media-breakpoint-up(md){
+						margin-right: 6px;
+					}
 				}
 				.txt{
 					font-size: inherit;
+					line-height: rem(24);
+					margin: 0;
 					//@media (max-width: 576px){
 					//	font-size: 20px;
 					//}
@@ -997,12 +1020,15 @@
 			}
 			//
 			&__cr-btn{
+				@media (max-width: 576px){
+					min-width: 100%;
+				}
 				min-width: 219px;
 				padding: 11px 16px;
 				border-radius: 60px;
 
 				@media (max-width: 576px){
-					font-size: 17px;
+					font-size: 18px;
 					padding: 11px 6px;
 				}
 				font-size: 15px;

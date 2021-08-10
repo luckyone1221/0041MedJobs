@@ -272,8 +272,8 @@ mixin customChbGroup(arr)
 				+customChb(arr[i])
 			block
 
-mixin customChb(txt)
-	+b.LABEL.custom-chb
+mixin customChb(txt, addClasses='')
+	+b.LABEL.custom-chb(class=addClasses)
 		input(type="checkbox" class="d-none" name="name")&attributes(attributes)
 		span.square
 		span.txt=txt

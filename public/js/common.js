@@ -1098,6 +1098,12 @@ function eventHandler() {
 		$(content).slideToggle(function () {
 			$(this).toggleClass('active');
 		});
+	}); //.c-item-js
+
+	$('.c-item-js').click(function () {
+		$(this).slideUp(function () {
+			$(this).removeClass('active');
+		});
 	});
 }
 

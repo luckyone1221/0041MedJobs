@@ -1145,6 +1145,13 @@ function eventHandler() {
       $(this).toggleClass('active');
     });
   });
+  //.c-item-js
+  $('.c-item-js').click(function (){
+    $(this).slideUp(function (){
+      $(this).removeClass('active');
+    })
+  })
+
 };
 if (document.readyState !== 'loading') {
   eventHandler();
