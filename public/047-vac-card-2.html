@@ -180,7 +180,7 @@
 										 window.setTimeout(function (){
 											 ymaps.ready(function () {
 												 var myMap = new ymaps.Map('map', {
-														 center: [59.938600861371185,30.213698854492115],
+														 center: [59.939100861371185,30.213698854492115],
 														 zoom: 16
 													 }, {
 														 searchControlProvider: 'yandex#search'
@@ -729,6 +729,571 @@
 			</div>
 		</div>
 		<!--end 045++-->
+		<!--048++-->
+		<div class="modal-checkbox modal-new modal-win" id="modal-sphere" style="display: none">
+			<div class="modal-checkbox__content">
+				<div class="modal-checkbox__header text-center">Выберите отрасль
+				</div>
+				<div class="modal-checkbox__checkboxes">
+					<div class="modal-checkbox__dd-item chb-dd-item-js active">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Медицина, фармацевтика
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js active">
+							<div class="modal-checkbox__dd-item chb-dd-item-js active">
+								<div class="modal-checkbox__dd-head chb-dd-head-js">
+									<div class="modal-checkbox__dd-arrow">
+									</div>
+									<div class="modal-checkbox__ddh-txt">Медицинские организации
+									</div>
+									<label class="custom-chb">
+										<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+									</label>
+								</div>
+								<div class="modal-checkbox__dd-content chb-dd-content-js active">
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стационар</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Женская консультация</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Лаборатория</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Поликлиника</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Роддом, родильное отделение</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Наркология</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Психиатрия</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фтизиатрия</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Травпункт</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Хоспис</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Аптека</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стоматология</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Скорая помощь</span>
+										</label>
+									</div>
+									<div class="modal-checkbox__chb-cont">
+										<label class="custom-chb">
+											<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Онкология</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Аптека</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Салоны оптики, мед. оборудования и т.д.</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Лаборатории</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Научно-исследовательские и научно-практические учреждения</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Уход за больными, Хосписы</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фармацевтика</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Санаторий</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Санитарно-эпидемиологический надзор</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Другое</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">IT, интернет, связь</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Административная работа, серкретариат, АХО</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Безопасность, службы охраны</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Бухгалтерия, финансы, аудит</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная служба</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-checkbox__footer">
+					<div class="modal-checkbox__chosen-txt">Выбрано: 7 отраслей
+					</div>
+					<div class="modal-checkbox__btns-row row">
+						<div class="col-6">
+							<button class="modal-checkbox__btn modal-checkbox__btn--gray" type="button">Очистить
+							</button>
+						</div>
+						<div class="col-6">
+							<button class="modal-checkbox__btn modal-checkbox__btn--green" type="button">Применить
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-checkbox modal-new modal-win" id="modal-region" style="display: none">
+			<div class="modal-checkbox__content">
+				<div class="modal-checkbox__header text-center">Выберите регионы показа
+				</div>
+				<div class="modal-checkbox__checkboxes">
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Россия</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Москва
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Московская область
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Санкт-Петербург
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__letter">А
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Алтайский край
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Амурская область
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Архангельская область
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__letter">Б
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Белгородская область
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js active">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Брянская область
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js active">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Брянск</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Дятьково</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Жуковка</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Злынка</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__letter">В
+					</div>
+					<div class="modal-checkbox__dd-item chb-dd-item-js">
+						<div class="modal-checkbox__dd-head chb-dd-head-js">
+							<div class="modal-checkbox__dd-arrow">
+							</div>
+							<div class="modal-checkbox__ddh-txt">Владимирская область
+							</div>
+							<label class="custom-chb">
+								<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt"></span>
+							</label>
+						</div>
+						<div class="modal-checkbox__dd-content chb-dd-content-js">
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder</span>
+								</label>
+							</div>
+							<div class="modal-checkbox__chb-cont">
+								<label class="custom-chb">
+									<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">placeholder2</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Злынка0</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Злынка1</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Злынка2</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Злынка3</span>
+						</label>
+					</div>
+					<div class="modal-checkbox__chb-cont">
+						<label class="custom-chb">
+							<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Злынка4</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-checkbox__footer">
+					<div class="modal-checkbox__chosen-txt">Выбрано: 1 страна, 7 регионов, 1 город
+					</div>
+					<div class="modal-checkbox__btns-row row">
+						<div class="col-6">
+							<button class="modal-checkbox__btn modal-checkbox__btn--gray" type="button">Очистить
+							</button>
+						</div>
+						<div class="col-6">
+							<button class="modal-checkbox__btn modal-checkbox__btn--green" type="button">Применить
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end 048++-->
 		<div class="modal-city modal-win" id="modal-city" style="display: none">
 			<div class="modal-city__title">Выберите город
 			</div>

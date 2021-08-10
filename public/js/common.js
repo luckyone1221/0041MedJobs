@@ -200,7 +200,27 @@ function eventHandler() {
 	});
 	scrollHandler(); // modal window
 	//luckyone js
-	//alert line
+	//css vars
+
+	let header = document.querySelector("#headerAlt");
+	let headerH;
+	document.documentElement.style.setProperty('--scroll-width', "".concat(scrollWidth, "px"));
+
+	function calcCssVars() {
+		document.documentElement.style.setProperty('--header-h', "".concat(header.offsetHeight, "px"));
+		headerH = header.offsetHeight;
+	}
+
+	if (header) {
+		window.addEventListener('resize', calcCssVars, {
+			passive: true
+		});
+		window.addEventListener('scroll', calcCssVars, {
+			passive: true
+		});
+		calcCssVars();
+	} //alert line
+
 
 	let alertLine = document.querySelector('.alert-line--js');
 
@@ -386,43 +406,39 @@ function eventHandler() {
 
 	let sidebarItems = document.querySelectorAll('.sidebar-box-js');
 	let sidebarLinks = document.querySelectorAll('.aside-menu-js > ul > li > a');
-	let sideBarItemsMiddle = [];
 
-	function setSBItemMiddle() {
+	function setSidebarAncorsWork() {
+		let scrollTop = window.scrollY;
+		let distance = [];
+
 		for (let item of sidebarItems) {
-			sideBarItemsMiddle.push(item.getBoundingClientRect().top + item.offsetHeight / 2);
+			let itemTop = item.getBoundingClientRect().top;
+			distance.push(Math.abs(itemTop));
 		}
+
+		console.log('end func');
+		let min = distance[0];
+		let minIndex = 0;
+		$(distance).each(function () {
+			if (this < min) {
+				min = this;
+				minIndex = $(distance).index(this);
+			}
+		});
+		$(sidebarLinks).removeClass('active');
+		$(sidebarLinks[minIndex]).addClass('active');
 	}
 
 	if (sidebarLinks.length > 0 && sidebarItems.length > 0) {
-		window.addEventListener('resize', function () {
-			setSBItemMiddle();
-		}, {
+		setSidebarAncorsWork();
+		document.addEventListener('scroll', setSidebarAncorsWork, {
 			passive: true
 		});
-		setSBItemMiddle();
-	}
+		document.addEventListener('resize', setSidebarAncorsWork, {
+			passive: true
+		});
+	} //.lc-cont-js
 
-	document.addEventListener('scroll', function () {
-		let scrollTop = window.scrollY;
-
-		for (let [index, middle] of Object.entries(sideBarItemsMiddle)) {
-			let prev;
-
-			if (index == 0) {
-				prev = 0;
-			} else {
-				prev = sideBarItemsMiddle[index - 1];
-			}
-
-			if (scrollTop < middle && scrollTop > prev) {
-				$(sidebarLinks).removeClass('active');
-				sidebarLinks[index].classList.add('active');
-			}
-		}
-	}, {
-		passive: true
-	}); //.lc-cont-js
 
 	$('.lc-cont-js').click(function () {
 		document.body.removeEventListener('click', lcPPMissClick);
@@ -489,24 +505,6 @@ function eventHandler() {
 			document.body.removeEventListener('click', nMenuMissClick);
 			$('.mvp-menu--js, .mvp-burger-js').removeClass('active');
 		}
-	} //css vars
-
-
-	let header = document.querySelector("#headerAlt");
-	document.documentElement.style.setProperty('--scroll-width', "".concat(scrollWidth, "px"));
-
-	function calcCssVars() {
-		document.documentElement.style.setProperty('--header-h', "".concat(header.offsetHeight, "px"));
-	}
-
-	if (header) {
-		window.addEventListener('resize', calcCssVars, {
-			passive: true
-		});
-		window.addEventListener('scroll', calcCssVars, {
-			passive: true
-		});
-		calcCssVars();
 	} //custom modal
 
 
@@ -969,7 +967,7 @@ function eventHandler() {
 	let FamiliarItems = document.querySelector('.sVacCard-familiar-js');
 
 	if (sVacCardStrip && FamiliarItems) {
-		console.log('ok');
+		//console.log('ok');
 		document.addEventListener('scroll', function () {
 			let scrollTop = window.scrollY;
 			let FamiliarTop = getCoords(FamiliarItems).top;
@@ -1012,11 +1010,11 @@ function eventHandler() {
 	// 	yandexScript.setAttribute('type', 'text/javascript');
 	//
 	// 	document.body.appendChild(yandexScript);
-	// 	console.log(yandexScript);
+	// 	//console.log(yandexScript);
 	// 	window.setTimeout(function (){
 	// 		ymaps.ready(function () {
 	// 			var myMap = new ymaps.Map('map', {
-	// 					center: [59.938600861371185,30.213698854492115],
+	// 					center: [59.939300861371185,30.213698854492115],
 	// 					zoom: 16
 	// 				}, {
 	// 					searchControlProvider: 'yandex#search'

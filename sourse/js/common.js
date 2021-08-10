@@ -199,7 +199,21 @@ function eventHandler() {
   // modal window
 
   //luckyone js
+  //css vars
+  let header = document.querySelector("#headerAlt");
+  let headerH;
+  document.documentElement.style.setProperty('--scroll-width', `${scrollWidth}px`);
 
+  function calcCssVars() {
+    document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+    headerH = header.offsetHeight;
+  }
+
+  if (header) {
+    window.addEventListener('resize', calcCssVars, {passive: true});
+    window.addEventListener('scroll', calcCssVars, {passive: true});
+    calcCssVars();
+  }
   //alert line
   let alertLine = document.querySelector('.alert-line--js');
 
@@ -400,38 +414,34 @@ function eventHandler() {
   //aside menu js
   let sidebarItems = document.querySelectorAll('.sidebar-box-js');
   let sidebarLinks = document.querySelectorAll('.aside-menu-js > ul > li > a');
-  let sideBarItemsMiddle = [];
 
-  function setSBItemMiddle() {
-    for (let item of sidebarItems) {
-      sideBarItemsMiddle.push(item.getBoundingClientRect().top + item.offsetHeight / 2);
+  function setSidebarAncorsWork(){
+    let scrollTop = window.scrollY;
+    let distance = [];
+    for (let item of sidebarItems){
+      let itemTop = item.getBoundingClientRect().top;
+      distance.push(Math.abs(itemTop));
     }
+    console.log('end func');
+
+    let min = distance[0];
+    let minIndex = 0;
+    $(distance).each(function (){
+      if (this < min){
+        min = this;
+        minIndex = $(distance).index(this);
+      }
+    });
+
+    $(sidebarLinks).removeClass('active')
+    $(sidebarLinks[minIndex]).addClass('active');
   }
 
   if (sidebarLinks.length > 0 && sidebarItems.length > 0) {
-    window.addEventListener('resize', function () {
-      setSBItemMiddle();
-    }, {passive: true});
-
-    setSBItemMiddle();
+    setSidebarAncorsWork();
+    document.addEventListener('scroll', setSidebarAncorsWork, {passive: true});
+    document.addEventListener('resize', setSidebarAncorsWork, {passive: true});
   }
-
-  document.addEventListener('scroll', function () {
-    let scrollTop = window.scrollY;
-    for (let [index, middle] of Object.entries(sideBarItemsMiddle)) {
-      let prev;
-      if (index == 0) {
-        prev = 0;
-      } else {
-        prev = sideBarItemsMiddle[index - 1];
-      }
-
-      if (scrollTop < middle && scrollTop > prev) {
-        $(sidebarLinks).removeClass('active');
-        sidebarLinks[index].classList.add('active');
-      }
-    }
-  }, {passive: true});
 
   //.lc-cont-js
   $('.lc-cont-js').click(function () {
@@ -501,20 +511,6 @@ function eventHandler() {
       document.body.removeEventListener('click', nMenuMissClick);
       $('.mvp-menu--js, .mvp-burger-js').removeClass('active');
     }
-  }
-
-  //css vars
-  let header = document.querySelector("#headerAlt");
-  document.documentElement.style.setProperty('--scroll-width', `${scrollWidth}px`);
-
-  function calcCssVars() {
-    document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
-  }
-
-  if (header) {
-    window.addEventListener('resize', calcCssVars, {passive: true});
-    window.addEventListener('scroll', calcCssVars, {passive: true});
-    calcCssVars();
   }
   //custom modal
   $('.custom-modal-link-js').click(function () {
@@ -1018,7 +1014,7 @@ function eventHandler() {
   let sVacCardStrip = document.querySelector('.sVacCard-fixed-strip-js');
   let FamiliarItems = document.querySelector('.sVacCard-familiar-js');
   if (sVacCardStrip && FamiliarItems) {
-    console.log('ok');
+    //console.log('ok');
 
     document.addEventListener('scroll', function () {
       let scrollTop = window.scrollY;
@@ -1054,18 +1050,17 @@ function eventHandler() {
   //
   //yandex lazy
   //fix here put into pug afterwards
-
   // window.setTimeout(function (){
   // 	let yandexScript = document.createElement('script');
   // 	yandexScript.setAttribute('src', 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ef0b1dde-1d01-4d5b-9636-c00e2adbee98');
   // 	yandexScript.setAttribute('type', 'text/javascript');
   //
   // 	document.body.appendChild(yandexScript);
-  // 	console.log(yandexScript);
+  // 	//console.log(yandexScript);
   // 	window.setTimeout(function (){
   // 		ymaps.ready(function () {
   // 			var myMap = new ymaps.Map('map', {
-  // 					center: [59.938600861371185,30.213698854492115],
+  // 					center: [59.939300861371185,30.213698854492115],
   // 					zoom: 16
   // 				}, {
   // 					searchControlProvider: 'yandex#search'
@@ -1150,14 +1145,12 @@ function eventHandler() {
       $(this).toggleClass('active');
     });
   });
-
 };
 if (document.readyState !== 'loading') {
   eventHandler();
 } else {
   document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
 
 function addSelect2ToNewItems(htmlNode) {
   $(htmlNode).find('.default-select-js').select2({
