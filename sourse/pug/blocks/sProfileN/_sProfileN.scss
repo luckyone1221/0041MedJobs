@@ -1022,18 +1022,15 @@
 			&__cr-btn{
 				@media (max-width: 576px){
 					min-width: 100%;
+					padding: 12px 23px;
 				}
 				min-width: 219px;
 				padding: 11px 16px;
 				border-radius: 60px;
 
-				@media (max-width: 576px){
-					font-size: 18px;
-					padding: 11px 6px;
-				}
-				font-size: 15px;
-				@include media-breakpoint-between(xlg,xl){
-					font-size: 13px;
+				font-size: inherit!important;
+				@include media-breakpoint-between(xlg, xl){
+					padding: 9px 18px;
 				}
 
 				&--gray{

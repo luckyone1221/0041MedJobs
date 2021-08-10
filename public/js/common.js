@@ -548,8 +548,9 @@ function eventHandler() {
 		newItem.classList.add('custom-modal__r-item', 'r-item-js', 'd-none-no-important');
 		newItem.innerHTML = content;
 		btnParent.insertBefore(newItem, this);
+		addSelect2ToNewItems(newItem);
 		$(newItem).slideDown(function () {
-			addSelect2ToNewItems(this);
+			//was here
 			$(this).removeClass('d-none-no-important');
 			let index = $(this).index();
 			let names = newItem.querySelectorAll('[name]');
@@ -930,7 +931,6 @@ function eventHandler() {
 			let itemBottom = sCatalogItems.offsetHeight + getCoords(sCatalogItems).top;
 			let scolledOverCatItems = scrollTop + document.documentElement.clientHeight > itemBottom;
 			let scolledTopCatItems = window.scrollY > getCoords(sCatalogItems).top;
-			console.log(scolledOverCatItems, scolledTopCatItems);
 
 			if (scolledTopCatItems && !scolledOverCatItems) {
 				$('.cat-filter-toggle-js').addClass('active');

@@ -266,7 +266,16 @@ mixin sCatalogFilter()
 						+sCatalogFilterChb('Частная')
 						+sCatalogFilterChb('Государтсвенная')
 						+sCatalogFilterChb('Иностранная')
-				+sCatalogFilterItem('Отрасли')
+				+sCatalogFilterItem('Отрасль компании')
+					+e.chb-items.chb-items-js
+						+sCatalogFilterChb('Медицина, фармацевтика')
+						+sCatalogFilterChb('It, интернет, связь')
+						+sCatalogFilterChb('Госудраственная служба')
+						+sCatalogFilterChb('Кадры, управление персоналом')(checked)
+						+sCatalogFilterChb('Промышленность, производство')
+						+sCatalogFilterChb('Спорт, фитнес, салоны красоты, СПА')
+						+e.modal-btn(href="#") Выбрать несколько
+				+sCatalogFilterItem('Профотрасли')
 					+e.chb-items.chb-items-js
 						+sCatalogFilterChb('Медицина, фармацевтика')
 						+sCatalogFilterChb('It, интернет, связь')
