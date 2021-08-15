@@ -1,0 +1,120 @@
+// start .sProff
+.sProff {
+	--sPT: 20px;
+	--sPB: 60px;
+	--sTPB: 40px;
+	@include media-breakpoint-up(xl){
+		--sPT: 24px;
+		--sPB: 60px;
+		--sTPB: 40px;
+	}
+
+	.breadcrumb{
+		margin-bottom: 15px;
+		a{
+			font-size: 20px;
+			@include media-breakpoint-up(md){
+				font-size: 13.4px;
+			}
+		}
+
+		.breadcrumb-item:after{
+			margin: 0 5px;
+		}
+	}
+
+	//
+	.section-title{
+		h1{
+			font-weight: 600;
+			line-height: 1.25;
+			letter-spacing: -0.4px;
+
+			font-size: 42px;
+			@include media-breakpoint-up(md){
+				font-size: 36px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 42px;
+			}
+		}
+	}
+
+	&__main-row{
+		--bs-gutter-x: 32px;
+	}
+
+	//
+	&__item{
+		margin-bottom: 24px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 24px;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__letter{
+		font-weight: 600;
+
+		font-size: 30px;
+		margin-bottom: 12px;
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+		}
+	}
+	&__i-row{
+		--bs-gutter-x: 24px;
+		--bs-gutter-y: 18px;
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: 20px;
+			--bs-gutter-y: 12px;
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: 24px;
+		}
+	}
+	//
+	&__card{
+		//min-height: 100%;
+		display: block;
+		padding: var(--bs-gutter-y) 0;
+		&:first-child{
+			padding-top: 0;
+		}
+
+		border-bottom: 1px dashed $gary-110;
+
+		color: $headings-color;
+		&:hover{
+			color: $cyan;
+		}
+	}
+	&__name{
+		display: block;
+		margin-bottom: 6px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 4px;
+		}
+	}
+	&__vac{
+		display: block;
+
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+		color: $gray-600;
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sProff

@@ -21,6 +21,25 @@
 
 	overflow: hidden;
 
+	&--article{
+		--sPT: 0!important;
+		--sPB: 60px!important;
+
+		--sTPB: 24px!important;
+		@include media-breakpoint-up(md){
+			--sTPB: 20px!important;
+		}
+		@include media-breakpoint-up(xl){
+			--sTPB: 26px!important;
+		}
+	}
+	&__row{
+		--bs-gutter-x: 24px;
+		--bs-gutter-y: 24px;
+	}
+	//
+
+
 	&__slider-wrap{
 		//@media (max-width: 577px) {
 		//	position: relative;
@@ -175,3 +194,73 @@
 	&__{}
 	&__{}
 } // end.sUsefull
+
+//
+.blog-item{
+	display: block;
+	@include mt();
+	&:hover{
+		@include media-breakpoint-up(xl){
+			transform: translateY(-4px);
+		}
+
+		--title-col: #{$cyan};
+	}
+
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (220/364) * 100%;
+
+		border-radius: 12px;
+		@include media-breakpoint-up(md){
+			border-radius: 8px;
+		}
+
+		margin-bottom: 18px;
+	}
+	&__articles{
+		margin-bottom: 12px;
+		display: inline-block;
+		width: auto;
+
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+		color: $gray-600;
+	}
+	&__title{
+		@include mt();
+		display: block;
+		font-weight: 600;
+		margin-bottom: 12px;
+
+		font-size: 30px;
+		@include media-breakpoint-up(md){
+			font-size: 20px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 24px;
+		}
+		letter-spacing: -0.3px;
+
+		color: var(--title-col, #{$headings-color});
+	}
+
+	//
+	&__descr{
+		display: block;
+		margin-bottom: 11px;
+		color: $headings-color;
+		letter-spacing: -0.15px;
+	}
+	//
+	&__date{
+		color: $gray-600;
+
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+	}
+}

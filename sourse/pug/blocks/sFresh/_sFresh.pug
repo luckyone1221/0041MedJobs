@@ -41,7 +41,8 @@ mixin sFreshSlide(data)
 			+e.salary
 				span 30 000-35 000
 				span.ff-mono.ms-1 ₽
-			+e.descr Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат
+			if !data.noDescr
+				+e.descr Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат
 			.mt-auto
 				+e.bot-row.row.align-items-end.align-items-xl-center
 					.col

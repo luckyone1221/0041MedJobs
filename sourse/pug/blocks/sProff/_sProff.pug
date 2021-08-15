@@ -1,0 +1,51 @@
+mixin sProff(data)
+	// start sProff
+	+b.SECTION.sProff.section#sProff&attributes(attributes)
+		.container
+			+e.main-row.row
+				.col
+					.d-none.d-md-block
+						+breadcrumb('Главная', 'Профессии')
+					+b.section-title
+						h1 Профессии
+					+e.items
+						+sProffItem('А')
+						+sProffItem('Б')
+						+sProffItem('В')
+						+sProffItem('Г')
+				+sCityAcors()
+					+sCityAncor('А')
+					+sCityAncor('Б')
+					+sCityAncor('В')
+					+sCityAncor('Г')
+	// end sProff
+
+mixin sProffItem(letter)
+	+e.item(id=letter)
+		+e.letter=letter
+		+e.i-row.row
+			.col-md-6.col-lg-3
+				+sProffCard('Врач - детский кардиолог', '163 вакансий')
+				+sProffCard('Врач - детский онколог', '163 вакансий')
+				+sProffCard('Врач - детский уролог-андролог', '163 вакансий')
+				+sProffCard('Врач - детский хирург', '163 вакансий')
+			.col-md-6.col-lg-3
+				+sProffCard('Врач - детский эндокринолог', '163 вакансий')
+				+sProffCard('Врач - клинический фармаколог', '163 вакансий')
+				+sProffCard('Врач - лабораторный генетик', '163 вакансий')
+				+sProffCard('Врач - пластический хирург', '163 вакансий')
+			.col-md-6.col-lg-3
+				+sProffCard('Врач - сердечно-сосудистый хирург', '163 вакансий')
+				+sProffCard('Врач - судебно-медицинский эксперт', '163 вакансий')
+				+sProffCard('Врач - судебно-психиатрический эксперт', '163 вакансий')
+				+sProffCard('Врач - челюстно-лицевой хирург', '163 вакансий')
+			.col-md-6.col-lg-3
+				+sProffCard('Врач - детский эндокринолог', '163 вакансий')
+				+sProffCard('Врач - клинический фармаколог', '163 вакансий')
+				+sProffCard('Врач - лабораторный генетик', '163 вакансий')
+				+sProffCard('Врач - пластический хирург', '163 вакансий')
+
+mixin sProffCard(name, vac)
+	+e.card(href='#')
+		+e.name=name
+		+e.vac=vac

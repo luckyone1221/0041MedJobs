@@ -175,7 +175,7 @@ function eventHandler() {
   // JSCCommon.CustomInputFile();
   var x = window.location.host;
   let screenName;
-  screenName = '050.png';
+  screenName = '051-576.png';
   if (screenName && x.includes("localhost:30")) {
     document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
   }
@@ -363,7 +363,6 @@ function eventHandler() {
     slidesPerView: 'auto',
     spaceBetween: 12,
 
-    slidesPerView: 'auto',
     freeMode: true,
     //freeModeMomentum: true,
   });
@@ -881,16 +880,41 @@ function eventHandler() {
     window.addEventListener('scroll', calcInpNavW, {passive: true});
     calcInpNavW();
   }
-  //
-  let sDayVacSlider = new Swiper('.sDayVac-slider-js', {
-    slidesPerView: 'auto',
-    spaceBetween: 24,
 
-    navigation: {
-      nextEl: '.swiper-next',
-      prevEl: '.swiper-prev',
-    },
-  });
+  //!!!
+  $('.sDayVac-slider-js').each(function (){
+    let prev = this.parentElement.querySelector('.swiper-prev');
+    let next = this.parentElement.querySelector('.swiper-next');
+
+    let sDayVacSlider = new Swiper(this, {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      watchOverflow: true,
+
+      navigation: {
+        nextEl: prev,
+        prevEl: next,
+      },
+    });
+
+    //??
+    sDayVacSlider.on('slideChange', function () {
+      checkSliderOverflow(prev, next);
+    });
+    window.setTimeout(function (){
+      checkSliderOverflow(prev, next);
+    }, 10);
+  })
+  function checkSliderOverflow(prev, next){
+    $(prev).hasClass('swiper-button-disabled') ?
+      $(prev).closest('.sFresh-wrap-js').addClass('before-hidden'):
+      $(prev).closest('.sFresh-wrap-js').removeClass('before-hidden');
+
+    $(next).hasClass('swiper-button-disabled') ?
+      $(next).closest('.sFresh-wrap-js').addClass('after-hidden'):
+      $(next).closest('.sFresh-wrap-js').removeClass('after-hidden');
+  }
+
   //
   let sUsefullSlider = new Swiper('.sUsefull-slider-js', {
     slidesPerView: 'auto',
