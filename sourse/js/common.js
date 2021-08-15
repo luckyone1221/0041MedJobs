@@ -141,7 +141,7 @@ const JSCCommon = {
     }, {passive: true});
   },
   animateScroll() {
-    let header = document.querySelector("#headerAlt");
+    let header = document.querySelector("#headerAlt") || document.querySelector('.top-nav');
     $(document).on('click', '.scroll-link, .aside-menu-js > ul > li > a', function () {
       event.preventDefault();
       const elementClick = $(this).attr("href");
@@ -175,7 +175,7 @@ function eventHandler() {
   // JSCCommon.CustomInputFile();
   var x = window.location.host;
   let screenName;
-  screenName = '048-2.png';
+  screenName = '050.png';
   if (screenName && x.includes("localhost:30")) {
     document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
   }
@@ -200,7 +200,7 @@ function eventHandler() {
 
   //luckyone js
   //css vars
-  let header = document.querySelector("#headerAlt");
+  let header = document.querySelector("#headerAlt") || document.querySelector(".top-nav");
   let headerH;
   document.documentElement.style.setProperty('--scroll-width', `${scrollWidth}px`);
 
@@ -214,6 +214,7 @@ function eventHandler() {
     window.addEventListener('scroll', calcCssVars, {passive: true});
     calcCssVars();
   }
+
   //alert line
   let alertLine = document.querySelector('.alert-line--js');
 
@@ -237,6 +238,20 @@ function eventHandler() {
       freeModeMomentum: true,
     });
   }
+  //top-box height
+  let topBox = document.querySelector(".top-box-js");
+  function calcTopBoxH() {
+    if (topBox.offsetHeight !== 0){
+      document.documentElement.style.setProperty('--top-box-h', `${topBox.offsetHeight}px`);
+    }
+  }
+  if (topBox) {
+    window.addEventListener('resize', calcTopBoxH, {passive: true});
+    window.addEventListener('scroll', calcTopBoxH, {passive: true});
+    calcTopBoxH();
+  }
+
+  //
 
   $('.burger-js').click(function () {
     $('.burger-js, .mm--js, .top-nav').toggleClass('active');
@@ -870,6 +885,11 @@ function eventHandler() {
   let sDayVacSlider = new Swiper('.sDayVac-slider-js', {
     slidesPerView: 'auto',
     spaceBetween: 24,
+
+    navigation: {
+      nextEl: '.swiper-next',
+      prevEl: '.swiper-prev',
+    },
   });
   //
   let sUsefullSlider = new Swiper('.sUsefull-slider-js', {
@@ -1150,6 +1170,11 @@ function eventHandler() {
       $(this).removeClass('active');
     })
   })
+  //
+  $('.paint-down-md-whihe-js').click(function (){
+    $('.fancybox-bg').addClass('white-down-md');
+    $('.fancybox-slide--html').addClass('p-0');
+  });
 
 };
 if (document.readyState !== 'loading') {

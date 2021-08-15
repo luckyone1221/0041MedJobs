@@ -23,72 +23,58 @@ mixin sCatalog(data)
 						+icon('filter')
 			+e.main-row.row
 				.col-lg-9
-					+e.items.sCatalog-js
-						+sCatalogItem({
-							title: 'Врач стоматолог-терапевт-хирург',
-							salary: '30 000-35 000',
-							defaultBtns: true,
-							pillsRow: true,
-							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
-							logoImg: 2,
-						})
-							+sCatalogItemPill('#EFF2F6', 'Будьте первыми')
-							+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
-							+sCatalogItemPill('#feefe9', 'Covid-19', 1)
-							+sCatalogItemPill('#edfbf3', 'Жилье', 4)
-							+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
-							+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
-						+sCatalogItem({
-							addClasses: 'blue-card',
-							title: 'Архивариус',
-							salary: '50 000',
-							defaultBtns: true,
-							organization: 'БУДЬ ЗДОРОВ, Клиника',
-							logoImg: '4',
-						})
-						+sCatalogItem({
-							title: 'Медицинская сестра',
-							salary: '30 000-35 000',
-							defaultBtns: false,
-							serviceBlock: true,
-							organization: 'МРЦ Беляево (Центр Дикуля)',
-							logoImg: '4',
-						})
-						+sCatalogItem({
-							title: 'Врач рентгенолог КТ',
-							salary: '50 000',
-							defaultBtns: true,
-							pillsRow: true,
-							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
-						})
-							+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
-							+sCatalogItemPill('#edfbf3', 'Жилье', 4)
-							+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
-						+sCatalogItem({
-							addClasses: 'gray-card',
-							title: 'Врач стоматолог-терапевт-хирург',
-							salary: '30 000-35 000',
-							bg: true,
-							descr: 'Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные',
-							tealBtns: true,
-							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
-							logoImg: '2',
-						})
-						+sCatalogItem({
-							title: 'Медицинская сестра',
-							salary: '30 000-35 000',
-							defaultBtns: true,
-							pillsRow: true,
-							organization: 'МРЦ Беляево (Центр Дикуля)',
-							logoImg: 5,
-						})
-							+sCatalogItemPill('#feefe9', 'Covid-19', 1)
-						+sCatalogItem({
-							title: 'Врач рентгенолог КТ',
-							salary: '50 000',
-							serviceBlock: true,
-							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
-						})
+					if data.isEmpty
+						+e.empty.text-center
+							+e.e-img
+								img(loading="lazy" src="img/@2x/empty-vac.png" alt="")
+							+e.bold-txt По запросу “хирург” ничего не найдено
+							+e.e-txt Попробуйте скорректировать запрос, регион поиска или упростить фильтрацию.
+						//-
+						+e.familiar-title Похожие вакансии
+						//-
+						+e.items.sCatalog-js
+							+e.items.sCatalog-js
+								+sCatalogItem({
+									title: 'Врач стоматолог-терапевт-хирург',
+									salary: '30 000-35 000',
+									defaultBtns: true,
+									pillsRow: true,
+									organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+									logoImg: 2,
+								})
+									+sCatalogItemPill('#EFF2F6', 'Будьте первыми')
+									+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+									+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+									+sCatalogItemPill('#edfbf3', 'Жилье', 4)
+									+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
+									+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
+								+sCatalogItem({
+									addClasses: 'blue-card',
+									title: 'Архивариус',
+									salary: '50 000',
+									defaultBtns: true,
+									organization: 'БУДЬ ЗДОРОВ, Клиника',
+									logoImg: '4',
+								})
+								+sCatalogItem({
+									title: 'Медицинская сестра',
+									salary: '30 000-35 000',
+									defaultBtns: false,
+									serviceBlock: true,
+									organization: 'МРЦ Беляево (Центр Дикуля)',
+									logoImg: '4',
+								})
+								+sCatalogItem({
+									title: 'Врач рентгенолог КТ',
+									salary: '50 000',
+									defaultBtns: true,
+									pillsRow: true,
+									organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+								})
+									+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+									+sCatalogItemPill('#edfbf3', 'Жилье', 4)
+									+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
+						//-
 						+b.card-baner
 							+e.row.row.align-items-center
 								+e.txt-col.col-md-auto
@@ -98,40 +84,116 @@ mixin sCatalog(data)
 								.col-md
 									+e.img
 										img(loading="lazy" src="img/svg/sTell-img.svg" alt="")
-						+sCatalogItem({
-							title: 'Медицинская сестра',
-							salary: '30 000-35 000',
-							defaultBtns: true,
-							organization: 'МРЦ Беляево (Центр Дикуля)',
-							logoImg: 5,
-						})
-						+sCatalogItem({
-							title: 'Врач рентгенолог КТ',
-							salary: '50 000',
-							defaultBtns: true,
-							organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
-						})
-					//-
-					if !data.notLogged
-						+b.pugin-row.row
-							.col
-								+b.pugination
-									ul.pagination
-										li.prev.disabled: span
-											+icon('chevron-left')
-										li.active: a(href="#") 1
-										li: a(href="#") 2
-										li: a(href="#") 3
-										li: a(href="#") ...
-										li: a(href="#") 5
-										li.next.disabled: a(href="#")
-											+icon('chevron-right')
-							.col-auto.d-none.d-md-block
-								+e.select-cont
-									+e.sel-title Показать по:
-									+customSlect('name', ['12', '24', '36'], 'main-page-select2-js')
-					if data.notLogged
-						+loginBaner()
+					else
+						+e.items.sCatalog-js
+							+sCatalogItem({
+								title: 'Врач стоматолог-терапевт-хирург',
+								salary: '30 000-35 000',
+								defaultBtns: true,
+								pillsRow: true,
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+								logoImg: 2,
+							})
+								+sCatalogItemPill('#EFF2F6', 'Будьте первыми')
+								+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+								+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+								+sCatalogItemPill('#edfbf3', 'Жилье', 4)
+								+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
+								+sCatalogItemPill('#e8f8fe', 'Бонусы', 5)
+							+sCatalogItem({
+								addClasses: 'blue-card',
+								title: 'Архивариус',
+								salary: '50 000',
+								defaultBtns: true,
+								organization: 'БУДЬ ЗДОРОВ, Клиника',
+								logoImg: '4',
+							})
+							+sCatalogItem({
+								title: 'Медицинская сестра',
+								salary: '30 000-35 000',
+								defaultBtns: false,
+								serviceBlock: true,
+								organization: 'МРЦ Беляево (Центр Дикуля)',
+								logoImg: '4',
+							})
+							+sCatalogItem({
+								title: 'Врач рентгенолог КТ',
+								salary: '50 000',
+								defaultBtns: true,
+								pillsRow: true,
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+							})
+								+sCatalogItemPill('#EFF2F6', 'Можно без опыта')
+								+sCatalogItemPill('#edfbf3', 'Жилье', 4)
+								+sCatalogItemPill('#f8eafc', 'Денежная выплата', 6)
+							+sCatalogItem({
+								addClasses: 'gray-card',
+								title: 'Врач стоматолог-терапевт-хирург',
+								salary: '30 000-35 000',
+								bg: true,
+								descr: 'Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные',
+								tealBtns: true,
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+								logoImg: '2',
+							})
+							+sCatalogItem({
+								title: 'Медицинская сестра',
+								salary: '30 000-35 000',
+								defaultBtns: true,
+								pillsRow: true,
+								organization: 'МРЦ Беляево (Центр Дикуля)',
+								logoImg: 5,
+							})
+								+sCatalogItemPill('#feefe9', 'Covid-19', 1)
+							+sCatalogItem({
+								title: 'Врач рентгенолог КТ',
+								salary: '50 000',
+								serviceBlock: true,
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+							})
+							+b.card-baner
+								+e.row.row.align-items-center
+									+e.txt-col.col-md-auto
+										+e.title Расскажите о&#160;своей зарплате
+										+e.txt Мы в MedicJobs составляем актуальный рейтинг заработных плат на рынке труда в медицине.
+										+e.btn(href='#') Пройти опрос
+									.col-md
+										+e.img
+											img(loading="lazy" src="img/svg/sTell-img.svg" alt="")
+							+sCatalogItem({
+								title: 'Медицинская сестра',
+								salary: '30 000-35 000',
+								defaultBtns: true,
+								organization: 'МРЦ Беляево (Центр Дикуля)',
+								logoImg: 5,
+							})
+							+sCatalogItem({
+								title: 'Врач рентгенолог КТ',
+								salary: '50 000',
+								defaultBtns: true,
+								organization: 'ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ',
+							})
+						//-
+						if !data.notLogged
+							+b.pugin-row.row
+								.col
+									+b.pugination
+										ul.pagination
+											li.prev.disabled: span
+												+icon('chevron-left')
+											li.active: a(href="#") 1
+											li: a(href="#") 2
+											li: a(href="#") 3
+											li: a(href="#") ...
+											li: a(href="#") 5
+											li.next.disabled: a(href="#")
+												+icon('chevron-right')
+								.col-auto.d-none.d-md-block
+									+e.select-cont
+										+e.sel-title Показать по:
+										+customSlect('name', ['12', '24', '36'], 'main-page-select2-js')
+						if data.notLogged
+							+loginBaner()
 					+e.toggle-box.toggle-box-js
 						+e.content
 							p Вы собираетесь устроиться на работу, но не знаете как? А может сама мысль о поиске вызывает у вас страх? С нашей площадкой поиск работы из рутинного занятия превращается в легкое приключение, ведь на нашем сайте представлено множество вакансий в городских больницах и медицинских центрах Москвы. Мы стараемся сделать все возможное, что бы вы смогли найти работу, которая будет приносить вам удовольствие, в кратчайшие сроки.
@@ -189,7 +251,7 @@ mixin sCatalogFilter()
 						//do not remove ".cat-filter__result-col", even if its empty
 						+sCatalogFilterChb('Комсомольск-на-Амуре', '')(checked)
 						+sCatalogFilterChb('Санкт-Петербург', '')(checked)
-						+e.modal-btn(href="#") Изменить
+						+e.modal-btn.custom-modal-link-js(href="#modal-region2") Изменить
 				+sCatalogFilterItem('Заработная плата, ₽')
 					+e.chb-items.chb-items-js
 						+sCatalogFilterChb('С указаной зарплатой')
@@ -274,7 +336,7 @@ mixin sCatalogFilter()
 						+sCatalogFilterChb('Кадры, управление персоналом')(checked)
 						+sCatalogFilterChb('Промышленность, производство')
 						+sCatalogFilterChb('Спорт, фитнес, салоны красоты, СПА')
-						+e.modal-btn(href="#") Выбрать несколько
+						+e.modal-btn.custom-modal-link-js(href="#modal-checkbox2") Выбрать несколько
 				+sCatalogFilterItem('Профотрасли')
 					+e.chb-items.chb-items-js
 						+sCatalogFilterChb('Медицина, фармацевтика')
@@ -283,7 +345,7 @@ mixin sCatalogFilter()
 						+sCatalogFilterChb('Кадры, управление персоналом')(checked)
 						+sCatalogFilterChb('Промышленность, производство')
 						+sCatalogFilterChb('Спорт, фитнес, салоны красоты, СПА')
-						+e.modal-btn(href="#") Выбрать несколько
+						+e.modal-btn.custom-modal-link-js(href="#modal-checkbox2") Выбрать несколько
 		+e.footer.d-lg-none
 			+e.btn--green(href="#") Показать 120 вакансий
 			+e.btn--white(href="#") Сбросить фильтр

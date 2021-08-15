@@ -1,0 +1,15 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 К сожалению, такой страницы нет
+				p Вы можете воспользоваться поиском вакансий или перейти в личный кабинет.
+			+e.row.row.justify-content-center.text-center
+				.col-md-auto
+					+e.btn--green(href="#") Поиск
+				.col-md-auto
+					+e.btn--blue(href="#") Личный кабинет
+			+e.img
+				img(loading="lazy" src='img/svg/s404.svg' alt="")
+	// end s404

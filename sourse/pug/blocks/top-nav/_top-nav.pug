@@ -267,9 +267,14 @@ mixin top-nav6(data)
 						+e.c-dd-btn.colooker-dd-btn-js Соискатель
 						+colookerDD2()
 				+e.location-col.col-auto.d-none.d-md-block
-					+e.location.link-modal(href='#modal-city')
-						+icon('location')
-						+e.loc-txt=`${data.location || 'Санкт-Петербург'}`
+					if data.modalLocationAlt
+						+e.location.link-modal.paint-down-md-whihe-js(href='#modal-city-alt')
+							+icon('location')
+							+e.loc-txt=`${data.location || 'Санкт-Петербург'}`
+					else
+						+e.location.link-modal(href='#modal-city')
+							+icon('location')
+							+e.loc-txt=`${data.location || 'Санкт-Петербург'}`
 				.col-auto.d-none.d-md-block
 					+e.blue-cv-btn.d-none.d-md-inline-block(href="#") Разместить резюме
 				if !data.logged

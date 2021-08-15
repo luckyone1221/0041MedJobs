@@ -328,14 +328,201 @@
 		&__{}
 	}
 
+
+	//--new
+	&--new{
+		padding: 0!important;
+
+		border-radius: 0!important;
+		--modal-x-padd: 30px;
+		height: calc(var(--vh, 1vh) * 100);
+		width: 100vw!important;
+		max-width: 100vw!important;
+		@include media-breakpoint-up(md){
+			border-radius: 12px!important;
+			--modal-x-padd: 48px;
+			height: calc(var(--vh, 1vh) * 100 - 48px * 2);
+			width: 558px!important;
+		}
+	}
+	//spining
+	.form-wrap__input-wrap.spining{
+		position: relative;
+		&:after{
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			z-index: 2;
+			right: 12px;
+
+			top: calc(50% - 12px);
+			width: 24px;
+			height: 24px;
+			@include media-breakpoint-up(md){
+				top: calc(50% - 10px);
+				width: 20px;
+				height: 20px;
+			}
+
+			background-image: url(../img/svg/spining.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+			//
+			animation: spining 1.2s linear infinite;
+		}
+
+		.form-wrap__cross-btn{
+			display: none;
+		}
+	}
+
+	&__top-box{
+		padding: 30px var(--modal-x-padd);
+		@include media-breakpoint-up(md){
+			padding: 48px var(--modal-x-padd) 24px;
+		}
+
+		border-bottom: 1px solid $gray-210;
+	}
+	&__title-alt{
+		font-weight: 600;
+		line-height: 1.25;
+
+		font-size: 30px;
+		margin-bottom: 24px;
+    @include media-breakpoint-up(md){
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+	&__content-box{
+		overflow-y: auto;
+
+		@extend .custom-scroll2;
+		--track-bg: #{$gray-100};
+		--thumb-bg: #{$gray-210};
+
+		margin: 30px var(--modal-x-padd) 18px;
+		height: calc(var(--vh, 1vh) * 100 - var(--top-box-h, 195px) - 30px - 18px);
+		@include media-breakpoint-up(md){
+			margin: 24px var(--modal-x-padd) 12px;
+			height: calc(var(--vh, 1vh) * 100 - 48px * 2 - var(--top-box-h, 195px) - 24px - 12px);
+		}
+		@include media-breakpoint-up(xl){
+			margin: 24px var(--modal-x-padd) 24px;
+			height: calc(var(--vh, 1vh) * 100 - 48px * 2 - var(--top-box-h, 195px) - 24px * 2);
+		}
+
+		padding-right: 12px!important;
+		margin-right: 14px!important;
+	}
+
+	//c-row
+	&__c-top-row{
+		--bs-gutter-x: 24px;
+		--bs-gutter-y: 24px;
+
+		padding-bottom: 48px;
+		@include media-breakpoint-up(md){
+			padding-bottom: 36px;
+		}
+	}
+	&__popular{
+		display: block;
+		color: $headings-color;
+		&:hover{
+			color: $primary;
+		}
+
+		font-weight: 600;
+		font-size: 26px;
+		@include media-breakpoint-up(md){
+			font-size: 18px;
+		}
+
+		line-height: 1.25;
+	}
+	&__all-btn{
+		@extend .btn;
+		@extend .btn-primary;
+
+		font-weight: 600;
+		font-size: inherit;
+		line-height: 1.25;
+		color: $white!important;
+
+		padding: 10px 20px;
+		border-radius: 6px;
+	}
+	&__ct-main-row{
+		--bs-gutter-x: 24px;
+	}
+	&__item{
+		padding-bottom: 30px;
+		@include media-breakpoint-up(md){
+			padding-bottom: 24px;
+		}
+
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+	&__ct-row{
+		--bs-gutter-x: 20px;
+		--bs-gutter-y: 12px;
+	}
+	&__letter-col{
+		@include media-breakpoint-up(md){
+			min-width: calc(16px + var(--bs-gutter-x));
+		}
+	}
+	&__letter{
+		font-weight: 600;
+		color: $gray-600;
+
+		font-size: 26px;
+		line-height: (31/26);
+		@include media-breakpoint-up(md){
+			font-size: 18px;
+			line-height: (21/18);
+		}
+	}
+	&__ct-sub-row{
+		--bs-gutter-x: 12px;
+		--bs-gutter-y: 12px;
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: 20px;
+			--bs-gutter-y: 8px;
+		}
+	}
+	&__city{
+		display: block;
+
+		color: $headings-color;
+		&:hover{
+			color: $primary;
+		}
+
+		&.bold{
+			font-weight: 600;
+		}
+	}
+
+	//
+	.ct-ancors{
+		&__items{
+			transform: translateY(-10px);
+			top: 0!important;
+		}
+	}
 	&__{}
 	&__{}
 }
 //
 
 .custom-modal{
-	// display: none;
-	//
 	&:before{
 		content: '';
 		position: absolute;
@@ -348,6 +535,37 @@
 		filter: blur(0px);
 		opacity: 0;
 		transition: all 0s ease-in-out 0s;
+	}
+
+	--content-bg: #{darken($white, 1)};
+	//
+	--content-pad: 24px 34px;
+	@include media-breakpoint-up(md){
+		--content-pad: 30px 38px;
+	}
+	--content-width: 100%;
+	@include media-breakpoint-up(xl){
+		--content-width: 851px;
+		--content-pad: 40px 48px;
+	}
+	@include media-breakpoint-up(xxl){
+		--content-pad: 50px 72px;
+	}
+	&--sm{
+		--content-bg: #{$white};
+		--content-pad: 0!important;
+		--close-top: 24px;
+		--close-right: 24px;
+
+		--content-width: 100%;
+		@include media-breakpoint-up(md){
+			--content-width: 584px;
+		}
+		@include media-breakpoint-up(xl){
+			--content-width: 584px;
+		}
+
+		//cross-btn
 	}
 
 	@include mt(1);
@@ -373,6 +591,7 @@
 	width: 100%;
 	height: 100%;
 
+
 	&__inner{
 		width: 100%;
 		height: 100%;
@@ -384,39 +603,29 @@
 		//background-color: rgba($headings-color, .24);
 		flex-grow: 1;
 	}
-
 	&__content{
 		height: 100%;
 		overflow-y: auto;
-		background: darken($white, 1);
 		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15);
 
 		position: relative;
 
-		padding: 24px 34px;
-		@include media-breakpoint-up(md){
-			padding: 30px 38px;
-		}
-		width: 100%;
-		@include media-breakpoint-up(xl){
-			padding: 40px 48px;
-			width: 851px;
-			margin-left: auto;
-		}
-		@include media-breakpoint-up(xxl){
-			padding: 50px 72px;
-		}
+		background: var(--content-bg);
+		padding: var(--content-pad);
+		width: var(--content-width);
+		margin-left: auto;
 	}
+
 	//
 	&__cross-btn{
     cursor: pointer;
 		position: absolute;
-		top: 24px;
-		right: 48px;
+		top: var(--close-top, 24px);
+		right: var(--close-right, 48px);
 
 		.icon{
 			@media (max-width: 576px){
-				font-size: 32px;
+				font-size: 30px;
 			}
 			font-size: 24px;
 			color: $secondary;
@@ -1116,6 +1325,43 @@
 	border-radius: 12px!important;
 	//height: calc(var(--vh, 1vh) * 100 - 120px) !important;
 
+	--header-padd: 48px var(--modal-x-padd) 24px;
+	--checkboxes-pad: 24px var(--modal-x-padd);
+	&--inside-custom{
+		height: calc(var(--vh, 1vh) * 100);
+		--checkboxes-pad: 0;
+
+		--modal-x-padd: 30px;
+		--header-padd: 30px var(--modal-x-padd);
+		@include media-breakpoint-up(md){
+			--modal-x-padd: 48px;
+			--header-padd: 24px var(--modal-x-padd);
+			//--checkboxes-pad: 24px var(--modal-x-padd);
+		}
+		@include media-breakpoint-up(xxl){
+			--header-padd: 48px var(--modal-x-padd);
+			//--checkboxes-pad: 48px var(--modal-x-padd);
+		}
+
+		//
+		.modal-checkbox__checkboxes{
+			@extend .custom-scroll2;
+			--track-bg: #{$gray-100};
+			--thumb-bg: #{$gray-210};
+
+			margin: 30px var(--modal-x-padd) 18px;
+			@include media-breakpoint-up(md){
+				margin: 24px var(--modal-x-padd) 12px;
+			}
+			@include media-breakpoint-up(xl){
+				margin: 24px var(--modal-x-padd) 24px;
+			}
+
+			padding-right: 12px!important;
+			margin-right: 14px!important;
+		}
+	}
+
 	&__content{
 		min-height: 100%;
 		display: flex;
@@ -1123,7 +1369,7 @@
 	}
 
 	&__header{
-		padding: 48px var(--modal-x-padd) 24px;
+		padding: var(--header-padd);
 		border-bottom: 1px solid $gray-210;
 
 		font-weight: 600;
@@ -1134,15 +1380,17 @@
 		line-height: 1.25;
 	}
 	&__checkboxes{
-		padding: 24px var(--modal-x-padd);
-		border-bottom: 1px solid $gray-210;
+		padding: var(--checkboxes-pad);
 		flex-grow: 1;
 
 		height: calc(var(--vh, 1vh) * 100 - 120px - 102px - 128px);
 		min-height: 300px;
 		overflow-y: auto;
 	}
+
+	//
 	&__footer{
+		border-top: 1px solid $gray-210;
 		padding: 24px var(--modal-x-padd);
 		border-bottom: 1px solid $gray-210;
 	}
@@ -1153,7 +1401,6 @@
 	&__btns-row{
 		--bs-gutter-x: 12px;
 		--bs-gutter-y: 12px;
-
 	}
 	&__btn{
 		@extend .btn;
@@ -1249,6 +1496,7 @@
 
 		.custom-chb{
 			margin-left: auto;
+			width: auto;
 		}
 	}
 

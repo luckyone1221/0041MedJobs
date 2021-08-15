@@ -1,0 +1,80 @@
+// start .s404
+.s404 {
+	--sPT: 60px;
+	--sPB: 60px;
+	--sTPB: 36px;
+	@include media-breakpoint-up(md){
+		--sPT: 60px;
+		--sPB: 60px;
+		--sTPB: 40px;
+	}
+
+	.section-title{
+		h1,h2{
+			font-weight: 600;
+			line-height: 1.25;
+			margin-bottom: 22px;
+			letter-spacing: -0.4px;
+
+			font-size: 42px;
+			@include media-breakpoint-up(md){
+				font-size: 36px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 42px;
+			}
+		}
+
+		p{
+			letter-spacing: -0.2px;
+		}
+	}
+	&__row{
+		--bs-gutter-x: 20px;
+		--bs-gutter-y: 12px;
+
+		padding-bottom: 60px;
+	}
+	&__btn{
+		@extend .btn;
+		font-weight: bold;
+		font-size: inherit;
+		line-height: 1.25;
+		color: $white!important;
+		border: none!important;
+		padding: 15px 20px;
+
+		min-width: 420px;
+		@include media-breakpoint-up(md){
+			min-width: 180px;
+		}
+
+
+		&--green{
+			@extend .green-btn;
+		}
+		&--blue{
+			@extend .btn-primary;
+		}
+	}
+	&__img{
+		width: 516px;
+		@include media-breakpoint-up(md){
+			width: 456px;
+		}
+		@include media-breakpoint-up(xxl){
+			width: 559px;
+		}
+
+		img{
+			width: auto;
+			max-width: 100%;
+		}
+
+		margin: 0 auto;
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.s404

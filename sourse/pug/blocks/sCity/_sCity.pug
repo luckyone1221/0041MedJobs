@@ -1,0 +1,55 @@
+mixin sCity(data)
+	// start sCity
+	+b.SECTION.sCity.section#sCity&attributes(attributes)
+		.container
+			+e.main-row.row
+				.col
+					.d-none.d-md-block
+						+breadcrumb('Главная', 'Каталог городов')
+					+b.section-title
+						h1 Каталог городов
+					+e.items
+						+sCityItem('А', 'bold')
+						+sCityItem('Б')
+						+sCityItem('В')
+						+sCityItem('Г')
+						+sCityItem('Я')
+				+sCityAcors()
+					+sCityAncor('А')
+					+sCityAncor('Б')
+					+sCityAncor('В')
+					+sCityAncor('Г')
+					+sCityAncor('Я')
+	// end sCity
+
+mixin sCityAcors()
+	+b.ct-ancors.col-auto.d-md-none
+		+e.items
+			block
+
+mixin sCityAncor(letter)
+	+e.item.scroll-link(href=`#${letter}`)=letter
+
+mixin sCityItem(letter, wordAddClasses='')
+	+e.item(id=letter)
+		+e.letter=letter
+		+e.i-row.row
+			+sCityWord('Тольятти')
+			+sCityWord('Самара')
+			//-
+			+sCityWord('Москва', 3)
+			+sCityWord('Москва', 1, wordAddClasses)
+			//-
+			+sCityWord('Санкт-Петербург', 2)
+			+sCityWord('Санкт-Петербург', 1, wordAddClasses)
+			+sCityWord('Санкт-Петербург', 1)
+			//-
+			+sCityWord('Ростов-на-Дону')
+			+sCityWord('Владимир')
+			+sCityWord('Нижний Новгород')
+			+sCityWord('Пенза')
+
+mixin sCityWord(word, amount=4, addClasses)
+	-for (var i = 0; i < amount; i++)
+		.col-md-6.col-lg-3
+			+e.city(href="#" class=addClasses)=word

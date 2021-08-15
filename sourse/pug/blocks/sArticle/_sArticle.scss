@@ -1,0 +1,281 @@
+// start .sArticle
+.sArticle {
+	line-height: 1.25;
+
+	--sPT: 20px;
+	--sPB: 48px;
+	--sTPB: 16px;
+	@include media-breakpoint-up(md){
+		--sPT: 20px;
+		--sPB: 40px;
+		--sTPB: 30px;
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: 24px;
+		--sPB: 48px;
+		--sTPB: 36px;
+	}
+
+	padding-bottom: 0;
+	&__container{
+		padding-bottom: var(--sPB);
+	}
+
+	&__main-row{
+		--bs-gutter-x: 24px;
+
+		--bs-gutter-y: 48px;
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: 40px;
+		}
+	}
+	&__top-row{
+		--bs-gutter-x: 20px;
+	}
+	&__date{
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+		color: $gray-600;
+	}
+	&__all-link{
+		display: inline-block;
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+	}
+	.section-title{
+		h1{
+			font-weight: 600;
+			line-height: 1.25;
+			letter-spacing: -0.4px;
+
+			font-size: 42px;
+			margin-bottom: 24px;
+			@include media-breakpoint-up(md){
+				font-size: 36px;
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 42px;
+				margin-bottom: 24px;
+			}
+		}
+		p{
+			font-size: 28px;
+			margin-bottom: 36px;
+			@include media-breakpoint-up(md){
+				font-size: 26px;
+				margin-bottom: 30px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 30px;
+				margin-bottom: 36px;
+			}
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame-nh;
+		padding-top: (460/849) * 100%;
+
+		border-radius: 8px;
+		margin-bottom: 12px;
+	}
+	&__big{
+		font-size: 24px;
+		@include media-breakpoint-up(md){
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(xl){
+			font-size: 24px;
+		}
+	}
+	&__content{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		margin-bottom: 36px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 30px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: 30px;
+		}
+
+		h2, h3, h4, h5, h6{
+			font-weight: 600;
+			line-height: 1.25;
+
+			margin-bottom: 24px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-up(xl){
+				margin-bottom: 24px;
+			}
+		}
+
+		h2{
+			font-size: 30px;
+			@include media-breakpoint-up(md){
+				font-size: 28px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 32px;
+			}
+		}
+		h3{
+			font-size: 28px;
+			@include media-breakpoint-up(md){
+				font-size: 24px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 28px;
+			}
+		}
+		h4{
+			font-size: 26px;
+			@include media-breakpoint-up(md){
+				font-size: 20px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 24px;
+			}
+		}
+		h5{
+			font-size: 24px;
+			@include media-breakpoint-up(md){
+				font-size: 18px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 20px;
+			}
+		}
+		h6{
+			font-size: 24px;
+			@include media-breakpoint-up(md){
+				font-size: 16px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 18px;
+			}
+		}
+
+		//
+		p{
+			font-size: 24px;
+			margin-bottom: 36px;
+			@include media-breakpoint-up(md){
+				font-size: 16px;
+				margin-bottom: 22px;
+			}
+			@include media-breakpoint-up(xl){
+				font-size: 18px;
+				margin-bottom: 27px;
+			}
+
+			line-height: 1.5;
+
+			b{
+				font-weight: 600;
+			}
+
+			a{
+
+			}
+		}
+
+		//
+		ul,
+		ol{
+			list-style: none;
+			padding: 0;
+			margin: 0 0 30px;
+
+			--li-lh: 1.75;
+
+			--li-fs: 24px;
+			--bef-w: 20px;
+			@include media-breakpoint-up(md){
+				--li-fs: 16px;
+				--bef-w: 20px;
+			}
+			@include media-breakpoint-up(xl){
+				--li-fs: 18px;
+				--bef-w: 20px;
+			}
+
+			li{
+				line-height: var(--li-lh);
+				padding-left: var(--bef-w);
+				font-size: var(--li-fs);
+				position: relative;
+
+				margin-bottom: 0px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+
+				&:before{
+					position: absolute;
+					text-align: center;
+					top: calc(var(--li-lh) * var(--li-fs)/2);
+					left: 0;
+					transform: translateY(-50%);
+					font-size: inherit;
+					line-height: inherit;
+
+					width: var(--bef-w);
+				}
+			}
+		}
+
+		ul{
+			//
+			li{
+				&:before{
+					content: '';
+					width: 4px;
+					height: 4px;
+					left: calc(var(--bef-w)/2);
+					transform: translateY(-50%) translateX(-50%);
+					border-radius: 50%;
+					background-color: $headings-color;
+				}
+			}
+		}
+		ol{
+			counter-reset: list 0;
+			li{
+				list-style-type: none;
+				&:before{
+					counter-increment: list;
+					content: counter(list) ". ";
+				}
+			}
+		}
+	}
+	.sFresh{
+
+		&__{}
+		&__{}
+	}
+	&__soc-col{}
+	&__soc-box{}
+	&__sb-main-row{}
+	&__sb-title{}
+	&__sb-sub-row{}
+	&__soc-item{
+		img{}
+	}
+	&__sb-bg{
+
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sArticle
