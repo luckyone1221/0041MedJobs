@@ -21,20 +21,26 @@ block variables
 	- let  htmlClasses= 'alt-base-size'
 	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
 block title
-	- let  title= '047-vac-card'
+	- let  title= 'no-logo'
 	title= title
 block pagecontent
 	+mob-mnu6({
 		logged: false,
+		modalLocationAlt: true,
 	})
 	+header()
 		+top-nav6({
 			logged: false,
+			modalLocationAlt: true,
 			location: 'Санкт-Петербург',
 		})
 	+sVacCard({
 		gray: true,
 		pillsRowAlt: true,
 		loginBaner: true,
+		noLogo: true,
+
+		likeLinkHref: '#modal-login',
+		likeLinkJsClass: 'link-modal',
 	})
 	+footerAltNew('bigger')

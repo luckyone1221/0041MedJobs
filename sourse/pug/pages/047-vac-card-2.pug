@@ -14,18 +14,14 @@ include ../blocks/sNews/_sNews.pug
 include ../blocks/sService/_sService.pug
 include ../blocks/sStart/_sStart.pug
 include ../blocks/sCatalog/_sCatalog.pug
-include ../blocks/sNVac/_sNVac.pug
-include ../blocks/s404/_s404.pug
-include ../blocks/sCity/_sCity.pug
-include ../blocks/sArticle/_sArticle.pug
-include ../blocks/sProff/_sProff.pug
+include ../blocks/sVacCard/_sVacCard.pug
 
 block variables
 	- let  mainPage= 'headings-color new-header new-page'
 	- let  htmlClasses= 'alt-base-size'
 	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
 block title
-	- let  title= '052-proffesions'
+	- let  title= '047-vac-card'
 	title= title
 block pagecontent
 	+mob-mnu6({
@@ -38,5 +34,9 @@ block pagecontent
 			modalLocationAlt: true,
 			location: 'Санкт-Петербург',
 		})
-	+sProff()
+	+sVacCard({
+		sourceAlt: true,
+		map: true,
+		shortInfoClasses: 'pb-alt',
+	})
 	+footerAltNew('bigger')

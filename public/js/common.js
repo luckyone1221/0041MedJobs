@@ -145,21 +145,17 @@ const JSCCommon = {
 		let header = document.querySelector("#headerAlt") || document.querySelector('.top-nav');
 		$(document).on('click', '.scroll-link, .aside-menu-js > ul > li > a', function () {
 			event.preventDefault();
-			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top - header.offsetHeight - 20; //$('html, body').animate({ scrollTop: destination }, 1100);
+			let elementClick = $(this).attr("href");
+			let destination = $(elementClick).offset().top - header.offsetHeight - 20;
+			$('html, body').animate({
+				scrollTop: destination
+			}, 600); // window.scrollTo({
+			//   top: destination,
+			//   behavior: "smooth"
+			// });
 
-			window.scrollTo({
-				top: destination,
-				behavior: "smooth"
-			});
 			return false;
 		});
-	},
-
-	getCurrentYear(el) {
-		let now = new Date();
-		let currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
 
 };
@@ -866,17 +862,16 @@ function eventHandler() {
 			spaceBetween: 24,
 			watchOverflow: true,
 			navigation: {
-				nextEl: prev,
-				prevEl: next
+				nextEl: next,
+				prevEl: prev
 			}
-		}); //??
-
-		sDayVacSlider.on('slideChange', function () {
-			checkSliderOverflow(prev, next);
 		});
-		window.setTimeout(function () {
-			checkSliderOverflow(prev, next);
-		}, 10);
+
+		if (prev && next) {
+			window.setInterval(function () {
+				checkSliderOverflow(prev, next);
+			}, 50);
+		}
 	});
 
 	function checkSliderOverflow(prev, next) {

@@ -81,6 +81,7 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/047-vac-card.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/047-vac-card-2.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/047-vac-card-3.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/047-vac-card-4.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/048-vac-create.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/048-vac-create-2.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/048-vac-create-3.html>

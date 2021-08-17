@@ -125,7 +125,7 @@ mixin sVacCard(data)
 					+e.mob-descr--like.d-lg-none
 						+e.m-row.row.align-items-center
 							.col
-								+e.like-btn.toggle-active-on-click-js(href='#')
+								+e.like-btn(href=`${data.likeLinkHref || '#'}` class=`${data.likeLinkJsClass || 'toggle-active-on-click-js'}`)
 									+e.icon-cont
 										+icon('like')
 										+icon('like-fill')
@@ -182,8 +182,9 @@ mixin sVacCard(data)
 											img(loading="lazy" src="img/svg/sTell-img2.svg" alt="")
 				+e.aside-col.col-lg-3.d-none.d-lg-block
 					+e.aside-box.text-center
-						+e.a-logo(href="#")
-							img(loading="lazy" src="img/@2x/aside-box-logo.png" alt="")
+						if !data.noLogo
+							+e.a-logo(href="#")
+								img(loading="lazy" src="img/@2x/aside-box-logo.png" alt="")
 						+e.top-content
 							+e.a-name(href="#") ООО Лаборатория Гемотест
 							+e.a-city г. Москва
@@ -204,7 +205,7 @@ mixin sVacCard(data)
 									a(href="#" target="_blank") superjob.ru
 						+e.foot-row.row.align-items-center
 							.col
-								+e.like-btn.toggle-active-on-click-js(href='#')
+								+e.like-btn(href=`${data.likeLinkHref || '#'}` class=`${data.likeLinkJsClass || 'toggle-active-on-click-js'}`)
 									+e.icon-cont
 										+icon('like')
 										+icon('like-fill')

@@ -501,9 +501,13 @@
 	}
 	&__src{
 		color: $gray-600;
-		&:hover{
-			color: $primary;
-			text-decoration: underline;
+		a{
+			font-weight: 500;
+			color: $gray-600;
+			&:hover{
+				color: $gray-600;
+				text-decoration: underline;
+			}
 		}
 
 		font-size: 20px;

@@ -63,6 +63,6 @@ mixin sUsefullItemAlt(data)
 		+e.img
 			img(loading="lazy" src=`img/@2x/sUsefull-${data.imgNum}.jpg` alt='')
 		+e.articles(href='#') Статьи
-		+e.title=data.title
+		+e.title(href='#')=data.title
 		+e.descr=data.descr
 		+e.date 19 ноября 2021

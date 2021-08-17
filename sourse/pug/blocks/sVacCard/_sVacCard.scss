@@ -254,6 +254,10 @@
 			padding-bottom: 36px;
 		}
 
+		b, strong{
+			font-weight: 600;
+		}
+
 		h6{
 			font-weight: 600;
 			font-size: inherit;
@@ -279,9 +283,11 @@
 				padding-left: 36px;
 				line-height: 1.25;
 				margin-bottom: 12px;
+				min-height: calc(12px * 1.25);
 				@include media-breakpoint-up(md){
 					line-height: 1.75;
 					padding-left: 24px;
+					min-height: calc(24px * 1.75);
 					margin-bottom: 0;
 				}
 
@@ -404,6 +410,10 @@
 		@include media-breakpoint-up(xl){
 			padding: 20px 20px 15px;
 		}
+
+		display: flex;
+		flex-direction: column;
+		min-height: 320px;
 	}
 	&__a-logo{
 		width: 80px;
@@ -498,6 +508,7 @@
 
 	&__foot-row{
 		--bs-gutter-x: 4px;
+		margin-top: auto;
 	}
 	&__like-btn{
 		display: flex;

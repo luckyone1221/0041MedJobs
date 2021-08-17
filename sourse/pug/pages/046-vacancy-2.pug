@@ -25,10 +25,12 @@ block title
 block pagecontent
 	+mob-mnu6({
 		logged: false,
+		modalLocationAlt: true,
 	})
 	+header()
 		+top-nav6({
 			logged: false,
+			modalLocationAlt: true,
 			location: 'Санкт-Петербург',
 		})
 	+b.page-head
@@ -52,5 +54,7 @@ block pagecontent
 						+e.mob-location(href="#")
 							+icon('location')
 							span Комсомольск-на-Амуре
-	+sCatalog({})
+	+sCatalog({
+		notLogged: true,
+	})
 	+footerAltNew('bigger')

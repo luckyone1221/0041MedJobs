@@ -551,6 +551,12 @@
 	@include media-breakpoint-up(xxl){
 		--content-pad: 50px 72px;
 	}
+
+	&.no-blur{
+		&:before{
+			backdrop-filter: blur(0px);
+		}
+	}
 	&--sm{
 		--content-bg: #{$white};
 		--content-pad: 0!important;

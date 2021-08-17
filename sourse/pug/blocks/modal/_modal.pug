@@ -576,13 +576,13 @@ mixin modal()
 			+e.r-add-btn.r-add-btn-js(type='button') Добавить
 	//-+socModal('')
 	//-046++
-	+customModal('modal-region2', false, false)(class='custom-modal--sm')
+	+customModal('modal-region2', false, false)(class='custom-modal--sm no-blur')
 		+b.modal-checkbox--inside-custom
 			+modalRegionContent({
 				headerAddClasses: '',
 				title: 'Регион для поиска',
 			})
-	+customModal('modal-checkbox2', false, false)(class='custom-modal--sm')
+	+customModal('modal-checkbox2', false, false)(class='custom-modal--sm no-blur')
 		+b.modal-checkbox--inside-custom
 			+modalCheckboxesContent({
 				title: 'Профотрасли',
@@ -590,7 +590,7 @@ mixin modal()
 	//-
 	+b.modal-city--new.modal-win(id="modal-city-alt" class="" style="display: none")
 		+e.top-box.top-box-js
-			+e.title-alt.text-center Выберите ваш регион
+			+e.title-alt.text-md-center Выберите ваш регион
 			+form-wrap()
 				+e.input-wrap.spining.form-group
 					+e.INPUT.input.form-control(type="text" placeholder="Введите город" name="city" value="Толь")

@@ -4,7 +4,7 @@ mixin sArticle(data)
 		+e.container.container
 			+e.main-row.row
 				.col-lg-9
-					+e.top-row.row
+					+e.top-row.row.align-items-center
 						.col-auto
 							+e.date 12 августа 2021
 						.col-auto
@@ -103,11 +103,11 @@ mixin sArticle(data)
 								li Наличие действующего сертификата по “стоматологии терапевтической”.
 								li Владение современными методами лечения.
 								li Опыт работы с ассистентом в “четыре руки”.
-					+e.src(href="#" target="_blank")
+					+e.src
 						span.d-block.d-md-inline
 							| Источник:
 							|
-						span https://vademec.ru/news/2021/08/11/v-yanao-postroyat-polikliniku-za-1-4-mlrd-rubley/
+						a(href="#" target="_blank") https://vademec.ru/news/2021/08/11/v-yanao-postroyat-polikliniku-za-1-4-mlrd-rubley/
 				+e.soc-col.col-lg-3
 					+e.soc-box
 						+e.sb-main-row.row.align-items-center
