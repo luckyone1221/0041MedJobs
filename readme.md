@@ -91,3 +91,9 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/052-proffesions.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/053-blog.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/053-blog-2.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/054-reg.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/055-reg2.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/056-reg3.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/057-reg4.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/058-reg5.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/059-reg6.html>

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>040-education</title>
+		<title>057-reg4</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="о чем страница">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
@@ -39,15 +39,11 @@
 							<div class="swiper-container sReg-step-slider-js">
 								<div class="swiper-wrapper">
 									<!--+sRegStep(checked,current,txt)-->
-									<div class="swiper-slide"><a class="sReg__step checked false" href="#">Личная информация</a>
+									<div class="swiper-slide"><a class="sReg__step false current" href="#">Основная информация</a>
 									</div>
-									<div class="swiper-slide"><a class="sReg__step checked false" href="#">Условия работы</a>
+									<div class="swiper-slide"><a class="sReg__step false false" href="#">Отрасль организации</a>
 									</div>
-									<div class="swiper-slide"><a class="sReg__step checked false" href="#">Опыт работы</a>
-									</div>
-									<div class="swiper-slide"><a class="sReg__step false current" href="#">Образование</a>
-									</div>
-									<div class="swiper-slide"><a class="sReg__step false false" href="#">Повышение квалификации</a>
+									<div class="swiper-slide"><a class="sReg__step false false" href="#">Контактное лицо</a>
 									</div>
 								</div>
 							</div>
@@ -57,98 +53,61 @@
 				<div class="sReg__main-cont container">
 					<div class="sReg__box text-center">
 						<div class="sReg__b-content">
-							<h1 class="sReg__title">Образование
+							<h1 class="sReg__title">Основная информация
 							</h1>
+							<div class="sReg__portrait-bl">
+								<div class="sReg__portrait sReg__portrait--square sReg-portrait-js"><img loading="lazy" src="img/svg/company-stab.svg" alt="">
+								</div>
+								<div class="sReg__p-txt"><b>
+										Логотип организации.
+										</b>формат: jpg, png.<br>Максимальный размер файла: 2 Mb.<br>Рекомендованный размер: 300х300 px.
+								</div>
+								<label class="sReg__upload-label">
+									<input class="sReg-portrait-inp-js invisible" type="file" accept=".png, .jpg, .jpeg"><span class="sReg__upload">Загрузить</span>
+								</label>
+							</div>
 							<div class="form-wrap with-labels">
 								<form>
-									<div class="form-wrap__repeater repeator-js text-start mb-48">
-										<div class="form-wrap__r-item r-item-js">
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Страна</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите из списка">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Регион</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите регион">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Город</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите город">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title">Факультет</span><input class="form-wrap__input form-control mb-12" type="text" required="required" name="la" placeholder="Факультет"/>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title">Специальность</span><input class="form-wrap__input form-control mb-12" type="text" required="required" name="la" placeholder="Специальность"/>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Форма обучения</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите форму обучения">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Статус</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите статус">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap">
-												<div class="form-wrap__input-title"><span>Год окончания</span>
-													<div class="text-secondary mt-6 fw-400">Если учитесь в настоящее время — укажите год предполагаемого окончания</div>
-												</div><input class="form-wrap__input form-control mb-12" type="text" required="required" name="la" placeholder="Год окончания"/>
-											</div>
-										</div>
-										<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
-										</button>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Город организации</span><input class="form-wrap__input form-control" type="text" required="required" placeholder="Начните вводить город"/>
+										</label>
 									</div>
-									<div class="form-wrap__btn-cont">
-										<div class="form-wrap__btn-row row">
-											<div class="col-6">
-												<button class="form-wrap__back-btn" type="button">
-													<svg class="icon icon-chevron-left ">
-														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-													</svg><span>Назад</span>
-												</button>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Форма собственности организации</span>
+											<div class="custom-select">
+												<select class="default-select-js" name="form" data-placeholder="Частная, Государственная, Иностранная" require="require">
+													<option label="#" selected></option>
+													<option>Частная</option>
+													<option>Государственная</option>
+													<option>Иностранная</option>
+												</select>
 											</div>
-											<div class="col-6">
-												<button class="form-wrap__green-btn" type="button">Сохранить
-												</button>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Форма собственности организации</span>
+											<div class="custom-select">
+												<select class="default-select-js" name="form" data-placeholder="Менее 20, 20-100, 100-500, Более 500" require="require">
+													<option label="#" selected></option>
+													<option>Менее 20</option>
+													<option>20-100</option>
+													<option>100-500</option>
+													<option>Более 500</option>
+												</select>
 											</div>
-										</div>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title require">Сайт организации</span><input class="form-wrap__input form-control" type="text" placeholder="Введите адрес сайта"/>
+										</label>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__input-title">Описание организации</span><textarea class="form-wrap__input form-control mb-12" required="required" name="la" placeholder="Введите описание организации"></textarea>
+										</label>
+									</div>
+									<div class="form-wrap__btn-cont pt-18">
+										<button class="form-wrap__green-btn" type="submit">Продолжить
+										</button>
 									</div>
 								</form>
 							</div>
@@ -156,8 +115,6 @@
 					</div>
 					<div class="sReg__lower-content pt-24 align-items-center">
 						<div class="sReg__l-row row">
-							<div class="col-auto"><a class="sReg__l-link" href="#">Пропустить</a>
-							</div>
 						</div>
 					</div>
 				</div>

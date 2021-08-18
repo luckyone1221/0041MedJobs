@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>040-education</title>
+		<title>056-reg3</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="о чем страница">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
@@ -33,121 +33,61 @@
 			<!--+alertLine()-->
 			<!-- start sReg-->
 			<section class="sReg" id="sReg">
-				<div class="sReg__steps-head sReg-header-js">
-					<div class="container-fluid">
-						<div class="sReg__step-slider">
-							<div class="swiper-container sReg-step-slider-js">
-								<div class="swiper-wrapper">
-									<!--+sRegStep(checked,current,txt)-->
-									<div class="swiper-slide"><a class="sReg__step checked false" href="#">Личная информация</a>
-									</div>
-									<div class="swiper-slide"><a class="sReg__step checked false" href="#">Условия работы</a>
-									</div>
-									<div class="swiper-slide"><a class="sReg__step checked false" href="#">Опыт работы</a>
-									</div>
-									<div class="swiper-slide"><a class="sReg__step false current" href="#">Образование</a>
-									</div>
-									<div class="swiper-slide"><a class="sReg__step false false" href="#">Повышение квалификации</a>
-									</div>
-								</div>
+				<div class="sReg__header sReg-header-js">
+					<div class="sReg__container-fl container-fluid">
+						<div class="sReg__h-row row">
+							<div class="col-auto"><a class="sReg__back-btn" href="#">
+								<svg class="icon icon-chevron-left ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+								</svg><span>Назад</span></a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="sReg__main-cont container">
+					<div class="sReg__logo"><img loading="lazy" src="img/svg/logo.svg" alt=""/>
+					</div>
 					<div class="sReg__box text-center">
 						<div class="sReg__b-content">
-							<h1 class="sReg__title">Образование
+							<h1 class="sReg__title">Регистрация работодателя
 							</h1>
-							<div class="form-wrap with-labels">
+							<div class="form-wrap">
 								<form>
-									<div class="form-wrap__repeater repeator-js text-start mb-48">
-										<div class="form-wrap__r-item r-item-js">
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Страна</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите из списка">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Регион</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите регион">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Город</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите город">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title">Факультет</span><input class="form-wrap__input form-control mb-12" type="text" required="required" name="la" placeholder="Факультет"/>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group">
-												<label><span class="form-wrap__input-title">Специальность</span><input class="form-wrap__input form-control mb-12" type="text" required="required" name="la" placeholder="Специальность"/>
-												</label>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Форма обучения</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите форму обучения">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><span class="form-wrap__input-title">Статус</span>
-												<div class="custom-select">
-													<select class="default-select-js" name="region" data-placeholder="Выберите статус">
-														<option label="#" selected></option>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-													</select>
-												</div>
-											</div>
-											<div class="form-wrap__input-wrap">
-												<div class="form-wrap__input-title"><span>Год окончания</span>
-													<div class="text-secondary mt-6 fw-400">Если учитесь в настоящее время — укажите год предполагаемого окончания</div>
-												</div><input class="form-wrap__input form-control mb-12" type="text" required="required" name="la" placeholder="Год окончания"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control undefined" type="password" required="required" name="pass" placeholder="Введите пароль"/>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control undefined" type="password" required="required" name="pass" placeholder="Введите пароль"/>
+											<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
+												<svg class="icon icon-pass-eye ">
+													<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
+												</svg>
 											</div>
 										</div>
-										<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
-										</button>
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<div class="form-wrap__inp-cont"><input class="form-wrap__input form-control" type="password" required="required" name="pass-repeat" placeholder="Повторите пароль"/>
+											<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
+												<svg class="icon icon-pass-eye ">
+													<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
+												</svg>
+											</div>
+										</div>
 									</div>
 									<div class="form-wrap__btn-cont">
-										<div class="form-wrap__btn-row row">
-											<div class="col-6">
-												<button class="form-wrap__back-btn" type="button">
-													<svg class="icon icon-chevron-left ">
-														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-													</svg><span>Назад</span>
-												</button>
-											</div>
-											<div class="col-6">
-												<button class="form-wrap__green-btn" type="button">Сохранить
-												</button>
-											</div>
+										<button class="form-wrap__green-btn" type="submit">Зарегистрироваться
+										</button>
+									</div>
+									<div class="form-wrap__policy-row row text-start">
+										<div class="col-auto">
+											<label class="custom-chb">
+												<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt"></span>
+											</label>
+										</div>
+										<div class="form-wrap__policy-txt col">
+											Я принимаю условия
+											<a href="#">Пользовательского соглашения</a>
+											и даю свое согласие на обработку моей персональной информации на условиях, определенных
+											<a href="#">Политикой конфиденциальности.</a>
 										</div>
 									</div>
 								</form>
@@ -156,7 +96,11 @@
 					</div>
 					<div class="sReg__lower-content pt-24 align-items-center">
 						<div class="sReg__l-row row">
-							<div class="col-auto"><a class="sReg__l-link" href="#">Пропустить</a>
+							<div class="col-auto">
+								<div class="sReg__l-txt">Уже зарегистрированы?
+								</div>
+							</div>
+							<div class="col-auto"><a class="sReg__l-link" href="#">Войти</a>
 							</div>
 						</div>
 					</div>

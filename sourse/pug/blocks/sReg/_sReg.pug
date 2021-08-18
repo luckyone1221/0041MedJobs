@@ -25,47 +25,51 @@ mixin sReg(data)
 			if data.logo
 				+e.logo
 					img(loading='lazy' src='img/svg/logo.svg' alt="")
-			+e.box.text-center
-				+e.b-content
-					+e.H1.title=data.title
-					if block
-						block
-					else
-						+form-wrap()
-							+e.LABEL.role-chb
-								input(type="checkbox" class="invisible" name='role')
-								+b.plate--employee Я соискатель
-								+b.plate--employer Я работодатель
-							//-+input('Электронная почта','email')
-							+e.input-wrap.form-group
-								+e.INPUT.input.form-control(class=`${data.error && 'border-danger'}` type="password" required name="pass" placeholder="Введите пароль")
-								if data.error
-									+e.error.text-start Пользователь с таким e-mail уже существует.
-							+e.input-wrap.form-group
-								+e.inp-cont
+			if !data.noDefaultBox
+				+e.box.text-center
+					+e.b-content
+						+e.H1.title=data.title
+						if block
+							block
+						else
+							+form-wrap()
+								if !data.noEmployeeChb
+									+e.LABEL.role-chb
+										input(type="checkbox" class="invisible" name='role')
+										+b.plate--employee Я соискатель
+										+b.plate--employer Я работодатель
+								//-+input('Электронная почта','email')
+								+e.input-wrap.form-group
 									+e.INPUT.input.form-control(class=`${data.error && 'border-danger'}` type="password" required name="pass" placeholder="Введите пароль")
-									+e.show-hide-btn.toggle-pass-inp-js
-										+icon('pass-eye')
-								if data.error
-									+e.error.text-start Текст ошибки.
-							+e.input-wrap.form-group
-								+e.inp-cont
-									+e.INPUT.input.form-control(type="password" required name="pass-repeat" placeholder="Повторите пароль")
-									+e.show-hide-btn.toggle-pass-inp-js
-										+icon('pass-eye')
-							+e.btn-cont
-								+e.green-btn(type="submit") Зарегистрироваться
-							+e.policy-row.row.text-start
-								.col-auto
-									+customChb('')(checked)
-								+e.policy-txt.col
-									| Я принимаю условия
-									|
-									a(href="#") Пользовательского соглашения
-									|
-									| и даю свое согласие на обработку моей персональной информации на условиях, определенных
-									|
-									a(href="#") Политикой конфиденциальности.
+									if data.error
+										+e.error.text-start Пользователь с таким e-mail уже существует.
+								+e.input-wrap.form-group
+									+e.inp-cont
+										+e.INPUT.input.form-control(class=`${data.error && 'border-danger'}` type="password" required name="pass" placeholder="Введите пароль")
+										+e.show-hide-btn.toggle-pass-inp-js
+											+icon('pass-eye')
+									if data.error
+										+e.error.text-start Текст ошибки.
+								+e.input-wrap.form-group
+									+e.inp-cont
+										+e.INPUT.input.form-control(type="password" required name="pass-repeat" placeholder="Повторите пароль")
+										+e.show-hide-btn.toggle-pass-inp-js
+											+icon('pass-eye')
+								+e.btn-cont
+									+e.green-btn(type="submit") Зарегистрироваться
+								+e.policy-row.row.text-start
+									.col-auto
+										+customChb('')(checked)
+									+e.policy-txt.col
+										| Я принимаю условия
+										|
+										a(href="#") Пользовательского соглашения
+										|
+										| и даю свое согласие на обработку моей персональной информации на условиях, определенных
+										|
+										a(href="#") Политикой конфиденциальности.
+			else
+				block
 			if data.lowerRow
 				+e.lower-content.pt-24.align-items-center
 					+e.l-row.row

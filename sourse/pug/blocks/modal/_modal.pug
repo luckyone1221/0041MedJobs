@@ -991,8 +991,11 @@ mixin modalCheckboxesContent(data)
 			+customChbAlt('Государственная служба')
 		+e.footer
 			+e.chosen-txt Выбрано: 7 отраслей
-			+e.btns-row.row
-				.col-6
-					+e.btn--gray(type="button") Очистить
-				.col-6
-					+e.btn--green(type="button") Применить
+			if data.btnAlt
+				+e.btn-sq--green(type="button") Применить
+			else
+				+e.btns-row.row
+					.col-6
+						+e.btn--gray(type="button") Очистить
+					.col-6
+						+e.btn--green(type="button") Применить

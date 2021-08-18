@@ -1333,6 +1333,7 @@
 
 	--header-padd: 48px var(--modal-x-padd) 24px;
 	--checkboxes-pad: 24px var(--modal-x-padd);
+
 	&--inside-custom{
 		height: calc(var(--vh, 1vh) * 100);
 		--checkboxes-pad: 0;
@@ -1367,6 +1368,24 @@
 			margin-right: 14px!important;
 		}
 	}
+
+	//
+	&--inside-reg{
+		height: auto;
+		min-height: 0;
+		background-color: $white;
+		@include media-breakpoint-down(md){
+			width: 100vw!important;
+			border-radius: 0!important;
+		}
+
+		//
+		.modal-checkbox__checkboxes{
+			height: calc(var(--vh, 1vh) * 100 - 120px - 102px - 128px - 180px) !important;
+		}
+		//
+	}
+
 
 	&__content{
 		min-height: 100%;
@@ -1425,6 +1444,25 @@
 			@extend .green-btn;
 		}
 	}
+	&__btn-sq{
+		@extend .btn;
+		width: 100%;
+
+		font-weight: 600;
+		line-height: 1.25;
+		text-align: center;
+		color: $white!important;
+		padding: 14px 24px;
+
+		@include media-breakpoint-up(md){
+			font-size: 16px;
+		}
+
+		&--green{
+			@extend .green-btn;
+		}
+	}
+
 	//
 	&__chb-cont{
 		.custom-chb{

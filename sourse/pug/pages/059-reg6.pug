@@ -1,0 +1,67 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= 'headings-color reg-page'
+	//-headings-color has-reg-btn new-header
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '059-reg6'
+	title= title
+block pagecontent
+	+sReg({
+		title: 'Контактное лицо',
+		logo: false,
+		backHeader: false,
+		stepHeader: true,
+		stepHeaderItems: [
+			'Основная информация',
+			'Отрасль организации',
+			'Контактное лицо',
+		],
+		checkedItems: 2,
+		currentItem: 2,
+		lowerRow: true,
+		lowerSkip: false,
+	})
+		+form-wrap()(class="with-labels")
+			//-
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Фамилия
+					+e.INPUT.input.form-control(class='' type="text" required placeholder="Введите Фамилию")
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Имя
+					+e.INPUT.input.form-control(class='' type="text" required placeholder="Введите Имя")
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Отчество
+					+e.INPUT.input.form-control(class='' type="text" required placeholder="Введите Отчество")
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Сайт организации
+					+e.INPUT.input.form-control(class='' type="text" placeholder="Введите адрес сайта")
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title Описание организации
+					+e.TEXTAREA.input.form-control.mb-12(required name="la" placeholder="Введите описание организации")
+			+e.btn-cont.pt-18
+				+e.green-btn(type="submit") Продолжить

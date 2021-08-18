@@ -1,24 +1,25 @@
 // start .sReg
 
- .reg-page{
-   @include media-breakpoint-down(sm){
-     font-size: 20px;
-     .select2-selection.select2-selection--multiple{
-       min-height: rem(51);
-     }
+.reg-page {
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+    .select2-selection.select2-selection--multiple {
+      min-height: rem(51);
+    }
 
 
-     .custom-chb .square{
-       width: rem(24px);
-       height: rem(24px);
-       margin-right: rem(8px);
+    .custom-chb .square {
+      width: rem(24px);
+      height: rem(24px);
+      margin-right: rem(8px);
       //  transition: all .05s;
       //  background: #fff;
       //  border: var(--sq-border);
-       border-radius: rem(5px);
-     }
-   }
- }
+      border-radius: rem(5px);
+    }
+  }
+}
+
 .sReg {
   padding-top: var(--top-nav-top, 0px);
 
@@ -28,14 +29,17 @@
   --cont-px: 40px;
 
   padding-bottom: var(--sReg-header-h);
-  &__container-fl{
+
+  &__container-fl {
     padding: var(--cont-px);
   }
-  &__h-row{
+
+  &__h-row {
     --bs-gutter-x: 24px;
     --bs-gutter-y: 24px;
   }
-  &__back-btn{
+
+  &__back-btn {
     @extend .btn;
     @extend .btn-light;
     font-size: inherit;
@@ -45,16 +49,17 @@
     color: $headings-color;
     padding: rem(7.5px) rem(15px);
 
-    .icon{
+    .icon {
       color: $warning;
       margin-right: rem(6px);
       font-size: rem(10px);
     }
   }
-  &__main-cont{
-    @include media-breakpoint-down(md){
+
+  &__main-cont {
+    @include media-breakpoint-down(md) {
       max-width: 100% !important;
-      padding: 0!important;
+      padding: 0 !important;
     }
     flex-grow: 1;
 
@@ -63,57 +68,51 @@
     align-items: center;
     justify-content: center;
   }
-  &__logo{
+
+  &__logo {
     display: block;
     width: rem(200px);
     margin-bottom: rem(48px);
 
-    img{
+    img {
       width: 100%;
       height: auto;
     }
   }
-  &__box{
+
+  &__box {
     background: $white;
 
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
       //width: 100vw;
       //position: relative;
       //left: calc(-1 * (100% - 100vw) / 2);
     }
     width: 100%;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       width: rem(558px);
       border-radius: rem(5px);
     }
 
     padding: rem(48px);
   }
-  &__b-content{
+
+  &__b-content {
     max-width: rem(412px);
     margin: 0 auto;
   }
-  &__title{
+
+  &__title {
     font-weight: 600;
     font-size: rem(30px);
     line-height: 1.25;
     margin-bottom: rem(36px);
   }
-  .form-wrap{
-    //&__c-cont{
-    //  border: 1px solid $gary-110;
-    //  border-radius: 5px;
-    //
-    //  margin-bottom: 24px;
-    //  padding: 4px;
-    //}
-    //&__c-row{
-    //  --bs-gutter-x: 4px;
-    //  --bs-gutter-y: 4px;
-    //}
+
+  .form-wrap {
 
     //role-chb
-    &__role-chb{
+    &__role-chb {
       border: rem(1px) solid $gary-110;
       border-radius: rem(5px);
 
@@ -122,63 +121,62 @@
 
       justify-content: space-between;
 
-      input:checked + .plate{
-        color: $headings-color!important;
-        background-color: $gray-100!important;
+      input:checked + .plate {
+        color: $headings-color !important;
+        background-color: $gray-100 !important;
       }
-      input:not(:checked) + .plate + .plate{
-        color: $headings-color!important;
-        background-color: $gray-100!important;
+
+      input:not(:checked) + .plate + .plate {
+        color: $headings-color !important;
+        background-color: $gray-100 !important;
       }
     }
 
-    .plate{
+    .plate {
       @extend .btn;
       @extend .btn-light;
-      border: none!important;
+      border: none !important;
 
       padding: rem(11px) rem(20px);
-      font-size: inherit!important;
+      font-size: inherit !important;
       line-height: 1.25;
       text-align: center;
 
       width: calc(50% - #{rem(2px)});
 
-      color: $secondary!important;
-      background-color: transparent!important;
+      color: $secondary !important;
+      background-color: transparent !important;
 
       //&:hover{
       //  color: $headings-color!important;
       //}
     }
-    //
-
-
     --inp-title-mb: #{rem(12px)};
-    &.with-labels{
+    &.with-labels {
       --inp-title-mb: #{rem(18px)};
     }
 
-    form{
-      & > *:last-child{
+    form {
+      & > *:last-child {
         margin-bottom: 0;
       }
     }
 
-    &__input-wrap{
+    //
+    &__input-wrap {
       margin-bottom: var(--inp-title-mb, #{rem(12px)});
 
-      textarea{
+      textarea {
         height: rem(96px);
       }
     }
-    &__error{
+    &__error {
       margin-top: rem(6px);
 
       line-height: 1.25;
       color: $danger;
     }
-    &__input-title{
+    &__input-title {
       text-align: left;
       display: block;
       font-weight: 600;
@@ -189,8 +187,8 @@
       margin-bottom: rem(9px);
 
       //
-      &.require{
-        &:after{
+      &.require {
+        &:after {
           content: '*';
           font-size: rem(18px);
           color: $red2;
@@ -198,45 +196,59 @@
         }
       }
     }
-    &__inp-cont{
+    &__inp-cont {
       @extend .inp-cont;
     }
-    &__show-hide-btn{
+    &__show-hide-btn {
       @extend .show-hide-btn;
     }
-    .form-wrap__show-hide-btn .icon{
+    .form-wrap__show-hide-btn .icon {
       font-size: rem(20);
     }
-    &__input{
+    &__input {
       padding: rem(14.5px) rem(60px) rem(14.5px) rem(12px);
-      	@include media-breakpoint-up(md){
+      @include media-breakpoint-up(md) {
 
-          font-size: rem(14px);
-        }
+        font-size: rem(14px);
+      }
 
       box-shadow: 0px 0px rem(15px) rgba(38, 39, 40, 0);
-      &:focus{
+
+      &:focus {
         box-shadow: 0px 0px rem(15px) rgba(38, 39, 40, 0.15);
       }
+
+      //
+      //&:autofill{}
+      &.autofill{
+        background-color: $gray-100!important;
+        border: 1px solid $gary-110!important;
+      }
     }
+
     //
-    &__btn-cont{
+    &__btn-cont {
       padding-top: rem(12px);
       margin-bottom: rem(24px);
     }
-    &__btn-row{
+    &__btn-row {
       --bs-gutter-x: #{rem(24px)};
       --bs-gutter-y: #{rem(24px)};
     }
-    &__green-btn{
+    &__green-btn {
       @extend .green-btn;
       width: 100%;
       padding: rem(14px) rem(20px);
-      	@include media-breakpoint-down(md) {
-          font-size: rem(20);
-        }
+      @include media-breakpoint-down(md) {
+        font-size: rem(20);
+      }
+
+      &.disabled{
+        background: $gray-100!important;
+        color: $secondary!important;
+      }
     }
-    &__back-btn{
+    &__back-btn {
       @extend .btn;
       @extend .btn-light;
       width: 100%;
@@ -248,75 +260,79 @@
       color: $headings-color;
       padding: rem(14.5px) rem(15px);
 
-      .icon{
+      .icon {
         color: $warning;
         margin-right: #{rem(6px)};
         font-size: #{rem(10px)};
       }
     }
+
     //
-    &__not-found{
+    &__not-found {
       font-size: rem(13.5px);
       line-height: 1.25;
       text-align: center;
 
-      a{
+      a {
         color: $primary;
       }
     }
 
     //
-    &__policy-row{
+    &__policy-row {
       --bs-gutter-x: #{rem(12px)};
-      .square{
+
+      .square {
         margin-right: 0;
       }
     }
-    &__policy-txt{
+    &__policy-txt {
       font-size: rem(12px);
       line-height: 1.75;
       color: $headings-color;
     }
-
-    &__inps-row{
+    &__inps-row {
       --bs-gutter-x: #{rem(24px)};
       --bs-gutter-y: #{rem(24px)};
     }
-    &__month-col{
+    &__month-col {
       width: 45%;
     }
-
     //.custom-select
-    .custom-select{
+    .custom-select {
       min-width: rem(90px);
       //width: 100%;
 
-      .select2-selection{
+      .select2-selection {
         --select-h: #{rem(48px)};
-        border-color: $gary-110!important;
+        border-color: $gary-110 !important;
       }
-      .select2.select2-container.select2-container--default{
-        height: rem(48px)!important;
+
+      .select2.select2-container.select2-container--default {
+        height: rem(48px) !important;
       }
-      .select2-selection__rendered{
-        display: flex!important;
-        align-items: center!important;
+
+      .select2-selection__rendered {
+        display: flex !important;
+        align-items: center !important;
         --rendered-fs: #{rem(14px)};
       }
     }
+
     //repeator
-    &__remove-item{
+    &__remove-item {
       border-bottom: 1px solid $gray-210;
       margin-bottom: rem(48px);
     }
-    &__r-btn{
+    &__r-btn {
       display: flex;
       align-items: center;
 
       --icon-color: #{$gray-550};
       --ball-bg: #{$gray-100};
       --txt-color: #{$headings-color};
-      &:hover{
+
+      &:hover {
         --icon-color: #{$white};
         --ball-bg: #{$warning};
         --txt-color: #{$warning};
@@ -324,7 +340,7 @@
 
       padding-bottom: rem(24px);
     }
-    &__r-ball{
+    &__r-ball {
       @include mt($smooth);
       width: rem(24px);
       height: rem(24px);
@@ -336,7 +352,7 @@
       justify-content: center;
       background-color: var(--ball-bg, #{$light});
 
-      .icon{
+      .icon {
         @include mt();
         font-size: rem(10px);
         color: var(--icon-color);
@@ -344,12 +360,12 @@
 
       margin-right: rem(12px);
     }
-    &__ri-txt{
+    &__ri-txt {
       font-size: rem(15px);
       line-height: 1.25;
       color: var(--txt-color, #{$headings-color});
     }
-    &__r-add-btn{
+    &__r-add-btn {
       @extend .btn;
       @extend .btn-outline-primary;
 
@@ -361,43 +377,58 @@
       padding: rem(11px) rem(23px);
       border-width: rem(1px);
 
-      color: $primary!important;
-      &:hover{
-        color: $white!important;
+      color: $primary !important;
+
+      &:hover {
+        color: $white !important;
       }
     }
-    .custom-chb:last-child{
+    .custom-chb:last-child {
       margin-bottom: 0;
     }
-    .custom-radio{
+    .custom-radio {
       margin-bottom: rem(12px);
-      &:last-child{
+
+      &:last-child {
         margin-bottom: 0;
       }
     }
+
     //end repeator
 
+    &__foot-txt{
+      line-height: 1.25;
+
+      position: relative;
+      margin: 0 -5px;
+    }
+    &__{}
+    &__{}
     &__{}
   }
-  &__lower-content{
+
+  &__lower-content {
 
   }
-  &__l-row{
+
+  &__l-row {
     --bs-gutter-x: #{rem(6px)};
     --bs-gutter-y: #{rem(12px)};
     align-items: center;
   }
-  &__l-txt{
+
+  &__l-txt {
     line-height: 1.25;
   }
-  &__l-link{
+
+  &__l-link {
     display: inline-block;
     line-height: 1.25;
     font-weight: 600;
   }
 
   //steps
-  &__steps-head{
+  &__steps-head {
     background: $white;
     position: relative;
     overflow: hidden;
@@ -406,24 +437,28 @@
 
     margin-bottom: rem(48px);
   }
-  &__step-slider{
-    .swiper-container{
-      overflow: visible!important;
+
+  &__step-slider {
+    .swiper-container {
+      overflow: visible !important;
     }
-    .swiper-wrapper{
-      @include media-breakpoint-up(lg){
+
+    .swiper-wrapper {
+      @include media-breakpoint-up(lg) {
         justify-content: center;
       }
     }
-    .swiper-slide{
+
+    .swiper-slide {
       width: auto;
     }
   }
-  &__step{
+
+  &__step {
     display: flex;
     align-items: center;
 
-    &:before{
+    &:before {
       content: '';
       width: rem(24px);
       height: rem(24px);
@@ -437,60 +472,72 @@
 
     font-weight: 600;
     line-height: 1.5;
-    color: $secondary!important;
+    color: $secondary !important;
 
     &.current,
-    &.checked{
-      &:before{
+    &.checked {
+      &:before {
         border-color: $warning;
       }
     }
 
-    &.checked{
-      color: $secondary!important;
-      &:before{
+    &.checked {
+      color: $secondary !important;
+
+      &:before {
         background-image: url(../img/svg/check.svg);
       }
     }
-    &.current{
-      color: $body-color!important;
+
+    &.current {
+      color: $body-color !important;
     }
   }
+
   //
-  &__portrait-bl{
+  &__portrait-bl {
     margin-bottom: 24px;
   }
-  &__portrait{
+
+  &__portrait {
     width: rem(146px);
     height: rem(146px);
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto rem(12px) auto;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
+    &--square{
+      border-radius: 5px;
+    }
   }
-  &__p-txt{
+
+  &__p-txt {
     margin-bottom: rem(12px);
 
     line-height: 1.5;
-    b{
+
+    b {
       font-weight: 600;
     }
   }
-  &__upload-label{
-    display: block!important;
+
+  &__upload-label {
+    display: block !important;
     cursor: pointer;
   }
-  &__upload{
+
+  &__upload {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &:before{
+    &:before {
       content: '';
       display: inline-block;
       width: rem(16px);
@@ -507,41 +554,48 @@
     line-height: (16/14);
     color: $primary;
   }
-  &__{}
-  &__{}
-  &__{}
-} // end.sReg
 
-.c-tabs__content{
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+}
+
+// end.sReg
+
+.c-tabs__content {
   display: none;
-  &.active{
+
+  &.active {
     display: block;
   }
 }
 
-.btn-radio{
-  display: block!important;
-  input:checked + .plate{
-    color: $headings-color!important;
-    background-color: $gray-100!important;
+.btn-radio {
+  display: block !important;
+
+  input:checked + .plate {
+    color: $headings-color !important;
+    background-color: $gray-100 !important;
   }
-  .plate{
+
+  .plate {
     @extend .btn;
     @extend .btn-light;
-    border: none!important;
+    border: none !important;
 
     padding: rem(11px) rem(20px);
-    font-size: inherit!important;
+    font-size: inherit !important;
     line-height: 1.25;
     text-align: center;
 
     width: 100%;
 
-    color: $secondary!important;
-    background-color: transparent!important;
+    color: $secondary !important;
+    background-color: transparent !important;
 
-    &:hover{
-      color: $headings-color!important;
+    &:hover {
+      color: $headings-color !important;
     }
   }
 }

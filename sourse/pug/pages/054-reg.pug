@@ -23,19 +23,29 @@ block variables
 	//-headings-color has-reg-btn new-header
 	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
 block title
-	- let  title= '036-accept'
+	- let  title= ''
 	title= title
 block pagecontent
 	+sReg({
-		title: 'Подтвердите регистрацию',
+		title: 'Регистрация',
 		logo: true,
 		backHeader: true,
-		lowerRow: false,
+		lowerRow: true,
+		lowerLog: true,
 	})
-		+e.accept-txt
-			p По адресу: yourmail@mail.ru вам выслано письмо со ссылкой, перейдите по ней, чтобы подтвердить свою почту и завершить регстрацию.
-			p Если вы не видите письма во входящих, проверьте папку со спамом, а также другие папки, в которые письмо может попасть.
-			p
-				| Или
+		+form-wrap()
+			+e.LABEL.role-chb
+				input(type="checkbox" class="invisible" name='role')
+				+b.plate--employee Я соискатель
+				+b.plate--employer Я работодатель
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require ИНН организации
+					+e.INPUT.input.form-control(class='' type="text" required placeholder="")
+			+e.btn-cont
+				+e.btn-cont.pt-18
+					+e.green-btn.disabled(type="submit") Продолжить
+			+e.foot-txt.text-center
+				| Если ваша организация не найдена, обратитесь в
 				|
-				a(href="#") отправьте письмо повторно.
+				a.fw-600(href="#") поддержку.

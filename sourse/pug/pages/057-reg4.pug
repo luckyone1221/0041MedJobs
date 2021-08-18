@@ -1,0 +1,91 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/sReg/_sReg.pug
+include ../blocks/sSearch/_sSearch.pug
+
+block variables
+	- let  mainPage= 'headings-color reg-page'
+	//-headings-color has-reg-btn new-header
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '057-reg4'
+	title= title
+block pagecontent
+	+sReg({
+		title: 'Основная информация',
+		logo: false,
+		backHeader: false,
+		stepHeader: true,
+		stepHeaderItems: [
+			'Основная информация',
+			'Отрасль организации',
+			'Контактное лицо',
+		],
+		checkedItems: 0,
+		currentItem: 0,
+		lowerRow: true,
+		lowerSkip: false,
+	})
+		+e.portrait-bl
+			+e.portrait--square.sReg-portrait-js
+				img(loading="lazy" src="img/svg/company-stab.svg" alt='')
+			+e.p-txt
+				b
+					| Логотип организации.
+					|
+				| формат: jpg, png.
+				br
+				| Максимальный размер файла: 2 Mb.
+				br
+				| Рекомендованный размер: 300х300 px.
+			+e.LABEL.upload-label
+				input.sReg-portrait-inp-js(type="file" accept=".png, .jpg, .jpeg" class="invisible")
+				+e.upload Загрузить
+		+form-wrap()(class="with-labels")
+			//-
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Город организации
+					+e.INPUT.input.form-control(class='' type="text" required placeholder="Начните вводить город")
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Форма собственности организации
+					+customSlect('form')(data-placeholder="Частная, Государственная, Иностранная" require)
+						option(label="#" selected)
+						option Частная
+						option Государственная
+						option Иностранная
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Форма собственности организации
+					+customSlect('form')(data-placeholder="Менее 20, 20-100, 100-500, Более 500" require)
+						option(label="#" selected)
+						option Менее 20
+						option 20-100
+						option 100-500
+						option Более 500
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title.require Сайт организации
+					+e.INPUT.input.form-control(class='' type="text" placeholder="Введите адрес сайта")
+			+e.input-wrap.form-group
+				label
+					+e.SPAN.input-title Описание организации
+					+e.TEXTAREA.input.form-control.mb-12(required name="la" placeholder="Введите описание организации")
+			+e.btn-cont.pt-18
+				+e.green-btn(type="submit") Продолжить
