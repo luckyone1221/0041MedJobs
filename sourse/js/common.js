@@ -26,8 +26,7 @@ const JSCCommon = {
   menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
   modalCall() {
-
-    $(".link-modal").fancybox({
+    let fancyParams = {
       arrows: false,
       infobar: false,
       touch: false,
@@ -53,12 +52,28 @@ const JSCCommon = {
       afterClose: function () {
         document.querySelector("html").classList.remove("fixed");
       },
-    });
-
-
+    };
+    $(".link-modal").fancybox(fancyParams);
     $(".modal-close-js").click(function () {
       $.fancybox.close();
     })
+
+
+    $('.link-modal--close-prev').click(function (){
+      $.fancybox.close();
+
+      let self = this;
+      window.setTimeout(function (){
+        $(self).fancybox(fancyParams);
+      }, 10);
+
+      document.querySelector("html").classList.add("fixed2");
+      window.setTimeout(function (){
+        document.querySelector("html").classList.remove("fixed2");
+        document.querySelector("html").classList.add("fixed");
+      }, 1000)
+    })
+
     $.fancybox.defaults.backFocus = false;
     const linkModal = document.querySelectorAll('.link-modal');
 
@@ -145,9 +160,20 @@ const JSCCommon = {
     $(document).on('click', '.scroll-link, .aside-menu-js > ul > li > a', function () {
       event.preventDefault();
       let elementClick = $(this).attr("href");
-      let destination = $(elementClick).offset().top - header.offsetHeight - 20;
+      let scrollBox = this.getAttribute('data-scrollbox');
 
-      $('html, body').animate({ scrollTop: destination }, 600);
+      if (scrollBox){
+        scrollBox = document.querySelector(scrollBox);
+        let destination = $(elementClick).offset().top - $(elementClick).parent().offset().top + 90;
+
+        $(scrollBox).animate({
+          scrollTop: destination,
+        }, 700);
+      }
+      else{
+        let destination = $(elementClick).offset().top - header.offsetHeight - 20;
+        $('html, body').animate({ scrollTop: destination }, 600);
+      }
       // window.scrollTo({
       //   top: destination,
       //   behavior: "smooth"
@@ -170,7 +196,7 @@ function eventHandler() {
   // JSCCommon.CustomInputFile();
   var x = window.location.host;
   let screenName;
-  screenName = '051-576.png';
+  screenName = '047-modal4.png';
   if (screenName && x.includes("localhost:30")) {
     document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
   }
@@ -197,12 +223,27 @@ function eventHandler() {
 
   //css vars
   let header = document.querySelector("#headerAlt") || document.querySelector(".top-nav");
-  let headerH;
+  let headerH = 0;
   document.documentElement.style.setProperty('--scroll-width', `${scrollWidth}px`);
 
+  let stickyArr = [];
+  $('.sticky-js').each(function (){
+    let Sticky = new hcSticky(this, {
+      stickTo: '#sticyContjs',
+      top: 20 + headerH,
+    });
+
+    stickyArr.push(Sticky);
+  });
   function calcCssVars() {
     document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
     headerH = header.offsetHeight;
+
+    for (let Sticky of stickyArr){
+      Sticky.update({
+        top: 20 + headerH,
+      });
+    }
   }
 
   if (header) {
@@ -1192,6 +1233,67 @@ function eventHandler() {
   $('.paint-down-md-whihe-js').click(function (){
     $('.fancybox-bg').addClass('white-down-md');
     $('.fancybox-slide--html').addClass('p-0');
+  });
+
+  //ultimate Tabs
+  //.cTabs-js(=== .tabs)
+  //.cTabs-btn-js(=== .tabs__btn)
+  //.cTabs-content-group-js(=== .tabs__wrap)
+  //.cTabs-content-js(=== .tabs__content)
+
+  $('.cTabs-js').each(function (){
+    let Btns = this.querySelectorAll('.cTabs-btn-js');
+    let contentGroups = this.querySelectorAll('.cTabs-content-group-js');
+
+    $(Btns).click(function (){
+      $(Btns).removeClass('active');
+      $(this).addClass('active');
+
+      let index = $(this).index();
+
+      $(contentGroups).each(function (){
+        let contentItems = this.querySelectorAll('.cTabs-content-js');
+
+        $(contentItems).removeClass('active');
+        contentItems[index].classList.add('active');
+      })
+    })
+  })
+  //.blog-inp-js
+  $('.blog-inp-js').focus(function (){
+    $(this.parentElement).addClass('active');
+  }).blur(function (){
+    $(this.parentElement).removeClass('active');
+
+    if (this.value !== ''){
+      $(this.parentElement).addClass('inp-not-empty');
+    }
+    else{
+      $(this.parentElement).removeClass('inp-not-empty');
+    }
+  });
+
+  //.s-inp-js
+  //.s-clean-btn-js
+  //.s-btn-wrap-js
+
+  $('.b-search--js').each(function (){
+    let btnWrap = this.querySelector('.s-btn-wrap-js');
+    let inp = this.querySelector('.s-inp-js');
+
+    $(inp).keyup(function (){
+      if (this.value !== ''){
+        $(this.parentElement).addClass('inp-not-empty');
+      }
+      else{
+        $(this.parentElement).removeClass('inp-not-empty');
+      }
+    });
+  })
+
+  //-
+  $('.s-clean-btn-js').click(function (){
+    $(this).closest('.b-search--js').find('.s-inp-js').val('');
   });
 
 };

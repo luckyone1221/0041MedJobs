@@ -1532,3 +1532,420 @@
 	&__{}
 	&__{}
 }
+//
+.b-search{
+	padding: 30px;
+	&__title{
+		font-weight: 600;
+		line-height: 1.25;
+
+		font-size: 30px;
+		margin-bottom: 24px;
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+	&__input-wrap{
+		position: relative;
+		margin-bottom: 24px;
+
+		&.inp-not-empty{
+			--submit-pe: auto;
+			--submit-o: 1;
+			--btn-o: 1;
+		}
+	}
+	&__input{
+		padding: 17px 60px 17px 20px;
+
+		font-size: 20px;
+		line-height: (24/20);
+		margin-bottom: 24px;
+	}
+	&__clean-btn{
+		@include mt();
+		opacity: var(--btn-o, 0);
+
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 60px;
+		width: 58px;
+		padding: 10px 20px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon{
+			font-size: 18px;
+			color: $gray-550;
+		}
+	}
+	&__btn{
+		@include mt();
+		position: var(--submit-pe, none);
+		opacity: var(--submit-o, 0);
+
+		@extend .green-btn;
+		width: 100%;
+		border-radius: 8px;
+
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 1.25;
+
+		padding: 15px 24px;
+	}
+	&__{}
+	&__{}
+}
+
+//
+.modal-vac{
+	--col-padd-x: 48px;
+	@include media-breakpoint-up(md){
+		--col-padd-x: 36px;
+	}
+	@include media-breakpoint-up(lg){
+		--col-padd-x: 47.5px;
+	}
+	--col-padd-y: 48px;
+	padding: 0!important;
+	border-radius: 12px!important;
+	overflow: visible!important;
+	//
+	//transform: translateX(-10px)!important;
+
+	//max-width: calc(100vw - 60px)!important;
+	@include media-breakpoint-up(md){
+		max-width: 720px!important;
+	}
+	@include media-breakpoint-up(lg){
+		max-width: 752px!important;
+	}
+
+	&__row{
+		& > *{
+			padding: var(--col-padd-y) var(--col-padd-x);
+		}
+	}
+	&__left-col{
+		display: flex;
+		flex-direction: column;
+	}
+	&__vac-name{
+		font-weight: 600;
+
+		font-size: 30px;
+		margin-bottom: 18px;
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+			margin-bottom: 12px;
+		}
+	}
+	&__salary{
+		font-weight: 600;
+		font-size: 30px;
+		margin-bottom: 18px;
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+			margin-bottom: 12px;
+		}
+
+	}
+	&__descr{
+		font-size: 20px;
+		margin-bottom: 18px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+			margin-bottom: 12px;
+		}
+		letter-spacing: -0.15px;
+		line-height: 1.5;
+	}
+	&__location{
+		color: $secondary;
+
+		font-size: 20px;
+		margin-bottom: 18px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+			margin-bottom: 12px;
+		}
+	}
+	&__foot{
+		margin-top: auto;
+	}
+	&__logo{
+		width: 96px;
+		height: 96px;
+		padding: 4px;
+		margin-bottom: 18px;
+		border-radius: 8px;
+		@include media-breakpoint-up(md){
+			width: 48px;
+			height: 48px;
+			padding: 4px;
+			margin-bottom: 12px;
+			border-radius: 5px;
+		}
+		background-color: $white;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__lower-desrc{
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+		line-height: 1.5;
+		letter-spacing: -0.18px;
+
+		margin-bottom: 4px;
+	}
+	&__lower-loc{
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+
+		color: $secondary;
+	}
+	//
+	&__box{
+		padding-bottom: 24px;
+		margin-bottom: 24px;
+		border-bottom: 1px solid $gary-110;
+
+		&:last-child{
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+	&__title{
+		font-weight: 600;
+		font-size: 30px;
+		@include media-breakpoint-up(md){
+			font-size: 24px;
+		}
+		line-height: 1.25;
+	}
+	&__portrait{
+		width: 96px;
+		height: 96px;
+		margin: 0 auto 18px;
+		@include media-breakpoint-up(md){
+			width: 48px;
+			height: 48px;
+			margin: 0 0 12px;
+		}
+
+		border-radius: 50%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name{
+		margin-bottom: 6px;
+		font-weight: 600;
+	}
+	&__duty{
+		margin-bottom: 6px;
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+	}
+	&__sm-data{
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+
+		color: $secondary;
+	}
+	.hint-row{
+		&__compitness-text{
+			font-size: 20px;
+			@include media-breakpoint-up(md){
+				font-size: 14px;
+			}
+		}
+		&__hint{
+			font-size: 18px;
+			@include media-breakpoint-up(md){
+				font-size: 14px;
+			}
+			&:after,
+			&:before{
+				left: 95.5%;
+				@include media-breakpoint-up(md){
+					left: 73.2%;
+				}
+
+			}
+		}
+
+		margin-bottom: 36px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 54px;
+		}
+	}
+	&__btns{
+
+	}
+	&__btn{
+		@extend .btn;
+		font-size: inherit!important;
+		line-height: 1.25;
+		padding: 15px 24px;
+		width: 100%;
+
+		margin-bottom: 12px;
+		border-radius: 8px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 10px;
+			border-radius: 6px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&--blue{
+			@extend .btn-primary;
+			font-weight: bold;
+			color: $white!important;
+		}
+		&--gray{
+			@extend .btn-light;
+		}
+	}
+
+	//
+	&__{}
+	&__{}
+}
+
+//
+.modal-reply{
+	border-radius: 12px!important;
+	padding: 48px!important;
+
+	&__box{
+		padding-bottom: 36px;
+		margin-bottom: 36px;
+		@include media-breakpoint-up(md){
+			padding-bottom: 24px;
+			margin-bottom: 24px;
+		}
+		border-bottom: 1px solid $gary-110;
+
+		&:last-child{
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	&__title{
+		font-weight: 600;
+		margin-bottom: 24px;
+
+		font-size: 24px;
+		@include media-breakpoint-up(md){
+			font-size: 30px;
+		}
+	}
+	&__descr{
+		margin-bottom: 18px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 12px;
+		}
+	}
+	&__sm{
+		color: $secondary;
+
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+	}
+	&__sm-title{
+		font-weight: 600;
+
+		line-height: (28/24);
+		margin-bottom: 12px;
+		@include media-breakpoint-up(md){
+			line-height: (19/16);
+			margin-bottom: 8px;
+		}
+	}
+	&__name{
+		margin-bottom: 12px;
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 6px;
+			font-size: 14px;
+		}
+
+	}
+	&__duty{
+		color: $gray-600;
+
+		margin-bottom: 24px;
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 18px;
+			font-size: 14px;
+		}
+
+	}
+	&__contacts{
+		margin-bottom: 24px;
+	}
+	&__tell{
+		font-weight: 600;
+		color: $primary;
+
+		font-size: 36px;
+		margin-bottom: 12px;
+		@include media-breakpoint-up(md){
+			font-size: 42px;
+			margin-bottom: 4px;
+		}
+	}
+	&__mail{
+		display: inline-block;
+		color: $secondary;
+	}
+	&__sh-val{
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+	}
+	&__tell-txt{
+		font-size: 20px;
+		@include media-breakpoint-up(md){
+			font-size: 14px;
+		}
+	}
+	//
+	&__{}
+	&__{}
+}

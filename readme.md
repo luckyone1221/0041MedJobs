@@ -89,3 +89,5 @@
 1. <https://luckyone1221.github.io/0041MedJobs/public/050-city-choise.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/051-article.html>
 1. <https://luckyone1221.github.io/0041MedJobs/public/052-proffesions.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/053-blog.html>
+1. <https://luckyone1221.github.io/0041MedJobs/public/053-blog-2.html>

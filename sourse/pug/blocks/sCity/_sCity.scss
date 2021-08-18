@@ -97,13 +97,18 @@
 
 //
 .ct-ancors{
-	position: relative;
-	z-index: 1;
+	&.css-sticky{
+		position: relative;
+		z-index: 1;
+		.ct-ancors__items{
+			position: sticky;
+			left: 0;
+			top: calc(var(--header-h, 0) + 20px);
+		}
+	}
 
 	&__items{
-		position: sticky;
-		left: 0;
-		top: calc(var(--header-h, 0) + 20px);
+		padding-bottom: 20px;
 	}
 	&__item{
 		display: block;

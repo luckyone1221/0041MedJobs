@@ -1,0 +1,127 @@
+mixin sBlogN(data)
+  // start sBlogN
+  +b.SECTION.sBlogN.section#sBlogN&attributes(attributes)
+    .container.cTabs-js
+      .d-none.d-md-block
+        +breadcrumb('Главная', 'Блог')
+      +e.top-row.row.align-items-center
+        .col.col-md-auto
+          +b.section-title
+            h1 Блог
+        .col-auto.d-md-none
+          +e.mob-search.link-modal.paint-down-md-whihe-js(href='#modal-blog-search')
+            +icon('zoom')
+        .col-md
+          +e.caption-row.row
+            +sBlogNTabsBtn('Все', 'active')
+            +sBlogNTabsBtn('Статьи')
+            +sBlogNTabsBtn('Новости')
+        .col-auto.d-none.d-md-block
+          +e.input-wrap
+            +e.INPUT.input.blog-inp-js.form-control(type="text" placeholder="Поиск по блогу")
+            +e.zoom-btn(type="button")
+              +icon('zoom')
+      +e.content-wrap.cTabs-content-group-js
+        +sBlogNContent('active', data.notFound)
+        +sBlogNContent('')
+        +sBlogNContent('')
+        //.sBlogN__pag-wrap can be pulled here
+  // end sBlogN
+
+mixin sBlogNTabsBtn(txt, addClasses='')
+  .col-auto
+    +e.tabs-btn.cTabs-btn-js(class=addClasses)=txt
+
+mixin sBlogNContent(addClasses='', notFound)
+  +e.content.cTabs-content-js(class=addClasses)
+    if notFound
+      +e.not-font
+        +e.n-title По запросу “название новости” ничего не найдено
+        +e.n-sm Вы можете изменить поисковый запрос или посмотреть другие статьи.
+    +e.row.row
+      .col-md-6.col-lg-4
+        +sUsefullItemAlt({
+          imgNum: 1,
+          title: 'Долой территоризм: какие личные вещи запрещены на работе',
+        })
+      .col-md-6.col-lg-4
+        +sUsefullItemAlt({
+          imgNum: 2,
+          title: 'Тест: какой вы начальник?',
+        })
+      .col-md-6.col-lg-4
+        +sUsefullItemAlt({
+          imgNum: 3,
+          title: 'Что нужно знать о командировках, чтобы поездка не обернулась кошмаром',
+        })
+      if !notFound
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 3,
+            title: 'Что нужно знать о командировках, чтобы поездка не обернулась кошмаром',
+          })
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 1,
+            title: 'Долой территоризм: какие личные вещи запрещены на работе',
+          })
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 2,
+            title: 'Тест: какой вы начальник?',
+          })
+        //-
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 1,
+            title: 'Долой территоризм: какие личные вещи запрещены на работе',
+          })
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 2,
+            title: 'Тест: какой вы начальник?',
+          })
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 3,
+            title: 'Что нужно знать о командировках, чтобы поездка не обернулась кошмаром',
+          })
+        //-
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 3,
+            title: 'Что нужно знать о командировках, чтобы поездка не обернулась кошмаром',
+          })
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 1,
+            title: 'Долой территоризм: какие личные вещи запрещены на работе',
+          })
+        .col-md-6.col-lg-4
+          +sUsefullItemAlt({
+            imgNum: 2,
+            title: 'Тест: какой вы начальник?',
+          })
+      +e.pag-wrap
+        //+puginationN()
+        +b.pugination
+          //-new
+          ul.pagination
+            li.prev.disabled: span
+              +icon('chevron-left')
+            li.active: a(href="#") 1
+            li: a(href="#") 2
+            li: a(href="#") 3
+            li: a(href="#") ...
+            li: a(href="#") 5
+            li.next.disabled: a(href="#")
+              +icon('chevron-right')
+
+mixin sUsefullItemAlt(data)
+  +b.blog-item(class=data.addClasses)
+    +e.img
+      img(loading="lazy" src=`img/@2x/sUsefull-${data.imgNum}.jpg` alt='')
+    +e.articles(href='#') Статьи
+    +e.title(href='#')=data.title
+    +e.descr=`${data.descr || 'Что можно считать стыдной работой? У каждого своя история'}`
+    +e.date 19 ноября 2021

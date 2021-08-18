@@ -3,7 +3,7 @@ mixin sCity(data)
 	+b.SECTION.sCity.section#sCity&attributes(attributes)
 		.container
 			+e.main-row.row
-				.col
+				.col#sticyContjs
 					.d-none.d-md-block
 						+breadcrumb('Главная', 'Каталог городов')
 					+b.section-title
@@ -14,21 +14,23 @@ mixin sCity(data)
 						+sCityItem('В')
 						+sCityItem('Г')
 						+sCityItem('Я')
-				+sCityAcors()
+				+sCityAcors('sticky-js align-self-start')
 					+sCityAncor('А')
 					+sCityAncor('Б')
 					+sCityAncor('В')
 					+sCityAncor('Г')
 					+sCityAncor('Я')
+					-for(var i = 0; i < 19; i++)
+						+sCityAncor(`${i}`)
 	// end sCity
 
-mixin sCityAcors()
-	+b.ct-ancors.col-auto.d-md-none
+mixin sCityAcors(addClasses='')
+	+b.ct-ancors.col-auto.d-md-none(class=addClasses)
 		+e.items
 			block
 
-mixin sCityAncor(letter)
-	+e.item.scroll-link(href=`#${letter}`)=letter
+mixin sCityAncor(letter, idMod='')
+	+e.item.scroll-link(href=`#${letter+idMod}`)&attributes(attributes)=letter
 
 mixin sCityItem(letter, wordAddClasses='')
 	+e.item(id=letter)

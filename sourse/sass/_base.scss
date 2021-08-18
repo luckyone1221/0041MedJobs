@@ -3,7 +3,8 @@
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
-	z-index: 1000;
+	//z-index: 1000;
+	z-index: 114102;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
@@ -20,7 +21,8 @@ html{
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
 
-	&.fixed{
+	&.fixed,
+	&.fixed2{
 		padding-right: var(--scroll-width, 0);
 
 		.top-nav{
@@ -1432,6 +1434,10 @@ h5{
 }
 
 .new-page{
+	.p-cab-dd{
+		font-family: $default-font;
+		font-size: 14px;
+	}
 	font-size: inherit!important;
 
 	--fontSizeBase: 16px!important;
@@ -1700,5 +1706,12 @@ h5{
 	}
 	to{
 		transform: rotate(360deg);
+	}
+}
+//
+.cTabs-content-js{
+	display: none;
+	&.active{
+		display: block;
 	}
 }

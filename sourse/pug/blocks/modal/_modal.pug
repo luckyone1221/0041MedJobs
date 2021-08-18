@@ -588,14 +588,14 @@ mixin modal()
 				title: 'Профотрасли',
 			})
 	//-
-	+b.modal-city--new.modal-win(id="modal-city-alt" class="" style="display: none")
+	+b.modal-city--new.modal-win.mb-0.overflow-hidden(id="modal-city-alt" class="" style="display: none")
 		+e.top-box.top-box-js
 			+e.title-alt.text-md-center Выберите ваш регион
 			+form-wrap()
 				+e.input-wrap.spining.form-group
 					+e.INPUT.input.form-control(type="text" placeholder="Введите город" name="city" value="Толь")
 					+e.cross-btn(type="button")
-		+e.content-box
+		+e.content-box#ancors-scroll-box-js
 			+e.c-top-row.row.align-items-center
 				.col
 					+e.popular(href="#") Популярные города
@@ -713,15 +713,85 @@ mixin modal()
 						+modalCityWord('Якутск')
 						+modalCityWord('Ярославль')
 				//-
-				+sCityAcors()
-					+sCityAncor('А')
-					+sCityAncor('Б')
-					+sCityAncor('В')
-					+sCityAncor('Г')
-					+sCityAncor('Д')
-					+sCityAncor('Е')
-					+sCityAncor('Ж')
-					+sCityAncor('Я')
+				+sCityAcors('css-sticky')
+					+sCityAncor('А', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					+sCityAncor('Б', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					+sCityAncor('В', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					+sCityAncor('Г', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					+sCityAncor('Д', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					+sCityAncor('Е', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					+sCityAncor('Ж', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					+sCityAncor('Я', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+	//-
+	+b.modal-city--new.modal-win.mb-0(id="modal-blog-search" class="" style="display: none")
+		+b.b-search--js
+			+e.title.text-center Поиск по блогу
+			+e.input-wrap
+				+e.INPUT.input.form-control.blog-inp-js.s-inp-js(type="text" placeholder='Начните вводить')
+				+e.clean-btn.s-clean-btn-js
+					+icon('cross-bold')
+				+e.btn(type="submit") Показать результаты
+	+b.modal-vac.modal-win(id="modal-vac" class="" style="display: none")
+		+e.row.row.gy-0.gx-0
+			+e.left-col.col-md-6.bg-light.d-none.d-md-flex.text-center.text-md-start
+				+e.vac-name
+					| Врач
+					br
+					| стоматолог-терапевт-
+					br
+					| хирург
+				+e.salary.text-primary
+					span.me-1 от 30 000 до 50 000
+					span.ff-mono.fw-700 ₽
+				+e.descr Комсомольск-на-Амуре, Полный рабочий день, Опыт работы от 3 лет
+				+e.location г. Санкт-Петербург, ул. Иванова, д. 35
+				+e.foot
+					+e.logo
+						img(loading="lazy" src="img/@2x/aside-box-logo.png" alt="")
+					+e.lower-desrc Государственное бюджетное учреждение здравоохранения Нижегородской области "Борская центральная районная больница"
+					+e.lower-loc г. Санкт-Петербург
+			.col-md-6.text-center.text-md-start
+				+e.box
+					+e.title Откликнуться
+				+e.box
+					+e.portrait
+						img(loading="lazy" src="img/svg/portrait-stab.svg" alt="")
+					+e.name Константин Константинович Константинопольский
+					+e.duty Главный врач
+					+e.sm-data Комсомольск-на-Амуре, 27 лет
+				+e.box
+					+b.hint-row--js.row.align-items-center.justify-content-center.justify-content-md-start.d-inline-flex
+						+e.compitness-text.col-auto
+							span.me-1 Заполненность резюме:
+							span.fw-500.text-primary 87%
+						.col
+							+e.quest-sign.q-sign-js
+								+icon('q-sign')
+								+e.hint-cont.q-sign-js
+									+e.hint Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
+					+e.btns
+						+e.btn--blue.modal-close-js.link-modal--close-prev(href="#modal-reply") Откликнуться
+						+e.btn--gray(href="#") Редактировать резюме
+	+b.modal-reply.modal-win(id="modal-reply" class="" style="display: none")
+		+e.box
+			+e.title Откликнуться
+			+e.descr Работодатель свяжется с вами после того, как ознакомится с вашим резюме.
+			+e.sm Вы можете связаться с контактным лицом вакансии самостоятельно, если организация не ответит в течение нескольких дней.
+		+e.box
+			+e.sm-title Контактное лицо:
+			+e.name Константин Константинович Константинопольский
+			+e.duty Главный врач
+			+e.contacts
+				+e.tell(href="tel:+79035251051") +7 903 525‑-10‑-51
+				+e.mail(href="mailto:info@nameclinic.ru") info@nameclinic.ru
+			+e.sm-title Режим работы:
+			+e.sh-val пн-пт: 8:00 — 22:00, сб-вс: выходной
+		+e.box
+			+e.tell-txt Скажите, что нашли вакансию на сайте MedicJobs.ru
+
+
+
+
 	//-end 046++
 	+socModal('fb', '#2D88FF;')
 	+socModal('vk', '#2787F5;')
@@ -734,7 +804,7 @@ mixin modal()
 	// end modals
 
 mixin modalCityItem(letter='')
-	+e.item(id=letter)
+	+e.item(id=`${letter}-inModal`)
 		+e.ct-row.row
 			+e.letter-col.col-md-auto
 				if letter

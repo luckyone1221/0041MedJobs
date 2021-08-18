@@ -3,7 +3,7 @@ mixin sProff(data)
 	+b.SECTION.sProff.section#sProff&attributes(attributes)
 		.container
 			+e.main-row.row
-				.col
+				.col#sticyContjs
 					.d-none.d-md-block
 						+breadcrumb('Главная', 'Профессии')
 					+b.section-title
@@ -13,11 +13,13 @@ mixin sProff(data)
 						+sProffItem('Б')
 						+sProffItem('В')
 						+sProffItem('Г')
-				+sCityAcors()
+				+sCityAcors('sticky-js align-self-start')
 					+sCityAncor('А')
 					+sCityAncor('Б')
 					+sCityAncor('В')
 					+sCityAncor('Г')
+					-for (var i = 0; i < 19; i++)
+						+sCityAncor(`${i}`)
 	// end sProff
 
 mixin sProffItem(letter)

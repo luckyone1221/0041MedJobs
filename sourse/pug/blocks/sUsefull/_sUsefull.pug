@@ -1,3 +1,5 @@
+include ../sBlogN/_sBlogN.pug
+
 mixin sUsefull(data)
 	// start sUsefull
 	+b.SECTION.sUsefull.section#sUsefull&attributes(attributes)
@@ -49,20 +51,10 @@ mixin sUsefullArticle(data)
 						descr: 'Что можно считать стыдной работой? У каждого своя история',
 					})
 
-
 mixin sUsefullItem(imgNum, addClasses='')
 	+e.item(href="#" class=addClasses)
 		+e.img
 			img(loading="lazy" src=`img/@2x/sUsefull-${imgNum}.jpg` alt='')
 		+e.title Долой территоризм: какие личные вещи запрещены на работе
 		+e.descr Что можно считать стыдной работой? У каждого своя история
-		+e.date 19 ноября 2021
-
-mixin sUsefullItemAlt(data)
-	+b.blog-item(href="#")
-		+e.img
-			img(loading="lazy" src=`img/@2x/sUsefull-${data.imgNum}.jpg` alt='')
-		+e.articles(href='#') Статьи
-		+e.title(href='#')=data.title
-		+e.descr=data.descr
 		+e.date 19 ноября 2021
