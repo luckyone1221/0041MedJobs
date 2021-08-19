@@ -278,16 +278,19 @@ mixin top-nav6(data)
 				.col-auto.d-none.d-md-block
 					+e.blue-cv-btn.d-none.d-md-inline-block(href="#") Разместить резюме
 				if !data.logged
-					.col-auto.d-none.d-md-block
+					.col-auto.d-none.d-lg-block
 						+e.enter-link.d-none.d-md-inline.link-modal(href="#modal-login") Войти
 						//+e.mob-enter.d-md-none(href='#')
 							+icon('avatar-stab')
 				else
-					.col-auto
+					.col-auto.d-none.d-lg-block
 						+e.p-wrap.lc-cont-js
 							+e.p-cab.lc-dd-btn-js
 								+e.pc-img
-									img(loading="lazy" src="img/svg/user-stab.svg" alt="")
+									if data.companyStab
+										img(loading="lazy" src="img/svg/user-stab2.svg" alt="")
+									else
+										img(loading="lazy" src="img/svg/company-stab7.svg" alt="")
 								+e.pc-txt.d-none.d-xl-block Личный кабинет
 								+e.pc-icon
 									+icon('chevron-down')

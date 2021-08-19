@@ -592,7 +592,8 @@ mixin modal()
 		+e.top-box.top-box-js
 			+e.title-alt.text-md-center Выберите ваш регион
 			+form-wrap()
-				+e.input-wrap.spining.form-group
+				// add class "spining" to div "__input-wrap.form-group" for loading circle
+				+e.input-wrap.form-group
 					+e.INPUT.input.form-control(type="text" placeholder="Введите город" name="city" value="Толь")
 					+e.cross-btn(type="button")
 		+e.content-box#ancors-scroll-box-js
