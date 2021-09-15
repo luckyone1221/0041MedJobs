@@ -2,48 +2,70 @@ mixin sCompilations(data)
 	// start sCompilations
 	+b.sCompilations#sCompilations&attributes(attributes)
 		+e.top-row.row.align-items-center
-			.col-auto
-				h1.sProfileN__title Мои подборки
-			.col-auto
-				//+formCheck('Остановить подборку')
-				+chbSwitch('Остановить подборку')
-			.col-xl-auto
-				+e.edit-btn(href='#')
-					+icon('pencil')
-					span Редактировать критерии подбора
-		+b.c-tabs
-			+e.caption.row.resp-tabs-list.d-flex
-				+e.btn--intelegence.active.col-lg-4(href='#')
-					span Интеллектуальный подбор
-					+e.ball 1
-				+e.btn--heart.col-lg-4(href='#')
-					+icon('heart')
-					span Мне понравились
-				+e.btn--heart.col-lg-4(href='#')
-					+icon('cross-big')
-					span Скрытые
+			.col-12
+				h1.sProfileN__title Подборка вакансий
+		+b.tabs-bl.cTabs-js
+			if data.EmptyContent
+				+b.comp-empty.mb-18.mb-md-24
+					+e.row.row
+						.col-md-6
+							+e.input-title Должность:
+							+e.input-wrap
+								+e.INPUT.input.form-control.pe-5(type="text" placeholder="Начните вводить должность")
+								+e.search-btn(type="button")
+									+icon('zoom-3')
+						.col-md-6
+							+e.input-title Заработная плата:
+							+e.sub-row.row.align-items-center
+								.col
+									+e.INPUT.input.form-control(type="text" placeholder="от 40 000")
+								+e.dash-col.col-auto –
+								.col
+									+e.INPUT.input.form-control(type="text" placeholder="до 60 000")
+						.col-sm
+							+e.input-title Регионы поиска:
+							+e.region-row.row.align-items-center
+								.col-auto
+									+e.plate Россия
+								.col-auto
+									+e.change-link.link-modal(href="#modal-region") Изменить
+						.col-sm-auto.align-self-end.align-self-xl-center
+							+e.update-btn(type="submit") Обновить подборку
 			+e.wrap
-				if data.EmptyContent
-					+e.content.active
-						+compilationsEmpty()
-					+e.content 3
-					+e.content 2
-				else
-					+e.content.active
-						+e.descr.mb-18.mb-md-24 Всего найдено 349 435 вакансий, для вас подобрано 134 вакансий
-						+e.plates-row.row
-							-for (var i = 0; i < 3; i++)
-								+threeCards('item-regular-js')
-					+e.content
-						+e.descr.mb-18.mb-md-24 Вам понравились 3 вакансии
-						+e.plates-row.row
-							-for (var i = 0; i < 3; i++)
-								+threeCards('item-like-js')
-					+e.content
-						+e.descr.mb-18.mb-md-24 Вы скрыли 3 вакансии
-						+e.plates-row.row
-							-for (var i = 0; i < 3; i++)
-								+threeCards('item-dislike-js')
+				+e.title-row.row.align-items-center.mb-18.mb-md-24.gx-24.gy-24
+					.col-md.order-last.order-md-0
+						.cTabs-content-group-js
+							.cTabs-content-js.active
+								+e.descr Всего для вас подобрано 27 вакансий
+							.cTabs-content-js
+								+e.descr Вам понравились 3 вакансии
+							.cTabs-content-js
+								+e.descr Вы скрыли 3 вакансии
+					.col-auto
+						+e.btn.cTabs-btn-js.active Все
+					.col-auto
+						+e.btn.cTabs-btn-js Понравившиеся
+					.col-auto
+						+e.btn.cTabs-btn-js Скрытые
+				.cTabs-content-group-js
+					if data.EmptyContent
+						+e.content.cTabs-content-js.active
+							+compilationsEmpty()
+						+e.content.cTabs-content-js 3
+						+e.content.cTabs-content-js 2
+					else
+						+e.content.cTabs-content-js.active
+							+e.plates-row.row
+								-for (var i = 0; i < 2; i++)
+									+threeCards('item-regular-js')
+						+e.content.cTabs-content-js
+							+e.plates-row.row
+								-for (var i = 0; i < 2; i++)
+									+threeCards('item-like-js')
+						+e.content.cTabs-content-js
+							+e.plates-row.row
+								-for (var i = 0; i < 2; i++)
+									+threeCards('item-dislike-js')
 	// end sCompilations
 
 mixin threeCards(fType, bootClasses='col-md-6 col-lg-4')
@@ -51,40 +73,32 @@ mixin threeCards(fType, bootClasses='col-md-6 col-lg-4')
 		bootClasses: bootClasses,
 		timeHasBall: true,
 		timeTxt: '5 минут назад',
-		percents: '75%',
-		bateryIcon: '1',
+		likeActive: 'active',
 		title: 'Врач хирург-терапевт',
 		salary: '57 000 ₽',
 		hasLogo: true,
-		companyName: 'ООО УК Медгард',
-		companyCity: 'г. Санкт-Петербург',
+		companyName: 'Медицинский центр травматологии и ортопедии',
 		descr: 'На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское образование, имеющий практические...',
 		itemType: fType
 	})
 	+sCompilationsItem({
 		bootClasses: bootClasses,
 		timeTxt: 'Вчера, 17:53',
-		percents: '98%',
-		bateryIcon: '2',
-		title: 'Терапевт',
-		salary: '25 000 ₽',
+		title: 'Помощник врача-эпидемиолога (фельдшер/медицинская сестра /младший врач-эпидемиолог)',
+		salary: '75 000 - 90 000 ₽',
 		hasLogo: false,
-		companyName: 'ГДКБ №6',
-		companyCity: 'г. Ростов-на-Дону',
-		descr: `Написание техпроцессов для станков </br> с ЧПУ на машиностроительном производстве`,
+		companyName: 'Московский центр аккредитации и профессионального развития в сфере здравоохранения',
+		descr: 'На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское образование, имеющий практические...',
 		itemType: fType
 	})
 	+sCompilationsItem({
 		bootClasses: bootClasses,
 		timeTxt: '20 апреля 2021',
-		percents: '75%',
-		bateryIcon: '3',
-		title: 'Длинное название вакансии в две строки',
-		salary: '50 000 - 100 000 ₽',
+		title: 'Врач хирург-терапевт',
+		salary: '57 000 ₽',
 		hasLogo: true,
 		companyName: 'ООО УК Медгард',
-		companyCity: 'г. Санкт-Петербург',
-		descr: 'На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское...',
+		descr: 'На должность медицинской сестры назначается медицинский работник, имеющий среднее медицинское образование, имеющий практические...',
 		itemType: fType
 	})
 
@@ -94,15 +108,7 @@ mixin sCompilationsItem(data)
 			+e.head
 				+e.h-row.row.gy-2.align-items-center
 					.col
-						if data.timeHasBall
-							+e.h-time--ball=data.timeTxt
-						else
-							+e.h-time=data.timeTxt
-					.col-auto
-						+e.percents=data.percents
-					.col-auto
-						+e.batery
-							img(loading="lazy" src=`img/svg/batery-${data.bateryIcon || 1}.svg` alt="")
+						+e.h-time 5 сентября 2021 в 11:54
 					.col-auto
 						+b.hint-row.row
 							.col
@@ -111,9 +117,15 @@ mixin sCompilationsItem(data)
 									+e.hint-cont
 										+e.hint Чем больше информации вы укажите в своем резюме, тем эффективнее интеллектуальная подборка сможет подобрать для вас подходящие вакансии.
 			+e.content
-				+e.title(href="#")=`${data.title || 'Врач хирург-терапевт'}`
-				+e.salary=`${data.salary || 'Врач хирург-терапевт'}`
-				+e.logo-row.row.gy-2.align-items-center
+				+e.c-top-row.row.gx-0
+					.col
+						+e.title(href="#")=`${data.title || 'Врач хирург-терапевт'}`
+						+e.salary=`${data.salary || 'Врач хирург-терапевт'}`
+					.col-auto
+						+b.like-btn(href='#' class=`toggle-active-on-click-js ${data.likeActive || ''}`)
+							+icon('like')
+							+icon('like-fill')
+				+e.logo-row.row.gy-2
 					.col-auto
 						if data.hasLogo
 							+e.logo(href='#')
@@ -124,25 +136,23 @@ mixin sCompilationsItem(data)
 					.col
 						+e.name=`${data.companyName || 'ООО УК Медгард'}`
 						+e.city=`${data.companyCity || 'г. Санкт-Петербург'}`
-				+e.descr!= data.descr
+				+e.descr!=data.descr
 				+e.detail(href='#') Подробнее о вакансии
 			+e.footer
-				+e.f-btn--dislike.sComp-btn-js.sComp-dislike-btn-js
-					+icon('cross-big')
-					span Не нравится
-				+e.f-btn--like.sComp-btn-js.sComp-like-btn-js
-					+icon('heart')
-					span Нравится
+				+e.f-btn--hide.sComp-btn-js.sComp-dislike-btn-js
+					+icon('cross-eye')
+					span Скрыть
+				+e.f-btn--call.sComp-btn-js.sComp-like-btn-js
+					span Откликнуться
 				if data.itemType === 'item-like-js'
 					+e.big-btn-cont.bb-cont-js
-						+e.f-btn--like.--long
-							+icon('heart')
-							span Нравится
+						+e.f-btn--hide.--long
+							+icon('cross-eye')
+							span Не нравится
 				else if data.itemType === 'item-dislike-js'
 					+e.big-btn-cont.bb-cont-js
-						+e.f-btn--dislike.--long
-							+icon('cross-big')
-							span Не нравится
+						+e.f-btn--call.--long
+							span Нравится
 
 mixin formCheck(txt='lalala')
 	.form-check.form-switch
@@ -160,10 +170,5 @@ mixin compilationsEmpty()
 		+e.empty
 			+e.e-img
 				img(loading="lazy" src="img/@2x/empty-vac.png" alt="")
-			+e.e-txt.text-center
-				| У вас пока нет новых подборок вакансий. Заполните ваше резюме, чтобы интеллектуальная подборка
-				br
-				| смогла сопоставить информацию с вашего резюме с нашей базой вакансий и подобрать
-				br
-				| для вас наиболее подходящие вакансии.
-			+e.e-btn(href='#') Перейти к резюме
+			+e.e-txt.text-center.mb-0 По вашему запросу мы не смогли подобрать вакансий, попробуйте скорректировать запрос.
+			//-+e.e-btn(href='#') Перейти к резюме

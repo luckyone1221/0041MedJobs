@@ -193,20 +193,23 @@ mixin lSidebarN()
 					if block
 						block
 					else
-						+lSidebarSlide(1,'Подборки вакансий')
+						+lSidebarSlide(1,'Мой кабинет')
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')(class='active')
-						+lSidebarSlide(4,'Избранные вакансии')
+						+lSidebarSlide(10,'Мои отклики')
+						+lSidebarSlide(4,'Подборка вакансий')
+						+lSidebarSlide(11,'Избранные вакансии')
 
 mixin lSidebarSlide(imgNum, txt)
 	.swiper-slide
-		+e.item.sidebar-item-js(href="#")&attributes(attributes)
+		//-.sidebar-item-js
+		+e.item(href="#")&attributes(attributes)
 			+e.icon
 				+icon(`side-mnu-${imgNum}`)
 			+e.txt=txt
-			+e.tracker.sidebar-trakcer-js
-			+e.ball--1.sidebar-ball-js
-			+e.ball--2.sidebar-ball-js
+			//-+e.tracker.sidebar-trakcer-js
+			//-+e.ball--1.sidebar-ball-js
+			//-+e.ball--2.sidebar-ball-js
 
 mixin sProfileNEmpty(data)
 	// start sProfileN
@@ -215,11 +218,18 @@ mixin sProfileNEmpty(data)
 			+e.row.row.row--mb
 				.col-xlg-auto
 					+lSidebarN()
-						+lSidebarSlide(1,'Подборки вакансий')
+						+lSidebarSlide(1,'Мой кабинет')
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')
-						+lSidebarSlide(4,'Избранные вакансии')(class='active')
-						//-+lSidebarSlide(5,'Подборки вакансий')
+						if data.feedBackSidebar
+							+lSidebarSlide(10,'Мои отклики')(class='active')
+						else
+							+lSidebarSlide(10,'Мои отклики')
+						+lSidebarSlide(4,'Подборка вакансий')
+						if data.chosenSidebar
+							+lSidebarSlide(11,'Избранные вакансии')(class='active')
+						else
+							+lSidebarSlide(11,'Избранные вакансии')
 				+e.content-col.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
@@ -235,11 +245,12 @@ mixin sProfileNCv(data)
 			+e.row.row.row--mb
 				.col-xlg-auto
 					+lSidebarN()
-						+lSidebarSlide(1,'Подборки вакансий')
+						+lSidebarSlide(1,'Мой кабинет')
 						+lSidebarSlide(2,'Мое резюме')(class='active')
 						+lSidebarSlide(3,'Настройки профиля')
-						+lSidebarSlide(4,'Избранные вакансии')
-						//-+lSidebarSlide(5,'Подборки вакансий')
+						+lSidebarSlide(10,'Мои отклики')
+						+lSidebarSlide(4,'Подборка вакансий')
+						+lSidebarSlide(11,'Избранные вакансии')
 				+e.content-col.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
@@ -300,10 +311,12 @@ mixin sProfileNCompilation()
 			+e.row.row.row--mb
 				.col-xlg-auto
 					+lSidebarN()
-						+lSidebarSlide(1,'Подборки вакансий')(class='active')
+						+lSidebarSlide(1,'Мой кабинет')
 						+lSidebarSlide(2,'Мое резюме')
 						+lSidebarSlide(3,'Настройки профиля')
-						+lSidebarSlide(4,'Избранные вакансии')
+						+lSidebarSlide(10,'Мои отклики')
+						+lSidebarSlide(4,'Подборка вакансий')(class='active')
+						+lSidebarSlide(11,'Избранные вакансии')
 				+e.content-col.col-xlg
 					.center-block
 						block
@@ -315,16 +328,12 @@ mixin sProfileNMyCab()
 			+e.row.row.row--mb
 				.col-xlg-auto
 					+lSidebarN()
-						//-1
 						+lSidebarSlide(1,'Мой кабинет')(class='active')
-						//-2
 						+lSidebarSlide(2,'Мое резюме')
-						//-6
-						+lSidebarSlide(6,'Мои подборки')
-						//-3
 						+lSidebarSlide(3,'Настройки профиля')
-						//4
-						+lSidebarSlide(4,'Избранные вакансии')
+						+lSidebarSlide(10,'Мои отклики')
+						+lSidebarSlide(4,'Подборка вакансий')
+						+lSidebarSlide(11,'Избранные вакансии')
 				+e.content-col.col-xlg
 					.center-block
 						block
@@ -470,6 +479,7 @@ mixin sProfileNCreatorVac(data)
 						+lSidebarSlide(7,'Мой кабинет')
 						+lSidebarSlide(8,'Мои вакансии')(class='active')
 						+lSidebarSlide(9,'Настройки профиля')
+						+lSidebarSlide(10,'Отклики')
 				+e.content-col.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
@@ -482,6 +492,40 @@ mixin sProfileNCreatorVac(data)
 									span Разместить вакансию
 							.col-12
 								block
+
+mixin sProfileNCreatorVacNew(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')
+						+lSidebarSlide(8,'Мои вакансии')(class='active')
+						+lSidebarSlide(9,'Настройки профиля')
+						+lSidebarSlide(10,'Отклики')
+				+e.content-col.col-xlg
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col.col-md-auto
+								+e.H1.title=data.title
+							.col-md.order-last.order-md-0
+								+e.btns-row.row
+									+creatorTabBtn('Все', 'active')
+									+creatorTabBtn('Активные')
+									+creatorTabBtn('Черновик')
+									+creatorTabBtn('Архив')
+							.col-auto
+								+e.place-vac(href='#')
+									+e.pv-ball
+										+icon('vac-plus')
+									span Разместить вакансию
+							.col-12.order-last
+								block
+
+mixin creatorTabBtn(txt, addClasses='')
+	.col-auto
+		+e.tabs-btn(class=addClasses href="#")=txt
 
 mixin sProfileNCreate(data)
 	// start sProfileN
@@ -602,8 +646,9 @@ mixin sProfileNCreateAlt(data)
 				.col-xlg-auto
 					+lSidebarN()
 						+lSidebarSlide(7,'Мой кабинет')
-						+lSidebarSlide(8,'Мои вакансии')
+						+lSidebarSlide(8,'Мои вакансии')(class="active")
 						+lSidebarSlide(9,'Настройки профиля')
+						+lSidebarSlide(10,'Отклики')
 				+e.content-col.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
@@ -688,6 +733,19 @@ mixin sProfileNCreateAlt(data)
 																	option(selected) Умный
 																	option(selected) Усидчевый
 										+e.sub-box.sidebar-box-js(id="box-2")
+											+e.b-title.mb-12 Фотографии
+											//-
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													+e.sub-title-row.row
+														+e.st-title.col-md-auto.align-self-start Прикрепите до 6 фотографий
+														.col-md
+															//-#my-dropzone
+															+b.g-load--js
+																| <input type="file" class="" accept=".jpg, .jpeg, .png" id="foto-inp" multiple/>
+															+e.LABEL.r-add-btn.d-inline-block(for="foto-inp") Добавить
+															+e.r-hint.pt-12.active Фотографии отделения, интерьера или оборудования повышают доверие и интерес к вашей вакансии.
+										+e.sub-box.sidebar-box-js(id="box-3")
 											+e.b-title.mb-12 Жилье
 											//-
 											+e.b-row.row
@@ -704,7 +762,7 @@ mixin sProfileNCreateAlt(data)
 																			option(value="Самара2") Самара2
 																	.col-12
 																		+e.TEXTAREA.input--sm-ta.form-control(placeholder="")
-										+e.sub-box.sidebar-box-js(id="box-3")
+										+e.sub-box.sidebar-box-js(id="box-4")
 											+e.b-title Денежные выплаты
 											//-
 											+e.b-row.row
@@ -721,7 +779,7 @@ mixin sProfileNCreateAlt(data)
 																			option(value="Самара2") Самара2
 																	.col-12
 																		+e.TEXTAREA.input--sm-ta.form-control(placeholder="")
-										+e.sub-box.sidebar-box-js(id="box-4")
+										+e.sub-box.sidebar-box-js(id="box-5")
 											+e.b-title Бонусы
 											//-
 											+e.b-row.row
@@ -737,7 +795,7 @@ mixin sProfileNCreateAlt(data)
 																+customChb('Внутреннее совместительство')
 																+customChb('Фитнес')
 																+e.chose-txt Если ваша организация предоставляет бонусы для соискателя, укажите об этом и вашу вакансию обязательно заметят.
-										+e.sub-box.sidebar-box-js.pt-xl-32(id="box-5")
+										+e.sub-box.sidebar-box-js.pt-xl-32(id="box-6")
 											+e.b-title Контактная информация
 											+e.b-row.row
 												+e.b-col-pd--base.col-12
@@ -811,7 +869,7 @@ mixin sProfileNCreateAlt(data)
 																+e.chb-items
 																	+customChb('Хочу получать отклики соискателей на email')(checked)
 																	+customChb('Принимать звонки от соискателей')(checked)
-										+e.sub-box.sidebar-box-js(id="box-6")
+										+e.sub-box.sidebar-box-js(id="box-7")
 											+e.b-title Настройки публикации
 											+e.b-row.row
 												+e.b-col-pd--base.col-12
@@ -849,11 +907,12 @@ mixin sProfileNCreateAlt(data)
 					+asideMenu()
 						ul
 							li: a.active(href='#box-1') Основная информация
-							li: a(href='#box-2') Жилье
-							li: a(href='#box-3') Денежные выплаты
-							li: a(href='#box-4') Бонусы
-							li: a(href='#box-5') Контактная информация
-							li: a(href='#box-6') Настройки публикации
+							li: a(href='#box-2') Фотографии
+							li: a(href='#box-3') Жилье
+							li: a(href='#box-4') Денежные выплаты
+							li: a(href='#box-5') Бонусы
+							li: a(href='#box-6') Контактная информация
+							li: a(href='#box-7') Настройки публикации
 
 mixin sProfileNChosenItem(txt)
 	+e.c-item.c-item-js.active

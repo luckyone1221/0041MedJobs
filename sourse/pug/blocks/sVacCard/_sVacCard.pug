@@ -70,6 +70,25 @@ mixin sVacCard(data)
 							li возможность повышения квалификации
 							li предоставление скидок на услуги компании для сотрудников и их родственников
 							li оформление в соответствии с ТК РФ
+					//-
+					+sVacCardImgBox('4', 'Жилье')
+						h6 Предоставление субсидий на жилищное обустройство
+						p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+						h6 Компенсация стоимости аренды жилья
+						p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+					+sVacCardImgBox('6', 'Денежные выплаты')
+						h6 Единовременная выплата при трудоустройстве
+						p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+						h6 Выплата по программе “Земский фельдшер”
+						p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+					+sVacCardImgBox('5', 'Бонусы')
+						ul
+							li Предоставление мест в детских садах/школах
+							li Дополнительный отпуск
+							li Профессиональная профподготовка
+							li Внутреннее совместительство
+							li Фитнес
+					+sVacCardGalery()
 					if data.loginBaner
 						+loginBaner()
 					if data.map
@@ -191,6 +210,33 @@ mixin sVacCard(data)
 								|
 								a(href="#" target="_blank") superjob.ru
 	// end sVacCard
+
+mixin sVacCardGaleryItem(imgNum)
+	.col-6.col-lg-4
+		+e.img(href=`img/@2x/stab-${imgNum}.jpg` data-fancybox='sVacCardGalery')
+			img(loading="lazy" src=`img/@2x/stab-${imgNum}.jpg` alt='')
+
+mixin sVacCardGalery()
+	+b.galery-box
+		+e.title Галерея
+		+e.row.row
+			+sVacCardGaleryItem(1)
+			+sVacCardGaleryItem(2)
+			+sVacCardGaleryItem(3)
+			+sVacCardGaleryItem(3)
+			+sVacCardGaleryItem(4)
+			+sVacCardGaleryItem(1)
+
+mixin sVacCardImgBox(imgNum, txt)
+	+e.img-box
+		+e.img-row.row.align-items-center
+			.col-auto
+				+e.ib-img
+					img(loading="lazy" src=`img/svg/sCatalog-pill-${imgNum}.svg` alt="")
+			.col
+				+e.ib-title=txt
+		+e.content--ib
+			block
 
 mixin sVacCardShareDDCont()
 	+e.r-btn-col.col-auto

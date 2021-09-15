@@ -1,0 +1,31 @@
+mixin sFeedBacks(data)
+	// start sFeedBacks
+	+b.SECTION.sFeedBacks.section#sFeedBacks&attributes(attributes)
+		+e.items
+			+sFeedBacksItem({})
+			+sFeedBacksItem({})
+			+sFeedBacksItem({})
+			+sFeedBacksItem({})
+			+sFeedBacksItem({})
+			+sFeedBacksItem({})
+			+sFeedBacksItem({})
+		+puginationN()
+	// end sFeedBacks
+
+mixin sFeedBacksItem(data)
+	+e.item
+		+e.i-row.row.align-items-center
+			.col-auto
+				if data.imgName
+					+e.img(href='#')
+						img(loading="lazy" src=`img/@2x/n-chosen-${data.imgName}.png` alt="")
+				else
+					+e.img--empty(href='#')
+						img(loading="lazy" src=`img/svg/sqsuare-users-stab.svg` alt="")
+			.col
+				+e.title(href="#") Врач хирург-терапевт
+				+e.salary 330 000 ₽
+				+e.location г. Санкт-Петербург, пр. Мечникова, д.27
+			.col-md-auto.text-end
+				+e.fb-date Вы откликнулись 9 июня 2021
+

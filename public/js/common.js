@@ -195,7 +195,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '047-modal4.png';
+	screenName = '029-2.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -469,7 +469,6 @@ function eventHandler() {
 			distance.push(Math.abs(itemTop));
 		}
 
-		console.log('end func');
 		let min = distance[0];
 		let minIndex = 0;
 		$(distance).each(function () {
@@ -1195,7 +1194,7 @@ function eventHandler() {
 		$(Btns).click(function () {
 			$(Btns).removeClass('active');
 			$(this).addClass('active');
-			let index = $(this).index();
+			let index = [...Btns].indexOf(this);
 			$(contentGroups).each(function () {
 				let contentItems = this.querySelectorAll('.cTabs-content-js');
 				$(contentItems).removeClass('active');
@@ -1232,7 +1231,45 @@ function eventHandler() {
 
 	$('.s-clean-btn-js').click(function () {
 		$(this).closest('.b-search--js').find('.s-inp-js').val('');
+	}); //-.g-load--js
+
+	let files = [];
+	$('.g-load--js input[type="file"]').change(function () {
+		for (let file of this.files) {
+			files.push(file);
+		}
+
+		files = removeDuplicateFiles(files);
+
+		for (let file of files) {} // let tmppath = URL.createObjectURL(event.target.files[0]);
+		// let img = document.querySelector('.sReg-portrait-js img');
+		// img.setAttribute('src', tmppath);
+
 	});
+
+	function removeDuplicateFiles(files) {
+		let fileNames = [];
+
+		for (let file of files) {
+			fileNames.push(file.name);
+		}
+
+		fileNames = [...new Set(fileNames)];
+		let filesWithouDuplicates = [];
+
+		for (let name of fileNames) {
+			let found = false;
+
+			for (let file of files) {
+				if (file.name === name && !found) {
+					filesWithouDuplicates.push(file);
+					found = true;
+				}
+			}
+		}
+
+		return filesWithouDuplicates;
+	}
 }
 
 ;

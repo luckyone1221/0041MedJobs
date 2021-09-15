@@ -1059,9 +1059,16 @@
 			}
 		}
 	}
-
-	&__{}
-	&__{}
+	//029-2
+	&__btns-row{
+		--bs-gutter-x: 24px;
+		@include media-breakpoint-between(md, lg){
+			--bs-gutter-x: 18px;
+		}
+	}
+	&__tabs-btn{
+		@extend .new-tabs-btn;
+	}
 	&__{}
 	&__{}
 	&__{}
@@ -1326,4 +1333,11 @@
 			}
 		}
 	}
+}
+//
+.g-load{
+	&__{}
+	&__{}
+	&__{}
+	&__{}
 }

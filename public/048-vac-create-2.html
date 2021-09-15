@@ -119,20 +119,25 @@
 								<div class="l-side-menu__slider-wrap">
 									<div class="swiper-container sidebar-slider-js">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
+											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
 												<svg class="icon icon-side-mnu-7 ">
 													<use xlink:href="img/svg/sprite.svg#side-mnu-7"></use>
-												</svg></span><span class="l-side-menu__txt">Мой кабинет</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+												</svg></span><span class="l-side-menu__txt">Мой кабинет</span></a>
 											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
+											<div class="swiper-slide"><a class="l-side-menu__item active" href="#"><span class="l-side-menu__icon">
 												<svg class="icon icon-side-mnu-8 ">
 													<use xlink:href="img/svg/sprite.svg#side-mnu-8"></use>
-												</svg></span><span class="l-side-menu__txt">Мои вакансии</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+												</svg></span><span class="l-side-menu__txt">Мои вакансии</span></a>
 											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item sidebar-item-js" href="#"><span class="l-side-menu__icon">
+											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
 												<svg class="icon icon-side-mnu-9 ">
 													<use xlink:href="img/svg/sprite.svg#side-mnu-9"></use>
-												</svg></span><span class="l-side-menu__txt">Настройки профиля</span><span class="l-side-menu__tracker sidebar-trakcer-js"></span><span class="l-side-menu__ball l-side-menu__ball--1 sidebar-ball-js"></span><span class="l-side-menu__ball l-side-menu__ball--2 sidebar-ball-js"></span></a>
+												</svg></span><span class="l-side-menu__txt">Настройки профиля</span></a>
+											</div>
+											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
+												<svg class="icon icon-side-mnu-10 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-10"></use>
+												</svg></span><span class="l-side-menu__txt">Отклики</span></a>
 											</div>
 										</div>
 									</div>
@@ -291,6 +296,26 @@
 														</div>
 													</div>
 													<div class="form-wrap__sub-box sidebar-box-js" id="box-2">
+														<div class="form-wrap__b-title mb-12">Фотографии
+														</div>
+														<div class="form-wrap__b-row row">
+															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
+																<div class="form-wrap__sub-title-row row">
+																	<div class="form-wrap__st-title col-md-auto align-self-start">Прикрепите до 6 фотографий
+																	</div>
+																	<div class="col-md">
+																		<div class="g-load g-load--js"><input type="file" class="" accept=".jpg, .jpeg, .png" id="foto-inp" multiple/>
+																		</div>
+																		<label class="form-wrap__r-add-btn d-inline-block" for="foto-inp">Добавить
+																		</label>
+																		<div class="form-wrap__r-hint pt-12 active">Фотографии отделения, интерьера или оборудования повышают доверие и интерес к вашей вакансии.
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-3">
 														<div class="form-wrap__b-title mb-12">Жилье
 														</div>
 														<div class="form-wrap__b-row row">
@@ -336,7 +361,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-3">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-4">
 														<div class="form-wrap__b-title">Денежные выплаты
 														</div>
 														<div class="form-wrap__b-row row">
@@ -382,7 +407,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-4">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-5">
 														<div class="form-wrap__b-title">Бонусы
 														</div>
 														<div class="form-wrap__b-row row">
@@ -418,7 +443,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-wrap__sub-box sidebar-box-js pt-xl-32" id="box-5">
+													<div class="form-wrap__sub-box sidebar-box-js pt-xl-32" id="box-6">
 														<div class="form-wrap__b-title">Контактная информация
 														</div>
 														<div class="form-wrap__b-row row">
@@ -518,7 +543,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-6">
+													<div class="form-wrap__sub-box sidebar-box-js" id="box-7">
 														<div class="form-wrap__b-title">Настройки публикации
 														</div>
 														<div class="form-wrap__b-row row">
@@ -577,11 +602,12 @@
 							<div class="sProfileN__aside-menu aside-menu-js">
 								<ul>
 									<li><a class="active" href="#box-1">Основная информация</a></li>
-									<li><a href="#box-2">Жилье</a></li>
-									<li><a href="#box-3">Денежные выплаты</a></li>
-									<li><a href="#box-4">Бонусы</a></li>
-									<li><a href="#box-5">Контактная информация</a></li>
-									<li><a href="#box-6">Настройки публикации</a></li>
+									<li><a href="#box-2">Фотографии</a></li>
+									<li><a href="#box-3">Жилье</a></li>
+									<li><a href="#box-4">Денежные выплаты</a></li>
+									<li><a href="#box-5">Бонусы</a></li>
+									<li><a href="#box-6">Контактная информация</a></li>
+									<li><a href="#box-7">Настройки публикации</a></li>
 								</ul>
 							</div>
 						</div>
@@ -3910,6 +3936,7 @@
 		</div>
 		<!-- end modals-->
 		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/dropzone/min/dropzone.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>

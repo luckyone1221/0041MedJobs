@@ -59,37 +59,7 @@
 		--bs-gutter-x: 20px;
 	}
 	&__tabs-btn{
-		display: inline-block;
-		cursor: pointer;
-
-		color: $headings-color;
-		&:hover{
-			color: $primary;
-		}
-
-		position: relative;
-		z-index: 1;
-		&:after{
-			@include mt();
-			opacity: 0;
-			content: '';
-			position: absolute;
-			left: 0;
-			width: 100%;
-			height: 2px;
-			background-color: $green2;
-
-			top: calc(100% + 2px);
-			@include media-breakpoint-up(md){
-				top: calc(100% + 4px);
-			}
-		}
-
-		&.active{
-			&:after{
-				opacity: 1;
-			}
-		}
+		@extend .new-tabs-btn;
 	}
 	&__input-wrap{
 		position: relative;

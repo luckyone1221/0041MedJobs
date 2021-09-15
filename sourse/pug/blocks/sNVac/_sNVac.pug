@@ -94,6 +94,11 @@ mixin snVacItemCreator(data)
 					if data.remain
 						.col-auto
 							+e.remain Осталось 29 дн.
+					if data.views
+						.col-auto
+							+e.views
+								+icon('views')
+								span=data.views
 					if data.greenPlate
 						.col-auto
 							+e.plate(style="border-color: #43D081; color: #43D081;") Запущено
@@ -106,12 +111,21 @@ mixin snVacItemCreator(data)
 
 mixin creatorBtns(data, addClasess='')
 	+e.btns-row.row.align-items-center(class=addClasess)
+		if data.viewsBtn
+			.col-auto
+				+e.l-btn--views(href='#')
+					+icon(`side-mnu-10`)
+					span 7 откликов
+		if data.viewsBtnEmpty
+			.col-auto
+				//remove pe-none to use as link, or remake in div if u dont need link
+				+e.l-btn--no-views.pe-none(href="#") Нет откликов
 		if data.blueBtn
 			.col-auto
 				+e.l-btn--blue(href='#') Открыть
 		if data.grayBtn
 			.col-auto
-				+e.l-btn--gray(href='#') Редактировать
+				+e.l-btn--gray(href='#')=`${data.grayBtnTxt || 'Редактировать'}`
 		if data.orangeBtn
 			.col-auto
 				+e.l-btn--orange.link-modal(href='#modal-archive') В архив

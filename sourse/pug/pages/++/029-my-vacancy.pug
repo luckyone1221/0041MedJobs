@@ -22,7 +22,7 @@ block title
 block pagecontent
 	.headerAlt-cont
 		+headerAlt(false, false,true,'col col-md-auto')
-	+sProfileNCreatorVac({
+	+sProfileNCreatorVacNew({
 		title: 'Мои вакансии'
 	})
 		+sNVac()
@@ -31,11 +31,27 @@ block pagecontent
 				vacName: 'Врач хирург-терапевт',
 				salary: '330 000 ₽',
 				publishedDate: true,
+				views: '435',
 				remain: true,
 				greenPlate: true,
 				mutedPlate: false,
 				hasBtnsRow: true,
-				blueBtn: true,
+				viewsBtn: true,
+				viewsBtnEmpty: false,
+				blueBtn: false,
+				grayBtn: true,
+				orangeBtn: true,
+			})
+			+snVacItemCreator({
+				time: 'Вчера, 17:53',
+				vacName: 'Врач хирург-терапевт',
+				salary: '330 000 ₽',
+				publishedDate: true,
+				views: '435',
+				remain: true,
+				greenPlate: true,
+				hasBtnsRow: true,
+				viewsBtnEmpty: true,
 				grayBtn: true,
 				orangeBtn: true,
 			})
@@ -52,5 +68,8 @@ block pagecontent
 				vacName: 'Врач хирург-терапевт',
 				salary: '330 000 ₽',
 				mutedPlate: 'Архив',
+				hasBtnsRow: true,
+				grayBtn: true,
+				grayBtnTxt: 'Продублировать',
 			})
 	+footerN()
