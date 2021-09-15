@@ -1749,3 +1749,163 @@ h5{
 		}
 	}
 }
+//
+//.dropzone{
+//	min-height: 0;
+//	border: none;
+//	background: white;
+//	padding: 0;
+//
+//	position: relative;
+//
+//	.dropzone.dz-clickable{
+//		position: absolute;
+//		top: 0;
+//		left: 0;
+//		width: 100%;
+//		height: 100%;
+//		background-color: pink;
+//	}
+//	//.dz-button{
+//	//	display: none;
+//	//	background-color: red;
+//	//}
+//}
+
+.drop-block-wrap {
+	position: relative;
+	z-index: 4;
+
+	@include media-breakpoint-up(xl) {
+		margin-right: rem(-100);
+	}
+
+	@include media-breakpoint-up(lg) {
+
+		margin-right: rem(-50);
+	}
+
+	&__btn {
+		@extend .btn;
+		//-@extend .btn-flex;
+		@extend .btn-primary;
+
+		@include media-breakpoint-down(md) {
+			padding-left: rem(4);
+			padding-right: rem(4);
+			justify-content: center;
+
+			.icon {
+				display: none;
+			}
+		}
+	}
+}
+
+.drop-block {
+	@include media-breakpoint-up(xl) {
+		padding: rem(50) rem(50);
+	}
+
+	padding: rem(37) rem(35) rem(20);
+	background-color: #ffffff;
+
+	&__title {
+		text-align: left;
+		font-weight: 500;
+		line-height: 1.2;
+		@extend .h5;
+		margin-bottom: rem(20);
+	}
+
+	.fallback {
+		@extend .invisible;
+	}
+
+	&__inner {}
+
+	.dz-started &__prev-wrap {
+		display: none;
+	}
+
+	&__prev-wrap {
+		text-align: center;
+		pointer-events: none;
+
+		.icon {
+			color: #ddd8cf;
+			font-size: rem(30);
+			margin-bottom: rem(13);
+		}
+	}
+
+	.fw-500 {
+		line-height: 1.13;
+		margin-bottom: 0.5rem;
+
+	}
+
+	&__text {
+		line-height: 1.13;
+		font-size: $small;
+	}
+
+	.dz-default.dz-message {
+		display: none;
+	}
+
+	.drop-block__inner form {
+		cursor: pointer;
+		border: 2px dashed #f5f1ee;
+
+		@include media-breakpoint-up(xl) {
+
+			padding: 20px;
+		}
+
+		padding: 15px;
+	}
+
+	.dz-drag-hover {
+		border: 2px dashed darken($color: #f5f1ee, $amount: 20%);
+
+	}
+
+	.dz-started {
+		@include media-breakpoint-up(xl) {
+
+			padding: rem(15);
+		}
+
+		padding: rem(5);
+		border-style: solid;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.dz-preview {
+		width: calc(50% - 10px);
+		display: block;
+		margin: 5px 5px 5px;
+	}
+
+	.drop-block__inner form .dz-preview .dz-image {
+		border: 1px solid $primary;
+		width: 100%;
+
+		@include media-breakpoint-up(xl) {}
+
+		// height: 80px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 4px;
+	}
+}
+
+.drop-block__inner form .dz-preview .dz-error-mark,
+.drop-block__inner form .dz-preview .dz-success-mark {
+	cursor: pointer;
+	z-index: 1002;
+}

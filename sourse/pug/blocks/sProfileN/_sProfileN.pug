@@ -349,6 +349,7 @@ mixin sProfileNCreator(data)
 						+lSidebarSlide(7,'Мой кабинет')
 						+lSidebarSlide(8,'Мои вакансии')
 						+lSidebarSlide(9,'Настройки профиля')(class='active')
+						+lSidebarSlide(10,'Отклики')
 				.col-xlg
 					.center-block
 						+e.title-row.row.row--mb.align-items-center
@@ -399,6 +400,22 @@ mixin sProfileNCreator(data)
 														- for (var i=1998; i <= new Date().getFullYear(); i++)
 															option=i
 										+input('Введите описание организации', 'textarea', 'Описание организации')
+										//-here
+										+e.input-wrap--no-lab
+											+e.input-title Профили в социальных сетях
+											+e.inps-row.row.gy-18
+												.col-12
+													+galeryLoad()
+													+e.r-hint.pt-12.active Фотографии отделения, интерьера или оборудования повышают доверие и интерес к вашей вакансии.
+										+e.input-wrap--no-lab
+											+e.input-title Профили в социальных сетях
+											+e.inps-row.row.gy-18
+												+socInput('https://facebook.com/', 'fb')
+												+socInput('https://vk.com/', 'vk')
+												+socInput('https://facebook.com/', 'in')
+												+socInput('https://t.me/', 'tg')
+												+socInput('https://ok.ru/', 'ok')
+												+socInput('https://twitter.com/', 'tw')
 										//-+e.input-wrap--no-lab.align-items-start
 											+e.input-title Описание организации
 											+e.inps-row.row
@@ -468,6 +485,13 @@ mixin sProfileNCreator(data)
 							li: a(href='#box-3') Безопасность
 							li: a(href='#box-4') Реквизиты
 						+e.how-btn(href='#') Как выглядит профиль
+
+mixin socInput(placeholder, iconName)
+	.col-12
+		+e.soc-inp-box
+			+e.INPUT.input--soc-inp.form-control(type="text" placeholder=placeholder)
+			+e.icon
+				img(loading="lazy" src=`img/svg/soc-inp-${iconName}.svg` alt="")
 
 mixin sProfileNCreatorVac(data)
 	// start sProfileN
@@ -717,6 +741,17 @@ mixin sProfileNCreateAlt(data)
 																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger' || ''}` type="" placeholder="Введите адрес")
 															if data.error
 																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-new
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Наименование филиала
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(type="text" placeholder="Необязательное поле")
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Подразделение/отделение
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(type="text" placeholder="Необязательное поле")
 													+e.input-wrap--no-lab.align-items-start
 														+e.input-title Описание вакансии
 														+e.inps-row.row.gy-12
@@ -740,10 +775,7 @@ mixin sProfileNCreateAlt(data)
 													+e.sub-title-row.row
 														+e.st-title.col-md-auto.align-self-start Прикрепите до 6 фотографий
 														.col-md
-															//-#my-dropzone
-															+b.g-load--js
-																| <input type="file" class="" accept=".jpg, .jpeg, .png" id="foto-inp" multiple/>
-															+e.LABEL.r-add-btn.d-inline-block(for="foto-inp") Добавить
+															+galeryLoad()
 															+e.r-hint.pt-12.active Фотографии отделения, интерьера или оборудования повышают доверие и интерес к вашей вакансии.
 										+e.sub-box.sidebar-box-js(id="box-3")
 											+e.b-title.mb-12 Жилье
@@ -913,6 +945,12 @@ mixin sProfileNCreateAlt(data)
 							li: a(href='#box-5') Бонусы
 							li: a(href='#box-6') Контактная информация
 							li: a(href='#box-7') Настройки публикации
+
+mixin galeryLoad()
+	+b.g-load
+		+e.row.row.g-load-row-js
+		| <input type="file" class="g-load-input-js invisible" accept=".jpg, .jpeg, .png" id="foto-inp" multiple/>
+		+e.LABEL.add-btn(for="foto-inp") Добавить
 
 mixin sProfileNChosenItem(txt)
 	+e.c-item.c-item-js.active

@@ -1296,20 +1296,37 @@ function eventHandler() {
   });
   //-.g-load--js
   let files = [];
-  $('.g-load--js input[type="file"]').change(function () {
+  let row = document.querySelector('.g-load-row-js');
+  let inputFile = document.querySelector('.g-load-input-js');
+  $(inputFile).change(function () {
     for (let file of this.files){
       files.push(file);
     }
     files = removeDuplicateFiles(files);
-
-    for (let file of files){
-
+    while (files.length > 6){
+      files.shift();
     }
+    this.files = new FileListItems(files);
 
-    // let tmppath = URL.createObjectURL(event.target.files[0]);
-    // let img = document.querySelector('.sReg-portrait-js img');
-    // img.setAttribute('src', tmppath);
+    row.innerHTML = '';
+    for (let file of this.files){
+      let fileTemplate = `
+        <div class="col-6 col-md-4">
+          <div class="g-load__img file-img-js" data-file-name="${file.name}">
+            <img src="${URL.createObjectURL(file)}" alt="">
+          </div>
+        </div>
+      `;
+      row.innerHTML += fileTemplate;
+    }
   });
+
+  //need this to work with FileList
+  function FileListItems (files) {
+    var b = new ClipboardEvent("").clipboardData || new DataTransfer();
+    for (var i = 0, len = files.length; i<len; i++) b.items.add(files[i])
+    return b.files
+  }
   function removeDuplicateFiles(files){
     let fileNames = [];
     for (let file of files){
@@ -1330,6 +1347,20 @@ function eventHandler() {
 
     return filesWithouDuplicates;
   }
+  document.addEventListener('click', function (){
+    if (event.target.closest('.file-img-js')){
+      let thisImg = event.target.closest('.file-img-js');
+      let thisName = thisImg.getAttribute('data-file-name');
+      $(thisImg.parentElement).fadeOut();
+
+      for (let [index,file] of Object.entries(files)){
+        if (file.name === thisName){
+          files.splice(index, 1);
+        }
+      }
+      inputFile.files = new FileListItems(files);
+    }
+  })
 
 };
 if (document.readyState !== 'loading') {

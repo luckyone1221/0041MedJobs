@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="alt-base-size" lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>048-vac-create-3</title>
+		<title>046-vacancy-4</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="о чем страница">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
@@ -26,700 +26,864 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
+		<link rel="stylesheet" href="js/dropzone.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="bg-gray-120 mvp-page fancybox-bg-lighter" style="opacity: 0;">
+	<body class="headings-color new-header new-page" style="opacity: 0;">
 		<div class="main-wrapper">
 			<!--+alertLine()-->
-			<div class="headerAlt-cont">
-				<!-- start headerAlt-->
-				<header class="headerAlt" id="headerAlt">
-					<div class="headerAlt__container container-fluid">
-						<div class="headerAlt__row row row--mb align-items-center">
-							<div class="headerAlt__logo-col col-lg-auto col col-md-auto"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							</div>
-							<div class="col d-none d-md-block">
-								<div class="container p-0"><a class="vac-btn" href="#"><span class="vac-btn__v-icon">
-									<svg class="icon icon-vac-plus ">
-										<use xlink:href="img/svg/sprite.svg#vac-plus"></use>
-									</svg></span><span>Разместить вакансию</span></a>
-								</div>
-							</div>
-							<div class="col-auto">
-								<div class="headerAlt__bell bell-js">
-									<svg class="icon icon-bell ">
-										<use xlink:href="img/svg/sprite.svg#bell"></use>
-									</svg>
-									<div class="bell-dd bell-dd--js">
-										<div class="bell-dd__box">
-											<div class="text-center p-12">Новых уведомлений нет.</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto">
-								<div class="headerAlt__lc-cont lc-cont-js">
-									<div class="headerAlt__lc-row row align-items-center lc-dd-btn-js">
-										<div class="col-auto">
-											<div class="headerAlt__lc-txt">Мой кабинет
-											</div>
-										</div>
-										<div class="col-auto">
-											<div class="headerAlt__lc-img"><img loading="lazy" src="img/svg/sm-portrait-stab.svg" alt=""/>
-											</div>
-										</div>
-										<div class="headerAlt__lc-icon col-auto">
-											<svg class="icon icon-chevron-down ">
-												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="p-cab-dd lc-dd lc-dd--js">
-										<div class="p-cab-dd__inner">
-											<div class="p-cab-dd__top-txt">
-												<div class="p-cab-dd__name">Константинопольский К. К.
-												</div>
-												<div class="p-cab-dd__id">№1330-4
-												</div>
-											</div>
-											<div class="p-cab-dd__menu">
-												<ul>
-													<li><a href="#">Подборки вакансий</a></li>
-													<li><a href="#">Мое резюме</a></li>
-													<li><a href="#">Настройки профиля</a></li>
-													<li><a class="log-out" href="#">Выйти из профиля</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto d-md-none">
-								<div class="headerAlt__burger mvp-burger-js"><span></span>
-								</div>
-							</div>
-						</div>
+			<div class="mm mm--js mm--alt6 d-xl-none">
+				<div class="new-mnu">
+					<div class="new-mnu__box"><a class="top-nav__blue-cv-btn" href="#">Разместить резюме</a><a class="new-mnu__enter-btn" href="#">Войти</a>
 					</div>
-					<div class="mvp-menu mvp-menu--js">
-						<ul>
-							<li><a href="#">О компании</a></li>
-							<li><a href="#">Контакты</a></li>
-							<li><a href="#">Помощь</a></li>
-						</ul>
+					<div class="new-mnu__box"><a class="top-nav__location link-modal paint-down-md-whihe-js" href="#modal-city-alt">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg><span class="top-nav__loc-txt">Комсомольск-на-Амуре</span></a>
 					</div>
-				</header>
-				<!-- end headerAlt-->
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a><a class="new-mnu__item" href="#">Оценить компанию</a><a class="new-mnu__item" href="#">Рейтинг зарплат</a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Работодатель</a><a class="new-mnu__item" href="#">Публикация вакансии</a><a class="new-mnu__item" href="#">Тарифы</a>
+					</div>
+					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">Контакты</a>
+					</div>
+				</div>
 			</div>
-			<!-- start sProfileN-->
-			<section class="sProfileN section" id="sProfileN">
-				<div class="container-fluid">
-					<div class="sProfileN__row row row row--mb">
-						<div class="col-xlg-auto">
-							<div class="l-side-menu">
-								<div class="l-side-menu__slider-wrap">
-									<div class="swiper-container sidebar-slider-js">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-7 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-7"></use>
-												</svg></span><span class="l-side-menu__txt">Мой кабинет</span></a>
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav top-nav--alt top-nav--new block-with-lazy">
+					<div class="top-nav__container top-nav__container--alt5 container container-md-fluid container-lg">
+						<div class="top-nav__row top-nav__row--alt row">
+							<div class="col-auto d-lg-none">
+								<div class="top-nav__burger top-nav__burger--alt burger-js"><span></span>
+								</div>
+							</div>
+							<div class="col col-lg-auto order-first order-md-0"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-lg-block">
+								<div class="top-nav__colooker-dd-cont">
+									<div class="top-nav__c-dd-btn colooker-dd-btn-js">Соискатель
+									</div>
+									<div class="colooker-dd colooker-dd--js">
+										<div class="colooker-dd__content">
+											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a><a class="colooker-dd__item" href="#">Оценить компанию</a><a class="colooker-dd__item" href="#">Рейтинг зарплат</a>
 											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item active" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-8 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-8"></use>
-												</svg></span><span class="l-side-menu__txt">Мои вакансии</span></a>
+											<div class="colooker-dd__box"><a class="colooker-dd__item active" href="#">Работодатель</a><a class="colooker-dd__item" href="#">Публикация вакансии</a><a class="colooker-dd__item" href="#">Тарифы</a>
 											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-9 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-9"></use>
-												</svg></span><span class="l-side-menu__txt">Настройки профиля</span></a>
-											</div>
-											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
-												<svg class="icon icon-side-mnu-10 ">
-													<use xlink:href="img/svg/sprite.svg#side-mnu-10"></use>
-												</svg></span><span class="l-side-menu__txt">Отклики</span></a>
+											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">Контакты</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="sProfileN__content-col col-xlg">
-							<div class="center-block">
-								<div class="sProfileN__title-row row row row--mb align-items-center">
-									<div class="col">
-										<h1 class="sProfileN__title">Разместить вакансию
-										</h1>
-									</div>
-									<div class="col-12">
-										<div class="sProfileN__box p-0">
-											<div class="form-wrap">
-												<form>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-1">
-														<div class="form-wrap__b-title">Основная информация
-														</div>
-														<div class="form-wrap__b-row row">
-															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Название вакансии
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control border-danger" type="text" placeholder="Например, врач-терапевт"/>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Выберите должность
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12">
-																			<div class="multiple-select">
-																				<select class="prof-slect2-js" multiple="multiple" data-placeholder="Выберите из списка">
-																					<option value="" label="#"></option>
-																					<!--option(selected) Умный-->
-																					<!--option(selected) Усидчевый-->
-																					<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
-																					<option value="качество 1">качество 1</option>
-																					<option value="качество 2">качество 2</option>
-																					<option value="качество 3">качество 3</option>
-																					<option value="качество 4">качество 4</option>
-																					<option value="качество 5">качество 5</option>
-																				</select>
-																			</div>
-																		</div>
-																		<div class="col-12">
-																			<div class="form-wrap__chose-txt">Выберите до 5-ти должностей из списка, которые подходят на вашу вакансию. Если ваша вакансия подходит под несколько должностей, то это поможет соискателям быстрее найти вашу вакансию, а вам быстрее найти соискателя.
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-18">
-																	<div class="form-wrap__input-title">Covid-19
-																	</div>
-																	<div class="form-wrap__inps-row row radio-row">
-																		<div class="col-auto">
-																			<label class="custom-chb">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Вакансия связана с Covid-19</span>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
-																	<div class="form-wrap__input-title">Опыт работы
-																	</div>
-																	<div class="form-wrap__inps-row row">
-																		<div class="col-12">
-																			<div class="custom-select">
-																				<select class="default-select-js" name="expirience">
-																					<option value="Без опыта">Без опыта</option>
-																					<option value="Самара2">Самара2</option>
-																					<option value="Самара2">Самара2</option>
-																				</select>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
-																	<div class="form-wrap__input-title">График
-																	</div>
-																	<div class="form-wrap__inps-row row">
-																		<div class="col-12">
-																			<div class="custom-select">
-																				<select class="default-select-js" name="expirience">
-																					<option value="Полный рабочий день">Полный рабочий день</option>
-																					<option value="Самара2">Самара2</option>
-																					<option value="Самара2">Самара2</option>
-																				</select>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Заработная плата, ₽
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12">
-																			<div class="form-wrap__couple-row row mb-xl-1">
-																				<div class="form-wrap__c-col col-6" data-ph="от"><input class="form-wrap__input form-wrap__input--couple form-control border-danger" type="text" placeholder="25 000"/>
-																				</div>
-																				<div class="form-wrap__c-col col-6" data-ph="до"><input class="form-wrap__input form-wrap__input--couple form-control border-danger" type="text" placeholder="100 000"/>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="col-12">
-																			<label class="custom-chb mh-0">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Не указывать</span>
-																			</label>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Адрес работы
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control border-danger" type="text" placeholder="Введите адрес"/>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Наименование филиала
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control" type="text" placeholder="Необязательное поле"/>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Подразделение/отделение
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control" type="text" placeholder="Необязательное поле"/>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab align-items-start">
-																	<div class="form-wrap__input-title">Описание вакансии
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><textarea class="form-wrap__input form-wrap__input--big-ta form-control border-danger" placeholder=""></textarea>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab align-items-start">
-																	<div class="form-wrap__input-title">Ключевые навыки
-																	</div>
-																	<div class="form-wrap__inps-row row">
-																		<div class="col-12">
-																			<div class="multiple-select">
-																				<select class="prof-slect2-js" multiple="multiple" data-placeholder="">
-																					<option value="" label="#"></option>
-																					<!--option(selected) Умный-->
-																					<!--option(selected) Усидчевый-->
-																					<option selected="selected">Умный</option>
-																					<option selected="selected">Усидчевый</option>
-																					<option value="Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста">Супер длинное такое чтоб в 2 строки, чтоб 100 пудов, и еще чуть чуть текста</option>
-																					<option value="качество 1">качество 1</option>
-																					<option value="качество 2">качество 2</option>
-																					<option value="качество 3">качество 3</option>
-																					<option value="качество 4">качество 4</option>
-																					<option value="качество 5">качество 5</option>
-																				</select>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-2">
-														<div class="form-wrap__b-title mb-12">Фотографии
-														</div>
-														<div class="form-wrap__b-row row">
-															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
-																<div class="form-wrap__sub-title-row row">
-																	<div class="form-wrap__st-title col-md-auto align-self-start">Прикрепите до 6 фотографий
-																	</div>
-																	<div class="col-md">
-																		<div class="g-load">
-																			<div class="g-load__row row g-load-row-js">
-																			</div><input type="file" class="g-load-input-js invisible" accept=".jpg, .jpeg, .png" id="foto-inp" multiple/>
-																			<label class="g-load__add-btn" for="foto-inp">Добавить
-																			</label>
-																		</div>
-																		<div class="form-wrap__r-hint pt-12 active">Фотографии отделения, интерьера или оборудования повышают доверие и интерес к вашей вакансии.
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-3">
-														<div class="form-wrap__b-title mb-12">Жилье
-														</div>
-														<div class="form-wrap__b-row row">
-															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
-																<div class="form-wrap__sub-title-row row">
-																	<div class="form-wrap__st-title col-md-auto align-self-start">Предоставление жилья
-																	</div>
-																	<div class="col-md">
-																		<div class="form-wrap__repeater repeator-js empty-content-js">
-																			<div class="form-wrap__r-item r-item-js">
-																				<div class="form-wrap__inp-row row gy-18 pb-18">
-																					<div class="col-12">
-																						<div class="custom-select">
-																							<select class="default-select-js" name="" data-placeholder="Выберите из списка">
-																								<option value="" label="#"></option>
-																								<option value="Самара">Самара</option>
-																								<option value="Самара2">Самара2</option>
-																							</select>
-																						</div>
-																					</div>
-																					<div class="col-12"><textarea class="form-wrap__input form-wrap__input--sm-ta form-control" placeholder=""></textarea>
-																					</div>
-																				</div>
-																				<div class="form-wrap__remove-item r-remove-item-js">
-																					<div class="form-wrap__r-btn">
-																						<div class="form-wrap__r-ball">
-																							<svg class="icon icon-cross ">
-																								<use xlink:href="img/svg/sprite.svg#cross"></use>
-																							</svg>
-																						</div>
-																						<div class="form-wrap__ri-txt">Удалить
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
-																			</button>
-																			<div class="form-wrap__r-hint pt-12 r-hint-js active">Если ваша организация предоставляет жилье для соискателя, укажите об этом и вашу вакансию обязательно заметят.
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-4">
-														<div class="form-wrap__b-title">Денежные выплаты
-														</div>
-														<div class="form-wrap__b-row row">
-															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
-																<div class="form-wrap__sub-title-row row">
-																	<div class="form-wrap__st-title col-md-auto align-self-start">Предоставление денежных выплат
-																	</div>
-																	<div class="col-md">
-																		<div class="form-wrap__repeater repeator-js empty-content-js">
-																			<div class="form-wrap__r-item r-item-js">
-																				<div class="form-wrap__inp-row row gy-18 pb-18">
-																					<div class="col-12">
-																						<div class="custom-select">
-																							<select class="default-select-js" name="" data-placeholder="Выберите из списка">
-																								<option value="" label="#"></option>
-																								<option value="Самара">Самара</option>
-																								<option value="Самара2">Самара2</option>
-																							</select>
-																						</div>
-																					</div>
-																					<div class="col-12"><textarea class="form-wrap__input form-wrap__input--sm-ta form-control" placeholder=""></textarea>
-																					</div>
-																				</div>
-																				<div class="form-wrap__remove-item r-remove-item-js">
-																					<div class="form-wrap__r-btn">
-																						<div class="form-wrap__r-ball">
-																							<svg class="icon icon-cross ">
-																								<use xlink:href="img/svg/sprite.svg#cross"></use>
-																							</svg>
-																						</div>
-																						<div class="form-wrap__ri-txt">Удалить
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<button class="form-wrap__r-add-btn r-add-btn-js" type="button">Добавить
-																			</button>
-																			<div class="form-wrap__r-hint pt-12 r-hint-js active">Если ваша организация предоставляет денежные выплаты для соискателя, укажите об этом и вашу вакансию обязательно заметят.
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-5">
-														<div class="form-wrap__b-title">Бонусы
-														</div>
-														<div class="form-wrap__b-row row">
-															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
-																<div class="form-wrap__sub-title-row row">
-																	<div class="form-wrap__st-title col-md-auto align-self-start">Предоставление бонусов
-																	</div>
-																	<div class="col-md">
-																		<div class="form-wrap__chb-items">
-																			<label class="custom-chb">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Предоставление мест в детских садах/школах</span>
-																			</label>
-																			<label class="custom-chb">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">ДМС или медицинское обслуживание</span>
-																			</label>
-																			<label class="custom-chb">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Дополнительный отпуск</span>
-																			</label>
-																			<label class="custom-chb">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Профессиональная профподготовка</span>
-																			</label>
-																			<label class="custom-chb">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Внутреннее совместительство</span>
-																			</label>
-																			<label class="custom-chb">
-																				<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фитнес</span>
-																			</label>
-																			<div class="form-wrap__chose-txt">Если ваша организация предоставляет бонусы для соискателя, укажите об этом и вашу вакансию обязательно заметят.
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-wrap__sub-box sidebar-box-js pt-xl-32" id="box-6">
-														<div class="form-wrap__b-title">Контактная информация
-														</div>
-														<div class="form-wrap__b-row row">
-															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Контактное лицо
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control border-danger" type="text" placeholder="ФИО контактного лица"/>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab mb-xl-15">
-																	<div class="form-wrap__input-title">Должность
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control border-danger" type="text" placeholder="Введите должность"/>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
-																	<div class="form-wrap__input-title">E-mail
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12">
-																		<div class="col-12"><input class="form-wrap__input form-wrap__input--w100percents form-control border-danger" type="email" required="required" name="email" placeholder="Введите e-mail"/>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																		<div class="col-12">
-																			<div class="form-wrap__chose-txt">На этот адрес мы будем уведомлять вас о новых откликах.
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
-																	<div class="form-wrap__input-title">Телефон
-																	</div>
-																	<div class="form-wrap__inps-row form-wrap__inps-row--tel row gy-12 align-items-center tells-input-row-js">
-																		<div class="col-auto">+</div>
-																		<div class="col-auto"><input class="form-wrap__input form-wrap__input--w40 form-control text-center number-mask-js" data-mask="9" pattern="[0-9]{1}" type="text" value="7"/>
-																		</div>
-																		<div class="col-auto">
-																			<div class="form-wrap__tel-sub-row row align-items-center">
-																				<div class="col-auto">(</div>
-																				<div class="col-auto"><input class="form-wrap__input form-wrap__input--w60 form-control number-mask-js border-danger" data-mask="999" pattern="[0-9]{3}" type="text" placeholder="___"/>
-																				</div>
-																				<div class="col-auto">)</div>
-																			</div>
-																		</div>
-																		<div class="col-auto"><input class="form-wrap__input form-wrap__input--w120 form-control number-mask-js border-danger" data-mask="999-99-99" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" type="text" placeholder="___-__-__"/>
-																		</div>
-																		<div class="col-auto"><input class="form-wrap__input form-wrap__input--w120 form-control number-mask-js" data-mask="9" pattern="[0-9]{1}" type="text" placeholder="доб."/>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																		<div class="col-12">
-																			<div class="form-wrap__chose-txt">На этот телефон будут звонить по вашей вакансии соискатели.
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__input-wrap form-wrap__input-wrap--no-lab">
-																	<div class="form-wrap__input-title">Прием звонков
-																	</div>
-																	<div class="form-wrap__inps-row row gy-12 align-items-center tells-input-row-js">
-																		<div class="col-auto">
-																			<div class="form-wrap__inps-row form-wrap__inps-row--tel-sub row gy-12 align-items-center time-input-row-js flex-nowrap">
-																				<div class="col-auto">с:</div>
-																				<div class="col-auto"><input class="form-wrap__input form-wrap__input--w80 form-control number-mask-js border-danger" data-mask="99:99" pattern="[0-9]{2}[:][0-9]{2}" type="text" placeholder="__:__"/>
-																				</div>
-																				<div class="col-auto">до:</div>
-																				<div class="col-auto"><input class="form-wrap__input form-wrap__input--w80 form-control number-mask-js border-danger" data-mask="99:99" pattern="[0-9]{2}[:][0-9]{2}" type="text" placeholder="__:__"/>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="form-wrap__time-select-col col-auto">
-																			<div class="custom-select">
-																				<select class="default-select-js" name="days">
-																					<option value="Любой день">Любой день</option>
-																					<option value="Самара2">Самара2</option>
-																					<option value="Самара2">Самара2</option>
-																				</select>
-																			</div>
-																		</div>
-																		<div class="form-wrap__error text-start text-danger col-12">Заполните поле.
-																		</div>
-																		<div class="col-12">
-																			<div class="form-wrap__chose-txt">На этот телефон будут звонить по вашей вакансии соискатели.
-																			</div>
-																		</div>
-																		<div class="col-12 pt-12">
-																			<div class="form-wrap__chb-items">
-																				<label class="custom-chb">
-																					<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Хочу получать отклики соискателей на email</span>
-																				</label>
-																				<label class="custom-chb">
-																					<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Принимать звонки от соискателей</span>
-																				</label>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-wrap__sub-box sidebar-box-js" id="box-7">
-														<div class="form-wrap__b-title">Настройки публикации
-														</div>
-														<div class="form-wrap__b-row row">
-															<div class="form-wrap__b-col-pd form-wrap__b-col-pd--base col-12">
-																<div class="form-wrap__sub-title-row row">
-																	<div class="form-wrap__st-title col-md-auto align-self-start">Отрасли вакансии
-																	</div>
-																	<div class="col-md"><a class="form-wrap__c-btn form-wrap__c-btn--blue link-modal" href="#modal-sphere">Выбрать</a>
-																		<div class="form-wrap__error text-start text-danger mb-12">Выберите отрасль для вакансии.
-																		</div>
-																		<div class="form-wrap__c-hint">Выберите одну или несколько отраслей.
-																		</div>
-																	</div>
-																</div>
-																<div class="form-wrap__sub-title-row row">
-																	<div class="form-wrap__st-title col-md-auto align-self-start">Регионы показа
-																	</div>
-																	<div class="col-md"><a class="form-wrap__c-btn form-wrap__c-btn--blue link-modal" href="#modal-region">Выбрать</a>
-																		<div class="form-wrap__error text-start text-danger mb-12">Выберите регион показа.
-																		</div>
-																		<div class="form-wrap__c-hint">Выберите один или несколько регионов для показа.
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-wrap__sub-footer">
-														<div class="form-wrap__sub-btns-row row justify-content-center justify-content-md-end gy-12">
-															<div class="col-12 col-md-auto">
-																<button class="form-wrap__cr-btn form-wrap__cr-btn--gray" type="button">Сохранить как черновик
-																</button>
-															</div>
-															<div class="col-12 col-md-auto">
-																<button class="form-wrap__cr-btn form-wrap__cr-btn--green" type="button">Опубликовать вакансию
-																</button>
-															</div>
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="top-nav__location-col col-auto d-none d-md-block"><a class="top-nav__location link-modal paint-down-md-whihe-js" href="#modal-city-alt">
+								<svg class="icon icon-location ">
+									<use xlink:href="img/svg/sprite.svg#location"></use>
+								</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
 							</div>
-						</div>
-						<div class="sProfileN__aside-menu-col col-xlg-auto d-none d-xlg-block">
-							<div class="sProfileN__aside-menu aside-menu-js">
-								<ul>
-									<li><a class="active" href="#box-1">Основная информация</a></li>
-									<li><a href="#box-2">Фотографии</a></li>
-									<li><a href="#box-3">Жилье</a></li>
-									<li><a href="#box-4">Денежные выплаты</a></li>
-									<li><a href="#box-5">Бонусы</a></li>
-									<li><a href="#box-6">Контактная информация</a></li>
-									<li><a href="#box-7">Настройки публикации</a></li>
-								</ul>
+							<div class="col-auto d-none d-md-block"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a>
+							</div>
+							<div class="col-auto d-none d-lg-block"><a class="top-nav__enter-link d-none d-md-inline link-modal" href="#modal-login">Войти</a>
+								<!--+e.mob-enter.d-md-none(href='#')+icon('avatar-stab')
+								-->
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- start footerN-->
-			<footer class="footerN footerN--js" id="footerN">
-				<div class="footerN__ball footerN__ball--1">
+			</header>
+			<!-- end header-->
+			<div class="page-head">
+				<div class="container">
+					<div class="d-none d-md-block">
+						<nav class="breadcrumb-par">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
+								<li class="breadcrumb-item pointer-ev-none"><a href="#"><span>Вакансии</span></a></li>
+							</ol>
+						</nav>
+						<h1>Вакансии в Комсомольск-на-Амуре</h1>
+					</div>
+					<div class="new-search">
+						<div class="new-search__search-row row">
+							<div class="col-12">
+								<div class="new-search__input-wrap form-group"><input class="new-search__input form-control sBaner-input-js" type="text" placeholder="Введите желаемую должность или организацию" name="searc" data-placeholder-up-lg="Введите желаемую должность или организацию" data-placeholder-down-lg="Должность, организация"/>
+									<div class="new-search__inv-nav inv-nav-js">
+										<div class="new-search__in-row row align-items-center">
+											<div class="col-auto">
+												<button class="new-search__find-btn" type="submit">Найти
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-md-none"><a class="new-search__mob-filter-btn" href="#">
+								<svg class="icon icon-filter ">
+									<use xlink:href="img/svg/sprite.svg#filter"></use>
+								</svg></a>
+							</div>
+							<div class="col-auto d-md-none"><a class="new-search__mob-location" href="#">
+								<svg class="icon icon-location ">
+									<use xlink:href="img/svg/sprite.svg#location"></use>
+								</svg><span>Комсомольск-на-Амуре</span></a>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="footerN__ball footerN__ball--2">
+			</div>
+			<!-- start sCatalog-->
+			<div class="sCatalog section" id="sCatalog">
+				<div class="container">
+					<div class="sCatalog__top-row row align-items-center">
+						<div class="col col-md-auto">
+							<div class="sCatalog__found"><span class="me-1 d-none d-md-inline">Найдено</span><span>1 434 вакансий</span>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="sCatalog__dd sCatalog-dd-js">
+								<div class="sCatalog__dd-head sCatalog-dd-head-js">Новые
+								</div>
+								<div class="sCatalog__dd-content sCatalog-dd-content-js">
+									<label class="sCatalog__dd-item">
+										<input class="invisible" type="radio" name="sort1" val="Новые" checked="checked"/><span class="txt txt-js">Новые</span>
+									</label>
+									<label class="sCatalog__dd-item">
+										<input class="invisible" type="radio" name="sort1" val="По зарплате"/><span class="txt txt-js">По зарплате</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto col-md">
+							<div class="sCatalog__dd sCatalog-dd-js">
+								<div class="sCatalog__dd-head sCatalog-dd-head-js">За все время
+								</div>
+								<div class="sCatalog__dd-content sCatalog-dd-content-js">
+									<label class="sCatalog__dd-item">
+										<input class="invisible" type="radio" name="sort2" val="За все время" checked="checked"/><span class="txt txt-js">За все время</span>
+									</label>
+									<label class="sCatalog__dd-item">
+										<input class="invisible" type="radio" name="sort2" val="За сутки"/><span class="txt txt-js">За сутки</span>
+									</label>
+									<label class="sCatalog__dd-item">
+										<input class="invisible" type="radio" name="sort2" val="За неделю"/><span class="txt txt-js">За неделю</span>
+									</label>
+									<label class="sCatalog__dd-item">
+										<input class="invisible" type="radio" name="sort2" val="За месяц"/><span class="txt txt-js">За месяц</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-auto d-none d-md-block">
+							<div class="sCatalog__wide-btn"><span>Расширенный фильтр</span>
+								<svg class="icon icon-filter ">
+									<use xlink:href="img/svg/sprite.svg#filter"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="sCatalog__main-row row">
+						<div class="col-lg">
+							<div class="sCatalog__items sCatalog-js">
+								<div class="cat-item">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Врач стоматолог-терапевт-хирург</a>
+											<div class="cat-item__salary"><span>30 000-35 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-pills">
+										<div class="cat-pills__row row">
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #EFF2F6;"><span>Будьте первыми</span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #EFF2F6;"><span>Можно без опыта</span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #feefe9;">
+													<div class="cat-pills__p-img"><img loading="lazy" src="img/svg/sCatalog-pill-1.svg" alt=""/>
+													</div><span>Covid-19</span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #edfbf3;">
+													<div class="cat-pills__p-img"><img loading="lazy" src="img/svg/sCatalog-pill-4.svg" alt=""/>
+													</div><span>Жилье</span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #f8eafc;">
+													<div class="cat-pills__p-img"><img loading="lazy" src="img/svg/sCatalog-pill-6.svg" alt=""/>
+													</div><span>Денежная выплата</span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #e8f8fe;">
+													<div class="cat-pills__p-img"><img loading="lazy" src="img/svg/sCatalog-pill-5.svg" alt=""/>
+													</div><span>Бонусы</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto">
+											<div class="cat-item__btn cat-item__btn--blue">Откликнуться
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray link-modal" href="#modal-cface">Позвонить</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__logo" href="#"><img loading="lazy" src="img/@2x/sDayVac-2.png" alt=""/></a>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item blue-card">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Архивариус</a>
+											<div class="cat-item__salary"><span>50 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto">
+											<div class="cat-item__btn cat-item__btn--blue">Откликнуться
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray link-modal" href="#modal-cface">Позвонить</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">БУДЬ ЗДОРОВ, Клиника</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__logo" href="#"><img loading="lazy" src="img/@2x/sDayVac-4.png" alt=""/></a>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Медицинская сестра</a>
+											<div class="cat-item__salary"><span>30 000-35 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray" href="#">Подробнее</a>
+										</div>
+										<div class="cat-item__s-col col">
+											<div class="cat-item__s-gray">Вакансия предоставлена сервисом
+											</div><a class="cat-item__s-link" href="superjob.ru" target="_blank">superjob.ru</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">МРЦ Беляево (Центр Дикуля)</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__logo" href="#"><img loading="lazy" src="img/@2x/sDayVac-4.png" alt=""/></a>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Врач рентгенолог КТ</a>
+											<div class="cat-item__salary"><span>50 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-pills">
+										<div class="cat-pills__row row">
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #EFF2F6;"><span>Можно без опыта</span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #edfbf3;">
+													<div class="cat-pills__p-img"><img loading="lazy" src="img/svg/sCatalog-pill-4.svg" alt=""/>
+													</div><span>Жилье</span>
+												</div>
+											</div>
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #f8eafc;">
+													<div class="cat-pills__p-img"><img loading="lazy" src="img/svg/sCatalog-pill-6.svg" alt=""/>
+													</div><span>Денежная выплата</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto">
+											<div class="cat-item__btn cat-item__btn--blue">Откликнуться
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray link-modal" href="#modal-cface">Позвонить</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item gray-card">
+									<div class="cat-item__bg d-none d-md-block"><img loading="lazy" src="img/@2x/sCatalog-item-bg.png" alt=""/>
+									</div>
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Врач стоматолог-терапевт-хирург</a>
+											<div class="cat-item__salary"><span>30 000-35 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--teal" href="#">Откликнуться</a>
+										</div>
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--white" href="#">Позвонить</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__logo" href="#"><img loading="lazy" src="img/@2x/sDayVac-2.png" alt=""/></a>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Медицинская сестра</a>
+											<div class="cat-item__salary"><span>30 000-35 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-pills">
+										<div class="cat-pills__row row">
+											<div class="col-auto">
+												<div class="cat-pills__pill" style="background: #feefe9;">
+													<div class="cat-pills__p-img"><img loading="lazy" src="img/svg/sCatalog-pill-1.svg" alt=""/>
+													</div><span>Covid-19</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto">
+											<div class="cat-item__btn cat-item__btn--blue">Откликнуться
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray link-modal" href="#modal-cface">Позвонить</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">МРЦ Беляево (Центр Дикуля)</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__logo" href="#"><img loading="lazy" src="img/@2x/sDayVac-5.png" alt=""/></a>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Врач рентгенолог КТ</a>
+											<div class="cat-item__salary"><span>50 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray" href="#">Подробнее</a>
+										</div>
+										<div class="cat-item__s-col col">
+											<div class="cat-item__s-gray">Вакансия предоставлена сервисом
+											</div><a class="cat-item__s-link" href="superjob.ru" target="_blank">superjob.ru</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-baner">
+									<div class="card-baner__row row align-items-center">
+										<div class="card-baner__txt-col col-md-auto">
+											<div class="card-baner__title">Расскажите о&#160;своей зарплате
+											</div>
+											<div class="card-baner__txt">Мы в MedicJobs составляем актуальный рейтинг заработных плат на рынке труда в медицине.
+											</div><a class="card-baner__btn" href="#">Пройти опрос</a>
+										</div>
+										<div class="col-md">
+											<div class="card-baner__img"><img loading="lazy" src="img/svg/sTell-img.svg" alt=""/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Медицинская сестра</a>
+											<div class="cat-item__salary"><span>30 000-35 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto">
+											<div class="cat-item__btn cat-item__btn--blue">Откликнуться
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray link-modal" href="#modal-cface">Позвонить</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">МРЦ Беляево (Центр Дикуля)</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__logo" href="#"><img loading="lazy" src="img/@2x/sDayVac-5.png" alt=""/></a>
+										</div>
+									</div>
+								</div>
+								<div class="cat-item">
+									<div class="cat-item__top-row row">
+										<div class="col"><a class="cat-item__title" href="#">Врач рентгенолог КТ</a>
+											<div class="cat-item__salary"><span>50 000</span><span class="fw-600 ms-1">₽</span>
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="cat-item__date-row row align-items-center">
+												<div class="col-auto d-none d-md-block">
+													<div class="cat-item__date">22 июля 2021, 19:19
+													</div>
+												</div>
+												<div class="col-auto"><a class="like-btn toggle-active-on-click-js" href="#">
+													<svg class="icon icon-like ">
+														<use xlink:href="img/svg/sprite.svg#like"></use>
+													</svg>
+													<svg class="icon icon-like-fill ">
+														<use xlink:href="img/svg/sprite.svg#like-fill"></use>
+													</svg></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cat-item__descr">Вакансия компании: КласДент; «КласДент» - это современная стоматологическая клиника, осуществляющая все виды лечения заболеваний полости рта. У нас работают высококвалифицированные специалисты (терапевты, ортопеды, хирурги)
+									</div>
+									<div class="cat-item__btns-row row align-items-center">
+										<div class="col-auto">
+											<div class="cat-item__btn cat-item__btn--blue">Откликнуться
+											</div>
+										</div>
+										<div class="col-auto"><a class="cat-item__btn cat-item__btn--gray link-modal" href="#modal-cface">Позвонить</a>
+										</div>
+									</div>
+									<div class="cat-item__bot-row row align-items-end align-items-xl-center">
+										<div class="col"><a class="cat-item__org-name" href="#">ГБУЗ Городская клиническая больница имени И. В. Давыдовского ДЗМ</a>
+											<div class="cat-item__city">г. Москва
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pugin-row row">
+								<div class="col">
+									<div class="pugination">
+										<ul class="pagination">
+											<li class="prev disabled"><span>
+													<svg class="icon icon-chevron-left ">
+														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+													</svg></span></li>
+											<li class="active"><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">...</a></li>
+											<li><a href="#">5</a></li>
+											<li class="next disabled"><a href="#">
+													<svg class="icon icon-chevron-right ">
+														<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+													</svg></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-auto d-none d-md-block">
+									<div class="pugin-row__select-cont">
+										<div class="pugin-row__sel-title">Показать по:
+										</div>
+										<div class="custom-select">
+											<select class="main-page-select2-js" name="name">
+												<option value="12">12</option>
+												<option value="24">24</option>
+												<option value="36">36</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sCatalog__toggle-box toggle-box-js">
+								<div class="sCatalog__content">
+									<p>Вы собираетесь устроиться на работу, но не знаете как? А может сама мысль о поиске вызывает у вас страх? С нашей площадкой поиск работы из рутинного занятия превращается в легкое приключение, ведь на нашем сайте представлено множество вакансий в городских больницах и медицинских центрах Москвы. Мы стараемся сделать все возможное, что бы вы смогли найти работу, которая будет приносить вам удовольствие, в кратчайшие сроки.</p>
+									<p>На нашей площадке ежедневно публикуется множество свежих вакансий в больницах Москвы. Мы сотрудничаем с огромным количеством работодателей, благодаря чему соискателю на постоянной основе предлагается широчайший выбор позиций по поиску работы в различных медицинских учреждениях Москвы, от государственных больниц, до частных клиник.</p>
+								</div>
+								<div class="sCatalog__content toggle-content-js">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem consequatur cupiditate ex laudantium minima minus modi molestiae mollitia nesciunt numquam, odit qui sint tenetur. Ab culpa eaque eligendi id ipsa maxime minus nisi non odit omnis perspiciatis quas, qui rem saepe veritatis vero voluptates? Ab ad adipisci aliquam aliquid architecto asperiores atque consequatur cumque doloremque, ea eligendi eos excepturi explicabo facere id incidunt iure maxime, molestiae nobis non obcaecati odit perferendis placeat provident quidem repellendus sed temporibus vel voluptas voluptate. Ab ad asperiores at, corporis, culpa distinctio fugit ipsam maxime modi molestiae molestias numquam perferendis quaerat, ut voluptatum?</p>
+								</div>
+								<div class="toggle-txt-btn toggle-btn-js"><span>Показать полностью</span><span>Свернуть</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3 order-first order-lg-0">
+							<div class="filter-cont">
+								<div class="filter-cont__btn f-btn-js d-lg-none">
+									<div class="filter-cont__img"><img loading="lazy" src="img/svg/filter-bar.svg" alt=""/><img loading="lazy" src="img/svg/filter-cross.svg" alt=""/>
+									</div>
+									<div class="filter-cont__btn-txt"><span>Фильтр</span><span>Закрыть</span>
+									</div>
+								</div>
+								<div class="filter filter--js visiable-up-lg bigger-txt-sm">
+									<div class="filter__item f-item-js active">
+										<div class="filter__head dd-head-js">Регион
+										</div>
+										<div class="filter__content dd-content-js active">
+											<div class="custom-select">
+												<select class="main-page-select2-js" name="name">
+													<option value="Ленинградская область">Ленинградская область</option>
+													<option value="Самара2">Самара2</option>
+													<option value="Самара2">Самара2</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="filter__item f-item-js active">
+										<div class="filter__head dd-head-js">Город
+										</div>
+										<div class="filter__content dd-content-js active">
+											<div class="custom-select">
+												<select class="main-page-select2-js" name="name">
+													<option value="Санкт-Петербург">Санкт-Петербург</option>
+													<option value="Львов">Львов</option>
+													<option value="Львов2">Львов2</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="filter__item f-item-js active">
+										<div class="filter__head dd-head-js">Открытые организации
+										</div>
+										<div class="filter__content dd-content-js active">
+											<div class="filter__checkboxes">
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Показывать только с открытыми вакансиями</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter__item f-item-js active">
+										<div class="filter__head dd-head-js">Форма собственности
+										</div>
+										<div class="filter__content dd-content-js active">
+											<div class="filter__checkboxes">
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Частная</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter__item f-item-js active">
+										<div class="filter__head dd-head-js">Проффесиональное направление
+										</div>
+										<div class="filter__content dd-content-js active">
+											<div class="filter__checkboxes">
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Медицинские организации</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Лаборатории</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Клинические испытания</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Лебечное дело (врачи-специалисты)</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Лицензирование</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Медициснкое оборудование</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Санитарно-эпидемиологический надзор</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Средний и младший медперсонал</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Товары медицинского назначения</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Уход за больными</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Фармацевтика</span>
+												</label>
+												<label class="custom-chb">
+													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Другое</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<button class="filter__show-btn" type="submit">Показать 938
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="footerN__container container">
-					<div class="footerN__row row row row--mb">
-						<div class="col-xl-auto"><a class="footerN__logo mx-auto mx-xl-0" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							<div class="footerN__gray-txt text-center text-xl-start">
+			</div>
+			<!-- end sCatalog-->
+			<footer class="footer footer--alt footer--bigger-mob bigger">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footer__l-txt footer__l-txt--alt">
 								Сервис по поиску работы
 								<br class="d-none d-xl-block"/>в сфере медицины.
 							</div>
-						</div>
-						<div class="footerN__menu-col col-xl d-none d-xl-block">
-							<div class="footerN__menu-row row">
-								<div class="col">
-									<div class="footerN__m-title">MedicJobs
+							<div class="social">
+								<div class="social__row row justify-content-center justify-content-md-start d-xl-none mb-0">
+									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
 									</div>
-									<ul class="footerN__m-list">
-										<li><a href="#">Контакты</a></li>
+									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
+								</div>
+							</div>
+							<div class="d-xl-none"><a class="footer__business-logo" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
+							</div>
+						</div>
+						<div class="col-12 col-md-7 col-xl-7">
+							<div class="footer__a-menu-row row">
+								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">MedicJobs</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
+										</li>
 									</ul>
 								</div>
-								<div class="col">
-									<div class="footerN__m-title">Соискателю
-									</div>
-									<ul class="footerN__m-list">
-										<li><a href="#">Вакансии</a></li>
-										<li><a href="#">Организации</a></li>
-										<li><a href="#">Оценить компанию</a></li>
-										<li><a href="#">Рейтинг зарплат</a></li>
+								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">Соискатель</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Оценить компанию</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Рейтинг зарплат</a>
+										</li>
 									</ul>
 								</div>
-								<div class="col">
-									<div class="footerN__m-title">Работодателю
-									</div>
-									<ul class="footerN__m-list">
-										<li><a href="#">Публикация вакансии</a></li>
+								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">Работодатель</a>
+									<ul class="navMenu">
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Публикация вакансии</a>
+										</li>
+										<li class="navMenu__item"><a class="navMenu__link" href="#">Тарифы</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-auto">
-							<div class="footerN__soc-items row row row--mb justify-content-center justify-content-xl-end">
-								<div class="col-auto"><a class="footerN__s-item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/new-soc-fb.svg" alt=""/></a>
+						<div class="col-xl-2 d-none d-xl-block">
+							<div class="social">
+								<div class="social__row row justify-content-end mb-48">
+									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
+									</div>
+									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
+									</div>
 								</div>
-								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/new-soc-vk.svg" alt=""/></a>
-								</div>
-								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/new-soc-inst.svg" alt=""/></a>
-								</div>
-								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/new-soc-tg.svg" alt=""/></a>
-								</div>
-							</div><a class="footerN__business-logo text-center text-xl-end" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
-							<div class="footerN__all-rights mb-27 d-xl-none">© 2021 Все права защищены Medicjobs.ru.
-							</div>
-							<div class="footerN__policy-links text-center text-xl-end pb-12 pb-xl-0"><a class="footerN__p-link" href="#">Пользовательское соглашение</a><a class="footerN__p-link" href="#">Политика конфиденциальности</a>
-							</div>
+							</div><a class="footer__business-logo" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
 						</div>
-						<div class="col-12 mb-0"></div>
-						<div class="col-xl align-self-xl-center d-xl-block d-none">
-							<div class="footerN__all-rights">© 2021 Все права защищены Medicjobs.ru.
-							</div>
-						</div>
-						<div class="col-xl-auto align-self-xl-center">
-							<div class="footerN__scroll-top scroll-top-js justify-content-center">
-								<div class="footerN__st-txt">Наверх
+						<div class="col-12 order-2 order-md-0">
+							<div class="footer__ar-row row">
+								<div class="col-12 col-md">
+									<div class="footer__all-rights mb-0">© 2021 Все права защищены Medicjobs.ru.
+									</div>
 								</div>
-								<div class="footerN__st-ball">
-									<svg class="icon icon-chevron-top ">
-										<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
-									</svg>
+								<div class="col-12 col-md-auto">
+									<div class="footer__gray-row row">
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Правила пользования</a>
+										</div>
+										<div class="col-md-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
-			<!-- end footerN-->
 		</div>
 		<!--  start modals-->
 		<div class="modal-callback modal-win" id="modal-callback" style="display: none">
@@ -3970,6 +4134,7 @@
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!--from npm-->
+		<script src="js/dropzone.min.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->

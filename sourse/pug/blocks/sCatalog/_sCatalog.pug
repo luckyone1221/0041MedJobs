@@ -22,7 +22,7 @@ mixin sCatalog(data)
 						span Расширенный фильтр
 						+icon('filter')
 			+e.main-row.row
-				.col-lg-9
+				.col-lg
 					if data.isEmpty
 						+e.empty.text-center
 							+e.e-img
@@ -204,11 +204,14 @@ mixin sCatalog(data)
 						+b.toggle-txt-btn.toggle-btn-js
 							span Показать полностью
 							span Свернуть
-				.col-lg-3
-					+sCatalogFilter()
-					+e.mob-catalog-btn.cat-filter-toggle-js.d-lg-none
-						+icon('filter')
-						span Быстрые фильтры
+				div(class=`${data.filterColClasses || 'col-lg-3'}`)
+					if data.anotherFilter
+						+sSearchFilterContUpLg()
+					else
+						+sCatalogFilter()
+						+e.mob-catalog-btn.cat-filter-toggle-js.d-lg-none
+							+icon('filter')
+							span Быстрые фильтры
 	// end sCatalog
 
 mixin loginBaner()

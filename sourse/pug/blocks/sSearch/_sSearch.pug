@@ -8,11 +8,11 @@ mixin sSearch(data)
 			+e.row.row
 				+e.filter-col.col-xl-3
 					+e.filter-cont
-						+e.f-btn.f-btn-js.d-xl-none
-							+e.f-img
+						+e.btn.f-btn-js.d-xl-none
+							+e.img
 								img(loading="lazy" src="img/svg/filter-bar.svg" alt="")
 								img(loading="lazy" src="img/svg/filter-cross.svg" alt="")
-							+e.f-btn-txt
+							+e.btn-txt
 								span Фильтр
 								span Закрыть
 						+filterSearch()
@@ -23,6 +23,17 @@ mixin sSearch(data)
 					+newOrganizations()
 					+puginRow()
 	// end sSearch
+
+mixin sSearchFilterContUpLg()
+	+b.filter-cont
+		+e.btn.f-btn-js.d-lg-none
+			+e.img
+				img(loading="lazy" src="img/svg/filter-bar.svg" alt="")
+				img(loading="lazy" src="img/svg/filter-cross.svg" alt="")
+			+e.btn-txt
+				span Фильтр
+				span Закрыть
+		+filterSearch('visiable-up-lg bigger-txt-sm')
 
 mixin sSearchVacancy(data)
 	// start sSearch
@@ -154,8 +165,8 @@ mixin filter()
 			+customChbGroup(['Частная', 'Государтсвенная'])
 		+e.BUTTON.show-btn(type="submit") Показать 938
 
-mixin filterSearch()
-	+b.filter--js
+mixin filterSearch(addClasses='')
+	+b.filter--js(class=addClasses)
 		+filterItem('Регион', 'active')
 			+customSlect('name', ['Ленинградская область','Самара2','Самара2'], 'main-page-select2-js')
 		+filterItem('Город', 'active')

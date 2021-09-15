@@ -1234,18 +1234,35 @@ function eventHandler() {
 	}); //-.g-load--js
 
 	let files = [];
-	$('.g-load--js input[type="file"]').change(function () {
+	let row = document.querySelector('.g-load-row-js');
+	let inputFile = document.querySelector('.g-load-input-js');
+	$(inputFile).change(function () {
 		for (let file of this.files) {
 			files.push(file);
 		}
 
 		files = removeDuplicateFiles(files);
 
-		for (let file of files) {} // let tmppath = URL.createObjectURL(event.target.files[0]);
-		// let img = document.querySelector('.sReg-portrait-js img');
-		// img.setAttribute('src', tmppath);
+		while (files.length > 6) {
+			files.shift();
+		}
 
-	});
+		this.files = new FileListItems(files);
+		row.innerHTML = '';
+
+		for (let file of this.files) {
+			let fileTemplate = "\n        <div class=\"col-6 col-md-4\">\n          <div class=\"g-load__img file-img-js\" data-file-name=\"".concat(file.name, "\">\n            <img src=\"").concat(URL.createObjectURL(file), "\" alt=\"\">\n          </div>\n        </div>\n      ");
+			row.innerHTML += fileTemplate;
+		}
+	}); //need this to work with FileList
+
+	function FileListItems(files) {
+		var b = new ClipboardEvent("").clipboardData || new DataTransfer();
+
+		for (var i = 0, len = files.length; i < len; i++) b.items.add(files[i]);
+
+		return b.files;
+	}
 
 	function removeDuplicateFiles(files) {
 		let fileNames = [];
@@ -1270,6 +1287,22 @@ function eventHandler() {
 
 		return filesWithouDuplicates;
 	}
+
+	document.addEventListener('click', function () {
+		if (event.target.closest('.file-img-js')) {
+			let thisImg = event.target.closest('.file-img-js');
+			let thisName = thisImg.getAttribute('data-file-name');
+			$(thisImg.parentElement).fadeOut();
+
+			for (let [index, file] of Object.entries(files)) {
+				if (file.name === thisName) {
+					files.splice(index, 1);
+				}
+			}
+
+			inputFile.files = new FileListItems(files);
+		}
+	});
 }
 
 ;
