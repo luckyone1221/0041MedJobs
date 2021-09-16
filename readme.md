@@ -104,3 +104,6 @@
 28. <https://luckyone1221.github.io/0041MedJobs/public/03-profile.html>
 29. <https://luckyone1221.github.io/0041MedJobs/public/046-vacancy-4.html>
 30. <https://luckyone1221.github.io/0041MedJobs/public/028-creator-lc.html>
+31. <https://luckyone1221.github.io/0041MedJobs/public/029-my-vacancy.html>
+32. <https://luckyone1221.github.io/0041MedJobs/public/030-my-vacancy-empty.html>
+33. <https://luckyone1221.github.io/0041MedJobs/public/048-vac-create.html>
