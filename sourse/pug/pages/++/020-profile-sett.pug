@@ -20,6 +20,12 @@ block title
 	title= title
 block pagecontent
 	.headerAlt-cont
-		+headerAlt()
+		+headerAltNew({
+			logoColClasses: 'col',
+			hasSearch: false,
+			hasVacBtn: '',
+			hasBell: false,
+			bellActive: '',
+		})
 	+sProfileN()
 	+footerN()

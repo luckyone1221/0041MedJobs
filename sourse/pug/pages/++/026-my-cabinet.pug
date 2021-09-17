@@ -24,7 +24,13 @@ block title
 	title= title
 block pagecontent
 	.headerAlt-cont
-		+headerAlt(false)
+		+headerAltNew({
+			logoColClasses: 'col',
+			hasSearch: false,
+			hasVacBtn: '',
+			hasBell: false,
+			bellActive: '',
+		})
 	+sProfileNMyCab()
 		+sMyCab({
 			userImg: '@2x/proffesional-1.jpg',

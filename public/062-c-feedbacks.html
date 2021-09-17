@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>04-vacancy</title>
+		<title>062-c-feedbacks</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="о чем страница">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
@@ -28,528 +28,389 @@
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="new-header" style="opacity: 0;">
+	<body class="bg-gray-120 mvp-page" style="opacity: 0;">
 		<div class="main-wrapper">
 			<!--+alertLine()-->
-			<div class="mm mm--js mm--alt5 d-xl-none">
-				<div class="new-mnu">
-					<div class="new-mnu__box"><a class="top-nav__blue-cv-btn" href="#">Разместить резюме</a><a class="new-mnu__enter-btn" href="#">Войти</a>
-					</div>
-					<div class="new-mnu__box"><a class="top-nav__location link-modal" href="#modal-city">
-							<svg class="icon icon-location ">
-								<use xlink:href="img/svg/sprite.svg#location"></use>
-							</svg><span class="top-nav__loc-txt">Санкт-Петербург</span></a>
-					</div>
-					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item active" href="#">Соискатель</a><a class="new-mnu__item" href="#">Работодатель</a><a class="new-mnu__item" href="#">Вакансии</a><a class="new-mnu__item" href="#">Организации</a>
-					</div>
-					<div class="new-mnu__box new-mnu__box--menu"><a class="new-mnu__item" href="#">О компании</a><a class="new-mnu__item" href="#">Помощь</a><a class="new-mnu__item" href="#">Контакты</a>
-					</div>
-				</div>
-			</div>
-			<!-- start header-->
-			<header class="header" id="header">
-				<!-- start top-nav-->
-				<div class="top-nav top-nav--alt block-with-lazy">
-					<div class="top-nav__container top-nav__container--alt5 container">
-						<div class="top-nav__row top-nav__row--alt row">
-							<div class="col-auto d-lg-none">
-								<div class="top-nav__burger top-nav__burger--alt burger-js"><span></span>
+			<div class="headerAlt-cont">
+				<!-- start headerAlt-->
+				<header class="headerAlt" id="headerAlt">
+					<div class="headerAlt__container container-fluid">
+						<div class="headerAlt__row row row--mb align-items-center">
+							<div class="headerAlt__logo-col col-lg-auto col col-md-auto"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							</div>
+							<div class="col d-none d-md-block">
+								<div class="container p-0"><a class="vac-btn" href="#"><span class="vac-btn__v-icon">
+									<svg class="icon icon-vac-plus ">
+										<use xlink:href="img/svg/sprite.svg#vac-plus"></use>
+									</svg></span><span>Разместить вакансию</span></a>
 								</div>
 							</div>
-							<div class="col col-lg-auto"><a class="top-nav__logo top-nav__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							</div>
-							<div class="col d-none d-lg-block">
-								<div class="top-nav__colooker-dd-cont">
-									<div class="top-nav__c-dd-btn colooker-dd-btn-js">Соискатель
-									</div>
-									<div class="colooker-dd colooker-dd--js">
-										<div class="colooker-dd__content">
-											<div class="colooker-dd__box colooker-dd__box--top"><a class="colooker-dd__item active" href="#">Соискатель</a><a class="colooker-dd__item" href="#">Вакансии</a><a class="colooker-dd__item" href="#">Организации</a>
-											</div>
-											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">Работодатель</a>
-											</div>
-											<div class="colooker-dd__box"><a class="colooker-dd__item" href="#">О компании</a><a class="colooker-dd__item" href="#">Помощь</a><a class="colooker-dd__item" href="#">Контакты</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="top-nav__location-col col-auto d-none d-md-block"><a class="top-nav__location link-modal" href="#modal-city">
-								<svg class="icon icon-location ">
-									<use xlink:href="img/svg/sprite.svg#location"></use>
-								</svg><span class="top-nav__loc-txt">Москва</span></a>
-							</div>
-							<div class="col-auto"><a class="top-nav__blue-cv-btn d-none d-md-inline-block" href="#">Разместить резюме</a><a class="top-nav__mob-cv-btn d-md-none" href="#"><span class="top-nav__mcv-icon">
-								<svg class="icon icon-plus-bold ">
-									<use xlink:href="img/svg/sprite.svg#plus-bold"></use>
-								</svg></span><span class="top-nav__mcv-txt">Разместить резюме</span></a>
-							</div>
-							<div class="col-auto"><a class="top-nav__enter-link d-none d-md-inline" href="#">Войти</a><a class="top-nav__mob-enter d-md-none" href="#">
-								<svg class="icon icon-avatar-stab ">
-									<use xlink:href="img/svg/sprite.svg#avatar-stab"></use>
-								</svg></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-			<!-- end header-->
-			<!-- start sSearch-->
-			<section class="sSearch sSearch--vacancy section" id="sSearch">
-				<div class="container">
-					<div class="inp-str inp-str--js">
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__select">
-									<div class="custom-select">
-										<select class="main-page-select2-js" name="type">
-											<option value="Вакансии">Вакансии</option>
-											<option value="Самара2">Самара2</option>
-											<option value="Самара2">Самара2</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control inp-str-input-js" type="text" placeholder="Введите название вакансии" name="searc"/>
-									<button class="form-wrap__btn d-none d-md-inline-block" type="submit"><span>Найти</span>
-									</button>
-								</div>
-								<button class="form-wrap__btn d-flex d-md-none" type="submit"><span class="d-none d-md-block">Найти</span>
-									<svg class="icon icon-zoom d-md-none">
-										<use xlink:href="img/svg/sprite.svg#zoom"></use>
+							<div class="col-auto">
+								<div class="headerAlt__bell bell-js">
+									<svg class="icon icon-bell ">
+										<use xlink:href="img/svg/sprite.svg#bell"></use>
 									</svg>
-								</button>
-							</form>
-						</div>
-					</div>
-					<nav class="breadcrumb-par">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="/"><span>Главная</span></a></li>
-							<li class="breadcrumb-item pointer-ev-none"><a href="#"><span>Вакансии</span></a></li>
-						</ol>
-					</nav>
-					<div class="section-title">
-						<h1>Вакансии Врач-терапевт в Санкт-Петербурге</h1>
-						<p>Найдено 1800 вакансий</p>
-					</div>
-					<div class="sSearch__row row">
-						<div class="sSearch__filter-col col-xl-3">
-							<div class="sSearch__filter-cont">
-								<div class="sSearch__f-btn f-btn-js d-xl-none">
-									<div class="sSearch__f-img"><img loading="lazy" src="img/svg/filter-bar.svg" alt=""/><img loading="lazy" src="img/svg/filter-cross.svg" alt=""/>
-									</div>
-									<div class="sSearch__f-btn-txt"><span>Фильтр</span><span>Закрыть</span>
-									</div>
-								</div>
-								<div class="filter filter--js filter--vac">
-									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">Регион
-										</div>
-										<div class="filter__content dd-content-js active">
-											<div class="custom-select">
-												<select class="main-page-select2-js" name="name">
-													<option value="Ленинградская область">Ленинградская область</option>
-													<option value="Самара2">Самара2</option>
-													<option value="Самара2">Самара2</option>
-												</select>
-											</div>
+									<div class="bell-dd bell-dd--js">
+										<div class="bell-dd__box">
+											<div class="text-center p-12">Новых уведомлений нет.</div>
 										</div>
 									</div>
-									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">Город
-										</div>
-										<div class="filter__content dd-content-js active">
-											<div class="custom-select">
-												<select class="main-page-select2-js" name="name">
-													<option value="Санкт-Петербург">Санкт-Петербург</option>
-													<option value="Самара2">Самара2</option>
-													<option value="Самара2">Самара2</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">Уровень дохода, руб
-										</div>
-										<div class="filter__content dd-content-js active">
-											<div class="two-inps">
-												<div class="two-inps__input-wrap form-group"><input class="two-inps__input form-control" name="salary_from" type="number" placeholder="25 000" step="any"/>
-												</div>
-												<!-- +e.input-wrap-->
-												<div class="two-inps__input-wrap form-group"><input class="two-inps__input form-control" name="salary_to" type="number" placeholder="100 000" step="any"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<label class="custom-chb">
-												<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Не показывать без зарплаты</span>
-											</label>
-										</div>
-									</div>
-									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">Опыт работы
-										</div>
-										<div class="filter__content dd-content-js active">
-											<div class="filter__checkboxes">
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Начало карьеры</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">1-3 года</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">3-5 лет</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">более 5 лет</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">Тип занятости
-										</div>
-										<div class="filter__content dd-content-js active">
-											<div class="filter__checkboxes">
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Полная</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Частичная</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Временная</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Стажировка и практика</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Сезонная/вахта</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Удаленная</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">График работы
-										</div>
-										<div class="filter__content dd-content-js active">
-											<div class="filter__checkboxes">
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Полный день</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Неполный день</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Гибкий график</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Сменный график</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Вахтовый метод</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Ненормированный</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="filter__item f-item-js active">
-										<div class="filter__head dd-head-js">Форма собственности компании
-										</div>
-										<div class="filter__content dd-content-js active">
-											<div class="filter__checkboxes">
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name" checked="checked"/><span class="square"></span><span class="txt">Частная</span>
-												</label>
-												<label class="custom-chb">
-													<input class="d-none" type="checkbox" name="name"/><span class="square"></span><span class="txt">Государственная</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<button class="filter__show-btn" type="submit">Показать 95
-									</button>
 								</div>
 							</div>
-						</div>
-						<div class="col-xl-9">
-							<!--+Vacancies()-->
-							<div class="sSearch__vac-items pb-36 pb-xl-48">
-								<div class="prof-vac">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
+							<div class="col-auto">
+								<div class="headerAlt__lc-cont lc-cont-js">
+									<div class="headerAlt__lc-row row align-items-center lc-dd-btn-js">
+										<div class="col-auto">
+											<div class="headerAlt__lc-txt">Мой кабинет
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="headerAlt__lc-img"><img loading="lazy" src="img/svg/sm-portrait-stab.svg" alt=""/>
+											</div>
+										</div>
+										<div class="headerAlt__lc-icon col-auto">
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="p-cab-dd lc-dd lc-dd--js">
+										<div class="p-cab-dd__inner">
+											<div class="p-cab-dd__top-txt">
+												<div class="p-cab-dd__name">Константинопольский К. К.
+												</div>
+												<div class="p-cab-dd__id">№1330-4
 												</div>
 											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn active" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__descr">Образование среднее специальное медицинское; Наличие действующего сертификата: «Сестринское дело»/«Акушерское дело»; Владение навыком взятия венозной крови; Опыт работы от года (желательно); Знание...
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="prof-vac">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
-												</div>
-											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo prof-vac__logo--empty" href="#"><img loading="lazy" src="img/svg/company-stab4.svg" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="prof-vac">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
-												</div>
-											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="prof-vac">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
-												</div>
-											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-2.png" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="prof-vac">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
-												</div>
-											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="prof-vac">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
-												</div>
-											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-2.png" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="prof-vac d-none d-xl-block">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
-												</div>
-											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-1.png" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="prof-vac d-none d-xl-block">
-									<div class="prof-vac__date-box">
-										<div class="prof-vac__date-row row align-items-center">
-											<div class="col-auto">
-												<div class="prof-vac__date">04.02.2021
-												</div>
-											</div>
-											<div class="col-auto"><a class="prof-vac__like-btn" href="#">
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg></a>
-											</div>
-										</div>
-									</div>
-									<div class="prof-vac__name-bl"><a class="prof-vac__name" href="#">Врач-терапевт стационар</a>
-										<div class="prof-vac__salary">30 000-35 000 ₽
-										</div>
-									</div>
-									<div class="prof-vac__row row">
-										<div class="col-auto"><a class="prof-vac__logo" href="#"><img loading="lazy" src="img/@2x/prof-vac-logo-2.png" alt=""/></a>
-										</div>
-										<div class="col">
-											<div class="prof-vac__title">ЧУЗ Клиническая больница «РЖД - Медицина» города Санкт-Петербург
-											</div>
-											<div class="prof-vac__city">г. Санкт-Петербург
+											<div class="p-cab-dd__menu">
+												<ul>
+													<li><a href="#">Подборки вакансий</a></li>
+													<li><a href="#">Мое резюме</a></li>
+													<li><a href="#">Настройки профиля</a></li>
+													<li><a class="log-out" href="#">Выйти из профиля</a></li>
+												</ul>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="pugin-row row">
+							<div class="col-auto d-md-none">
+								<div class="headerAlt__burger mvp-burger-js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mvp-menu mvp-menu--js">
+						<ul>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Помощь</a></li>
+						</ul>
+					</div>
+				</header>
+				<!-- end headerAlt-->
+			</div>
+			<section class="sProfileN section" id="sProfileN">
+				<div class="container-fluid">
+					<div class="sProfileN__row row row row--mb">
+						<div class="col-xlg-auto">
+							<div class="l-side-menu">
+								<div class="l-side-menu__slider-wrap">
+									<div class="swiper-container sidebar-slider-js">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
+												<svg class="icon icon-side-mnu-7 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-7"></use>
+												</svg></span><span class="l-side-menu__txt">Мой кабинет</span></a>
+											</div>
+											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
+												<svg class="icon icon-side-mnu-8 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-8"></use>
+												</svg></span><span class="l-side-menu__txt">Мои вакансии</span></a>
+											</div>
+											<div class="swiper-slide"><a class="l-side-menu__item" href="#"><span class="l-side-menu__icon">
+												<svg class="icon icon-side-mnu-9 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-9"></use>
+												</svg></span><span class="l-side-menu__txt">Настройки профиля</span></a>
+											</div>
+											<div class="swiper-slide"><a class="l-side-menu__item active" href="#"><span class="l-side-menu__icon">
+												<svg class="icon icon-side-mnu-10 ">
+													<use xlink:href="img/svg/sprite.svg#side-mnu-10"></use>
+												</svg></span><span class="l-side-menu__txt">Отклики</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sProfileN__content-col col-xlg">
+							<div class="sProfileN__title-row row row row--mb align-items-center">
 								<div class="col">
-									<div class="pugination">
-										<ul class="pagination">
-											<li class="prev disabled"><span>
-													<svg class="icon icon-chevron-left ">
-														<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-													</svg></span></li>
-											<li class="active"><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">...</a></li>
-											<li><a href="#">5</a></li>
-											<li class="next disabled"><a href="#">
-													<svg class="icon icon-chevron-right ">
-														<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-													</svg></a></li>
-										</ul>
-									</div>
+									<h1 class="sProfileN__title">Отклики
+									</h1>
 								</div>
-								<div class="col-auto">
-									<div class="pugin-row__select-cont">
-										<div class="pugin-row__sel-title">Показать по:
+								<div class="col-12">
+									<div class="c-feedback">
+										<div class="c-feedback__items">
+											<div class="c-feedback__item">
+												<div class="c-feedback__i-row row">
+													<div class="col-auto">
+														<div class="c-feedback__img"><img loading="lazy" src="img/svg/portrait-stab2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--name col col-lg-auto">
+														<div class="c-feedback__name">Константин Констинтинович Константинов
+														</div>
+														<div class="c-feedback__gray-data">24 года, Санкт-Петербург
+														</div>
+														<div class="c-feedback__prof">Врач-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--date col-md text-md-end order-last order-md-0 order-lg-last">
+														<div class="c-feedback__date d-none d-md-block">7 сентября 2021, 9:40
+														</div>
+														<div class="c-feedback__btns-row row justify-content-end">
+															<div class="col">
+																<div class="c-feedback__date d-md-none">7 сентября 2021, 9:40
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-print.svg" alt=""/>
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-download.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 m-0 d-lg-none"></div>
+													<div class="c-feedback__col c-feedback__col--vac col-lg-auto">
+														<div class="c-feedback__vac-name">Городской клинический центр Министерства здравоохранения Чувашской Республики
+														</div>
+														<div class="c-feedback__vac-duty">Врач-терапевт-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--contacts col-auto align-self-center"><a class="c-feedback__tel" href="tel:+79198112822">+7 (919) 811-28-22</a><a class="c-feedback__mail" href="mailto:mymail@mail.ru">mymail@mail.ru</a>
+													</div>
+												</div>
+											</div>
+											<div class="c-feedback__item">
+												<div class="c-feedback__i-row row">
+													<div class="col-auto">
+														<div class="c-feedback__img"><img loading="lazy" src="img/svg/portrait-stab2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--name col col-lg-auto">
+														<div class="c-feedback__name">Константин Констинтинович Константинов
+														</div>
+														<div class="c-feedback__gray-data">24 года, Санкт-Петербург
+														</div>
+														<div class="c-feedback__prof">Врач-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--date col-md text-md-end order-last order-md-0 order-lg-last">
+														<div class="c-feedback__date d-none d-md-block">7 сентября 2021, 9:40
+														</div>
+														<div class="c-feedback__btns-row row justify-content-end">
+															<div class="col">
+																<div class="c-feedback__date d-md-none">7 сентября 2021, 9:40
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-print.svg" alt=""/>
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-download.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 m-0 d-lg-none"></div>
+													<div class="c-feedback__col c-feedback__col--vac col-lg-auto">
+														<div class="c-feedback__vac-name">Городской клинический центр Министерства здравоохранения Чувашской Республики
+														</div>
+														<div class="c-feedback__vac-duty">Врач-терапевт-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--contacts col-auto align-self-center"><a class="c-feedback__tel" href="tel:+79198112822">+7 (919) 811-28-22</a><a class="c-feedback__mail" href="mailto:mymail@mail.ru">mymail@mail.ru</a>
+													</div>
+												</div>
+											</div>
+											<div class="c-feedback__item">
+												<div class="c-feedback__i-row row">
+													<div class="col-auto">
+														<div class="c-feedback__img"><img loading="lazy" src="img/svg/portrait-stab2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--name col col-lg-auto">
+														<div class="c-feedback__name">Константин Констинтинович Константинов
+														</div>
+														<div class="c-feedback__gray-data">24 года, Санкт-Петербург
+														</div>
+														<div class="c-feedback__prof">Врач-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--date col-md text-md-end order-last order-md-0 order-lg-last">
+														<div class="c-feedback__date d-none d-md-block">7 сентября 2021, 9:40
+														</div>
+														<div class="c-feedback__btns-row row justify-content-end">
+															<div class="col">
+																<div class="c-feedback__date d-md-none">7 сентября 2021, 9:40
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-print.svg" alt=""/>
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-download.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 m-0 d-lg-none"></div>
+													<div class="c-feedback__col c-feedback__col--vac col-lg-auto">
+														<div class="c-feedback__vac-name">Городской клинический центр Министерства здравоохранения Чувашской Республики
+														</div>
+														<div class="c-feedback__vac-duty">Врач-терапевт-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--contacts col-auto align-self-center"><a class="c-feedback__tel" href="tel:+79198112822">+7 (919) 811-28-22</a><a class="c-feedback__mail" href="mailto:mymail@mail.ru">mymail@mail.ru</a>
+													</div>
+												</div>
+											</div>
+											<div class="c-feedback__item">
+												<div class="c-feedback__i-row row">
+													<div class="col-auto">
+														<div class="c-feedback__img"><img loading="lazy" src="img/svg/portrait-stab2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--name col col-lg-auto">
+														<div class="c-feedback__name">Константин Констинтинович Константинов
+														</div>
+														<div class="c-feedback__gray-data">24 года, Санкт-Петербург
+														</div>
+														<div class="c-feedback__prof">Врач-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--date col-md text-md-end order-last order-md-0 order-lg-last">
+														<div class="c-feedback__date d-none d-md-block">7 сентября 2021, 9:40
+														</div>
+														<div class="c-feedback__btns-row row justify-content-end">
+															<div class="col">
+																<div class="c-feedback__date d-md-none">7 сентября 2021, 9:40
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-print.svg" alt=""/>
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-download.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 m-0 d-lg-none"></div>
+													<div class="c-feedback__col c-feedback__col--vac col-lg-auto">
+														<div class="c-feedback__vac-name">Городской клинический центр Министерства здравоохранения Чувашской Республики
+														</div>
+														<div class="c-feedback__vac-duty">Врач-терапевт-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--contacts col-auto align-self-center"><a class="c-feedback__tel" href="tel:+79198112822">+7 (919) 811-28-22</a><a class="c-feedback__mail" href="mailto:mymail@mail.ru">mymail@mail.ru</a>
+													</div>
+												</div>
+											</div>
+											<div class="c-feedback__item">
+												<div class="c-feedback__i-row row">
+													<div class="col-auto">
+														<div class="c-feedback__img"><img loading="lazy" src="img/svg/portrait-stab2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--name col col-lg-auto">
+														<div class="c-feedback__name">Константин Констинтинович Константинов
+														</div>
+														<div class="c-feedback__gray-data">24 года, Санкт-Петербург
+														</div>
+														<div class="c-feedback__prof">Врач-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--date col-md text-md-end order-last order-md-0 order-lg-last">
+														<div class="c-feedback__date d-none d-md-block">7 сентября 2021, 9:40
+														</div>
+														<div class="c-feedback__btns-row row justify-content-end">
+															<div class="col">
+																<div class="c-feedback__date d-md-none">7 сентября 2021, 9:40
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-print.svg" alt=""/>
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-download.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 m-0 d-lg-none"></div>
+													<div class="c-feedback__col c-feedback__col--vac col-lg-auto">
+														<div class="c-feedback__vac-name">Городской клинический центр Министерства здравоохранения Чувашской Республики
+														</div>
+														<div class="c-feedback__vac-duty">Врач-терапевт-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--contacts col-auto align-self-center"><a class="c-feedback__tel" href="tel:+79198112822">+7 (919) 811-28-22</a><a class="c-feedback__mail" href="mailto:mymail@mail.ru">mymail@mail.ru</a>
+													</div>
+												</div>
+											</div>
+											<div class="c-feedback__item">
+												<div class="c-feedback__i-row row">
+													<div class="col-auto">
+														<div class="c-feedback__img"><img loading="lazy" src="img/svg/portrait-stab2.svg" alt=""/>
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--name col col-lg-auto">
+														<div class="c-feedback__name">Константин Констинтинович Константинов
+														</div>
+														<div class="c-feedback__gray-data">24 года, Санкт-Петербург
+														</div>
+														<div class="c-feedback__prof">Врач-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--date col-md text-md-end order-last order-md-0 order-lg-last">
+														<div class="c-feedback__date d-none d-md-block">7 сентября 2021, 9:40
+														</div>
+														<div class="c-feedback__btns-row row justify-content-end">
+															<div class="col">
+																<div class="c-feedback__date d-md-none">7 сентября 2021, 9:40
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-print.svg" alt=""/>
+																</div>
+															</div>
+															<div class="col-auto">
+																<div class="c-feedback__btn"><img loading="lazy" src="img/svg/c-feedback-download.svg" alt=""/>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 m-0 d-lg-none"></div>
+													<div class="c-feedback__col c-feedback__col--vac col-lg-auto">
+														<div class="c-feedback__vac-name">Городской клинический центр Министерства здравоохранения Чувашской Республики
+														</div>
+														<div class="c-feedback__vac-duty">Врач-терапевт-хирург
+														</div>
+													</div>
+													<div class="c-feedback__col c-feedback__col--contacts col-auto align-self-center"><a class="c-feedback__tel" href="tel:+79198112822">+7 (919) 811-28-22</a><a class="c-feedback__mail" href="mailto:mymail@mail.ru">mymail@mail.ru</a>
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="custom-select">
-											<select class="main-page-select2-js" name="name">
-												<option value="12">12</option>
-												<option value="24">24</option>
-												<option value="36">36</option>
-											</select>
-										</div>
-										<!--+e.SELECT.select.form-control.form-select
-										option 12
-										option 24
-										option 36
-										
-										-->
 									</div>
 								</div>
 							</div>
@@ -557,91 +418,84 @@
 					</div>
 				</div>
 			</section>
-			<!-- end sSearch-->
-			<footer class="footer footer--alt">
-				<div class="container">
-					<div class="footer__row row">
-						<div class="col-12 col-md-5 col-xl-3"><a class="footer__logo footer__logo--alt" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							<div class="footer__l-txt footer__l-txt--alt">
+			<!-- start footerN-->
+			<footer class="footerN footerN--js" id="footerN">
+				<div class="footerN__ball footerN__ball--1">
+				</div>
+				<div class="footerN__ball footerN__ball--2">
+				</div>
+				<div class="footerN__container container">
+					<div class="footerN__row row row row--mb">
+						<div class="col-xl-auto"><a class="footerN__logo mx-auto mx-xl-0" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
+							<div class="footerN__gray-txt text-center text-xl-start">
 								Сервис по поиску работы
 								<br class="d-none d-xl-block"/>в сфере медицины.
 							</div>
-							<div class="social">
-								<div class="social__row row justify-content-center justify-content-md-start d-xl-none mb-0">
-									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
-									</div>
-									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
-									</div>
-									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
-									</div>
-									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
-									</div>
-								</div>
-							</div>
-							<div class="d-xl-none"><a class="footer__business-logo text-center text-md-start" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
-							</div>
 						</div>
-						<div class="col-12 col-md-7 col-xl-7">
-							<div class="footer__a-menu-row row text-center text-md-start">
-								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">MedicJobs</a>
-									<ul class="navMenu">
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Контакты</a>
-										</li>
+						<div class="footerN__menu-col col-xl d-none d-xl-block">
+							<div class="footerN__menu-row row">
+								<div class="col">
+									<div class="footerN__m-title">MedicJobs
+									</div>
+									<ul class="footerN__m-list">
+										<li><a href="#">Контакты</a></li>
 									</ul>
 								</div>
-								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">Соискатель</a>
-									<ul class="navMenu">
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Вакансии</a>
-										</li>
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Организации</a>
-										</li>
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Оценить компанию</a>
-										</li>
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Рейтинг зарплат</a>
-										</li>
+								<div class="col">
+									<div class="footerN__m-title">Соискателю
+									</div>
+									<ul class="footerN__m-list">
+										<li><a href="#">Вакансии</a></li>
+										<li><a href="#">Организации</a></li>
+										<li><a href="#">Оценить компанию</a></li>
+										<li><a href="#">Рейтинг зарплат</a></li>
 									</ul>
 								</div>
-								<div class="col-12 col-md-4"><a class="footer__a-title" href="#">Работодатель</a>
-									<ul class="navMenu">
-										<li class="navMenu__item"><a class="navMenu__link" href="#">Публикация вакансии</a>
-										</li>
+								<div class="col">
+									<div class="footerN__m-title">Работодателю
+									</div>
+									<ul class="footerN__m-list">
+										<li><a href="#">Публикация вакансии</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-2 d-none d-xl-block">
-							<div class="social">
-								<div class="social__row row justify-content-end mb-48">
-									<div class="col-auto"><a class="social__item" href="https://www.facebook.com/medicjobs.ru/"><img loading="lazy" src="img/svg/fb.svg" alt=""/></a>
-									</div>
-									<div class="col-auto"><a class="social__item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/vk.svg" alt=""/></a>
-									</div>
-									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/in.svg" alt=""/></a>
-									</div>
-									<div class="col-auto"><a class="social__item" href="https://www.instagram.com/medicjobs.ru/"><img loading="lazy" src="img/svg/tg.svg" alt=""/></a>
-									</div>
+						<div class="col-xl-auto">
+							<div class="footerN__soc-items row row row--mb justify-content-center justify-content-xl-end">
+								<div class="col-auto"><a class="footerN__s-item" href="https://vk.com/medicjobs"><img loading="lazy" src="img/svg/new-soc-fb.svg" alt=""/></a>
 								</div>
-							</div><a class="footer__business-logo text-center text-xl-start" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
+								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/new-soc-vk.svg" alt=""/></a>
+								</div>
+								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/new-soc-inst.svg" alt=""/></a>
+								</div>
+								<div class="col-auto"><a class="footerN__s-item" href="#"><img loading="lazy" src="img/svg/new-soc-tg.svg" alt=""/></a>
+								</div>
+							</div><a class="footerN__business-logo text-center text-xl-end" href="#"><img loading="lazy" src="img/@2x/bissnes-logo.png" alt=""/></a>
+							<div class="footerN__all-rights mb-27 d-xl-none">© 2021 Все права защищены Medicjobs.ru.
+							</div>
+							<div class="footerN__policy-links text-center text-xl-end pb-12 pb-xl-0"><a class="footerN__p-link" href="#">Пользовательское соглашение</a><a class="footerN__p-link" href="#">Политика конфиденциальности</a>
+							</div>
 						</div>
-						<div class="col-12 order-2 order-md-0">
-							<div class="footer__ar-row row text-center text-md-start">
-								<div class="col-12 col-md">
-									<div class="footer__all-rights mb-0">© 2021 Все права защищены Medicjobs.ru.
-									</div>
+						<div class="col-12 mb-0"></div>
+						<div class="col-xl align-self-xl-center d-xl-block d-none">
+							<div class="footerN__all-rights">© 2021 Все права защищены Medicjobs.ru.
+							</div>
+						</div>
+						<div class="col-xl-auto align-self-xl-center">
+							<div class="footerN__scroll-top scroll-top-js justify-content-center">
+								<div class="footerN__st-txt">Наверх
 								</div>
-								<div class="col-12 col-md-auto">
-									<div class="footer__gray-row row">
-										<div class="col-md-auto"><a class="footer__g-link" href="#">Правила пользования</a>
-										</div>
-										<div class="col-md-auto"><a class="footer__g-link" href="#">Публичная оферта</a>
-										</div>
-									</div>
+								<div class="footerN__st-ball">
+									<svg class="icon icon-chevron-top ">
+										<use xlink:href="img/svg/sprite.svg#chevron-top"></use>
+									</svg>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</footer>
+			<!-- end footerN-->
 		</div>
 		<!--  start modals-->
 		<div class="modal-callback modal-win" id="modal-callback" style="display: none">

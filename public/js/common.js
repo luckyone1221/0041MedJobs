@@ -195,7 +195,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = '029-2.png';
+	screenName = '062.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));

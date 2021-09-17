@@ -1417,3 +1417,155 @@
 	&__{}
 	&__{}
 }
+//
+.c-feedback{
+
+	&__items{
+
+	}
+	&__item{
+		padding: 18px 18px 24px 18px;
+		@include media-breakpoint-up(md){
+			padding: 24px;
+		}
+		@include media-breakpoint-up(lg){
+			font-size: 14px;
+		}
+		@include media-breakpoint-between(xlg, xl){
+			padding: 18px;
+			font-size: 12px;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 24px 24px 20px;
+			font-size: 13px;
+		}
+
+		@include media-breakpoint-up(xxl){
+			font-size: 15px;
+		}
+
+		background: $white;
+		border: 1px solid $gray-210;
+		border-radius: 5px;
+
+		box-shadow: 0px 0px 15px rgba(38, 39, 40, 0);
+		&:hover{
+			box-shadow: 0px 0px 15px rgba(38, 39, 40, 0.15)
+		}
+
+		line-height: 1.5;
+		color: $headings-color;
+
+		margin-bottom: 12px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__i-row{
+		--bs-gutter-x: #{rem(18)};
+		--bs-gutter-y: #{rem(18)};
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(24)};
+		}
+	}
+	&__col{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		//-
+		&--name{
+			@include media-breakpoint-up(lg){
+				width: 25%;
+			}
+			@include media-breakpoint-up(xxl){
+				width: 25%;
+			}
+			@include media-breakpoint-up(base){
+				width: 22.4%;
+			}
+		}
+		&--vac{
+			@include media-breakpoint-up(lg){
+				width: 28%;
+			}
+			@include media-breakpoint-up(xxl){
+				width: 28%;
+			}
+			@include media-breakpoint-up(base){
+				width: 26.12%;
+			}
+		}
+		&--contacts{
+			@include media-breakpoint-up(lg){
+				max-width: 20%;
+			}
+		}
+		&--date{
+
+		}
+	}
+	&__img{
+		width: 120px;
+		height: 120px;
+		@include media-breakpoint-up(md){
+			width: 90px;
+			height: 90px;
+		}
+		border-radius: 5px;
+		background: $gray-100;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name{
+		font-weight: 500;
+		line-height: 1.25;
+		margin-bottom: 2px;
+	}
+	&__gray-data{
+		color: $gray-600;
+		margin-bottom: 2px;
+	}
+	&__prof{
+
+	}
+	&__vac-name{
+		margin-bottom: 6px;
+	}
+	&__vac-duty{
+		color: $gray-600;
+		line-height: 1;
+	}
+	&__tel{
+		display: block;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		color: $headings-color;
+	}
+	&__mail{
+		display: block;
+		line-height: 1;
+		color: $secondary;
+	}
+	&__date{
+		color: $secondary;
+	}
+	&__btns-row{
+
+	}
+	&__date{}
+	&__btn{
+		img{
+
+		}
+	}
+	&__{}
+	&__{}
+}

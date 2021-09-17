@@ -59,6 +59,66 @@ mixin headerAlt(bellActive, hasSearch=true, hasVacBtn, logoColClasses='col', mod
 		+mvpMmenu()
 	// end headerAlt
 
+mixin headerAltNew(data)
+	// start headerAlt
+	+b.HEADER.headerAlt#headerAlt&attributes(attributes)
+		+e.container.container-fluid
+			+e.row.row--mb.align-items-center
+				if data.hasSearch
+					.col-lg-auto(class=`${data.logoColClasses || 'col'}`)
+						+e.logo(href='#')
+							img(loading="lazy" src="img/svg/logo.svg" alt="")
+				else
+					+e.logo-col(class=`${data.logoColClasses || 'col'}`)
+						+e.logo(href='#')
+							img(loading="lazy" src="img/svg/logo.svg" alt="")
+				if data.hasSearch
+					+e.search-col.col-lg.order-last.order-lg-0
+						+e.search
+							+e.INPUT.s-input.form-control.search-inp-js(type="text" placeholder="Поиск по вакансиям")
+							+e.search-btn.search-btn-js(type='button')
+								+icon('zoom-2')
+							+e.serch-type-dd
+								input.headerAlt-st-hidden-inp-js(type="hidden" value="Вакансии")
+								+e.st-txt.headerAlt-st-txt-js Вакансии
+								+e.st-dd.headerAlt-st-dd-js
+									+e.st-inner
+										+e.st-item.headerAlt-st-item-js.current(data-inp-placeholder="Поиск по вакансиям") Вакансии
+										+e.st-item.headerAlt-st-item-js(data-inp-placeholder="Поиск по организациям") Организации
+				if data.hasVacBtn
+					.col.d-none.d-md-block
+						.container.p-0
+							+b.vac-btn(href="#")
+								+e.v-icon
+									+icon('vac-plus')
+								span Разместить вакансию
+				if data.hasBell
+					.col-auto
+						if data.bellActive
+							+e.bell.bell-js.active
+								+icon('bell')
+								+bellDD()
+						else
+							+e.bell.bell-js
+								+icon('bell')
+								+bellDDEmpty()
+				.col-auto
+					+e.lc-cont.lc-cont-js
+						+e.lc-row.row.align-items-center.lc-dd-btn-js
+							.col-auto
+								+e.lc-txt Мой кабинет
+							.col-auto
+								+e.lc-img
+									img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
+							+e.lc-icon.col-auto
+								+icon('chevron-down')
+						+pCabDD()
+				.col-auto.d-md-none
+					+e.burger.mvp-burger-js
+						span
+		+mvpMmenu()
+	// end headerAlt
+
 mixin bellDD()
 	+b.bell-dd--js
 		+e.box

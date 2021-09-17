@@ -12,25 +12,14 @@ include ../blocks/sAccProfile/_sAccProfile.pug
 include ../blocks/headerAlt/_headerAlt.pug
 include ../blocks/sProfileN/_sProfileN.pug
 include ../blocks/footerN/_footerN.pug
-include ../blocks/sNVac/_sNVac.pug
-include ../blocks/sCompilations/_sCompilations.pug
 
 block variables
 	- let  mainPage= 'bg-gray-120 mvp-page'
 block title
-	- let  title= 'Мои подборки'
+	- let  title= '062-c-feedbacks'
 	title= title
 block pagecontent
 	.headerAlt-cont
-		+headerAltNew({
-			logoColClasses: 'col',
-			hasSearch: false,
-			hasVacBtn: '',
-			hasBell: false,
-			bellActive: '',
-		})
-	+sProfileNCompilation()
-		+sCompilations({
-			EmptyContent: true,
-		})
+		+headerAlt(false, false,true,'col col-md-auto')
+	+sProfileNCFeedbacks()
 	+footerN()

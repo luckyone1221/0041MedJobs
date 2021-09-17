@@ -969,3 +969,53 @@ mixin sProfileNCreatorCab(data)
 				+e.content-col.col-xlg
 					.center-block
 						block
+
+mixin sProfileNCFeedbacks(data)
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')
+						+lSidebarSlide(8,'Мои вакансии')
+						+lSidebarSlide(9,'Настройки профиля')
+						+lSidebarSlide(10,'Отклики')(class='active')
+				+e.content-col.col-xlg
+					+e.title-row.row.row--mb.align-items-center
+						.col
+							+e.H1.title Отклики
+						.col-12
+							+b.c-feedback
+								+e.items
+									-for(var i = 0; i < 6; i++)
+										+sProfileNCFeedback()
+
+mixin sProfileNCFeedback(data)
+	+e.item
+		+e.i-row.row
+			.col-auto
+				+e.img
+					img(loading="lazy" src="img/svg/portrait-stab2.svg" alt="")
+			+e.col--name.col.col-lg-auto
+				+e.name Константин Констинтинович Константинов
+				+e.gray-data 24 года, Санкт-Петербург
+				+e.prof Врач-хирург
+			+e.col--date.col-md.text-md-end.order-last.order-md-0.order-lg-last
+				+e.date.d-none.d-md-block 7 сентября 2021, 9:40
+				+e.btns-row.row.justify-content-end
+					.col
+						+e.date.d-md-none 7 сентября 2021, 9:40
+					+sProfileNCFeedbackBtn('print')
+					+sProfileNCFeedbackBtn('download')
+			.col-12.m-0.d-lg-none
+			+e.col--vac.col-lg-auto
+				+e.vac-name Городской клинический центр Министерства здравоохранения Чувашской Республики
+				+e.vac-duty Врач-терапевт-хирург
+			+e.col--contacts.col-auto.align-self-center
+				+e.tel(href="tel:+79198112822") +7 (919) 811-28-22
+				+e.mail(href="mailto:mymail@mail.ru") mymail@mail.ru
+
+mixin sProfileNCFeedbackBtn(iconName)
+	.col-auto
+		+e.btn
+			img(loading="lazy" src=`img/svg/c-feedback-${iconName}.svg` alt="")

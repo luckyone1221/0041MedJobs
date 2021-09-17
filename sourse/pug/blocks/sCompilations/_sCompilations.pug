@@ -4,7 +4,8 @@ mixin sCompilations(data)
 		+e.top-row.row.align-items-center
 			.col-12
 				h1.sProfileN__title Подборка вакансий
-		+b.tabs-bl.cTabs-js
+		//-.cTabs-js
+		+b.tabs-bl
 			if data.EmptyContent
 				+b.comp-empty.mb-18.mb-md-24
 					+e.row.row
@@ -34,19 +35,21 @@ mixin sCompilations(data)
 			+e.wrap
 				+e.title-row.row.align-items-center.mb-18.mb-md-24.gx-24.gy-24
 					.col-md.order-last.order-md-0
-						.cTabs-content-group-js
+						+e.descr Всего для вас подобрано 27 вакансий
+						//-.cTabs-content-group-js
 							.cTabs-content-js.active
 								+e.descr Всего для вас подобрано 27 вакансий
 							.cTabs-content-js
 								+e.descr Вам понравились 3 вакансии
 							.cTabs-content-js
 								+e.descr Вы скрыли 3 вакансии
-					.col-auto
-						+e.btn.cTabs-btn-js.active Все
-					.col-auto
-						+e.btn.cTabs-btn-js Понравившиеся
-					.col-auto
-						+e.btn.cTabs-btn-js Скрытые
+					//-
+						.col-auto
+							+e.btn.cTabs-btn-js.active Все
+						.col-auto
+							+e.btn.cTabs-btn-js Понравившиеся
+						.col-auto
+							+e.btn.cTabs-btn-js Скрытые
 				.cTabs-content-group-js
 					if data.EmptyContent
 						+e.content.cTabs-content-js.active
@@ -54,15 +57,16 @@ mixin sCompilations(data)
 						+e.content.cTabs-content-js 3
 						+e.content.cTabs-content-js 2
 					else
-						+e.content.cTabs-content-js.active
+						//-.cTabs-content-js.active
+						+e.content.active
 							+e.plates-row.row
 								-for (var i = 0; i < 2; i++)
 									+threeCards('item-regular-js')
-						+e.content.cTabs-content-js
+						//-+e.content.cTabs-content-js
 							+e.plates-row.row
 								-for (var i = 0; i < 2; i++)
 									+threeCards('item-like-js')
-						+e.content.cTabs-content-js
+						//-+e.content.cTabs-content-js
 							+e.plates-row.row
 								-for (var i = 0; i < 2; i++)
 									+threeCards('item-dislike-js')
@@ -142,7 +146,8 @@ mixin sCompilationsItem(data)
 				+e.f-btn--hide.sComp-btn-js.sComp-dislike-btn-js
 					+icon('cross-eye')
 					span Скрыть
-				+e.f-btn--call.sComp-btn-js.sComp-like-btn-js
+				//-.sComp-like-btn-js.sComp-btn-js
+				+e.f-btn--call.link-modal(href="#modal-vac")
 					span Откликнуться
 				if data.itemType === 'item-like-js'
 					+e.big-btn-cont.bb-cont-js

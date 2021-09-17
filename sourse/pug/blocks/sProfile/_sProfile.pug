@@ -26,9 +26,16 @@ mixin sProfile(data)
 						p Открыто делимся опытом и формируем уважение к российской медицине среди мирового сообщества,  повышая компетентность врачей и населения по всему миру.
 						p Объединяем усилия профессиональной команды и оснащение  цифровой зуботехнической лаборатории, взрослого отделения и детского отделения с анестезиологией, чтобы восстановить прежний вид улыбки и восстановить здоровье на долгие годы.
 					+contacts('d-xl-none mb-18 mb-md-24')
-					+profSocBl('d-xl-none mb-36 mb-md-48')
-					//-
-					+sVacCardGalery()
+					//-+profSocBl('d-xl-none mb-36 mb-md-48')
+					+e.sm-title.pb-18.pb-md-24 Галерея
+					+b.galery-box
+						+e.row.row
+							+sVacCardGaleryItem(1)
+							+sVacCardGaleryItem(2)
+							+sVacCardGaleryItem(3)
+							+sVacCardGaleryItem(3)
+							+sVacCardGaleryItem(4)
+							+sVacCardGaleryItem(1)
 					+e.sm-title.pb-18.pb-md-24 Вакансии организации
 					+e.vac-items
 						+profileItem({
@@ -42,7 +49,7 @@ mixin sProfile(data)
 						})
 				.col-xl-3.d-none.d-xl-block
 					+contacts('mb-24')
-					+profSocBl('')
+					//-+profSocBl('')
 	// end sProfile
 
 mixin profileItem(data)
@@ -80,8 +87,6 @@ mixin profileItem(data)
 					.col-auto
 						+e.btn--gray(href='#') Позвонить
 
-
-
 mixin profSocBl(addClasses='', title='Поделиться')
 	+b.prof-soc(class=addClasses)
 		+e.box
@@ -96,7 +101,7 @@ mixin profSocBl(addClasses='', title='Поделиться')
 
 mixin profSocBlItem(iconName)
 	.col-auto
-		+e.item(href='#')
+		+e.soc-item(href='#')
 			img(loading="lazy" src=`img/svg/n-${iconName}.svg` alt="")
 
 
@@ -126,6 +131,25 @@ mixin contacts(addClasses='')
 				+e.link(href="mailto:info@iceberg.dental") info@iceberg.dental
 			+contactsCell('Сайт:')
 				+e.link(href="www.iceberg.dental" target="_blank" ) www.iceberg.dental
+			+contactsCell('Социальные сети:')
+				+e.soc-row.row
+					+profSocBlItem('tg')
+					+profSocBlItem('tw')
+					+profSocBlItem('fb')
+					+profSocBlItem('vk')
+					+profSocBlItem('ok')
+			.col-12
+				+e.item
+					+e.foot-row.row.align-items-center
+						.col
+							+e.like-btn(href=`#` class=`toggle-active-on-click-js'`)
+								+e.icon-cont
+									+icon('like')
+									+icon('like-fill')
+								+e.like-txt Сохранить
+						+sVacCardBtn('print', 'Распечатать')
+						+sVacCardShareDDCont()
+						+sVacCardBtn('sad', 'Пожаловаться', 'link-modal', '#modal-complain')
 
 mixin contactSoc(iconName)
 	.col-auto

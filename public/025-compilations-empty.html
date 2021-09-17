@@ -36,41 +36,7 @@
 				<header class="headerAlt" id="headerAlt">
 					<div class="headerAlt__container container-fluid">
 						<div class="headerAlt__row row row--mb align-items-center">
-							<div class="col-lg-auto col"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							</div>
-							<div class="headerAlt__search-col col-lg order-last order-lg-0">
-								<div class="headerAlt__search"><input class="headerAlt__s-input form-control search-inp-js" type="text" placeholder="Поиск по вакансиям"/>
-									<button class="headerAlt__search-btn search-btn-js" type="button">
-										<svg class="icon icon-zoom-2 ">
-											<use xlink:href="img/svg/sprite.svg#zoom-2"></use>
-										</svg>
-									</button>
-									<div class="headerAlt__serch-type-dd">
-										<input class="headerAlt-st-hidden-inp-js" type="hidden" value="Вакансии"/>
-										<div class="headerAlt__st-txt headerAlt-st-txt-js">Вакансии
-										</div>
-										<div class="headerAlt__st-dd headerAlt-st-dd-js">
-											<div class="headerAlt__st-inner">
-												<div class="headerAlt__st-item headerAlt-st-item-js current" data-inp-placeholder="Поиск по вакансиям">Вакансии
-												</div>
-												<div class="headerAlt__st-item headerAlt-st-item-js" data-inp-placeholder="Поиск по организациям">Организации
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto">
-								<div class="headerAlt__bell bell-js">
-									<svg class="icon icon-bell ">
-										<use xlink:href="img/svg/sprite.svg#bell"></use>
-									</svg>
-									<div class="bell-dd bell-dd--js">
-										<div class="bell-dd__box">
-											<div class="text-center p-12">Новых уведомлений нет.</div>
-										</div>
-									</div>
-								</div>
+							<div class="headerAlt__logo-col col"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
 							<div class="col-auto">
 								<div class="headerAlt__lc-cont lc-cont-js">
@@ -174,44 +140,100 @@
 								<!-- start sCompilations-->
 								<div class="sCompilations" id="sCompilations">
 									<div class="sCompilations__top-row row align-items-center">
-										<div class="col-auto">
-											<h1 class="sProfileN__title">Мои подборки</h1>
-										</div>
-										<div class="col-auto">
-											<!--+formCheck('Остановить подборку')-->
-											<label class="custom-switch">
-												<input class="invisible" type="checkbox"/><span class="line"></span><span class="txt">Остановить подборку</span>
-											</label>
-										</div>
-										<div class="col-xl-auto"><a class="sCompilations__edit-btn" href="#">
-											<svg class="icon icon-pencil ">
-												<use xlink:href="img/svg/sprite.svg#pencil"></use>
-											</svg><span>Редактировать критерии подбора</span></a>
+										<div class="col-12">
+											<h1 class="sProfileN__title">Подборка вакансий</h1>
 										</div>
 									</div>
-									<div class="c-tabs">
-										<div class="c-tabs__caption row resp-tabs-list d-flex"><a class="c-tabs__btn c-tabs__btn--intelegence active col-lg-4" href="#"><span>Интеллектуальный подбор</span><span class="c-tabs__ball">1</span></a><a class="c-tabs__btn c-tabs__btn--heart col-lg-4" href="#">
-											<svg class="icon icon-heart ">
-												<use xlink:href="img/svg/sprite.svg#heart"></use>
-											</svg><span>Мне понравились</span></a><a class="c-tabs__btn c-tabs__btn--heart col-lg-4" href="#">
-											<svg class="icon icon-cross-big ">
-												<use xlink:href="img/svg/sprite.svg#cross-big"></use>
-											</svg><span>Скрытые</span></a>
-										</div>
-										<div class="c-tabs__wrap">
-											<div class="c-tabs__content active">
-												<div class="sNVac sNVac--compilation" id="sNVac">
-													<div class="sNVac__empty">
-														<div class="sNVac__e-img"><img loading="lazy" src="img/@2x/empty-vac.png" alt=""/>
+									<div class="tabs-bl cTabs-js">
+										<div class="comp-empty mb-18 mb-md-24">
+											<div class="comp-empty__row row">
+												<div class="col-md-6">
+													<div class="comp-empty__input-title">Должность:
+													</div>
+													<div class="comp-empty__input-wrap"><input class="comp-empty__input form-control pe-5" type="text" placeholder="Начните вводить должность"/>
+														<button class="comp-empty__search-btn" type="button">
+															<svg class="icon icon-zoom-3 ">
+																<use xlink:href="img/svg/sprite.svg#zoom-3"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="comp-empty__input-title">Заработная плата:
+													</div>
+													<div class="comp-empty__sub-row row align-items-center">
+														<div class="col"><input class="comp-empty__input form-control" type="text" placeholder="от 40 000"/>
 														</div>
-														<div class="sNVac__e-txt text-center">У вас пока нет новых подборок вакансий. Заполните ваше резюме, чтобы интеллектуальная подборка<br/>смогла сопоставить информацию с вашего резюме с нашей базой вакансий и подобрать<br/>для вас наиболее подходящие вакансии.
-														</div><a class="sNVac__e-btn" href="#">Перейти к резюме</a>
+														<div class="comp-empty__dash-col col-auto">–
+														</div>
+														<div class="col"><input class="comp-empty__input form-control" type="text" placeholder="до 60 000"/>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm">
+													<div class="comp-empty__input-title">Регионы поиска:
+													</div>
+													<div class="comp-empty__region-row row align-items-center">
+														<div class="col-auto">
+															<div class="comp-empty__plate">Россия
+															</div>
+														</div>
+														<div class="col-auto"><a class="comp-empty__change-link link-modal" href="#modal-region">Изменить</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-auto align-self-end align-self-xl-center">
+													<button class="comp-empty__update-btn" type="submit">Обновить подборку
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="tabs-bl__wrap">
+											<div class="tabs-bl__title-row row align-items-center mb-18 mb-md-24 gx-24 gy-24">
+												<div class="col-md order-last order-md-0">
+													<div class="cTabs-content-group-js">
+														<div class="cTabs-content-js active">
+															<div class="tabs-bl__descr">Всего для вас подобрано 27 вакансий
+															</div>
+														</div>
+														<div class="cTabs-content-js">
+															<div class="tabs-bl__descr">Вам понравились 3 вакансии
+															</div>
+														</div>
+														<div class="cTabs-content-js">
+															<div class="tabs-bl__descr">Вы скрыли 3 вакансии
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="tabs-bl__btn cTabs-btn-js active">Все
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="tabs-bl__btn cTabs-btn-js">Понравившиеся
+													</div>
+												</div>
+												<div class="col-auto">
+													<div class="tabs-bl__btn cTabs-btn-js">Скрытые
 													</div>
 												</div>
 											</div>
-											<div class="c-tabs__content">3
-											</div>
-											<div class="c-tabs__content">2
+											<div class="cTabs-content-group-js">
+												<div class="tabs-bl__content cTabs-content-js active">
+													<div class="sNVac sNVac--compilation" id="sNVac">
+														<div class="sNVac__empty">
+															<div class="sNVac__e-img"><img loading="lazy" src="img/@2x/empty-vac.png" alt=""/>
+															</div>
+															<div class="sNVac__e-txt text-center mb-0">По вашему запросу мы не смогли подобрать вакансий, попробуйте скорректировать запрос.
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tabs-bl__content cTabs-content-js">3
+												</div>
+												<div class="tabs-bl__content cTabs-content-js">2
+												</div>
 											</div>
 										</div>
 									</div>
