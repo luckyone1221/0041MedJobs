@@ -994,10 +994,10 @@ mixin sProfileNCFeedback(data)
 	+e.item
 		+e.i-row.row
 			.col-auto
-				+e.img
+				+e.img(href="#")
 					img(loading="lazy" src="img/svg/portrait-stab2.svg" alt="")
 			+e.col--name.col.col-lg-auto
-				+e.name Константин Констинтинович Константинов
+				+e.name(href="#") Константин Констинтинович Константинов
 				+e.gray-data 24 года, Санкт-Петербург
 				+e.prof Врач-хирург
 			+e.col--date.col-md.text-md-end.order-last.order-md-0.order-lg-last
@@ -1005,8 +1005,8 @@ mixin sProfileNCFeedback(data)
 				+e.btns-row.row.justify-content-end
 					.col
 						+e.date.d-md-none 7 сентября 2021, 9:40
-					+sProfileNCFeedbackBtn('print')
-					+sProfileNCFeedbackBtn('download')
+					+sProfileNCFeedbackBtn('print', 'Cкачать')
+					+sProfileNCFeedbackBtn('download', 'Распечатать')
 			.col-12.m-0.d-lg-none
 			+e.col--vac.col-lg-auto
 				+e.vac-name Городской клинический центр Министерства здравоохранения Чувашской Республики
@@ -1015,7 +1015,8 @@ mixin sProfileNCFeedback(data)
 				+e.tel(href="tel:+79198112822") +7 (919) 811-28-22
 				+e.mail(href="mailto:mymail@mail.ru") mymail@mail.ru
 
-mixin sProfileNCFeedbackBtn(iconName)
+mixin sProfileNCFeedbackBtn(iconName, hintTxt)
 	.col-auto
 		+e.btn(href="#")
 			img(loading="lazy" src=`img/svg/c-feedback-${iconName}.svg` alt="")
+			+e.hint=hintTxt

@@ -126,26 +126,6 @@
 				height: 60px!important;
 			}
 		}
-		//&__select{
-		//	min-width: 165px;
-		//	@include media-breakpoint-up(md){
-		//		min-width: 194px;
-		//	}
-		//
-		//	select{
-		//		border-radius: 5px 0 0 5px;
-		//		position: relative;
-		//
-		//		padding: 19px 45px 19px 18px;
-		//		@include media-breakpoint-up(md){
-		//			padding: 19px 45px 19px 24px;
-		//		}
-		//
-		//		&:focus{
-		//			z-index: 1;
-		//		}
-		//	}
-		//}
 
 		&__input-wrap{
 			position: relative;
@@ -154,6 +134,7 @@
 		}
 		&__input{
 			border: 1px solid $gary-110;
+			height: 60px;
 
 			padding: 19px 18px;
 			border-radius: 0;

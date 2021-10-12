@@ -26,7 +26,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="js/easy-responsive-tabs.css"/>
-		<link rel="stylesheet" href="js/dropzone.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="bg-gray-120 mvp-page" style="opacity: 0;">
@@ -37,41 +36,7 @@
 				<header class="headerAlt" id="headerAlt">
 					<div class="headerAlt__container container-fluid">
 						<div class="headerAlt__row row row--mb align-items-center">
-							<div class="col-lg-auto col"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
-							</div>
-							<div class="headerAlt__search-col col-lg order-last order-lg-0">
-								<div class="headerAlt__search"><input class="headerAlt__s-input form-control search-inp-js" type="text" placeholder="Поиск по вакансиям"/>
-									<button class="headerAlt__search-btn search-btn-js" type="button">
-										<svg class="icon icon-zoom-2 ">
-											<use xlink:href="img/svg/sprite.svg#zoom-2"></use>
-										</svg>
-									</button>
-									<div class="headerAlt__serch-type-dd">
-										<input class="headerAlt-st-hidden-inp-js" type="hidden" value="Вакансии"/>
-										<div class="headerAlt__st-txt headerAlt-st-txt-js">Вакансии
-										</div>
-										<div class="headerAlt__st-dd headerAlt-st-dd-js">
-											<div class="headerAlt__st-inner">
-												<div class="headerAlt__st-item headerAlt-st-item-js current" data-inp-placeholder="Поиск по вакансиям">Вакансии
-												</div>
-												<div class="headerAlt__st-item headerAlt-st-item-js" data-inp-placeholder="Поиск по организациям">Организации
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-auto">
-								<div class="headerAlt__bell bell-js">
-									<svg class="icon icon-bell ">
-										<use xlink:href="img/svg/sprite.svg#bell"></use>
-									</svg>
-									<div class="bell-dd bell-dd--js">
-										<div class="bell-dd__box">
-											<div class="text-center p-12">Новых уведомлений нет.</div>
-										</div>
-									</div>
-								</div>
+							<div class="headerAlt__logo-col col"><a class="headerAlt__logo" href="#"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
 							</div>
 							<div class="col-auto">
 								<div class="headerAlt__lc-cont lc-cont-js">
@@ -179,7 +144,7 @@
 											<h1 class="sProfileN__title">Подборка вакансий</h1>
 										</div>
 									</div>
-									<div class="tabs-bl cTabs-js">
+									<div class="tabs-bl">
 										<div class="comp-empty mb-18 mb-md-24">
 											<div class="comp-empty__row row">
 												<div class="col-md-6">
@@ -226,31 +191,7 @@
 										<div class="tabs-bl__wrap">
 											<div class="tabs-bl__title-row row align-items-center mb-18 mb-md-24 gx-24 gy-24">
 												<div class="col-md order-last order-md-0">
-													<div class="cTabs-content-group-js">
-														<div class="cTabs-content-js active">
-															<div class="tabs-bl__descr">Всего для вас подобрано 27 вакансий
-															</div>
-														</div>
-														<div class="cTabs-content-js">
-															<div class="tabs-bl__descr">Вам понравились 3 вакансии
-															</div>
-														</div>
-														<div class="cTabs-content-js">
-															<div class="tabs-bl__descr">Вы скрыли 3 вакансии
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="tabs-bl__btn cTabs-btn-js active">Все
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="tabs-bl__btn cTabs-btn-js">Понравившиеся
-													</div>
-												</div>
-												<div class="col-auto">
-													<div class="tabs-bl__btn cTabs-btn-js">Скрытые
+													<div class="tabs-bl__descr">Всего для вас подобрано 27 вакансий
 													</div>
 												</div>
 											</div>
@@ -281,10 +222,6 @@
 			</section>
 			<!-- start footerN-->
 			<footer class="footerN footerN--js" id="footerN">
-				<div class="footerN__ball footerN__ball--1">
-				</div>
-				<div class="footerN__ball footerN__ball--2">
-				</div>
 				<div class="footerN__container container">
 					<div class="footerN__row row row row--mb">
 						<div class="col-xl-auto"><a class="footerN__logo mx-auto mx-xl-0" href="/"><img loading="lazy" src="img/svg/logo.svg" alt=""/></a>
@@ -3607,7 +3544,6 @@
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!--from npm-->
-		<script src="js/dropzone.min.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->

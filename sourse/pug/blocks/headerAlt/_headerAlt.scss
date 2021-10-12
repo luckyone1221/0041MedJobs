@@ -203,6 +203,15 @@
 			background: rgba($gray-100, .5);
 		}
 	}
+	//
+	&__vac-cont{
+		//-background-color: red;
+		@media (min-width: 1920px) {
+			max-width: 100% !important;
+			padding-left: 71px!important;
+		}
+	}
+
 	&__{}
 	//
 
@@ -308,11 +317,11 @@
 	&__burger{
 		cursor: pointer;
 		@media (max-width: 576px){
-			width: 40px;
-			height: 40px;
+			width: 34px;
+			height: 34px;
 		}
-		width: 34px;
-		height: 34px;
+		width: 32px;
+		height: 32px;
 		position: relative;
 
 		span,
@@ -332,12 +341,12 @@
 			right: 0;
 		}
 		span:before{
-			top: -8px;
+			top: -7px;
 			right: 0;
 		}
 		span:after{
 			right: 0;
-			top: 8px;
+			top: 7px;
 		}
 
 		&.active{

@@ -10,7 +10,7 @@ mixin sVacCard(data)
 								+breadcrumb('Главная', 'Вакансии', 'Врач-стоматолог-ортопед (хирург)')
 							+b.section-title
 								h1 Врач-стоматолог-ортопед (хирург)
-						+e.top-like-col.col-auto.d-lg-none
+						//-+e.top-like-col.col-auto.d-lg-none
 							+likeBtn()
 					if data.gray
 						+e.gray Вакансия подходит для: врач-стоматолог, стоматолог, ортопед, врач-хирург, детский врач-хирург
@@ -192,9 +192,11 @@ mixin sVacCard(data)
 			+e.fixed-strip.sVacCard-fixed-strip-js.d-lg-none.active
 				if !data.sourceAlt
 					+e.fs-row.row
-						.col-6
+						.col-12
+							+e.fs-btn--blue.link-modal(href="#modal-vac") Редактировать
+						//-.col-6
 							+e.fs-btn--blue.link-modal(href="#modal-vac") Откликнуться
-						.col-6
+						//-.col-6
 							+e.fs-btn--gray(href='#') Позвонить
 				else
 					+e.fs-row.row.align-items-center

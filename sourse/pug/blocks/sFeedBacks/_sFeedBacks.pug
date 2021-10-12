@@ -15,7 +15,7 @@ mixin sFeedBacks(data)
 mixin sFeedBacksItem(data)
 	+e.item
 		+e.i-row.row.align-items-center
-			.col-auto
+			.col-auto.align-self-start
 				if data.imgName
 					+e.img(href='#')
 						img(loading="lazy" src=`img/@2x/n-chosen-${data.imgName}.png` alt="")
@@ -26,6 +26,6 @@ mixin sFeedBacksItem(data)
 				+e.title(href="#") Врач хирург-терапевт
 				+e.salary 330 000 ₽
 				+e.location г. Санкт-Петербург, пр. Мечникова, д.27
-			.col-md-auto.text-end
+			.col-md-auto
 				+e.fb-date Вы откликнулись 9 июня 2021
 

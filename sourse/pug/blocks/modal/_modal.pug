@@ -713,8 +713,8 @@ mixin modal()
 					+modalCityItem('Я')
 						+modalCityWord('Якутск')
 						+modalCityWord('Ярославль')
-				//-
-				+sCityAcors('css-sticky')
+				//-css-sticky
+				+sCityAcors('sticky-js align-self-start')
 					+sCityAncor('А', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
 					+sCityAncor('Б', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
 					+sCityAncor('В', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
@@ -723,6 +723,8 @@ mixin modal()
 					+sCityAncor('Е', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
 					+sCityAncor('Ж', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
 					+sCityAncor('Я', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
+					-for(var i = 0; i < 20; i++)
+						+sCityAncor('Я', '-inModal')(data-scrollbox='#ancors-scroll-box-js')
 	//-
 	+b.modal-city--new.modal-win.mb-0(id="modal-blog-search" class="" style="display: none")
 		+b.b-search--js

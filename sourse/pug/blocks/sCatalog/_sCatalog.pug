@@ -8,12 +8,14 @@ mixin sCatalog(data)
 						span.me-1.d-none.d-md-inline Найдено
 						span 1 434 вакансий
 				.col-auto
+					//-+e.dd-head(href="#") Новые
 					+sCatalogDD('Новые')
-						+sCatalogDDItem('sort1', 'Новые')(checked)
+						+sCatalogDDItem('sort1', 'Новые', 'active')(checked)
 						+sCatalogDDItem('sort1', 'По зарплате')
 				.col-auto.col-md
+					//-+e.dd-head(href="#") За все время
 					+sCatalogDD('За все время')
-						+sCatalogDDItem('sort2', 'За все время')(checked)
+						+sCatalogDDItem('sort2', 'За все время', 'active')(checked)
 						+sCatalogDDItem('sort2', 'За сутки')
 						+sCatalogDDItem('sort2', 'За неделю')
 						+sCatalogDDItem('sort2', 'За месяц')
@@ -447,7 +449,9 @@ mixin sCatalogDD(headTxt)
 		+e.dd-content.sCatalog-dd-content-js
 			block
 
-mixin sCatalogDDItem(name, txt)
-	+e.LABEL.dd-item
+mixin sCatalogDDItem(name, txt, addClasses='')
+	+e.dd-item(class=addClasses)
+		span.txt.txt-js=txt
+	//-+e.LABEL.dd-item
 		input(type='radio' name=name val=txt class='invisible')&attributes(attributes)
 		span.txt.txt-js=txt

@@ -27,7 +27,7 @@ mixin headerAlt(bellActive, hasSearch=true, hasVacBtn, logoColClasses='col', mod
 										+e.st-item.headerAlt-st-item-js(data-inp-placeholder="Поиск по организациям") Организации
 				if hasVacBtn
 					.col.d-none.d-md-block
-						.container.p-0
+						+e.vac-cont.container.p-0
 							+b.vac-btn(href="#")
 								+e.v-icon
 									+icon('vac-plus')
@@ -87,7 +87,7 @@ mixin headerAltNew(data)
 										+e.st-item.headerAlt-st-item-js(data-inp-placeholder="Поиск по организациям") Организации
 				if data.hasVacBtn
 					.col.d-none.d-md-block
-						.container.p-0
+						+e.vac-cont.container.p-0
 							+b.vac-btn(href="#")
 								+e.v-icon
 									+icon('vac-plus')

@@ -113,6 +113,8 @@
 	&__dd-item{
 		cursor: pointer;
 		display: block;
+
+		&.active .txt,
 		input:checked + .txt{
 			&:after{
 				opacity: 1;

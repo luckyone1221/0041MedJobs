@@ -139,6 +139,13 @@
 
 .filter-cont{
 	position: relative;
+	//
+	.filter{
+		&__show-btn{
+			font-size: inherit;
+		}
+	}
+
 	&__btn{
 		@extend .btn;
 		@extend .btn-light;
