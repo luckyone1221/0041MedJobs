@@ -1020,3 +1020,297 @@ mixin sProfileNCFeedbackBtn(iconName, hintTxt)
 		+e.btn(href="#")
 			img(loading="lazy" src=`img/svg/c-feedback-${iconName}.svg` alt="")
 			+e.hint=hintTxt
+
+
+mixin sProfileNVacPublication(data)
+	// start sProfileN
+	+b.SECTION.sProfileN.section#sProfileN&attributes(attributes)
+		.container-fluid
+			+e.row.row.row--mb
+				.col-xlg-auto
+					+b.l-side-menu.m-0.p-0
+					//-+lSidebarN()
+						+lSidebarSlide(7,'Мой кабинет')
+						+lSidebarSlide(8,'Мои вакансии')(class="active")
+						+lSidebarSlide(9,'Настройки профиля')
+						+lSidebarSlide(10,'Отклики')
+				+e.content-col.col-xlg
+					.center-block
+						+e.title-row.row.row--mb.align-items-center
+							.col
+								+e.H1.title=data.title
+							.col-12
+								+e.box.p-0
+									+form-wrap
+										+e.sub-box.sidebar-box-js(id="box-1")
+											+e.b-title Информация об организации
+											+e.b-row.row
+												+e.b-col-pd.col-12
+													//-error
+													+e.input-wrap--no-lab
+														+e.input-title Тип организации
+														+e.inps-row.row.radio-row.gy-12
+															if data.createChecked
+																.col-auto
+																	+customRadio('Создать новую','public-vac','Создать новую')(checked)
+																.col-auto
+																	+customRadio('Выбрать из списка','public-vac','Выбрать из списка')
+															else
+																.col-auto
+																	+customRadio('Создать новую','public-vac','Создать новую')
+																.col-auto
+																	+customRadio('Выбрать из списка','public-vac','Выбрать из списка')(checked)
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title Наименование организации
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(type="text" placeholder="Наименование организации")
+													if data.createInps
+														//-
+														+e.input-wrap--no-lab
+															+e.input-title Город
+															+e.inps-row.row
+																.col-12
+																	+customSlect('', ['Самара', 'Самара2', 'Самара2'])(data-placeholder='Выберите город')
+																		option(value="" label='#')
+																		option(value="Самара") Самара
+																		option(value="Самара2") Самара2
+														//-
+														+e.input-wrap--no-lab
+															+e.input-title Форма собственности
+															+e.inps-row.row
+																.col-12
+																	+customSlect('', ['Самара', 'Самара2', 'Самара2'])(data-placeholder='Выберите из списка')
+																		option(value="" label='#')
+																		option(value="Самара") Самара
+																		option(value="Самара2") Самара2
+														//-
+														+e.input-wrap--no-lab
+															+e.input-title Адрес работы
+															+e.inps-row.row.gy-12
+																.col-12
+																	+e.INPUT.input--w100percents.form-control(type="text" placeholder="Введите адрес")
+														//-
+														+e.input-wrap--no-lab
+															+e.input-title Наименование филиала
+															+e.inps-row.row.gy-12
+																.col-12
+																	+e.INPUT.input--w100percents.form-control(type="text" placeholder="Введите наименование филиала")
+												if data.hasPortCol
+													+e.port-col--square.col-auto.ms-auto
+														+e.b-portrait--suare.--empty(href='#')
+															img(loading="lazy" src="img/svg/company-stab5.svg" alt="")
+														+e.b-change(href='#')
+															+e.b-change-img
+																img(loading="lazy" src="img/svg/cloud.svg" alt="")
+															span Заменить
+										+e.sub-box.sidebar-box-js.pt-xl-32(id="box-2")
+											+e.b-title Контактная информация
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													//-error
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Контактное лицо
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger' || ''}` type="" placeholder="ФИО контактного лица")
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Должность
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger' || ''}` type="" placeholder="Введите должность")
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title E-mail
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(type="email" required name="email" placeholder="Введите e-mail" class=`${data.error && 'border-danger' || ''}`)
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+															.col-12
+																+e.chose-txt На этот адрес мы будем уведомлять вас о новых откликах.
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title Телефон
+														+e.inps-row--tel.row.gy-12.align-items-center.tells-input-row-js
+															.col-auto +
+															.col-auto
+																+e.INPUT.input--w40.form-control.text-center.number-mask-js(data-mask="9" pattern="[0-9]{1}" type="text" value="7")
+															.col-auto
+																+e.tel-sub-row.row.align-items-center
+																	.col-auto (
+																	.col-auto
+																		+e.INPUT.input--w60.form-control.number-mask-js(data-mask="999" pattern="[0-9]{3}" type="text" placeholder='___' class=`${data.error && 'border-danger' || ''}`)
+																	.col-auto )
+															.col-auto
+																+e.INPUT.input--w120.form-control.number-mask-js(data-mask="999-99-99" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}" type="text" placeholder='___-__-__' class=`${data.error && 'border-danger' || ''}`)
+															.col-auto
+																+e.INPUT.input--w120.form-control.number-mask-js(data-mask="9" pattern="[0-9]{1}" type="text" placeholder='доб.')
+															//-
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+															.col-12
+																+e.chose-txt На этот телефон будут звонить по вашей вакансии соискатели.
+										+e.sub-box.sidebar-box-js(id="box-3")
+											+e.b-title Настройки публикации
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													+e.input-wrap--no-lab
+														+e.input-title Регионы показа
+														+e.inps-row.row
+															.col-12
+																+customSlect('', ['Самара', 'Самара2', 'Самара2'])(data-placeholder='Выберите из списка')
+																	option(value="" label='#')
+																	option(value="Самара") Самара
+																	option(value="Самара2") Самара2
+										+e.sub-box.sidebar-box-js(id="box-4")
+											+e.b-title Основная информация
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													//-error
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Название вакансии
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.INPUT.input--w100percents.form-control(class=`${data.error && 'border-danger' || ''}` type="" placeholder="Например, врач-терапевт")
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Выберите должность
+														+e.inps-row.row.gy-12
+															.col-12
+																+multipleSelect2('prof-sphere', undefined, undefined, 'Выберите из списка')
+															.col-12
+																+e.chose-txt Выберите до 5-ти должностей из списка, которые подходят на вашу вакансию. Если ваша вакансия подходит под несколько должностей, то это поможет соискателям быстрее найти вашу вакансию, а вам быстрее найти соискателя.
+													//-
+													+e.input-wrap--no-lab.mb-xl-18
+														+e.input-title Covid-19
+														+e.inps-row.row.radio-row
+															.col-auto
+																+customChbDuplicate('Вакансия связана с Covid-19')
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title Опыт работы
+														+e.inps-row.row
+															.col-12
+																+customSlect('expirience', ['Без опыта', 'Самара2', 'Самара2'])
+													//-
+													+e.input-wrap--no-lab
+														+e.input-title График
+														+e.inps-row.row
+															.col-12
+																+customSlect('expirience', ['Полный рабочий день', 'Самара2', 'Самара2'])
+													//-
+													+e.input-wrap--no-lab.mb-xl-15
+														+e.input-title Заработная плата, ₽
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.couple-row.row.mb-xl-1
+																	+e.c-col.col-6(data-ph="от")
+																		+e.INPUT.input--couple.form-control(type="text" placeholder='25 000' class=`${data.error && 'border-danger' || ''}`)
+																	+e.c-col.col-6(data-ph="до")
+																		+e.INPUT.input--couple.form-control(type="text" placeholder='100 000' class=`${data.error && 'border-danger' || ''}`)
+															.col-12
+																+customChb('Не указывать', 'mh-0')
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-error
+													+e.input-wrap--no-lab.align-items-start
+														+e.input-title Описание вакансии
+														+e.inps-row.row.gy-12
+															.col-12
+																+e.TEXTAREA.input--big-ta.form-control(placeholder="" class=`${data.error && 'border-danger' || ''}`)
+															if data.error
+																+e.error.text-start.text-danger.col-12 Заполните поле.
+													//-
+													+e.input-wrap--no-lab.align-items-start
+														+e.input-title Ключевые навыки
+														+e.inps-row.row
+															.col-12
+																+multipleSelect2('prof-skills', undefined, undefined, '')
+																	option(selected) Умный
+																	option(selected) Усидчевый
+										+e.sub-box.sidebar-box-js(id="box-5")
+											+e.b-title.mb-12 Фотографии
+											//-
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													+e.sub-title-row.row
+														+e.st-title.col-md-auto.align-self-start Прикрепите до 6 фотографий
+														.col-md
+															+galeryLoad()
+															+e.r-hint.pt-12.active Фотографии отделения, интерьера или оборудования повышают доверие и интерес к вашей вакансии.
+										+e.sub-box.sidebar-box-js(id="box-6")
+											+e.b-title.mb-12 Жилье
+											//-
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													+e.sub-title-row.row
+														+e.st-title.col-md-auto.align-self-start Предоставление жилья
+														.col-md
+															+repeatorBl('empty-content-js', 'Если ваша организация предоставляет жилье для соискателя, укажите об этом и вашу вакансию обязательно заметят.')
+																+e.inp-row.row.gy-18.pb-18
+																	.col-12
+																		+customSlect('')(data-placeholder='Выберите из списка')
+																			option(value="" label='#')
+																			option(value="Самара") Самара
+																			option(value="Самара2") Самара2
+																	.col-12
+																		+e.TEXTAREA.input--sm-ta.form-control(placeholder="")
+										+e.sub-box.sidebar-box-js(id="box-7")
+											+e.b-title Денежные выплаты
+											//-
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													+e.sub-title-row.row
+														+e.st-title.col-md-auto.align-self-start Предоставление денежных выплат
+														.col-md
+															+repeatorBl('empty-content-js', 'Если ваша организация предоставляет денежные выплаты для соискателя, укажите об этом и вашу вакансию обязательно заметят.')
+																+e.inp-row.row.gy-18.pb-18
+																	.col-12
+																		+customSlect('')(data-placeholder='Выберите из списка')
+																			option(value="" label='#')
+																			option(value="Самара") Самара
+																			option(value="Самара2") Самара2
+																	.col-12
+																		+e.TEXTAREA.input--sm-ta.form-control(placeholder="")
+										+e.sub-box.sidebar-box-js(id="box-8")
+											+e.b-title Бонусы
+											//-
+											+e.b-row.row
+												+e.b-col-pd--base.col-12
+													+e.sub-title-row.row
+														+e.st-title.col-md-auto.align-self-start Предоставление бонусов
+														.col-md
+															+e.chb-items
+																+customChb('Предоставление мест в детских садах/школах')
+																+customChb('ДМС или медицинское обслуживание')
+																+customChb('Дополнительный отпуск')
+																+customChb('Профессиональная профподготовка')
+																+customChb('Внутреннее совместительство')
+																+customChb('Фитнес')
+																+e.chose-txt Если ваша организация предоставляет бонусы для соискателя, укажите об этом и вашу вакансию обязательно заметят.
+										+e.sub-footer
+											+e.sub-btns-row.row.justify-content-center.justify-content-md-end.gy-12
+												//-.col-12.col-md-auto
+													+e.cr-btn--gray(type="button") Сохранить как черновик
+												.col-12.col-md-auto
+													+e.cr-btn--green(type="button") Опубликовать вакансию
+				+e.aside-menu-col.col-xlg-auto.d-none.d-xlg-block
+					+e.aside-menu
+					//-+asideMenu()
+						ul
+							li: a.active(href='#box-1') Основная информация
+							li: a(href='#box-2') Фотографии
+							li: a(href='#box-3') Жилье
+							li: a(href='#box-4') Денежные выплаты
+							li: a(href='#box-5') Бонусы
+							li: a(href='#box-6') Контактная информация
+							li: a(href='#box-7') Настройки публикации

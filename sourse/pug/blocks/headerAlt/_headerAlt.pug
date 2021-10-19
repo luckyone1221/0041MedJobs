@@ -102,20 +102,22 @@ mixin headerAltNew(data)
 							+e.bell.bell-js
 								+icon('bell')
 								+bellDDEmpty()
-				.col-auto
-					+e.lc-cont.lc-cont-js
-						+e.lc-row.row.align-items-center.lc-dd-btn-js
-							.col-auto
-								+e.lc-txt Мой кабинет
-							.col-auto
-								+e.lc-img
-									img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
-							+e.lc-icon.col-auto
-								+icon('chevron-down')
-						+pCabDD()
-				.col-auto.d-md-none
-					+e.burger.mvp-burger-js
-						span
+				if !data.noLc
+					.col-auto
+						+e.lc-cont.lc-cont-js
+							+e.lc-row.row.align-items-center.lc-dd-btn-js
+								.col-auto
+									+e.lc-txt Мой кабинет
+								.col-auto
+									+e.lc-img
+										img(loading="lazy" src="img/svg/sm-portrait-stab.svg" alt="")
+								+e.lc-icon.col-auto
+									+icon('chevron-down')
+							+pCabDD()
+				if !data.noMenu
+					.col-auto.d-md-none
+						+e.burger.mvp-burger-js
+							span
 		+mvpMmenu()
 	// end headerAlt
 
