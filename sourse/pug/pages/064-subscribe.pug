@@ -1,0 +1,47 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sBaner/_sBaner.pug
+include ../blocks/sVacDay/_sVacDay.pug
+include ../blocks/sEmplDay/_sEmplDay.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sBalls/_sBalls.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sVantage/_sVantage.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sNow/_sNow.pug
+include ../blocks/headerAlt/_headerAlt.pug
+include ../blocks/headerNew/_headerNew.pug
+include ../blocks/sSubscribe/_sSubscribe.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sWhom/_sWhom.pug
+include ../blocks/sDiff/_sDiff.pug
+include ../blocks/sSubsWork/_sSubsWork.pug
+include ../blocks/sCreator/_sCreator.pug
+include ../blocks/sImportant/_sImportant.pug
+include ../blocks/sTel/_sTel.pug
+
+block variables
+	- let  mainPage= 'subscribe-page headings-color'
+	- let  descr = 'Медикджобс – это сервис, который помогает медицинским сотрудникам найти работу, а работодателям кандидатов с помощью умного алгоритма подбора.'
+block title
+	- let  title= '064-subscribe'
+	title= title
+block pagecontent
+	+mob-mnu6()
+	.headerAlt-cont
+		+headerNew()
+	+sSubscribe()
+	+sSteps()
+	+sWhom()
+	+sDiff()
+	+sSubsWork()
+	+sCreator()
+	+sImportant()
+	+sTel()
+	+footerSubscribe()
+	//-+b.reg-btn--js.d-md-none(href="#") Зарегистрироваться

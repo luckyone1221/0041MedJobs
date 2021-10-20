@@ -1,0 +1,42 @@
+mixin sSteps(data)
+	// start sSteps
+	+b.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+e.top-row.row.d-none.d-xl-flex
+				+sStepsImg(1)
+				+sStepsImg(2)
+				+sStepsImg(3)
+				+sStepsImg(4)
+				+sStepsImg(5)
+			+e.items
+				+sStepsItem({
+					imgNum: 1,
+					title: 'Собираем вакансии по всему интернету',
+					descr: 'Мы мониторим несколько источников: ректуринговые сайты, сайты медорганизаций, социальные сети и тд.  После мы добавляем вакансии в нашу базу.',
+				})
+				+sStepsItem({
+					imgNum: 2,
+					title: 'Алгоритм подбирает наиболее подходящие вакансии',
+					descr: 'Подбор вакансий происходит по вашим личным параметрам - специальность, опыт, локация и тд.',
+				})
+				+sStepsItem({
+					imgNum: 3,
+					title: 'Высылаем на почту',
+					descr: 'Один раз в неделю высылаем вам подобранные вакансии. Вы можете откликнуться на понравившиеся вакансии из личного- кабинета.',
+				})
+	// end sSteps
+
+mixin sStepsImg(imgNum)
+	+e.col.col-auto
+		+e.img
+			img(loading="lazy" src=`img/@2x/sSteps-${imgNum}.png` alt="")
+
+mixin sStepsItem(data)
+	+e.item
+		+e.i-row.row.align-items-center
+			.col-lg-6
+				+e.img-box
+					img(loading="lazy" src=`img/@2x/sStepsItem-${data.imgNum}.png` alt="")
+			+e.txt-col.col-lg-6.order-first.order-lg-0.text-center.text-lg-start
+				h2=data.title
+				p=data.descr

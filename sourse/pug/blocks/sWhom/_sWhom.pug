@@ -1,0 +1,25 @@
+mixin sWhom(data)
+	// start sWhom
+	+b.SECTION.sWhom.section#sWhom&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Кому подойдет подписка?
+				p Обозначьте свой опыт и мы будем присылать Вам соответствующие вакансии
+			+e.slider-wrap
+				.swiper-container.sWhom-slider-js
+					.swiper-wrapper
+						+sWhomSlide(1, 'Учащиеся и ординаторы', 'Стажировки, подработка во время учебы среднем медперсоналом. Работа во время ординатуры')
+						+sWhomSlide(2, 'Молодой специалист', 'Начало карьеры. Работа без опыта. В государственных и частных клиниках по всей России')
+						+sWhomSlide(3, 'Работа в частной клинике', 'Вы готовы перейти на постоянную основу в частную клинику к проверенному работодателю')
+						+sWhomSlide(4, 'Совместительство в частной клинике', 'Для тех, кто ищет дополнительный заработок в частной медицине.')
+						+sWhomSlide(5, 'Госклиника с соцпакетом', 'Медицинские учреждения предлагающие денежные выплаты и обеспечивающие жильем')
+						+sWhomSlide(6, 'Опытный сотрудник', 'Вы хотите быть в курсе последних событий на рынке труда по своей профессии')
+	// end sWhom
+
+mixin sWhomSlide(imgNum, title, descr)
+	.swiper-slide
+		+e.item.text-center
+			+e.img
+				img(loading="lazy" src=`img/svg/sWhomSlide-${imgNum}.svg` alt="")
+			+e.title=title
+			+e.descr=descr

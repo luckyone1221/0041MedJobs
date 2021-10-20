@@ -1,0 +1,13 @@
+mixin sSubscribe(data)
+	// start sSubscribe
+	+b.SECTION.sSubscribe.section#sSubscribe&attributes(attributes)
+		+b.subscribe-ball--1
+		+b.subscribe-ball--2
+		+e.container.container
+			+b.section-title.text-center.text-lg-start
+				h1 Подпишись на рассылку и не упусти работу мечты
+				p Подпишись сейчас, в ближайший понедельник мы пришлем рассылку вакансий на неделю
+				+e.btn(href="#") Подписаться
+			+e.img
+				img(loading="lazy" src="img/@2x/sSubscribe-man.png" alt="")
+	// end sSubscribe

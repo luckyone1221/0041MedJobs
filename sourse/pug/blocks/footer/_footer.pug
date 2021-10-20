@@ -127,3 +127,37 @@ mixin footerAltNew(addClasses='')
                   +e.g-link(href='#') Правила пользования
                 .col-md-auto
                   +e.g-link(href='#') Публичная оферта
+
+mixin footerSubscribe(addClasses='')
+  +b.FOOTER.footer--alt(class=addClasses)
+    .container
+      +e.row.row
+        .col-12.col-md-5.col-xl-3
+          +e.logo--alt2(href="#")
+            img(loading="lazy" src="img/svg/logo.svg" alt="")
+          +e.l-txt--alt
+            | Сервис по поиску работы
+            |
+            br.d-none.d-xl-block
+            | в сфере медицины.
+          +socItems('justify-content-center justify-content-md-start d-xl-none mb-0')
+          .d-xl-none
+            +e.business-logo.text-center.text-md-start(href="#")
+              img(loading="lazy" src="img/@2x/bissnes-logo.png" alt="")
+        .col-12.col-md-7.col-xl-7
+          +e.subscribe.d-none.d-md-block
+            +mnu10()
+        .col-xl-2.d-none.d-xl-block
+          +socItems('justify-content-end mb-18')
+          +e.business-logo.text-center.text-xl-start.mb-xl-43(href="#")
+            img(loading="lazy" src="img/@2x/bissnes-logo.png" alt="")
+        .col-12.order-2.order-md-0
+          +e.ar-row.row.text-center.text-md-start
+            .col-12.col-md
+              +e.all-rights.mb-0 © 2021 Все права защищены Medicjobs.ru.
+            .col-12.col-md-auto
+              +e.gray-row.row
+                .col-md-auto
+                  +e.g-link(href='#') Правила пользования
+                .col-md-auto
+                  +e.g-link(href='#') Публичная оферта

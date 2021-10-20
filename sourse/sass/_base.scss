@@ -1909,3 +1909,34 @@ h5{
 	cursor: pointer;
 	z-index: 1002;
 }
+
+//
+.subscribe-page{
+	font-size: 24px;
+	@include media-breakpoint-up(md){
+		font-size: 16px;
+	}
+
+	.container{
+		@include media-breakpoint-down(md){
+			padding-left: 27px;
+			padding-right: 27px;
+		}
+	}
+}
+//
+.subscribe-ball{
+	position: absolute;
+	z-index: -1;
+	pointer-events: none;
+	opacity: 0.3;
+	width: 600px;
+	height: 600px;
+
+	&--1{
+		background: radial-gradient(50% 50% at 50% 50%, #88DDFC 0%, rgba(136, 221, 252, 0) 100%);
+	}
+	&--2{
+		background: radial-gradient(50% 50% at 50% 50%, #C4FBDC 0%, rgba(196, 251, 220, 0) 100%);
+	}
+}

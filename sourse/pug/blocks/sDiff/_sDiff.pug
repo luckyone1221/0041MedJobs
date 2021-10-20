@@ -1,0 +1,25 @@
+mixin sDiff(data)
+	// start sDiff
+	+b.SECTION.sDiff.section#sDiff&attributes(attributes)
+		+b.subscribe-ball--1
+		+b.subscribe-ball--2
+		.container
+			+e.main-row.row.align-items-center
+				.col-lg-7
+					+b.section-title.text-center.text-lg-start
+						h2 Чем мы отличаемся от обычных рассылок вакансий?
+					+e.row.row.align-items-center
+						+sDiffItem('Смотрим шире', 'Предлагаем вакансии из около медицинских сфер, которые будут вам интересны')
+						+sDiffItem('Релевантные', 'Экономим вам время отбирая только те, которые подходят именно вам')
+						+sDiffItem('Несколько источников', 'Собираем информацию из интернета и не только')
+						+sDiffItem('Нет токсичным', 'Не пропускаем вакансии от сомнительных работодателей')
+				.col-lg-5
+					+e.img
+						img(loading="lazy" src="img/@2x/sDiff-img.png" alt="")
+	// end sDiff
+
+mixin sDiffItem(title,descr)
+	.col-md-6.text-center.text-lg-start
+		+e.item
+			+e.title=title
+			+e.descr=descr

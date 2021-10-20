@@ -214,4 +214,26 @@
   overflow: hidden;
 }
 
- 
+//-
+@mixin sw-col(){
+  height: auto;
+  padding: 0 calc(var(--bs-gutter-x)/2) !important;
+  margin: calc(var(--bs-gutter-y, 0px)) 0 0 0!important;
+}
+
+@mixin sw-row() {
+  margin-top: calc(var(--bs-gutter-y, 0px)*-1);
+  margin-left: calc(var(--bs-gutter-x, #{$container-padding-x})/-2);
+  margin-right: calc(var(--bs-gutter-x, #{$container-padding-x})/-2);
+  flex-wrap: wrap!important;
+  transform: none!important;
+  width: calc(100% + var(--bs-gutter-x, #{$container-padding-x})) !important;
+  max-width: calc(100% + var(--bs-gutter-x, #{$container-padding-x})) !important;
+  & > *{
+    @include sw-col();
+  }
+  & > *.swiper-slide-duplicate{
+    display: none;
+  }
+  //& > *
+}

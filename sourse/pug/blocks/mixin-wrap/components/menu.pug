@@ -81,3 +81,28 @@ mixin mnu8()
 	+b.UL.navMenu&attributes(attributes)
 		each linkPatch, linkName in nav
 			+e.LI.item: +e.A.link(href=linkPatch)= linkName
+
+mixin mnu9()
+	-
+		var nav= {
+			"Что это?":"#",
+			"Для кого?":"#",
+			"Особенности":"#",
+			"О нас":"#",
+		}
+	+b.UL.navMenu&attributes(attributes)
+		each linkPatch, linkName in nav
+			+e.LI.item: +e.A.link(href=linkPatch)= linkName
+
+mixin mnu10()
+	-
+		var nav= {
+			"Главная":"#",
+			"Что это?":"#",
+			"Для кого?":"#",
+			"Особенности":"#",
+			"О нас":"#",
+		}
+	+b.UL.navMenu&attributes(attributes)
+		each linkPatch, linkName in nav
+			+e.LI.item: +e.A.link(href=linkPatch)= linkName

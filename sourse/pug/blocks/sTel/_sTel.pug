@@ -1,0 +1,37 @@
+mixin sTel(data)
+	// start sTel
+	+b.SECTION.sTel.section#sTel&attributes(attributes)
+		+e.ball--1
+		+e.ball--2
+		.container
+			+e.row.row
+				.col-lg-5.text-center.text-lg-start
+					+b.section-title
+						h2 Расскажите, кем вы работаете сейчас?
+						p Внимательно заполните все поля формы
+					+e.how-title Как получить рассылку?
+					+e.h-items
+						+e.item Дождаться ближайшего понедельника
+						+e.item Заполнить форму
+				.col-lg-7
+					+form-wrap
+						+e.inputs
+							+input('Введите ваш E-mail', 'email', 'E-mail')
+							+input('Введите вашу специальность', 'text', 'Специальность')
+							+e.input-wrap
+								+e.input-title Ваш уровень опыта
+								+customSlect('name')
+									option(value="Самара") 1-2 года
+									option(value="Самара2") 3-4 года
+									option(value="Самара2") милион лет
+							+input('Введите ваш город', 'text', 'Местоположение')
+						+e.row.row.align-items-center
+							.col-md-auto
+								+e.btn(type="submit") Подписаться
+							.col-md
+								+e.policy
+									| «Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+									|
+									a(href="#") политикой конфиденциальности
+	// end sTel
+

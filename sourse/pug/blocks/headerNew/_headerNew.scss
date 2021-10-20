@@ -1,0 +1,130 @@
+// start .headerNew
+.headerNew {
+	padding: 22.5px 0;
+	@include media-breakpoint-up(md){
+		padding: 15px 0;
+	}
+	border-bottom: 1px solid $gray-140;
+
+	background-color: $white;
+	position: fixed;
+	z-index: 999;
+	//top: var(--top-nav-top, 0px);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+
+	//-
+	&__row{
+		--bs-gutter-x: 21px;
+	}
+	&__logo{
+		display: block;
+
+		width: 236px;
+		@include media-breakpoint-up(md){
+			width: 170px;
+		}
+		@include media-breakpoint-up(xl){
+			margin-right: 16px;
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.navMenu{
+		padding: 0;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		list-style: none;
+
+		li{
+			padding: 0;
+			margin-right: 23px;
+
+			a{
+				padding: 0;
+				font-size: 16px;
+				line-height: 1;
+
+				color: $headings-color;
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
+	}
+	&__tel{
+		letter-spacing: 0.22px;
+		font-weight: 600;
+
+		color: $headings-color;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 1.25;
+		padding: 10px 31px;
+	}
+	&__burger{
+		cursor: pointer;
+		@media (max-width: 576px){
+			width: 36px;
+			height: 36px;
+		}
+		width: 32px;
+		height: 32px;
+		position: relative;
+
+		span,
+		span:before,
+		span:after{
+			display: block;
+			@include mt();
+			content: '';
+			position: absolute;
+			height: 3px;
+			background-color: $secondary;
+			width: 100%;
+		}
+
+		span{
+			top: calc(50% - 1.5px);
+			right: 0;
+		}
+		span:before{
+			top: -11px;
+			right: 0;
+		}
+		span:after{
+			right: 0;
+			top: 11px;
+		}
+
+		&.active{
+			span{
+				background-color: transparent;
+			}
+			span:before{
+				top: -1.5px;
+				transform: rotate(45deg);
+			}
+			span:after{
+				top: -1.5px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&__{}
+	&__{}
+} // end.headerNew

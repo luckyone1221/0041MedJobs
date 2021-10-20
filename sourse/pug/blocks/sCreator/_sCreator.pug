@@ -1,0 +1,18 @@
+mixin sCreator(data)
+	// start sCreator
+	+b.SECTION.sCreator.section#sCreator&attributes(attributes)
+		+b.subscribe-ball--1
+		+b.subscribe-ball--2
+		.container
+			+e.row.row.align-items-lg-center.align-items-xl-start
+				+e.col--left.col-md-5.col-xl-auto.order-last.order-md-0
+					+e.portrait
+						img(loading="lazy" src="img/@2x/sCreator-portrait.png" alt="")
+				+e.col--right.col-md-7.col-xl.text-center.text-md-start
+					+b.section-title
+						h2 Об основателе компании MedicJobs
+						p "Я сталкивался с проблемами поиска работы в медицине как соискатель - много вакансий "прячется" в разных местах, и как работодатель - не мог найти специалистов. В какой-то момент я решился исправить эту проблему."
+						p В здравоохранении с 2008 года. Врач-терапевт, организатор здравоохранения. Работал в государственных и частных компаниях, в таких как МЕДСИ, Департамент здравоохранения Москвы, РЕСО Мед страхование.
+					+e.name Салахов Тимур Энвирович
+					+e.duty Основатель и директор компании
+	// end sCreator

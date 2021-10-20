@@ -1,0 +1,27 @@
+mixin sSubsWork(data)
+	// start sSubsWork
+	+b.SECTION.sSubsWork.section#sSubsWork&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как работает подписка?
+			+e.slider-wrap
+				.swiper-container.sWhom-slider-js
+					.swiper-wrapper
+						+sSubsWorkSlide(1, '1 шаг')
+							| Опишите кем вы работаете сейчас
+						+sSubsWorkSlide(2, '2 шаг')
+							| Целую неделю мы будем собирать вакансии
+						+sSubsWorkSlide(3, '3 шаг')
+							| Алгоритм отберет вакансии
+						+sSubsWorkSlide(4, '4 шаг')
+							| Пришлем Вам подходящие вакансии
+	// end sSubsWork
+
+mixin sSubsWorkSlide(imgNum, title, descr)
+	.swiper-slide
+		+e.item.text-center
+			+e.ball
+				img(loading="lazy" src=`img/svg/sSubsWorkSlide-${imgNum}.svg` alt="")
+			+e.title=title
+			+e.descr
+				block

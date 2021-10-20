@@ -111,3 +111,4 @@
 34. <https://luckyone1221.github.io/0041MedJobs/public/062-c-feedbacks.html>
 34. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication.html>
 34. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication-2.html>
+34. <https://luckyone1221.github.io/0041MedJobs/public/064-subscribe.html>
