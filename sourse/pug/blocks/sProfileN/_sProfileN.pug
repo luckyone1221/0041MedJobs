@@ -1314,3 +1314,24 @@ mixin sProfileNVacPublication(data)
 							li: a(href='#box-5') Бонусы
 							li: a(href='#box-6') Контактная информация
 							li: a(href='#box-7') Настройки публикации
+
+mixin resumeMove(btnAddClasses)
+	+b.r-move
+		+e.row.row.align-items-center
+			.col-md-auto.d-none.d-md-block
+				+e.img
+					img(loading="lazy" src="img/@2x/r-move.png" alt="")
+			.col-md
+				+e.title Продвижение резюме
+				+e.descr
+					| Заполните резюме на
+					|
+					b 100%,
+					|
+					| нажмите на кнопку
+					|
+					b “Разослать резюме”
+					|
+					| и мы автоматически разошлем ваше резюме работодателям с вакансиями подходящими под вашу должность.
+			.col-md-auto
+				+e.btn(href="#" class=`${btnAddClasses || ''}`) Разослать резюме

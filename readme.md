@@ -108,7 +108,8 @@
 32. <https://luckyone1221.github.io/0041MedJobs/public/029-my-vacancy.html>
 33. <https://luckyone1221.github.io/0041MedJobs/public/030-my-vacancy-empty.html>
 34. <https://luckyone1221.github.io/0041MedJobs/public/048-vac-create.html>
-34. <https://luckyone1221.github.io/0041MedJobs/public/062-c-feedbacks.html>
-34. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication.html>
-34. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication-2.html>
-34. <https://luckyone1221.github.io/0041MedJobs/public/064-subscribe.html>
+35. <https://luckyone1221.github.io/0041MedJobs/public/062-c-feedbacks.html>
+///////////////////////////////////////// 20.10.2021 (3 pages)
+36. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication.html>
+37. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication-2.html>
+38. <https://luckyone1221.github.io/0041MedJobs/public/064-subscribe.html>
