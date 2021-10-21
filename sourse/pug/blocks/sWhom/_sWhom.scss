@@ -52,6 +52,7 @@
 		.swiper-slide{
 			height: auto;
 			width: 426px;
+			padding-bottom: 1px;
 
 			@extend .col-md-6;
 			@extend .col-lg-4;
