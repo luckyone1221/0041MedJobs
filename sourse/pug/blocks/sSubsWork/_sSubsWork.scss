@@ -26,8 +26,8 @@
 		//-
 		.swiper-container{
 			overflow: visible!important;
-			padding-bottom: 10px;
-			margin-bottom: -10px;
+			//padding-bottom: 10px;
+			//margin-bottom: -10px;
 		}
 		.swiper-wrapper{
 			@include media-breakpoint-up(lg){
@@ -87,7 +87,8 @@
 
 	//-
 	&__item{
-		min-height: 100%;
+		//min-height: 100%;
+		min-height: calc(100% - 1px);
 	}
 	&__ball{
 		width: var(--ball-w, 120px);
