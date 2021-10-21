@@ -1044,10 +1044,10 @@ mixin sProfileNVacPublication(data)
 									+form-wrap
 										+e.sub-box.sidebar-box-js(id="box-1")
 											+e.b-title Информация об организации
-											+e.b-row.row
+											+e.b-row--type-first.row
 												+e.b-col-pd.col-12
 													//-error
-													+e.input-wrap--no-lab
+													+e.input-wrap--no-lab.absolute-top
 														+e.input-title Тип организации
 														+e.inps-row.row.radio-row.gy-12
 															if data.createChecked
@@ -1318,7 +1318,7 @@ mixin sProfileNVacPublication(data)
 mixin resumeMove(btnAddClasses)
 	+b.r-move
 		+e.row.row.align-items-center
-			.col-md-auto.d-none.d-md-block
+			.col-md-auto
 				+e.img
 					img(loading="lazy" src="img/@2x/r-move.png" alt="")
 			.col-md

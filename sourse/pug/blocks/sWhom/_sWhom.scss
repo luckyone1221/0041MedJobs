@@ -38,6 +38,8 @@
 
 		.swiper-container{
 			overflow: visible!important;
+			padding-bottom: 10px;
+			margin-bottom: -10px;
 		}
 		.swiper-wrapper{
 			--bs-gutter-x: 24px;
@@ -65,6 +67,7 @@
 		padding: 39px;
 		border: 1px solid $gary-110;
 		@include media-breakpoint-up(md){
+			margin-bottom: 0;
 			padding: 0;
 			border: none;
 		}

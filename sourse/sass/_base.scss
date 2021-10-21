@@ -1923,6 +1923,19 @@ h5{
 			padding-right: 27px;
 		}
 	}
+
+	.select2-dropdown{
+		animation: showDropDown .3s ease-in-out 0s 1;
+
+		font-family: $default-font!important;
+		* {
+			font-family: $default-font!important;
+		}
+
+		.select2-results__option{
+			padding: 10px 20px!important;
+		}
+	}
 }
 //
 .subscribe-ball{

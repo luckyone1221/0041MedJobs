@@ -551,6 +551,11 @@ function eventHandler() {
 			document.body.addEventListener('click', nMenuMissClick);
 		}, 10);
 	});
+	$('.close-mvp-menu-js').click(function () {
+		document.body.removeEventListener('click', nMenuMissClick);
+		$('.mvp-burger-js').removeClass('active');
+		$('.mvp-menu--js').removeClass('active');
+	});
 
 	function nMenuMissClick() {
 		if (!event.target.closest('.mvp-menu--js')) {

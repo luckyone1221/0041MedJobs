@@ -112,4 +112,5 @@
 ///////////////////////////////////////// 20.10.2021 (3 pages)
 36. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication.html>
 37. <https://luckyone1221.github.io/0041MedJobs/public/063-vac-publication-2.html>
-38. <https://luckyone1221.github.io/0041MedJobs/public/064-subscribe.html>
+///////////////////// Подписка ///////////////////////////
+39. <https://luckyone1221.github.io/0041MedJobs/public/064-subscribe.html>

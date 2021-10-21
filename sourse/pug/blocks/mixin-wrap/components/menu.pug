@@ -85,24 +85,24 @@ mixin mnu8()
 mixin mnu9()
 	-
 		var nav= {
-			"Что это?":"#",
-			"Для кого?":"#",
-			"Особенности":"#",
-			"О нас":"#",
+			"Что это?": "#sSteps",
+			"Для кого?": "#sWhom",
+			"Особенности": "#sSubsWork",
+			"О нас": "#sCreator",
 		}
 	+b.UL.navMenu&attributes(attributes)
 		each linkPatch, linkName in nav
-			+e.LI.item: +e.A.link(href=linkPatch)= linkName
+			+e.LI.item: +e.A.link.scroll-link(href=linkPatch)= linkName
 
 mixin mnu10()
 	-
 		var nav= {
-			"Главная":"#",
-			"Что это?":"#",
-			"Для кого?":"#",
-			"Особенности":"#",
-			"О нас":"#",
+			"Что это?":"#sSteps",
+			"Для кого?":"#sWhom",
+			"Особенности":"#sSubsWork",
+			"О нас":"#sCreator",
 		}
 	+b.UL.navMenu&attributes(attributes)
+		+e.LI.item: +e.A.link(href='/') Главная
 		each linkPatch, linkName in nav
-			+e.LI.item: +e.A.link(href=linkPatch)= linkName
+			+e.LI.item: +e.A.link.scroll-link(href=linkPatch)= linkName

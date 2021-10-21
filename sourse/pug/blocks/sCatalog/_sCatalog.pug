@@ -8,13 +8,13 @@ mixin sCatalog(data)
 						span.me-1.d-none.d-md-inline Найдено
 						span 1 434 вакансий
 				.col-auto
-					//-+e.dd-head(href="#") Новые
-					+sCatalogDD('Новые')
+					+e.dd-head(href="#") Новые
+					//-+sCatalogDD('Новые')
 						+sCatalogDDItem('sort1', 'Новые', 'active')(checked)
 						+sCatalogDDItem('sort1', 'По зарплате')
 				.col-auto.col-md
-					//-+e.dd-head(href="#") За все время
-					+sCatalogDD('За все время')
+					+e.dd-head(href="#") За все время
+					//-+sCatalogDD('За все время')
 						+sCatalogDDItem('sort2', 'За все время', 'active')(checked)
 						+sCatalogDDItem('sort2', 'За сутки')
 						+sCatalogDDItem('sort2', 'За неделю')
